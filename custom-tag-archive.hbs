@@ -1,0 +1,53 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap archive">
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+			<div class="col-md-12 main-content">
+				<!-- start post -->
+				{{#post}}
+				<article class="{{post_class}}">
+					<div class="post-head">
+						<h1 class="post-title h2">{{{title}}}</h1>
+					</div>
+					{{#if feature_image}}
+					<div class="featured-media" style="background-image: url({{feature_image}});">
+					</div>
+					{{/if}}
+					<div class="post-content">
+						{{content}}
+					</div>
+				</article>
+				{{/post}}
+				<!-- end post -->
+			</div>
+            
+            {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+            {{#foreach tags}}
+            <div class="col-md-6">
+                <div class="tag-wrapper">
+                    <a href="{{url}}">
+                        <div class="bg-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}}style="background-image: url({{feature_image}});"{{/if}}>
+                            <div class="overlay">
+                                <h2 class="tag-title h3">{{name}}</h2>
+                                <div class="meta-info">
+                                    <span>{{t "Total"}} {{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+                                </div>
+                                {{#if description}}
+                                <p class="description tag-description">{{description}}</p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/foreach}}
+            {{/get}}
+            
+			<!-- end main post area -->
+		</div>
+	</div>
+</section>
+<!-- end site's main content area -->

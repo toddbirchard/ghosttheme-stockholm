@@ -1,0 +1,19 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap">
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+			<div class="col-md-8 main-content">
+				{{> cover-author}}
+				{{> loop}}
+				{{pagination}}
+			</div>
+			<!-- end main post area -->
+			{{! insert sidebar partial}}
+			{{> sidebar}}
+		</div>
+	</div>
+</section>
+<!-- end site's main content area -->

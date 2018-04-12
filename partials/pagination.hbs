@@ -1,0 +1,11 @@
+<!-- start pagination -->
+<nav class="pagination">
+	{{#if prev}}
+	<a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-angle-left"></i></a>
+	{{/if}}
+	<span class="page-number">{{t "Page {page} of {pages}" page=page pages=pages}}</span>
+	{{#if next}}
+	<a class="older-posts" href="{{page_url next}}"><i class="fa fa-angle-right"></i></a>
+	{{/if}}
+</nav>
+<!-- end pagination -->

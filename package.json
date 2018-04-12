@@ -1,0 +1,21 @@
+{
+    "name": "Stockholm",
+    "description": "Minimal Ghost Theme.",
+    "demo": "https://hackersandslackers.com",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=1.0.0"
+    },
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "Todd Birchard",
+        "email": "toddbirchard@gmail.com",
+        "url": "https://toddbirchard.com"
+    },
+    "config": {
+        "posts_per_page": 10
+    }
+}

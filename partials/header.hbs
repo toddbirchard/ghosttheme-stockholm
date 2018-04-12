@@ -1,0 +1,41 @@
+<!-- start header -->
+<header class="main-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<!-- start logo -->
+				{{#if @blog.logo}}
+				<a class="branding" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+				{{else}}
+				<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
+				{{/if}}
+				<!-- end logo -->
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->
+<!-- start navigation -->
+<nav class="main-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="navbar-header">
+					<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+					<span class="sr-only">{{t "Toggle navigation"}}</span>
+					<i class="fa fa-bars"></i>
+					</span>
+				</div>
+				<div class="collapse navbar-collapse" id="main-menu">
+				{{! insert navigation partial}}
+	            {{navigation}}
+	            {{! insert manuala navigation if there is no navigation}}
+	            {{#unless @blog.navigation}}
+	            {{> manual-navigation}}
+	            {{/unless}}
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- end navigation -->

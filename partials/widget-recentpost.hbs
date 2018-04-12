@@ -1,0 +1,14 @@
+<!-- start widget -->
+{{#get "posts" limit="3"}}
+<div class="widget">
+	<h4 class="title">{{t "Recent Post"}}</h4>
+	<div class="content recent-post">
+		{{#foreach posts}}
+		<div class="recent-single-post">
+			<a href="{{url}}" class="post-title">{{title}}</a><div class="date">{{date format="MMMM DD, YYYY"}}</div>
+		</div>
+		{{/foreach}}
+	</div>
+</div>
+{{/get}}
+<!-- end widget -->

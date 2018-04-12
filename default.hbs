@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- stylesheets -->
+	{{! Styles'n'Scripts }}
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400%7CRoboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">
+	<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/hl-styles/monokai_sublime.css"}}">
+	<!-- only for demo -->
+	<!-- <link rel="stylesheet" type="text/css" href="{{asset "demo-assets/css/colpick.css"}}"> -->
+	{{! inserting theme config partial}}
+	{{> config}}
+	{{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	{{! insert header partial}}
+	{{> header}}
+
+	{{{body}}}
+
+	{{! insert footer partial}}
+	{{> footer}}

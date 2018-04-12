@@ -1,0 +1,42 @@
+<!-- start post -->
+{{#foreach posts}}
+<article class="{{post_class}}">
+	{{#if featured}}
+	<div class="featured">
+		<i class="fa fa-star"></i>
+	</div>
+	{{/if}}
+	<div class="post-head">
+		<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+		<div class="post-meta">
+			<span class="author">{{t "By"}} {{authors separator=", "}}</span> &bull;
+			<span class="date">{{date format="MMMM DD, YYYY"}}</span> &bull;
+			<span class="comment-count"><a href="{{url}}#disqus_thread">{{t "0 Comments"}}</a></span>
+		</div>
+	</div>
+	{{#if feature_image}}
+	<div class="featured-media">
+		<a href="{{url}}"><img src="{{feature_image}}" alt="{{{title}}}"></a>
+	</div>
+	{{/if}}
+	<div class="post-content">
+		{{excerpt}}
+	</div>
+	<div class="post-permalink">
+		<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
+	</div>
+	<footer class="post-footer clearfix">
+		<div class="pull-left tag-list">
+			{{#if tags}}
+			<i class="fa fa-folder-open-o"></i>
+			{{tags separator=","}}
+			{{/if}}
+		</div>
+		<div class="pull-right share">
+			{{! insert share_links partials}}
+			{{> share_links}}
+		</div>
+	</footer>
+</article>
+{{/foreach}}
+<!-- end post -->

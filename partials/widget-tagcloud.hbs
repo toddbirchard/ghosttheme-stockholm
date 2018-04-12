@@ -1,0 +1,8 @@
+<!-- start tag cloud widget -->
+<div class="widget">
+	<h4 class="title">{{t "Tags"}}</h4>
+	<div class="content tag-cloud">
+		{{#get "tags" limit="all" order="name asc"}}{{tags separator="" }}{{/get}}
+	</div>
+</div>
+<!-- end tag cloud widget -->

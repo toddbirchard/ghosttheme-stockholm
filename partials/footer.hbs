@@ -1,0 +1,46 @@
+<!-- start main-footer -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<!-- start first footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-recentpost}}
+				</div>
+				<!-- end first footer widget area -->
+				<!-- start second footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-tagcloud}}
+				</div>
+				<!-- end second footer widget area -->
+				<!-- start third footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-flickr}}
+				</div>
+				<!-- end third footer widget area -->
+			</div>
+		</div>
+	</footer>
+	<!-- end main-footer -->
+	{{! Insert copyright partial}}
+	{{> copyright}}
+	<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+	{{ghost_foot}}
+	<!-- scripts -->
+	<script type="text/javascript">
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="{{asset "/js/jquery.fitvids.js"}}"></script>
+	<script src="{{asset "/js/bootstrap.min.js"}}"></script>
+	<script src="{{asset "/js/jflickrfeed.min.js"}}"></script>
+	<script src="{{asset "/js/highlight.pack.js"}}"></script>
+	<script src="{{asset "/js/main.js"}}"></script>
+	{{> analytics}}
+</body>
+</html>

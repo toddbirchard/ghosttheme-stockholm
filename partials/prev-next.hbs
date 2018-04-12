@@ -1,0 +1,10 @@
+<!-- start prev next wrap -->
+<div class="prev-next-wrap clearfix">
+		{{#next_post}}
+		<a class="btn btn-default" href="{{url}}"><i class="fa fa-angle-left fa-fw"></i> {{t "Previous Post :"}} {{title}}</a>
+		{{/next_post}}
+		&nbsp;
+        {{#prev_post}}
+        <a class="btn btn-default" href="{{url}}">{{t "Next Post :"}} {{title}} <i class="fa fa-angle-right fa-fw"></i></a>
+        {{/prev_post}}
+</div>

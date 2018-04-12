@@ -1,0 +1,33 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap">
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+			<div class="col-md-8 main-content">
+				<!-- start post -->
+				{{#post}}
+				<article class="{{post_class}}">
+					<div class="post-head">
+						<h1 class="post-title h2">{{{title}}}</h1>
+					</div>
+					{{#if feature_image}}
+					<div class="featured-media">
+						<img src="{{feature_image}}" alt="{{{title}}}">
+					</div>
+					{{/if}}
+					<div class="post-content">
+						{{content}}
+					</div>
+				</article>
+				{{/post}}
+				<!-- end post -->
+			</div>
+			<!-- end main post area -->
+			{{! insert sidebar partial}}
+			{{> sidebar}}
+		</div>
+	</div>
+</section>
+<!-- end site's main content area -->
