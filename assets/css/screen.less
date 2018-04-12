@@ -15,6 +15,12 @@ html, body {
 	background: @bg-color;
 	position: relative;
 }
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 400;
@@ -117,6 +123,7 @@ pre {
 		}
 		img {
 			width: 500px;
+			max-width: 80%;
 		}
 	}
 }
@@ -134,7 +141,7 @@ pre {
 	text-align: center;
 	background: @white;
 	border-top: 1px solid @border-color;
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 	.menu {
 		padding: 0;
 		margin: 0;
@@ -201,9 +208,9 @@ pre {
 	main post area
 ====================================================*/
 .post {
-	padding: 35px;
+	padding: 25px;
 	background: @white;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 	position: relative;
 	overflow: hidden;
 	.featured {
@@ -242,6 +249,9 @@ pre {
 				margin: 0px 7px;
 				white-space: nowrap;
 			}
+			.comment-count {
+				display: none;
+			}
 		}
 	}
 	.featured-media {
@@ -257,6 +267,9 @@ pre {
 			max-width: 100%;
 			margin-bottom: 14px;
 		}
+	}
+	.post-permalink{
+		text-align: right;
 	}
 	.post-footer {
 		margin-top: 30px;
@@ -421,6 +434,9 @@ pre {
 			left: 0;
 			bottom: -1px;
 		}
+	}
+	.google-plus {
+		    overflow: hidden;
 	}
 	.social {
 		padding: 0;
@@ -686,6 +702,9 @@ pre {
 	media query
 ====================================================*/
 @media (max-width:767px) {
+	.sidebar {
+		display:none;
+	}
 	.main-navigation {
 		text-align: left;
 		.menu {

@@ -19,6 +19,10 @@ body {
   background: #ebebeb;
   position: relative;
 }
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -162,6 +166,7 @@ pre {
 }
 .main-header .branding img {
   width: 500px;
+  max-width: 80%;
 }
 .navbar-header {
   text-align: center;
@@ -176,7 +181,7 @@ pre {
   text-align: center;
   background: #FFFFFF;
   border-top: 1px solid #ebebeb;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .main-navigation .menu {
   padding: 0;
@@ -249,9 +254,9 @@ pre {
 	main post area
 ====================================================*/
 .post {
-  padding: 35px;
+  padding: 25px;
   background: #FFFFFF;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   position: relative;
   overflow: hidden;
 }
@@ -301,6 +306,9 @@ pre {
   margin: 0px 7px;
   white-space: nowrap;
 }
+.post .post-head .post-meta .comment-count {
+  display: none;
+}
 .post .featured-media {
   margin-top: 30px;
   overflow: hidden;
@@ -314,6 +322,9 @@ pre {
 .post .post-content img {
   max-width: 100%;
   margin-bottom: 14px;
+}
+.post .post-permalink {
+  text-align: right;
 }
 .post .post-footer {
   margin-top: 30px;
@@ -479,6 +490,9 @@ pre {
   position: absolute;
   left: 0;
   bottom: -1px;
+}
+.widget .google-plus {
+  overflow: hidden;
 }
 .widget .social {
   padding: 0;
@@ -742,6 +756,9 @@ pre {
 	media query
 ====================================================*/
 @media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
   .main-navigation {
     text-align: left;
   }
