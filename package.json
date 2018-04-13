@@ -7,7 +7,7 @@
         "ghost": ">=1.0.0"
     },
     "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
+        "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
