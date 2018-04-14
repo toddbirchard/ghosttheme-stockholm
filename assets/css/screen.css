@@ -63,6 +63,11 @@ h6,
 .h6 {
   font-size: 0.75em;
 }
+.post-title h2 {
+  text-align: left;
+  font-size: 3.5em;
+  font-weight: 700;
+}
 a {
   color: #00ada7;
   outline: none;
@@ -181,7 +186,12 @@ pre {
   text-align: center;
   background: #FFFFFF;
   border-top: 1px solid #ebebeb;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .main-navigation {
+    margin-bottom: 20px;
+  }
 }
 .main-navigation .menu {
   padding: 0;
@@ -256,7 +266,7 @@ pre {
 .post {
   padding: 25px;
   background: #FFFFFF;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   position: relative;
   overflow: hidden;
 }
@@ -315,6 +325,12 @@ pre {
 }
 .post .featured-media img {
   width: 100%;
+}
+.post .featured-media a {
+  transition: opacity 0.2s ease-out;
+}
+.post .featured-media a:hover {
+  opacity: .8;
 }
 .post .post-content {
   margin: 30px 0;

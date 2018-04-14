@@ -44,6 +44,12 @@ h5, .h5 {
 h6, .h6 {
   font-size: 0.75em;
 }
+
+.post-title h2{
+	text-align: left;
+font-size: 3.5em;
+font-weight: 700;
+}
 a {
 	color: @theme-color;
 	outline: none;
@@ -141,7 +147,10 @@ pre {
 	text-align: center;
 	background: @white;
 	border-top: 1px solid @border-color;
-	margin-bottom: 20px;
+	margin-bottom: 35px;
+	@media(max-width: 767px) {
+		margin-bottom: 20px;
+	}
 	.menu {
 		padding: 0;
 		margin: 0;
@@ -210,7 +219,7 @@ pre {
 .post {
 	padding: 25px;
 	background: @white;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	position: relative;
 	overflow: hidden;
 	.featured {
@@ -259,6 +268,14 @@ pre {
 		overflow: hidden;
 		img {
 			width: 100%;
+		}
+
+		a {
+			transition: opacity .2s ease-out;
+
+			&:hover {
+				opacity: .8;
+			}
 		}
 	}
 	.post-content {
