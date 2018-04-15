@@ -45,7 +45,9 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 2.5em;
+  font-size: 3.5em;
+  font-weight: 700;
+  font-family: 'Open Sans';
 }
 h3,
 .h3 {
@@ -63,10 +65,13 @@ h6,
 .h6 {
   font-size: 0.75em;
 }
-.post-title h2 {
+.post-title .h2 {
   text-align: left;
   font-size: 3.5em;
   font-weight: 700;
+  margin: 0 0 20px;
+  line-height: 1em;
+  color: #303030;
 }
 a {
   color: #00ada7;
@@ -170,7 +175,7 @@ pre {
   text-decoration: none;
 }
 .main-header .branding img {
-  width: 500px;
+  width: 400px;
   max-width: 80%;
 }
 .navbar-header {
@@ -320,7 +325,7 @@ pre {
   display: none;
 }
 .post .featured-media {
-  margin-top: 30px;
+  margin-top: 10px;
   overflow: hidden;
 }
 .post .featured-media img {
@@ -807,4 +812,8 @@ pre {
   .nav-toggle-button {
     display: none;
   }
+}
+.fluid-width-video-wrapper {
+  padding-top: 0 !important;
+  height: 400px;
 }

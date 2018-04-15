@@ -44,7 +44,7 @@ var themeApp = {
 			$('body').append('<script src="https://apis.google.com/js/platform.js" async defer></script>');
 			var container = $('.google-plus');
 			var width = container.width();
-			var google_plus_code = '<div class="g-'+badge_type+'" data-width="'+width+'" data-href="'+google_plus_url+'" data-rel="publisher"></div>';
+			var google_plus_code = '<div class="g-'+badge_type+'" data-width="'+width+'" data-layout="landscape" data-height="150px" data-href="'+google_plus_url+'" data-rel="publisher"></div>';
 			container.append(google_plus_code);
 		}
 	},
