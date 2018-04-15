@@ -13,15 +13,15 @@ Theme for the Ghost platform. Live preview can be seen here: https://hackersands
 
 # About the Theme
 
-_Stockholm_ is a simple theme emphasizing content and comfortable whitespace
+_Stockholm_ is a minimalist theme for emphasizing content with comfortable whitespace.
 
 ### Features
 - Responsive layout
 - Featured posts
+- Mailchimp integration
 - Recent articles widget
-- Experience widget
 - Twitter widget
-
+- Google+ widget
 
 # Installation
 
@@ -31,7 +31,7 @@ For information on installing the Ghost platform, please reference the [Ghost CL
 
 ```
 git clone https://github.com/toddbirchard/ghosttheme-stockholm.git
-cd ghosttheme-tokyo
+cd ghosttheme-stockholm
 npm install --global gulp-cli
 npm install
 ```
@@ -54,4 +54,8 @@ Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.
 - Handlebars
 - LESS
 
+# Roadmap
+- Contributors widget
+- Open registration
+- Shared links
 
