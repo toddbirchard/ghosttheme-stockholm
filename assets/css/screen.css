@@ -10,9 +10,9 @@
 /*====================================================
 	common styles
 ====================================================*/
-html,
-body {
-  font-family: 'Open Sans', sans-serif;
+body,
+html {
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #505050;
   line-height: 1.75em;
@@ -23,46 +23,47 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 .h1,
 .h2,
 .h3,
 .h4,
 .h5,
-.h6 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', serif;
+  font-weight: 700;
   color: #303030;
 }
-h1,
-.h1 {
+.h1,
+h1 {
   font-size: 3em;
-}
-h2,
-.h2 {
-  font-size: 3.5em;
   font-weight: 700;
-  font-family: 'Open Sans';
 }
-h3,
-.h3 {
+.h2,
+h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  font-family: 'Lato';
+}
+.h3,
+h3 {
   font-size: 2em;
 }
-h4,
-.h4 {
+.h4,
+h4 {
   font-size: 1.5em;
 }
-h5,
-.h5 {
+.h5,
+h5 {
   font-size: 1em;
 }
-h6,
-.h6 {
+.h6,
+h6 {
   font-size: 0.75em;
 }
 .post-title .h2 {
@@ -80,9 +81,9 @@ a {
 a:hover {
   color: #00ada7;
 }
+a img,
 a:active,
-a:focus,
-a img {
+a:focus {
   outline: none;
 }
 .btn {
@@ -119,7 +120,7 @@ input[type="text"],
 input[type="url"],
 input[type="email"],
 textarea {
-  padding: 7px 7px;
+  padding: 7px;
   border: 1px solid #ebebeb;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -140,7 +141,7 @@ textarea:focus {
 }
 blockquote {
   border-left: 4px solid #00ada7;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lato', serif;
   font-style: italic;
 }
 pre {
@@ -168,7 +169,7 @@ pre {
 }
 .main-header .branding {
   font-size: 3.5em;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lato', serif;
   color: #303030;
 }
 .main-header .branding:hover {
@@ -212,7 +213,7 @@ pre {
   line-height: 4em;
   display: block;
   padding: 0 21px;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lato', serif;
 }
 .main-navigation .menu li:hover > a {
   color: #00ada7;
@@ -225,7 +226,7 @@ pre {
   visibility: hidden;
   background: #FFFFFF;
   text-align: left;
-  padding: 7px 0px;
+  padding: 7px 0;
   margin: 0;
   position: absolute;
   left: 0;
@@ -308,17 +309,17 @@ pre {
 .post .post-head .post-title a {
   color: #303030;
 }
-.post .post-head .post-title a:hover,
-.post .post-head .post-title a:focus {
+.post .post-head .post-title a:focus,
+.post .post-head .post-title a:hover {
   text-decoration: none;
 }
 .post .post-head .post-meta {
   font-style: italic;
   color: #959595;
-  margin: 14px 0 0px;
+  margin: 14px 0 0;
 }
 .post .post-head .post-meta span {
-  margin: 0px 7px;
+  margin: 0 7px;
   white-space: nowrap;
 }
 .post .post-head .post-meta .comment-count {
@@ -335,7 +336,7 @@ pre {
   transition: opacity 0.2s ease-out;
 }
 .post .featured-media a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .post .post-content {
   margin: 30px 0;
@@ -346,6 +347,12 @@ pre {
 }
 .post .post-permalink {
   text-align: right;
+}
+.post .post-permalink a {
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 10px 20px;
 }
 .post .post-footer {
   margin-top: 30px;
@@ -491,7 +498,7 @@ pre {
   padding: 21px 30px;
 }
 .main-footer .widget {
-  padding: 0px 30px;
+  padding: 0 30px;
 }
 .widget {
   margin-bottom: 35px;
@@ -567,7 +574,7 @@ pre {
 }
 .widget .recent-post .recent-single-post .post-title {
   color: #505050;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lato', serif;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -792,7 +799,7 @@ pre {
   }
   .main-navigation .menu li ul {
     visibility: visible;
-    padding: 0px 0px 0px 20px;
+    padding: 0 0 0 20px;
     margin: 0;
     position: relative;
     top: 0;
