@@ -23,20 +23,14 @@
 		{{excerpt}}
 	</div>
 	<div class="post-permalink">
-		<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
-	</div>
-	<footer class="post-footer clearfix">
 		<div class="pull-left tag-list">
 			{{#if tags}}
 			<i class="fa fa-folder-open-o"></i>
 			{{tags separator=","}}
 			{{/if}}
 		</div>
-		<div class="pull-right share">
-			{{! insert share_links partials}}
-			{{> share_links}}
-		</div>
-	</footer>
+		<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
+	</div>
 </article>
 {{/foreach}}
 <!-- end post -->

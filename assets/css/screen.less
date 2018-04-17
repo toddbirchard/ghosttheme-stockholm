@@ -8,7 +8,7 @@
 ====================================================*/
 body,
 html {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	color: @text-color;
 	line-height: 1.75em;
@@ -19,6 +19,11 @@ html {
 body {
 	width: 100%;
 	overflow-x: hidden;
+}
+
+article {
+	font-size: 16px;
+	line-height: 1.6em;
 }
 
 .h1,
@@ -33,22 +38,26 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Lato', serif;
-	font-weight: 700;
+	font-family: 'Montserrat', serif;
+	font-weight: 600;
 	color: @text-color-heading;
 }
 
 .h1,
 h1 {
 	font-size: 3em;
-	font-weight:700;
+	font-weight:800;
 }
 
 .h2,
 h2 {
 	font-size: 2.5em;
 	font-weight: 400;
-	font-family: 'Lato';
+	font-family: 'Montserrat';
+}
+
+.home-template h2 {
+	font-weight:800 !important;
 }
 
 .h3,
@@ -141,7 +150,7 @@ textarea {
 
 blockquote {
 	border-left: 4px solid @theme-color;
-	font-family: 'Lato', serif;
+	font-family: 'Montserrat', serif;
 	font-style: italic;
 }
 
@@ -172,7 +181,7 @@ pre {
 
 	.branding {
 		font-size: 3.5em;
-		font-family: 'Lato', serif;
+		font-family: 'Montserrat', serif;
 		color: @text-color-heading;
 
 		&:hover {
@@ -222,7 +231,7 @@ pre {
 				line-height: 4em;
 				display: block;
 				padding: 0 21px;
-				font-family: 'Lato', serif;
+				font-family: 'Montserrat', serif;
 			}
 
 			&:hover > a {
@@ -320,7 +329,7 @@ pre {
 		}
 
 		.post-meta {
-			// font-family: 'Lato', serif;
+			// font-family: 'Montserrat', serif;
 			font-style: italic;
 			color: @text-color-light;
 			margin: 14px 0 0;
@@ -362,10 +371,10 @@ pre {
 		}
 	}
 
-	.post-permalink {
+	& > .post-permalink {
 		text-align: right;
 
-		a {
+		.btn {
 			font-size: 18px;
 			font-weight: 100;
 			text-transform: uppercase;
@@ -373,19 +382,14 @@ pre {
 		}
 	}
 
-	.post-footer {
-		margin-top: 30px;
-		border-top: 1px solid @border-color;
-		padding: 21px 0 0;
-
 		.tag-list {
 			color: @text-color-light;
-			font-style: italic;
-			line-height: 28px;
+			margin-top: 10px;
 
 			a {
 				color: @text-color-light;
 				margin-left: 7px;
+				font-weight: 100;
 
 				&:hover {
 					color: @theme-color;
@@ -427,7 +431,6 @@ pre {
 				}
 			}
 		}
-	}
 }
 /*====================================================
 	pagination
@@ -625,7 +628,7 @@ pre {
 
 			.post-title {
 				color: @text-color;
-				font-family: 'Lato', serif;
+				font-family: 'Montserrat', serif;
 				.transition(all 0.2s ease);
 
 				&:hover {
