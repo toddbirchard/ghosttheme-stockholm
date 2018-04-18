@@ -51,7 +51,7 @@ h1 {
 
 .h2,
 h2 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 	font-weight: 400;
 	font-family: 'Montserrat';
 }
@@ -62,7 +62,9 @@ h2 {
 
 .h3,
 h3 {
-	font-size: 2em;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 .h4,
@@ -158,6 +160,7 @@ pre {
 	padding: 0;
 	background: none;
 	border: none;
+	margin: 20px 0;
 }
 
 ::-moz-selection {
@@ -198,7 +201,7 @@ pre {
 .navbar-header {
 	text-align: center;
 
-	i {
+	li {
 		height: 56px;
 		line-height: 56px;
 		font-size: 2em;
@@ -315,8 +318,8 @@ pre {
 		text-align: center;
 
 		.post-title {
-			margin: 0;
-			line-height: 1em;
+			margin: 20px 0;
+			line-height: 1.1em;
 
 			a {
 				color: @text-color-heading;
@@ -332,7 +335,7 @@ pre {
 			// font-family: 'Montserrat', serif;
 			font-style: italic;
 			color: @text-color-light;
-			margin: 14px 0 0;
+			margin: 14px 0;
 
 			span {
 				margin: 0 7px;
@@ -346,7 +349,6 @@ pre {
 	}
 
 	.featured-media {
-		margin-top: 10px;
 		overflow: hidden;
 
 		img {
@@ -405,12 +407,20 @@ pre {
 				li {
 					list-style: none;
 					display: inline-block;
+					list-style: none;
+					display: inline-block;
+					/* width: 38px; */
+					/* height: 29px; */
+					line-height: 28px;
+					border: 1px solid @border-color;
+					font-size: 15px;
+					padding: 0px 7px;
 
 					a {
 						color: @text-color-light;
 						text-align: center;
-
-						i {
+						/*
+						li {
 							width: 28px;
 							height: 28px;
 							line-height: 28px;
@@ -418,10 +428,10 @@ pre {
 							.border-radius(50%);
 							.transition(all 0.2s ease);
 							font-size: 12px;
-						}
+						}*/
 
 						&:hover {
-							i {
+							li {
 								color: @white;
 								background: @theme-color;
 								border: 1px solid @theme-color;
@@ -447,7 +457,7 @@ pre {
 		background: @theme-color;
 		.border-radius(2px);
 
-		i {
+		svg {
 			width: 36px;
 			height: 36px;
 			line-height: 36px;
@@ -509,7 +519,7 @@ pre {
 			margin-right: 14px;
 			white-space: nowrap;
 
-			i {
+			svg {
 				margin-right: 7px;
 			}
 		}
@@ -581,17 +591,18 @@ pre {
 			text-align: center;
 
 			a {
-				i {
+				svg {
 					width: 35px;
 					height: 35px;
 					line-height: 35px;
 					border: 1px solid @border-color;
 					color: @text-color-light;
 					.transition(all 0.2s);
+					    padding: 8px;
 				}
 
 				&:hover {
-					i {
+					svg {
 						color: @white;
 						background: @theme-color;
 						border: 1px solid @theme-color;
@@ -725,7 +736,7 @@ pre {
 		span {
 			margin: 0 7px;
 
-			i {
+			svg {
 				margin-right: 7px;
 			}
 		}
@@ -788,6 +799,10 @@ pre {
 	border-top: 1px solid @text-color-heading;
 }
 
+p {
+	margin-bottom: 20px
+}
+
 #back-to-top {
 	position: fixed;
 	right: 10px;
@@ -803,7 +818,7 @@ pre {
 		background: @theme-color;
 	}
 
-	i {
+	svg {
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
@@ -844,7 +859,7 @@ pre {
 				}
 
 				.meta-info {
-					i {
+					svg {
 						margin-right: 7px;
 					}
 				}

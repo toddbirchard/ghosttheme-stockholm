@@ -50,7 +50,7 @@ h1 {
 }
 .h2,
 h2 {
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: 400;
   font-family: 'Montserrat';
 }
@@ -59,7 +59,9 @@ h2 {
 }
 .h3,
 h3 {
-  font-size: 2em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 .h4,
 h4 {
@@ -155,6 +157,7 @@ pre {
   padding: 0;
   background: none;
   border: none;
+  margin: 20px 0;
 }
 ::-moz-selection {
   color: #FFFFFF;
@@ -189,7 +192,7 @@ pre {
 .navbar-header {
   text-align: center;
 }
-.navbar-header i {
+.navbar-header li {
   height: 56px;
   line-height: 56px;
   font-size: 2em;
@@ -310,8 +313,8 @@ pre {
   text-align: center;
 }
 .post .post-head .post-title {
-  margin: 0;
-  line-height: 1em;
+  margin: 20px 0;
+  line-height: 1.1em;
 }
 .post .post-head .post-title a {
   color: #303030;
@@ -323,7 +326,7 @@ pre {
 .post .post-head .post-meta {
   font-style: italic;
   color: #959595;
-  margin: 14px 0 0;
+  margin: 14px 0;
 }
 .post .post-head .post-meta span {
   margin: 0 7px;
@@ -333,7 +336,6 @@ pre {
   display: none;
 }
 .post .featured-media {
-  margin-top: 10px;
   overflow: hidden;
 }
 .post .featured-media img {
@@ -380,27 +382,28 @@ pre {
 .post .share .share-icons li {
   list-style: none;
   display: inline-block;
+  /* width: 38px; */
+  /* height: 29px; */
+  line-height: 28px;
+  border: 1px solid #ebebeb;
+  font-size: 15px;
+  padding: 0px 7px;
 }
 .post .share .share-icons li a {
   color: #959595;
   text-align: center;
+  /*
+						li {
+							width: 28px;
+							height: 28px;
+							line-height: 28px;
+							border: 1px solid @border-color;
+							.border-radius(50%);
+							.transition(all 0.2s ease);
+							font-size: 12px;
+						}*/
 }
-.post .share .share-icons li a i {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-  border: 1px solid #ebebeb;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  font-size: 12px;
-}
-.post .share .share-icons li a:hover i {
+.post .share .share-icons li a:hover li {
   color: #FFFFFF;
   background: #00ada7;
   border: 1px solid #00ada7;
@@ -422,7 +425,7 @@ pre {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.pagination a i {
+.pagination a svg {
   width: 36px;
   height: 36px;
   line-height: 36px;
@@ -477,7 +480,7 @@ pre {
   margin-right: 14px;
   white-space: nowrap;
 }
-.about-author .meta-info span i {
+.about-author .meta-info span svg {
   margin-right: 7px;
 }
 .comment-wrap {
@@ -533,7 +536,7 @@ pre {
   margin: 0 2px 5px 0;
   text-align: center;
 }
-.widget .social li a i {
+.widget .social li a svg {
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -544,8 +547,9 @@ pre {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  padding: 8px;
 }
-.widget .social li a:hover i {
+.widget .social li a:hover svg {
   color: #FFFFFF;
   background: #00ada7;
   border: 1px solid #00ada7;
@@ -666,7 +670,7 @@ pre {
 .cover .meta-info span {
   margin: 0 7px;
 }
-.cover .meta-info span i {
+.cover .meta-info span svg {
   margin-right: 7px;
 }
 .cover .bio {
@@ -710,6 +714,9 @@ pre {
   padding-bottom: 28px;
   border-top: 1px solid #303030;
 }
+p {
+  margin-bottom: 20px;
+}
 #back-to-top {
   position: fixed;
   right: 10px;
@@ -726,7 +733,7 @@ pre {
 #back-to-top:hover {
   background: #00ada7;
 }
-#back-to-top i {
+#back-to-top svg {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -764,7 +771,7 @@ pre {
 .tag-wrapper a .bg-wrapper .overlay .tag-title {
   color: #FFFFFF;
 }
-.tag-wrapper a .bg-wrapper .overlay .meta-info i {
+.tag-wrapper a .bg-wrapper .overlay .meta-info svg {
   margin-right: 7px;
 }
 .tag-wrapper a .bg-wrapper .overlay .description {
