@@ -40,7 +40,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', serif;
-  font-weight: 600;
+  font-weight: 700;
   color: #303030;
 }
 .h1,
@@ -371,6 +371,7 @@ pre {
   color: #959595;
   margin-left: 7px;
   font-weight: 100;
+  font-size: 14px;
 }
 .post .tag-list a:hover {
   color: #00ada7;
@@ -424,11 +425,7 @@ pre {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-}
-.pagination a svg {
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  padding: 5px 15px;
 }
 .pagination a:hover {
   background: #505050;
@@ -530,10 +527,11 @@ pre {
 .widget .social {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .widget .social li {
   display: inline-block;
-  margin: 0 2px 5px 0;
   text-align: center;
 }
 .widget .social li a svg {
@@ -729,14 +727,10 @@ p {
   border-radius: 2px;
   z-index: 1;
   display: none;
+  padding: 6px 12px;
 }
 #back-to-top:hover {
   background: #00ada7;
-}
-#back-to-top svg {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
 }
 /*====================================================
 	tag and author archive

@@ -39,7 +39,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Montserrat', serif;
-	font-weight: 600;
+	font-weight: 700;
 	color: @text-color-heading;
 }
 
@@ -392,6 +392,7 @@ pre {
 				color: @text-color-light;
 				margin-left: 7px;
 				font-weight: 100;
+				font-size: 14px;
 
 				&:hover {
 					color: @theme-color;
@@ -453,15 +454,12 @@ pre {
 	a {
 		text-align: center;
 		display: inline-block;
-		color: @white;
-		background: @theme-color;
-		.border-radius(2px);
-
-		svg {
-			width: 36px;
-			height: 36px;
-			line-height: 36px;
-		}
+		color: #FFFFFF;
+		background: #00ada7;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		padding: 5px 15px;
 
 		&:hover {
 			background: @text-color;
@@ -584,10 +582,11 @@ pre {
 	.social {
 		padding: 0;
 		margin: 0;
+		display: flex;
+    justify-content: space-between;
 
 		li {
 			display: inline-block;
-			margin: 0 2px 5px 0;
 			text-align: center;
 
 			a {
@@ -813,15 +812,10 @@ p {
 	.border-radius(2px);
 	z-index: 1;
 	display: none;
+	padding: 6px 12px;
 
 	&:hover {
 		background: @theme-color;
-	}
-
-	svg {
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
 	}
 }
 /*====================================================
