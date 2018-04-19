@@ -12,8 +12,8 @@
 					<div class="post-head">
 						<h1 class="post-title">{{{title}}}</h1>
 						<div class="post-meta">
-							<span class="author">{{authors}}</span> &bull;
-							<span class="date">{{date format="MMMM DD, YYYY"}}</span> <!--&bull;
+							<span class="author">{{#author}}<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" style="border-radius: 50%; display:inline-block;"></a> {{name}}{{/author}}</span> 
+							<span class="date"><i class="fal fa-calendar"></i> {{date format="MMMM DD, YYYY"}}</span> <!--&bull;
 							<span class="comment-count"><a href="{{url}}#disqus_thread">0 Comments</a></span>-->
 						</div>
 					</div>
@@ -40,8 +40,7 @@
 				</article>
 				{{> about-author}}
 				{{> prev-next}}
-				{{/post}}
-				<!-- end post -->
+
 			</div>
 			<!-- end main post area -->
 			{{! insert sidebar partial}}
@@ -49,4 +48,8 @@
 		</div>
 	</div>
 </section>
+
+{{> post_footer}}
+{{/post}}
+<!-- end post -->
 <!-- end site's main content area -->

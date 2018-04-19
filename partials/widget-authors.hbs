@@ -1,0 +1,15 @@
+<!-- start widget -->
+<div class="widget">
+	<h4 class="title">Contributors</h4>
+	<div class="content recent-post">
+		{{#get "users"}}
+			{{#foreach users}}
+				<div class="recent-single-post">
+        		<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></a>
+					<a href="{{url}}" class="post-title">{{name}}</a>
+				</div>
+				{{/foreach}}
+			{{/get}}
+			</div>
+</div>
+<!-- end widget -->

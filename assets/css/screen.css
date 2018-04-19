@@ -12,7 +12,7 @@
 ====================================================*/
 body,
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #505050;
   line-height: 1.75em;
@@ -169,6 +169,9 @@ pre {
   background: #00ada7;
   text-shadow: none;
 }
+.tag-roundup .featured-media {
+  display: none;
+}
 /*====================================================
 	header
 ====================================================*/
@@ -191,6 +194,8 @@ pre {
 }
 .navbar-header {
   text-align: center;
+  font-size: 20px;
+  padding: 14px;
 }
 .navbar-header li {
   height: 56px;
@@ -228,6 +233,7 @@ pre {
 .main-navigation .menu li:hover > a {
   color: #00ada7;
   text-decoration: none;
+  cursor: pointer;
 }
 .main-navigation .menu li.nav-current a {
   color: #00ada7;
@@ -265,6 +271,7 @@ pre {
 }
 .main-navigation .menu li ul:hover > a {
   color: #00ada7;
+  cursor: pointer;
 }
 .main-navigation .menu li:hover ul {
   visibility: visible;
@@ -309,11 +316,30 @@ pre {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.post .roundup {
+  position: absolute;
+  background: #b0b0b0;
+  color: #FFFFFF;
+  text-align: center;
+  top: -12px;
+  right: -32px;
+  width: 80px;
+  height: 40px;
+  line-height: 54px;
+  transform: rotate(45deg);
+}
+.post .roundup > .svg-inline--fa {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 .post .post-head {
   text-align: center;
 }
 .post .post-head .post-title {
-  margin: 20px 0;
+  margin: 0 0 20px;
   line-height: 1.1em;
 }
 .post .post-head .post-title a {
@@ -327,9 +353,14 @@ pre {
   font-style: italic;
   color: #959595;
   margin: 14px 0;
+  font-size: 14px;
+}
+.post .post-head .post-meta img {
+  height: 14px;
+  width: 14px;
 }
 .post .post-head .post-meta span {
-  margin: 0 7px;
+  margin: 0 10px;
   white-space: nowrap;
 }
 .post .post-head .post-meta .comment-count {
@@ -349,6 +380,10 @@ pre {
 }
 .post .post-content {
   margin: 30px 0;
+}
+.post .post-content iframe {
+  margin: 10px auto;
+  display: block;
 }
 .post .post-content img {
   max-width: 100%;
@@ -388,10 +423,10 @@ pre {
   line-height: 28px;
   border: 1px solid #ebebeb;
   font-size: 15px;
-  padding: 0px 7px;
+  padding: 0 7px;
 }
 .post .share .share-icons li a {
-  color: #959595;
+  color: #c4c4c4;
   text-align: center;
   /*
 						li {
@@ -474,7 +509,7 @@ pre {
   margin-bottom: 7px;
 }
 .about-author .meta-info span {
-  margin-right: 14px;
+  margin-right: 20px;
   white-space: nowrap;
 }
 .about-author .meta-info span svg {
@@ -593,11 +628,14 @@ pre {
   font-style: italic;
   color: #959595;
 }
+.widget .recent-post .recent-single-post .date .svg-inline--fa {
+  margin-right: 5px;
+}
 .widget .recent-post .recent-single-post:last-child {
   margin-bottom: 0;
 }
 .widget .newsletter .input-group {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: block;
 }
 .widget .newsletter .input-group .email {
@@ -712,6 +750,10 @@ pre {
   padding-bottom: 28px;
   border-top: 1px solid #303030;
 }
+.copyright .rights {
+  margin-top: 15px;
+  opacity: 0.5;
+}
 p {
   margin-bottom: 20px;
 }
@@ -786,7 +828,7 @@ p {
 /*====================================================
 	media query
 ====================================================*/
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .sidebar {
     display: none;
   }
