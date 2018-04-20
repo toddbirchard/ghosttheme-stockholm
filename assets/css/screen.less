@@ -142,8 +142,8 @@ a:focus {
 	.transition(all 0.2s ease-in-out);
 
 	&:hover {
-		border: 1px solid @text-color-heading;
-		background: @text-color-heading;
+		border: 1px solid @hover-color;
+		background: @hover-color;
 		color: @white;
 	}
 
@@ -330,9 +330,10 @@ pre {
 	margin-bottom: 25px;
 	position: relative;
 	overflow: hidden;
+	order: 1;
 
 	&.featured {
-		/*order: 1;*/
+		order:0;
 	}
 
 	.featured {
@@ -449,6 +450,10 @@ pre {
 			max-width: 100%;
 			margin-bottom: 14px;
 		}
+
+		a {
+			color: @secondary-color;
+		}
 	}
 
 	& > .post-permalink {
@@ -528,6 +533,7 @@ pre {
 	margin: 0 0 35px;
 	text-align: center;
 	display: block;
+	order: 20;
 
 	a {
 		text-align: center;
@@ -846,12 +852,12 @@ pre {
 	.widget {
 		.title {
 			color: @white;
-			border-bottom: 1px solid @text-color-heading;
+			border-bottom: 1px solid #454545;
 		}
 
 		.tag-cloud {
 			a {
-				border: 1px solid @text-color-heading;
+				border: 1px solid #494949;
 
 				&:hover {
 					border: 1px solid @theme-color;
@@ -978,7 +984,7 @@ p {
 
 			.bg-wrapper {
 				.overlay {
-					background: fade(@black, 50%);
+					background: @hover-color;
 				}
 			}
 		}
@@ -1038,7 +1044,7 @@ p {
 	margin: 0 auto !important;
 }
 
-.post {
+.post-template {
 	.tag-list {
 		margin: 3px;
 	}

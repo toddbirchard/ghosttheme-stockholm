@@ -42,7 +42,7 @@ h5,
 h6 {
   font-family: 'Montserrat', serif;
   font-weight: 700;
-  color: #303030;
+  color: #171d51;
 }
 .h1,
 h1 {
@@ -141,16 +141,16 @@ a:focus {
   transition: all 0.2s ease-in-out;
 }
 .btn-default:hover {
-  border: 1px solid #303030;
-  background: #303030;
+  border: 1px solid #003e7c;
+  background: #003e7c;
   color: #FFFFFF;
 }
 .btn-default:focus {
   outline: none;
 }
 .btn-default[disabled] {
-  border: 1px solid #303030;
-  background: #303030;
+  border: 1px solid #171d51;
+  background: #171d51;
   color: #FFFFFF;
 }
 input[type="search"],
@@ -212,7 +212,7 @@ pre {
 .main-header .branding {
   font-size: 3.5em;
   font-family: 'Montserrat', serif;
-  color: #303030;
+  color: #171d51;
 }
 .main-header .branding:hover {
   text-decoration: none;
@@ -321,9 +321,10 @@ pre {
   margin-bottom: 25px;
   position: relative;
   overflow: hidden;
+  order: 1;
 }
 .post.featured {
-  /*order: 1;*/
+  order: 0;
 }
 .post .featured {
   position: absolute;
@@ -376,7 +377,7 @@ pre {
   line-height: 1.1em;
 }
 .post .post-head .post-title a {
-  color: #303030;
+  color: #171d51;
 }
 .post .post-head .post-title a:focus,
 .post .post-head .post-title a:hover {
@@ -428,6 +429,9 @@ pre {
 .post .post-content img {
   max-width: 100%;
   margin-bottom: 14px;
+}
+.post .post-content a {
+  color: #00b1d1;
 }
 .post > .post-permalink {
   text-align: right;
@@ -492,6 +496,7 @@ pre {
   margin: 0 0 35px;
   text-align: center;
   display: block;
+  order: 20;
 }
 .pagination a {
   text-align: center;
@@ -773,16 +778,16 @@ pre {
 }
 .main-footer .widget .title {
   color: #FFFFFF;
-  border-bottom: 1px solid #303030;
+  border-bottom: 1px solid #454545;
 }
 .main-footer .widget .tag-cloud a {
-  border: 1px solid #303030;
+  border: 1px solid #494949;
 }
 .main-footer .widget .tag-cloud a:hover {
   border: 1px solid #00ada7;
 }
 .main-footer .widget .recent-post .recent-single-post {
-  border-bottom: 1px dashed #303030;
+  border-bottom: 1px dashed #171d51;
 }
 .main-footer .widget .recent-post .recent-single-post .post-title {
   color: #959595;
@@ -799,7 +804,7 @@ pre {
   color: #FFFFFF;
   padding-top: 28px;
   padding-bottom: 28px;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #171d51;
 }
 .copyright .rights {
   margin-top: 16px;
@@ -870,13 +875,13 @@ p {
   color: #505050;
 }
 .tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay .tag-title {
-  color: #303030;
+  color: #171d51;
 }
 .tag-wrapper a:hover {
   text-decoration: none;
 }
 .tag-wrapper a:hover .bg-wrapper .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: #003e7c;
 }
 /*====================================================
 	media query
@@ -925,6 +930,6 @@ p {
 .page iframe {
   margin: 0 auto !important;
 }
-.post .tag-list {
+.post-template .tag-list {
   margin: 3px;
 }
