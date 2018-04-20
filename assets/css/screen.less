@@ -8,12 +8,13 @@
 ====================================================*/
 body,
 html {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'proxima-nova',sans-serif;
 	font-size: 14px;
 	color: @text-color;
 	line-height: 1.75em;
 	background: @bg-color;
 	position: relative;
+	font-weight: 200;
 }
 
 body {
@@ -47,6 +48,10 @@ h6 {
 h1 {
 	font-size: 3em;
 	font-weight: 800;
+
+	@media(max-width:600px) {
+		font-size: 2em;
+	}
 }
 
 .h2,
@@ -54,13 +59,26 @@ h2 {
 	font-size: 2.3em;
 	font-weight: 400;
 	font-family: 'Montserrat';
+
+	@media(max-width: 600px){
+		font-size: 1.5em;
+		font-weight: 300;
+	}
 }
 
 .home-template h2 {
 	font-weight: 800 !important;
+
+	@media(max-width: 600px){
+	    font-size: 2em;
+		}
 }
 
-.home-template .roundup .post-content {}
+.home-template .main-content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
 
 .h3,
 h3 {
@@ -91,6 +109,10 @@ h6 {
 	margin: 0 0 20px;
 	line-height: 1em;
 	color: #303030;
+
+	@media(max-width: 600px){
+		font-size: 2em;
+	}
 }
 
 a {
@@ -309,6 +331,10 @@ pre {
 	position: relative;
 	overflow: hidden;
 
+	&.featured {
+		/*order: 1;*/
+	}
+
 	.featured {
 		position: absolute;
 		background: @theme-color;
@@ -320,6 +346,7 @@ pre {
 		height: 40px;
 		line-height: 54px;
 		.transform(rotate(45deg));
+		    font-size: 12px;
 
 		i {
 			.transform(rotate(-45deg));
@@ -328,8 +355,8 @@ pre {
 
 	.roundup {
 		position: absolute;
-		background: #b0b0b0;
-		color: #FFFFFF;
+		background: #c9c9c9;
+		color: #ffffff;
 		text-align: center;
 		top: -12px;
 		right: -32px;
@@ -338,7 +365,7 @@ pre {
 		line-height: 54px;
 		transform: rotate(45deg);
 
-		& > .svg-inline--fa {
+		i {
 			.transform(rotate(-45deg));
 		}
 	}
@@ -369,13 +396,17 @@ pre {
 			margin: 14px 0;
 			font-size: 14px;
 
+			.date {
+				margin-left: 20px;
+			}
+
 			img {
 				height: 14px;
 				width: 14px;
 			}
 
 			span {
-				margin: 0 10px;
+				margin: 0;
 				white-space: nowrap;
 			}
 
@@ -403,9 +434,14 @@ pre {
 
 	.post-content {
 		margin: 30px 0;
+		overflow-x: hidden;
+
+		.fluid-width-video-wrapper {
+			margin: 0;
+		}
 
 		iframe {
-			margin: 10px auto;
+			margin: 0;
 			display: block;
 		}
 
@@ -429,12 +465,13 @@ pre {
 	.tag-list {
 		color: @text-color-light;
 		margin-top: 10px;
+		font-size: 14px;
+		margin-right: 5px;
 
 		a {
 			color: @text-color-light;
-			margin-left: 7px;
-			font-weight: 100;
-			font-size: 14px;
+			font-weight: 300;
+			font-size: 16px;
 
 			&:hover {
 				color: @theme-color;
@@ -500,7 +537,7 @@ pre {
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
 		border-radius: 2px;
-		padding: 5px 15px;
+		padding: 2px 7px;
 
 		&:hover {
 			background: @text-color;
@@ -512,7 +549,7 @@ pre {
 	.page-number {
 		background: @theme-color;
 		color: @white;
-		margin: 0 3px;
+		margin: 0 5px;
 		display: inline-block;
 		line-height: 36px;
 		padding: 0 14px;
@@ -531,11 +568,20 @@ pre {
 		width: 100px;
 		height: 100px;
 		.border-radius(50%);
-		// margin-right: 14px;
+
+
+		@media(max-width: 600px) {
+			width: 70px;
+			height: 70px;
+			}
 	}
 
 	.details {
 		margin-left: 114px;
+
+		@media(max-width: 600px) {
+			margin-left: 90px;
+		}
 	}
 
 	.author {
@@ -555,10 +601,10 @@ pre {
 		margin-bottom: 7px;
 
 		span {
-			margin-right: 20px;
+			margin-right: 30px;
 			white-space: nowrap;
 
-			svg {
+			i {
 				margin-right: 7px;
 			}
 		}
@@ -631,18 +677,17 @@ pre {
 			text-align: center;
 
 			a {
-				svg {
+				i {
 					width: 35px;
 					height: 35px;
 					line-height: 35px;
 					border: 1px solid @border-color;
 					color: @text-color-light;
 					.transition(all 0.2s);
-					padding: 8px;
 				}
 
 				&:hover {
-					svg {
+					i {
 						color: @white;
 						background: @theme-color;
 						border: 1px solid @theme-color;
@@ -692,7 +737,7 @@ pre {
 				font-style: italic;
 				color: @text-color-light;
 
-				.svg-inline--fa {
+				i {
 					margin-right: 5px;
 				}
 			}
@@ -780,7 +825,7 @@ pre {
 		span {
 			margin: 0 7px;
 
-			svg {
+			i {
 				margin-right: 7px;
 			}
 		}
@@ -843,8 +888,10 @@ pre {
 	border-top: 1px solid @text-color-heading;
 
 	.rights {
-		margin-top: 15px;
-		opacity: 0.5;
+		margin-top: 16px;
+		opacity: 0.6;
+		display: block;
+		font-size: 12px;
 	}
 }
 
@@ -903,7 +950,7 @@ p {
 				}
 
 				.meta-info {
-					svg {
+					i {
 						margin-right: 7px;
 					}
 				}
@@ -985,4 +1032,14 @@ p {
 .fluid-width-video-wrapper {
 	padding-top: 0 !important;
 	height: 400px;
+}
+
+.page iframe {
+	margin: 0 auto !important;
+}
+
+.post {
+	.tag-list {
+		margin: 3px;
+	}
 }
