@@ -976,6 +976,10 @@ p {
 .page iframe {
   margin: 0 auto !important;
 }
+.post-templatep {
+  font-size: 24px;
+  font-weight: 600;
+}
 .post-template .tag-list {
   margin: 3px;
 }
@@ -984,24 +988,30 @@ p {
   padding: 20px;
   width: 80%;
   transition: all 0.2s ease-out;
+  min-height: 140px;
+  border-radius: 3px;
+  margin: auto;
 }
 .post-template .linkpreview img {
   display: inline-block;
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 0;
   height: 100px;
   width: 100px;
+  float: left;
 }
 .post-template .linkpreview .link-info {
   display: inline-block;
+  width: 70%;
 }
 .post-template .linkpreview .link-info h4 {
   margin-top: 0;
+  font-weight: 400px;
 }
 .post-template .linkpreview .link-info p {
-  color: #00ada7;
+  color: #505050;
 }
 .post-template .linkpreview:hover {
-  background-color: #999;
+  background-color: #00ada7;
   cursor: pointer;
 }
 .page-template .post-title {

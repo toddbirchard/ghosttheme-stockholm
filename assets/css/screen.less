@@ -1091,6 +1091,11 @@ p {
 }
 
 .post-template {
+	&p {
+		font-size: 24px;
+		font-weight: 600;
+	}
+
 	.tag-list {
 		margin: 3px;
 	}
@@ -1100,28 +1105,34 @@ p {
 		padding: 20px;
 		width: 80%;
 		transition: all 0.2s ease-out;
+		min-height: 140px;
+		border-radius: 3px;
+		margin: auto;
 
 		img {
 			display: inline-block;
-			margin: 0 10px 0 0;
+			margin: 0 20px 0 0;
 			height: 100px;
 			width: 100px;
+			float:left;
 		}
 
 		.link-info {
 			display: inline-block;
+			width:70%;
 
 			h4 {
 				margin-top: 0;
+				font-weight: 400px
 			}
 
 			p {
-				color: @theme-color;
+				color: @text-color;
 			}
 		}
 
 		&:hover {
-			background-color: #999;
+			background-color: @theme-color;
 			cursor: pointer;
 		}
 	}
