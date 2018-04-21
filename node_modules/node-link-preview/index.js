@@ -1,0 +1,11 @@
+/**
+ * Export LinkPreview
+ */
+
+exports = module.exports = require('./link-preview.js');
+
+/*
+  Export the version
+*/
+
+exports.version = require('./package.json').version;
