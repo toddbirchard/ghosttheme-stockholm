@@ -1,6 +1,10 @@
 <!-- start sidebar -->
 <div class="col-md-4 sidebar">
-	{{> widget-text}}
+	{{#is "post"}}
+		{{> widget-author}}
+	{{else}}
+		{{> widget-text}}
+	{{/is}}
 	{{> widget-social}}
 	{{> widget-newsletter}}
 	{{> widget-recentpost}}

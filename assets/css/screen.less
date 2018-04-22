@@ -91,9 +91,9 @@ h4 {
 
 .h5,
 h5 {
-	font-size: 1.6em;
+	font-size: 1.4em;
 	font-weight: 500;
-	margin: 0;
+	margin: 5px 0 0 0;
 	font-family: 'mr-eaves-xl-modern', serif;
 	color: @text-color-light-heading;
 	line-height: 1;
@@ -215,7 +215,7 @@ pre {
 
 	.post-head {
 		border-bottom: 1px solid #e9e9e9;
-		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 }
 	/*====================================================
@@ -375,6 +375,10 @@ pre {
 			}
 		}
 
+		.btn {
+			float: right;
+		}
+
 		.roundup {
 			position: absolute;
 			background: #c9c9c9;
@@ -394,6 +398,7 @@ pre {
 
 		.post-head {
 			text-align: center;
+			margin-bottom: 20px;
 
 			.post-title {
 				margin: 0;
@@ -469,13 +474,6 @@ pre {
 				display: block;
 			}
 
-			code {
-				color:@secondary-color;
-				background-color: #f2f2f9;
-				padding: 5px 10px;
-				border-radius: 5px;
-			}
-
 			img {
 				max-width: 100%;
 				margin-bottom: 14px;
@@ -487,7 +485,7 @@ pre {
 		}
 
 		& > .post-permalink {
-			text-align: right;
+			text-align: left;
 
 			.btn {
 				font-size: 18px;
@@ -498,28 +496,51 @@ pre {
 		}
 
 		.tag-list {
-			color: @text-color-light;
+			color: @text-color-heading;
 			margin-top: 10px;
 			font-size: 14px;
 			margin-right: 5px;
 
 			i {
 				color: @text-color-heading;
-				margin-right: 5px;
+				margin-right: 3px;
 				opacity: 0.6;
+				font-size: 12px;
 			}
+
+			& > span {
+				margin-right: 20px;
+			}
+
+			.author {
+				text-transform: capitalize;
+			}
+
+			.date,
+			.author {
+				span {
+					opacity: 0.6;
+				}
+
+				@media(max-width: 600px){
+					display: none;
+				}
+			}
+
+
 
 			a {
 				color: @text-color-heading;
-				font-weight: 600;
-				font-size: 16px;
+				font-size: 14px;
 				opacity: 0.6;
+				transition: .2s all ease-out;
 				@media(max-width: 600px) {
 					font-weight: 500;
 				}
 
 				&:hover {
 					color: @theme-color;
+					opacity: 1;
 				}
 			}
 		}
@@ -648,6 +669,7 @@ pre {
 			span {
 				margin-right: 30px;
 				white-space: nowrap;
+				display: block;
 
 				i {
 					margin-right: 7px;
@@ -988,6 +1010,10 @@ pre {
 		background: @white;
 		margin-bottom: 35px;
 
+		h2 {
+			font-weight: 700;
+		}
+
 		a {
 			.bg-wrapper {
 				background-size: cover;
@@ -997,7 +1023,7 @@ pre {
 
 				.overlay {
 					padding: 35px 14px;
-					background: fade(@black, 30%);
+					background: fade(@black, 70%) !important;
 					color: @white;
 					.transition(all 0.2s ease-in-out);
 					height: 100%;
@@ -1017,6 +1043,11 @@ pre {
 					}
 				}
 
+				p {
+					font-size: 18px;
+					font-weight: 500;
+				}
+
 				&.no-image {
 					.bg-wrapper {
 						.overlay {
@@ -1032,10 +1063,11 @@ pre {
 
 			&:hover {
 				text-decoration: none;
+				background: @hover-color;
 
 				.bg-wrapper {
 					.overlay {
-						background: @hover-color;
+						background: @hover-color !important;
 					}
 				}
 			}
@@ -1215,10 +1247,15 @@ pre {
 			display: inherit !important;
 		}
 
+		p {
+			 margin-bottom: 0;
+		}
+
 		a {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			display: inline !important;
 		}
 	}
 
@@ -1236,7 +1273,7 @@ pre {
 		}
 
 		.post-content {
-			margin: 30px 0 5px;
+			margin: 0 0 5px;
 		}
 	}
 }

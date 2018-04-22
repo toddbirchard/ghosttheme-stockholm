@@ -10,7 +10,7 @@
 				{{#post}}
 				<article class="{{post_class}}">
 					<div class="post-head">
-						<h1 class="post-title h2">{{{title}}}</h1>
+						<h1 class="post-title">{{{title}}}</h1>
 					</div>
 					{{#if feature_image}}
 					<div class="featured-media" style="background-image: url({{feature_image}});">
@@ -23,7 +23,7 @@
 				{{/post}}
 				<!-- end post -->
 			</div>
-            
+
             {{#get "users" limit="all" include="count.posts" order="count.posts desc"}}
             {{#foreach users}}
             <div class="col-md-6">
@@ -35,21 +35,21 @@
                     {{/if}}
                     <div class="details">
                         <div class="author">
-                            {{t "About"}} <a href="{{url}}">{{name}}</a>
+                            <a href="{{url}}">{{name}}</a>
                         </div>
                         <div class="meta-info">
-                            <span class="post-count"><i class="fa fa-pencil-square-o"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
+                            <span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
                             {{#if location}}
-                                <span class="loaction"><i class="fa fa-home"></i>{{location}}</span>
+                                <span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
                             {{/if}}
                             {{#if website}}
-                            <span class="website"><i class="fa fa-globe"></i><a href="{{website}}" targer="_BLANK">{{t "Website"}}</a></span>
+                            <span class="website"><i class="fal fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
                             {{/if}}
                             {{#if twitter}}
-                            <span class="twitter"><a href="{{twitter_url}}"><i class="fa fa-twitter"></i></a></span>
+                            <span class="twitter"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
                             {{/if}}
                             {{#if facebook}}
-                            <span class="facebook"><a href="{{facebook_url}}"><i class="fa fa-facebook"></i></a></span>
+                            <span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
                             {{/if}}
                         </div>
                         {{#if bio}}
@@ -62,7 +62,7 @@
             </div>
             {{/foreach}}
             {{/get}}
-            
+
 			<!-- end main post area -->
 		</div>
 	</div>

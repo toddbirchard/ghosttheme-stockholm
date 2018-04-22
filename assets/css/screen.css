@@ -93,9 +93,9 @@ h4 {
 }
 .h5,
 h5 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 500;
-  margin: 0;
+  margin: 5px 0 0 0;
   font-family: 'mr-eaves-xl-modern', serif;
   color: #525568;
   line-height: 1;
@@ -215,7 +215,7 @@ pre {
 }
 .tag-roundup .post-head {
   border-bottom: 1px solid #e9e9e9;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 /*====================================================
 	header
@@ -372,6 +372,9 @@ pre {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.post .btn {
+  float: right;
+}
 .post .roundup {
   position: absolute;
   background: #c9c9c9;
@@ -393,6 +396,7 @@ pre {
 }
 .post .post-head {
   text-align: center;
+  margin-bottom: 20px;
 }
 .post .post-head .post-title {
   margin: 0;
@@ -451,12 +455,6 @@ pre {
   margin: 0;
   display: block;
 }
-.post .post-content code {
-  color: #00b1d1;
-  background-color: #f2f2f9;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
 .post .post-content img {
   max-width: 100%;
   margin-bottom: 14px;
@@ -465,7 +463,7 @@ pre {
   color: #00b1d1;
 }
 .post > .post-permalink {
-  text-align: right;
+  text-align: left;
 }
 .post > .post-permalink .btn {
   font-size: 18px;
@@ -474,21 +472,38 @@ pre {
   padding: 10px 20px;
 }
 .post .tag-list {
-  color: #959595;
+  color: #171a30;
   margin-top: 10px;
   font-size: 14px;
   margin-right: 5px;
 }
 .post .tag-list i {
   color: #171a30;
-  margin-right: 5px;
+  margin-right: 3px;
   opacity: 0.6;
+  font-size: 12px;
+}
+.post .tag-list > span {
+  margin-right: 20px;
+}
+.post .tag-list .author {
+  text-transform: capitalize;
+}
+.post .tag-list .date span,
+.post .tag-list .author span {
+  opacity: 0.6;
+}
+@media (max-width: 600px) {
+  .post .tag-list .date,
+  .post .tag-list .author {
+    display: none;
+  }
 }
 .post .tag-list a {
   color: #171a30;
-  font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.6;
+  transition: 0.2s all ease-out;
 }
 @media (max-width: 600px) {
   .post .tag-list a {
@@ -497,6 +512,7 @@ pre {
 }
 .post .tag-list a:hover {
   color: #00ada7;
+  opacity: 1;
 }
 .post .share .share-icons {
   padding: 0;
@@ -610,6 +626,7 @@ pre {
 .about-author .meta-info span {
   margin-right: 30px;
   white-space: nowrap;
+  display: block;
 }
 .about-author .meta-info span i {
   margin-right: 7px;
@@ -897,6 +914,9 @@ p {
   background: #FFFFFF;
   margin-bottom: 35px;
 }
+.tag-wrapper h2 {
+  font-weight: 700;
+}
 .tag-wrapper a .bg-wrapper {
   background-size: cover;
   background-position: center;
@@ -905,7 +925,7 @@ p {
 }
 .tag-wrapper a .bg-wrapper .overlay {
   padding: 35px 14px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7) !important;
   color: #FFFFFF;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -923,6 +943,10 @@ p {
 .tag-wrapper a .bg-wrapper .overlay .description {
   margin-top: 7px;
 }
+.tag-wrapper a .bg-wrapper p {
+  font-size: 18px;
+  font-weight: 500;
+}
 .tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay {
   color: #505050;
 }
@@ -931,9 +955,10 @@ p {
 }
 .tag-wrapper a:hover {
   text-decoration: none;
+  background: #003e7c;
 }
 .tag-wrapper a:hover .bg-wrapper .overlay {
-  background: #003e7c;
+  background: #003e7c !important;
 }
 /*====================================================
 	media query
@@ -1084,12 +1109,18 @@ p {
 .tag-template .post .kg-card-markdown p {
   display: inherit !important;
 }
+.home-template .post .kg-card-markdown p,
+.author-template .post .kg-card-markdown p,
+.tag-template .post .kg-card-markdown p {
+  margin-bottom: 0;
+}
 .home-template .post .kg-card-markdown a,
 .author-template .post .kg-card-markdown a,
 .tag-template .post .kg-card-markdown a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: inline !important;
 }
 .home-template .post.tag-video .fluid-width-video-wrapper,
 .author-template .post.tag-video .fluid-width-video-wrapper,
@@ -1111,5 +1142,5 @@ p {
 .home-template .post.tag-video .post-content,
 .author-template .post.tag-video .post-content,
 .tag-template .post.tag-video .post-content {
-  margin: 30px 0 5px;
+  margin: 0 0 5px;
 }
