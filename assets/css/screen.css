@@ -451,6 +451,12 @@ pre {
   margin: 0;
   display: block;
 }
+.post .post-content code {
+  color: #00b1d1;
+  background-color: #f2f2f9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 .post .post-content img {
   max-width: 100%;
   margin-bottom: 14px;
@@ -983,7 +989,7 @@ p {
 .post-template .tag-list {
   margin: 3px;
 }
-.post-template .linkpreview {
+.post-template .link-preview {
   border: 1px solid #dadada;
   padding: 20px;
   width: 80%;
@@ -992,50 +998,118 @@ p {
   border-radius: 3px;
   margin: auto;
 }
-.post-template .linkpreview img {
+@media (max-width: 600px) {
+  .post-template .link-preview {
+    width: 100%;
+  }
+}
+.post-template .link-preview .preview-image {
   display: inline-block;
   margin: 0 20px 0 0;
   height: 100px;
   width: 100px;
   float: left;
+  background-image: url(https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 3px;
 }
-.post-template .linkpreview .link-info {
+.post-template .link-preview .url-info {
+  color: #00ada7;
+  margin-top: 0;
+  font-size: 12px;
+}
+.post-template .link-preview .url-info i {
+  margin-right: 10px;
+  display: inline-block;
+}
+.post-template .link-preview .url-info span {
+  display: inline-block;
+  margin: 0 !important;
+  height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+.post-template .link-preview .link-info {
   display: inline-block;
   width: 70%;
+  overflow: hidden;
 }
-.post-template .linkpreview .link-info h4 {
+.post-template .link-preview .link-info h4 {
   margin-top: 0;
-  font-weight: 400px;
+  font-size: 1.1em;
+  font-weight: 600;
 }
-.post-template .linkpreview .link-info p {
+.post-template .link-preview .link-info p {
   color: #505050;
+  font-weight: 100;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-.post-template .linkpreview:hover {
+.post-template .link-preview:hover {
   background-color: #00ada7;
+  color: #fff;
   cursor: pointer;
+  text-decoration: none;
+}
+.post-template .link-preview:hover h4,
+.post-template .link-preview:hover p,
+.post-template .link-preview:hover a {
+  color: #fff;
 }
 .page-template .post-title {
   margin-bottom: 20px !important;
 }
-.home-template .post .kg-card-markdown * {
+.home-template .post .kg-card-markdown *,
+.author-template .post .kg-card-markdown *,
+.tag-template .post .kg-card-markdown * {
   display: none;
 }
 .home-template .post .kg-card-markdown a,
+.author-template .post .kg-card-markdown a,
+.tag-template .post .kg-card-markdown a,
 .home-template .post .kg-card-markdown iframe,
-.home-template .post .kg-card-markdown p {
+.author-template .post .kg-card-markdown iframe,
+.tag-template .post .kg-card-markdown iframe,
+.home-template .post .kg-card-markdown p,
+.author-template .post .kg-card-markdown p,
+.tag-template .post .kg-card-markdown p {
   display: inherit !important;
 }
-.home-template .post .kg-card-markdown a {
+.home-template .post .kg-card-markdown a,
+.author-template .post .kg-card-markdown a,
+.tag-template .post .kg-card-markdown a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.home-template .post.tag-video .fluid-width-video-wrapper {
+.home-template .post.tag-video .fluid-width-video-wrapper,
+.author-template .post.tag-video .fluid-width-video-wrapper,
+.tag-template .post.tag-video .fluid-width-video-wrapper {
   display: block !important;
 }
-.home-template .post.tag-video .post-permalink {
+@media (max-width: 500px) {
+  .home-template .post.tag-video .fluid-width-video-wrapper,
+  .author-template .post.tag-video .fluid-width-video-wrapper,
+  .tag-template .post.tag-video .fluid-width-video-wrapper {
+    height: 160px;
+  }
+}
+.home-template .post.tag-video .post-permalink,
+.author-template .post.tag-video .post-permalink,
+.tag-template .post.tag-video .post-permalink {
   display: none;
 }
-.home-template .post.tag-video .post-content {
+.home-template .post.tag-video .post-content,
+.author-template .post.tag-video .post-content,
+.tag-template .post.tag-video .post-content {
   margin: 30px 0 5px;
 }
