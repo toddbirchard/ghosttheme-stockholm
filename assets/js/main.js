@@ -1,11 +1,11 @@
 /*====================================================
-  TABLE OF CONTENT
-  1. function declearetion
+  TABLE OF CONTENTS
+  1. function declaretion
   2. Initialization
 ====================================================*/
 
 /*===========================
- 1. function declearetion
+ 1. function declaretion
  ==========================*/
 var themeApp = {
 	featuredMedia: function(){
@@ -150,6 +150,12 @@ var themeApp = {
             tile.height(max_height);
         }
     },
+		mobileNavigation: function() {
+			$('nav').on('click', function(event){
+				$('.navbar-collapse').toggleClass( "active" );
+				console.log('clicked');
+			})
+		},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.responsiveIframe();
@@ -161,6 +167,7 @@ var themeApp = {
 		themeApp.mailchimp();
     themeApp.backToTop();
     themeApp.adjustTileHeight();
+		themeApp.mobileNavigation();
 	}
 }
 

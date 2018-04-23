@@ -26,7 +26,7 @@
 			</div>
 
             {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc"}}
-            {{#foreach tags visibility="internal"}}
+            {{#foreach tags}}
             <div class="col-md-4">
                 <div class="tag-wrapper">
                     <a href="{{url}}">

@@ -15,6 +15,12 @@
 	<link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/hl-styles/monokai_sublime.css"}}">
+	{{#is "post"}}
+	<meta property="og:image" content="{{img_url feature_image}}">
+	{{else}}
+	<meta property="og:image" content="https://miscellaneous.nyc3.digitaloceanspaces.com/hack.jpg"/>
+	{{/is}}
+
 	<!-- only for demo -->
 	<!-- <link rel="stylesheet" type="text/css" href="{{asset "demo-assets/css/colpick.css"}}"> -->
 	{{! inserting theme config partial}}
