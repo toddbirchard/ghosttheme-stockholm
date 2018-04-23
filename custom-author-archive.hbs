@@ -5,7 +5,8 @@
 	<div class="container">
 		<div class="row">
 			<!-- start main post area -->
-			<div class="col-md-12 main-content">
+			{{> sidebar}}
+			<div class="col-md-8 main-content">
 				<!-- start post -->
 				{{#post}}
 				<article class="{{post_class}}">
@@ -20,9 +21,10 @@
 						{{content}}
 					</div>
 				</article>
+
 				{{/post}}
 				<!-- end post -->
-			</div>
+
 
             {{#get "users" limit="all" include="count.posts" order="count.posts desc"}}
             {{#foreach users}}
@@ -62,8 +64,9 @@
             </div>
             {{/foreach}}
             {{/get}}
-
+						</div>
 			<!-- end main post area -->
+
 		</div>
 	</div>
 </section>

@@ -5,7 +5,8 @@
 	<div class="container">
 		<div class="row">
 			<!-- start main post area -->
-			<div class="col-md-12 main-content">
+			{{> sidebar}}
+			<div class="col-md-8 main-content">
 				<!-- start post -->
 				{{#post}}
 				<article class="{{post_class}}">
@@ -26,7 +27,7 @@
 
             {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc"}}
             {{#foreach tags visibility="internal"}}
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="tag-wrapper">
                     <a href="{{url}}">
                         <div class="bg-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}}style="background-image: url({{feature_image}});"{{/if}}>
