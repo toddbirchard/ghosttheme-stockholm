@@ -20,32 +20,34 @@
 					<div class="post-content">
 						{{content}}
 					</div>
+					<div class="tag-container">
+					{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc"}}
+					{{#foreach tags}}
+							<div class="tag-wrapper">
+									<a href="{{url}}">
+											<div class="bg-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}}style="background-image: url({{feature_image}});"{{/if}}>
+													<div class="overlay">
+															<h2 class="tag-title">{{meta_title}}</h2>
+															{{#if description}}
+															<p class="description tag-description">{{description}}</p>
+															{{/if}}
+															<div class="meta-info">
+																	<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+															</div>
+													</div>
+											</div>
+									</a>
+							</div>
+
+					{{/foreach}}
+					{{/get}}
+					</div>
 				</article>
 				{{/post}}
 				<!-- end post -->
 			</div>
 
-            {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc"}}
-            {{#foreach tags}}
-            <div class="col-md-4">
-                <div class="tag-wrapper">
-                    <a href="{{url}}">
-                        <div class="bg-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}}style="background-image: url({{feature_image}});"{{/if}}>
-                            <div class="overlay">
-                                <h2 class="tag-title">{{meta_title}}</h2>
-                                {{#if description}}
-                                <p class="description tag-description">{{description}}</p>
-                                {{/if}}
-																<div class="meta-info">
-                                    <span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            {{/foreach}}
-            {{/get}}
+
 			<!-- end main post area -->
 		</div>
 	</div>

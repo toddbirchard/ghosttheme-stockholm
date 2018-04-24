@@ -200,7 +200,7 @@ pre {
   padding: 0;
   background: none;
   border: none;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 ::-moz-selection {
   color: #FFFFFF;
@@ -258,7 +258,7 @@ pre {
   text-align: center;
   background: #FFFFFF;
   border-top: 1px solid #ebebeb;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .main-navigation {
@@ -343,7 +343,7 @@ pre {
 .post {
   padding: 25px;
   background: #FFFFFF;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
   order: 1;
@@ -492,6 +492,12 @@ pre {
   opacity: 0.6;
   font-size: 12px;
 }
+.post .tag-list a:nth-of-type(1) {
+  margin-left: 0;
+}
+.post .tag-list a {
+  margin-left: 5px;
+}
 .post .tag-list > span {
   margin-right: 20px;
 }
@@ -589,15 +595,41 @@ pre {
 /*====================================================
 	about author and comment and next-prev link
 ====================================================*/
+.col-md-8 .about-author {
+  border: 0;
+  border-radius: 0;
+}
+.col-md-8 .about-author .meta-info span {
+  display: inline-block;
+}
+.col-md-8 .about-author .bio {
+  margin: 0;
+  float: none;
+}
+.page-about .about-author {
+  border: 1px solid #dcdcdc;
+  border-radius: 4px !important;
+}
+.page-about .about-author .bio {
+  float: left !important;
+}
+.page-about .about-author i {
+  color: #959595 !important;
+}
+.page-about .about-author span {
+  color: #959595;
+}
 .about-author {
   background: #FFFFFF;
-  padding: 35px;
-  margin-bottom: 35px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
 }
 .about-author .avatar {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin-right: 15px;
+  margin-bottom: 15px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -607,6 +639,13 @@ pre {
     width: 70px;
     height: 70px;
   }
+}
+.about-author .bio {
+  display: block;
+  float: left;
+  line-height: 1.5;
+  margin-top: 10px;
+  font-weight: 100;
 }
 .about-author .details {
   margin-left: 95px;
@@ -624,7 +663,9 @@ pre {
   text-decoration: none;
 }
 .about-author .meta-info {
-  font-style: italic;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 100;
   color: #959595;
   margin-bottom: 7px;
 }
@@ -662,7 +703,7 @@ pre {
   padding: 0 30px;
 }
 .widget {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .widget .title {
   margin-top: 0;
@@ -914,19 +955,43 @@ p {
   background-size: cover;
   background-position: center;
 }
-.tag-wrapper {
+.author-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
+.author-container .about-author {
+  width: 49%;
+  background-color: rgba(0, 6, 11, 0.78);
+  background-blend-mode: multiply;
+  color: #505050;
+}
+.author-container .meta-info {
+  color: #505050;
+}
+.tag-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
+.tag-container .tag-wrapper {
   background: #FFFFFF;
-  margin-bottom: 35px;
+  width: 49%;
+  margin: 0 0 10px;
 }
 @media (max-width: 1040px) {
-  .tag-wrapper {
-    padding: 35px;
+  .tag-container .tag-wrapper {
+    width: 100%;
   }
 }
-.tag-wrapper h2 {
+.tag-container .tag-wrapper h2 {
   font-weight: 700;
 }
-.tag-wrapper a .bg-wrapper {
+.tag-container .tag-wrapper a .bg-wrapper {
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -934,7 +999,7 @@ p {
   min-height: 308px;
   position: relative;
 }
-.tag-wrapper a .bg-wrapper .overlay {
+.tag-container .tag-wrapper a .bg-wrapper .overlay {
   padding: 35px 14px;
   background: rgba(0, 0, 0, 0.7) !important;
   color: #FFFFFF;
@@ -947,30 +1012,47 @@ p {
   width: 100%;
   position: absolute;
 }
-.tag-wrapper a .bg-wrapper .overlay .tag-title {
+.tag-container .tag-wrapper a .bg-wrapper .overlay .tag-title {
   color: #FFFFFF;
+  line-height: 0.9;
+  font-size: 2.5em;
+  margin: 20px 0 0;
+  height: 90px;
+  padding: 0 20px;
 }
-.tag-wrapper a .bg-wrapper .overlay .meta-info i {
+.tag-container .tag-wrapper a .bg-wrapper .overlay .meta-info {
+  position: absolute;
+  bottom: 10%;
+  margin: auto;
+  display: block;
+  left: 0;
+  right: 0;
+}
+.tag-container .tag-wrapper a .bg-wrapper .overlay .meta-info span {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.tag-container .tag-wrapper a .bg-wrapper .overlay .meta-info i {
   margin-right: 7px;
 }
-.tag-wrapper a .bg-wrapper .overlay .description {
+.tag-container .tag-wrapper a .bg-wrapper .overlay .description {
   margin-top: 7px;
 }
-.tag-wrapper a .bg-wrapper p {
+.tag-container .tag-wrapper a .bg-wrapper p {
   font-size: 18px;
   font-weight: 500;
 }
-.tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay {
+.tag-container .tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay {
   color: #505050;
 }
-.tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay .tag-title {
+.tag-container .tag-wrapper a .bg-wrapper.no-image .bg-wrapper .overlay .tag-title {
   color: #171a30;
 }
-.tag-wrapper a:hover {
+.tag-container .tag-wrapper a:hover {
   text-decoration: none;
   background: #003e7c;
 }
-.tag-wrapper a:hover .bg-wrapper .overlay {
+.tag-container .tag-wrapper a:hover .bg-wrapper .overlay {
   background: #003e7c !important;
 }
 /*====================================================
@@ -982,6 +1064,7 @@ p {
   }
   .main-navigation {
     text-align: left;
+    padding: 0 10px;
   }
   .main-navigation .menu li {
     display: block;
@@ -1205,4 +1288,55 @@ p {
   .col-sm-12 .navbar-header {
     display: none;
   }
+}
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  padding-right: 10px;
+  padding-left: 10px;
 }
