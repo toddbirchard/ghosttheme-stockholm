@@ -658,6 +658,7 @@ pre {
 
 		.bio {
 			float:left !important;
+			font-size: 14px;
 		}
 
 		i {
@@ -667,12 +668,23 @@ pre {
 		span {
 			color: @text-color-light;
 		}
+		@media(max-width: 1040px){
+			 width: 100% !important;
+			 .meta-info {
+				 display: flex;
+				 justify-content: space-between;
+			 }
+			 .bio {
+				 float:none !important;
+			 }
+		}
 	}
+
 }
 
 .about-author {
 	background: @white;
-	padding: 25px;
+	padding: 20px;
 	margin-bottom: 25px;
 	border-radius: 5px;
 
