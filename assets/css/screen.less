@@ -55,8 +55,8 @@ h1 {
 
 .h2,
 h2 {
-	font-size: 3em;
-	font-weight: 400;
+	font-size: 2.2em;
+	font-weight: 500;
 	font-family: 'mr-eaves-xl-modern';
 	@media(max-width: 600px) {
 		font-size: 1.5em;
@@ -170,7 +170,11 @@ pre {
 	padding: 0;
 	background: none;
 	border: none;
-	margin: 30px 0;
+	margin: 20px;
+	font-size: 12px;
+	@media(max-width: 600px) {
+		margin: 20px 0;
+	}
 }
 
 ::-moz-selection {
@@ -383,7 +387,7 @@ pre {
 		text-align: center;
 		margin-bottom: 20px;
 
-		.post-title  {
+		.post-title {
 			margin: 0;
 			line-height: 0.9;
 			font-weight: 700;
@@ -402,8 +406,8 @@ pre {
 		}
 
 		.post-excerpt {
-			 margin-top: 10px;
-			 font-weight: 600;
+			margin-top: 10px;
+			font-weight: 600;
 		}
 
 		.post-meta {
@@ -472,6 +476,10 @@ pre {
 			@media(max-width: 600px) {
 				height: 100%;
 			}
+		}
+
+		.twitter-tweet {
+			margin: 20px auto;
 		}
 
 		img {
@@ -838,7 +846,7 @@ pre {
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
-    	border-radius: 2px;
+			border-radius: 2px;
 			.transition(all 0.2s ease);
 
 			&:hover {
@@ -998,7 +1006,7 @@ pre {
 		.tag-cloud {
 			a {
 				border: 1px solid #494949;
-				border-radius:2px;
+				border-radius: 2px;
 				color: @text-color-footer !important;
 
 				&:hover {
@@ -1271,12 +1279,11 @@ p {
 
 	.link-preview {
 		border: 1px solid #dadada;
-		padding: 20px;
-		width: 90%;
+		padding: 5px;
+		width: 80%;
 		transition: all 0.2s ease-out;
-		min-height: 140px;
-		border-radius: 3px;
-    margin: 10px auto;
+		border-radius: 5px;
+		margin: 20px auto;
 		@media(max-width: 600px) {
 			width: 100%;
 		}
@@ -1284,12 +1291,13 @@ p {
 		.preview-image {
 			display: inline-block;
 			margin: 0 20px 20px 0;
-			height: 100px;
-			width: 100px;
+			height: 200px;
+			width: 100%;
 			float: left;
 			background-image: url("https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg");
 			background-size: cover;
 			background-position-x: center;
+			background-position-y: center;
 			border-radius: 3px;
 			@media(max-width: 600px) {
 				height: 50px;
@@ -1314,19 +1322,21 @@ p {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			width: 80%;
+			width: 100%;
 			line-height: 1;
 		}
 
 		.link-info {
 			display: inline-block;
-			width: 70%;
+			width: 100%;
 			overflow: hidden;
+			padding:0 10px;
 
 			h4 {
 				margin-top: 0;
-				font-size: 1.1em;
-				font-weight: 600;
+				margin-top: 0;
+				font-size: 1.5em;
+				font-weight: 500;
 			}
 
 			p {
@@ -1368,28 +1378,36 @@ p {
 
 .author-template .post,
 .home-template .post,
-.tag-template .post,
-.paged .post {
+.paged .post,
+.tag-template .post {
 	.kg-card-markdown * {
 		display: none;
 	}
 
 	.kg-card-markdown {
 		a,
-		iframe,
-		p {
+		iframe {
 			display: inline !important;
 		}
 
-		p {
-			margin-bottom: 0;
+		p:nth-of-type(1),
+		p:nth-of-type(2) {
+			display:block;
+		}
+
+		p:nth-of-type(2) {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		a {
 			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: inline !important;
+	    /*max-width: 250px;
+			display: inline-block !important;*/
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+			line-height:1.5;
 		}
 	}
 
@@ -1514,16 +1532,13 @@ p {
 	padding-right: 10px;
 	padding-left: 10px;
 }
-
-
-@media (min-width: 992px){
+@media (min-width: 992px) {
 	.col-md-push-4 {
-	    left: 0;
+		left: 0;
 	}
 }
-
-@media (min-width: 992px){
+@media (min-width: 992px) {
 	.col-md-pull-8 {
-	    right: 0;
+		right: 0;
 	}
 }
