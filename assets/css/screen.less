@@ -1284,6 +1284,8 @@ p {
 		transition: all 0.2s ease-out;
 		border-radius: 5px;
 		margin: 20px auto;
+		background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 		@media(max-width: 600px) {
 			width: 100%;
 		}
@@ -1298,7 +1300,7 @@ p {
 			background-size: cover;
 			background-position-x: center;
 			background-position-y: center;
-			border-radius: 3px;
+			border-radius: 3px 3px 1px 1px;
 			@media(max-width: 600px) {
 				height: 50px;
 				width: 50px;
@@ -1316,7 +1318,7 @@ p {
 		.url-info {
 			color: @theme-color;
 			margin-top: 0;
-			font-size: 12px;
+			font-size: 13px;
 			display: inline-block;
 			margin: 0 !important;
 			white-space: nowrap;
@@ -1381,6 +1383,10 @@ p {
 .paged .post,
 .tag-template .post {
 	.kg-card-markdown * {
+		display: none;
+	}
+
+	.twitter-tweet {
 		display: none;
 	}
 

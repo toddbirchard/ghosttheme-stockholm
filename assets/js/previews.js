@@ -7,7 +7,7 @@ $( document ).ready(function() {
       if (input != "") {
         return input;
       } else {
-        return "https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg";
+        return "https://hackers.nyc3.digitaloceanspaces.com/link.jpg";
       }
     }
 

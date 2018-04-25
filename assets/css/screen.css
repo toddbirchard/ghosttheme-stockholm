@@ -1163,6 +1163,8 @@ p {
   transition: all 0.2s ease-out;
   border-radius: 5px;
   margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 600px) {
   .post-template .link-preview {
@@ -1179,7 +1181,7 @@ p {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
-  border-radius: 3px;
+  border-radius: 3px 3px 1px 1px;
 }
 @media (max-width: 600px) {
   .post-template .link-preview .preview-image {
@@ -1196,7 +1198,7 @@ p {
 .post-template .link-preview .url-info {
   color: #00ada7;
   margin-top: 0;
-  font-size: 12px;
+  font-size: 13px;
   display: inline-block;
   margin: 0 !important;
   white-space: nowrap;
@@ -1247,6 +1249,12 @@ p {
 .home-template .post .kg-card-markdown *,
 .paged .post .kg-card-markdown *,
 .tag-template .post .kg-card-markdown * {
+  display: none;
+}
+.author-template .post .twitter-tweet,
+.home-template .post .twitter-tweet,
+.paged .post .twitter-tweet,
+.tag-template .post .twitter-tweet {
   display: none;
 }
 .author-template .post .kg-card-markdown a,
