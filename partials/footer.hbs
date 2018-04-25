@@ -8,9 +8,21 @@
 				</div>
 				<!-- end first footer widget area -->
 				<!-- start second footer widget area -->
+
 				<div class="col-sm-4">
-					{{> widget-authors}}
+					{{#is "post"}}
+						{{#is "page"}}
+							{{> widget-authors}}
+						{{else}}
+							{{#post}}
+								{{> widget-relatedpost}}
+							{{/post}}
+						{{/is}}
+					{{else}}
+						{{> widget-authors}}
+					{{/is}}
 				</div>
+
 				<!-- end second footer widget area -->
 				<!-- start third footer widget area -->
 				<div class="col-sm-4">
@@ -26,6 +38,7 @@
 	<a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></i></a>
 	{{ghost_foot}}
 	<!-- scripts -->
+	<!--
 	<script type="text/javascript">
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {
@@ -35,12 +48,12 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
+-->
   <script src="{{asset "/js/jquery.min.js"}}"></script>
 	<script src="{{asset "/js/jquery.fitvids.js"}}"></script>
 	<script src="{{asset "/js/bootstrap.min.js"}}"></script>
 	<script src="{{asset "/js/jflickrfeed.min.js"}}"></script>
 	<script src="{{asset "/js/highlight.pack.js"}}"></script>
 	<script src="{{asset "/js/main.js"}}"></script>
-	{{> analytics}}
 </body>
 </html>

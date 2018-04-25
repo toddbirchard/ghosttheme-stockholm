@@ -4,14 +4,15 @@
 <section class="content-wrap">
 	<div class="container">
 		<div class="row">
+			<!-- end main post area -->
+			{{! insert sidebar partial}}
+			{{> sidebar}}
 			<!-- start main post area -->
 			<div class="col-md-8 main-content">
 				{{> loop}}
 				{{pagination}}
 			</div>
-			<!-- end main post area -->
-			{{! insert sidebar partial}}
-			{{> sidebar}}
+
 		</div>
 	</div>
 </section>

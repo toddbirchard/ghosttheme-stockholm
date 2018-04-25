@@ -64,13 +64,6 @@ h2 {
 	}
 }
 
-.home-template h2 {
-	font-weight: 800 !important;
-	@media(max-width: 600px) {
-		font-size: 2em;
-	}
-}
-
 .home-template .main-content {
 	display: flex;
 	justify-content: center;
@@ -95,7 +88,7 @@ h5 {
 	font-weight: 500;
 	margin: 5px 0 0;
 	font-family: 'mr-eaves-xl-modern', serif;
-	color: @text-color-light-heading;
+	color: @text-color-heading;
 	line-height: 1;
 	@media(max-width: 600px) {
 		font-size: 1.3em;
@@ -106,22 +99,6 @@ h5 {
 .h6,
 h6 {
 	font-size: 0.75em;
-}
-
-.post-title {
-	font-weight: 700;
-
-	.h2 {
-		text-align: left;
-		font-size: 3.5em;
-		font-weight: 700;
-		margin: 0;
-		line-height: 1;
-		color: #303030;
-		@media(max-width: 600px) {
-			font-size: 2em;
-		}
-	}
 }
 
 a {
@@ -291,6 +268,9 @@ pre {
 				text-transform: uppercase;
 				font-size: 17px;
 				font-weight: 600;
+				@media(max-width: 600px) {
+					padding: 0;
+				}
 			}
 
 			&:hover > a {
@@ -403,9 +383,10 @@ pre {
 		text-align: center;
 		margin-bottom: 20px;
 
-		.post-title {
+		.post-title  {
 			margin: 0;
 			line-height: 0.9;
+			font-weight: 700;
 
 			a {
 				color: @text-color-heading;
@@ -415,6 +396,14 @@ pre {
 					text-decoration: none;
 				}
 			}
+			@media(max-width: 600px) {
+				font-size: 2em;
+			}
+		}
+
+		.post-excerpt {
+			 margin-top: 10px;
+			 font-weight: 600;
 		}
 
 		.post-meta {
@@ -423,6 +412,10 @@ pre {
 			color: @text-color-light;
 			margin: 18px 0;
 			font-size: 12px;
+
+			div {
+				display: inline-block;
+			}
 
 			.date {
 				margin-left: 20px;
@@ -651,13 +644,13 @@ pre {
 	}
 }
 
-.page-about{
+.page-about {
 	.about-author {
 		border: 1px solid #dcdcdc;
 		border-radius: 4px !important;
 
 		.bio {
-			float:left !important;
+			float: left !important;
 			font-size: 14px;
 		}
 
@@ -668,29 +661,31 @@ pre {
 		span {
 			color: @text-color-light;
 		}
-		@media(max-width: 1040px){
-			 width: 100% !important;
-			 .meta-info {
-				 display: flex;
-				 justify-content: space-between;
-			 }
-			 .bio {
-				 float:none !important;
-			 }
+		@media(max-width: 1040px) {
+			width: 100% !important;
+
+			.meta-info {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				flex-wrap: wrap;
+			}
+
+			.bio {
+				float: none !important;
+			}
 		}
 	}
-
 }
 
 .about-author {
 	background: @white;
 	padding: 20px;
 	margin-bottom: 25px;
-	border-radius: 5px;
 
 	.avatar {
-		width: 90px;
-		height: 90px;
+		width: 80px;
+		height: 80px;
 		margin-right: 15px;
 		margin-bottom: 15px;
 		.border-radius(50%);
@@ -716,8 +711,8 @@ pre {
 	}
 
 	.author {
-		font-size: 1.5em;
-		margin-bottom: 7px;
+		font-size: 1.3em;
+		margin-bottom: 5px;
 
 		a {
 			&:hover {
@@ -838,11 +833,12 @@ pre {
 	.tag-cloud {
 		a {
 			border: 1px solid @border-color;
-			padding: 2px 7px;
+			padding: 3px 11px;
 			color: @text-color-light;
 			line-height: 1.5em;
 			display: inline-block;
-			margin: 0 7px 7px 0;
+			margin: 0 10px 10px 0;
+    	border-radius: 2px;
 			.transition(all 0.2s ease);
 
 			&:hover {
@@ -855,16 +851,18 @@ pre {
 	}
 
 	.recent-post {
-		.recent-single-post {
+		.recent-single-post,
+		.single-author {
 			border-bottom: 1px dashed @border-color;
 			padding-bottom: 14px;
 			margin-bottom: 14px;
 
-			.post-title {
+			.post-title,
+			.single-author-name {
 				color: @text-color;
-				font-family: 'mr-eaves-xl-modern', serif;
+				font-family: 'proxima-nova', serif;
 				.transition(all 0.2s ease);
-				font-size: 18px;
+				font-size: 16px;
 				font-weight: 600;
 
 				&:hover {
@@ -885,6 +883,7 @@ pre {
 
 			&:last-child {
 				margin-bottom: 0;
+				border-bottom: 0;
 			}
 		}
 	}
@@ -987,7 +986,8 @@ pre {
 .main-footer {
 	background: @bg-color-footer;
 	padding: 35px 0 0;
-	color: @text-color-light;
+	color: @text-color-footer;
+	margin-top: 10px;
 
 	.widget {
 		.title {
@@ -998,6 +998,8 @@ pre {
 		.tag-cloud {
 			a {
 				border: 1px solid #494949;
+				border-radius:2px;
+				color: @text-color-footer !important;
 
 				&:hover {
 					border: 1px solid @theme-color;
@@ -1006,11 +1008,20 @@ pre {
 		}
 
 		.recent-post {
-			.recent-single-post {
-				border-bottom: 1px dashed @text-color-heading;
+			.single-author {
+				font-size: 18px;
+				font-weight: 500;
+				font-family: 'mr-eaves-xl-modern', serif;
+				transition: all 0.2s ease;
+			}
 
-				.post-title {
-					color: @text-color-light;
+			.recent-single-post,
+			.single-author {
+				border-bottom: 1px dashed #272727;
+
+				.post-title,
+				.single-author-name {
+					color: @text-color-footer;
 
 					&:hover {
 						color: @theme-color;
@@ -1201,7 +1212,7 @@ p {
 
 	.main-navigation {
 		text-align: left;
-		padding: 0 10px;
+		padding: 0 15px;
 
 		.menu {
 			li {
@@ -1265,7 +1276,7 @@ p {
 		transition: all 0.2s ease-out;
 		min-height: 140px;
 		border-radius: 3px;
-		margin: auto;
+    margin: 10px auto;
 		@media(max-width: 600px) {
 			width: 100%;
 		}
@@ -1357,7 +1368,8 @@ p {
 
 .author-template .post,
 .home-template .post,
-.tag-template .post {
+.tag-template .post,
+.paged .post {
 	.kg-card-markdown * {
 		display: none;
 	}
@@ -1366,7 +1378,7 @@ p {
 		a,
 		iframe,
 		p {
-			display: inherit !important;
+			display: inline !important;
 		}
 
 		p {
@@ -1424,7 +1436,6 @@ p {
 		.menu {
 			display: flex;
 			justify-content: space-between;
-			max-width: 600px;
 			margin: auto;
 		}
 
@@ -1432,6 +1443,8 @@ p {
 			padding-right: 0;
 			padding-left: 0;
 			display: block;
+			max-width: 375px;
+			margin: 0 auto;
 
 			li {
 				display: inline-block;
@@ -1500,4 +1513,17 @@ p {
 .col-xs-9 {
 	padding-right: 10px;
 	padding-left: 10px;
+}
+
+
+@media (min-width: 992px){
+	.col-md-push-4 {
+	    left: 0;
+	}
+}
+
+@media (min-width: 992px){
+	.col-md-pull-8 {
+	    right: 0;
+	}
 }

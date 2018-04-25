@@ -1,19 +1,18 @@
 $( document ).ready(function() {
-  var api_url = 'https://api.linkpreview.net'
-  var key = '5adafb08baeedbb9a1d8ce57f597447fdd34bd1e3f7b8'
+  var api_url = 'https://api.linkpreview.net';
 
   $( ".kg-card-markdown a" ).each(function( index, element ) {
 
     function verify(input) {
       if (input != "") {
-        return input
+        return input;
       } else {
-        return "https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg"
+        return "https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg";
       }
     }
 
     $.ajax({
-        url: api_url + "?key=" + key + " &q=" + $( this ).text(),
+        url: api_url + "?key=" + linkpreview_key + " &q=" + $( this ).text(),
         contentType: "application/json",
         dataType: 'json',
         success: function(result){

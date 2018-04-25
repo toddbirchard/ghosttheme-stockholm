@@ -1,5 +1,5 @@
 <!-- start about the author -->
-{{#foreach authors}}
+{{#foreach authors include="count.posts"}}
 <div class="about-author clearfix">
 	{{#if profile_image}}
 		<a href="{{url}}"><img src="{{profile_image}}" alt="Author image" class="avatar pull-left"></a>
@@ -11,11 +11,14 @@
 			{{!--{{t "About"}}--}} <a href="{{url}}">{{name}}</a>
 		</div>
 		<div class="meta-info">
+			{{!--<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>--}}
 			{{#if location}}
 				<span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
 			{{/if}}
 			{{#if website}}
-			<span class="website"><a href="{{website}}" targer="_BLANK"><i class="fal fa-globe"></i>{{t "Website"}}</a></span>
+					<span class="website"><a href="{{website}}" targer="_BLANK"><i class="fal fa-globe"></i>{{t "Website"}}</a></span>
+			{{else}}
+					<span class="website"><a href="https://hackersandslackers.com/author/{{slug}}" targer="_BLANK"><i class="fal fa-globe"></i>{{t "Website"}}</a></span>			
 			{{/if}}
 			{{#if twitter}}
 			<span class="twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i> {{twitter}}</a></span>

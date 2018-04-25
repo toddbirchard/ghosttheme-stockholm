@@ -161,8 +161,6 @@ var themeApp = {
 		themeApp.responsiveIframe();
 		themeApp.sidebarConfig();
 		themeApp.facebook();
-		/*themeApp.googlePlus();
-		themeApp.flickr();*/
 		themeApp.highlighter();
 		themeApp.mailchimp();
     themeApp.backToTop();

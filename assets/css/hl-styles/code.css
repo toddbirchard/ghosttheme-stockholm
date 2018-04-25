@@ -1,39 +1,22 @@
-
-/*
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
-*/
-
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
-  color: #abb2bf;
-  background: #282c34;
+  color: #166c8b;
+  background: #f1f5f8;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #b5bac4;
   font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #c678dd;
+  color: #00b1d5;
+  font-weight: 600;
 }
 
 .hljs-section,
@@ -53,12 +36,12 @@ hue-6-2: #e6c07b
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #98c379;
+  color: #47989a;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #e6c07b;
+  color:#8652c4;
 }
 
 .hljs-attr,
@@ -69,7 +52,7 @@ hue-6-2: #e6c07b
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #d19a66;
+  color: #3fb44b;
 }
 
 .hljs-symbol,

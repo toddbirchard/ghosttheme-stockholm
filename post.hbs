@@ -4,17 +4,20 @@
 <section class="content-wrap">
 	<div class="container">
 		<div class="row">
+			{{#post}}
+			{{! insert sidebar partial}}
+			{{> sidebar}}
 			<!-- start main post area -->
 			<div class="col-md-8 main-content">
 				<!-- start post -->
-				{{#post}}
+
 				<article class="{{post_class}}">
 					<div class="post-head">
 						<h1 class="post-title">{{{title}}}</h1>
 						<h5>{{excerpt}}</h5>
 						<div class="post-meta">
-							<span class="author">{{#author}}<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" style="border-radius: 50%; display:inline-block;"></a> {{name}}{{/author}}</span>
-							<span class="date"><i class="fal fa-calendar"></i> {{date format="MMMM DD, YYYY"}}</span> <!--&bull;
+							<div class="author">{{#author}}<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" style="border-radius: 50%; display:inline-block;"> {{name}}</a>{{/author}}</div>
+							<div class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD, YYYY"}}</span></div> <!--&bull;
 							<span class="comment-count"><a href="{{url}}#disqus_thread">0 Comments</a></span>-->
 						</div>
 					</div>
@@ -46,13 +49,15 @@
 
 			</div>
 			<!-- end main post area -->
-			{{! insert sidebar partial}}
-			{{> sidebar}}
+
 		</div>
 	</div>
 </section>
-
-{{> post_footer}}
+{{#has tag="Roundup"}}
+	<script src="{{asset "/js/secret.js"}}"></script>
+	<script src="{{asset "/js/previews.js"}}"></script>
+{{/has}}
+{{> analytics}}
 {{/post}}
 <!-- end post -->
 <!-- end site's main content area -->

@@ -2,15 +2,18 @@
 <div class="col-md-4 sidebar">
 	{{#is "post"}}
 		{{> widget-author}}
-	{{else}}
+	{{/is}}
+	{{#is "home"}}
 		{{> widget-text}}
 	{{/is}}
 	{{> widget-social}}
 	{{> widget-newsletter}}
 	{{> widget-recentpost}}
 	{{> widget-tagcloud}}
+	{{^is "page"}}
+		{{> widget-twitter}}
+	{{/is}}
 	{{!-- {{> widget-facebook}} --}}
-	{{> widget-twitter}}
 	{{!-- {{> widget-google-plus}} --}}
 
 </div>
