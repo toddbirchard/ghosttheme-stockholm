@@ -3,11 +3,19 @@ $( document ).ready(function() {
 
   $( ".kg-card-markdown a" ).each(function( index, element ) {
 
-    function verify(input) {
-      if (input != "") {
-        return input;
+    function verifyImage(input) {
+      if (input.length > 0) {
+        return '<div class="preview-image" style="background-image:url(' + input + ');"></div>'
       } else {
-        return "https://hackers.nyc3.digitaloceanspaces.com/link.jpg";
+        return "";
+      }
+    }
+
+    function verifyTitle(input) {
+      if (input.title == "") {
+        return input.url;
+      } else {
+        return input.title;
       }
     }
 
@@ -16,9 +24,11 @@ $( document ).ready(function() {
         contentType: "application/json",
         dataType: 'json',
         success: function(result){
-            var link_image = verify(result.image);
+          console.log(result);
+            var link_image = verifyImage(result.image);
+            var verify_title = verifyTitle(result);
             //console.log("result.image = " + typeof(result.image));
-            $( element ).after('<a href="' + result.url + '"><div class="link-preview"><div class="preview-image" style="background-image:url(' + link_image + ');"></div><div class="link-info"><h4>' + result.title +'</h4><p>' + result.description +'</p><a href="' + result.url + '" class="url-info"><i class="far fa-link"></i>' + result.url + '</a></div></div></a>');
+            $( element ).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title +'</h4><p>' + result.description +'</p><span class="url-info"><i class="far fa-link"></i>' + result.url + '</span></div></div></a>');
             $( element ).remove();
         }
     })

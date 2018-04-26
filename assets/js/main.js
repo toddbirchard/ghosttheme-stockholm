@@ -140,7 +140,7 @@ var themeApp = {
 		});
     },
     adjustTileHeight: function() {
-        var tile = $('.archive .about-author, .archive .tag-wrapper');
+        var tile = $('.archive .tag-wrapper');
         var max_height = 0;
         if(tile.length > 0) {
             $.each(tile, function(){

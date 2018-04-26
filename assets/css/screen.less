@@ -189,16 +189,30 @@ pre {
 	text-shadow: none;
 }
 
-.home-template {
+.home-template,
+.tag-template,
+.page-about,
+.paged {
 	.tag-roundup {
 		.featured-media {
 			display: none;
-			border-radius: 3px;
 		}
 
 		.post-head {
 			border-bottom: 1px solid #e9e9e9;
 			padding-bottom: 20px;
+		}
+
+
+	}
+
+	.tag-hash-image {
+			.featured-media {
+			display: block;
+		}
+		.post-head {
+			border-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 }
@@ -1292,18 +1306,15 @@ p {
 
 		.preview-image {
 			display: inline-block;
-			margin: 0 20px 20px 0;
 			height: 200px;
 			width: 100%;
 			float: left;
-			background-image: url("https://hackers.nyc3.digitaloceanspaces.com/linkpreview.jpg");
 			background-size: cover;
 			background-position-x: center;
 			background-position-y: center;
 			border-radius: 3px 3px 1px 1px;
 			@media(max-width: 600px) {
-				height: 50px;
-				width: 50px;
+				height: 130px;
 			}
 		}
 
@@ -1332,12 +1343,12 @@ p {
 			display: inline-block;
 			width: 100%;
 			overflow: hidden;
-			padding:0 10px;
+			    padding: 10px 10px 0 10px;
 
 			h4 {
 				margin-top: 0;
 				margin-top: 0;
-				font-size: 1.5em;
+				font-size: 1.3em;
 				font-weight: 500;
 			}
 
@@ -1353,6 +1364,10 @@ p {
 				-webkit-line-clamp: 5;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
+
+				@media(max-width: 600px) {
+					    display: none;
+				}
 			}
 		}
 
@@ -1365,7 +1380,8 @@ p {
 
 			a,
 			h4,
-			p {
+			p,
+			span {
 				color: #fff;
 			}
 		}
@@ -1387,7 +1403,7 @@ p {
 	}
 
 	.twitter-tweet {
-		display: none;
+		display: none !important;
 	}
 
 	.kg-card-markdown {
@@ -1409,8 +1425,6 @@ p {
 
 		a {
 			white-space: nowrap;
-	    /*max-width: 250px;
-			display: inline-block !important;*/
 	    overflow: hidden;
 	    text-overflow: ellipsis;
 			line-height:1.5;
