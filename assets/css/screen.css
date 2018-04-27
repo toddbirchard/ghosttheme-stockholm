@@ -194,6 +194,56 @@ pre {
   background: #00ada7;
   text-shadow: none;
 }
+.author-template .container .tag-hash-upcoming {
+  display: none;
+}
+.author-template .link-preview {
+  height: 167px;
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  border: 1px solid #b4d7d5;
+}
+.author-template .link-preview h4 {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: white;
+  z-index: 10;
+  width: 80%;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  font-size: 18px;
+}
+.author-template .link-preview i {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 100;
+  font-size: 14px;
+}
+.author-template .link-preview::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent 0%, #00ada7 100%);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  content: '';
+}
+.home-template .upcoming,
+.tag-template .upcoming,
+.page-about .upcoming,
+.paged .upcoming,
+.home-template .tag-hash-upcoming,
+.tag-template .tag-hash-upcoming,
+.page-about .tag-hash-upcoming,
+.paged .tag-hash-upcoming {
+  display: none;
+}
 .home-template .tag-roundup .featured-media,
 .tag-template .tag-roundup .featured-media,
 .page-about .tag-roundup .featured-media,
@@ -473,6 +523,16 @@ pre {
 .post .post-content .fluid-width-video-wrapper {
   margin: 0;
 }
+@media (max-width: 600px) {
+  .post .post-content .fluid-width-video-wrapper {
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .post .post-content .fluid-width-video-wrapper {
+    height: 170px;
+  }
+}
 .post .post-content iframe {
   margin: 0;
   display: block;
@@ -731,6 +791,12 @@ pre {
   background: #FFFFFF;
   padding: 21px 30px;
 }
+.sidebar .upcoming p {
+  margin-bottom: 0;
+}
+.sidebar .upcoming ul {
+  padding-left: 20px;
+}
 .sidebar .text {
   font-size: 16px;
 }
@@ -900,7 +966,7 @@ pre {
   text-align: center;
   background: #FFFFFF;
   padding: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .cover .tag-name {
   margin-top: 0;
@@ -1321,7 +1387,7 @@ p {
 .tag-template .post.tag-video .fluid-width-video-wrapper {
   display: block !important;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .author-template .post.tag-video .fluid-width-video-wrapper,
   .home-template .post.tag-video .fluid-width-video-wrapper,
   .paged .post.tag-video .fluid-width-video-wrapper,

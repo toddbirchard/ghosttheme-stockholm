@@ -1,0 +1,14 @@
+{{#if author.twitter}}
+<!-- start widget -->
+  <div class="widget">
+  	<h4 class="title">{{author.twitter}}</h4>
+  	<div class="content twitter">
+  		<!-- start code from publish.twitter.com -->
+      {{#author}}
+  			<a class="twitter-timeline" data-chrome="noheader nofooter noscrollbar" data-tweet-limit="3" data-link-color="@theme-color" href="{{twitter_url}}?ref_src=twsrc%5Etfw">{{twitter}}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- end code from publish.twitter.com -->
+      {{/author}}
+  	</div>
+  </div>
+<!-- end widget -->
+{{/if}}
