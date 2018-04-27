@@ -1,12 +1,12 @@
-{{#get "posts" filter="tags:hash-upcoming+author:{author}" }}
+<!-- start widget -->
+{{#get "posts" filter="tags:hash-upcoming+author:todd" }}
 	{{#foreach posts}}
-		<!-- start widget -->
 		<div class="widget upcoming">
 			<h4 class="title">Upcoming Posts</h4>
 			<div class="content">
 				{{content}}
 			</div>
 		</div>
-		<!-- end widget -->
 	{{/foreach}}
 {{/get}}
+<!-- end widget -->

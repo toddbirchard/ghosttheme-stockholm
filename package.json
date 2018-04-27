@@ -1,10 +1,14 @@
 {
   "name": "Stockholm",
-  "description": "Minimal Ghost Theme.",
+  "description": "Stockholm: Minimal Ghost Theme.",
   "demo": "https://hackersandslackers.com",
   "version": "1.0.0",
   "engines": {
     "ghost": ">=1.0.0"
+  },
+  "author": {
+      "name": "Todd Birchard",
+      "url": "https://toddbirchard.com"
   },
   "screenshots": {
     "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
