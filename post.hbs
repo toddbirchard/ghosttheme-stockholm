@@ -11,21 +11,20 @@
 			<div class="col-md-8 main-content">
 				<!-- start post -->
 
-				<article class="{{post_class}}">
-					<div class="post-head">
-						<h1 class="post-title">{{{title}}}</h1>
-						<h5>{{excerpt}}</h5>
-						<div class="post-meta">
-							<div class="author">{{#author}}<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" style="border-radius: 50%; display:inline-block;"> {{name}}</a>{{/author}}</div>
-							<div class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD, YYYY"}}</span></div> <!--&bull;
-							<span class="comment-count"><a href="{{url}}#disqus_thread">0 Comments</a></span>-->
-						</div>
-					</div>
+				<article class="{{post_class}} post-page">
 					{{#if feature_image}}
 					<div class="featured-media">
 						<img src="{{feature_image}}" alt="{{{title}}}">
 					</div>
 					{{/if}}
+					<div class="post-head">
+						<h1 class="post-title">{{{title}}}</h1>
+						<h5>{{excerpt}}</h5>
+						<div class="post-meta">
+							<div class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD, YYYY"}}</span></div>
+						</div>
+					</div>
+
 					<div class="post-content">
 						{{content}}
 					</div>

@@ -1,0 +1,99 @@
+/*====================================================
+	Importing less files
+====================================================*/
+/*====================================================
+	COLOR VARIABLE FOR THEME
+====================================================*/
+/*====================================================
+	MIXINS
+====================================================*/
+@media (max-width: 800px) {
+  .home-template .post {
+    margin: 10px;
+    padding: 20px;
+  }
+  #main-menu {
+    max-width: 313px;
+  }
+  #main-menu a {
+    color: white;
+  }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .main-header {
+    display: none;
+  }
+  .main-navigation {
+    background: #00ada7;
+    padding: 0 15px;
+    margin-bottom: 0;
+  }
+  .main-navigation .container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .main-navigation .container .row {
+    margin: 0;
+  }
+  .main-navigation .container .row .col-sm-12 {
+    padding: 0;
+  }
+  .main-navigation .container .row .col-sm-12 .navbar-collapse .menu {
+    padding: 0;
+  }
+  .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li {
+    padding: 15px 0;
+  }
+  .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li a {
+    font-weight: 500;
+  }
+  .content-wrap .container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .content-wrap .container .main-content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .content-wrap .container .main-content .post {
+    padding: 0 3%;
+    margin-bottom: 0;
+  }
+  .content-wrap .container .main-content .post .post-head {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .content-wrap .container .main-content .post .post-head .post-title {
+    font-weight: 700;
+  }
+  .content-wrap .container .main-content .post .post-head .author,
+  .content-wrap .container .main-content .post .post-head .date {
+    margin: 10px auto;
+    display: block;
+  }
+  .content-wrap .container .main-content .post .post-content {
+    margin: 30px 0;
+    overflow-x: hidden;
+    padding: 0 3%;
+  }
+  .content-wrap .container .main-content .about-author {
+    background: #f0f1f4;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  .content-wrap .container .main-content .prev-next-wrap {
+    margin: 0;
+    text-align: center;
+    padding: 20px 24px;
+    background: #f0f1f4;
+  }
+}
+.container .main-footer {
+  margin-top: 0;
+}

@@ -1,6 +1,6 @@
 <!-- start post -->
 {{#foreach posts}}
-<article class="{{post_class}}">
+<article class="{{post_class}} post-preview {{#has tag="video"}}fluid-width-video-wrapper{{/has}}">
 	{{#if featured}}
 	<div class="featured">
 		<i class="fa fa-star"></i>
@@ -22,7 +22,7 @@
 	{{/if}}
 	<div class="post-head">
 		<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-		<h5 class="post-excerpt">{{excerpt}}</h5>
+		<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
 		{{!--{{#has tag="lynx-roundup"}}Lynx Roundup {{#get "tags" filter="tag:link-roundup" include="count.posts"}}X of {{count.posts}}{{/has}}--}}
 
 		{{!--<div class="post-meta">
