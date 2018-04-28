@@ -73,7 +73,7 @@ h2 {
 }
 .h3,
 h3 {
-  font-size: 1.5em;
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -490,7 +490,6 @@ pre {
   text-align: left;
 }
 .post .post-head .post-meta {
-  font-style: italic;
   color: #959595;
   margin: 15px 0 0;
   font-size: 12px;
@@ -645,7 +644,7 @@ pre {
 }
 .post-page .post-head {
   border-bottom: 1px solid #eaeaea;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 /*====================================================
 	pagination
@@ -780,6 +779,11 @@ pre {
 }
 .about-author .meta-info span i {
   margin-right: 7px;
+}
+@media (max-width: 600px) {
+  .about-author .meta-info span {
+    display: block !important;
+  }
 }
 .comment-wrap {
   background: #FFFFFF;
@@ -986,7 +990,6 @@ pre {
 .cover .post-count {
   margin-top: 7px;
   color: #959595;
-  font-style: italic;
 }
 .cover .avatar {
   width: 100px;
@@ -997,7 +1000,6 @@ pre {
 }
 .cover .meta-info {
   color: #959595;
-  font-style: italic;
 }
 .cover .meta-info span {
   margin: 0 7px;
@@ -1112,7 +1114,7 @@ p {
 }
 @media (max-width: 600px) {
   .author-container .about-author {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 }
 .author-container .meta-info {
@@ -1374,7 +1376,7 @@ p {
   color: #fff;
 }
 .page-template .post-title {
-  margin-bottom: 20px !important;
+  /*text-align: center !important;*/
 }
 .author-template .post .kg-card-markdown *,
 .home-template .post .kg-card-markdown *,

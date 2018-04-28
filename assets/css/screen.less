@@ -71,7 +71,7 @@ h2 {
 
 .h3,
 h3 {
-	font-size: 1.5em;
+	font-size: 2em;
 	text-transform: uppercase;
 	font-weight: 300;
 }
@@ -506,7 +506,6 @@ pre {
 
 		.post-meta {
 			// font-family: 'mr-eaves-xl-modern', serif;
-			font-style: italic;
 			color: @text-color-light;
 			margin: 15px 0 0;
 			font-size: 12px;
@@ -695,7 +694,7 @@ pre {
 .post-page {
 	.post-head{
 		border-bottom: 1px solid #eaeaea;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 }
@@ -850,8 +849,12 @@ pre {
 			i {
 				margin-right: 7px;
 			}
+			@media(max-width: 600px){
+				display: block !important;
+			}
 		}
 	}
+
 }
 
 .comment-wrap {
@@ -1080,7 +1083,6 @@ pre {
 	.post-count {
 		margin-top: 7px;
 		color: @text-color-light;
-		font-style: italic;
 	}
 
 	.avatar {
@@ -1091,7 +1093,7 @@ pre {
 
 	.meta-info {
 		color: @text-color-light;
-		font-style: italic;
+
 
 		span {
 			margin: 0 7px;
@@ -1223,7 +1225,7 @@ p {
 		color: @text-color;
 
 		@media(max-width: 600px) {
-			margin-bottom: 10px;
+			margin-bottom: 10px !important;
 		}
 	}
 
@@ -1513,7 +1515,7 @@ p {
 
 .page-template {
 	.post-title {
-		margin-bottom: 20px !important;
+		/*text-align: center !important;*/
 	}
 }
 

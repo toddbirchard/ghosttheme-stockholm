@@ -21,8 +21,16 @@
   .post-template .main-header {
     display: none;
   }
+  .post-template .featured-media {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -6%;
+  }
   #main-menu a {
     color: white;
+  }
+  .post-template #main-menu li {
+    padding: 30px 0;
   }
   .row {
     margin-right: 0;
@@ -70,13 +78,13 @@
   }
   .content-wrap .container .main-content .post-page,
   .content-wrap .container .main-content .page-template {
-    padding: 20px 3% 0;
+    padding: 20px 3%;
     margin-bottom: 0;
   }
   .content-wrap .container .main-content .post-page .post-head,
   .content-wrap .container .main-content .page-template .post-head {
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   .content-wrap .container .main-content .post-page .post-head .post-title,
   .content-wrap .container .main-content .page-template .post-head .post-title {
@@ -107,6 +115,7 @@
   .content-wrap .container .main-content .about-author {
     background: #f0f1f4;
     padding: 20px;
+    margin-bottom: 0;
   }
   .content-wrap .container .main-content .prev-next-wrap {
     margin: 0;

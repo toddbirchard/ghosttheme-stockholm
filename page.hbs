@@ -11,15 +11,15 @@
 				<!-- start post -->
 				{{#post}}
 				<article class="{{post_class}}">
-					<div class="post-head">
-						<h1 class="post-title">{{{title}}}</h1>
-						<h4>{{except}}</h4>
-					</div>
 					{{#if feature_image}}
 					<div class="featured-media">
 						<img src="{{feature_image}}" alt="{{{title}}}">
 					</div>
 					{{/if}}
+					<div class="post-head">
+						<h1 class="post-title">{{{title}}}</h1>
+						<h4>{{except}}</h4>
+					</div>
 					<div class="post-content">
 						{{content}}
 					</div>
