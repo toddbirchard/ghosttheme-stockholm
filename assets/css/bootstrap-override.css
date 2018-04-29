@@ -15,9 +15,6 @@
   .post-preview.tag-video .post-content {
     margin: 0;
   }
-  .post-preview .post-content {
-    padding: 0 10px !important;
-  }
   .post-template .main-header {
     display: none;
   }
@@ -141,6 +138,7 @@
 @media (max-width: 800px) and (max-width: 600px) {
   #main-menu {
     max-width: 310px;
+    border: 0;
   }
 }
 @media (max-width: 800px) {
