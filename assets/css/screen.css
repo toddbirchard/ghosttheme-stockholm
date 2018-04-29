@@ -253,7 +253,7 @@ pre {
 }
 .post-preview.tag-roundup .post-head {
   margin-top: 0;
-  padding-top: 0;
+  padding: 10px;
 }
 .post-preview.tag-roundup .post-content {
   display: none;
@@ -263,7 +263,7 @@ pre {
 }
 .post-preview.tag-hash-image .post-head {
   border-bottom: 0;
-  padding: 30px 0 !important;
+  padding: 20px 10px !important;
 }
 @media (max-width: 800px) {
   .post-preview.tag-hash-image .post-head {
@@ -452,6 +452,7 @@ pre {
   height: 40px;
   line-height: 54px;
   transform: rotate(45deg);
+  z-index: 20;
 }
 .post .roundup i {
   -webkit-transform: rotate(-45deg);
@@ -461,14 +462,9 @@ pre {
   transform: rotate(-45deg);
 }
 .post .post-head {
-  padding: 30px 0;
+  padding: 20px 10px;
   line-height: 1;
   text-align: left;
-}
-@media (max-width: 600px) {
-  .post .post-head {
-    padding: 20px 10px !important;
-  }
 }
 .post .post-head .post-title {
   text-align: left;
@@ -552,7 +548,7 @@ pre {
   opacity: 0.8;
 }
 .post .post-content {
-  margin: 0 0 20px;
+  margin: 0 10px 20px;
   overflow-x: hidden;
   clear: both;
 }
