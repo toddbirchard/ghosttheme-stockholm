@@ -78,7 +78,7 @@ h2 {
 }
 .h3,
 h3 {
-  font-size: 2em;
+  font-size: 1.7em;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -853,6 +853,11 @@ pre {
 .main-footer .widget {
   padding: 0 30px;
 }
+@media (max-width: 600px) {
+  .post-footer {
+    padding: 0 3%;
+  }
+}
 .widget {
   margin-bottom: 20px;
 }
@@ -1070,6 +1075,9 @@ pre {
 .main-footer .widget .title {
   color: #FFFFFF;
   border-bottom: 1px solid #454545;
+}
+.main-footer .widget > div > div:last-child {
+  border-bottom: 0 !important;
 }
 .main-footer .widget .tag-cloud a {
   border: 1px solid #494949;

@@ -78,7 +78,7 @@ h2 {
 
 .h3,
 h3 {
-	font-size: 2em;
+	font-size: 1.7em;
 	text-transform: uppercase;
 	font-weight: 300;
 }
@@ -251,6 +251,7 @@ pre {
 	h5 {
 		text-align: left;
 	}
+
 	.post-content {
 		@media(max-width: 600px) {
 			font-size: 14px;
@@ -935,6 +936,12 @@ pre {
 	}
 }
 
+.post-footer {
+	@media(max-width: 600px) {
+		padding: 0 3%;
+	}
+}
+
 .widget {
 	margin-bottom: 20px;
 
@@ -1161,6 +1168,10 @@ pre {
 		.title {
 			color: @white;
 			border-bottom: 1px solid #454545;
+		}
+
+		& > div > div:last-child{
+			border-bottom: 0 !important;
 		}
 
 		.tag-cloud {
