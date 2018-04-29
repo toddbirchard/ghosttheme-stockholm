@@ -10,13 +10,13 @@
 @media (max-width: 800px) {
   .post-preview {
     margin: 8px 16px;
-    padding: 20px;
+    padding: 10px;
   }
   .post-preview.tag-video .post-content {
     margin: 0;
   }
   .post-preview .post-content {
-    padding: 0 !important;
+    padding: 0 10px !important;
   }
   .post-template .main-header {
     display: none;
@@ -30,7 +30,7 @@
     color: white;
   }
   .post-template #main-menu li {
-    padding: 30px 0;
+    padding: 20px 0;
   }
   .row {
     margin-right: 0;
@@ -42,7 +42,7 @@
   .main-navigation {
     background: #00ada7;
     padding: 0 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     border: 0;
   }
   .main-navigation .container {
