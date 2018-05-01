@@ -1,53 +1,46 @@
 <!-- start post -->
 {{#foreach posts}}
-<article class="{{post_class}} post-preview {{#has tag="video"}}fluid-width-video-wrapper{{/has}}">
-	{{#if featured}}
-	<div class="featured">
-		<i class="fa fa-star"></i>
-	</div>
-	{{/if}}
+	<article class="{{post_class}} post-preview{{!-- {{#has tag="video"}}fluid-width-video-wrapper{{/has}}--}}">
+		{{#if featured}}
+			<div class="featured">
+				<i class="fa fa-star"></i>
+			</div>
+		{{/if}}
 
-	{{#has tag="roundup"}}
-	<div class="roundup">
-		<i class="far fa-link"></i>
-	</div>
-	{{/has}}
+		{{#has tag="roundup" }}
+			<div class="roundup">
+				<i class="far fa-link"></i>
+			</div>
+		{{/has}}
 
 
+		{{#if feature_image}}
+			<div class="featured-media">
+				<a href="{{url}}"><img src="{{feature_image}}" alt="{{{title}}}"></a>
+			</div>
+		{{/if}}
 
-	{{#if feature_image}}
-	<div class="featured-media">
-		<a href="{{url}}"><img src="{{feature_image}}" alt="{{{title}}}"></a>
-	</div>
-	{{/if}}
-	<div class="post-head">
-		<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-		<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
-		{{!--{{#has tag="lynx-roundup"}}Lynx Roundup {{#get "tags" filter="tag:link-roundup" include="count.posts"}}X of {{count.posts}}{{/has}}--}}
-
-		{{!--<div class="post-meta">
-			<span class="author"><i class="far fa-user"></i> {{authors separator=", "}}</span>
-			<span class="date"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span><!-- &bull;
-			<span class="comment-count"><a href="{{url}}#disqus_thread">{{t "0 Comments"}}</a></span>-->
-		</div>--}}
-	</div>
-	<div class="post-content">
+		<div class="post-head">
+			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+			<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
+		</div>
+		<div class="post-content">
 			{{content words="80"}}
-	</div>
-	<div class="post-permalink">
-		<div class="tag-list">
-			<span class="author"><i class="far fa-user"></i><span>{{#author}}{{slug}}{{/author}}</span></span>
-			<span class="tags">
+		</div>
+		<div class="post-permalink">
+			<div class="tag-list">
+				<span class="author"><i class="far fa-user"></i><span>{{#author}}{{slug}}{{/author}}</span></span>
+				<span class="tags">
 			{{#if tags}}
 				<i class="far fa-tags"></i>
 			{{tags limit="1"}}
 			{{/if}}
 			</span>
-			<span class="date"><i class="far fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
-		</span>
+				<span class="date"><i class="far fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+				</span>
+			</div>
+			<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
 		</div>
-		<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
-	</div>
-</article>
+	</article>
 {{/foreach}}
 <!-- end post -->

@@ -586,6 +586,7 @@ pre {
 .post .post-content img {
   max-width: 100%;
   margin-bottom: 14px;
+  border: 1px solid #eaeaea;
 }
 .post .post-content a {
   color: #00b1d1;
@@ -902,6 +903,7 @@ pre {
   transition: all 0.2s;
   height: 15px;
   width: 23px;
+  font-size: 16px;
 }
 .widget .social li:hover {
   background: #00ada7;
@@ -1295,9 +1297,8 @@ p {
   }
 }
 .fluid-width-video-wrapper {
-  padding: 0 !important;
-  height: 26.5em;
-  /*height: 425px;*/
+  /*padding: 0 !important;*/
+  padding-top: 56% !important;
 }
 .page {
   margin-bottom: 0;

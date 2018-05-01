@@ -19,9 +19,24 @@ const con = mysql.createConnection({
   database: 'github_repos'
 });
 
-con.query('SELECT * FROM githubrepos', (err,rows) => {
-  if(err) throw err;
+// Main route sends our HTML file
 
-  console.log('Data received from Db:\n');
-  console.log(rows);
+app.get('/', function(req, res) {
+    res.sendfile(__dirname + '/projects');
 });
+
+// Update MySQL database
+
+app.get('/projects', function (req, res) {
+  con.query('SELECT * FROM githubrepos', (err,rows) => {
+    if(err) throw err;
+
+    console.log('Data received from Db:\n');
+    console.log(rows);
+  });
+});
+
+// Begin listening
+
+app.listen(3000);
+console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
