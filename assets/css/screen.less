@@ -329,7 +329,7 @@ pre {
 		}
 	}
 
-	.container:nth-of-type(1) {
+	.container {
 		background: url("https://hackers.nyc3.digitaloceanspaces.com/logo_white.png") center center;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -517,6 +517,7 @@ pre {
 			white-space: nowrap;
 			@media(max-width: 600px) {
 				white-space: normal;
+				text-align: center;
 			}
 
 			a {
@@ -535,8 +536,9 @@ pre {
 			font-weight: 600;
 			text-align: left;
 			@media(max-width: 600px) {
-				font-weight: 600;
-				font-size: 1em;
+				font-weight: 500;
+				font-size: 1.2em;
+				text-align: center;
 			}
 		}
 
@@ -638,20 +640,20 @@ pre {
 			@media(max-width: 600px) {
 				font-size: 14px;
 				font-weight: 100;
-				padding: 7px 18px;
+				padding: 8px 20px;
 			}
 		}
 	}
 
 	.tag-list {
 		color: @text-color-heading;
-		font-size: 14px;
+		font-size: 15px;
 		display: inline;
 		height: fit-content;
 		margin: auto 0;
 
 		i {
-			color: @text-color-heading;
+			color: #575863;
 			margin-right: 7px;
 			opacity: 0.6;
 			font-size: 12px;
@@ -686,7 +688,7 @@ pre {
 
 		a {
 			color: @text-color-heading;
-			font-size: 14px;
+			font-size: 15px;
 			opacity: 0.6;
 			transition: 0.2s all ease-out;
 			font-weight: 600;
@@ -730,6 +732,14 @@ pre {
 					text-align: center;
 				}
 			}
+		}
+	}
+
+	.pull-left {
+		color: #575863;
+		a, i, span {
+			color: #575863;
+			opacity: 0.6;
 		}
 	}
 }
@@ -937,12 +947,6 @@ pre {
 	}
 }
 
-.post-footer {
-	@media(max-width: 600px) {
-		padding: 0 3%;
-	}
-}
-
 .widget {
 	margin-bottom: 20px;
 
@@ -1086,28 +1090,6 @@ pre {
 
 		img {
 			max-width: 100%;
-		}
-	}
-
-	.flkr-widget {
-		list-style: none;
-		padding-left: 0;
-
-		li {
-			display: inline-block;
-			margin: 0 5px 5px 0;
-
-			a {
-				img {
-					width: 70px;
-					height: 70px;
-					.transition(all 0.2s);
-
-					&:hover {
-						.opacity(0.8);
-					}
-				}
-			}
 		}
 	}
 }
@@ -1831,8 +1813,7 @@ p {
         margin-bottom: 0;
 
         .post-head {
-          padding-bottom: 30px;
-          padding-top: 30px;
+          padding: 30px 0;
 
           .post-title {
             font-weight: 700;

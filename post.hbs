@@ -21,7 +21,7 @@
 						<h1 class="post-title">{{{title}}}</h1>
 						<h5>{{excerpt}}</h5>
 						<div class="post-meta">
-							<div class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD, YYYY"}}</span></div>
+							<div class="date"><i class="fas fa-calendar"></i><span>{{date format="MMMM DD, YYYY"}}</span></div>
 						</div>
 					</div>
 
@@ -29,12 +29,13 @@
 						{{content}}
 						<footer class="post-footer clearfix">
 							<div class="pull-left tag-list">
-								<span class="author">{{#author}}<a href="{{url}}"><i class="far fa-user"></i></a><span>{{name}}</span>{{/author}}</span>
-								<span class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD"}}</span></span>
-								{{#if tags}}
-								<i class="fal fa-tags"></i>
+								<span class="author">{{#author}}<a href="{{url}}"><i class="fas fa-user"></i></a><span>{{name}}</span>{{/author}}</span>
+								<span class="date"><i class="fas fa-calendar"></i><span>{{date format="MMMM DD"}}</span></span>
+								<span>
+								{{#if tags}}<i class="fas fa-tags"></i>
 								{{tags separator=","}}
 								{{/if}}
+							</span>
 							</div>
 							<div class="pull-right share">
 								{{! insert share_links partials}}
