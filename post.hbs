@@ -27,21 +27,22 @@
 
 					<div class="post-content">
 						{{content}}
+						<footer class="post-footer clearfix">
+							<div class="pull-left tag-list">
+								<span class="author">{{#author}}<a href="{{url}}"><i class="far fa-user"></i></a><span>{{name}}</span>{{/author}}</span>
+								<span class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD"}}</span></span>
+								{{#if tags}}
+								<i class="fal fa-tags"></i>
+								{{tags separator=","}}
+								{{/if}}
+							</div>
+							<div class="pull-right share">
+								{{! insert share_links partials}}
+								{{> share_links}}
+							</div>
+						</footer>
 					</div>
-					<footer class="post-footer clearfix">
-						<div class="pull-left tag-list">
-							<span class="author">{{#author}}<a href="{{url}}"><i class="far fa-user"></i></a><span>{{name}}</span>{{/author}}</span>
-							<span class="date"><i class="fal fa-calendar"></i><span>{{date format="MMMM DD"}}</span></span>
-							{{#if tags}}
-							<i class="fal fa-tags"></i>
-							{{tags separator=","}}
-							{{/if}}
-						</div>
-						<div class="pull-right share">
-							{{! insert share_links partials}}
-							{{> share_links}}
-						</div>
-					</footer>
+
 				</article>
 				{{> about-author}}
 				{{> prev-next}}
