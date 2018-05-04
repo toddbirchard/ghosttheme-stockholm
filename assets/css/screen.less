@@ -48,9 +48,6 @@ h6 {
 h1 {
 	font-size: 3em;
 	font-weight: 700;
-	@media(max-width:600px) {
-		font-size: 2em;
-	}
 }
 
 .h2,
@@ -457,8 +454,7 @@ pre {
 	&.page {
 		.post-head {
 			@media(max-width: 800px) {
-				margin: 0 10px;
-				font-size: 1em;
+				margin: 0;
 			}
 		}
 	}
@@ -509,7 +505,6 @@ pre {
 			text-align: left;
 			width: 100%;
 			margin: 0;
-			line-height: 0.9;
 			line-height: 1;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -556,6 +551,10 @@ pre {
 			.date {
 				i {
 					margin-right: 10px;
+
+					@media(max-width: 600px) {
+						display: none;
+					}
 				}
 			}
 
@@ -583,6 +582,12 @@ pre {
 
 		img {
 			width: 100%;
+
+			@media (max-width: 800px) {
+				width: 110%;
+		    margin-left: -5%;
+		    margin-top: -7%;
+			}
 		}
 
 		a {
@@ -595,7 +600,7 @@ pre {
 	}
 
 	.post-content {
-		margin: 0 10px 10px;
+		margin: 0 10px 0;
 		overflow-x: hidden;
 		clear: both;
 
@@ -794,6 +799,7 @@ pre {
 		.meta-info {
 			span {
 				display: inline-block;
+
 			}
 		}
 
@@ -841,7 +847,7 @@ pre {
 .about-author {
 	background: @white;
 	padding: 20px;
-	margin-bottom: 25px;
+	margin: 10px 0;
 
 	.avatar {
 		width: 80px;
@@ -898,6 +904,7 @@ pre {
 			}
 			@media(max-width: 600px) {
 				display: block !important;
+				width: 100%;
 			}
 		}
 	}
@@ -910,7 +917,6 @@ pre {
 }
 
 .prev-next-wrap {
-	margin-bottom: 35px;
 	text-align: center;
 
 	a {
@@ -1244,6 +1250,12 @@ p {
 		height: 210px;
 		background-size: cover;
 		background-position: center;
+
+		@media (max-width: 800px) {
+			width: 110%;
+      margin-left: -5%;
+      margin-top: -7%;
+		}
 	}
 }
 
@@ -1731,7 +1743,7 @@ p {
     .featured-media {
       width: 110%;
       margin-left: -5%;
-      margin-top: -6%;
+      margin-top: -7%;
     }
   }
 
@@ -1809,7 +1821,7 @@ p {
 
       .post-page,
       .page-template {
-        padding: 20px 3%;
+        padding: 20px 3% 0;
         margin-bottom: 0;
 
         .post-head {
@@ -1836,9 +1848,9 @@ p {
         }
 
         .post-content {
-          margin: 0 0 20px;
+          margin: 0;
           overflow-x: hidden;
-          padding: 10px 3% 0;
+          padding: 10px 3% 20px;
         }
       }
 

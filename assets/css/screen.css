@@ -49,12 +49,6 @@ h1 {
   font-size: 3em;
   font-weight: 700;
 }
-@media (max-width: 600px) {
-  .h1,
-  h1 {
-    font-size: 2em;
-  }
-}
 .h2,
 h2 {
   font-size: 2.2em;
@@ -434,8 +428,7 @@ pre {
 }
 @media (max-width: 800px) {
   .post.page .post-head {
-    margin: 0 10px;
-    font-size: 1em;
+    margin: 0;
   }
 }
 .post .featured {
@@ -492,7 +485,6 @@ pre {
   text-align: left;
   width: 100%;
   margin: 0;
-  line-height: 0.9;
   line-height: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -537,6 +529,11 @@ pre {
 .post .post-head .post-meta .date i {
   margin-right: 10px;
 }
+@media (max-width: 600px) {
+  .post .post-head .post-meta .date i {
+    display: none;
+  }
+}
 .post .post-head .post-meta img {
   height: 14px;
   width: 14px;
@@ -559,6 +556,13 @@ pre {
 .post .featured-media img {
   width: 100%;
 }
+@media (max-width: 800px) {
+  .post .featured-media img {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -7%;
+  }
+}
 .post .featured-media a {
   transition: opacity 0.2s ease-out;
 }
@@ -566,7 +570,7 @@ pre {
   opacity: 0.8;
 }
 .post .post-content {
-  margin: 0 10px 10px;
+  margin: 0 10px 0;
   overflow-x: hidden;
   clear: both;
 }
@@ -775,7 +779,7 @@ pre {
 .about-author {
   background: #FFFFFF;
   padding: 20px;
-  margin-bottom: 25px;
+  margin: 10px 0;
 }
 .about-author .avatar {
   width: 80px;
@@ -832,6 +836,7 @@ pre {
 @media (max-width: 600px) {
   .about-author .meta-info span {
     display: block !important;
+    width: 100%;
   }
 }
 .comment-wrap {
@@ -840,7 +845,6 @@ pre {
   margin-bottom: 35px;
 }
 .prev-next-wrap {
-  margin-bottom: 35px;
   text-align: center;
 }
 .prev-next-wrap a {
@@ -1138,6 +1142,13 @@ p {
   height: 210px;
   background-size: cover;
   background-position: center;
+}
+@media (max-width: 800px) {
+  .archive .featured-media {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -7%;
+  }
 }
 .author-container {
   display: flex;
@@ -1598,7 +1609,7 @@ p {
   .post-template .featured-media {
     width: 110%;
     margin-left: -5%;
-    margin-top: -6%;
+    margin-top: -7%;
   }
   #main-menu {
     border: 0;
@@ -1655,7 +1666,7 @@ p {
   }
   .content-wrap .container .main-content .post-page,
   .content-wrap .container .main-content .page-template {
-    padding: 20px 3%;
+    padding: 20px 3% 0;
     margin-bottom: 0;
   }
   .content-wrap .container .main-content .post-page .post-head,
@@ -1684,9 +1695,9 @@ p {
   }
   .content-wrap .container .main-content .post-page .post-content,
   .content-wrap .container .main-content .page-template .post-content {
-    margin: 0 0 20px;
+    margin: 0;
     overflow-x: hidden;
-    padding: 10px 3% 0;
+    padding: 10px 3% 20px;
   }
   .content-wrap .container .main-content .about-author {
     background: #f0f1f4;
