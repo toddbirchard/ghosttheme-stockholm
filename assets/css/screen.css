@@ -49,6 +49,12 @@ h1 {
   font-size: 3em;
   font-weight: 700;
 }
+@media (max-width: 600px) {
+  .h1,
+  h1 {
+    font-size: 2em;
+  }
+}
 .h2,
 h2 {
   font-size: 2.2em;
@@ -248,7 +254,7 @@ pre {
 }
 @media (max-width: 600px) {
   .post-preview .post-title {
-    font-size: 1.7em;
+    font-size: 2em !important;
   }
 }
 .post-preview .post-content {
@@ -430,6 +436,11 @@ pre {
   .post.page .post-head {
     margin: 0;
   }
+  .post.page .post-head h1 {
+    font-size: 3em;
+    font-weight: 700;
+    padding: 20px 0;
+  }
 }
 .post .featured {
   position: absolute;
@@ -561,13 +572,6 @@ pre {
 }
 .post .featured-media a:hover {
   opacity: 0.8;
-}
-@media (max-width: 800px) {
-  .post .featured-media {
-    width: 110%;
-    margin-left: -5%;
-    margin-top: -7%;
-  }
 }
 .post .post-content {
   margin: 0 10px 0;

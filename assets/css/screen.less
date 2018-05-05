@@ -48,6 +48,10 @@ h6 {
 h1 {
 	font-size: 3em;
 	font-weight: 700;
+
+	@media(max-width: 600px) {
+		font-size: 2em;
+	}
 }
 
 .h2,
@@ -258,7 +262,7 @@ pre {
 	.post-title {
 		font-size: 3em;
 		@media(max-width: 600px) {
-			font-size: 1.7em;
+			font-size: 2em !important;
 		}
 	}
 
@@ -455,6 +459,12 @@ pre {
 		.post-head {
 			@media(max-width: 800px) {
 				margin: 0;
+
+				h1 {
+					font-size: 3em;
+					font-weight: 700;
+					padding: 20px 0;
+				}
 			}
 		}
 	}
@@ -592,11 +602,7 @@ pre {
 			}
 		}
 
-		@media (max-width: 800px) {
-			width: 110%;
-			margin-left: -5%;
-			margin-top: -7%;
-		}
+
 	}
 
 	.post-content {
