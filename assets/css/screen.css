@@ -704,6 +704,13 @@ pre {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 20px;
 }
+@media (max-width: 800px) {
+  .post-page .featured-media {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -7%;
+  }
+}
 /*====================================================
 	pagination
 ====================================================*/
@@ -1606,11 +1613,6 @@ p {
   }
   .post-template .main-header {
     display: none;
-  }
-  .post-template .featured-media {
-    width: 110%;
-    margin-left: -5%;
-    margin-top: -7%;
   }
   #main-menu {
     border: 0;
