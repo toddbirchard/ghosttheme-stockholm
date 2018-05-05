@@ -556,18 +556,18 @@ pre {
 .post .featured-media img {
   width: 100%;
 }
-@media (max-width: 800px) {
-  .post .featured-media img {
-    width: 110%;
-    margin-left: -5%;
-    margin-top: -7%;
-  }
-}
 .post .featured-media a {
   transition: opacity 0.2s ease-out;
 }
 .post .featured-media a:hover {
   opacity: 0.8;
+}
+@media (max-width: 800px) {
+  .post .featured-media {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -7%;
+  }
 }
 .post .post-content {
   margin: 0 10px 0;
@@ -871,6 +871,7 @@ pre {
 }
 .widget {
   margin-bottom: 20px;
+  margin-top: 0;
 }
 .widget .title {
   margin-top: 0;
