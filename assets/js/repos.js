@@ -23,7 +23,7 @@ $(document).ready(function() {
         var created_array = repo['created'].split(',');
         var commits_length = commits_array.length;
 
-        var newItem = $('<a href=https://github.com/' + repo['repo_name'] + '><div class="activity"><div class="intro"><h3>' + commits_length + '</h3><span> changes to </span><h4>' + repo['repo_name'] + '</h4></div><span class="author"><img src="' + repo['avatar'] + '">' + repo['author'] + ' made the following commits:</span><ul></ul></div></a>');
+        var newItem = $('<a href=https://github.com/' + repo['repo_name'] + '><div class="activity"><div class="intro"><h3>' + commits_length + '</h3><div class="summary"><span>changes made to</span><h4>' + repo['repo_name'] + '</h4></div></div><div class="body"><span class="author"><img src="' + repo['avatar'] + '">' + repo['author'] + ' made the following commits:</span><ul></ul></div></div></a>');
         $('.feed').append(newItem);
         $.each(commits_array, function(i, value) {
           var date = created_array[i].split('T')[0].split('2018-')[1].replace('-', '/');

@@ -439,7 +439,7 @@ pre {
   .post.page .post-head h1 {
     font-size: 3em;
     font-weight: 700;
-    padding: 20px 0;
+    padding: 10px 0 0;
   }
 }
 .post .featured {
@@ -1312,7 +1312,7 @@ p {
 }
 @media (max-width: 600px) {
   .page .post-head {
-    padding: 10px 0 !important;
+    padding: 10px 0 0 !important;
   }
 }
 .page-templatep,
@@ -1851,29 +1851,25 @@ p {
   background-color: yellow;
 }
 .feed .activity {
-  width: 100%;
-  padding: 20px;
+  margin: 20px;
   transition: all 0.2s ease-out;
   position: relative;
   overflow: hidden;
-  margin-bottom: 15px;
-  border: 1px solid #eaeaea;
   text-decoration: none;
 }
 .feed .activity:hover {
   background-color: #00ada7;
   color: white;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
 }
-.feed .activity:hover h3,
-.feed .activity:hover h4,
-.feed .activity:hover p,
-.feed .activity:hover span,
-.feed .activity:hover li,
-.feed .activity:hover ul {
+.feed .activity:hover .intro,
+.feed .activity:hover .body {
+  background-color: #00ada7;
+}
+.feed .activity:hover * {
   color: white !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .feed .activity img {
   height: 20px;
@@ -1883,47 +1879,66 @@ p {
   margin-right: 5px;
 }
 .feed .activity .author {
-  padding: 20px 0 10px;
   display: block;
   font-size: 16px;
   width: fit-content;
-  border-top: 1px solid #00ada7;
+  /*border-top: 1px solid #00ada7;*/
   width: 100%;
 }
 .feed .activity .author span {
   font-size: 16px;
 }
-.feed .activity h4 {
+.feed .activity .summary {
+  padding: 10px 0;
+}
+.feed .activity .summary h4 {
   font-size: 23px;
   font-weight: 600;
-  display: inline;
+  display: block;
   margin: auto 0;
   height: fit-content;
+  line-height: 1;
+}
+.feed .activity .summary span {
+  display: block;
+  color: #505050;
+  font-size: 14px;
+  font-style: italic;
+  margin: auto 20px auto 0;
+  height: fit-content;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.feed .activity .body {
+  padding: 20px 30px;
+  background: #f9f9f9;
+}
+.feed .activity .body .author {
+  color: #505050;
+  font-size: 15px;
 }
 .feed .activity h3 {
   color: #00ada7;
   font-weight: 700;
   display: inline;
-  font-size: 3em;
+  font-size: 3.5em;
   margin: auto 20px auto 0;
 }
 .feed .activity .intro {
   display: flex;
   justify-content: normal;
-  /* border-bottom: 1px solid #00ada7; */
-  padding-bottom: 10px;
-  width: fit-content;
+  padding: 10px 30px;
+  background: #f3f3f3;
 }
 .feed .activity ul {
   list-style: none;
-  padding: 10px 20px;
+  padding: 10px 0;
   font-style: italic;
   max-height: 177px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto 0 auto;
-  align-content: center;
   width: auto;
 }
 .feed .activity p {
@@ -1934,16 +1949,11 @@ p {
 .feed .activity li {
   font-size: 12px;
   color: #909090;
-  margin: 0 20px;
   width: fit-content;
 }
-.feed .activity span {
-  display: inline;
-  color: #505050;
-  font-size: 14px;
-  font-style: italic;
-  margin: auto 20px auto 0;
-  height: fit-content;
+.feed .activity .date {
+  margin-right: 10px;
+  color: #5d5d5d;
 }
 .feed .activity .time {
   position: absolute;
