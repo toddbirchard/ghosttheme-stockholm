@@ -1768,6 +1768,11 @@ p {
   color: white !important;
   text-decoration: none;
 }
+@media (max-width: 600px) {
+  .repos a {
+    width: 100%;
+  }
+}
 .repos .repo {
   border: 1px solid #eaeaea;
   padding: 15px;
@@ -1844,4 +1849,61 @@ p {
 }
 .repos .repo .Javascript {
   background-color: yellow;
+}
+.commits {
+  border: 1px solid #eaeaea;
+}
+.commits .commit {
+  width: 100%;
+  padding: 10px;
+  transition: all 0.2s ease-out;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+  text-decoration: none;
+}
+.commits .commit:hover {
+  background-color: #00ada7;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.commits .commit:hover h4,
+.commits .commit:hover p,
+.commits .commit:hover span {
+  color: white !important;
+  text-decoration: none;
+}
+.commits .commit img {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.commits .commit h4 {
+  font-size: 16px;
+  font-weight: 500;
+  display: inline;
+  margin-left: 5px;
+}
+.commits .commit p {
+  color: #505050;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.commits .commit span {
+  display: inline;
+  color: #505050;
+  font-size: 12px;
+  font-style: italic;
+}
+.commits .commit .time {
+  position: absolute;
+  right: 20px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 21px;
+  color: #999;
 }

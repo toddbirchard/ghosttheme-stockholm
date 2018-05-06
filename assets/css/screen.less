@@ -1934,6 +1934,10 @@ p {
 				}
 			}
 		}
+
+		@media(max-width: 600px) {
+			width:100%;
+		}
 	}
 	.repo {
 		border: 1px solid #eaeaea;
@@ -2024,4 +2028,70 @@ p {
 			background-color: yellow;
 		}
 	}
+}
+
+.commits {
+	border: 1px solid #eaeaea;
+	.commit {
+		width:100%;
+
+	  padding: 10px;
+		transition: all .2s ease-out;
+		position: relative;
+		overflow: hidden;
+		border-bottom: 1px solid #eaeaea;
+		text-decoration: none;
+
+		&:hover {
+				background-color: @theme-color;
+				color: white;
+				cursor: pointer;
+				text-decoration: none;
+
+				h4, p, span {
+					color:white !important;
+					text-decoration: none;
+				}
+			}
+
+		img {
+			height:20px;
+			width:20px;
+			border-radius: 2px;
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		h4 {
+			font-size: 16px;
+			font-weight: 500;
+			display: inline;
+			margin-left: 5px;
+		}
+
+		p {
+			color:@text-color;
+			font-size: 14px;
+			margin: 10px 0 0;
+		}
+
+		span {
+			display: inline;
+			color:@text-color;
+			font-size: 12px;
+			font-style: italic;
+		}
+
+		.time {
+			position: absolute;
+	    right: 20px;
+	    margin: auto;
+	    top: 0;
+	    bottom: 0;
+	    height: 21px;
+	    color: #999;
+		}
+	}
+
+
 }
