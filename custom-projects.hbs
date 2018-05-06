@@ -19,11 +19,23 @@
 						</div>
 						<div class="post-content">
 							{{content}}
+							<div>
+								<h2>Activity Feed</h2>
+								<div class="feed"> </div>
+								<h2>Our Repositories</h2>
+								<div class="repos"> </div>
 						</div>
-						<h2>Activity Feed</h2>
-						<div class="feed"> </div>
-						<h2>Our Repositories</h2>
-						<div class="repos"> </div>
+
+						<div id="accordion">
+							<h3>First</h3>
+							<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+							<h3>Second</h3>
+							<div>Phasellus mattis tincidunt nibh.</div>
+							<h3>Third</h3>
+							<div>Nam dui erat, auctor a, dignissim quis.</div>
+						</div>
+						</div>
+
 					</article>
 				{{/post}}
 				<!-- end post -->
@@ -33,4 +45,5 @@
 	</div>
 </section>
 <script src="{{asset "/js/repos.js"}}"></script>
+<script src="{{asset "/js/jquery-ui.min.js"}}"></script>
 <!-- end site's main content area -->

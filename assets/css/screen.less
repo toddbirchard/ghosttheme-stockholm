@@ -602,7 +602,7 @@ pre {
 	}
 
 	.post-content {
-		margin: 20px 10px;
+		margin: 0 10px 20px;
 		overflow-x: hidden;
 		clear: both;
 
@@ -1008,8 +1008,8 @@ pre {
 					color: @text-color-light;
 					.transition(all 0.2s);
 					height: 15px;
-					width: 23px;
-					font-size: 16px;
+			    width: 21px;
+			    font-size: 13px;
 				}
 			}
 
@@ -1259,7 +1259,7 @@ p {
 ====================================================*/
 .archive {
 	.featured-media {
-		height: 210px;
+		height: 300px;
 		background-size: cover;
 		background-position: center;
 		@media (max-width: 800px) {
@@ -2024,31 +2024,32 @@ p {
 }
 
 .feed {
+	background-color: none;
 	.activity {
-		margin: 20px;
+		margin: 0;
 		transition: all 0.2s ease-out;
 		position: relative;
 		overflow: hidden;
 		text-decoration: none;
-		@media(max-width: 600px) {
-			margin: 20px 0;
-		}
 
 		&:hover {
-			background-color: @theme-color;
-			color: white;
 			cursor: pointer;
 			text-decoration: none !important;
 
-			.body,
+			.body {
+				background-color: mix(@theme-color, #f9f9f9, 10%);
+			}
 			.intro {
 				background-color: @theme-color;
+				border: 1px solid #00807b;
+
+				& * {
+					text-decoration: none !important;
+					color: white !important;
+				}
 			}
 
-			& * {
-				color: white !important;
-				text-decoration: none !important;
-			}
+
 		}
 
 		.intro {
@@ -2056,6 +2057,8 @@ p {
 			justify-content: normal;
 			padding: 10px 30px;
 			background: #f3f3f3;
+			border: 1px solid #eaeaea;
+			transition: all .4s ease-in-out;
 
 			h3 {
 				color:@theme-color;
@@ -2103,6 +2106,10 @@ p {
 		.body {
 			padding: 20px 30px;
 			background: #f9f9f9;
+			height: 250px;
+			transition: all .4s ease-in-out;
+			transform-origin: top;
+			overflow: hidden;
 			@media(max-width: 600px) {
 				padding: 20px;
 			}
@@ -2178,5 +2185,12 @@ p {
 			height: 21px;
 			color: #999;
 		}
+	}
+
+	.disappear {
+		height:0px !important;
+		transform: scaleY(0);
+		transform-origin: top;
+		padding:0 30px !important;
 	}
 }

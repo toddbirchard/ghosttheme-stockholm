@@ -574,7 +574,7 @@ pre {
   opacity: 0.8;
 }
 .post .post-content {
-  margin: 20px 10px;
+  margin: 0 10px 20px;
   overflow-x: hidden;
   clear: both;
 }
@@ -924,8 +924,8 @@ pre {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   height: 15px;
-  width: 23px;
-  font-size: 16px;
+  width: 21px;
+  font-size: 13px;
 }
 .widget .social li:hover {
   background: #00ada7;
@@ -1151,7 +1151,7 @@ p {
 	tag and author archive
 ====================================================*/
 .archive .featured-media {
-  height: 210px;
+  height: 300px;
   background-size: cover;
   background-position: center;
 }
@@ -1850,37 +1850,38 @@ p {
 .repos .repo .Javascript {
   background-color: yellow;
 }
+.feed {
+  background-color: none;
+}
 .feed .activity {
-  margin: 20px;
+  margin: 0;
   transition: all 0.2s ease-out;
   position: relative;
   overflow: hidden;
   text-decoration: none;
 }
-@media (max-width: 600px) {
-  .feed .activity {
-    margin: 20px 0;
-  }
-}
 .feed .activity:hover {
-  background-color: #00ada7;
-  color: white;
   cursor: pointer;
   text-decoration: none !important;
 }
-.feed .activity:hover .body,
+.feed .activity:hover .body {
+  background-color: #e0f1f1;
+}
 .feed .activity:hover .intro {
   background-color: #00ada7;
+  border: 1px solid #00807b;
 }
-.feed .activity:hover * {
-  color: white !important;
+.feed .activity:hover .intro * {
   text-decoration: none !important;
+  color: white !important;
 }
 .feed .activity .intro {
   display: flex;
   justify-content: normal;
   padding: 10px 30px;
   background: #f3f3f3;
+  border: 1px solid #eaeaea;
+  transition: all 0.4s ease-in-out;
 }
 .feed .activity .intro h3 {
   color: #00ada7;
@@ -1928,6 +1929,10 @@ p {
 .feed .activity .body {
   padding: 20px 30px;
   background: #f9f9f9;
+  height: 250px;
+  transition: all 0.4s ease-in-out;
+  transform-origin: top;
+  overflow: hidden;
 }
 @media (max-width: 600px) {
   .feed .activity .body {
@@ -1997,4 +2002,10 @@ p {
   bottom: 0;
   height: 21px;
   color: #999;
+}
+.feed .disappear {
+  height: 0px !important;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding: 0 30px !important;
 }
