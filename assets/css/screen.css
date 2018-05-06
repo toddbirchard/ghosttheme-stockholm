@@ -1850,55 +1850,102 @@ p {
 .repos .repo .Javascript {
   background-color: yellow;
 }
-.commits {
-  border: 1px solid #eaeaea;
-}
-.commits .commit {
+.feed .activity {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   transition: all 0.2s ease-out;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 15px;
+  border: 1px solid #eaeaea;
   text-decoration: none;
 }
-.commits .commit:hover {
+.feed .activity:hover {
   background-color: #00ada7;
   color: white;
   cursor: pointer;
   text-decoration: none;
 }
-.commits .commit:hover h4,
-.commits .commit:hover p,
-.commits .commit:hover span {
+.feed .activity:hover h3,
+.feed .activity:hover h4,
+.feed .activity:hover p,
+.feed .activity:hover span,
+.feed .activity:hover li,
+.feed .activity:hover ul {
   color: white !important;
   text-decoration: none;
 }
-.commits .commit img {
+.feed .activity img {
   height: 20px;
   width: 20px;
   border-radius: 2px;
   display: inline-block;
   margin-right: 5px;
 }
-.commits .commit h4 {
+.feed .activity .author {
+  padding: 20px 0 10px;
+  display: block;
   font-size: 16px;
-  font-weight: 500;
-  display: inline;
-  margin-left: 5px;
+  width: fit-content;
+  border-top: 1px solid #00ada7;
+  width: 100%;
 }
-.commits .commit p {
+.feed .activity .author span {
+  font-size: 16px;
+}
+.feed .activity h4 {
+  font-size: 23px;
+  font-weight: 600;
+  display: inline;
+  margin: auto 0;
+  height: fit-content;
+}
+.feed .activity h3 {
+  color: #00ada7;
+  font-weight: 700;
+  display: inline;
+  font-size: 3em;
+  margin: auto 20px auto 0;
+}
+.feed .activity .intro {
+  display: flex;
+  justify-content: normal;
+  /* border-bottom: 1px solid #00ada7; */
+  padding-bottom: 10px;
+  width: fit-content;
+}
+.feed .activity ul {
+  list-style: none;
+  padding: 10px 20px;
+  font-style: italic;
+  max-height: 177px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto 0 auto;
+  align-content: center;
+  width: auto;
+}
+.feed .activity p {
   color: #505050;
   font-size: 14px;
   margin: 10px 0 0;
 }
-.commits .commit span {
+.feed .activity li {
+  font-size: 12px;
+  color: #909090;
+  margin: 0 20px;
+  width: fit-content;
+}
+.feed .activity span {
   display: inline;
   color: #505050;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
+  margin: auto 20px auto 0;
+  height: fit-content;
 }
-.commits .commit .time {
+.feed .activity .time {
   position: absolute;
   right: 20px;
   margin: auto;
