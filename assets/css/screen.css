@@ -859,7 +859,7 @@ pre {
   text-align: center;
 }
 .prev-next-wrap a {
-  margin: 10px 0 0;
+  margin: 20px 0 0;
 }
 /*====================================================
 	sidebar
@@ -1747,4 +1747,80 @@ p {
   .fluid-width-video-wrapper {
     height: 236px;
   }
+}
+.repos a:hover .repo {
+  background-color: #00ada7;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.repos a:hover .repo h3,
+.repos a:hover .repo p {
+  color: white;
+  text-decoration: none;
+}
+.repos .repo {
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.2s ease-out;
+  height: 132px;
+}
+.repos .repo .lang {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  position: relative;
+  margin-right: 16px;
+  float: left;
+  display: none;
+}
+.repos .repo .lang span {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  color: black;
+}
+.repos .repo .details {
+  display: inline-block;
+}
+.repos .repo .details h3 {
+  margin: 0;
+}
+.repos .repo .details p {
+  color: #505050;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.repos .repo .details img {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.repos .repo .details i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.repos .repo .details .author {
+  font-size: 13px;
+}
+.repos .repo .Python {
+  background-color: blue;
+}
+.repos .repo .CSS {
+  background-color: orange;
+}
+.repos .repo .HTML {
+  background-color: red;
+}
+.repos .repo .Javascript {
+  background-color: yellow;
 }
