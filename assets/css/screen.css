@@ -574,7 +574,7 @@ pre {
   opacity: 0.8;
 }
 .post .post-content {
-  margin: 0 10px 0;
+  margin: 20px 10px;
   overflow-x: hidden;
   clear: both;
 }
@@ -1748,6 +1748,15 @@ p {
     height: 236px;
   }
 }
+.repos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.repos a {
+  width: 49%;
+}
 .repos a:hover .repo {
   background-color: #00ada7;
   color: white;
@@ -1792,11 +1801,13 @@ p {
 }
 .repos .repo .details h3 {
   margin: 0;
+  font-size: 1.2em;
 }
 .repos .repo .details p {
   color: #505050;
   margin: 10px 0;
   font-size: 14px;
+  line-height: 1;
 }
 .repos .repo .details img {
   height: 20px;

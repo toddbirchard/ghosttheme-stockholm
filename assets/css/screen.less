@@ -606,7 +606,7 @@ pre {
 	}
 
 	.post-content {
-		margin: 0 10px 0;
+		margin: 20px 10px;
 		overflow-x: hidden;
 		clear: both;
 
@@ -1914,13 +1914,20 @@ p {
 }
 
 .repos {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+
 	a {
+		width:50%;
 		&:hover {
 			.repo {
 				background-color: @theme-color;
 				color: white;
 				cursor: pointer;
 				text-decoration: none;
+
 
 				h3, p {
 					color:white;
@@ -1964,12 +1971,14 @@ p {
 
 			h3 {
 				margin:0;
+				font-size: 1.2em;
 			}
 
 			p {
 				color: @text-color;
 				margin: 10px 0;
 				font-size: 14px;
+				line-height: 1;
 			}
 
 			img {
