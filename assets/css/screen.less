@@ -280,8 +280,7 @@ pre {
 		}
 
 		.post-head {
-			margin-top: 0;
-			padding: 10px;
+			padding: 20px;
 		}
 
 		.post-content {
@@ -403,7 +402,6 @@ pre {
 				visibility: hidden;
 				background: @white;
 				text-align: left;
-				padding: 7px 0;
 				margin-bottom: 20px;
 				position: absolute;
 				left: 0;
@@ -462,7 +460,6 @@ pre {
 				h1 {
 					font-size: 3em;
 					font-weight: 700;
-					padding: 10px 0 0;
 				}
 			}
 		}
@@ -606,6 +603,12 @@ pre {
 		overflow-x: hidden;
 		clear: both;
 
+		ul {
+			margin-left: 15px;
+			padding-left: 15px;
+			    margin-bottom: 20px;
+		}
+
 		.fluid-width-video-wrapper {
 			margin: 0;
 		}
@@ -623,9 +626,10 @@ pre {
 		}
 
 		img {
-			max-width: 100%;
-			margin-bottom: 14px;
+			max-width: 95%;
 			border: 1px solid #eaeaea;
+			margin: auto;
+			display: block;
 		}
 
 		a {
@@ -757,7 +761,6 @@ pre {
 .post-page {
 	.post-head {
 		border-bottom: 1px solid #eaeaea;
-		margin-bottom: 20px;
 	}
 	@media(max-width: 800px) {
 		.featured-media {
@@ -858,7 +861,6 @@ pre {
 .about-author {
 	background: @white;
 	padding: 20px;
-	margin: 10px 0;
 
 	.avatar {
 		width: 80px;
@@ -949,7 +951,7 @@ pre {
 		}
 
 		ul {
-			padding-left: 20px;
+    	padding: 10px 0 0;
 		}
 	}
 
@@ -1411,7 +1413,6 @@ p {
 
 				ul {
 					visibility: visible;
-					padding: 0 0 0 20px;
 					margin: 0;
 					position: relative;
 					top: 0;
@@ -1446,11 +1447,6 @@ p {
 		margin: 0 auto !important;
 	}
 
-	.post-head {
-		@media(max-width: 600px) {
-			padding: 10px 0 0 !important;
-		}
-	}
 }
 
 .page-template,
@@ -1825,7 +1821,7 @@ p {
 
 			.page-template,
 			.post-page {
-				padding: 20px 3% 0;
+				padding: 20px 0 0;
 				margin-bottom: 0;
 
 				.post-head {
@@ -1854,7 +1850,7 @@ p {
 				.post-content {
 					margin: 0;
 					overflow-x: hidden;
-					padding: 10px 3% 20px;
+					padding: 10px 6% 20px;
 				}
 			}
 
@@ -1867,7 +1863,7 @@ p {
 			.prev-next-wrap {
 				margin: 0;
 				text-align: center;
-				padding: 20px 24px;
+				padding: 0 20px 24px;
 				background: #f0f1f4;
 			}
 		}
@@ -2120,6 +2116,7 @@ p {
 				font-size: 15px;
 				width: fit-content;
 				width: 100%;
+				margin: 0 0 10px;
 
 				.name {
 					font-weight: 600;
@@ -2144,7 +2141,6 @@ p {
 
 			ul {
 				list-style: none;
-				padding: 10px 0;
 				font-style: italic;
 				max-height: 177px;
 				display: flex;
@@ -2152,6 +2148,7 @@ p {
 				flex-wrap: wrap;
 				margin: 0 auto;
 				width: auto;
+				overflow: hidden;
 
 				@media(max-width: 600px){
 					max-height: none;
@@ -2168,6 +2165,7 @@ p {
 				font-size: 12px;
 				color: #909090;
 				width: fit-content;
+				    width: 50%;
 			}
 
 			.date {
