@@ -234,6 +234,13 @@ pre {
   top: 0;
   content: '';
 }
+.post-preview .featured-media {
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  overflow: visible;
+  width: 99%;
+  margin: auto;
+}
 .post-preview .post-meta,
 .post-preview .post-title,
 .post-preview h5 {
@@ -292,6 +299,7 @@ pre {
 @media (max-width: 800px) {
   .main-header {
     padding: 30px 0;
+    background: #26a2c7;
   }
 }
 .main-header .branding {
@@ -328,8 +336,8 @@ pre {
   padding: 0;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  max-width: 444px;
+  justify-content: space-between;
+  max-width: 400px;
 }
 .main-navigation .menu li {
   list-style: none;
@@ -340,7 +348,7 @@ pre {
   color: white;
   line-height: 1;
   display: block;
-  padding: 0 20px;
+  padding: 0;
   font-family: 'mr-eaves-xl-modern', serif;
   text-transform: uppercase;
   font-size: 20px;
@@ -353,7 +361,7 @@ pre {
   }
 }
 .main-navigation .menu li:hover > a {
-  text-shadow: 0px 0px 10px #b41eda, 0px 0px 5px #a341bb;
+  text-shadow: 0 0 20px #b41eda;
   text-decoration: none;
   cursor: pointer;
   color: white;
@@ -556,12 +564,8 @@ pre {
     padding: 20px 10px;
   }
 }
-.post .featured-media {
-  overflow: hidden;
-}
 .post .featured-media img {
   width: 100%;
-  border: 1px solid #ebebeb;
 }
 .post .featured-media a {
   transition: opacity 0.2s ease-out;
@@ -571,7 +575,7 @@ pre {
   cursor: pointer;
 }
 .post .post-content {
-  margin: 20px 10px;
+  margin: 0 10px;
   overflow-x: hidden;
   clear: both;
 }
@@ -1278,7 +1282,6 @@ p {
     color: white;
   }
   .main-navigation .menu li:hover > a {
-    color: #26a2c7;
     text-decoration: none;
   }
   .main-navigation .menu li ul {
@@ -1632,7 +1635,7 @@ p {
     margin-left: 0;
   }
   .main-navigation {
-    padding: 0;
+    padding: 0 6%;
     margin: 0;
     border: 0;
   }
@@ -1698,7 +1701,7 @@ p {
   .container .main-content .post-page .post-content {
     margin: 0 !important;
     overflow-x: hidden;
-    padding: 10px 6% 20px;
+    padding: 20px 6%;
   }
   .container .main-content .about-author {
     background: #f0f1f4;
@@ -1728,7 +1731,7 @@ p {
 }
 @media (max-width: 800px) and (max-width: 800px) {
   .main-header {
-    padding: 10px 0 10px;
+    padding: 10px 0;
   }
 }
 @media (max-width: 800px) {
