@@ -69,11 +69,6 @@ h2 {
 		flex-direction: column;
 	}
 
-	.main-navigation {
-		@media(max-width: 800px) {
-			margin-bottom: 10px;
-		}
-	}
 }
 
 .h3,
@@ -311,6 +306,10 @@ pre {
 	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
 	background-size: cover;
 
+	@media(max-width: 800px){
+		padding: 30px 0;
+	}
+
 	.branding {
 		font-size: 3.5em;
 		font-family: 'mr-eaves-xl-modern', serif;
@@ -371,20 +370,24 @@ pre {
 				text-transform: uppercase;
 				font-size: 20px;
 				font-weight: 500;
+				transition: all .2s ease-out;
 				@media(max-width: 600px) {
 					padding: 0;
 				}
 			}
 
 			&:hover > a {
-				color: @secondary-color;
+				text-shadow: 0px 0px 10px #b41eda, 0px 0px 5px #a341bb;
 				text-decoration: none;
 				cursor: pointer;
+				color:white;
 			}
 
 			&.nav-current {
 				a {
-					color: @text-color-heading;
+					color: #2a3371;
+    			font-weight: 600;
+
 				}
 			}
 
@@ -486,7 +489,7 @@ pre {
 
 	.roundup {
 		position: absolute;
-		background: mix(@secondary-color, black, 50%);
+		background: #81a1ab;
 		color: white;
 		text-align: center;
 		top: -12px;
@@ -1413,7 +1416,6 @@ p {
 				}
 
 				&:hover > a {
-					color: @theme-color;
 					text-decoration: none;
 				}
 
@@ -1482,7 +1484,8 @@ p {
 		margin: 20px auto;
 		background-color: #ffffff;
 		box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-		@media(max-width: 600px) {
+
+		@media(max-width: 800px) {
 			width: 100%;
 		}
 
@@ -1748,25 +1751,29 @@ p {
 		}
 	}
 
-	.post-template {
+
 		.main-header {
+			@media(max-width: 800px){
+				padding: 10px 0 10px
+			}
+		}
+
+	.main-header {
+		border: 0;
+
+		.branding {
 			display: none;
 		}
-	}
-
-	#main-menu {
-		border: 0;
 
 		a {
 			color: white;
 		}
 	}
 
-	.post-template {
+
 		#main-menu li {
 			padding: 20px 0;
 		}
-	}
 
 	.row {
 		margin-right: 0;
@@ -1774,8 +1781,8 @@ p {
 	}
 
 	.main-navigation {
-		padding: 0 20px;
-		margin-bottom: 0;
+		padding: 0;
+		margin: 0;
 		border: 0;
 
 		.container {
