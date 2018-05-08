@@ -216,7 +216,7 @@ pre {
 			left: 15px;
 			color: white;
 			z-index: 10;
-			width: 80%;
+			width: 90%;
 			line-height: 1;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -308,7 +308,8 @@ pre {
 .main-header {
 	text-align: center;
 	padding: 42px 0;
-	background: @white;
+	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
+	background-size: cover;
 
 	.branding {
 		font-size: 3.5em;
@@ -322,16 +323,7 @@ pre {
 		img {
 			width: 400px;
 			max-width: 80%;
-			@media(max-width: 800px) {
-				opacity: 0;
-			}
 		}
-	}
-
-	.container {
-		background: url("https://hackers.nyc3.digitaloceanspaces.com/logo_white.png") center center;
-		background-size: contain;
-		background-repeat: no-repeat;
 	}
 }
 
@@ -354,16 +346,14 @@ pre {
 
 .main-navigation {
 	text-align: center;
-	background: @white;
-	border-top: 1px solid @border-color;
-	margin-bottom: 20px;
-	@media(max-width: 767px) {
-		margin-bottom: 20px;
-	}
+	margin-top: 35px;
 
 	.menu {
 		padding: 0;
-		margin: 0;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		max-width: 444px;
 
 		li {
 			list-style: none;
@@ -372,29 +362,29 @@ pre {
 			position: relative;
 
 			a {
-				color: @text-color;
+				color: white;
 				// text-transform: capitalize;
-				line-height: 4em;
+				line-height: 1;
 				display: block;
 				padding: 0 20px;
 				font-family: 'mr-eaves-xl-modern', serif;
 				text-transform: uppercase;
-				font-size: 17px;
-				font-weight: 600;
+				font-size: 20px;
+				font-weight: 500;
 				@media(max-width: 600px) {
 					padding: 0;
 				}
 			}
 
 			&:hover > a {
-				color: @theme-color;
+				color: @secondary-color;
 				text-decoration: none;
 				cursor: pointer;
 			}
 
 			&.nav-current {
 				a {
-					color: @theme-color;
+					color: @text-color-heading;
 				}
 			}
 
@@ -412,9 +402,6 @@ pre {
 				.transition(all 0.2s ease);
 
 				li {
-					display: block;
-					margin: 0;
-
 					a {
 						line-height: 2.5em;
 						color: @text-color;
@@ -440,6 +427,19 @@ pre {
 /*====================================================
 	main post area
 ====================================================*/
+.container {
+	margin: 20px auto 0;
+	@media(max-width: 800px) {
+		margin: 0;
+		padding: 0;
+		width: 100% !important;
+
+		.postlist {
+			margin: 20px;
+		}
+	}
+}
+
 .post {
 	padding: 15px;
 	background: @white;
@@ -467,7 +467,7 @@ pre {
 
 	.featured {
 		position: absolute;
-		background: @theme-color;
+		background: lighten(@theme-color, 50%);
 		color: @white;
 		text-align: center;
 		top: -12px;
@@ -486,8 +486,8 @@ pre {
 
 	.roundup {
 		position: absolute;
-		background: #c9c9c9;
-		color: #ffffff;
+		background: mix(@secondary-color, black, 50%);
+		color: white;
 		text-align: center;
 		top: -12px;
 		right: -32px;
@@ -587,6 +587,7 @@ pre {
 
 		img {
 			width: 100%;
+			border: 1px solid #ebebeb;
 		}
 
 		a {
@@ -594,19 +595,20 @@ pre {
 
 			&:hover {
 				opacity: 0.8;
+				cursor: pointer;
 			}
 		}
 	}
 
 	.post-content {
-		margin: 0 10px 20px;
+		margin: 20px 10px;
 		overflow-x: hidden;
 		clear: both;
 
 		ul {
 			margin-left: 15px;
 			padding-left: 15px;
-			    margin-bottom: 20px;
+			margin-bottom: 20px;
 		}
 
 		.fluid-width-video-wrapper {
@@ -783,7 +785,7 @@ pre {
 		text-align: center;
 		display: inline-block;
 		color: #FFFFFF;
-		background: #00ada7;
+		background: @theme-color;
 		border-radius: 0;
 		padding: 6px 13px;
 
@@ -951,7 +953,7 @@ pre {
 		}
 
 		ul {
-    	padding: 10px 0 0;
+			padding: 10px 0 0;
 		}
 	}
 
@@ -1010,8 +1012,8 @@ pre {
 					color: @text-color-light;
 					.transition(all 0.2s);
 					height: 15px;
-			    width: 21px;
-			    font-size: 13px;
+					width: 21px;
+					font-size: 13px;
 				}
 			}
 
@@ -1406,6 +1408,10 @@ p {
 			li {
 				display: block;
 
+				a {
+					color: white;
+				}
+
 				&:hover > a {
 					color: @theme-color;
 					text-decoration: none;
@@ -1447,6 +1453,9 @@ p {
 		margin: 0 auto !important;
 	}
 
+	.post-content {
+		margin: 0 10px 20px;
+	}
 }
 
 .page-template,
@@ -1467,7 +1476,7 @@ p {
 	.link-preview {
 		border: 1px solid #dadada;
 		padding: 5px;
-		width: 80%;
+		width: 90%;
 		transition: all 0.2s ease-out;
 		border-radius: 5px;
 		margin: 20px auto;
@@ -1730,7 +1739,6 @@ p {
 ====================================================*/
 @media(max-width: 800px) {
 	.post-preview {
-		margin: 8px 16px;
 		padding: 10px;
 
 		&.tag-video {
@@ -1752,10 +1760,6 @@ p {
 		a {
 			color: white;
 		}
-		@media(max-width: 600px) {
-			max-width: 310px;
-			border: 0;
-		}
 	}
 
 	.post-template {
@@ -1769,12 +1773,7 @@ p {
 		margin-left: 0;
 	}
 
-	.main-header {
-		background: darken(@theme-color, 5%);
-	}
-
 	.main-navigation {
-		background: @theme-color;
 		padding: 0 20px;
 		margin-bottom: 0;
 		border: 0;
@@ -1782,8 +1781,6 @@ p {
 		.container {
 			padding-right: 0;
 			padding-left: 0;
-			margin-right: auto;
-			margin-left: auto;
 
 			.row {
 				margin: 0;
@@ -1809,11 +1806,13 @@ p {
 		}
 	}
 
-	.content-wrap .container {
-		padding-right: 0;
-		padding-left: 0;
-		margin-right: auto;
-		margin-left: auto;
+	.container {
+		.postlist {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			height: calc(100% + 100px);
+		}
 
 		.main-content {
 			padding-right: 0;
@@ -1848,7 +1847,7 @@ p {
 				}
 
 				.post-content {
-					margin: 0;
+					margin: 0 !important;
 					overflow-x: hidden;
 					padding: 10px 6% 20px;
 				}
@@ -2021,6 +2020,7 @@ p {
 
 .feed {
 	background-color: none;
+
 	.activity {
 		margin: 0;
 		transition: all 0.2s ease-out;
@@ -2035,6 +2035,7 @@ p {
 			.body {
 				background-color: mix(@theme-color, #f9f9f9, 10%);
 			}
+
 			.intro {
 				background-color: @theme-color;
 				border: 1px solid #00807b;
@@ -2044,8 +2045,6 @@ p {
 					color: white !important;
 				}
 			}
-
-
 		}
 
 		.intro {
@@ -2054,14 +2053,14 @@ p {
 			padding: 10px 30px;
 			background: #f3f3f3;
 			border: 1px solid #eaeaea;
-			transition: all .4s ease-in-out;
+			transition: all 0.4s ease-in-out;
 
 			h3 {
-				color:@theme-color;
+				color: @theme-color;
 				font-weight: 700;
 				display: inline;
 				font-size: 3.5em;
-	    	margin: auto 20px auto 0;
+				margin: auto 20px auto 0;
 			}
 
 			.summary {
@@ -2088,22 +2087,21 @@ p {
 					height: fit-content;
 					line-height: 1;
 					margin-bottom: 3px;
-
 					@media(max-width: 600px) {
 						font-size: 12px;
 					}
 				}
 			}
-
 			@media(max-width: 600px) {
 				padding: 10px 20px;
 			}
 		}
+
 		.body {
 			padding: 20px 30px;
 			background: #f9f9f9;
 			height: 250px;
-			transition: all .4s ease-in-out;
+			transition: all 0.4s ease-in-out;
 			transform-origin: top;
 			overflow: hidden;
 			@media(max-width: 600px) {
@@ -2133,8 +2131,7 @@ p {
 					display: inline-block;
 					margin-right: 10px;
 				}
-
-				@media(max-width: 600px){
+				@media(max-width: 600px) {
 					font-size: 14px;
 				}
 			}
@@ -2149,8 +2146,7 @@ p {
 				margin: 0 auto;
 				width: auto;
 				overflow: hidden;
-
-				@media(max-width: 600px){
+				@media(max-width: 600px) {
 					max-height: none;
 				}
 			}
@@ -2165,7 +2161,7 @@ p {
 				font-size: 12px;
 				color: #909090;
 				width: fit-content;
-				    width: 50%;
+				width: 50%;
 			}
 
 			.date {
@@ -2186,9 +2182,9 @@ p {
 	}
 
 	.disappear {
-		height:0px !important;
+		height: 0 !important;
 		transform: scaleY(0);
 		transform-origin: top;
-		padding:0 30px !important;
+		padding: 0 30px !important;
 	}
 }
