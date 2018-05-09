@@ -246,6 +246,13 @@ pre {
 .post-preview h5 {
   text-align: left;
 }
+@media (max-width: 800px) {
+  .post-preview .post-meta,
+  .post-preview .post-title,
+  .post-preview h5 {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .post-preview .post-content {
     font-size: 14px;
@@ -292,7 +299,7 @@ pre {
 ====================================================*/
 .main-header {
   text-align: center;
-  padding: 42px 0;
+  padding: 60px 0;
   background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
   background-size: cover;
 }
@@ -922,7 +929,7 @@ pre {
 }
 .widget .social li a i {
   line-height: 1;
-  color: #959595;
+  color: #cacaca;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -931,6 +938,7 @@ pre {
   height: 15px;
   width: 21px;
   font-size: 13px;
+  transition: all 0.2s ease-out;
 }
 .widget .social li:hover {
   background: #26a2c7;
@@ -941,9 +949,9 @@ pre {
   color: #FFFFFF;
 }
 .widget .tag-cloud a {
-  border: 1px solid #ebebeb;
+  border: 1px solid #764ea2;
   padding: 3px 11px;
-  color: #959595;
+  color: #764ea2;
   line-height: 1.5em;
   display: inline-block;
   margin: 0 10px 10px 0;
@@ -970,7 +978,7 @@ pre {
 .widget .recent-post .single-author .post-title,
 .widget .recent-post .recent-single-post .single-author-name,
 .widget .recent-post .single-author .single-author-name {
-  color: #505050;
+  color: #FFFFFF;
   font-family: 'proxima-nova', serif;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -1066,10 +1074,12 @@ pre {
 	footer
 ====================================================*/
 .main-footer {
-  background: #202020;
+  background: linear-gradient(to bottom, rgba(0, 255, 196, 0.2), rgba(41, 58, 63, 0));
   padding: 35px 0 0;
-  color: #b4b4b4;
+  color: white;
   margin-top: 30px;
+  background-color: #3c465a;
+  box-shadow: inset 0 1px 6px 0 rgba(44, 50, 63, 0.41);
 }
 @media (max-width: 600px) {
   .main-footer {
@@ -1078,15 +1088,16 @@ pre {
 }
 .main-footer .widget .title {
   color: #FFFFFF;
-  border-bottom: 1px solid #454545;
+  border-bottom: 1px solid #bed5da;
 }
 .main-footer .widget > div > div:last-child {
   border-bottom: 0 !important;
 }
 .main-footer .widget .tag-cloud a {
-  border: 1px solid #494949;
+  border: 0;
   border-radius: 2px;
-  color: #b4b4b4;
+  color: #FFFFFF;
+  background: #3d888c;
 }
 .main-footer .widget .tag-cloud a:hover {
   border: 1px solid #26a2c7;
@@ -1100,13 +1111,13 @@ pre {
 }
 .main-footer .widget .recent-post .recent-single-post,
 .main-footer .widget .recent-post .single-author {
-  border-bottom: 1px dashed #272727;
+  border-bottom: 1px dashed #a9a9a9;
 }
 .main-footer .widget .recent-post .recent-single-post .post-title,
 .main-footer .widget .recent-post .single-author .post-title,
 .main-footer .widget .recent-post .recent-single-post .single-author-name,
 .main-footer .widget .recent-post .single-author .single-author-name {
-  color: #b4b4b4;
+  color: #FFFFFF;
 }
 .main-footer .widget .recent-post .recent-single-post .post-title:hover,
 .main-footer .widget .recent-post .single-author .post-title:hover,
@@ -1750,8 +1761,15 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.repos > img {
+  position: absolute;
+  z-index: 40;
+  right: 0;
+  left: 0;
+}
 .repos a {
   width: 49%;
+  z-index: 1;
 }
 .repos a:hover .repo {
   background-color: #26a2c7;
@@ -1777,6 +1795,9 @@ p {
   position: relative;
   overflow: hidden;
   height: 150px;
+}
+.repos .repo img {
+  border: 0;
 }
 .repos .repo .lang {
   height: 80px;
@@ -1848,6 +1869,17 @@ p {
 }
 .feed {
   background-color: none;
+  position: relative;
+}
+.feed img {
+  max-width: 95%;
+  border: 0 !important;
+  margin: auto;
+  display: block;
+  position: absolute;
+  z-index: 40;
+  right: 0;
+  left: 0;
 }
 .feed .activity {
   margin: 0;

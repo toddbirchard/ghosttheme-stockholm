@@ -252,6 +252,10 @@ pre {
 	.post-title,
 	h5 {
 		text-align: left;
+
+		@media(max-width: 800px){
+			display: none;
+		}
 	}
 
 	.post-content {
@@ -309,7 +313,7 @@ pre {
 ====================================================*/
 .main-header {
 	text-align: center;
-	padding: 42px 0;
+	padding: 60px 0;
 	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
 	background-size: cover;
 	@media(max-width: 800px) {
@@ -1014,11 +1018,12 @@ pre {
 			a {
 				i {
 					line-height: 1;
-					color: @text-color-light;
+					color: #cacaca;
 					.transition(all 0.2s);
 					height: 15px;
 					width: 21px;
 					font-size: 13px;
+					transition: all .2s ease-out
 				}
 			}
 
@@ -1036,9 +1041,9 @@ pre {
 
 	.tag-cloud {
 		a {
-			border: 1px solid @border-color;
+			border: 1px solid #764ea2;
 			padding: 3px 11px;
-			color: @text-color-light;
+			color: #764ea2;
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
@@ -1063,7 +1068,7 @@ pre {
 
 			.post-title,
 			.single-author-name {
-				color: @text-color;
+				color: @white;
 				font-family: 'proxima-nova', serif;
 				.transition(all 0.2s ease);
 				font-size: 16px;
@@ -1167,10 +1172,12 @@ pre {
 	footer
 ====================================================*/
 .main-footer {
-	background: @bg-color-footer;
-	padding: 35px 0 0;
-	color: @text-color-footer;
-	margin-top: 30px;
+	background: linear-gradient(to bottom, rgba(0,255,196,0.2), rgba(41,58,63,0));
+padding: 35px 0 0;
+color: white;
+margin-top: 30px;
+background-color: #3c465a;
+box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 	@media(max-width: 600px) {
 		margin-top: 10px;
 	}
@@ -1178,7 +1185,7 @@ pre {
 	.widget {
 		.title {
 			color: @white;
-			border-bottom: 1px solid #454545;
+			border-bottom: 1px solid #bed5da;
 		}
 
 		& > div > div:last-child {
@@ -1187,9 +1194,11 @@ pre {
 
 		.tag-cloud {
 			a {
-				border: 1px solid #494949;
-				border-radius: 2px;
-				color: @text-color-footer;
+				border: 0;
+border-radius: 2px;
+color: #FFFFFF;
+background: #3d888c;
+
 
 				&:hover {
 					border: 1px solid @theme-color;
@@ -1208,11 +1217,11 @@ pre {
 
 			.recent-single-post,
 			.single-author {
-				border-bottom: 1px dashed #272727;
+				border-bottom: 1px dashed #a9a9a9;
 
 				.post-title,
 				.single-author-name {
-					color: @text-color-footer;
+					color: @white;
 
 					&:hover {
 						color: @theme-color;
@@ -1911,8 +1920,16 @@ p {
 	flex-direction: row;
 	flex-wrap: wrap;
 
+	& > img {
+		position: absolute;
+z-index: 40;
+right: 0;
+left: 0;
+	}
+
 	a {
 		width: 49%;
+		z-index: 1;
 
 		&:hover {
 			.repo {
@@ -1941,6 +1958,10 @@ p {
 		position: relative;
 		overflow: hidden;
 		height: 150px;
+
+		img {
+			border: 0;
+		}
 
 		.lang {
 			height: 80px;
@@ -2026,6 +2047,17 @@ p {
 
 .feed {
 	background-color: none;
+	position: relative;
+
+	img { max-width: 95%;
+    border: 0 !important;
+    margin: auto;
+    display: block;
+    position: absolute;
+    z-index: 40;
+    right: 0;
+    left: 0;
+	}
 
 	.activity {
 		margin: 0;
