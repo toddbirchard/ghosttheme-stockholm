@@ -7,15 +7,27 @@ $(document).ready(function() {
         $('.repos').append('<a href=https://github.com/' + repo['full_name'] + '><div class="repo"><div class="lang ' + repo['language'] + '"><span>' + repo['language'] + '</span></div><div class="details"><h3><i class="fab fa-github"></i> ' + repo['name'] + '</h3><p class="description">' + repo['description'] + '</p><p class="author"><img src="' + repo['avatar'] + '"> <span class="author">' + repo['author'] + '<span></div></div></a>');
       }
     }).done(function() {
+
+      var reposHeight = 0;
+
+      $(".repos").children().each(function(){
+          reposHeight = reposHeight + $(this).outerHeight(true);
+      });
+
+      $('.repos').animate({
+        height: reposHeight/2,
+      }, 800);
+
+
       $('.repos .loader').animate({
-        opacity: 0
+        opacity: 0,
       }, 800, function() {
         $(this).css('display', 'none');
       });
 
 
       $('.repo').animate({
-        opacity: 1
+        opacity: 1,
       }, 800, function() {
         $('.repos .loader').css('display', 'none');
       });
@@ -61,21 +73,29 @@ $(document).ready(function() {
 
         $(".activity").not(":first").find('.body').addClass('disappear');
         $(".intro").click(function() {
-          $(this).parent().find('.body').toggleClass('disappear');
+          $(".activity").find('.body').addClass('disappear');
+          $(this).parent().find('.body').removeClass('disappear');
         });
       }
       //removeLoaders()
     }).done(function() {
-      $('.feed img').animate({
+
+
+      $('.feed .loader').animate({
         opacity: 0
       }, 800, function() {
         $(this).css('display', 'none');
       });
 
+      $('.feed').animate({
+        height: '600px',
+      }, 800);
+
+
       $('.feed .activity').animate({
         opacity: 1
       }, 800, function() {
-        $('.feed img').css('display', 'none');
+        //$('.feed img').css('display', 'none');
       });
     });
   }

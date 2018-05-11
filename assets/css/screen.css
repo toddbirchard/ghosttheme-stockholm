@@ -234,12 +234,17 @@ pre {
   top: 0;
   content: '';
 }
+.post-preview {
+  padding: 0 !important;
+  border: 1px solid #dadada;
+}
 .post-preview .featured-media {
-  border: 1px solid #ebebeb;
   box-sizing: border-box;
   overflow: visible;
-  width: 99%;
   margin: auto;
+}
+.post-preview .content {
+  padding: 10px;
 }
 .post-preview .post-permalink {
   text-align: left;
@@ -360,14 +365,33 @@ pre {
 }
 .main-navigation {
   text-align: center;
-  margin-top: 35px;
+  /* margin-top: 35px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #0873c3 100%);
+  height: 150px;
+}
+@media (max-width: 800px) {
+  .main-navigation {
+    height: auto;
+    background: none;
+  }
 }
 .main-navigation .menu {
   padding: 0;
-  margin: 20px auto 0;
+  margin: 40px 40px 0 auto;
   display: flex;
   justify-content: space-between;
-  max-width: 250px;
+  max-width: 309px;
+}
+@media (max-width: 800px) {
+  .main-navigation .menu {
+    margin: 30px auto 20px;
+    max-width: 235px;
+    opacity: 0.9;
+  }
 }
 .main-navigation .menu li {
   list-style: none;
@@ -382,12 +406,13 @@ pre {
   font-family: 'mr-eaves-xl-modern', serif;
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.2s ease-out;
 }
 @media (max-width: 600px) {
   .main-navigation .menu li a {
     padding: 0;
+    font-weight: 500;
   }
 }
 .main-navigation .menu li:hover > a {
@@ -1271,7 +1296,7 @@ p {
   background-position: center;
   text-align: center;
   width: 100%;
-  height: 150px;
+  height: 120px;
   position: relative;
 }
 .tag-container .tag-wrapper a .tag-title {
@@ -1682,6 +1707,7 @@ p {
     padding: 0 6%;
     margin: 0;
     border: 0;
+    position: relative;
   }
   .main-navigation .container {
     padding-right: 0;
@@ -1772,7 +1798,7 @@ p {
 }
 @media (max-width: 800px) and (max-width: 800px) {
   .main-header {
-    padding: 30px 0;
+    padding: 60px 0;
   }
 }
 @media (max-width: 800px) {
@@ -1790,17 +1816,25 @@ p {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 300px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
 }
-.repos > img {
+.repos .loader {
+  width: 50%;
+  border: 0 !important;
+  margin: auto;
+  display: block;
   position: absolute;
   z-index: 40;
   right: 0;
   left: 0;
+  top: 30px;
 }
 .repos a {
   width: 49%;
   z-index: 1;
+  height: fit-content;
 }
 .repos a:hover .repo {
   background-color: #26a2c7;
@@ -1822,7 +1856,7 @@ p {
   border: 1px solid #eaeaea;
   padding: 15px;
   margin: 5px 0;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -1903,7 +1937,8 @@ p {
 .feed {
   background-color: none;
   position: relative;
-  min-height: 300px;
+  height: 500px;
+  overflow: hidden;
 }
 .feed .loader {
   width: 50%;
@@ -1924,6 +1959,7 @@ p {
   overflow: hidden;
   text-decoration: none;
   opacity: 0;
+  transition: all 0.3s ease-out;
 }
 .feed .activity:hover {
   cursor: pointer;
@@ -1994,7 +2030,7 @@ p {
 .feed .activity .body {
   padding: 20px 30px;
   background: #f9f9f9;
-  height: 400px;
+  height: 300px;
   transition: all 0.4s ease-in-out;
   transform-origin: top;
   overflow: hidden;

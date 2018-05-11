@@ -240,12 +240,16 @@ pre {
 }
 
 .post-preview {
+	padding:0 !important;
+	border: 1px solid #dadada;
 	.featured-media {
-		border: 1px solid #ebebeb;
 		box-sizing: border-box;
 		overflow: visible;
-		width: 99%;
 		margin: auto;
+	}
+
+	.content {
+		padding:10px;
 	}
 
 	.post-permalink {
@@ -350,9 +354,8 @@ pre {
 		img {
 			width: 400px;
 			max-width: 80%;
-
 			@media(max-width: 800px) {
-				 width: 250px;
+				width: 250px;
 			}
 		}
 	}
@@ -377,14 +380,29 @@ pre {
 
 .main-navigation {
 	text-align: center;
-	margin-top: 35px;
+    /* margin-top: 35px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgb(8, 115, 195) 100%);
+    height: 150px;
+		@media(max-width: 800px) {
+			height:auto;
+			background: none;
+		}
 
 	.menu {
 		padding: 0;
-		margin: 20px auto 0;
+		margin: 40px 40px 0 auto;
 		display: flex;
 		justify-content: space-between;
-		max-width: 250px;
+		max-width: 309px;
+		@media(max-width: 800px) {
+			margin: 30px auto 20px;
+			max-width: 235px;
+			opacity: 0.9;
+		}
 
 		li {
 			list-style: none;
@@ -401,10 +419,11 @@ pre {
 				font-family: 'mr-eaves-xl-modern', serif;
 				text-transform: uppercase;
 				font-size: 20px;
-				font-weight: 500;
+				font-weight: 600;
 				transition: all 0.2s ease-out;
 				@media(max-width: 600px) {
 					padding: 0;
+					font-weight: 500;
 				}
 			}
 
@@ -419,10 +438,11 @@ pre {
 				@media(max-width: 600px) {
 					padding: 0;
 				}
+
 				a {
 					color: #2a3371;
 					font-weight: 100;
-					    font-size: 17px;
+					font-size: 17px;
 				}
 			}
 
@@ -592,190 +612,187 @@ pre {
 				display: inline-block;
 			}
 
-				i {
-					margin-right: 10px;
-					@media(max-width: 600px) {
-						display: none;
-					}
+			i {
+				margin-right: 10px;
+				@media(max-width: 600px) {
+					display: none;
 				}
 			}
+		}
 
-			img {
-				height: 14px;
-				width: 14px;
-			}
+		img {
+			height: 14px;
+			width: 14px;
+		}
 
-			span {
-				margin: 0;
-				white-space: nowrap;
-			}
+		span {
+			margin: 0;
+			white-space: nowrap;
+		}
 
-			.comment-count {
-				display: none;
-			}
+		.comment-count {
+			display: none;
+		}
+	}
+	@media(max-width: 600px) {
+		padding: 20px 10px;
+	}
+}
+
+.featured-media {
+	img {
+		width: 100%;
+	}
+
+	a {
+		transition: opacity 0.2s ease-out;
+
+		&:hover {
+			opacity: 0.8;
+			cursor: pointer;
+		}
+	}
+}
+
+.post-content {
+	margin: 0 10px;
+	overflow-x: hidden;
+	clear: both;
+
+	ul {
+		margin-left: 15px;
+		padding-left: 15px;
+		margin-bottom: 20px;
+	}
+
+	.fluid-width-video-wrapper {
+		margin: 0;
+	}
+
+	iframe {
+		margin: 0;
+		display: block;
+		@media(max-width: 600px) {
+			height: 100%;
+		}
+	}
+
+	.twitter-tweet {
+		margin: 20px auto;
+	}
+
+	img {
+		max-width: 95%;
+		border: 1px solid #eaeaea;
+		margin: auto;
+		display: block;
+	}
+
+	a {
+		color: @secondary-color;
+	}
+}
+
+.tag-list {
+	color: @text-color-heading;
+	font-size: 15px;
+	display: inline;
+	height: fit-content;
+	margin: auto 0;
+
+	i {
+		color: #575863;
+		margin-right: 7px;
+		opacity: 0.6;
+		font-size: 12px;
+	}
+
+	a:nth-of-type(1) {
+		margin-left: 0;
+	}
+
+	a {
+		margin-left: 5px;
+	}
+
+	& > span {
+		margin-right: 20px;
+	}
+
+	.author {
+		text-transform: capitalize;
+	}
+
+	.author,
+	.date {
+		span {
+			opacity: 0.6;
+			font-weight: 600;
 		}
 		@media(max-width: 600px) {
-			padding: 20px 10px;
+			display: none;
 		}
 	}
 
-	.featured-media {
-		img {
-			width: 100%;
-		}
-
-		a {
-			transition: opacity 0.2s ease-out;
-
-			&:hover {
-				opacity: 0.8;
-				cursor: pointer;
-			}
-		}
-	}
-
-	.post-content {
-		margin: 0 10px;
-		overflow-x: hidden;
-		clear: both;
-
-		ul {
-			margin-left: 15px;
-			padding-left: 15px;
-			margin-bottom: 20px;
-		}
-
-		.fluid-width-video-wrapper {
-			margin: 0;
-		}
-
-		iframe {
-			margin: 0;
-			display: block;
-			@media(max-width: 600px) {
-				height: 100%;
-			}
-		}
-
-		.twitter-tweet {
-			margin: 20px auto;
-		}
-
-		img {
-			max-width: 95%;
-			border: 1px solid #eaeaea;
-			margin: auto;
-			display: block;
-		}
-
-		a {
-			color: @secondary-color;
-		}
-	}
-
-
-
-	.tag-list {
+	a {
 		color: @text-color-heading;
 		font-size: 15px;
-		display: inline;
-		height: fit-content;
-		margin: auto 0;
+		opacity: 0.6;
+		transition: 0.2s all ease-out;
+		font-weight: 600;
 
-		i {
-			color: #575863;
-			margin-right: 7px;
-			opacity: 0.6;
-			font-size: 12px;
+		&:hover {
+			color: @theme-color;
+			opacity: 1;
 		}
+	}
+}
 
-		a:nth-of-type(1) {
-			margin-left: 0;
-		}
+.share {
+	.share-icons {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		width: 145px;
 
-		a {
-			margin-left: 5px;
-		}
-
-		& > span {
-			margin-right: 20px;
-		}
-
-		.author {
-			text-transform: capitalize;
-		}
-
-		.author,
-		.date {
-			span {
-				opacity: 0.6;
-				font-weight: 600;
-			}
-			@media(max-width: 600px) {
-				display: none;
-			}
-		}
-
-		a {
-			color: @text-color-heading;
+		li {
+			list-style: none;
+			display: inline-block;
+			line-height: 28px;
+			border: 1px solid @border-color;
 			font-size: 15px;
-			opacity: 0.6;
+			padding: 0 7px;
 			transition: 0.2s all ease-out;
-			font-weight: 600;
 
 			&:hover {
-				color: @theme-color;
-				opacity: 1;
-			}
-		}
-	}
-
-	.share {
-		.share-icons {
-			padding: 0;
-			margin: 0;
-			display: flex;
-			justify-content: space-between;
-			width: 145px;
-
-			li {
-				list-style: none;
-				display: inline-block;
-				line-height: 28px;
-				border: 1px solid @border-color;
-				font-size: 15px;
-				padding: 0 7px;
-				transition: 0.2s all ease-out;
-
-				&:hover {
-					color: @white;
-					background: @theme-color;
-					border: 1px solid @theme-color;
-
-					a {
-						color: @white;
-					}
-				}
+				color: @white;
+				background: @theme-color;
+				border: 1px solid @theme-color;
 
 				a {
-					color: #c4c4c4;
-					text-align: center;
+					color: @white;
 				}
+			}
+
+			a {
+				color: #c4c4c4;
+				text-align: center;
 			}
 		}
 	}
+}
 
-	.pull-left {
+.pull-left {
+	color: #575863;
+
+	a,
+	i,
+	span {
 		color: #575863;
-
-		a,
-		i,
-		span {
-			color: #575863;
-			opacity: 0.6;
-		}
+		opacity: 0.6;
 	}
-
+}
 
 .post-page {
 	.post-head {
@@ -880,7 +897,7 @@ pre {
 .about-author {
 	background: @white;
 	padding: 20px;
-	margin:10px 0;
+	margin: 10px 0;
 
 	.avatar {
 		width: 80px;
@@ -986,7 +1003,7 @@ pre {
 		font-size: 17px !important;
 		font-weight: 500 !important;
 
-		&:hover{
+		&:hover {
 			cursor: pointer;
 		}
 	}
@@ -1381,7 +1398,7 @@ p {
 				background-position: center;
 				text-align: center;
 				width: 100%;
-				height: 150px;
+				height: 120px;
 				position: relative;
 			}
 
@@ -1459,8 +1476,8 @@ p {
 
 				a {
 					color: white;
-					 font-weight: 100;
-					 font-size: 17px;
+					font-weight: 100;
+					font-size: 17px;
 				}
 
 				&:hover > a {
@@ -1799,7 +1816,7 @@ p {
 
 	.main-header {
 		@media(max-width: 800px) {
-			padding: 30px 0;
+			padding: 60px 0;
 		}
 	}
 
@@ -1820,6 +1837,7 @@ p {
 		padding: 0 6%;
 		margin: 0;
 		border: 0;
+		position: relative;
 
 		.container {
 			padding-right: 0;
@@ -1836,7 +1854,6 @@ p {
 							padding: 0;
 
 							li {
-
 								a {
 									font-weight: 100;
 								}
@@ -1946,18 +1963,26 @@ p {
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: wrap;
-	min-height: 300px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
 
-	& > img {
+	.loader {
+		width: 50%;
+		border: 0 !important;
+		margin: auto;
+		display: block;
 		position: absolute;
 		z-index: 40;
 		right: 0;
 		left: 0;
+		top: 30px;
 	}
 
 	a {
 		width: 49%;
 		z-index: 1;
+		height: fit-content;
 
 		&:hover {
 			.repo {
@@ -1982,7 +2007,7 @@ p {
 		border: 1px solid #eaeaea;
 		padding: 15px;
 		margin: 5px 0;
-		transition: all 0.2s ease-out;
+		transition: all 0.3s ease-out;
 		position: relative;
 		overflow: hidden;
 		opacity: 0;
@@ -2037,7 +2062,7 @@ p {
 			}
 
 			.author {
-				margin:0;
+				margin: 0;
 			}
 
 			img {
@@ -2079,7 +2104,8 @@ p {
 .feed {
 	background-color: none;
 	position: relative;
-	min-height: 300px;
+	height: 500px;
+	overflow: hidden;
 
 	.loader {
 		width: 50%;
@@ -2101,6 +2127,7 @@ p {
 		overflow: hidden;
 		text-decoration: none;
 		opacity: 0;
+		transition: all 0.3s ease-out;
 
 		&:hover {
 			cursor: pointer;
@@ -2174,7 +2201,7 @@ p {
 		.body {
 			padding: 20px 30px;
 			background: #f9f9f9;
-			height: 400px;
+			height: 300px;
 			transition: all 0.4s ease-in-out;
 			transform-origin: top;
 			overflow: hidden;
@@ -2243,13 +2270,10 @@ p {
 					font-weight: 600;
 					font-size: 16px;
 				}
-
 				@media(max-width: 800px) {
 					width: 100%;
 				}
 			}
-
-
 		}
 
 		.time {

@@ -20,26 +20,28 @@
 			</div>
 		{{/if}}
 
-		<div class="post-head">
-			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
-		</div>
-		<div class="post-content">
-			{{content words="80"}}
-		</div>
-		<div class="post-permalink">
-			<div class="tag-list">
-				<span class="author"><i class="fas fa-user"></i><span>{{#author}}{{slug}}{{/author}}</span></span>
-				<span class="tags">
+		<div class="content">
+			<div class="post-head">
+				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+				<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
+			</div>
+			<div class="post-content">
+				{{content words="80"}}
+			</div>
+			<div class="post-permalink">
+				<div class="tag-list">
+					<span class="author"><i class="fas fa-user"></i><span>{{#author}}{{slug}}{{/author}}</span></span>
+					<span class="tags">
 			{{#if tags}}
 				<i class="fas fa-tags"></i>
 			{{tags limit="1"}}
 			{{/if}}
 			</span>
-				<span class="date"><i class="fas fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
-				</span>
+					<span class="date"><i class="fas fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+					</span>
+				</div>
+				<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
 			</div>
-			<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
 		</div>
 	</article>
 {{/foreach}}
