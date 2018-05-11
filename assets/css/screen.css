@@ -324,8 +324,7 @@ pre {
 }
 @media (max-width: 800px) {
   .main-header {
-    padding: 30px 0;
-    background: #26a2c7;
+    padding: 50px 0;
   }
 }
 .main-header .branding {
@@ -339,6 +338,11 @@ pre {
 .main-header .branding img {
   width: 400px;
   max-width: 80%;
+}
+@media (max-width: 800px) {
+  .main-header .branding img {
+    width: 250px;
+  }
 }
 .navbar-header {
   text-align: center;
@@ -360,10 +364,10 @@ pre {
 }
 .main-navigation .menu {
   padding: 0;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: flex;
   justify-content: space-between;
-  max-width: 400px;
+  max-width: 250px;
 }
 .main-navigation .menu li {
   list-style: none;
@@ -392,9 +396,15 @@ pre {
   cursor: pointer;
   color: white;
 }
+@media (max-width: 600px) {
+  .main-navigation .menu li.nav-current {
+    padding: 0;
+  }
+}
 .main-navigation .menu li.nav-current a {
   color: #2a3371;
-  font-weight: 600;
+  font-weight: 100;
+  font-size: 17px;
 }
 .main-navigation .menu li ul {
   visibility: hidden;
@@ -804,6 +814,7 @@ pre {
 .about-author {
   background: #FFFFFF;
   padding: 20px;
+  margin: 10px 0;
 }
 .about-author .avatar {
   width: 80px;
@@ -894,8 +905,11 @@ pre {
   color: #627e90 !important;
   font-family: 'proxima-nova', serif;
   transition: all 0.2s ease;
-  font-size: 16px !important;
+  font-size: 17px !important;
   font-weight: 500 !important;
+}
+.sidebar .post-title:hover {
+  cursor: pointer;
 }
 .main-footer .widget {
   padding: 0 30px;
@@ -1314,6 +1328,8 @@ p {
   }
   .main-navigation .menu li a {
     color: white;
+    font-weight: 100;
+    font-size: 17px;
   }
   .main-navigation .menu li:hover > a {
     text-decoration: none;
@@ -1655,14 +1671,8 @@ p {
   .main-header {
     border: 0;
   }
-  .main-header .branding {
-    display: none;
-  }
   .main-header a {
     color: white;
-  }
-  #main-menu li {
-    padding: 20px 0;
   }
   .row {
     margin-right: 0;
@@ -1686,11 +1696,8 @@ p {
   .main-navigation .container .row .col-sm-12 .navbar-collapse .menu {
     padding: 0;
   }
-  .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li {
-    padding: 20px 0;
-  }
   .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li a {
-    font-weight: 500;
+    font-weight: 100;
   }
   .container .postlist {
     display: flex;
@@ -1765,7 +1772,7 @@ p {
 }
 @media (max-width: 800px) and (max-width: 800px) {
   .main-header {
-    padding: 10px 0;
+    padding: 30px 0;
   }
 }
 @media (max-width: 800px) {
@@ -1818,7 +1825,6 @@ p {
   transition: all 0.2s ease-out;
   position: relative;
   overflow: hidden;
-  min-height: 150px;
   opacity: 0;
 }
 .repos .repo img {
@@ -1858,13 +1864,15 @@ p {
   text-overflow: ellipsis;
   width: 97%;
 }
-.repos .repo .details p:nth-of-type(1) {
+.repos .repo .details .description {
   color: #505050;
   margin: 10px 0;
   font-size: 13px;
   line-height: 1.3;
-  height: 47px;
   overflow: hidden;
+}
+.repos .repo .details .author {
+  margin: 0;
 }
 .repos .repo .details img {
   height: 20px;
@@ -1897,8 +1905,8 @@ p {
   position: relative;
   min-height: 300px;
 }
-.feed img {
-  max-width: 95%;
+.feed .loader {
+  width: 50%;
   border: 0 !important;
   margin: auto;
   display: block;
@@ -1906,6 +1914,8 @@ p {
   z-index: 40;
   right: 0;
   left: 0;
+  top: 0;
+  bottom: 0;
 }
 .feed .activity {
   margin: 0;
@@ -1984,7 +1994,7 @@ p {
 .feed .activity .body {
   padding: 20px 30px;
   background: #f9f9f9;
-  height: 250px;
+  height: 400px;
   transition: all 0.4s ease-in-out;
   transform-origin: top;
   overflow: hidden;
@@ -2047,14 +2057,16 @@ p {
   width: fit-content;
   width: 50%;
 }
-@media (max-width: 800) {
+.feed .activity .body li .date {
+  margin-right: 10px;
+  color: #141624;
+  font-weight: 600;
+  font-size: 16px;
+}
+@media (max-width: 800px) {
   .feed .activity .body li {
     width: 100%;
   }
-}
-.feed .activity .body .date {
-  margin-right: 10px;
-  color: #FFFFFF;
 }
 .feed .activity .time {
   position: absolute;
