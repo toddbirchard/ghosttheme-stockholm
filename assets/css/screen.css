@@ -241,6 +241,25 @@ pre {
   width: 99%;
   margin: auto;
 }
+.post-preview .post-permalink {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.post-preview .post-permalink .btn {
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+@media (max-width: 600px) {
+  .post-preview .post-permalink .btn {
+    font-size: 14px;
+    font-weight: 100;
+    padding: 8px 20px;
+  }
+}
 .post-preview .post-meta,
 .post-preview .post-title,
 .post-preview h5 {
@@ -299,7 +318,7 @@ pre {
 ====================================================*/
 .main-header {
   text-align: center;
-  padding: 60px 0;
+  padding: 150px 0;
   background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
   background-size: cover;
 }
@@ -489,6 +508,7 @@ pre {
   line-height: 54px;
   transform: rotate(45deg);
   z-index: 20;
+  display: none;
 }
 .post .roundup i {
   -webkit-transform: rotate(-45deg);
@@ -547,148 +567,129 @@ pre {
 .post .post-head .post-meta div {
   display: inline-block;
 }
-.post .post-head .post-meta .date i {
+.post .post-head .post-meta i {
   margin-right: 10px;
 }
 @media (max-width: 600px) {
-  .post .post-head .post-meta .date i {
+  .post .post-head .post-meta i {
     display: none;
   }
 }
-.post .post-head .post-meta img {
+.post .post-head img {
   height: 14px;
   width: 14px;
 }
-.post .post-head .post-meta span {
+.post .post-head span {
   margin: 0;
   white-space: nowrap;
 }
-.post .post-head .post-meta .comment-count {
+.post .post-head .comment-count {
   display: none;
 }
 @media (max-width: 600px) {
-  .post .post-head {
+  .post {
     padding: 20px 10px;
   }
 }
-.post .featured-media img {
+.featured-media img {
   width: 100%;
 }
-.post .featured-media a {
+.featured-media a {
   transition: opacity 0.2s ease-out;
 }
-.post .featured-media a:hover {
+.featured-media a:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-.post .post-content {
+.post-content {
   margin: 0 10px;
   overflow-x: hidden;
   clear: both;
 }
-.post .post-content ul {
+.post-content ul {
   margin-left: 15px;
   padding-left: 15px;
   margin-bottom: 20px;
 }
-.post .post-content .fluid-width-video-wrapper {
+.post-content .fluid-width-video-wrapper {
   margin: 0;
 }
-.post .post-content iframe {
+.post-content iframe {
   margin: 0;
   display: block;
 }
 @media (max-width: 600px) {
-  .post .post-content iframe {
+  .post-content iframe {
     height: 100%;
   }
 }
-.post .post-content .twitter-tweet {
+.post-content .twitter-tweet {
   margin: 20px auto;
 }
-.post .post-content img {
+.post-content img {
   max-width: 95%;
   border: 1px solid #eaeaea;
   margin: auto;
   display: block;
 }
-.post .post-content a {
+.post-content a {
   color: #764ea2;
 }
-.post > .post-permalink {
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-.post > .post-permalink .btn {
-  font-size: 18px;
-  font-weight: 100;
-  text-transform: uppercase;
-  padding: 10px 20px;
-}
-@media (max-width: 600px) {
-  .post > .post-permalink .btn {
-    font-size: 14px;
-    font-weight: 100;
-    padding: 8px 20px;
-  }
-}
-.post .tag-list {
+.tag-list {
   color: #141624;
   font-size: 15px;
   display: inline;
   height: fit-content;
   margin: auto 0;
 }
-.post .tag-list i {
+.tag-list i {
   color: #575863;
   margin-right: 7px;
   opacity: 0.6;
   font-size: 12px;
 }
-.post .tag-list a:nth-of-type(1) {
+.tag-list a:nth-of-type(1) {
   margin-left: 0;
 }
-.post .tag-list a {
+.tag-list a {
   margin-left: 5px;
 }
-.post .tag-list > span {
+.tag-list > span {
   margin-right: 20px;
 }
-.post .tag-list .author {
+.tag-list .author {
   text-transform: capitalize;
 }
-.post .tag-list .author span,
-.post .tag-list .date span {
+.tag-list .author span,
+.tag-list .date span {
   opacity: 0.6;
   font-weight: 600;
 }
 @media (max-width: 600px) {
-  .post .tag-list .author,
-  .post .tag-list .date {
+  .tag-list .author,
+  .tag-list .date {
     display: none;
   }
 }
-.post .tag-list a {
+.tag-list a {
   color: #141624;
   font-size: 15px;
   opacity: 0.6;
   transition: 0.2s all ease-out;
   font-weight: 600;
 }
-.post .tag-list a:hover {
+.tag-list a:hover {
   color: #26a2c7;
   opacity: 1;
 }
-.post .share .share-icons {
+.share .share-icons {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: space-between;
   width: 145px;
 }
-.post .share .share-icons li {
+.share .share-icons li {
   list-style: none;
   display: inline-block;
   line-height: 28px;
@@ -697,24 +698,24 @@ pre {
   padding: 0 7px;
   transition: 0.2s all ease-out;
 }
-.post .share .share-icons li:hover {
+.share .share-icons li:hover {
   color: #FFFFFF;
   background: #26a2c7;
   border: 1px solid #26a2c7;
 }
-.post .share .share-icons li:hover a {
+.share .share-icons li:hover a {
   color: #FFFFFF;
 }
-.post .share .share-icons li a {
+.share .share-icons li a {
   color: #c4c4c4;
   text-align: center;
 }
-.post .pull-left {
+.pull-left {
   color: #575863;
 }
-.post .pull-left a,
-.post .pull-left i,
-.post .pull-left span {
+.pull-left a,
+.pull-left i,
+.pull-left span {
   color: #575863;
   opacity: 0.6;
 }
@@ -889,8 +890,27 @@ pre {
 .sidebar .text {
   font-size: 16px;
 }
+.sidebar .post-title {
+  color: #627e90 !important;
+  font-family: 'proxima-nova', serif;
+  transition: all 0.2s ease;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
 .main-footer .widget {
   padding: 0 30px;
+}
+@media (max-width: 800px) {
+  .main-footer .widget {
+    margin-bottom: 50px;
+  }
+  .main-footer .widget h4 {
+    font-size: 2.5em;
+  }
+  .main-footer .widget .recent-single-post,
+  .main-footer .widget .single-author {
+    width: 80%;
+  }
 }
 .widget {
   margin-bottom: 20px;
@@ -899,7 +919,7 @@ pre {
 .widget .title {
   margin-top: 0;
   padding-bottom: 7px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #26a2c7;
   margin-bottom: 21px;
   position: relative;
 }
@@ -949,9 +969,9 @@ pre {
   color: #FFFFFF;
 }
 .widget .tag-cloud a {
-  border: 1px solid #764ea2;
+  border: 1px solid #d4dbe0;
   padding: 3px 11px;
-  color: #764ea2;
+  color: #627e90;
   line-height: 1.5em;
   display: inline-block;
   margin: 0 10px 10px 0;
@@ -985,8 +1005,8 @@ pre {
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 100;
 }
 .widget .recent-post .recent-single-post .post-title:hover,
 .widget .recent-post .single-author .post-title:hover,
@@ -999,6 +1019,7 @@ pre {
 .widget .recent-post .single-author .date {
   color: #959595;
   font-size: 12px;
+  opacity: 0.8;
 }
 .widget .recent-post .recent-single-post .date i,
 .widget .recent-post .single-author .date i {
@@ -1075,7 +1096,7 @@ pre {
 ====================================================*/
 .main-footer {
   background: linear-gradient(to bottom, rgba(0, 255, 196, 0.2), rgba(41, 58, 63, 0));
-  padding: 35px 0 0;
+  padding: 35px 0;
   color: white;
   margin-top: 30px;
   background-color: #3c465a;
@@ -1088,7 +1109,6 @@ pre {
 }
 .main-footer .widget .title {
   color: #FFFFFF;
-  border-bottom: 1px solid #bed5da;
 }
 .main-footer .widget > div > div:last-child {
   border-bottom: 0 !important;
@@ -1098,20 +1118,22 @@ pre {
   border-radius: 2px;
   color: #FFFFFF;
   background: #3d888c;
+  padding: 7px 15px;
 }
 .main-footer .widget .tag-cloud a:hover {
-  border: 1px solid #26a2c7;
-  color: white;
+  border: 1px solid #FFFFFF;
+  background: #FFFFFF;
+  color: #26a2c7;
 }
 .main-footer .widget .recent-post .single-author {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 200;
   font-family: 'mr-eaves-xl-modern', serif;
   transition: all 0.2s ease;
 }
 .main-footer .widget .recent-post .recent-single-post,
 .main-footer .widget .recent-post .single-author {
-  border-bottom: 1px dashed #a9a9a9;
+  border-bottom: 0;
 }
 .main-footer .widget .recent-post .recent-single-post .post-title,
 .main-footer .widget .recent-post .single-author .post-title,
@@ -1127,7 +1149,8 @@ pre {
 }
 .main-footer .widget .recent-post .recent-single-post .date,
 .main-footer .widget .recent-post .single-author .date {
-  color: #505050;
+  color: #FFFFFF;
+  opacity: 0.5;
 }
 .copyright {
   background: #111111;
@@ -1760,6 +1783,7 @@ p {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: 300px;
 }
 .repos > img {
   position: absolute;
@@ -1794,7 +1818,8 @@ p {
   transition: all 0.2s ease-out;
   position: relative;
   overflow: hidden;
-  height: 150px;
+  min-height: 150px;
+  opacity: 0;
 }
 .repos .repo img {
   border: 0;
@@ -1870,6 +1895,7 @@ p {
 .feed {
   background-color: none;
   position: relative;
+  min-height: 300px;
 }
 .feed img {
   max-width: 95%;
@@ -1887,6 +1913,7 @@ p {
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  opacity: 0;
 }
 .feed .activity:hover {
   cursor: pointer;
@@ -2020,9 +2047,14 @@ p {
   width: fit-content;
   width: 50%;
 }
+@media (max-width: 800) {
+  .feed .activity .body li {
+    width: 100%;
+  }
+}
 .feed .activity .body .date {
   margin-right: 10px;
-  color: #5d5d5d;
+  color: #FFFFFF;
 }
 .feed .activity .time {
   position: absolute;

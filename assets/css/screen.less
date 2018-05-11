@@ -248,12 +248,30 @@ pre {
 		margin: auto;
 	}
 
+	.post-permalink {
+		text-align: left;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+
+		.btn {
+			font-size: 18px;
+			font-weight: 100;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			@media(max-width: 600px) {
+				font-size: 14px;
+				font-weight: 100;
+				padding: 8px 20px;
+			}
+		}
+	}
+
 	.post-meta,
 	.post-title,
 	h5 {
 		text-align: left;
-
-		@media(max-width: 800px){
+		@media(max-width: 800px) {
 			display: none;
 		}
 	}
@@ -313,7 +331,7 @@ pre {
 ====================================================*/
 .main-header {
 	text-align: center;
-	padding: 60px 0;
+	padding: 150px 0;
 	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
 	background-size: cover;
 	@media(max-width: 800px) {
@@ -508,6 +526,7 @@ pre {
 		line-height: 54px;
 		transform: rotate(45deg);
 		z-index: 20;
+		display: none;
 
 		i {
 			.transform(rotate(-45deg));
@@ -566,7 +585,6 @@ pre {
 				display: inline-block;
 			}
 
-			.date {
 				i {
 					margin-right: 10px;
 					@media(max-width: 600px) {
@@ -648,24 +666,7 @@ pre {
 		}
 	}
 
-	& > .post-permalink {
-		text-align: left;
-		display: flex;
-		justify-content: space-between;
-		padding: 10px;
 
-		.btn {
-			font-size: 18px;
-			font-weight: 100;
-			text-transform: uppercase;
-			padding: 10px 20px;
-			@media(max-width: 600px) {
-				font-size: 14px;
-				font-weight: 100;
-				padding: 8px 20px;
-			}
-		}
-	}
 
 	.tag-list {
 		color: @text-color-heading;
@@ -767,7 +768,7 @@ pre {
 			opacity: 0.6;
 		}
 	}
-}
+
 
 .post-page {
 	.post-head {
@@ -969,11 +970,31 @@ pre {
 	.text {
 		font-size: 16px;
 	}
+
+	.post-title {
+		color: #627e90 !important;
+		font-family: 'proxima-nova', serif;
+		transition: all 0.2s ease;
+		font-size: 16px !important;
+		font-weight: 500 !important;
+	}
 }
 
 .main-footer {
 	.widget {
 		padding: 0 30px;
+		@media(max-width: 800px) {
+			margin-bottom: 50px;
+
+			h4 {
+				font-size: 2.5em;
+			}
+
+			.recent-single-post,
+			.single-author {
+				width: 80%;
+			}
+		}
 	}
 }
 
@@ -984,7 +1005,7 @@ pre {
 	.title {
 		margin-top: 0;
 		padding-bottom: 7px;
-		border-bottom: 1px solid @border-color;
+		border-bottom: 1px solid @theme-color;
 		margin-bottom: 21px;
 		position: relative;
 
@@ -1023,7 +1044,7 @@ pre {
 					height: 15px;
 					width: 21px;
 					font-size: 13px;
-					transition: all .2s ease-out
+					transition: all 0.2s ease-out;
 				}
 			}
 
@@ -1041,9 +1062,9 @@ pre {
 
 	.tag-cloud {
 		a {
-			border: 1px solid #764ea2;
+			border: 1px solid #d4dbe0;
 			padding: 3px 11px;
-			color: #764ea2;
+			color: #627e90;
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
@@ -1071,8 +1092,8 @@ pre {
 				color: @white;
 				font-family: 'proxima-nova', serif;
 				.transition(all 0.2s ease);
-				font-size: 16px;
-				font-weight: 600;
+				font-size: 18px;
+				font-weight: 100;
 
 				&:hover {
 					color: @theme-color;
@@ -1083,6 +1104,7 @@ pre {
 			.date {
 				color: @text-color-light;
 				font-size: 12px;
+				opacity: 0.8;
 
 				i {
 					margin-right: 5px;
@@ -1173,11 +1195,11 @@ pre {
 ====================================================*/
 .main-footer {
 	background: linear-gradient(to bottom, rgba(0,255,196,0.2), rgba(41,58,63,0));
-padding: 35px 0 0;
-color: white;
-margin-top: 30px;
-background-color: #3c465a;
-box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
+	padding: 35px 0;
+	color: white;
+	margin-top: 30px;
+	background-color: #3c465a;
+	box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 	@media(max-width: 600px) {
 		margin-top: 10px;
 	}
@@ -1185,7 +1207,6 @@ box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 	.widget {
 		.title {
 			color: @white;
-			border-bottom: 1px solid #bed5da;
 		}
 
 		& > div > div:last-child {
@@ -1195,14 +1216,15 @@ box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 		.tag-cloud {
 			a {
 				border: 0;
-border-radius: 2px;
-color: #FFFFFF;
-background: #3d888c;
-
+				border-radius: 2px;
+				color: #FFFFFF;
+				background: #3d888c;
+				padding: 7px 15px;
 
 				&:hover {
-					border: 1px solid @theme-color;
-					color: white;
+					border: 1px solid @white;
+					background: @white;
+					color: @theme-color;
 				}
 			}
 		}
@@ -1210,14 +1232,14 @@ background: #3d888c;
 		.recent-post {
 			.single-author {
 				font-size: 18px;
-				font-weight: 500;
+				font-weight: 200;
 				font-family: 'mr-eaves-xl-modern', serif;
 				transition: all 0.2s ease;
 			}
 
 			.recent-single-post,
 			.single-author {
-				border-bottom: 1px dashed #a9a9a9;
+				border-bottom: 0;
 
 				.post-title,
 				.single-author-name {
@@ -1229,7 +1251,8 @@ background: #3d888c;
 				}
 
 				.date {
-					color: @text-color;
+					color: @white;
+					opacity: 0.5;
 				}
 			}
 		}
@@ -1549,7 +1572,6 @@ p {
 
 			p {
 				color: @text-color;
-				color: #505050;
 				font-weight: 100;
 				line-height: 1.3;
 				margin-bottom: 10px;
@@ -1919,12 +1941,13 @@ p {
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: wrap;
+	min-height: 300px;
 
 	& > img {
 		position: absolute;
-z-index: 40;
-right: 0;
-left: 0;
+		z-index: 40;
+		right: 0;
+		left: 0;
 	}
 
 	a {
@@ -1957,7 +1980,8 @@ left: 0;
 		transition: all 0.2s ease-out;
 		position: relative;
 		overflow: hidden;
-		height: 150px;
+		min-height: 150px;
+		opacity: 0;
 
 		img {
 			border: 0;
@@ -2048,15 +2072,17 @@ left: 0;
 .feed {
 	background-color: none;
 	position: relative;
+	min-height: 300px;
 
-	img { max-width: 95%;
-    border: 0 !important;
-    margin: auto;
-    display: block;
-    position: absolute;
-    z-index: 40;
-    right: 0;
-    left: 0;
+	img {
+		max-width: 95%;
+		border: 0 !important;
+		margin: auto;
+		display: block;
+		position: absolute;
+		z-index: 40;
+		right: 0;
+		left: 0;
 	}
 
 	.activity {
@@ -2065,6 +2091,7 @@ left: 0;
 		position: relative;
 		overflow: hidden;
 		text-decoration: none;
+		opacity: 0;
 
 		&:hover {
 			cursor: pointer;
@@ -2200,11 +2227,14 @@ left: 0;
 				color: #909090;
 				width: fit-content;
 				width: 50%;
+				@media(max-width: 800) {
+					width: 100%;
+				}
 			}
 
 			.date {
 				margin-right: 10px;
-				color: #5d5d5d;
+				color: @white;
 			}
 		}
 
