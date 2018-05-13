@@ -338,8 +338,32 @@ pre {
 	padding: 150px 0;
 	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
 	background-size: cover;
+	    position: relative;
 	@media(max-width: 800px) {
 		padding: 50px 0;
+	}
+
+	.mobile-branding {
+		display: none;
+		float:left;
+		margin: auto 0;
+		height:40px;
+		width:40px;
+		position: absolute;
+    top: 0;
+    bottom: 0;
+		left:10px;
+
+		img {
+			width:inherit;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		@media(max-width: 800px) {
+			display: block;
+		}
 	}
 
 	.branding {
@@ -1893,6 +1917,8 @@ p {
 
 				.post-head {
 					padding: 30px 0;
+					width: 90%;
+    			margin: 0 auto;
 
 					.post-title {
 						font-weight: 700;
@@ -1974,13 +2000,15 @@ p {
 	@media(max-width: 800px){
 		.main-header{
 			padding: 1px;
+			background: @theme-color;
 
 			.branding {
 				display: none;
 			}
 
 			.menu {
-				margin: 20px auto 20px;
+				margin: 20px 0 20px auto;
+				max-width: 200px;
 			}
 
 

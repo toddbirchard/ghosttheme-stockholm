@@ -326,10 +326,33 @@ pre {
   padding: 150px 0;
   background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
   background-size: cover;
+  position: relative;
 }
 @media (max-width: 800px) {
   .main-header {
     padding: 50px 0;
+  }
+}
+.main-header .mobile-branding {
+  display: none;
+  float: left;
+  margin: auto 0;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+}
+.main-header .mobile-branding img {
+  width: inherit;
+}
+.main-header .mobile-branding img:hover {
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .main-header .mobile-branding {
+    display: block;
   }
 }
 .main-header .branding {
@@ -1747,6 +1770,8 @@ p {
   .container .main-content .page-template .post-head,
   .container .main-content .post-page .post-head {
     padding: 30px 0;
+    width: 90%;
+    margin: 0 auto;
   }
   .container .main-content .page-template .post-head .post-title,
   .container .main-content .post-page .post-head .post-title {
@@ -1823,6 +1848,7 @@ p {
   .page-template .main-header,
   .post-template .main-header {
     padding: 1px;
+    background: #26a2c7;
   }
   .page-template .main-header .branding,
   .post-template .main-header .branding {
@@ -1830,7 +1856,8 @@ p {
   }
   .page-template .main-header .menu,
   .post-template .main-header .menu {
-    margin: 20px auto 20px;
+    margin: 20px 0 20px auto;
+    max-width: 200px;
   }
 }
 @media (max-width: 800px) {
