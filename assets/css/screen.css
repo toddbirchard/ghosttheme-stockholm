@@ -336,6 +336,8 @@ pre {
   font-size: 3.5em;
   font-family: 'mr-eaves-xl-modern', serif;
   color: #141624;
+  z-index: 5;
+  position: relative;
 }
 .main-header .branding:hover {
   text-decoration: none;
@@ -428,7 +430,6 @@ pre {
 }
 .main-navigation .menu li.nav-current a {
   color: #2a3371;
-  font-weight: 100;
   font-size: 17px;
 }
 .main-navigation .menu li ul {
@@ -988,7 +989,7 @@ pre {
 }
 .widget .social li a i {
   line-height: 1;
-  color: #cacaca;
+  color: #bbbbbb;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -1008,7 +1009,7 @@ pre {
   color: #FFFFFF;
 }
 .widget .tag-cloud a {
-  border: 1px solid #d4dbe0;
+  border: 1px solid #e6e6e6;
   padding: 3px 11px;
   color: #627e90;
   line-height: 1.5em;
@@ -1273,8 +1274,7 @@ p {
   background: #FFFFFF;
   width: 49%;
   margin: 0 0 10px;
-  border: 1px solid #efefef;
-  padding: 10px;
+  border: 1px solid #dadada;
   transition: all 0.2s ease-out;
 }
 @media (max-width: 1040px) {
@@ -1303,12 +1303,15 @@ p {
   color: #505050;
   line-height: 1;
   font-size: 1.5em;
+  padding: 0 10px;
   color: #141624;
+  margin: 10px 0;
 }
 .tag-container .tag-wrapper a .meta-info {
   font-weight: 600;
   color: #505050;
   font-size: 12px;
+  padding: 10px;
 }
 .tag-container .tag-wrapper a .meta-info span {
   font-size: 1.1em;
@@ -1317,8 +1320,9 @@ p {
   margin-right: 7px;
 }
 .tag-container .tag-wrapper a .description {
-  margin-top: 7px;
+  margin: 7px 0;
   line-height: 1;
+  padding: 0 10px;
 }
 .tag-container .tag-wrapper a p {
   font-size: 14px;
@@ -1791,14 +1795,42 @@ p {
   .pagination {
     margin: 20px 0;
   }
-  .page-template .main-navigation,
-  .post-template .main-navigation {
-    margin-bottom: 0;
-  }
 }
 @media (max-width: 800px) and (max-width: 800px) {
   .main-header {
     padding: 60px 0;
+  }
+}
+.page-template .main-header,
+.post-template .main-header {
+  margin-bottom: 0;
+  padding: 70px 0;
+}
+.page-template .main-header .branding img,
+.post-template .main-header .branding img {
+  width: 300px;
+}
+.page-template .main-header .menu,
+.post-template .main-header .menu {
+  margin: 30px 30px 0 auto;
+  max-width: 250px;
+}
+.page-template .main-header .menu a,
+.post-template .main-header .menu a {
+  font-size: 16px;
+}
+@media (max-width: 800px) {
+  .page-template .main-header,
+  .post-template .main-header {
+    padding: 1px;
+  }
+  .page-template .main-header .branding,
+  .post-template .main-header .branding {
+    display: none;
+  }
+  .page-template .main-header .menu,
+  .post-template .main-header .menu {
+    margin: 20px auto 20px;
   }
 }
 @media (max-width: 800px) {

@@ -346,6 +346,8 @@ pre {
 		font-size: 3.5em;
 		font-family: 'mr-eaves-xl-modern', serif;
 		color: @text-color-heading;
+		z-index: 5;
+    position: relative;
 
 		&:hover {
 			text-decoration: none;
@@ -441,7 +443,6 @@ pre {
 
 				a {
 					color: #2a3371;
-					font-weight: 100;
 					font-size: 17px;
 				}
 			}
@@ -1068,12 +1069,13 @@ pre {
 			a {
 				i {
 					line-height: 1;
-					color: #cacaca;
+					color: #bbbbbb;
 					.transition(all 0.2s);
 					height: 15px;
 					width: 21px;
 					font-size: 13px;
 					transition: all 0.2s ease-out;
+
 				}
 			}
 
@@ -1091,7 +1093,7 @@ pre {
 
 	.tag-cloud {
 		a {
-			border: 1px solid #d4dbe0;
+			border: 1px solid #e6e6e6;
 			padding: 3px 11px;
 			color: #627e90;
 			line-height: 1.5em;
@@ -1374,8 +1376,7 @@ p {
 		background: @white;
 		width: 49%;
 		margin: 0 0 10px;
-		border: 1px solid @bg-color;
-		padding: 10px;
+		border: 1px solid #dadada;
 		transition: all 0.2s ease-out;
 		@media(max-width: 1040px) {
 			width: 100%;
@@ -1406,13 +1407,17 @@ p {
 				color: @text-color;
 				line-height: 1;
 				font-size: 1.5em;
+				padding: 0 10px;
 				color: @text-color-heading;
+				margin: 10px 0;
+
 			}
 
 			.meta-info {
 				font-weight: 600;
 				color: @text-color;
 				font-size: 12px;
+				padding: 10px;
 
 				span {
 					font-size: 1.1em;
@@ -1424,8 +1429,9 @@ p {
 			}
 
 			.description {
-				margin-top: 7px;
+				margin: 7px 0;
 				line-height: 1;
+				padding: 0 10px;
 			}
 
 			p {
@@ -1531,6 +1537,9 @@ p {
 		font-size: 24px;
 		font-weight: 600;
 	}
+
+
+
 
 	.post-title {
 		font-weight: 700;
@@ -1940,10 +1949,41 @@ p {
 		margin: 20px 0;
 	}
 
-	.page-template,
-	.post-template {
-		.main-navigation {
-			margin-bottom: 0;
+
+}
+
+.page-template,
+.post-template {
+	.main-header {
+		margin-bottom: 0;
+		padding: 70px 0;
+
+		.branding img {
+			width: 300px;
+		}
+
+		.menu {
+			margin: 30px 30px 0 auto;
+			    max-width: 250px;
+
+			a{
+				font-size: 16px
+			}
+		}
+	}
+	@media(max-width: 800px){
+		.main-header{
+			padding: 1px;
+
+			.branding {
+				display: none;
+			}
+
+			.menu {
+				margin: 20px auto 20px;
+			}
+
+
 		}
 	}
 }
