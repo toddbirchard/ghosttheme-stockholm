@@ -240,8 +240,9 @@ pre {
 }
 
 .post-preview {
-	padding:0 !important;
+	padding: 0 !important;
 	border: 1px solid #dadada;
+
 	.featured-media {
 		box-sizing: border-box;
 		overflow: visible;
@@ -249,7 +250,7 @@ pre {
 	}
 
 	.content {
-		padding:10px;
+		padding: 10px;
 	}
 
 	.post-permalink {
@@ -338,32 +339,13 @@ pre {
 	padding: 150px 0;
 	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
 	background-size: cover;
-	    position: relative;
+	position: relative;
 	@media(max-width: 800px) {
 		padding: 50px 0;
 	}
 
 	.mobile-branding {
 		display: none;
-		float:left;
-		margin: auto 0;
-		height:40px;
-		width:40px;
-		position: absolute;
-    top: 0;
-    bottom: 0;
-		left:10px;
-
-		img {
-			width:inherit;
-			&:hover{
-				cursor: pointer;
-			}
-		}
-
-		@media(max-width: 800px) {
-			display: block;
-		}
 	}
 
 	.branding {
@@ -371,7 +353,7 @@ pre {
 		font-family: 'mr-eaves-xl-modern', serif;
 		color: @text-color-heading;
 		z-index: 5;
-    position: relative;
+		position: relative;
 
 		&:hover {
 			text-decoration: none;
@@ -406,17 +388,17 @@ pre {
 
 .main-navigation {
 	text-align: center;
-    /* margin-top: 35px; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgb(8, 115, 195) 100%);
-    height: 150px;
-		@media(max-width: 800px) {
-			height:auto;
-			background: none;
-		}
+	/* margin-top: 35px; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgb(8, 115, 195) 100%);
+	height: 150px;
+	@media(max-width: 800px) {
+		height: auto;
+		background: none;
+	}
 
 	.menu {
 		padding: 0;
@@ -466,7 +448,7 @@ pre {
 				}
 
 				a {
-					color: #2a3371;
+					color: #40cebb;
 					font-size: 17px;
 				}
 			}
@@ -535,7 +517,8 @@ pre {
 	}
 
 	&.page {
-		.post-head {
+		.page-head {
+			padding: 0 10px;
 			@media(max-width: 800px) {
 				margin: 0;
 
@@ -1099,7 +1082,6 @@ pre {
 					width: 21px;
 					font-size: 13px;
 					transition: all 0.2s ease-out;
-
 				}
 			}
 
@@ -1434,7 +1416,6 @@ p {
 				padding: 0 10px;
 				color: @text-color-heading;
 				margin: 10px 0;
-
 			}
 
 			.meta-info {
@@ -1551,7 +1532,7 @@ p {
 	}
 
 	.post-content {
-		margin: 0 10px 20px;
+		margin: 20px 10px 20px;
 	}
 }
 
@@ -1562,8 +1543,28 @@ p {
 		font-weight: 600;
 	}
 
+	.mobile-branding {
+		float: left;
+		margin: auto 0;
+		height: 40px;
+		width: 40px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 10px;
+		z-index: 11;
 
+		img {
+			width: inherit;
 
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		@media(max-width: 800px) {
+			display: block;
+		}
+	}
 
 	.post-title {
 		font-weight: 700;
@@ -1918,7 +1919,7 @@ p {
 				.post-head {
 					padding: 30px 0;
 					width: 90%;
-    			margin: 0 auto;
+					margin: 0 auto;
 
 					.post-title {
 						font-weight: 700;
@@ -1974,8 +1975,6 @@ p {
 	.pagination {
 		margin: 20px 0;
 	}
-
-
 }
 
 .page-template,
@@ -1990,17 +1989,22 @@ p {
 
 		.menu {
 			margin: 30px 30px 0 auto;
-			    max-width: 250px;
+			max-width: 250px;
 
-			a{
-				font-size: 16px
+			a {
+				font-size: 16px;
 			}
 		}
 	}
-	@media(max-width: 800px){
-		.main-header{
+	@media(max-width: 800px) {
+		.main-header {
 			padding: 1px;
-			background: @theme-color;
+			background: none;
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			width: 100%;
+			background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgb(7, 38, 61) 95%);
 
 			.branding {
 				display: none;
@@ -2010,8 +2014,6 @@ p {
 				margin: 20px 0 20px auto;
 				max-width: 200px;
 			}
-
-
 		}
 	}
 }

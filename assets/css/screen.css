@@ -335,25 +335,6 @@ pre {
 }
 .main-header .mobile-branding {
   display: none;
-  float: left;
-  margin: auto 0;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 10px;
-}
-.main-header .mobile-branding img {
-  width: inherit;
-}
-.main-header .mobile-branding img:hover {
-  cursor: pointer;
-}
-@media (max-width: 800px) {
-  .main-header .mobile-branding {
-    display: block;
-  }
 }
 .main-header .branding {
   font-size: 3.5em;
@@ -452,7 +433,7 @@ pre {
   }
 }
 .main-navigation .menu li.nav-current a {
-  color: #2a3371;
+  color: #40cebb;
   font-size: 17px;
 }
 .main-navigation .menu li ul {
@@ -521,11 +502,14 @@ pre {
 .post.featured {
   order: 0;
 }
+.post.page .page-head {
+  padding: 0 10px;
+}
 @media (max-width: 800px) {
-  .post.page .post-head {
+  .post.page .page-head {
     margin: 0;
   }
-  .post.page .post-head h1 {
+  .post.page .page-head h1 {
     font-size: 3em;
     font-weight: 700;
   }
@@ -1419,12 +1403,38 @@ p {
   margin: 0 auto !important;
 }
 .page .post-content {
-  margin: 0 10px 20px;
+  margin: 20px 10px 20px;
 }
 .page-templatep,
 .post-templatep {
   font-size: 24px;
   font-weight: 600;
+}
+.page-template .mobile-branding,
+.post-template .mobile-branding {
+  float: left;
+  margin: auto 0;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  z-index: 11;
+}
+.page-template .mobile-branding img,
+.post-template .mobile-branding img {
+  width: inherit;
+}
+.page-template .mobile-branding img:hover,
+.post-template .mobile-branding img:hover {
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .page-template .mobile-branding,
+  .post-template .mobile-branding {
+    display: block;
+  }
 }
 .page-template .post-title,
 .post-template .post-title {
@@ -1848,7 +1858,12 @@ p {
   .page-template .main-header,
   .post-template .main-header {
     padding: 1px;
-    background: #26a2c7;
+    background: none;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #07263d 95%);
   }
   .page-template .main-header .branding,
   .post-template .main-header .branding {
