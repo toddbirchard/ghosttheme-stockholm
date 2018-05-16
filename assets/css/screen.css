@@ -131,8 +131,8 @@ a:focus {
   transition: all 0.2s ease-in-out;
 }
 .btn-default:hover {
-  border: 1px solid #003e7c;
-  background: #003e7c;
+  border: 1px solid #40cebb;
+  background: #40cebb;
   color: #FFFFFF;
 }
 .btn-default:focus {
@@ -266,14 +266,12 @@ pre {
   }
 }
 .post-preview .post-meta,
-.post-preview .post-title,
-.post-preview h5 {
+.post-preview .post-title {
   text-align: left;
 }
 @media (max-width: 800px) {
   .post-preview .post-meta,
-  .post-preview .post-title,
-  .post-preview h5 {
+  .post-preview .post-title {
     display: none;
   }
 }
@@ -790,7 +788,7 @@ pre {
   padding: 6px 13px;
 }
 .pagination a:hover {
-  background: #003e7c;
+  background: #40cebb;
   text-decoration: none;
   color: #FFFFFF;
 }
@@ -1343,10 +1341,10 @@ p {
 }
 .tag-container .tag-wrapper a:hover {
   text-decoration: none;
-  background: #003e7c;
+  background: #40cebb;
 }
 .tag-container .tag-wrapper a:hover .bg-wrapper .overlay {
-  background: #003e7c !important;
+  background: #40cebb !important;
 }
 /*====================================================
 	media query
