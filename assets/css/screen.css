@@ -763,6 +763,9 @@ pre {
 .post-page .post-head {
   border-bottom: 1px solid #eaeaea;
 }
+.post-page .post-content {
+  margin: 20px 10px;
+}
 @media (max-width: 800px) {
   .post-page .featured-media {
     width: 110%;
