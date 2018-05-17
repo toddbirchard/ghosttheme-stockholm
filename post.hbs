@@ -27,17 +27,13 @@
 
 					<div class="post-content">
 						{{content}}
-						<footer class="post-footer clearfix">
-							<div class="pull-left tag-list">
-								<span class="author">{{#author}}<a href="{{url}}"><i class="fas fa-user"></i></a><span>{{name}}</span>{{/author}}</span>
-								<span class="date"><i class="fas fa-calendar"></i><span>{{date format="MMMM DD"}}</span></span>
-								<span>
-								{{#if tags}}<i class="fas fa-tags"></i>
-								{{tags separator=","}}
+						<footer class="post-footer">
+							<div class="tag-list">
+								{{#if tags}}
+									<div class="tag-cloud">{{tags separator=""}}</div>
 								{{/if}}
-							</span>
 							</div>
-							<div class="pull-right share">
+							<div class="share">
 								{{! insert share_links partials}}
 								{{> share_links}}
 							</div>

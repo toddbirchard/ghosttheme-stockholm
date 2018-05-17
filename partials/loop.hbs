@@ -29,15 +29,22 @@
 				{{content words="80"}}
 			</div>
 			<div class="post-permalink">
-				<div class="tag-list">
-					<span class="author"><i class="fas fa-user"></i><span>{{#author}}{{slug}}{{/author}}</span></span>
-					<span class="tags">
-			{{#if tags}}
-				<i class="fas fa-tags"></i>
-			{{tags limit="1"}}
-			{{/if}}
-			</span>
-					<span class="date"><i class="fas fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+				<div class="meta">
+					{{#author}}
+						{{#unless profile_image}}
+							<a href="{{url}}" class="meta-item"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+						{{/unless}}
+						{{#if profile_image}}
+							<a href="{{url}}" class="meta-item"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+						{{/if}}
+					{{/author}}
+					<span class="tags meta-item">
+						{{#if tags}}
+							<i class="fas fa-tags"></i>
+						{{tags limit="1"}}
+						{{/if}}
+					</span>
+					<span class="date meta-item"><i class="fas fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
 					</span>
 				</div>
 				<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>

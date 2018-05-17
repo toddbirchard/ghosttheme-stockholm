@@ -133,7 +133,7 @@ a:focus {
 	&:hover {
 		border: 1px solid @hover-color;
 		background: @hover-color;
-		color: @white;
+		color: @theme-color;
 	}
 
 	&:focus {
@@ -249,6 +249,52 @@ pre {
 		margin: auto;
 	}
 
+	.meta {
+		display: flex;
+		width: 55%;
+		justify-content: space-between;
+		max-width: 350px;
+
+		.meta-item {
+			display: block;
+			margin: auto 0;
+
+			* {
+				color: #8095A1;
+			}
+
+			i {
+				margin-right: 5px;
+			}
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+					color: @hover-color;
+
+					& > span {
+						color: @hover-color !important;
+					}
+				}
+			}
+
+			.avi {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				margin-right: 10px;
+				border-radius: 50%;
+			}
+		}
+		@media(max-width: 800px) {
+			.date,
+			.tags {
+				display: none;
+			}
+		}
+	}
+
 	.content {
 		padding: 10px;
 	}
@@ -272,15 +318,9 @@ pre {
 		}
 	}
 
-	.post-meta,
-	.post-title {
-		text-align: left;
-		@media(max-width: 800px) {
-			display: none;
-		}
-	}
-
 	.post-content {
+		line-height: 1.5;
+		margin: 0 10px 10px;
 		@media(max-width: 600px) {
 			font-size: 14px;
 		}
@@ -291,10 +331,6 @@ pre {
 		@media(max-width: 600px) {
 			font-size: 2em !important;
 		}
-	}
-
-	.post-content {
-		line-height: 1.5;
 	}
 
 	&.tag-hash-upcoming,
@@ -322,14 +358,65 @@ pre {
 		}
 
 		.post-head {
-			border-bottom: 0;
 			padding: 20px 10px !important;
-			@media(max-width: 800px) {
-				padding: 20px 10px !important;
-			}
 		}
 	}
 }
+
+/*====================================================
+	post footer
+====================================================*/
+
+.post-footer {
+	padding: 10px 0;
+	.tag-cloud {
+		float:left;
+	a {
+			border: 1px solid #e6e6e6;
+	    padding: 3px 11px;
+	    color: #627e90;
+	    line-height: 1.5em;
+	    display: inline-block;
+	    border-radius: 2px;
+			.transition(all 0.2s ease);
+			margin-right: 10px;
+
+			&:hover {
+				color: @white;
+				background: @theme-color;
+				border: 1px solid @theme-color;
+				text-decoration: none;
+			}
+		}
+	}
+	.share {
+		float:right;
+	}
+
+	@media(max-width: 600px){
+		.share,
+		.tag-cloud {
+			float:none;
+	    margin: 20px auto;
+
+			* {
+				margin:0 !important;
+			}
+	}
+	.tag-cloud {
+		display: flex;
+		justify-content: space-between;
+		width: 90%;
+	}
+
+	.share {
+		width:50%;
+	}
+}
+}
+
+
+
 /*====================================================
 	header
 ====================================================*/
@@ -697,60 +784,9 @@ pre {
 
 	a {
 		color: @secondary-color;
-	}
-}
-
-.tag-list {
-	color: @text-color-heading;
-	font-size: 15px;
-	display: inline;
-	height: fit-content;
-	margin: auto 0;
-
-	i {
-		color: #575863;
-		margin-right: 7px;
-		opacity: 0.6;
-		font-size: 12px;
-	}
-
-	a:nth-of-type(1) {
-		margin-left: 0;
-	}
-
-	a {
-		margin-left: 5px;
-	}
-
-	& > span {
-		margin-right: 20px;
-	}
-
-	.author {
-		text-transform: capitalize;
-	}
-
-	.author,
-	.date {
-		span {
-			opacity: 0.6;
-			font-weight: 600;
-		}
-		@media(max-width: 600px) {
-			display: none;
-		}
-	}
-
-	a {
-		color: @text-color-heading;
-		font-size: 15px;
-		opacity: 0.6;
-		transition: 0.2s all ease-out;
-		font-weight: 600;
 
 		&:hover {
-			color: @theme-color;
-			opacity: 1;
+			color: @hover-color;
 		}
 	}
 }
@@ -761,16 +797,15 @@ pre {
 		margin: 0;
 		display: flex;
 		justify-content: space-between;
-		width: 145px;
 
 		li {
 			list-style: none;
 			display: inline-block;
-			line-height: 28px;
 			border: 1px solid @border-color;
-			font-size: 15px;
-			padding: 0 7px;
+			padding: 4px 9px 2px;
 			transition: 0.2s all ease-out;
+			border-radius: 2px;
+			margin-left: 10px;
 
 			&:hover {
 				color: @white;
@@ -785,19 +820,9 @@ pre {
 			a {
 				color: #c4c4c4;
 				text-align: center;
+				font-size: 18px;
 			}
 		}
-	}
-}
-
-.pull-left {
-	color: #575863;
-
-	a,
-	i,
-	span {
-		color: #575863;
-		opacity: 0.6;
 	}
 }
 
@@ -805,8 +830,9 @@ pre {
 	.post-head {
 		border-bottom: 1px solid #eaeaea;
 	}
+
 	.post-content {
-    margin: 20px 10px;
+		margin: 20px 10px;
 	}
 	@media(max-width: 800px) {
 		.featured-media {
@@ -1022,6 +1048,14 @@ pre {
 .main-footer {
 	.widget {
 		padding: 0 30px;
+
+		.avi {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			margin-right: 10px;
+			border-radius: 50%;
+		}
 		@media(max-width: 800px) {
 			margin-bottom: 50px;
 
@@ -1534,7 +1568,7 @@ p {
 	}
 
 	.post-content {
-		margin: 20px 10px 20px;
+		margin: 20px 10px;
 	}
 }
 
@@ -1834,6 +1868,15 @@ p {
 @media (min-width: 992px) {
 	.col-md-pull-8 {
 		right: 0;
+	}
+}
+@media (min-width: 992px) {
+	.main-content {
+		width: 71%;
+	}
+
+	.sidebar {
+		width: 28%;
 	}
 }
 /*====================================================
