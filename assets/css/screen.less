@@ -108,7 +108,7 @@ a {
 	outline: none;
 
 	&:hover {
-		color: @theme-color;
+		color: @hover-color;
 		cursor: pointer;
 	}
 }
@@ -133,7 +133,6 @@ a:focus {
 	&:hover {
 		border: 1px solid @hover-color;
 		background: @hover-color;
-		color: @theme-color;
 	}
 
 	&:focus {
@@ -362,22 +361,22 @@ pre {
 		}
 	}
 }
-
 /*====================================================
 	post footer
 ====================================================*/
-
 .post-footer {
 	padding: 10px 0;
+
 	.tag-cloud {
-		float:left;
-	a {
+		float: left;
+
+		a {
 			border: 1px solid #e6e6e6;
-	    padding: 3px 11px;
-	    color: #627e90;
-	    line-height: 1.5em;
-	    display: inline-block;
-	    border-radius: 2px;
+			padding: 3px 11px;
+			color: #627e90;
+			line-height: 1.5em;
+			display: inline-block;
+			border-radius: 2px;
 			.transition(all 0.2s ease);
 			margin-right: 10px;
 
@@ -389,34 +388,38 @@ pre {
 			}
 		}
 	}
-	.share {
-		float:right;
-	}
 
-	@media(max-width: 600px){
+	.share {
+		float: right;
+	}
+	@media(max-width: 600px) {
+		border-top: 1px solid #f0f1f4;
+
 		.share,
 		.tag-cloud {
-			float:none;
-	    margin: 20px auto;
+			float: none;
+			margin: 20px auto;
 
 			* {
-				margin:0 !important;
+				margin: 0 !important;
 			}
-	}
-	.tag-cloud {
-		display: flex;
-		justify-content: space-between;
-		width: 90%;
-	}
+		}
 
-	.share {
-		width:50%;
+		.tag-cloud {
+			display: flex;
+			justify-content: center;
+			width: 90%;
+
+			a {
+				margin: 0 10px !important;
+			}
+		}
+
+		.share {
+			width: 200px;
+		}
 	}
 }
-}
-
-
-
 /*====================================================
 	header
 ====================================================*/
@@ -493,7 +496,7 @@ pre {
 		justify-content: space-between;
 		max-width: 309px;
 		@media(max-width: 800px) {
-			margin: 30px auto 20px;
+			margin: 30px auto 0;
 			max-width: 235px;
 			opacity: 0.9;
 		}
@@ -665,9 +668,9 @@ pre {
 			margin: 0;
 			line-height: 1;
 			overflow: hidden;
-			text-overflow: ellipsis;
+			/*text-overflow: ellipsis;*/
 			display: block;
-			white-space: nowrap;
+			/*white-space: nowrap;*/
 			@media(max-width: 600px) {
 				white-space: normal;
 				text-align: center;
@@ -981,8 +984,7 @@ pre {
 		margin-bottom: 7px;
 
 		span {
-			margin-right: 30px;
-			white-space: nowrap;
+			margin-right: 10px;
 			display: block;
 
 			i {
@@ -1018,6 +1020,18 @@ pre {
 		padding: 20px 25px;
 	}
 
+	.recent-single-post {
+		.post-title {
+			color: #427382;
+			line-height: 1;
+			font-size: 15px;
+
+			&:hover {
+				color: @hover-color;
+			}
+		}
+	}
+
 	.upcoming {
 		p {
 			margin-bottom: 0;
@@ -1030,17 +1044,24 @@ pre {
 
 	.text {
 		font-size: 16px;
+
+		p {
+			margin: 0;
+		}
 	}
 
 	.post-title {
-		color: #627e90 !important;
-		font-family: 'proxima-nova', serif;
-		transition: all 0.2s ease;
-		font-size: 17px !important;
-		font-weight: 500 !important;
+		a {
+			color: #627e90;
+			font-family: 'proxima-nova', serif;
+			transition: all 0.2s ease;
+			font-size: 15px !important;
+			font-weight: 500 !important;
 
-		&:hover {
-			cursor: pointer;
+			&:hover {
+				cursor: pointer;
+				color: @hover-color;
+			}
 		}
 	}
 }
@@ -1048,6 +1069,11 @@ pre {
 .main-footer {
 	.widget {
 		padding: 0 30px;
+
+		.post-title,
+		.single-author-name {
+			color: @white;
+		}
 
 		.avi {
 			width: 30px;
@@ -1162,10 +1188,8 @@ pre {
 
 			.post-title,
 			.single-author-name {
-				color: @white;
 				font-family: 'proxima-nova', serif;
 				.transition(all 0.2s ease);
-				font-size: 18px;
 				font-weight: 100;
 
 				&:hover {
@@ -1317,6 +1341,7 @@ pre {
 				.post-title,
 				.single-author-name {
 					color: @white;
+					font-size: 18px;
 
 					&:hover {
 						color: @theme-color;
@@ -1577,6 +1602,21 @@ p {
 	&p {
 		font-size: 24px;
 		font-weight: 600;
+	}
+
+	.post-meta {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 10px 0;
+		color: #9ea1ab;
+		font-size: 14px;
+
+		i {
+			margin-right: 5px;
+		}
+		@media(max-width: 800px) {
+			margin: 10px 30px 0;
+		}
 	}
 
 	.mobile-branding {
@@ -2057,7 +2097,7 @@ p {
 
 			.menu {
 				margin: 20px 0 20px auto;
-				max-width: 200px;
+				max-width: 250px;
 			}
 		}
 	}
