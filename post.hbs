@@ -24,6 +24,7 @@
 					<div class="post-meta">
 						<div class="date"><i class="fas fa-calendar"></i><span>{{date format="MMMM DD"}}</span></div>
 						<div class="author"><i class="fas fa-user"></i><span>{{#author}}{{name}}{{/author}}</span></div>
+						<div class="tags">{{#if tags}}<i class="fas fa-tags"></i><span>{{tags limit="1"}}{{/if}}</span></div>
 					</div>
 
 					<div class="post-content">
