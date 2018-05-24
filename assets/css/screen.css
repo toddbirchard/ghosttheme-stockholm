@@ -258,6 +258,9 @@ pre {
   margin-right: 5px;
   font-size: 12px;
 }
+.post-preview p {
+  line-height: 1.5;
+}
 .post-preview .meta {
   display: flex;
   width: 55%;
@@ -269,7 +272,7 @@ pre {
   margin: auto 0;
 }
 .post-preview .meta .meta-item * {
-  color: #8095A1;
+  color: #6e7980;
 }
 .post-preview .meta .meta-item a {
   text-decoration: none;
@@ -374,6 +377,15 @@ pre {
   border: 1px solid #26a2c7;
   text-decoration: none;
 }
+@media (max-width: 800px) {
+  .post-footer .share-icons {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+  }
+}
 .post-footer .share {
   float: right;
 }
@@ -388,7 +400,7 @@ pre {
   }
   .post-footer .share *,
   .post-footer .tag-cloud * {
-    margin: 0 !important;
+    margin: 0 auto !important;
   }
   .post-footer .tag-cloud {
     display: flex;
@@ -399,7 +411,7 @@ pre {
     margin: 0 10px !important;
   }
   .post-footer .share {
-    width: 200px;
+    width: 100%;
   }
 }
 /*====================================================
@@ -732,13 +744,15 @@ pre {
   overflow-x: hidden;
   clear: both;
 }
+.post-content ol,
 .post-content ul {
   margin-left: 15px;
   padding-left: 15px;
   margin-bottom: 20px;
 }
-.post-content li {
-  margin: 10px;
+.post-content ol li,
+.post-content ul li {
+  padding: 20px;
 }
 .post-content .fluid-width-video-wrapper {
   margin: 0;
@@ -797,11 +811,11 @@ pre {
 }
 .post-page .post-head {
   border-bottom: 1px solid #eaeaea;
-  margin: 0 30px;
+  margin: 0 40px;
   padding: 30px 0;
 }
 .post-page .post-content {
-  margin: 20px 30px;
+  margin: 20px 40px;
 }
 @media (max-width: 800px) {
   .post-page .featured-media {
@@ -1273,7 +1287,7 @@ pre {
   font-size: 12px;
 }
 p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #back-to-top {
   position: fixed;
@@ -1464,7 +1478,7 @@ p {
 }
 .page-template .post-meta,
 .post-template .post-meta {
-  margin: 10px 30px 0;
+  margin: 10px 40px 0;
   color: #9ea1ab;
   font-size: 14px;
 }
@@ -1484,7 +1498,9 @@ p {
 @media (max-width: 800px) {
   .page-template .post-meta,
   .post-template .post-meta {
-    margin: 10px 30px 0;
+    margin: 10px 40px 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .page-template .mobile-branding,
@@ -1542,7 +1558,7 @@ p {
 .post-template .link-preview .preview-image {
   display: inline-block;
   width: 40%;
-  float: none;
+  min-width: 200px;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -1649,8 +1665,22 @@ p {
 .author-template .post .kg-card-markdown iframe,
 .home-template .post .kg-card-markdown iframe,
 .paged .post .kg-card-markdown iframe,
-.tag-template .post .kg-card-markdown iframe {
+.tag-template .post .kg-card-markdown iframe,
+.author-template .post .kg-card-markdown strong,
+.home-template .post .kg-card-markdown strong,
+.paged .post .kg-card-markdown strong,
+.tag-template .post .kg-card-markdown strong {
   display: inline !important;
+}
+.author-template .post .kg-card-markdown li,
+.home-template .post .kg-card-markdown li,
+.paged .post .kg-card-markdown li,
+.tag-template .post .kg-card-markdown li,
+.author-template .post .kg-card-markdown ol,
+.home-template .post .kg-card-markdown ol,
+.paged .post .kg-card-markdown ol,
+.tag-template .post .kg-card-markdown ol {
+  margin: 20px;
 }
 .author-template .post .kg-card-markdown p:nth-of-type(1),
 .home-template .post .kg-card-markdown p:nth-of-type(1),
@@ -1870,8 +1900,7 @@ p {
   .container .main-content .page-template .post-head,
   .container .main-content .post-page .post-head {
     padding: 30px 0;
-    width: 90%;
-    margin: 0 auto;
+    margin: 0 40px;
   }
   .container .main-content .page-template .post-head .post-title,
   .container .main-content .post-page .post-head .post-title {
@@ -1893,11 +1922,18 @@ p {
   .container .main-content .post-page .post-meta {
     text-align: center;
   }
-  .container .main-content .page-template .post-content,
-  .container .main-content .post-page .post-content {
+  .container .main-content .page-template .kg-card-markdown,
+  .container .main-content .post-page .kg-card-markdown {
     margin: 0 !important;
     overflow-x: hidden;
-    padding: 20px 6%;
+    padding: 20px 0;
+  }
+  .container .main-content .page-template .kg-card-markdown ul,
+  .container .main-content .post-page .kg-card-markdown ul,
+  .container .main-content .page-template .kg-card-markdown ol,
+  .container .main-content .post-page .kg-card-markdown ol {
+    margin: 0;
+    padding: 0 30px !important;
   }
   .container .main-content .about-author {
     background: #f0f1f4;
@@ -1985,7 +2021,7 @@ p {
   overflow: hidden;
 }
 .repos .loader {
-  width: 50%;
+  width: 60%;
   border: 0 !important;
   margin: auto;
   display: block;

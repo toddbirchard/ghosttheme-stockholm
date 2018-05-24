@@ -5,7 +5,7 @@
 		{{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
 			{{#foreach posts}}
 				<div class="recent-single-post">
-					<a href="{{url}}" class="post-title">{{title}}</a><div class="date">{{date format="MMMM DD"}}</div>
+					<a href="{{url}}" class="post-title">{{title}}</a>{{!--<div class="date">{{date format="MMMM DD"}}</div>--}}
 				</div>
 				{{/foreach}}
 			{{/get}}

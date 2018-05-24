@@ -267,6 +267,10 @@ pre {
 		font-size: 12px;
 	}
 
+	p {
+		line-height: 1.5;
+	}
+
 	.meta {
 		display: flex;
 		width: 55%;
@@ -278,7 +282,7 @@ pre {
 			margin: auto 0;
 
 			* {
-				color: #8095A1;
+				color: #6e7980;
 			}
 
 			a {
@@ -396,6 +400,16 @@ pre {
 		}
 	}
 
+	.share-icons {
+		@media(max-width: 800px){
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			margin: auto;
+		}
+	}
+
 	.share {
 		float: right;
 	}
@@ -408,7 +422,7 @@ pre {
 			margin: 20px auto;
 
 			* {
-				margin: 0 !important;
+				margin: 0 auto !important;
 			}
 		}
 
@@ -423,7 +437,7 @@ pre {
 		}
 
 		.share {
-			width: 200px;
+			width: 100%;
 		}
 	}
 }
@@ -762,14 +776,15 @@ pre {
 	overflow-x: hidden;
 	clear: both;
 
+	ol,
 	ul {
 		margin-left: 15px;
 		padding-left: 15px;
 		margin-bottom: 20px;
-	}
 
-	li {
-		margin: 10px;
+		li {
+			padding:20px;
+		}
 	}
 
 	.fluid-width-video-wrapper {
@@ -842,12 +857,12 @@ pre {
 .post-page {
 	.post-head {
 		border-bottom: 1px solid #eaeaea;
-		margin: 0 30px;
+		margin: 0 40px;
 		padding: 30px 0;
 	}
 
 	.post-content {
-		margin: 20px 30px;
+		margin: 20px 40px 0;
 	}
 	@media(max-width: 800px) {
 		.featured-media {
@@ -1135,11 +1150,7 @@ pre {
 		overflow: hidden;
 	}
 
-	.social {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: space-between;
+
 
 		li {
 			display: inline-block;
@@ -1386,7 +1397,7 @@ pre {
 }
 
 p {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 #back-to-top {
@@ -1609,7 +1620,7 @@ p {
 .page-template,
 .post-template {
 	.post-meta {
-		margin: 10px 30px 0;
+		margin: 10px 40px 0;
 		color: #9ea1ab;
 		font-size: 14px;
 
@@ -1622,11 +1633,17 @@ p {
 			color: #9ea1ab;
 		}
 
+
+
+
+
 		i {
 			margin-right: 5px;
 		}
 		@media(max-width: 800px) {
-			margin: 10px 30px 0;
+			margin: 10px 40px 0;
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 
@@ -1677,7 +1694,7 @@ p {
 		.preview-image {
 			display: inline-block;
 			width: 40%;
-			float: none;
+			min-width: 200px;
 			background-size: cover;
 			background-position-x: center;
 			background-position-y: center;
@@ -1742,6 +1759,8 @@ p {
 			}
 		}
 
+
+
 		&:hover {
 			background-color: @theme-color;
 			color: #fff;
@@ -1773,9 +1792,16 @@ p {
 
 	.kg-card-markdown {
 		a,
-		iframe {
+		iframe,
+		strong {
 			display: inline !important;
 		}
+
+		li,
+		ol {
+			margin:20px;
+		}
+
 
 		p:nth-of-type(1) {
 			display: block;
@@ -2017,8 +2043,7 @@ p {
 
 				.post-head {
 					padding: 30px 0;
-					width: 90%;
-					margin: 0 auto;
+					margin: 0 40px;
 
 					.post-title {
 						font-weight: 700;
@@ -2040,10 +2065,18 @@ p {
 					text-align: center;
 				}
 
-				.post-content {
+				.kg-card-markdown {
 					margin: 0 !important;
 					overflow-x: hidden;
-					padding: 20px 6%;
+					padding: 20px 0;
+
+					ul,
+					ol {
+						margin:0;
+						padding: 0 30px !important;
+
+
+					}
 				}
 			}
 
@@ -2137,7 +2170,7 @@ p {
 	overflow: hidden;
 
 	.loader {
-		width: 50%;
+		width: 60%;
 		border: 0 !important;
 		margin: auto;
 		display: block;
