@@ -1,0 +1,69 @@
+/*====================================================
+	footer
+====================================================*/
+.main-footer {
+	background: linear-gradient(to bottom, rgba(0,255,196,0.2), rgba(41,58,63,0));
+	padding: 35px 0;
+	color: white;
+	margin-top: 30px;
+	background-color: #3c465a;
+	box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
+	@media(max-width: 600px) {
+		margin-top: 10px;
+	}
+
+	.widget {
+		.title {
+			color: @white;
+		}
+
+		& > div > div:last-child {
+			border-bottom: 0 !important;
+		}
+
+		.tag-cloud {
+			a {
+				border: 0;
+				border-radius: 2px;
+				color: #FFFFFF;
+				background: #3d888c;
+				padding: 7px 15px;
+
+				&:hover {
+					border: 1px solid @white;
+					background: @white;
+					color: @theme-color;
+				}
+			}
+		}
+
+		.recent-post {
+			.single-author {
+				font-size: 18px;
+				font-weight: 200;
+				font-family: 'mr-eaves-xl-modern', serif;
+				transition: all 0.2s ease;
+			}
+
+			.recent-single-post,
+			.single-author {
+				border-bottom: 0;
+
+				.post-title,
+				.single-author-name {
+					color: @white;
+					font-size: 18px;
+
+					&:hover {
+						color: @theme-color;
+					}
+				}
+
+				.date {
+					color: @white;
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,157 @@
+/*====================================================
+	header
+====================================================*/
+.main-header {
+	text-align: center;
+	padding: 150px 0;
+	background: url("https://hackers.nyc3.digitaloceanspaces.com/head.jpg") center center;
+	background-size: cover;
+	position: relative;
+	@media(max-width: 800px) {
+		padding: 50px 0;
+	}
+
+	.mobile-branding {
+		display: none;
+	}
+
+	.branding {
+		font-size: 3.5em;
+		font-family: 'mr-eaves-xl-modern', serif;
+		color: @text-color-heading;
+		z-index: 5;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		img {
+			width: 400px;
+			max-width: 80%;
+			@media(max-width: 800px) {
+				width: 250px;
+			}
+		}
+	}
+}
+
+.navbar-header {
+	text-align: center;
+	font-size: 20px;
+	padding: 14px;
+
+	li {
+		height: 56px;
+		line-height: 56px;
+		font-size: 2em;
+		cursor: pointer;
+	}
+
+	.nav-toggle-button:hover {
+		cursor: pointer;
+	}
+}
+
+.main-navigation {
+	text-align: center;
+	/* margin-top: 35px; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgb(8, 115, 195) 100%);
+	height: 150px;
+	@media(max-width: 800px) {
+		height: auto;
+		background: none;
+	}
+
+	.menu {
+		padding: 0;
+		margin: 30px 40px 0 auto;
+		display: flex;
+		justify-content: space-between;
+		max-width: 309px;
+		@media(max-width: 800px) {
+			margin: 30px auto 0;
+			max-width: 235px;
+			opacity: 0.9;
+		}
+
+		li {
+			list-style: none;
+			display: inline-block;
+			// margin: 0 14px;
+			position: relative;
+
+			a {
+				color: white;
+				// text-transform: capitalize;
+				line-height: 1;
+				display: block;
+				padding: 0;
+				font-family: 'mr-eaves-xl-modern', serif;
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 600;
+				transition: all 0.2s ease-out;
+				@media(max-width: 600px) {
+					padding: 0;
+					font-weight: 500;
+				}
+			}
+
+			&:hover > a {
+				text-shadow: 0 0 20px #b41eda;
+				text-decoration: none;
+				cursor: pointer;
+				color: white;
+			}
+
+			&.nav-current {
+				@media(max-width: 600px) {
+					padding: 0;
+				}
+
+				a {
+					color: #40cebb;
+					font-size: 17px;
+				}
+			}
+
+			ul {
+				visibility: hidden;
+				background: @white;
+				text-align: left;
+				margin-bottom: 20px;
+				position: absolute;
+				left: 0;
+				top: 120%;
+				width: 200px;
+				z-index: 999;
+				.opacity(0);
+				.transition(all 0.2s ease);
+
+				li {
+					a {
+						line-height: 2.5em;
+						color: @text-color;
+					}
+				}
+
+				&:hover > a {
+					cursor: pointer;
+				}
+			}
+
+			&:hover {
+				ul {
+					visibility: visible;
+					.opacity(1);
+					top: 100%;
+				}
+			}
+		}
+	}
+}
