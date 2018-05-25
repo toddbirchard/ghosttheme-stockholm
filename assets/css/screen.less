@@ -261,7 +261,25 @@
 	.widget {
 		background: @white;
 		padding: 20px 25px;
+
+		.social {
+				padding:0;
+				display: flex;
+				justify-content: space-between;
+		}
+
+		.newsletter {
+			button {
+				border: 1px solid #26a2c7;
+		    background: #26a2c7;
+		    color: #FFFFFF;
+				width: 100%;
+			}
+		}
+
 	}
+
+
 
 	.recent-single-post {
 		.post-title {
@@ -417,7 +435,7 @@
 			}
 		}
 	}
-}
+
 
 	.recent-post {
 		.recent-single-post,
@@ -457,7 +475,14 @@
 	}
 
 	.newsletter {
-		.input-group {
+		width:100%;
+		.form-group,
+		.subscribe-email {
+			width:100%;
+		}
+
+		.input-group,
+		.form-group  {
 			margin-bottom: 20px;
 			display: block;
 
@@ -475,15 +500,8 @@
 			font-size: 16px;
 		}
 	}
-
-	.ad {
-		text-align: center;
-
-		img {
-			max-width: 100%;
-		}
-	}
 }
+
 
 /*====================================================
 	Tag page & author page cover
