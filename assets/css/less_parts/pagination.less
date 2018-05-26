@@ -1,0 +1,33 @@
+/*====================================================
+	pagination
+====================================================*/
+.pagination {
+	margin: 0 0 35px;
+	text-align: center;
+	display: block;
+	order: 20;
+
+	a {
+		text-align: center;
+		display: inline-block;
+		color: #FFFFFF;
+		background: @theme-color;
+		border-radius: 0;
+		padding: 6px 13px;
+
+		&:hover {
+			background: @hover-color;
+			text-decoration: none;
+			color: @white;
+		}
+	}
+
+	.page-number {
+		background: @theme-color;
+		color: @white;
+		margin: 0 5px;
+		display: inline-block;
+		line-height: 1;
+		padding: 12px 14px;
+	}
+}

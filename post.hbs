@@ -6,7 +6,6 @@
 		<div class="row">
 			{{#post}}
 			{{! insert sidebar partial}}
-			{{> sidebar}}
 			<!-- start main post area -->
 			<div class="col-md-8 main-content">
 				<!-- start post -->
@@ -14,6 +13,7 @@
 				<article class="{{post_class}} post-page">
 					{{#if feature_image}}
 					<div class="featured-media">
+						{{> postheader}}
 						<img src="{{feature_image}}" alt="{{{title}}}">
 					</div>
 					{{/if}}

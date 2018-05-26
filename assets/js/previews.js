@@ -27,7 +27,6 @@ $(document).ready(function() {
           console.log(result);
           var link_image = verifyImage(result.image);
           var verify_title = verifyTitle(result);
-          //console.log("result.image = " + typeof(result.image));
           $(element).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url + '</span></div></div></a>');
           $(element).remove();
         }

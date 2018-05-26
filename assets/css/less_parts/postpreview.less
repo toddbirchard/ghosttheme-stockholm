@@ -121,4 +121,57 @@
 			display: block !important;
 		}
 	}
+	.kg-card-markdown * {
+		display: none;
+	}
+
+	.twitter-tweet {
+		display: none !important;
+	}
+
+	.kg-card-markdown {
+		a,
+		iframe,
+		strong {
+			display: inline !important;
+		}
+
+		li,
+		ol {
+			margin:20px;
+		}
+
+
+		p:nth-of-type(1) {
+			display: block;
+			margin: 0;
+		}
+
+		a {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 1.5;
+		}
+	}
+
+	&.tag-video {
+		padding: 0;
+
+		.post-head {
+			display: none;
+		}
+
+		.fluid-width-video-wrapper {
+			display: block !important;
+		}
+
+		.post-permalink {
+			display: none;
+		}
+
+		.post-content {
+			margin: 0;
+		}
+	}
 }
