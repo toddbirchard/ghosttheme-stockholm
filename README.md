@@ -6,7 +6,6 @@
 ![gulp less badge](https://img.shields.io/badge/less_js-3.0.2-green.svg?longCache=true&style=flat-square)
 ![express-hbs badge](https://img.shields.io/badge/express_hbs-1.0.4-green.svg?longCache=true&style=flat-square)
 ![jquery badge](https://img.shields.io/badge/jquery-3.3.1-green.svg?longCache=true&style=flat-square)
-![bootstrap badge](https://img.shields.io/badge/bootstrap-4.1.0-green.svg?longCache=true&style=flat-square)
 
 
 Theme for the [Ghost](https://github.com/TryGhost) blogging platform. Live preview can be seen here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
@@ -15,21 +14,40 @@ Theme for the [Ghost](https://github.com/TryGhost) blogging platform. Live previ
 
 ## About
 
-_Stockholm_ is a minimalist theme for emphasizing content. Easily configurable settings allow for customization such as contexual widget and sidebar preferences.
+_Stockholm_ is a minimalist theme for emphasizing content. Easily configurable settings allow for customization such as contexual widgets, sidebar preferences, and unique page templates. Please note that this project is in *active development*.
 
-### Features
+## Features
+
+Some features are rolled out in public beta before official release. Features released in beta are usable to the end user, although less intuitive to configure until official completion.
+
+### Live Features
+
 - Responsive layout
 - Editorial 'series' page
 - Authors page
 - Contextual sidebars
 - Embedded link previews
-- Mailchimp integration
+- Github repository widget
 - Contributors widget
 - Recent articles widget
 - Twitter widget
 - Featured posts
 - Link posts
 - Video posts
+
+### In Development
+
+- JIRA Kanban plugin
+- Sendgrid email signups
+- Github activity feed
+
+### Planned Features
+
+- Open user registration
+- 'Series' widgets support
+- Activity feed page template
+- Guest posts
+- Gulp
 
 # Installation
 
@@ -39,7 +57,9 @@ For information on installing the Ghost platform, please reference the [Ghost CL
 
 ```
 git clone https://github.com/toddbirchard/ghosttheme-stockholm.git
+
 cd ghosttheme-stockholm
+
 npm install
 ```
 
@@ -64,21 +84,7 @@ Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is 
 - Express
 - Handlebars
 - LESS
-- Bootstrap
 - JQuery
-
-# Roadmap
-
-Theme is actively under development. Stable for use in production sans optimizations. 
-
-### Planned Features
-
-- Open user registration
-- Additional series support
-- Activity feed template
-- Guest posts
-- Pull issues (JIRA API)
-- Pull projects (Github API)
 
 ### Maintenance
 
