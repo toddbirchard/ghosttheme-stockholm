@@ -19,6 +19,7 @@
 @import "less_parts/widgets.less";
 @import "less_parts/pagination.less";
 @import "less_parts/page.less";
+@import "less_parts/postheader.less";
 
 
 /*====================================================
@@ -26,7 +27,7 @@
 ====================================================*/
 @font-face {
 	font-family: 'akzidenz';
-	src: url("https://hackers.nyc3.digitaloceanspaces.com/AkzidenzGrotesk-BQ-Light-Regular.otf") format("opentype");
+	src: url("../fonts/akzidenzgrotesk-bq-light-regular.otf") format("opentype");
 }
 
 
@@ -40,21 +41,7 @@
 	about author and comment and next-prev link
 ====================================================*/
 .col-md-8 {
-	.about-author {
-		border: 0;
-		border-radius: 0;
 
-		.meta-info {
-			span {
-				display: inline-block;
-			}
-		}
-
-		.bio {
-			margin: 0;
-			float: none;
-		}
-	}
 }
 
 .page-about {
@@ -90,72 +77,6 @@
 		}
 	}
 }
-
-.about-author {
-	background: @white;
-	padding: 40px;
-	margin: 10px 0;
-
-	.avatar {
-		width: 80px;
-		height: 80px;
-		margin-right: 15px;
-		margin-bottom: 15px;
-		.border-radius(50%);
-		@media(max-width: 600px) {
-			width: 70px;
-			height: 70px;
-		}
-	}
-
-	.bio {
-		display: block;
-		float: left;
-		line-height: 1.5;
-		margin-top: 10px;
-		font-weight: 100;
-	}
-
-	.details {
-		margin-left: 95px;
-		@media(max-width: 600px) {
-			margin-left: 90px;
-		}
-	}
-
-	.author {
-		font-size: 1.3em;
-		margin-bottom: 5px;
-
-		a {
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
-
-	.meta-info {
-		font-size: 12px;
-		line-height: 1.5;
-		font-weight: 100;
-		color: @text-color-light;
-		margin-bottom: 7px;
-
-		span {
-			margin-right: 10px;
-			display: block;
-
-			i {
-				margin-right: 7px;
-			}
-			@media(max-width: 600px) {
-				display: block !important;
-				width: 100%;
-			}
-		}
-	}
-}
-
 
 .prev-next-wrap {
 	text-align: center;
@@ -277,7 +198,6 @@ p {
 	margin: 0 10px;
 
 	.about-author {
-		width: 49%;
 		background-color: rgba(0, 6, 11, 0.78);
 		background-blend-mode: multiply;
 		color: @text-color;

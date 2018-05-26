@@ -5,7 +5,28 @@
 	.widget {
 		background: @white;
 		padding: 20px 25px;
+/*
+		.about-author {
+			border: 0;
+			border-radius: 0;
+			display: flex;
+	    justify-content: space-between;
 
+			.meta-info {
+				span {
+					display: inline-block;
+					font-size: 15px;
+					margin-right: 30px;
+				}
+			}
+
+			.bio {
+				margin: 0;
+				float: none;
+				font-size: 16px;
+			}
+		}
+*/
 		.social {
 				padding:0;
 				display: flex;
@@ -18,6 +39,11 @@
 		    background: #26a2c7;
 		    color: #FFFFFF;
 				width: 100%;
+				padding: 10px 20px;
+
+				&:hover {
+					background: @hover-color;
+				}
 			}
 
 			.gh-subscribe-rss {
@@ -36,6 +62,7 @@
 			color: #427382;
 			line-height: 1;
 			font-size: 15px;
+			margin:0;
 
 			&:hover {
 				color: @hover-color;
@@ -54,10 +81,10 @@
 	}
 
 	.text {
-		font-size: 16px;
-
 		p {
 			margin: 0;
+			font-size: 14px;
+			line-height: 1.5;
 		}
 	}
 
@@ -204,9 +231,14 @@
 
 	.newsletter {
 		width:100%;
-		.form-group,
-		.subscribe-email {
+		.form-group{
 			width:100%;
+		}
+
+		.subscribe-email {
+			padding: 10px 5%;
+			width: 90%;
+			font-size: 12px;
 		}
 
 		.input-group,
@@ -220,6 +252,10 @@
 
 			.btn {
 				width: 100%;
+				span {
+					font-size: 12px;
+    			text-transform: capitalize;
+				}
 			}
 		}
 

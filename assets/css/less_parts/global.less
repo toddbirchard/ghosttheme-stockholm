@@ -10,6 +10,7 @@ html {
 	background: @bg-color;
 	position: relative;
 	font-weight: 200;
+	margin:0;
 }
 
 body {
@@ -23,6 +24,17 @@ article {
 	p {
 		line-height: 2em;
 	}
+}
+
+section > .container {
+	max-width: 1200px;
+	margin:auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
 }
 
 .h1,
@@ -73,6 +85,7 @@ h3 {
 	font-size: 1.5em;
 	text-transform: uppercase;
 	font-weight: 300;
+	margin-top: 40px;
 }
 
 .h4,
@@ -92,7 +105,6 @@ h5 {
 	@media(max-width: 600px) {
 		font-size: 1.3em;
 		margin-top: 5px;
-		text-align: center;
 	}
 }
 
@@ -101,9 +113,11 @@ h6 {
 	font-size: 0.75em;
 }
 
-a {
+a,
+button {
 	color: @theme-color;
 	outline: none;
+	text-decoration:none;
 
 	&:hover {
 		color: @hover-color;
@@ -187,4 +201,10 @@ pre {
 	color: @white;
 	background: @theme-color;
 	text-shadow: none;
+}
+
+.postlist {
+  @media (max-width: 1000px){
+     padding: 0 20px;
+  }
 }

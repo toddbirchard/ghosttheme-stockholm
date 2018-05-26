@@ -1,0 +1,80 @@
+.page-about {
+
+  .author-container {
+        justify-content: space-around;
+  }
+
+  .author-specs{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fluid-width-video-wrapper {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    padding: 0;
+}
+
+  .about-author {
+    background: @white;
+    padding: 30px;
+    margin: 10px 0;
+    width: 40%;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      margin-right: 30px;
+      .border-radius(50%);
+      @media(max-width: 600px) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .details {
+      width: 60%;
+    }
+
+    .bio {
+      display: block;
+      width:100%;
+      line-height: 1.5;
+      margin: 10px 0 0 0;
+      font-weight: 100;
+    }
+
+    .author {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .meta-info {
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: 100;
+      color: @text-color-light;
+      margin-bottom: 7px;
+
+      span {
+        margin-right: 10px;
+        display: block;
+
+        i {
+          margin-right: 7px;
+        }
+        @media(max-width: 600px) {
+          display: block !important;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -15,17 +15,17 @@
 							<div class="featured-media" style="background-image: url({{feature_image}});">
 							</div>
 						{{/if}}
-						<div class="page-head">
-							<h1 class="post-title">{{{title}}}</h1>
-						</div>
+						<h1 class="post-title">{{{title}}}</h1>
 						<div class="post-content">
 							{{content}}
 						</div>
 						<div class="author-container">
  						{{#get "users" limit="all" include="count.posts" order="count.posts desc" }}
  							{{#foreach users}}
- 								<div class="about-author clearfix" style="background: url({{cover_img}}) center center; background-color: rgba(255, 255, 255, 0.9); background-blend-mode: overlay;">
- 									{{#if profile_image}}
+
+								<div class="about-author" style="background: url({{cover_img}}) center center; background-color: rgba(255, 255, 255, 0.9); background-blend-mode: overlay;">
+									<div class="author-specs">
+									{{#if profile_image}}
  										<a href="{{url}}"><img src="{{profile_image}}" alt="Author image" class="avatar pull-left"></a>
  									{{else}}
  										<a href="{{url}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar pull-left"></a>
@@ -49,14 +49,16 @@
  												<span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
  											{{/if}}
  										</div>
-
+										</div>
  									</div>
+
  									{{#if bio}}
  										<p class="bio">
  											{{{bio}}}
  										</p>
  									{{/if}}
  								</div>
+
  							{{/foreach}}
  						{{/get}}
  					</div>
