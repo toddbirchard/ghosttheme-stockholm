@@ -1,17 +1,17 @@
 <!-- start header -->
 <header class="main-header videoHeader">
-
+	<nav class="main-navigation">
+		<div id="main-menu">
+			{{! insert navigation partial}}
+			{{navigation}}
+				{{! insert manuala navigation if there is no navigation}}
+				{{#unless @blog.navigation}}
+					{{> manual-navigation}}
+				{{/unless}}
+		</div>
+	</nav>
 	<div class="headerContainer">
-		<nav class="main-navigation">
-			<div id="main-menu">
-				{{! insert navigation partial}}
-				{{navigation}}
-					{{! insert manuala navigation if there is no navigation}}
-					{{#unless @blog.navigation}}
-						{{> manual-navigation}}
-					{{/unless}}
-			</div>
-		</nav>
+
 		<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
 	<!-- start logo -->
 	{{#if @blog.logo}}

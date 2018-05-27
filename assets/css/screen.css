@@ -453,7 +453,7 @@ pre {
 }
 @media (max-width: 800px) {
   .videoHeader .main-navigation .menu {
-    width: 219px;
+    width: 190px;
     position: absolute;
     margin: auto;
     left: 0;
@@ -642,7 +642,7 @@ pre {
   }
 }
 .post-template .post-content {
-  margin: 20px 100px 0;
+  margin: 20px 100px 40px;
 }
 @media (max-width: 600px) {
   .post-template .post-content {
@@ -717,7 +717,7 @@ pre {
 .post-template .about-author {
   background: #FFFFFF;
   padding: 40px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 .post-template .about-author .avatar {
   width: 100px;
@@ -1036,6 +1036,51 @@ pre {
   .post-footer .share {
     width: 100%;
   }
+}
+.container .postlist {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100% + 100px);
+}
+.container .main-content {
+  padding-right: 0;
+  padding-left: 0;
+}
+.container .main-content .page-template,
+.container .main-content .post-page {
+  margin-bottom: 0;
+}
+.container .main-content .page-template .post-head .post-title,
+.container .main-content .post-page .post-head .post-title {
+  font-weight: 700;
+}
+.container .main-content .page-template .post-head .author,
+.container .main-content .post-page .post-head .author,
+.container .main-content .page-template .post-head .date,
+.container .main-content .post-page .post-head .date {
+  margin: 10px auto 0;
+  display: block;
+}
+.container .main-content .page-template .kg-card-markdown,
+.container .main-content .post-page .kg-card-markdown {
+  margin: 0 !important;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+.container .main-content .about-author {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.container .main-content .prev-next-wrap {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 24px;
+  background: #f0f1f4;
+}
+.container .main-content .prev-next-wrap .btn {
+  max-width: 49%;
 }
 .post-preview {
   padding: 0 !important;
@@ -1406,48 +1451,6 @@ pre {
   }
   .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li a {
     font-weight: 100;
-  }
-  .container .postlist {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: calc(100% + 100px);
-  }
-  .container .main-content {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .container .main-content .page-template,
-  .container .main-content .post-page {
-    margin-bottom: 0;
-  }
-  .container .main-content .page-template .post-head .post-title,
-  .container .main-content .post-page .post-head .post-title {
-    font-weight: 700;
-  }
-  .container .main-content .page-template .post-head .author,
-  .container .main-content .post-page .post-head .author,
-  .container .main-content .page-template .post-head .date,
-  .container .main-content .post-page .post-head .date {
-    margin: 10px auto 0;
-    display: block;
-  }
-  .container .main-content .page-template .kg-card-markdown,
-  .container .main-content .post-page .kg-card-markdown {
-    margin: 0 !important;
-    overflow-x: hidden;
-    padding: 20px 0;
-  }
-  .container .main-content .about-author {
-    background: #f0f1f4;
-    padding: 20px;
-    margin-bottom: 0;
-  }
-  .container .main-content .prev-next-wrap {
-    margin: 0;
-    text-align: center;
-    padding: 0 20px 24px;
-    background: #f0f1f4;
   }
   .main-footer {
     margin: 0;
@@ -2216,7 +2219,11 @@ pre {
 }
 .post-header .post-navigation .menu li a {
   color: white;
-  font-size: 20px;
+  font-family: 'mr-eaves-xl-modern', serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
 }
 .post-header .post-navigation .menu li a:hover {
   color: #40cebb;

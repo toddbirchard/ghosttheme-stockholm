@@ -113,7 +113,7 @@
 	}
 
 	.post-content {
-		margin: 20px 100px 0;
+		margin: 20px 100px 40px;
 
 		@media(max-width: 600px) {
 			margin: 20px 40px 0;
@@ -191,7 +191,7 @@
 	.about-author {
 		background: @white;
 		padding: 40px;
-		margin: 10px 0;
+		margin: 20px 0;
 
 		.avatar {
 			width: 100px;
@@ -531,6 +531,62 @@ margin-left: 10px;
 
 		.share {
 			width: 100%;
+		}
+	}
+}
+
+.container {
+	.postlist {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: calc(100% + 100px);
+	}
+
+	.main-content {
+		padding-right: 0;
+		padding-left: 0;
+
+		.page-template,
+		.post-page {
+			margin-bottom: 0;
+
+			.post-head {
+
+
+				.post-title {
+					font-weight: 700;
+				}
+
+				.author,
+				.date {
+					margin: 10px auto 0;
+					display: block;
+				}
+			}
+
+			.kg-card-markdown {
+				margin: 0 !important;
+				overflow-x: hidden;
+				padding: 20px 0;
+			}
+		}
+
+		.about-author {
+			background: #fff;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.prev-next-wrap {
+			margin: 0;
+			text-align: center;
+			padding: 0 20px 24px;
+			background: #f0f1f4;
+
+			.btn {
+				max-width: 49%;
+			}
 		}
 	}
 }
