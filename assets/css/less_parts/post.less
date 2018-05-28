@@ -9,15 +9,30 @@
 		@media(max-width: 800px) {
 			margin: 0;
 			width: 100% !important;
-
-			.postlist {
-				margin: 20px;
-			}
 		}
 	}
 
+	h2 {
+		font-size: 2.5em;
+
+		@media(max-width: 800px) {
+			font-size: 2em;
+		}
+	}
+
+	h3 {
+		font-size: 2em;
+
+		@media(max-width: 800px) {
+			font-size: 1.6em;
+		}
+	}
+
+
+
 	.sidebar,
-	.main-header {
+	.main-header,
+	.main-navigation {
 		display: none;
 	}
 
@@ -38,6 +53,8 @@
 		width: 100%;
 		max-width: 1100px;
 		padding:0 !important;
+
+
 
 		table {
 			margin-bottom: 10px;
@@ -114,6 +131,10 @@
 
 	.post-content {
 		margin: 20px 100px 40px;
+
+		img {
+			border: 1px solid #eaeaea;
+		}
 
 		@media(max-width: 600px) {
 			margin: 20px 40px 0;
@@ -192,6 +213,11 @@
 		background: @white;
 		padding: 40px;
 		margin: 20px 0;
+
+		@media(max-width: 600px) {
+			padding: 20px;
+			margin: 20px;
+		}
 
 		.avatar {
 			width: 100px;
@@ -385,10 +411,6 @@
 	.featured-media {
 		img {
 			width: 100%;
-
-		@media(max-width: 800px) {
-				margin-top: -7%;
-			}
 		}
 
 		a {
@@ -408,7 +430,11 @@
 		h3,
 		h2 {
 			margin-top: 40px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
+		}
+
+		h2 {
+			color:#30b1a7;
 		}
 
 		ol,
@@ -441,8 +467,12 @@
 		img {
 			max-width: 95%;
 			border: 1px solid #eaeaea;
-			margin: auto;
+			margin: 30px auto;
 			display: block;
+
+			@media(max-width: 600px) {
+				width: 100%;
+			}
 		}
 
 		a {
@@ -463,12 +493,12 @@
 	.share-icons {
 		li {
 			list-style: none;
-display: inline-block;
-border: 1px solid #ebebeb;
-padding: 4px 9px 2px;
-transition: 0.2s all ease-out;
-border-radius: 2px;
-margin-left: 10px;
+			display: inline-block;
+			border: 1px solid #ebebeb;
+			padding: 5px 10px !important;
+			transition: 0.2s all ease-out;
+			border-radius: 2px;
+			margin-left: 10px;
 		}
 	}
 
@@ -540,7 +570,6 @@ margin-left: 10px;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		height: calc(100% + 100px);
 	}
 
 	.main-content {
@@ -552,8 +581,6 @@ margin-left: 10px;
 			margin-bottom: 0;
 
 			.post-head {
-
-
 				.post-title {
 					font-weight: 700;
 				}
@@ -563,12 +590,14 @@ margin-left: 10px;
 					margin: 10px auto 0;
 					display: block;
 				}
+
+
 			}
 
 			.kg-card-markdown {
 				margin: 0 !important;
 				overflow-x: hidden;
-				padding: 20px 0;
+				padding: 0;
 			}
 		}
 
@@ -580,12 +609,12 @@ margin-left: 10px;
 
 		.prev-next-wrap {
 			margin: 0;
-			text-align: center;
-			padding: 0 20px 24px;
-			background: #f0f1f4;
+			padding: 0 20px 30px;
+	    background: #f0f1f4;
+	    min-height: 70px;
 
 			.btn {
-				max-width: 49%;
+				max-width: 39%;
 			}
 		}
 	}

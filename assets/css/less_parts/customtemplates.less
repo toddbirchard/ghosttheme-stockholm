@@ -1,8 +1,36 @@
 .page-about {
 
+  h1 {
+    @media(max-width: 600px) {
+      font-size: 2.5em;
+    }
+  }
+
+  .fluid-width-video-wrapper {
+        height: 50px;
+
+        @media(max-width: 600px) {
+          margin: 0 40px 30px;
+        }
+  }
+
+  .about-author {
+    background: @white;
+    padding: 30px;
+    margin: 10px 0;
+    width: 40%;
+
+    @media(max-width: 600px) {
+      display: block;
+    }
+
   .author-container {
         justify-content: space-around;
   }
+
+
+
+
 
   .author-specs{
     display: flex;
@@ -16,11 +44,7 @@
     padding: 0;
 }
 
-  .about-author {
-    background: @white;
-    padding: 30px;
-    margin: 10px 0;
-    width: 40%;
+
 
     .avatar {
       width: 100px;
@@ -77,4 +101,35 @@
       }
     }
   }
+}
+
+.page-series {
+  .tag-container {
+        margin: 30px 60px;
+  }
+
+  .tag-wrapper{
+    margin-right: 30px;
+  }
+
+}
+
+.page-projects {
+  p {
+    margin:0 !important;
+  }
+
+  h2 {
+    margin-bottom: 20px !important;
+  }
+
+  .repo {
+    .author {
+      margin-top: 10px;
+    }
+    img {
+          margin: 0;
+    }
+  }
+
 }

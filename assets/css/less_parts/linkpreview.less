@@ -8,7 +8,9 @@
   display: flex;
   justify-content: space-between;
   @media(max-width: 800px) {
-    width: 100%;
+    width: 90%;
+    padding: 10px 4%;
+    display: block;
   }
 
   .preview-image {
@@ -21,7 +23,8 @@
     border-radius: 2px;
     border: 1px solid #ddd;
     @media(max-width: 600px) {
-      width:60%;
+      width: 100%;
+      height: 140px;
     }
   }
 
@@ -51,6 +54,11 @@
     overflow: hidden;
     padding: 10px 20px;
 
+    @media(max-width: 800px) {
+      padding:0;
+      display: block;
+    }
+
     h4 {
       margin-top: 0;
       margin-top: 0;
@@ -59,6 +67,7 @@
 
       @media(max-width: 800px) {
         font-size: 1.3em;
+        line-height: 1;
       }
     }
 
