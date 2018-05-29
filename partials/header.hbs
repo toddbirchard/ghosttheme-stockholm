@@ -1,12 +1,12 @@
 <!-- start header -->
 <nav class="main-navigation">
+		<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
 		{{navigation}}
 </nav>
 <header class="main-header videoHeader">
 
 	<div class="headerContainer">
 		<!-- start logo -->
-		<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
 	{{#if @blog.logo}}
 		<a class="branding" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
 	{{else}}

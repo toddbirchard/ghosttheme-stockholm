@@ -2,7 +2,7 @@
 
   h1 {
     @media(max-width: 600px) {
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
 
@@ -21,7 +21,7 @@
     width: 40%;
 
     @media(max-width: 600px) {
-      display: block;
+      display: block !important;
     }
 
   .author-container {
@@ -104,8 +104,22 @@
 }
 
 .page-series {
+
+  .page-head{
+        margin: 40px;
+        padding: 0;
+  }
+
+  .post-title {
+        margin: 40px 80PX 0;
+  }
+
   .tag-container {
         margin: 30px 60px;
+
+        @media(max-width: 800px){
+              margin: 30px 40px;
+        }
   }
 
   .tag-wrapper{
@@ -132,4 +146,35 @@
     }
   }
 
+}
+
+.page-projects {
+  .post-content {
+        margin: 0;
+
+        @media(max-width: 800px) {
+          width: 66%;
+        }
+  }
+
+
+
+
+
+  p{
+    margin: 20px 0;
+  }
+}
+
+
+.post-series{
+  .page-head {
+    padding:0;
+  }
+}
+
+.home-template {
+  .mobile-branding{
+    display: none;
+  }
 }
