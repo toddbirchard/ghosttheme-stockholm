@@ -6,6 +6,7 @@
 	.container {
 		margin: 20px auto 0;
 		padding: 0;
+		max-width: 1000px !important;
 		@media(max-width: 800px) {
 			margin: 0;
 			width: 100% !important;
@@ -21,11 +22,8 @@
 	}
 
 	h3 {
-		font-size: 2em;
+		font-size: 1.5em;
 
-		@media(max-width: 800px) {
-			font-size: 1.6em;
-		}
 	}
 
 
@@ -57,7 +55,7 @@
 
 	.main-content {
 		width: 100%;
-		max-width: 1100px;
+		max-width: 1000px;
 		padding:0 !important;
 
 
@@ -143,13 +141,17 @@
 			border: 1px solid #eaeaea;
 		}
 
+		p {
+			margin-top: 8px;
+		}
+
 		@media(max-width: 800px) {
 			margin: 20px 40px 0;
 		}
 	}
 
-	header {
-		max-width: 1100px;
+	.post-header {
+		max-width: 1000px;
 		margin: auto;
 		position: absolute;
 		width: 100%;
@@ -157,7 +159,8 @@
 		right: 0;
 		padding: 0;
 		background-image: none;
-		background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, rgba(13, 60, 93, 0.5) 100%);
+		background: linear-gradient(0deg, rgba(18, 13, 123, 0.01) 10%, rgba(0, 13, 105, 0.98) 100%);
+		z-index: 100;
 
 		.mobile-branding {
 			height: 50px;
@@ -227,26 +230,43 @@
 		}
 
 		.avatar {
-			width: 100px;
-			height: 100px;
+			width: 90px;
+			height: 90px;
+    	display: inline-block;
+    	border-radius: 50%;
+    	overflow: hidden;
 			margin-right: 30px;
 			.border-radius(50%);
-			@media(max-width: 800px) {
-				width: 70px;
-				height: 70px;
+
+
+
+			img {
+				width:100%;
+			}
+		}
+
+		.details {
+			display: inline-block;
+			span {
+				display: block;
+				line-height: 1em;
+    		margin-bottom: 5px;
+
+				i {
+					margin-right: 8px;
+				}
 			}
 		}
 
 		.bio {
 			display: block;
-			float: left;
 			line-height: 1.5;
 			margin-top: 10px;
 			font-weight: 100;
 		}
 
 		.author {
-			font-size: 1.3em;
+			font-size: 1.5em;
 			margin-bottom: 5px;
 
 			a {
@@ -324,7 +344,7 @@
 		}
 	}
 
-	.roundup {
+	.roundupTriangle {
 		position: absolute;
 		background: #81a1ab;
 		color: white;
@@ -440,10 +460,12 @@
 		h2 {
 			margin-top: 40px;
 			margin-bottom: 0;
+			color:@text-post-header;
 		}
 
-		h2 {
-			color:#30b1a7;
+		h2,
+		h3 {
+
 		}
 
 		ol,

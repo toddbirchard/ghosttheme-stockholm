@@ -8,7 +8,7 @@
 		{{/if}}
 
 		{{#has tag="roundup" }}
-			<div class="roundup">
+			<div class="roundupTriangle">
 				<i class="fas fa-link"></i>
 			</div>
 		{{/has}}
@@ -38,13 +38,11 @@
 							<a href="{{url}}" class="meta-item"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
 						{{/if}}
 					{{/author}}
-					<span class="tags meta-item">
-						{{#if tags}}
-							<i class="fas fa-tags"></i>
-						{{tags limit="1"}}
-						{{/if}}
+					{{#primary_tag}}
+							<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> {{name}}</span>
+					{{/primary_tag}}
 					</span>
-					<span class="date meta-item"><i class="fas fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+					<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
 					</span>
 				</div>
 				<a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>

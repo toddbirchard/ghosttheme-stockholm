@@ -17,8 +17,8 @@
 	}
 
 	i {
-		margin-right: 5px;
-		font-size: 12px;
+		margin-right: 8px;
+		font-size: 18px;
 	}
 
 	p {
@@ -27,16 +27,30 @@
 
 	.meta {
 		display: flex;
-		width: 55%;
+		width: 60%;
 		justify-content: space-between;
-		max-width: 350px;
+		max-width: 400px;
+
+		a {
+			color: #3d606b;
+		}
 
 		.meta-item {
-			display: block;
+			display: flex;
 			margin: auto 0;
+			font-family: 'akzidenz-medium';
+
+			&.date {
+				span,
+				i {
+					font-family: 'akzidenz' !important;
+					color: #8e8e8e !important;
+					    opacity: 0;
+				}
+			}
 
 			* {
-				color: #6e7980;
+				/*color: #6e7980;*/
 			}
 
 			a {
@@ -78,7 +92,7 @@
 		padding: 10px;
 
 		.btn {
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 100;
 			text-transform: uppercase;
 			padding: 10px 20px;
