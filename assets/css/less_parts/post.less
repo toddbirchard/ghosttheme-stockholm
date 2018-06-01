@@ -38,10 +38,15 @@
 	  margin: 10px 80px 0;
 	  color: #9ea1ab;
 	  font-size: 14px;
+		display: flex;
+		justify-content: space-between;
+		width: 35%;
 
 		.author {
 			span {
 				text-transform: capitalize;
+				color: #467192;
+				font-family: 'akzidenz-medium' !important;
 			}
 		}
 	}
@@ -126,11 +131,13 @@
 
 		i {
 			margin-right: 5px;
-			font-size: 11px;
+		}
+
+		span {
+			align-items: center;
 		}
 		@media(max-width: 800px) {
-			display: flex;
-			justify-content: space-between;
+			width:auto;
 		}
 	}
 
@@ -403,7 +410,8 @@
 
 		.post-meta {
 			// font-family: 'mr-eaves-xl-modern', serif;
-			color: @text-color-light;
+			width: auto;
+			max-width: 376px;
 			margin: 15px 0 0;
 			font-size: 12px;
 			text-align: left;

@@ -102,7 +102,7 @@
   p {
     font-size: 16px;
     color: #505050;
-    line-height: 1.3;
+    line-height: 1.5;
   }
 
   .tag-wrapper {
@@ -150,35 +150,66 @@
   }
 }
 
-.home-template {
-  .mobile-branding {
-    display: none;
+.tag-title {
+  color: white;
+  margin: 0;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #001b2f 100%);
+  height: 100px;
+  padding: 20px;
+
+  h2 {
+    line-height: 1;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 600;
+    height: fit-content;
+  }
+
+  span {
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: 600;
   }
 }
 
+
+
 .tag-container {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	align-content: flex-start;
-	flex-flow: row wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-flow: row wrap;
   margin: 30px 40px;
+
+
   @media(max-width: 800px) {
     margin: 30px 40px;
   }
 
-	.tag-wrapper {
-		background: #15475a;
-		width: 49%;
-		margin: 0 0 10px;
-		border: 1px solid #dadada;
-		transition: all 0.2s ease-out;
-		@media(max-width: 1040px) {
-			width: 100%;
-		}
+
+
+  .tag-wrapper {
+    background: #15475a;
+    width: 49%;
+    margin: 0 0 10px;
+    border: 1px solid #dadada;
+    transition: all 0.3s ease-out;
+    @media(max-width: 1040px) {
+      width: 100%;
+    }
+
+    &:hover {
+      .tag-title {
+        background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #007ad4 100%);
+        height: 150px;
+      }
+    }
 
     h2,
-    p,
     span {
       color: white !important;
     }
@@ -187,101 +218,74 @@
       text-align: center;
     }
 
-    h2 {
-      font-weight: 500;
+    &:hover {
+      background-color: @theme-color;
+      border: 1px solid @theme-color;
     }
 
-		&:hover {
-			background-color: @theme-color;
-			border: 1px solid @theme-color;
-
-
-		}
-
-		a {
-			.img-wrapper {
-				background-size: cover;
-				background-position: center;
-				text-align: center;
-				width: 100%;
-				height: 180px;
-				position: relative;
-			}
+    a {
+      .img-wrapper {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        width: 100%;
+        height: 250px;
+        position: relative;
+      }
 
       .page-head {
         margin: 0;
         padding: 0;
       }
 
-			.tag-title {
-        color: #505050;
+      .meta-info {
+        font-weight: 900;
         color: white;
-        margin: 0 auto;
-        width: 100%;
-        background: #080c4e94;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        font-size: 12px;
+        padding: 0;
 
-
-        h2 {
-          line-height: 1;
-          font-size: 1.5em;
-          margin:0 0 0 10px;
+        i {
+          margin-right: 7px;
         }
+      }
 
-        span {
-					font-size: 1.1em;
+      .description {
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 5px;
+        position: absolute;
+        bottom: 0;
+        color: #162c52;
+        font-family: 'akzidenz-medium';
+      }
 
-          margin:0 10px 0 0;
-				}
-			}
+      p {
+        font-size: 14px;
+        color: @text-color;
+      }
 
-			.meta-info {
-				font-weight: 900;
-				color: white;
-				font-size: 12px;
-				padding: 10px;
+      &.no-image {
+        .bg-wrapper {
+          .overlay {
+            color: @text-color;
 
+            .tag-title {
+              color: @text-color-heading;
+            }
+          }
+        }
+      }
 
+      &:hover {
+        text-decoration: none;
+        background: @hover-color;
 
-				i {
-					margin-right: 7px;
-				}
-			}
-
-			.description {
-				margin: 7px 0;
-				padding: 0 10px;
-			}
-
-			p {
-				font-size: 14px;
-				color: @text-color;
-			}
-
-			&.no-image {
-				.bg-wrapper {
-					.overlay {
-						color: @text-color;
-
-						.tag-title {
-							color: @text-color-heading;
-						}
-					}
-				}
-			}
-
-			&:hover {
-				text-decoration: none;
-				background: @hover-color;
-
-				.bg-wrapper {
-					.overlay {
-						background: @hover-color !important;
-					}
-				}
-			}
-		}
-	}
+        .bg-wrapper {
+          .overlay {
+            background: @hover-color !important;
+          }
+        }
+      }
+    }
+  }
 }

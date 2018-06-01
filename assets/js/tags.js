@@ -10,7 +10,7 @@ $(document).ready(function() {
     frontend: '<i class="far fa-code"></i>',
     data: '<i class="fab fa-js-square"></i>',
     mysql: '<i class="fab fa-js-square"></i>',
-    roundup: '<i class="far fa-link"></i>',
+    roundup: '<i class="fas fa-undo-alt"></i>',
     excel: '<i class="fal fa-table"></i>',
     devops: '<i class="fas fa-server"></i>',
     pandas: '<i class="fal fa-database"></i>',

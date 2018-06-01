@@ -33,12 +33,10 @@
 														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
 													</div>
 												</div>
-
-
+												{{#if description}}
+													<p class="description">{{description}}</p>
+												{{/if}}
 											</div>
-											{{#if description}}
-												<p class="description">{{description}}</p>
-											{{/if}}
 										</a>
 									</div>
 								{{/foreach}}
