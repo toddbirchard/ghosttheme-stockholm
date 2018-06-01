@@ -293,6 +293,7 @@ p {
 		bottom: 0;
 		left: 10px;
 		z-index: 40;
+		display: none;
 
 		img {
 			width: inherit;
@@ -300,9 +301,6 @@ p {
 			&:hover {
 				cursor: pointer;
 			}
-		}
-		@media(max-width: 800px) {
-			display: block;
 		}
 	}
 
@@ -315,4 +313,13 @@ p {
 	}
 
 
+}
+
+.post-template,
+.page-template {
+	.mobile-branding {
+		@media(max-width: 800px) {
+			display: block;
+		}
+	}
 }

@@ -527,6 +527,11 @@
 	padding: 10px 0;
 
 	.share-icons {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 !important;
+		padding-left: 0 !important;
+
 		li {
 			list-style: none;
 			display: inline-block;
@@ -534,7 +539,28 @@
 			padding: 5px 10px !important;
 			transition: 0.2s all ease-out;
 			border-radius: 2px;
-			margin-left: 10px;
+			margin-left: 0 !important;
+
+			@media(max-width: 600px) {
+				 padding: 2px 5px !important;
+			}
+		}
+
+		i {
+			margin-right: 5px;
+
+			@media(max-width: 600px) {
+				font-size: 12px;
+			}
+		}
+
+		span {
+			font-size: 12px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
 		}
 	}
 
@@ -550,6 +576,7 @@
 			border-radius: 2px;
 			.transition(all 0.2s ease);
 			margin-right: 10px;
+
 
 			&:hover {
 				color: @white;
@@ -571,9 +598,14 @@
 
 	.share {
 		float: right;
+		padding-left: 0;
 	}
 	@media(max-width: 800px) {
 		border-top: 1px solid #f0f1f4;
+
+		.share {
+			max-width: 450px;
+		}
 
 		.share,
 		.tag-cloud {
@@ -581,7 +613,7 @@
 			margin: 20px auto;
 
 			* {
-				margin: 0 auto !important;
+				/*margin: 0 auto !important;*/
 			}
 		}
 

@@ -20,8 +20,6 @@ $(document).ready(function() {
 
   for (var key in tags) {
     $('.' + key).find('i').replaceWith( tags[key] );
-    //console.log(tags.key);
-    console.log(tags[key]);
   }
 
 

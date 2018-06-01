@@ -343,9 +343,17 @@ pre {
   color: #26a2c7;
 }
 .main-footer .widget .recent-post .recent-single-post .date,
-.main-footer .widget .recent-post .single-author .date {
+.main-footer .widget .recent-post .single-author .date,
+.main-footer .widget .recent-post .recent-single-post .tags,
+.main-footer .widget .recent-post .single-author .tags {
   color: #FFFFFF;
   opacity: 0.5;
+}
+.main-footer .widget .recent-post .recent-single-post .date a,
+.main-footer .widget .recent-post .single-author .date a,
+.main-footer .widget .recent-post .recent-single-post .tags a,
+.main-footer .widget .recent-post .single-author .tags a {
+  color: #FFFFFF;
 }
 /*====================================================
 	header
@@ -1029,6 +1037,12 @@ pre {
 .post-footer {
   padding: 10px 0;
 }
+.post-footer .share-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
 .post-footer .share-icons li {
   list-style: none;
   display: inline-block;
@@ -1036,7 +1050,27 @@ pre {
   padding: 5px 10px !important;
   transition: 0.2s all ease-out;
   border-radius: 2px;
-  margin-left: 10px;
+  margin-left: 0 !important;
+}
+@media (max-width: 600px) {
+  .post-footer .share-icons li {
+    padding: 2px 5px !important;
+  }
+}
+.post-footer .share-icons i {
+  margin-right: 5px;
+}
+@media (max-width: 600px) {
+  .post-footer .share-icons i {
+    font-size: 12px;
+  }
+}
+.post-footer .share-icons span {
+  font-size: 12px;
+}
+.post-footer .share-icons a {
+  display: flex;
+  align-items: center;
 }
 .post-footer .tag-cloud {
   float: left;
@@ -1071,10 +1105,14 @@ pre {
 }
 .post-footer .share {
   float: right;
+  padding-left: 0;
 }
 @media (max-width: 800px) {
   .post-footer {
     border-top: 1px solid #f0f1f4;
+  }
+  .post-footer .share {
+    max-width: 450px;
   }
   .post-footer .share,
   .post-footer .tag-cloud {
@@ -1083,7 +1121,7 @@ pre {
   }
   .post-footer .share *,
   .post-footer .tag-cloud * {
-    margin: 0 auto !important;
+    /*margin: 0 auto !important;*/
   }
   .post-footer .tag-cloud {
     display: flex;
@@ -2481,11 +2519,6 @@ pre {
 .page-template p {
   margin: 0 auto 20px;
 }
-@media (max-width: 800px) {
-  .mobile-branding {
-    display: block;
-  }
-}
 .post-header .mobile-branding {
   height: 40px;
   width: 40px;
@@ -2929,6 +2962,7 @@ p {
   bottom: 0;
   left: 10px;
   z-index: 40;
+  display: none;
 }
 .page .mobile-branding img {
   width: inherit;
@@ -2936,14 +2970,15 @@ p {
 .page .mobile-branding img:hover {
   cursor: pointer;
 }
-@media (max-width: 800px) {
-  .page .mobile-branding {
-    display: block;
-  }
-}
 .page .post-title {
   font-weight: 700;
 }
 .page .tag-list {
   margin: 3px;
+}
+@media (max-width: 800px) {
+  .post-template .mobile-branding,
+  .page-template .mobile-branding {
+    display: block;
+  }
 }
