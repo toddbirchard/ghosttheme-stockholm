@@ -561,7 +561,7 @@ pre {
   width: 40px;
   height: 40px;
   float: left;
-  margin-top: 20px;
+  margin: 15px;
 }
 .mobile-branding img {
   width: 100%;
@@ -1472,8 +1472,6 @@ pre {
   color: white;
   margin: 0;
   width: auto;
-  display: flex;
-  justify-content: space-between;
   background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #001b2f 100%);
   height: 100px;
   padding: 20px;
@@ -1484,6 +1482,7 @@ pre {
   margin: 0;
   font-weight: 600;
   height: fit-content;
+  text-align: left;
 }
 .tag-title span {
   font-size: 1.1em;
@@ -1513,6 +1512,7 @@ pre {
 @media (max-width: 1040px) {
   .tag-container .tag-wrapper {
     width: 100%;
+    margin: 0 0 30px;
   }
 }
 .tag-container .tag-wrapper:hover .tag-title {
@@ -1547,6 +1547,7 @@ pre {
   color: white;
   font-size: 12px;
   padding: 0;
+  text-align: left;
 }
 .tag-container .tag-wrapper a .meta-info i {
   margin-right: 7px;
@@ -1729,9 +1730,6 @@ pre {
   }
   .main-navigation .container .row .col-sm-12 .navbar-collapse .menu {
     padding: 0;
-  }
-  .main-navigation .container .row .col-sm-12 .navbar-collapse .menu li a {
-    font-weight: 100;
   }
   .main-footer {
     margin: 0;
@@ -2221,7 +2219,6 @@ pre {
   justify-content: space-between;
 }
 .sidebar .widget .newsletter button {
-  border: 1px solid #26a2c7;
   background: #26a2c7;
   color: #FFFFFF;
   width: 100%;
@@ -2450,7 +2447,7 @@ pre {
 	pagination
 ====================================================*/
 .pagination {
-  margin: 0 0 35px;
+  margin: 10px 0;
   text-align: center;
   display: block;
   order: 20;
@@ -2786,7 +2783,7 @@ pre {
   text-align: center;
 }
 .prev-next-wrap a {
-  margin: 20px 0 0;
+  margin: 0;
 }
 /*====================================================
 	Tag page & author page cover
@@ -2907,14 +2904,13 @@ p {
   }
   .main-navigation {
     text-align: left;
-    padding: 0 15px;
+    padding: 0;
   }
   .main-navigation .menu li {
     display: block;
   }
   .main-navigation .menu li a {
     color: white;
-    font-weight: 100;
     font-size: 17px;
   }
   .main-navigation .menu li:hover > a {
