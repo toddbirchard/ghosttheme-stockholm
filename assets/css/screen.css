@@ -1467,13 +1467,14 @@ pre {
 .page-projects .repo img {
   margin: 0;
 }
+.page-projects .col-md-8 {
+  background: white;
+}
+.page-projects .kg-card-markdown {
+  margin-bottom: 30px;
+}
 .page-projects .post-content {
   margin: 0;
-}
-@media (max-width: 800px) {
-  .page-projects .post-content {
-    width: 66%;
-  }
 }
 .page-projects p {
   margin: 20px 0;
@@ -1784,129 +1785,6 @@ pre {
   .fluid-width-video-wrapper {
     height: 236px;
   }
-}
-.repos {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-}
-.repos .loader {
-  width: 60%;
-  border: 0 !important;
-  margin: auto;
-  display: block;
-  position: absolute;
-  z-index: 40;
-  right: 0;
-  left: 0;
-  top: 30px;
-}
-.repos a {
-  width: 49%;
-  z-index: 1;
-  height: fit-content;
-}
-.repos a:hover .repo {
-  background-color: #26a2c7;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-}
-.repos a:hover .repo h3,
-.repos a:hover .repo p {
-  color: white !important;
-  text-decoration: none;
-}
-@media (max-width: 600px) {
-  .repos a {
-    width: 100%;
-  }
-}
-.repos .repo {
-  border: 1px solid #eaeaea;
-  padding: 15px;
-  margin: 5px 0;
-  transition: all 0.3s ease-out;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-}
-.repos .repo img {
-  border: 0;
-}
-.repos .repo .lang {
-  height: 80px;
-  width: 80px;
-  display: inline-block;
-  position: relative;
-  margin-right: 16px;
-  float: left;
-  display: none;
-}
-.repos .repo .lang span {
-  margin: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: fit-content;
-  height: fit-content;
-  color: black;
-}
-.repos .repo .details {
-  display: inline-block;
-  position: relative;
-  width: 99%;
-}
-.repos .repo .details h3 {
-  margin: 0;
-  font-size: 1.2em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 97%;
-}
-.repos .repo .details .description {
-  color: #505050;
-  margin: 10px 0;
-  font-size: 13px;
-  line-height: 1.3;
-  overflow: hidden;
-}
-.repos .repo .details .author {
-  margin: 0;
-}
-.repos .repo .details img {
-  height: 20px;
-  width: 20px;
-  border-radius: 2px;
-  display: inline-block;
-  margin-right: 5px;
-}
-.repos .repo .details i {
-  font-size: 17px;
-}
-.repos .repo .details .author {
-  font-size: 11px;
-  margin: 0;
-}
-.repos .repo .Python {
-  background-color: blue;
-}
-.repos .repo .CSS {
-  background-color: orange;
-}
-.repos .repo .HTML {
-  background-color: red;
-}
-.repos .repo .Javascript {
-  background-color: yellow;
 }
 .feed {
   background-color: none;
@@ -2745,6 +2623,222 @@ pre {
   display: inline-block;
   margin-right: 10px;
   border-radius: 50%;
+}
+.github-team {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .github-team {
+    display: block;
+  }
+}
+#github-card-todd,
+#github-card-matt {
+  width: 46%;
+  font-size: 16px;
+  border-width: 1px 1px 2px;
+  border-style: solid;
+  border-color: #DDD;
+  overflow: hidden;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  #github-card-todd,
+  #github-card-matt {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.profile {
+  background: #FFF;
+  overflow: hidden;
+  padding: 20px 30px;
+  padding-bottom: 0;
+  min-height: 135px;
+}
+.stats {
+  padding: 5px;
+}
+.languages {
+  position: relative;
+  clear: both;
+  margin: 0 -10px;
+  padding: 15px 0;
+  border-top: 1px solid #DEDEDE;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.languages::before {
+  position: absolute;
+  top: -0.7em;
+  background: #FFF;
+  padding-right: 5px;
+  content: 'Top languages';
+  font-style: italic;
+  color: #555;
+}
+.languages li {
+  display: inline-block;
+  font-family: 'akzidenz-medium';
+  color: #444;
+  margin-left: 10px;
+  font-size: 1.1em;
+}
+.followMe {
+  margin-top: 3px;
+}
+.follow-button {
+  font-size: 0.8em;
+  color: white;
+  float: left;
+  padding: 10px 20px;
+  line-height: 1;
+  background: #26a2c7;
+}
+.follow-button:hover {
+  color: inherit;
+  background: #40cebb;
+}
+/* followers number */
+.followMe span {
+  position: relative;
+  background: #FFF;
+  margin-left: 8px;
+  padding: 3px 8px;
+  color: #444;
+  font-size: 0.8em;
+  border: 1px solid;
+  border-color: #BBB;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+.followMe span::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 5px;
+  left: -4px;
+  top: 30%;
+  background: inherit;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-color: inherit;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin: 0 20px 25px 0;
+  margin-left: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 #DDD;
+}
+/* List of repositories */
+.repos {
+  clear: both;
+}
+.repos .header {
+  display: block;
+  width: auto;
+  border-width: 1px 0;
+  /* color: #29d4a7; */
+  font-size: 1.3em;
+  padding: 15px 15px 0;
+  height: fit-content;
+  text-transform: uppercase;
+  font-family: 'mr-eaves-xl-modern', sans-serif;
+}
+.repos a {
+  position: relative;
+  display: block;
+  margin: 7px 10px;
+  font-size: 0.9em;
+  border-top: 0;
+  width: auto;
+  background: #eaeaea;
+  padding: 16px;
+}
+.repos a:hover {
+  background-color: #40cebb;
+  color: white;
+  cursor: pointer;
+}
+.repos a:first-of-type {
+  border: none;
+}
+.repos .repo-name {
+  max-width: 280px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+.repos .updated {
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #777;
+}
+.repos .star {
+  position: absolute;
+  font-size: 0.9em;
+  right: 1em;
+  top: 2em;
+  color: #888;
+}
+.repos .star::after {
+  content: '\a0\2605';
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/*
+& {
+  width: 280px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Helvetica;
+  background: #FAFAFA;
+  border-width: 1px 1px 2px;
+  border-style: solid;
+  border-color: #DDD;
+  overflow: hidden;
+}
+*/
+a {
+  text-decoration: none;
+  color: #444;
+}
+a:hover {
+  color: #4183C4;
+}
+.name {
+  display: block;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #222;
+  font-family: 'mr-eaves-xl-modern', sans-serif;
+  margin-bottom: 5px;
+}
+.error {
+  font-size: 0.8em;
+  color: #444;
+  padding: 10px;
+}
+.error span {
+  display: block;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.error span.remain {
+  text-align: center;
+  font-weight: bold;
 }
 /*====================================================
 	fonts
