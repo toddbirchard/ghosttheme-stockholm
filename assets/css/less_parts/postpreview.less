@@ -14,6 +14,25 @@
 		@media(max-width: 600px){
 			margin: 0 10px 20px;
 		}
+
+		.post-title {
+			font-size: 3em;
+			@media(max-width: 600px) {
+				font-size: 1.7em !important;
+			}
+		}
+
+		.post-excerpt {
+			margin: 5px auto 0;
+			line-height: 1;
+			font-weight: 600;
+			text-align: left;
+			@media(max-width: 800px) {
+				font-weight: 500;
+				font-size: 1.2em;
+				text-transform: uppercase;
+			}
+		}
 	}
 
 	i {
@@ -119,12 +138,7 @@
 		}
 	}
 
-	.post-title {
-		font-size: 3em;
-		@media(max-width: 600px) {
-			font-size: 2em !important;
-		}
-	}
+
 
 	&.tag-hash-upcoming,
 	&.upcoming {

@@ -1194,6 +1194,27 @@ pre {
     margin: 0 10px 20px;
   }
 }
+.post-preview .post-head .post-title {
+  font-size: 3em;
+}
+@media (max-width: 600px) {
+  .post-preview .post-head .post-title {
+    font-size: 1.7em !important;
+  }
+}
+.post-preview .post-head .post-excerpt {
+  margin: 5px auto 0;
+  line-height: 1;
+  font-weight: 600;
+  text-align: left;
+}
+@media (max-width: 800px) {
+  .post-preview .post-head .post-excerpt {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+}
 .post-preview i {
   margin-right: 8px;
   font-size: 18px;
@@ -1279,14 +1300,6 @@ pre {
 @media (max-width: 600px) {
   .post-preview .post-content {
     font-size: 14px;
-  }
-}
-.post-preview .post-title {
-  font-size: 3em;
-}
-@media (max-width: 600px) {
-  .post-preview .post-title {
-    font-size: 2em !important;
   }
 }
 .post-preview.tag-hash-upcoming,
