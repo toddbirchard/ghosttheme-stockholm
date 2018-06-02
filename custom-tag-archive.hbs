@@ -27,13 +27,15 @@
 									<div class="tag-wrapper">
 										<a href="{{url}}">
 											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});" {{/if}}>
-											</div>
-											<h2 class="tag-title">{{meta_title}}</h2>
-											{{#if description}}
-												<p class="description">{{description}}</p>
-											{{/if}}
-											<div class="meta-info">
-												<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+												<div class="tag-title">
+													<h2>{{meta_title}}</h2>
+													<div class="meta-info">
+														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+													</div>
+												</div>
+												{{#if description}}
+													<p class="description">{{description}}</p>
+												{{/if}}
 											</div>
 										</a>
 									</div>

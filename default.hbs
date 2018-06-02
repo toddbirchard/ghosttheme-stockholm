@@ -12,22 +12,21 @@
 	{{! Styles'n'Scripts }}
 	<link rel="stylesheet" href="https://use.typekit.net/okj4emy.css">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/fontawesome-all.min.css"}}">
-	<!--<link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">-->
 	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/hl-styles/code.css"}}">
+
 	{{#is "post"}}
-	<meta property="og:image" content="{{img_url feature_image}}">
+		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
-	<meta property="og:image" content="{{@blog.cover_image}}"/>
+		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
 	<script src="{{asset "/js/jquery.min.js"}}"></script>
 	<!-- only for demo -->
-	<!-- <link rel="stylesheet" type="text/css" href="{{asset "demo-assets/css/colpick.css"}}"> -->
 	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
+  {{ghost_head}}
 
 </head>
 <body class="{{body_class}}">

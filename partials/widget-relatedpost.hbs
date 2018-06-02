@@ -2,10 +2,10 @@
 <div class="widget">
 	<h4 class="title">Related</h4>
 	<div class="content recent-post">
-		{{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
+		{{#get "posts" limit="3" include="tags" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
 			{{#foreach posts}}
 				<div class="recent-single-post">
-					<a href="{{url}}" class="post-title">{{title}}</a>{{!--<div class="date">{{date format="MMMM DD"}}</div>--}}
+					<a href="{{url}}" class="post-title">{{title}}</a><div class="tags">{{tags separator=", "}}</div>
 				</div>
 				{{/foreach}}
 			{{/get}}

@@ -27,9 +27,11 @@ article {
 }
 
 section > .container {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin:auto;
 }
+
+
 
 .row {
 	display: flex;
@@ -145,6 +147,7 @@ a:focus {
 	&:hover {
 		border: 1px solid @hover-color;
 		background: @hover-color;
+		color: @white;
 	}
 
 	&:focus {
@@ -184,7 +187,7 @@ pre {
 	padding: 0;
 	background: none;
 	border: none;
-	margin: 20px 10px;
+	margin: 30px auto;
 	font-size: 12px;
 	@media(max-width: 600px) {
 		margin: 20px 0;
@@ -201,10 +204,4 @@ pre {
 	color: @white;
 	background: @theme-color;
 	text-shadow: none;
-}
-
-.postlist {
-  @media (max-width: 1000px){
-     padding: 0 20px;
-  }
 }

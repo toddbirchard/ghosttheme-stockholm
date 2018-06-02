@@ -10,11 +10,15 @@
 
 	.post-head {
 		margin: 10px 10px 20px;
+
+		@media(max-width: 600px){
+			margin: 0 10px 20px;
+		}
 	}
 
 	i {
-		margin-right: 5px;
-		font-size: 12px;
+		margin-right: 8px;
+		font-size: 18px;
 	}
 
 	p {
@@ -23,16 +27,37 @@
 
 	.meta {
 		display: flex;
-		width: 55%;
+		width: 60%;
 		justify-content: space-between;
-		max-width: 350px;
+		max-width: 400px;
+
+		a {
+			color: #467192;
+		}
 
 		.meta-item {
-			display: block;
+			display: flex;
 			margin: auto 0;
+			font-family: 'akzidenz-medium';
+
+			&.author {
+				span {
+					font-family: 'akzidenz-medium' !important;
+				}
+			}
+
+			&.date {
+				span {
+					font-family: 'akzidenz' !important;
+					color: #8e8e8e !important;
+				}
+				i {
+					color: #8e8e8e !important;
+				}
+			}
 
 			* {
-				color: #6e7980;
+				/*color: #6e7980;*/
 			}
 
 			a {
@@ -74,7 +99,7 @@
 		padding: 10px;
 
 		.btn {
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 100;
 			text-transform: uppercase;
 			padding: 10px 20px;

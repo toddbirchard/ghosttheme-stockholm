@@ -1,32 +1,21 @@
 <!-- start header -->
+<nav class="main-navigation">
+		<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
+		{{navigation}}
+</nav>
 <header class="main-header videoHeader">
 
 	<div class="headerContainer">
-		<nav class="main-navigation">
-			<div id="main-menu">
-				{{! insert navigation partial}}
-				{{navigation}}
-					{{! insert manuala navigation if there is no navigation}}
-					{{#unless @blog.navigation}}
-						{{> manual-navigation}}
-					{{/unless}}
-			</div>
-		</nav>
-		<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
-	<!-- start logo -->
+		<!-- start logo -->
 	{{#if @blog.logo}}
 		<a class="branding" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
 	{{else}}
 		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
 	{{/if}}
 	<!-- start navigation -->
-
 </div>
-
-
-
 	<video class="videoObject" autoplay muted loop id="myVideo">
-		<source src="https://hackersandslackers.io/assets/vid/bg.mp4" type="video/mp4">
+		<source src="https://hackersandslackers.com/assets/vid/bg.mp4" type="video/mp4">
 	</video>
 </header>
 {{!--

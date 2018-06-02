@@ -1,27 +1,30 @@
 .link-preview {
   border: 1px solid #d2d2d2;
-  padding: 10px;
+  padding: 0;
   transition: all 0.2s ease-out;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 20px auto;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   @media(max-width: 800px) {
-    width: 100%;
+    width: 90%;
+    padding: 10px 4%;
+    display: block;
   }
 
   .preview-image {
     display: inline-block;
-    width: 40%;
-    min-width: 200px;
+    min-width: 250px;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    border-radius: 2px;
-    border: 1px solid #ddd;
-    @media(max-width: 600px) {
-      width:60%;
+    border-radius: 5px 0px 0px 5px;
+    border-right: 1px solid #d2d2d2;
+
+    @media(max-width: 800px) {
+      width: 100%;
+      height: 140px;
     }
   }
 
@@ -49,16 +52,23 @@
   .link-info {
     display: inline-block;
     overflow: hidden;
-    padding: 10px 20px;
+    padding: 30px;
+    width: -webkit-fill-available;
+
+    @media(max-width: 800px) {
+      padding:0;
+      display: block;
+    }
 
     h4 {
-      margin-top: 0;
-      margin-top: 0;
-      font-size: 1.5em;
+      margin: 0;
+      font-size: 1.35em;
       font-weight: 500;
+      line-height: 1;
 
       @media(max-width: 800px) {
         font-size: 1.3em;
+        line-height: 1;
       }
     }
 

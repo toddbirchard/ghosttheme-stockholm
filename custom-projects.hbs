@@ -10,7 +10,7 @@
 			<div class="col-md-8 main-content">
 				<!-- start post -->
 				{{#post}}
-					<article class="{{post_class}}">
+					<article>
 						{{#if feature_image}}
 							<div class="featured-media" style="background-image: url({{feature_image}});">
 							</div>
@@ -20,11 +20,23 @@
 						</div>
 						<div class="post-content">
 							{{content}}
-							<div>
-								<h2>Activity Feed</h2>
-								<div class="feed"><img class="loader" src="https://hackers.nyc3.digitaloceanspaces.com/load.gif"></div>
-								<h2>Our Repositories</h2>
-								<div class="repos"><img class="loader" src="https://hackers.nyc3.digitaloceanspaces.com/load.gif"></div>
+							<div class="github-team">
+								<div id="github-card-todd"
+								     data-username="toddbirchard"
+								     data-max-repos="3"
+								     data-sort-by="stars"
+								     data-header-text="Top repositories">
+								</div>
+
+								<div id="github-card-matt"
+								     data-username="mattalhonte"
+								     data-max-repos="3"
+								     data-sort-by="stars"
+								     data-header-text="Top repositories">
+								</div>
+
+
+
 							</div>
 
 						</div>
@@ -37,5 +49,10 @@
 		</div>
 	</div>
 </section>
-<script src="{{asset "/js/repos.js"}}"></script>
+<script type="text/javascript" src="{{asset "/js/gh-profile-card.min.js"}}"></script>
+<script>
+    new GitHubCard({ template: '#github-card-todd' }).init();
+    new GitHubCard({ template: '#github-card-matt' }).init();
+</script>
+<!--<script src="{{asset "/js/repos.js"}}"></script>-->
 <!-- end site's main content area -->
