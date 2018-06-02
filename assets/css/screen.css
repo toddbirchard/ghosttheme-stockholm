@@ -10,8 +10,13 @@
 .author-template .container .tag-hash-upcoming {
   display: none;
 }
+.author-template .avatar {
+  float: none;
+  margin: 0;
+}
 .author-template h3 {
   font-size: 2.5em;
+  margin: 10px;
 }
 .author-template .link-preview {
   height: 167px;
@@ -454,7 +459,7 @@ pre {
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #0873c3 100%);
+  background: linear-gradient(0deg, rgba(18, 13, 123, 0.01) 10%, #11192e 100%);
   height: 150px;
   z-index: 100;
 }
@@ -1395,7 +1400,7 @@ pre {
 .page-about .about-author .avatar {
   width: 100px;
   height: 100px;
-  margin-right: 30px;
+  margin: 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1701,10 +1706,10 @@ pre {
 }
 @media (min-width: 992px) {
   .main-content {
-    width: 71%;
+    width: 69%;
   }
   .sidebar {
-    width: 26%;
+    width: 29%;
   }
 }
 /*====================================================
@@ -2081,28 +2086,6 @@ pre {
 .sidebar .widget {
   background: #FFFFFF;
   padding: 20px 25px;
-  /*
-		.about-author {
-			border: 0;
-			border-radius: 0;
-			display: flex;
-	    justify-content: space-between;
-
-			.meta-info {
-				span {
-					display: inline-block;
-					font-size: 15px;
-					margin-right: 30px;
-				}
-			}
-
-			.bio {
-				margin: 0;
-				float: none;
-				font-size: 16px;
-			}
-		}
-*/
 }
 .sidebar .widget .social {
   padding: 0;
@@ -2653,7 +2636,7 @@ pre {
 .profile {
   background: #FFF;
   overflow: hidden;
-  padding: 20px 30px;
+  padding: 20px 25px;
   padding-bottom: 0;
   min-height: 135px;
 }
@@ -2694,7 +2677,7 @@ pre {
   font-size: 0.8em;
   color: white;
   float: left;
-  padding: 10px 20px;
+  padding: 10px 14px;
   line-height: 1;
   background: #26a2c7;
 }
@@ -2766,22 +2749,27 @@ pre {
   background: #eaeaea;
   padding: 16px;
 }
-.repos a:hover {
+.repos a:hover,
+.repos a:hover span {
   background-color: #40cebb;
   color: white;
   cursor: pointer;
+}
+.repos a:hover .star::after {
+  opacity: 1;
 }
 .repos a:first-of-type {
   border: none;
 }
 .repos .repo-name {
   max-width: 280px;
-  font-weight: bold;
   text-overflow: ellipsis;
+  color: #26a2c7;
+  font-family: 'akzidenz-medium';
 }
 .repos .updated {
   display: block;
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-style: italic;
   color: #777;
 }
@@ -2796,6 +2784,8 @@ pre {
   content: '\a0\2605';
   font-size: 1.1em;
   font-weight: bold;
+  color: #e99405;
+  opacity: .5;
 }
 /*
 & {
