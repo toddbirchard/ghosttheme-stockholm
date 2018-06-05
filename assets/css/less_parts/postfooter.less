@@ -24,21 +24,31 @@
 			margin-left: 0 !important;
 
 			@media(max-width: 600px) {
-				 padding: 2px 4px !important;
+				 padding: 8px 15px !important;
+			}
+
+			&:hover span {
+				color:white;
 			}
 		}
 
 		i {
-			margin-right: 5px;
+			font-size: 14px;
+			margin-right: 10px;
 
 			@media(max-width: 600px) {
-				font-size: 12px;
+				font-size: 18px;
+				margin-right: 0;
 			}
 		}
 
 		span {
 			font-size: 12px;
 			color:#989898;
+
+			@media(max-width: 600px) {
+				display:none;
+			}
 		}
 
 		a {
@@ -119,9 +129,6 @@
 			float: none;
 			margin: 20px auto;
 
-			* {
-				/*margin: 0 auto !important;*/
-			}
 		}
 
 		.tag-cloud {
@@ -134,7 +141,8 @@
 		}
 
 		.share {
-			width: 100%;
+			width: 65%;
+			min-width: 220px;
 		}
 	}
 }

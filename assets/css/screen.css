@@ -265,13 +265,18 @@ pre {
 ====================================================*/
 .main-footer {
   background: linear-gradient(to bottom, rgba(0, 255, 196, 0.2), rgba(41, 58, 63, 0));
-  padding: 35px 80px;
+  padding: 35px 12%;
   color: white;
   margin-top: 30px;
   background-color: #3c465a;
   box-shadow: inset 0 1px 6px 0 rgba(44, 50, 63, 0.41);
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 1000px) {
+  .main-footer {
+    padding: 30px;
+  }
 }
 @media (max-width: 600px) {
   .main-footer {
@@ -291,8 +296,8 @@ pre {
 @media (max-width: 800px) {
   .main-footer .widget {
     padding: 0;
-    width: auto;
-    margin: 10px 40px 60px 40px;
+    width: 30%;
+    margin: 10px 20px 60px 20px;
   }
 }
 .main-footer .widget .title {
@@ -511,7 +516,6 @@ pre {
   }
 }
 .main-navigation .menu li:hover > a {
-  text-shadow: 0 0 20px #b41eda;
   text-decoration: none;
   cursor: pointer;
   color: #40cebb;
@@ -1088,20 +1092,30 @@ pre {
 }
 @media (max-width: 600px) {
   .post-footer .share-icons li {
-    padding: 2px 4px !important;
+    padding: 8px 15px !important;
   }
 }
+.post-footer .share-icons li:hover span {
+  color: white;
+}
 .post-footer .share-icons i {
-  margin-right: 5px;
+  font-size: 14px;
+  margin-right: 10px;
 }
 @media (max-width: 600px) {
   .post-footer .share-icons i {
-    font-size: 12px;
+    font-size: 18px;
+    margin-right: 0;
   }
 }
 .post-footer .share-icons span {
   font-size: 12px;
   color: #989898;
+}
+@media (max-width: 600px) {
+  .post-footer .share-icons span {
+    display: none;
+  }
 }
 .post-footer .share-icons a {
   display: flex;
@@ -1177,10 +1191,6 @@ pre {
     float: none;
     margin: 20px auto;
   }
-  .post-footer .share *,
-  .post-footer .tag-cloud * {
-    /*margin: 0 auto !important;*/
-  }
   .post-footer .tag-cloud {
     display: flex;
     justify-content: center;
@@ -1189,7 +1199,8 @@ pre {
     margin: 0 10px 10px !important;
   }
   .post-footer .share {
-    width: 100%;
+    width: 65%;
+    min-width: 220px;
   }
 }
 .container .postlist {
@@ -1280,7 +1291,7 @@ pre {
   font-size: 18px;
 }
 .post-preview p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 .post-preview .meta {
   display: flex;
@@ -1361,7 +1372,7 @@ pre {
 }
 .post-preview .post-content {
   line-height: 1.5;
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 @media (max-width: 600px) {
   .post-preview .post-content {
@@ -1420,7 +1431,10 @@ pre {
   margin: 0;
 }
 @media (max-width: 800px) {
-  .home-template .main-header {
+  .home-template .main-header,
+  .paged .main-header,
+  .tag-template .main-header,
+  .author-template .main-header {
     height: 200px;
   }
 }
@@ -2169,10 +2183,13 @@ pre {
   text-align: right;
 }
 .sidebar .recent-single-post .post-title {
-  color: #427382;
+  color: #2094a2;
   line-height: 1;
   font-size: 15px;
   margin: 0;
+}
+.sidebar .recent-single-post .post-title a {
+  font-family: 'akzidenz-regular';
 }
 .sidebar .recent-single-post .post-title:hover {
   color: #40cebb;
@@ -2287,7 +2304,7 @@ pre {
 .widget .recent-post .single-author .post-title,
 .widget .recent-post .recent-single-post .single-author-name,
 .widget .recent-post .single-author .single-author-name {
-  font-family: 'akzidenz', 'proxima-nova', serif;
+  font-family: 'akzidenz-regular', sans-serif;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -2383,7 +2400,7 @@ pre {
 	pagination
 ====================================================*/
 .pagination {
-  margin: 10px 0;
+  margin: 10px 0 20px;
   text-align: center;
   display: block;
   order: 20;
@@ -2518,6 +2535,9 @@ pre {
   .postlist {
     padding: 15px;
   }
+}
+.postlist:last-child {
+  margin-bottom: 0;
 }
 .meta .nodejs,
 .post-meta .nodejs {
@@ -2771,6 +2791,7 @@ pre {
   padding: 10px 14px;
   line-height: 1;
   background: #26a2c7;
+  transition: .2s all easeout;
 }
 .page-projects .follow-button:hover {
   color: inherit;
@@ -2836,6 +2857,7 @@ pre {
   width: auto;
   background: #f9f9f9;
   padding: 16px;
+  transition: .2s all easeout;
 }
 .page-projects .repos a:hover,
 .page-projects .repos a:hover span {
