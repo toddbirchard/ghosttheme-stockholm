@@ -300,6 +300,11 @@ pre {
     margin: 10px 20px 60px 20px;
   }
 }
+@media (max-width: 800px) {
+  .main-footer .widget {
+    width: auto;
+  }
+}
 .main-footer .widget .title {
   color: #FFFFFF;
   font-size: 28px;
@@ -1440,7 +1445,7 @@ pre {
 }
 @media (max-width: 600px) {
   .page-about h1 {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 .page-about .fluid-width-video-wrapper {
@@ -1537,6 +1542,11 @@ pre {
 .page-series .tag-wrapper {
   margin-right: 30px;
   background: #025fa5;
+}
+@media (max-width: 600px) {
+  .page-projects h1 {
+    font-size: 3em;
+  }
 }
 .page-projects h2 {
   margin-bottom: 20px !important;
@@ -2497,7 +2507,7 @@ pre {
 }
 @media (max-width: 600px) {
   .post-header .post-navigation .menu {
-    width: 200px;
+    width: 230px;
     padding: 25px 20px;
   }
 }
@@ -2751,6 +2761,11 @@ pre {
   padding: 20px 25px 0;
   min-height: 135px;
 }
+@media (max-width: 800px) {
+  .page-projects .profile {
+    padding: 10px;
+  }
+}
 .page-projects .stats {
   padding: 5px;
 }
@@ -2764,6 +2779,12 @@ pre {
   display: flex;
   justify-content: space-between;
   list-style: none;
+}
+@media (max-width: 800px) {
+  .page-projects .languages {
+    margin: 0;
+    padding: 15px;
+  }
 }
 .page-projects .languages::before {
   position: absolute;
@@ -2792,6 +2813,12 @@ pre {
   line-height: 1;
   background: #26a2c7;
   transition: .2s all easeout;
+}
+@media (max-width: 800px) {
+  .page-projects .follow-button {
+    padding: 8px 12px;
+    font-size: 0.7em;
+  }
 }
 .page-projects .follow-button:hover {
   color: inherit;
@@ -2833,6 +2860,11 @@ pre {
   margin: 0 20px 25px 0;
   border-radius: 2px;
   box-shadow: 0 0 2px 0 #DDD;
+}
+@media (max-width: 800px) {
+  .page-projects .avatar {
+    margin: 0 15px 15px 0;
+  }
 }
 .page-projects .repos {
   clear: both;

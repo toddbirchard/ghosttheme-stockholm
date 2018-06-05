@@ -27,6 +27,10 @@
     overflow: hidden;
     padding: 20px 25px 0;
     min-height: 135px;
+
+    @media(max-width: 800px){
+      padding: 10px;
+    }
   }
 
   .stats {
@@ -43,6 +47,11 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+
+    @media(max-width: 800px){
+      margin: 0;
+      padding: 15px;
+    }
 
     &::before {
       position: absolute;
@@ -75,6 +84,11 @@
     line-height: 1;
     background: @theme-color;
     transition: .2s all easeout;
+
+    @media(max-width: 800px){
+      padding: 8px 12px;
+      font-size: 0.7em;
+    }
   }
 
   .follow-button:hover {
@@ -120,6 +134,10 @@
     margin: 0 20px 25px 0;
     border-radius: 2px;
     box-shadow: 0 0 2px 0 #DDD;
+
+    @media(max-width: 800px){
+      margin: 0 15px 15px 0;
+    }
   }
   /* List of repositories */
   .repos {
