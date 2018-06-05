@@ -8,22 +8,23 @@
 		padding: 0;
 		max-width: 1000px !important;
 		@media(max-width: 800px) {
-			margin: 0;
+		  margin: 0 0 20px 0 !important;
 			width: 100% !important;
 		}
 	}
 
 	h2 {
 		font-size: 2.5em;
+		line-height: 1;
 
 		@media(max-width: 800px) {
 			font-size: 2em;
+			line-height: 1;
 		}
 	}
 
 	h3 {
 		font-size: 1.5em;
-
 	}
 
 
@@ -46,7 +47,7 @@
 			span {
 				text-transform: capitalize;
 				color: #467192;
-				font-family: 'akzidenz-medium' !important;
+				font-family: 'akzidenz-regular' !important;
 			}
 		}
 	}
@@ -62,8 +63,6 @@
 		width: 100%;
 		max-width: 1000px;
 		padding:0 !important;
-
-
 
 		table {
 			margin-bottom: 10px;
@@ -127,6 +126,7 @@
 
 		a {
 			color: #9ea1ab;
+			font-family: 'akzidenz-regular';
 		}
 
 		i {
@@ -148,6 +148,25 @@
 			border: 1px solid #eaeaea;
 		}
 
+		a {
+			font-family: 'akzidenz-regular';
+		}
+
+		blockquote {
+			margin: 40px;
+
+			@media(max-width: 600px){
+				margin: 20px;
+			}
+
+			p {
+				 padding-left: 20px;
+				 font-size: 24px;
+			   line-height: 1;
+			   color: #26a2c7;
+			}
+		}
+
 		p {
 			margin-top: 8px;
 		}
@@ -166,7 +185,7 @@
 		right: 0;
 		padding: 0;
 		background-image: none;
-		background: linear-gradient(0deg, rgba(18, 13, 123, 0.01) 10%, rgba(0, 13, 105, 0.98) 100%);
+		background: linear-gradient(0deg, rgba(18, 13, 123, 0.01) 0%, rgba(12, 17, 51, 0.9) 100%);
 		z-index: 100;
 
 		.mobile-branding {
@@ -228,11 +247,11 @@
 
 	.about-author {
 		background: @white;
-		padding: 40px;
+		padding: 40px 100px;
 		margin: 20px 0;
 
-		@media(max-width: 800px) {
-			padding: 20px;
+		@media(max-width: 1000px) {
+			padding: 30px 40px;
 			margin: 20px;
 		}
 
@@ -244,8 +263,6 @@
     	overflow: hidden;
 			margin-right: 30px;
 			.border-radius(50%);
-
-
 
 			img {
 				width:100%;
@@ -275,6 +292,7 @@
 		.author {
 			font-size: 1.5em;
 			margin-bottom: 5px;
+			font-family: 'akzidenz-regular';
 
 			a {
 				&:hover {
@@ -469,6 +487,7 @@
 			margin-top: 40px;
 			margin-bottom: 0;
 			color:@text-post-header;
+			line-height: 1;
 		}
 
 		h2,
@@ -516,171 +535,6 @@
 
 			&:hover {
 				color: @hover-color;
-			}
-		}
-	}
-}
-/*====================================================
-	post footer
-====================================================*/
-.post-footer {
-	padding: 10px 0;
-
-	.share-icons {
-		display: flex;
-		justify-content: space-between;
-		margin: 0 !important;
-		padding-left: 0 !important;
-
-		li {
-			list-style: none;
-			display: inline-block;
-			border: 1px solid #ebebeb;
-			padding: 5px 10px !important;
-			transition: 0.2s all ease-out;
-			border-radius: 2px;
-			margin-left: 0 !important;
-
-			@media(max-width: 600px) {
-				 padding: 2px 5px !important;
-			}
-		}
-
-		i {
-			margin-right: 5px;
-
-			@media(max-width: 600px) {
-				font-size: 12px;
-			}
-		}
-
-		span {
-			font-size: 12px;
-		}
-
-		a {
-			display: flex;
-			align-items: center;
-		}
-	}
-
-	.tag-cloud {
-		float: left;
-
-		a {
-			border: 1px solid #e6e6e6;
-			padding: 3px 11px;
-			color: #627e90;
-			line-height: 1.5em;
-			display: inline-block;
-			border-radius: 2px;
-			.transition(all 0.2s ease);
-			margin-right: 10px;
-
-
-			&:hover {
-				color: @white;
-				background: @theme-color;
-				border: 1px solid @theme-color;
-				text-decoration: none;
-			}
-		}
-	}
-
-	.share-icons {
-		@media(max-width: 800px) {
-			padding: 0;
-			display: flex;
-			justify-content: space-between;
-			margin: auto;
-		}
-	}
-
-	.share {
-		float: right;
-		padding-left: 0;
-	}
-	@media(max-width: 800px) {
-		border-top: 1px solid #f0f1f4;
-
-		.share {
-			max-width: 450px;
-		}
-
-		.share,
-		.tag-cloud {
-			float: none;
-			margin: 20px auto;
-
-			* {
-				/*margin: 0 auto !important;*/
-			}
-		}
-
-		.tag-cloud {
-			display: flex;
-			justify-content: center;
-			width: 90%;
-
-			a {
-				margin: 0 10px !important;
-			}
-		}
-
-		.share {
-			width: 100%;
-		}
-	}
-}
-
-.container {
-	.postlist {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-	}
-
-	.main-content {
-		padding-right: 0;
-		padding-left: 0;
-
-		.page-template,
-		.post-page {
-			margin-bottom: 0;
-
-			.post-head {
-				.post-title {
-					font-weight: 700;
-				}
-
-				.author,
-				.date {
-					margin: 10px auto 0;
-					display: block;
-				}
-
-
-			}
-
-			.kg-card-markdown {
-				margin: 0 !important;
-				overflow-x: hidden;
-				padding: 0;
-			}
-		}
-
-		.about-author {
-			background: #fff;
-		}
-
-		.prev-next-wrap {
-			margin: 0;
-			padding: 0 20px 30px;
-	    background: #f0f1f4;
-	    min-height: 70px;
-
-			.btn {
-				max-width: 39%;
 			}
 		}
 	}

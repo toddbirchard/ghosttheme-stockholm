@@ -1,3 +1,11 @@
+.home-template{
+  .main-header{
+    @media(max-width: 800px){
+      height:200px;
+    }
+  }
+}
+
 .page-about {
   h1 {
     @media(max-width: 600px) {
@@ -41,7 +49,7 @@
       width: 100px;
       height: 100px;
       margin: 0;
-      
+
 
       .border-radius(50%);
       @media(max-width: 600px) {
@@ -114,9 +122,6 @@
 }
 
 .page-projects {
-  p {
-    margin: 0 !important;
-  }
 
   h2 {
     margin-bottom: 20px !important;
@@ -260,7 +265,7 @@
       .description {
         padding: 15px;
         background: rgba(255, 255, 255, 0.9);
-        margin: 5px;
+        margin:0;
         position: absolute;
         bottom: 0;
         color: #162c52;

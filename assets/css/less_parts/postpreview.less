@@ -9,10 +9,10 @@
 	}
 
 	.post-head {
-		margin: 10px 10px 20px;
+		margin: 10px 0 20px;
 
 		@media(max-width: 600px){
-			margin: 0 10px 20px;
+			margin: 0 0 25px;
 		}
 
 		.post-title {
@@ -29,8 +29,7 @@
 			text-align: left;
 			@media(max-width: 800px) {
 				font-weight: 500;
-				font-size: 1.2em;
-				text-transform: uppercase;
+				font-size: 1.3em;
 			}
 		}
 	}
@@ -51,7 +50,8 @@
 		max-width: 400px;
 
 		a {
-			color: #467192;
+			color: #5aa8bf;
+			font-family: 'akzidenz-regular';
 		}
 
 		.meta-item {
@@ -59,9 +59,13 @@
 			margin: auto 0;
 			font-family: 'akzidenz-medium';
 
+			@media(max-width: 600px){
+				font-family: 'akzidenz';
+			}
+
 			&.author {
 				span {
-					font-family: 'akzidenz-medium' !important;
+					font-family: 'akzidenz-regular' !important;
 				}
 			}
 
@@ -108,33 +112,33 @@
 	}
 
 	.content {
-		padding: 20px;
+		padding: 20px 30px;
 	}
 
 	.post-permalink {
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
-		padding: 10px;
+		padding: 10px 0;
 
 		.btn {
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: 100;
 			text-transform: uppercase;
 			padding: 10px 20px;
 			@media(max-width: 600px) {
 				font-size: 16px;
 				font-weight: 100;
-				padding: 10PX 20px;
+				padding: 8px 18px;
 			}
 		}
 	}
 
 	.post-content {
 		line-height: 1.5;
-		margin: 0 10px 10px;
+		margin: 0 0 20px;
 		@media(max-width: 600px) {
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 
@@ -187,10 +191,8 @@
 		}
 
 		a {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			line-height: 1.5;
+			font-family: 'akzidenz-regular';
 		}
 	}
 
