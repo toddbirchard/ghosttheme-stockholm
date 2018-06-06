@@ -7,6 +7,10 @@
 /*====================================================
 	MIXINS
 ====================================================*/
+.author-template .main-content {
+  width: 90%;
+  margin: auto;
+}
 .author-template .container .tag-hash-upcoming {
   display: none;
 }
@@ -2195,6 +2199,9 @@ pre {
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+.sidebar .widget .fb {
+  height: 220px;
 }
 .sidebar .widget .newsletter button {
   background: #26a2c7;
