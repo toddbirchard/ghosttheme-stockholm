@@ -2,7 +2,7 @@
   "name": "Stockholm",
   "description": "Stockholm: Minimal Ghost Theme.",
   "demo": "https://hackersandslackers.com",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "engines": {
     "ghost": ">=1.0.0"
   },
@@ -11,9 +11,20 @@
     "email": "toddbirchard@gmail.com",
     "url": "https://toddbirchard.com"
   },
+  "keywords": [
+    "nodejs",
+    "ghost",
+    "express",
+    "blog",
+    "theme"
+  ],
   "screenshots": {
     "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
     "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toddbirchard/ghosttheme-stockholm.git"
   },
   "config": {
     "posts_per_page": 10

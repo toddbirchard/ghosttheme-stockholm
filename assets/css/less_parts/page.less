@@ -3,12 +3,18 @@
     margin: 40px 40px 10px;
   }
 
+  .main-header {
+    @media(max-width: 800px){
+      height: 100px;
+    }
+  }
+
   .menu {
     margin-top: 30px;
     margin-right: 30px;
     @media(max-width: 600px) {
-      width: 200px;
-      padding: 25px 20px;
+      width: 220px;
+      padding: 25px 20px 0 0;
       display: flex;
       justify-content: space-between;
       float: right;
@@ -39,6 +45,7 @@
     display:none;
     @media(max-width: 800px){
       display:block;
+      height:250px !important;
     }
   }
 
