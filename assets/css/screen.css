@@ -1566,6 +1566,12 @@ pre {
   margin-right: 30px;
   background: #025fa5;
 }
+.page-projects .sidebar {
+  display: none;
+}
+.page-projects .container {
+  max-width: 1400px;
+}
 @media (max-width: 600px) {
   .page-projects h1 {
     font-size: 3em;
@@ -2990,6 +2996,159 @@ pre {
 .page-projects .error span.remain {
   text-align: center;
   font-weight: bold;
+}
+.kanban {
+  width: auto;
+  max-height: 1180px;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  padding: 20px;
+}
+.kanban .column {
+  width: 22%;
+  background: white;
+  border: 1px solid #f9f9f9;
+  padding: 20px 15px;
+}
+.kanban .column h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+.kanban .column .cards {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.kanban .column .cards.last-child {
+  margin-bottom: 0px;
+}
+.kanban .column .cards .card {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  position: relative;
+  border: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
+.kanban .column .cards .card.last-child {
+  margin-bottom: 0px;
+}
+.kanban .column .cards .card h5 {
+  font-size: 1em;
+  font-family: 'akzidenz-regular';
+  width: 80%;
+  line-height: 1.2;
+}
+.kanban .column .cards .card p {
+  line-height: 1.3;
+  font-size: .9em;
+  margin: 10px 0;
+  width: auto;
+  overflow: hidden;
+}
+.kanban .column .cards .card .issuetype {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 26px;
+  height: 25px;
+  padding: 5px 0px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+.kanban .column .cards .card .issuetype:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  border-bottom: 10px solid #f9f9f9;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+.kanban .column .cards .card .issuetype img {
+  width: 12px;
+  height: 12px;
+}
+.kanban .column .cards .card .issuetype.Task,
+.kanban .column .cards .card .issuetype.Subtask {
+  background-color: #b8d8f1;
+}
+.kanban .column .cards .card .issuetype.Story {
+  background-color: #b6d49c;
+}
+.kanban .column .cards .card .issuetype.Content {
+  background-color: purple;
+}
+.kanban .column .cards .card .issuetype.Integration {
+  background-color: #F28B8B;
+}
+.kanban .column .cards .card .issuetype.Idea {
+  background-color: orange;
+}
+.kanban .column .cards .card .issuetype.Bug {
+  background-color: #F28B8B;
+}
+.kanban .column .cards .card .info {
+  display: flex;
+  justify-content: space-between;
+}
+.kanban .column .cards .card .info .left {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+.kanban .column .cards .card .info .left .avatar,
+.kanban .column .cards .card .info .left .priority {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+.kanban .column .cards .card .info .left .avatar img,
+.kanban .column .cards .card .info .left .priority img {
+  width: 100%;
+  height: 100%;
+}
+.kanban .column .cards .card .info .left .priority.Highest {
+  color: red;
+}
+.kanban .column .cards .card .info .left .priority.High {
+  color: red;
+}
+.kanban .column .cards .card .info .left .priority.Medium,
+.kanban .column .cards .card .info .left .priority.undefined {
+  color: orange;
+}
+.kanban .column .cards .card .info .left .priority.Low {
+  color: green;
+}
+.kanban .column .cards .card .info .left .priority.Lowest {
+  color: green;
+}
+.kanban .column .cards .card .info .epic {
+  border-radius: 2px;
+  padding: 1px;
+  text-align: center;
+  width: 40%;
+}
+.kanban .column .cards .card .info .epic span {
+  color: white;
+  font-size: 12px;
+  font-family: 'akzidenz-medium';
+}
+.kanban .column .cards .card .info .epic.Creative span,
+.kanban .column .cards .card .info .epic.Widgets span {
+  color: #42526E;
 }
 /*====================================================
 	fonts

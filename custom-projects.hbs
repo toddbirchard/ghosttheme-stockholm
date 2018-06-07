@@ -3,45 +3,9 @@
 <!-- start site's main content area -->
 <section class="content-wrap archive">
 	<div class="container">
-		<div class="row">
-			<!-- start main post area -->
-
-			{{> sidebar}}
-			<div class="col-md-8 main-content">
 				<!-- start post -->
 				{{#post}}
-					<article>
-						{{#if feature_image}}
-							<div class="featured-media" style="background-image: url({{feature_image}});">
-							</div>
-						{{/if}}
-						<div class="page-head">
-							<h1 class="post-title">{{{title}}}</h1>
-						</div>
-						<div class="post-content">
-							{{content}}
-							<div class="github-team">
-								<div id="github-card-todd"
-								     data-username="toddbirchard"
-								     data-max-repos="3"
-								     data-sort-by="stars"
-								     data-header-text="Top repositories">
-								</div>
-
-								<div id="github-card-matt"
-								     data-username="mattalhonte"
-								     data-max-repos="3"
-								     data-sort-by="stars"
-								     data-header-text="Top repositories">
-								</div>
-
-
-
-							</div>
-
-						</div>
-
-					</article>
+					{{> kanban}}
 				{{/post}}
 				<!-- end post -->
 			</div>
@@ -49,10 +13,6 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="{{asset "/js/gh-profile-card.min.js"}}"></script>
-<script>
-    new GitHubCard({ template: '#github-card-todd' }).init();
-    new GitHubCard({ template: '#github-card-matt' }).init();
-</script>
+
 <!--<script src="{{asset "/js/repos.js"}}"></script>-->
 <!-- end site's main content area -->
