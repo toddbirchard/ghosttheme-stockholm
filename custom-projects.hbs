@@ -5,6 +5,14 @@
 	<div class="container">
 				<!-- start post -->
 				{{#post}}
+				<div class="intro">
+					{{#if feature_image}}
+						<div class="featured-media" style="background-image: url({{feature_image}});">
+						</div>
+					{{/if}}
+				  <h1>{{{title}}}</h1>
+				  <p>{{content}}</p>
+				</div>
 					{{> kanban}}
 				{{/post}}
 				<!-- end post -->

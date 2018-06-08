@@ -43,7 +43,7 @@
       $('#' + status + ' .cards').append('<div class="card"> \n' +
         '<h5>' + cards[i].summary + '</h5> \n' +
         '<p>' + cards[i].description + '</p> \n' +
-        '<div class="issuetype ' + cards[i].issuetype + '"><img src="https://hackers.nyc3.digitaloceanspaces.com/task.png"></div> \n' +
+        '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' +
         '<div class="info"> \n' +
           '<div class="left"> \n' +
             '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
@@ -59,19 +59,19 @@
   clientPromise.then(client => {
     const db = client.service('mongodb', 'mongodb-atlas').db('HackersBlog');
     client.login().then(() =>
-      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(9).execute()
+      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'backlog')
     }).then(() =>
-      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(9).execute()
+      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'todo')
     }).then(() =>
-      db.collection('jira').find({status: 'In Progress'}).limit(9).execute()
+      db.collection('jira').find({status: 'In Progress'}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'progress')
     }).then(() =>
-      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(9).execute()
+      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'done')
     }).catch(err => {
