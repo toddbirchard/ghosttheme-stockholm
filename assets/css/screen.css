@@ -11,6 +11,11 @@
   width: 90%;
   margin: auto;
 }
+@media (max-width: 800px) {
+  .author-template .main-content {
+    width: 100%;
+  }
+}
 .author-template .container .tag-hash-upcoming {
   display: none;
 }
@@ -1591,9 +1596,35 @@ pre {
 }
 .page-projects .kg-card-markdown {
   margin-bottom: 30px;
+  width: 75%;
+  float: left;
+}
+@media (max-width: 800px) {
+  .page-projects .kg-card-markdown {
+    width: 100%;
+  }
 }
 .page-projects .post-content {
   margin: 0;
+}
+.page-projects .dropdown {
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #bbbbbb;
+  float: right;
+}
+.page-projects .dropdownafter {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+}
+.page-projects .dropdown:hover {
+  cursor: no-drop;
 }
 .page-projects p {
   margin: 20px 0;
@@ -3029,11 +3060,22 @@ pre {
   background: none;
   padding: 20px 0;
 }
+@media (max-width: 800px) {
+  .kanban {
+    width: 360%;
+    margin-left: 20px;
+  }
+}
 .kanban .column {
   width: 23%;
   background: white;
   border: 1px solid #f9f9f9;
   padding: 20px;
+}
+@media (max-width: 800px) {
+  .kanban .column {
+    width: 80%;
+  }
 }
 .kanban .column h2 {
   margin-top: 0;
@@ -3055,6 +3097,7 @@ pre {
   position: relative;
   border: 1px solid #eaeaea;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .kanban .column .cards .card.last-child {
   margin-bottom: 0px;

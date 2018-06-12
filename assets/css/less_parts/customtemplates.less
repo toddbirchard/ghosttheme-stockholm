@@ -162,10 +162,38 @@
 
   .kg-card-markdown {
     margin-bottom: 30px;
+    width: 75%;
+    float: left;
+
+    @media(max-width: 800px){
+      width:100%;
+    }
   }
 
   .post-content {
     margin: 0;
+  }
+
+  .dropdown {
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #bbbbbb;
+    float: right;
+
+    &after {
+      content: " ";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #f00;
+    }
+
+    &:hover{
+      cursor: no-drop;
+    }
   }
 
   p {

@@ -35,11 +35,20 @@
   background: none;
   padding: 20px 0;
 
+  @media(max-width: 800px){
+    width:360%;
+    margin-left: 20px;
+  }
+
   .column {
     width: 23%;
     background: white;
     border: 1px solid #f9f9f9;
     padding: 20px;
+
+    @media(max-width: 800px){
+      width:80%;
+    }
 
     h2 {
       margin-top: 0;
@@ -63,6 +72,7 @@
         position: relative;
         border: 1px solid #eaeaea;
         margin-bottom: 15px;
+        overflow: hidden;
 
         &.last-child {
           margin-bottom: 0px;
