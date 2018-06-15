@@ -640,14 +640,17 @@ pre {
   margin: 10px 80px 0;
   color: #9ea1ab;
   font-size: 14px;
-  display: flex;
-  justify-content: space-between;
+  display: block;
   width: 35%;
 }
 .post-template .post-meta .author span {
   text-transform: capitalize;
   color: #467192;
   font-family: 'akzidenz-regular' !important;
+}
+.post-template .post-meta .meta-item {
+  margin: 0 30px 0 0;
+  float: left;
 }
 .post-template .container {
   margin: 0 auto;
@@ -831,7 +834,7 @@ pre {
 }
 .post-template .about-author {
   background: #FFFFFF;
-  padding: 40px 100px;
+  padding: 40px 80px;
   margin: 20px 0;
 }
 @media (max-width: 1000px) {
@@ -1167,11 +1170,16 @@ pre {
   }
 }
 .post-footer .tag-cloud {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: block;
   width: 100%;
+}
+@media (max-width: 800px) {
+  .post-footer .tag-cloud {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .post-footer .tag-cloud a {
   border: 1px solid #e6e6e6;
@@ -1186,6 +1194,7 @@ pre {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   font-size: .9em;
+  margin: 5px 10px 5px 0;
 }
 .post-footer .tag-cloud a:hover {
   color: #FFFFFF;
