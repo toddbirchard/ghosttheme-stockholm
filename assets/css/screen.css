@@ -628,6 +628,8 @@ pre {
 }
 .post-template h3 {
   font-size: 1.5em;
+  line-height: 1.2;
+  color: #504f5f;
 }
 .post-template .sidebar,
 .post-template .main-header,
@@ -690,7 +692,7 @@ pre {
 }
 .post-template .post-head {
   padding: 30px 0;
-  margin: 0 100px;
+  margin: 0 80px;
   border-bottom: 1px solid #eaeaea;
 }
 @media (max-width: 800px) {
@@ -699,7 +701,7 @@ pre {
   }
 }
 .post-template .post-meta {
-  margin: 10px 100px 0;
+  margin: 10px 80px 0;
   color: #9ea1ab;
   font-size: 14px;
 }
@@ -728,7 +730,7 @@ pre {
   }
 }
 .post-template .post-content {
-  margin: 20px 100px 40px;
+  margin: 20px 80px 40px;
 }
 .post-template .post-content .kg-card-markdown > p {
   text-align: justify;
@@ -770,7 +772,7 @@ pre {
   right: 0;
   padding: 0;
   background-image: none;
-  background: linear-gradient(0deg, rgba(18, 13, 123, 0.01) 0%, rgba(12, 17, 51, 0.9) 100%);
+  background: linear-gradient(0deg, rgba(18, 13, 123, 0) 0%, rgba(48, 55, 100, 0.8) 100%);
   z-index: 100;
 }
 .post-template .post-header .mobile-branding {
@@ -847,12 +849,15 @@ pre {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  margin-bottom: 20px;
+  float: left;
 }
 .post-template .about-author .avatar img {
   width: 100%;
 }
 .post-template .about-author .details {
   display: inline-block;
+  float: left;
 }
 .post-template .about-author .details span {
   display: block;
@@ -867,6 +872,8 @@ pre {
   line-height: 1.5;
   margin-top: 10px;
   font-weight: 100;
+  width: 100%;
+  clear: both;
 }
 .post-template .about-author .author {
   font-size: 1.5em;
@@ -1281,7 +1288,9 @@ pre {
 }
 .post-preview .featured-media {
   box-sizing: border-box;
-  overflow: visible;
+  max-height: 400px;
+  display: block;
+  overflow: hidden;
   margin: auto;
 }
 .post-preview .post-head {
@@ -3062,7 +3071,7 @@ pre {
 }
 @media (max-width: 800px) {
   .kanban {
-    width: 360%;
+    width: 350%;
     margin-left: 20px;
   }
 }
