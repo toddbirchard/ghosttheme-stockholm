@@ -24,6 +24,10 @@
 				padding: 10px 20px;
 				border: 0;
 
+				span {
+					font-size: 12px;
+				}
+
 				&:hover {
 					background: @hover-color;
 				}
@@ -35,18 +39,53 @@
 		    text-align: right;
 			}
 		}
+
+		.series {
+			& > a {
+				display: none;
+			}
+
+			.count {
+				float: right;
+				color: #888888;
+				font-size: 11px;
+			}
+
+			.recent-single-post {
+				border-bottom: 1px dashed #ebebeb;
+				padding: 12px 0px;
+
+				&:last-child {
+					border-bottom: 0;
+					padding: 12px 0 0 0;
+				}
+
+				&:nth-of-type(1) {
+					display: none;
+				}
+
+				&:nth-of-type(2) {
+					padding: 0 0 12px 0;
+				}
+			}
+
+			p {
+				color: #959595;
+				font-size: 12px;
+				opacity: 0.8;
+				margin: 0;
+			}
+		}
 	}
 
 	.recent-single-post {
 		.post-title {
-			color: #2094a2;
+			color: #627e90;
 			line-height: 1;
 			font-size: 15px;
 			margin:0;
-
-			a {
-				font-family: 'akzidenz-regular';
-			}
+			font-family: 'akzidenz-regular', sans-serif;
+			font-weight:100;
 
 
 			&:hover {
@@ -221,9 +260,10 @@
 		}
 
 		.subscribe-email {
-			padding: 10px 5%;
+			padding: 15px 5%;
 			width: 90%;
 			font-size: 12px;
+			/*color: #ebebeb;*/
 		}
 
 		.input-group,

@@ -707,6 +707,7 @@ pre {
   margin: 10px 80px 0;
   color: #9ea1ab;
   font-size: 14px;
+  height: 20px;
 }
 @media (max-width: 800px) {
   .post-template .post-meta {
@@ -1735,13 +1736,14 @@ pre {
   margin-right: 7px;
 }
 .tag-container .tag-wrapper a .description {
-  padding: 15px;
+  padding: 15px 0;
   background: rgba(255, 255, 255, 0.9);
   margin: 0;
   position: absolute;
   bottom: 0;
   color: #162c52;
   font-family: 'akzidenz-medium';
+  width: 100%;
 }
 .tag-container .tag-wrapper a p {
   font-size: 14px;
@@ -2265,6 +2267,9 @@ pre {
   padding: 10px 20px;
   border: 0;
 }
+.sidebar .widget .newsletter button span {
+  font-size: 12px;
+}
 .sidebar .widget .newsletter button:hover {
   background: #40cebb;
 }
@@ -2273,14 +2278,41 @@ pre {
   display: block;
   text-align: right;
 }
+.sidebar .widget .series > a {
+  display: none;
+}
+.sidebar .widget .series .count {
+  float: right;
+  color: #888888;
+  font-size: 11px;
+}
+.sidebar .widget .series .recent-single-post {
+  border-bottom: 1px dashed #ebebeb;
+  padding: 12px 0px;
+}
+.sidebar .widget .series .recent-single-post:last-child {
+  border-bottom: 0;
+  padding: 12px 0 0 0;
+}
+.sidebar .widget .series .recent-single-post:nth-of-type(1) {
+  display: none;
+}
+.sidebar .widget .series .recent-single-post:nth-of-type(2) {
+  padding: 0 0 12px 0;
+}
+.sidebar .widget .series p {
+  color: #959595;
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 0;
+}
 .sidebar .recent-single-post .post-title {
-  color: #2094a2;
+  color: #627e90;
   line-height: 1;
   font-size: 15px;
   margin: 0;
-}
-.sidebar .recent-single-post .post-title a {
-  font-family: 'akzidenz-regular';
+  font-family: 'akzidenz-regular', sans-serif;
+  font-weight: 100;
 }
 .sidebar .recent-single-post .post-title:hover {
   color: #40cebb;
@@ -2433,9 +2465,10 @@ pre {
   width: 100%;
 }
 .widget .newsletter .subscribe-email {
-  padding: 10px 5%;
+  padding: 15px 5%;
   width: 90%;
   font-size: 12px;
+  /*color: #ebebeb;*/
 }
 .widget .newsletter .input-group,
 .widget .newsletter .form-group {
@@ -3070,6 +3103,9 @@ pre {
     margin-top: -7% !important;
   }
 }
+.intro .kg-card-markdown {
+  margin-bottom: 0;
+}
 .kanban {
   width: auto;
   max-height: 1180px;
@@ -3114,7 +3150,7 @@ pre {
   padding: 10px 15px;
   position: relative;
   border: 1px solid #eaeaea;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 .kanban .column .cards .card.last-child {
@@ -3306,9 +3342,15 @@ pre {
 .cover .tag-name {
   margin-top: 0;
 }
+.cover .tag-name i {
+  font-size: 16px;
+  margin-right: 5px;
+}
 .cover .post-count {
-  margin-top: 7px;
   color: #959595;
+}
+.cover h3 {
+  margin-bottom: 10px;
 }
 .cover .avatar {
   width: 100px;

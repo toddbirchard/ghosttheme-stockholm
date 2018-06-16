@@ -36,10 +36,7 @@
 <script>
 
   function populateCards(cards, status) {
-    console.log('backlog = ' + cards);
-    console.log('status = ' + status);
     for (var i = 0; i < cards.length; i++) {
-      console.log('issue = ' + cards[i]);
       $('#' + status + ' .cards').append('<div class="card"> \n' +
         '<h5>' + cards[i].summary + '</h5> \n' +
         '<p>' + cards[i].description + '</p> \n' +
@@ -63,11 +60,11 @@
     ).then(docs => {
       populateCards(docs, 'backlog')
     }).then(() =>
-      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'todo')
     }).then(() =>
-      db.collection('jira').find({status: 'In Progress'}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(6).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'progress')
     }).then(() =>
