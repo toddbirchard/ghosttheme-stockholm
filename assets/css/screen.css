@@ -1483,10 +1483,10 @@ pre {
   margin: 0;
 }
 @media (max-width: 800px) {
+  .author-template .main-header,
   .home-template .main-header,
   .paged .main-header,
-  .tag-template .main-header,
-  .author-template .main-header {
+  .tag-template .main-header {
     height: 200px;
   }
 }
@@ -1609,6 +1609,13 @@ pre {
 }
 .page-projects .repo img {
   margin: 0;
+}
+@media (max-width: 800px) {
+  .page-projects .featured-media {
+    width: 129% !important;
+    margin-left: -13% !important;
+    margin-top: -8% !important;
+  }
 }
 .page-projects .col-md-8 {
   background: white;
@@ -3096,13 +3103,6 @@ pre {
 .intro p:last-child {
   margin: 0;
 }
-@media (max-width: 800px) {
-  .intro .featured-media {
-    width: 114% !important;
-    margin-left: -7% !important;
-    margin-top: -7% !important;
-  }
-}
 .intro .kg-card-markdown {
   margin-bottom: 0;
 }
@@ -3152,6 +3152,7 @@ pre {
   border: 1px solid #eaeaea;
   margin-bottom: 20px;
   overflow: hidden;
+  border-radius: 3px;
 }
 .kanban .column .cards .card.last-child {
   margin-bottom: 0px;
@@ -3260,14 +3261,14 @@ pre {
   transform: rotate(180deg);
 }
 .kanban .column .cards .card .info .epic {
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
   padding: 1px 10px;
 }
 .kanban .column .cards .card .info .epic span {
   color: white;
   font-size: 12px;
-  font-family: 'akzidenz-regular';
+  font-family: 'akzidenz-medium';
 }
 .kanban .column .cards .card .info .epic.Creative span,
 .kanban .column .cards .card .info .epic.Widgets span,
