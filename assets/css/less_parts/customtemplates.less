@@ -11,6 +11,10 @@
 
 .page-about {
   h1 {
+    @media(max-width: 1040px) {
+          margin: 40px 30px 10px !important;
+    }
+
     @media(max-width: 600px) {
       font-size: 3em;
     }
@@ -28,6 +32,11 @@
     padding: 30px;
     margin: 10px 0;
     width: 40%;
+
+    @media(max-width: 1040px) {
+      padding: 20px;
+    }
+
     @media(max-width: 600px) {
       display: block !important;
     }
@@ -39,6 +48,10 @@
     .author-specs {
       display: flex;
       justify-content: space-between;
+
+      @media(max-width: 1040px){
+        display: block;
+      }
     }
 
     .fluid-width-video-wrapper {
@@ -48,9 +61,20 @@
       padding: 0;
     }
 
+    .avatar-link {
+      width:28%;
+      display: inline-block;
+      height: fit-content;
+
+      @media(max-width: 1040px) {
+        width:12%;
+        margin: 0 auto 15px;
+        display: block;
+      }
+
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 100%;
+      height: 100%;
       margin: 0;
       .border-radius(50%);
       @media(max-width: 600px) {
@@ -58,9 +82,17 @@
         height: 70px;
       }
     }
+  }
 
     .details {
-      width: 60%;
+      width: 65%;
+      display: inline-block;
+      margin-left: 5%;
+
+      @media(max-width: 1040px) {
+        text-align: center;
+        width:90%;
+      }
     }
 
     .bio {
@@ -69,6 +101,10 @@
       line-height: 1.5;
       margin: 10px 0 0;
       font-weight: 100;
+
+      @media(max-width: 1040px) {
+        text-align: center;
+      }
     }
 
     .author {
@@ -89,9 +125,17 @@
       color: @text-color-light;
       margin-bottom: 7px;
 
+      @media (max-width: 1040px) {
+        justify-content: center !important;
+      }
+
       span {
         margin-right: 10px;
         display: block;
+
+        @media (max-width: 1040px) {
+          margin:0 15px;
+        }
 
         i {
           margin-right: 7px;
@@ -108,6 +152,8 @@
 .page-series {
   .post-title {
     margin: 40px 80PX 0;
+
+
   }
 
   p {
@@ -139,6 +185,8 @@
 
   h2 {
     margin-bottom: 20px !important;
+    border-bottom: 1px solid #26a2c7;
+    padding-bottom: 10px;
   }
 
   .repo {
@@ -184,6 +232,7 @@
     padding: 5px 10px;
     color: #bbbbbb;
     float: right;
+    margin-top: 20px;
 
     &after {
       content: " ";
@@ -243,7 +292,7 @@
   flex-flow: row wrap;
   margin: 30px 40px;
   @media(max-width: 800px) {
-    margin: 30px 40px;
+    margin: 30px 25px;
   }
 
   .tag-wrapper {
@@ -252,9 +301,9 @@
     margin: 0 0 10px;
     border: 1px solid #dadada;
     transition: all 0.3s ease-out;
-    @media(max-width: 1040px) {
+    @media(max-width: 800px) {
       width: 100%;
-      margin: 0 0 30px;
+      margin: 0 0 20px;
     }
 
     &:hover {

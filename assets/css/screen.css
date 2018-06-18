@@ -757,7 +757,7 @@ pre {
 }
 @media (max-width: 800px) {
   .post-template .post-head {
-    margin: 0 40px;
+    margin: 0 25px;
   }
 }
 .post-template .post-meta {
@@ -768,7 +768,7 @@ pre {
 }
 @media (max-width: 800px) {
   .post-template .post-meta {
-    margin: 10px 40px 0;
+    margin: 10px 25px 0;
   }
 }
 .post-template .post-meta > div {
@@ -821,7 +821,7 @@ pre {
 }
 @media (max-width: 800px) {
   .post-template .post-content {
-    margin: 20px 40px 0;
+    margin: 20px 25px 0;
   }
 }
 .post-template .post-header {
@@ -1547,6 +1547,11 @@ pre {
     height: 200px;
   }
 }
+@media (max-width: 1040px) {
+  .page-about h1 {
+    margin: 40px 30px 10px !important;
+  }
+}
 @media (max-width: 600px) {
   .page-about h1 {
     font-size: 3em;
@@ -1566,6 +1571,11 @@ pre {
   margin: 10px 0;
   width: 40%;
 }
+@media (max-width: 1040px) {
+  .page-about .about-author {
+    padding: 20px;
+  }
+}
 @media (max-width: 600px) {
   .page-about .about-author {
     display: block !important;
@@ -1578,28 +1588,53 @@ pre {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1040px) {
+  .page-about .about-author .author-specs {
+    display: block;
+  }
+}
 .page-about .about-author .fluid-width-video-wrapper {
   width: 90%;
   margin: auto;
   position: relative;
   padding: 0;
 }
-.page-about .about-author .avatar {
-  width: 100px;
-  height: 100px;
+.page-about .about-author .avatar-link {
+  width: 28%;
+  display: inline-block;
+  height: fit-content;
+}
+@media (max-width: 1040px) {
+  .page-about .about-author .avatar-link {
+    width: 12%;
+    margin: 0 auto 15px;
+    display: block;
+  }
+}
+.page-about .about-author .avatar-link .avatar {
+  width: 100%;
+  height: 100%;
   margin: 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
 @media (max-width: 600px) {
-  .page-about .about-author .avatar {
+  .page-about .about-author .avatar-link .avatar {
     width: 70px;
     height: 70px;
   }
 }
 .page-about .about-author .details {
-  width: 60%;
+  width: 65%;
+  display: inline-block;
+  margin-left: 5%;
+}
+@media (max-width: 1040px) {
+  .page-about .about-author .details {
+    text-align: center;
+    width: 90%;
+  }
 }
 .page-about .about-author .bio {
   display: block;
@@ -1607,6 +1642,11 @@ pre {
   line-height: 1.5;
   margin: 10px 0 0;
   font-weight: 100;
+}
+@media (max-width: 1040px) {
+  .page-about .about-author .bio {
+    text-align: center;
+  }
 }
 .page-about .about-author .author {
   font-size: 1.3em;
@@ -1622,9 +1662,19 @@ pre {
   color: #959595;
   margin-bottom: 7px;
 }
+@media (max-width: 1040px) {
+  .page-about .about-author .meta-info {
+    justify-content: center !important;
+  }
+}
 .page-about .about-author .meta-info span {
   margin-right: 10px;
   display: block;
+}
+@media (max-width: 1040px) {
+  .page-about .about-author .meta-info span {
+    margin: 0 15px;
+  }
 }
 .page-about .about-author .meta-info span i {
   margin-right: 7px;
@@ -1660,6 +1710,8 @@ pre {
 }
 .page-projects h2 {
   margin-bottom: 20px !important;
+  border-bottom: 1px solid #26a2c7;
+  padding-bottom: 10px;
 }
 .page-projects .repo .author {
   margin-top: 10px;
@@ -1696,6 +1748,7 @@ pre {
   padding: 5px 10px;
   color: #bbbbbb;
   float: right;
+  margin-top: 20px;
 }
 .page-projects .dropdownafter {
   content: " ";
@@ -1746,7 +1799,7 @@ pre {
 }
 @media (max-width: 800px) {
   .tag-container {
-    margin: 30px 40px;
+    margin: 30px 25px;
   }
 }
 .tag-container .tag-wrapper {
@@ -1756,10 +1809,10 @@ pre {
   border: 1px solid #dadada;
   transition: all 0.3s ease-out;
 }
-@media (max-width: 1040px) {
+@media (max-width: 800px) {
   .tag-container .tag-wrapper {
     width: 100%;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
   }
 }
 .tag-container .tag-wrapper:hover .tag-title {
@@ -2664,9 +2717,19 @@ pre {
 .page-template .page-head .post-title {
   margin: 40px 40px 0;
 }
+@media (max-width: 800px) {
+  .page-template .page-head .post-title {
+    margin: 40px 30px 0;
+  }
+}
 .page-template .post-content {
   margin: 20px 40px;
   /*width: 68%;*/
+}
+@media (max-width: 800px) {
+  .page-template .post-content {
+    margin: 25px 30px 0;
+  }
 }
 .page-template p {
   margin: 0 auto 20px;
