@@ -1,21 +1,10 @@
-.page-projects {
-  .github-team {
-    display: flex;
-    justify-content: space-between;
-    @media(max-width: 800px) {
-      display: block;
-    }
-  }
-
-  #github-card-matt,
-  #github-card-todd {
-    width: 46%;
+.page-projects,
+.author-template {
+  .gh-profile-card {
+    width: 100%;
     font-size: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #DDD;
     overflow: hidden;
-    padding: 10px;
+
     @media(max-width: 800px) {
       width: auto;
       margin-bottom: 30px;
@@ -25,7 +14,7 @@
   .profile {
     background: #FFF;
     overflow: hidden;
-    padding: 20px 25px 0;
+        padding: 0 14px 0;
     min-height: 135px;
 
     @media(max-width: 800px){
@@ -67,8 +56,8 @@
       display: inline-block;
       font-family: 'akzidenz-medium';
       color: #444;
-      margin-left: 10px;
       font-size: 1.1em;
+      border: 0;
     }
   }
 

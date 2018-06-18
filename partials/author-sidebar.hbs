@@ -1,0 +1,80 @@
+{{#author}}
+	<div class="sidebar"></div>
+
+	<script src="https://s3.amazonaws.com/stitch-sdks/js/library/v3/stable/stitch.min.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+	<script>
+		function authorSidebar(docs) {
+			if (docs[0]['website']) {
+				$.ajax({
+					url: 'https://api.linkpreview.net' + "?key=" + linkpreview_key + " &q=" + docs[0]['website'],
+					contentType: "application/json",
+					dataType: 'json',
+					success: function(result) {
+						$('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><h4>' + result.title + '</h4><i class="fas fa-link"></i></div></a></div></div>');
+					}
+				});
+			}
+
+			if (docs[0]['github']) {
+				console.log("docs[0]['github'] = " + docs[0]['github']);
+				$('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">Github</h4><div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + docs[0]['github'] + '"></div></div></div>');
+			}
+
+			if (docs[0]['linkedin']) {
+				console.log("docs[0]['linkedin'] = " + docs[0]['linkedin']);
+				$('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">LinkedIn</h4><div style="width:100%;" class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="' + docs[0]['linkedin'] +'"><a class="LI-simple-link" href="https://www.linkedin.com/in/' + docs[0]['linkedin'] + '?trk=profile-badge">Todd Birchard</a></div></div></div>');
+			}
+
+			if (docs[0]['meetup']) {
+				$.ajax({
+					url: 'https://api.meetup.com/members/' + docs[0]['meetup'],
+					contentType: "application/json",
+					dataType: 'jsonp',
+					success: function(result) {
+						console.log("JSON.stringify(result) = " + JSON.stringify(result));
+						$('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n '
+						+ '<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"> \n '
+						+ '<img src="' + result['data']['photo']['thumb_link'] + '"> \n'
+						+ '<div class="info">'
+						+ '<span class="name">' + result['data']['name'] + '</span> \n '
+						+ '<span class="location">' + result['data']['city'] + '</span></a> \n '
+						+ '<span class="country">' + result['data']['localized_country_name'] + '</span></div></a> \n '
+						+ '<p>' + result['data']['bio'] + '</p></div></div>');
+					}
+				});
+			}
+
+			if (docs[0]['twitter']) {
+				console.log("docs[0]['twitter'] = " + docs[0]['twitter']);
+				$('.sidebar').append('<div class="widget" style="order:2;><div class="content twitter"><h4 class="title">Twitter</h4><a class="twitter-timeline" data-chrome="nofooter noheader noscrollbar" data-tweet-limit="5" data-link-color="#26a2c7" href="https://twitter.com/' + docs[0]['twitter'] + '?ref_src=twsrc%5Etfw"></a></div></div>');
+			}
+
+			if (docs[0]['tableau']) {
+				var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
+			}
+
+
+
+		}
+
+		const clientPromise = stitch.StitchClientFactory.create('hackerauthors-kjmze');
+		clientPromise.then(client => {
+			const db = client.service('mongodb', 'mongodb-atlas').db('HackersBlog');
+			client.login().then(() =>
+				db.collection('authors').find({
+					author: '{{slug}}'
+				}).execute()
+			).then(docs => {
+				console.log("Found docs", docs)
+				console.log("[MongoDB Stitch] Connected to Stitch")
+				authorSidebar(docs)
+			}).catch(err => {
+				console.error(err)
+			});
+		});
+	</script>
+	<script src="{{asset "/js/gh-profile-card.min.js"}}"></script>
+{{/author}}

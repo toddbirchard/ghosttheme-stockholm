@@ -1,7 +1,78 @@
 .author-template {
 
+	.widget {
+		order:1;
+	}
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+
+		.meetup {
+
+			.name {
+				font-size: 1.4em;
+				font-family: 'akzidenz-regular', sans-serif;
+			}
+
+			.location,
+			.country {
+				display:block;
+			}
+
+			img {
+				display: inline-block;
+				margin-right: 15px;
+				height: 70px;
+			}
+
+			.info {
+				display: inline-block;
+			}
+		}
+	}
+
+	.LI-badge-container.horizontal.light {
+		width:100% !important;
+		position: relative;
+
+		.LI-more-info {
+			float: left;
+		}
+
+		.LI-footer {
+			position: absolute;
+			right: 15px;
+			bottom: 0;
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+
+			a {
+				border-color: transparent !important;
+				border: 0 !important;
+		    padding: 0;
+		    margin: 0;
+		    line-height: 1;
+
+				&:hover {
+					border: 0;
+				}
+			}
+		}
+
+		.LI-field {
+			display: block;
+			text-align: left;
+		}
+
+		.LI-logo {
+			display: none;
+		}
+	}
+
 	.main-content {
-		width: 90%;
+		width: 67%;
 		margin:auto;
 
 		@media(max-width: 800px){
@@ -12,10 +83,12 @@
 		display: none;
 	}
 
+  .author-cover  {
 	.avatar {
-		float:none;
-		margin:0;
+		float:none !important;
+		margin:0 !important;
 	}
+}
 
 	h3 {
 		 font-size: 2em;

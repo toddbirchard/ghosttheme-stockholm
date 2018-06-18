@@ -7,8 +7,63 @@
 /*====================================================
 	MIXINS
 ====================================================*/
+.author-template .widget {
+  order: 1;
+}
+.author-template .sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.author-template .sidebar .meetup .name {
+  font-size: 1.4em;
+  font-family: 'akzidenz-regular', sans-serif;
+}
+.author-template .sidebar .meetup .location,
+.author-template .sidebar .meetup .country {
+  display: block;
+}
+.author-template .sidebar .meetup img {
+  display: inline-block;
+  margin-right: 15px;
+  height: 70px;
+}
+.author-template .sidebar .meetup .info {
+  display: inline-block;
+}
+.author-template .LI-badge-container.horizontal.light {
+  width: 100% !important;
+  position: relative;
+}
+.author-template .LI-badge-container.horizontal.light .LI-more-info {
+  float: left;
+}
+.author-template .LI-badge-container.horizontal.light .LI-footer {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+.author-template .LI-badge-container.horizontal.light .LI-footer a {
+  border-color: transparent !important;
+  border: 0 !important;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+.author-template .LI-badge-container.horizontal.light .LI-footer a:hover {
+  border: 0;
+}
+.author-template .LI-badge-container.horizontal.light .LI-field {
+  display: block;
+  text-align: left;
+}
+.author-template .LI-badge-container.horizontal.light .LI-logo {
+  display: none;
+}
 .author-template .main-content {
-  width: 90%;
+  width: 67%;
   margin: auto;
 }
 @media (max-width: 800px) {
@@ -19,9 +74,9 @@
 .author-template .container .tag-hash-upcoming {
   display: none;
 }
-.author-template .avatar {
-  float: none;
-  margin: 0;
+.author-template .author-cover .avatar {
+  float: none !important;
+  margin: 0 !important;
 }
 .author-template h3 {
   font-size: 2em;
@@ -2839,7 +2894,8 @@ pre {
   margin-right: 10px;
   border-radius: 50%;
 }
-.page-projects {
+.page-projects,
+.author-template {
   /* followers number */
   /* List of repositories */
   /*
@@ -2856,47 +2912,38 @@ pre {
 }
 */
 }
-.page-projects .github-team {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 800px) {
-  .page-projects .github-team {
-    display: block;
-  }
-}
-.page-projects #github-card-matt,
-.page-projects #github-card-todd {
-  width: 46%;
+.page-projects .gh-profile-card,
+.author-template .gh-profile-card {
+  width: 100%;
   font-size: 16px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #DDD;
   overflow: hidden;
-  padding: 10px;
 }
 @media (max-width: 800px) {
-  .page-projects #github-card-matt,
-  .page-projects #github-card-todd {
+  .page-projects .gh-profile-card,
+  .author-template .gh-profile-card {
     width: auto;
     margin-bottom: 30px;
   }
 }
-.page-projects .profile {
+.page-projects .profile,
+.author-template .profile {
   background: #FFF;
   overflow: hidden;
-  padding: 20px 25px 0;
+  padding: 0 14px 0;
   min-height: 135px;
 }
 @media (max-width: 800px) {
-  .page-projects .profile {
+  .page-projects .profile,
+  .author-template .profile {
     padding: 10px;
   }
 }
-.page-projects .stats {
+.page-projects .stats,
+.author-template .stats {
   padding: 5px;
 }
-.page-projects .languages {
+.page-projects .languages,
+.author-template .languages {
   position: relative;
   clear: both;
   margin: 0 -10px;
@@ -2908,12 +2955,14 @@ pre {
   list-style: none;
 }
 @media (max-width: 800px) {
-  .page-projects .languages {
+  .page-projects .languages,
+  .author-template .languages {
     margin: 0;
     padding: 15px;
   }
 }
-.page-projects .languages::before {
+.page-projects .languages::before,
+.author-template .languages::before {
   position: absolute;
   top: -0.7em;
   background: #FFF;
@@ -2922,17 +2971,20 @@ pre {
   font-style: italic;
   color: #555;
 }
-.page-projects .languages li {
+.page-projects .languages li,
+.author-template .languages li {
   display: inline-block;
   font-family: 'akzidenz-medium';
   color: #444;
-  margin-left: 10px;
   font-size: 1.1em;
+  border: 0;
 }
-.page-projects .followMe {
+.page-projects .followMe,
+.author-template .followMe {
   margin-top: 3px;
 }
-.page-projects .follow-button {
+.page-projects .follow-button,
+.author-template .follow-button {
   font-size: 0.8em;
   color: white;
   float: left;
@@ -2942,16 +2994,19 @@ pre {
   transition: .2s all easeout;
 }
 @media (max-width: 800px) {
-  .page-projects .follow-button {
+  .page-projects .follow-button,
+  .author-template .follow-button {
     padding: 8px 12px;
     font-size: 0.7em;
   }
 }
-.page-projects .follow-button:hover {
+.page-projects .follow-button:hover,
+.author-template .follow-button:hover {
   color: inherit;
   background: #40cebb;
 }
-.page-projects .followMe span {
+.page-projects .followMe span,
+.author-template .followMe span {
   position: relative;
   background: #FFF;
   margin-left: 8px;
@@ -2963,7 +3018,8 @@ pre {
   margin-top: 5px;
   border-radius: 2px;
 }
-.page-projects .followMe span::before {
+.page-projects .followMe span::before,
+.author-template .followMe span::before {
   content: '';
   position: absolute;
   display: block;
@@ -2980,7 +3036,8 @@ pre {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.page-projects .avatar {
+.page-projects .avatar,
+.author-template .avatar {
   width: 64px;
   height: 64px;
   float: left;
@@ -2989,14 +3046,17 @@ pre {
   box-shadow: 0 0 2px 0 #DDD;
 }
 @media (max-width: 800px) {
-  .page-projects .avatar {
+  .page-projects .avatar,
+  .author-template .avatar {
     margin: 0 15px 15px 0;
   }
 }
-.page-projects .repos {
+.page-projects .repos,
+.author-template .repos {
   clear: both;
 }
-.page-projects .repos .header {
+.page-projects .repos .header,
+.author-template .repos .header {
   display: block;
   width: auto;
   border-width: 1px 0;
@@ -3007,7 +3067,8 @@ pre {
   text-transform: uppercase;
   font-family: 'mr-eaves-xl-modern', sans-serif;
 }
-.page-projects .repos a {
+.page-projects .repos a,
+.author-template .repos a {
   position: relative;
   display: block;
   margin: 7px 10px;
@@ -3019,51 +3080,62 @@ pre {
   transition: .2s all easeout;
 }
 .page-projects .repos a:hover,
-.page-projects .repos a:hover span {
+.author-template .repos a:hover,
+.page-projects .repos a:hover span,
+.author-template .repos a:hover span {
   background-color: #40cebb;
   color: white;
   cursor: pointer;
 }
-.page-projects .repos a:hover .star::after {
+.page-projects .repos a:hover .star::after,
+.author-template .repos a:hover .star::after {
   opacity: 1;
 }
-.page-projects .repos a:first-of-type {
+.page-projects .repos a:first-of-type,
+.author-template .repos a:first-of-type {
   border: none;
 }
-.page-projects .repos .repo-name {
+.page-projects .repos .repo-name,
+.author-template .repos .repo-name {
   max-width: 280px;
   text-overflow: ellipsis;
   color: #26a2c7;
   font-family: 'akzidenz';
   font-size: 1.1em;
 }
-.page-projects .repos .updated {
+.page-projects .repos .updated,
+.author-template .repos .updated {
   display: block;
   font-size: 0.85em;
   font-style: italic;
   color: #777;
 }
-.page-projects .repos .star {
+.page-projects .repos .star,
+.author-template .repos .star {
   position: absolute;
   font-size: 0.9em;
   right: 1em;
   top: 2em;
   color: #888;
 }
-.page-projects .repos .star::after {
+.page-projects .repos .star::after,
+.author-template .repos .star::after {
   content: '\a0\2605';
   font-size: 1.1em;
   font-weight: bold;
   color: #e99405;
   opacity: 0.5;
 }
-.page-projects a {
+.page-projects a,
+.author-template a {
   text-decoration: none;
 }
-.page-projects a:hover {
+.page-projects a:hover,
+.author-template a:hover {
   color: #4183C4;
 }
-.page-projects .name {
+.page-projects .name,
+.author-template .name {
   display: block;
   font-size: 1.7em;
   font-weight: bold;
@@ -3071,18 +3143,21 @@ pre {
   font-family: 'mr-eaves-xl-modern', sans-serif;
   margin-bottom: 5px;
 }
-.page-projects .error {
+.page-projects .error,
+.author-template .error {
   font-size: 0.8em;
   color: #444;
   padding: 10px;
 }
-.page-projects .error span {
+.page-projects .error span,
+.author-template .error span {
   display: block;
   border-bottom: 1px solid #DDD;
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
-.page-projects .error span.remain {
+.page-projects .error span.remain,
+.author-template .error span.remain {
   text-align: center;
   font-weight: bold;
 }
