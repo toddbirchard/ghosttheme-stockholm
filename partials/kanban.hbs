@@ -46,7 +46,7 @@
             '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
             '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
           '</div> \n' +
-          '<div style="border: 1px solid' + cards[i].epic_color + ';" class="epic ' + cards[i].epic_name + '"><span style="color: ' + cards[i].epic_color + '">' + cards[i].epic_name + '</span></div> \n' +
+          '<div class="epic ' + cards[i].epic_name + '"><span style="color: ' + cards[i].epic_color + '">' + cards[i].epic_name + '</span></div> \n' +
         '</div> \n' +
       '</div>');
     }
@@ -54,21 +54,21 @@
 
   const clientPromise = stitch.StitchClientFactory.create('hackerjira-bzmfe');
   clientPromise.then(client => {
-    const db = client.service('mongodb', 'mongodb-atlas').db('HackersBlog');
+    const db = client.service('mongodb', 'mongodb-atlas').db('jira');
     client.login().then(() =>
-      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(7).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'backlog')
     }).then(() =>
-      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'todo')
     }).then(() =>
-      db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'progress')
     }).then(() =>
-      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).sort({ updated: -1 }).execute()
+      db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(7).sort({ updated: -1 }).execute()
     ).then(docs => {
       populateCards(docs, 'done')
     }).catch(err => {

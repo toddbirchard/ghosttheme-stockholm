@@ -93,19 +93,20 @@
   position: relative;
   border: 1px solid #bcd4dc;
 }
-.author-template .link-preview h4 {
+.author-template .link-preview a {
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   left: 15px;
   color: white;
   z-index: 10;
-  width: 90%;
+  width: 79%;
   line-height: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 15px;
+  font-family: 'akzidenz-regular', sans-serif;
 }
 .author-template .link-preview i {
   position: absolute;
@@ -113,6 +114,7 @@
   bottom: 12px;
   z-index: 100;
   font-size: 14px;
+  color: white;
 }
 .author-template .link-preview::after {
   display: block;
@@ -3224,8 +3226,8 @@ pre {
   background-color: #f9f9f9;
   padding: 10px 15px;
   position: relative;
-  border: 1px solid #eaeaea;
-  margin-bottom: 20px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 15px;
   overflow: hidden;
   border-radius: 3px;
 }
@@ -3338,12 +3340,12 @@ pre {
 .kanban .column .cards .card .info .epic {
   border-radius: 4px;
   text-align: center;
-  padding: 1px 10px;
+  /*padding: 1px 10px;*/
 }
 .kanban .column .cards .card .info .epic span {
   color: white;
   font-size: 12px;
-  font-family: 'akzidenz-medium';
+  font-family: 'akzidenz';
 }
 .kanban .column .cards .card .info .epic.Creative span,
 .kanban .column .cards .card .info .epic.Widgets span,
