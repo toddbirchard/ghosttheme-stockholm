@@ -14,6 +14,11 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1000px) {
+  .author-template .sidebar {
+    display: none !important;
+  }
+}
 .author-template .sidebar .meetup .name {
   font-size: 1.4em;
   font-family: 'akzidenz-regular', sans-serif;
@@ -66,7 +71,7 @@
   width: 67%;
   margin: auto;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .author-template .main-content {
     width: 100%;
   }
@@ -92,6 +97,9 @@
   color: white;
   position: relative;
   border: 1px solid #bcd4dc;
+  margin: 15px 0 0;
+  border: 0;
+  border-radius: 0;
 }
 .author-template .link-preview a {
   position: absolute;
@@ -705,6 +713,11 @@ pre {
   color: #467192;
   font-family: 'akzidenz-regular' !important;
 }
+@media (max-width: 800px) {
+  .post-template .post-meta .post-title {
+    text-align: center;
+  }
+}
 .post-template .post-meta .meta-item {
   margin: 0 20px 0 0;
   float: left;
@@ -1089,7 +1102,6 @@ pre {
 @media (max-width: 800px) {
   .post .post-head .post-title {
     white-space: normal;
-    text-align: center;
   }
 }
 .post .post-head .post-title a {
@@ -2027,9 +2039,9 @@ pre {
   .main-content {
     width: 68%;
   }
-  .sidebar {
-    width: 29%;
-  }
+}
+.sidebar {
+  width: 29%;
 }
 /*====================================================
 	Bootstrap override
@@ -3092,7 +3104,9 @@ pre {
 }
 .page-projects .followMe,
 .author-template .followMe {
-  margin-top: 3px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
 }
 .page-projects .follow-button,
 .author-template .follow-button {
@@ -3121,13 +3135,14 @@ pre {
   position: relative;
   background: #FFF;
   margin-left: 8px;
-  padding: 3px 8px;
+  padding: 5px 8px;
   color: #444;
   font-size: 0.8em;
   border: 1px solid;
   border-color: #BBB;
-  margin-top: 5px;
   border-radius: 2px;
+  height: 11px;
+  line-height: 1;
 }
 .page-projects .followMe span::before,
 .author-template .followMe span::before {
@@ -3172,8 +3187,8 @@ pre {
   width: auto;
   border-width: 1px 0;
   /* color: #29d4a7; */
-  font-size: 1.4em;
-  padding: 15px 15px 0;
+  font-size: 1em;
+  padding: 15px 0 0;
   height: fit-content;
   text-transform: uppercase;
   font-family: 'mr-eaves-xl-modern', sans-serif;
@@ -3182,7 +3197,7 @@ pre {
 .author-template .repos a {
   position: relative;
   display: block;
-  margin: 7px 10px;
+  margin: 7px 0;
   font-size: 0.9em;
   border-top: 0;
   width: auto;
@@ -3248,11 +3263,11 @@ pre {
 .page-projects .name,
 .author-template .name {
   display: block;
-  font-size: 1.7em;
-  font-weight: bold;
+  font-size: 1.2em;
+  /* font-weight: bold; */
   color: #222;
+  text-transform: uppercase;
   font-family: 'mr-eaves-xl-modern', sans-serif;
-  margin-bottom: 5px;
 }
 .page-projects .error,
 .author-template .error {

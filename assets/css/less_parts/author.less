@@ -8,6 +8,10 @@
 		display: flex;
 		flex-direction: column;
 
+		@media (max-width: 1000px) {
+			display: none !important;
+		}
+
 		.meetup {
 
 			.name {
@@ -75,7 +79,7 @@
 		width: 67%;
 		margin:auto;
 
-		@media(max-width: 800px){
+		@media(max-width: 1000px){
 			width: 100%;
 		}
 	}
@@ -107,6 +111,9 @@
 		color: white;
 		position: relative;
 		border: 1px solid mix(@theme-color, #e1e1e1, 20%);
+		margin: 15px 0 0;
+		border: 0;
+		border-radius: 0;
 
 		a {
 			position: absolute;
