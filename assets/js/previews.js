@@ -26,7 +26,7 @@ $(document).ready(function() {
         success: function(result) {
           var link_image = verifyImage(result.image);
           var verify_title = verifyTitle(result);
-          $(element).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url + '</span></div></div></a>');
+          $(element).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
           $(element).remove();
         }
       });

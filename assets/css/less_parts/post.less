@@ -1,5 +1,4 @@
 .post-template {
-
 	/*====================================================
 		main post area
 	====================================================*/
@@ -8,7 +7,7 @@
 		padding: 0;
 		max-width: 1000px !important;
 		@media(max-width: 800px) {
-		  margin: 0 0 20px 0 !important;
+			margin: 0 0 20px 0 !important;
 			width: 100% !important;
 		}
 	}
@@ -16,7 +15,6 @@
 	h2 {
 		font-size: 2.5em;
 		line-height: 1;
-
 		@media(max-width: 800px) {
 			font-size: 2em;
 			line-height: 1;
@@ -26,21 +24,19 @@
 	h3 {
 		font-size: 1.5em;
 		line-height: 1.2;
-		color:#504f5f;
+		color: #504f5f;
 	}
 
-
-
-	.sidebar,
 	.main-header,
-	.main-navigation {
+	.main-navigation,
+	.sidebar {
 		display: none;
 	}
 
 	.post-meta {
-	  margin: 10px 80px 0;
-	  color: #9ea1ab;
-	  font-size: 14px;
+		margin: 10px 80px 0;
+		color: #9ea1ab;
+		font-size: 12px;
 		display: block;
 		width: 35%;
 
@@ -53,25 +49,66 @@
 		}
 
 		.meta-item {
-			margin: 0 30px 0 0;
-			float:left;
+			margin: 0 20px 0 0;
+			float: left;
+
+			&:last-child {
+				margin: 0;
+			}
 		}
 	}
 
+	.post-roundup-blurb {
+		margin: 55px auto 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+		border-bottom: 1px solid #ececec;
+		border-top: 1px solid #ececec;
+		width: 70%;
 
+		@media(max-width: 800px) {
+			 width: 80%;
+			 align-items: start;
+		}
+
+		.blurb-icon {
+			background:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/flask-icon.png');
+			height: 75px;
+			height: 75px;
+			min-width: 75px;
+			margin-right: 25px;
+			background-size: cover;
+		}
+
+		p {
+			line-height: 1.5;
+			font-style: italic;
+			font-family: 'akzidenz';
+			color: #a2a2a2;
+			font-size: 1.1em;
+			width: auto;
+			margin: 0;
+			text-align:justify;
+
+			@media (max-width: 800px) {
+				font-size: 1em;
+			}
+		}
+	}
 
 	.container {
 		margin: 0 auto;
-		padding:0;
+		padding: 0;
 	}
 
 	.main-content {
 		width: 100%;
 		max-width: 1000px;
-		padding:0 !important;
+		padding: 0 !important;
 
 		table {
-			margin-bottom: 10px;
 			margin: 30px auto;
 			border-radius: 3px;
 			width: 100%;
@@ -79,21 +116,19 @@
 			border: 1px solid #d2d2d2;
 			border-spacing: 0;
 
-
 			td,
 			th {
 				padding: 7px 20px;
 				min-width: 200px;
 				text-align: center;
-
 				@media(max-width: 800px) {
-					 min-width: 40px;
-					 padding: 7px 0;
+					min-width: 40px;
+					padding: 7px 0;
 				}
 			}
 
 			tr:nth-child(odd) td {
-				background:#f1f4f7;
+				background: #f1f4f7;
 			}
 
 			th {
@@ -109,21 +144,29 @@
 	.post-head {
 		padding: 30px 0;
 		margin: 0 80px;
-		border-bottom: 1px solid #eaeaea;
-
+		/*border-bottom: 1px solid #eaeaea;*/
 		@media(max-width: 800px) {
 			margin: 0 25px;
+			border-bottom: 0;
 		}
 	}
 
 	.post-meta {
 		margin: 10px 80px 0;
 		color: #9ea1ab;
-		font-size: 14px;
 		height: 20px;
 
+		span,
+		a {
+			@media(max-width: 800px) {
+				margin: 0;
+			}
+		}
 		@media(max-width: 800px) {
-			margin: 10px 25px 0;
+			display: flex;
+	    justify-content: space-between;
+	    padding: 0;
+	    width: 100%;
 		}
 
 		& > div {
@@ -144,7 +187,9 @@
 			align-items: center;
 		}
 		@media(max-width: 800px) {
-			width:auto;
+			width: auto;
+			max-width: 300px;
+			margin: 0 auto;
 		}
 	}
 
@@ -152,7 +197,7 @@
 		margin: 20px 80px 40px;
 
 		.kg-card-markdown > p {
-			 text-align: justify;
+			text-align: justify;
 		}
 
 		img {
@@ -165,23 +210,21 @@
 
 		blockquote {
 			margin: 40px;
-
-			@media(max-width: 600px){
+			@media(max-width: 600px) {
 				margin: 20px;
 			}
 
 			p {
-				 padding-left: 20px;
-				 font-size: 24px;
-			   line-height: 1;
-			   color: #26a2c7;
+				padding-left: 20px;
+				font-size: 24px;
+				line-height: 1;
+				color: #26a2c7;
 			}
 		}
 
 		p {
 			margin-top: 8px;
 		}
-
 		@media(max-width: 800px) {
 			margin: 20px 25px 0;
 		}
@@ -206,7 +249,6 @@
 			margin: 20px;
 			z-index: 100;
 			opacity: 1;
-
 			@media (max-width: 800px) {
 				height: 40px;
 				width: 40px;
@@ -224,7 +266,6 @@
 				max-width: none;
 			}
 		}
-
 	}
 
 	.main-navigation {
@@ -237,21 +278,20 @@
 		background: none;
 		height: 100px;
 		z-index: 20;
-
 		@media(max-width: 800px) {
 			z-index: 20;
 			width: auto;
 			height: auto;
 		}
+
 		.menu {
 			margin: 30px 40px 0 auto;
-			float:right;
-			width:300px;
-
-			@media(max-width: 800px){
+			float: right;
+			width: 300px;
+			@media(max-width: 800px) {
 				width: 222px;
 				margin: 20px 0;
-				padding:0;
+				padding: 0;
 			}
 		}
 	}
@@ -260,7 +300,6 @@
 		background: @white;
 		padding: 40px 80px;
 		margin: 20px 0;
-
 		@media(max-width: 1000px) {
 			padding: 30px 40px;
 			margin: 20px;
@@ -269,26 +308,27 @@
 		.avatar {
 			width: 90px;
 			height: 90px;
-    	display: inline-block;
-    	border-radius: 50%;
-    	overflow: hidden;
+			display: inline-block;
+			border-radius: 50%;
+			overflow: hidden;
 			margin-right: 30px;
 			.border-radius(50%);
 			margin-bottom: 20px;
 			float: left;
 
 			img {
-				width:100%;
+				width: 100%;
 			}
 		}
 
 		.details {
 			display: inline-block;
 			float: left;
+
 			span {
 				display: block;
 				line-height: 1em;
-    		margin-bottom: 5px;
+				margin-bottom: 5px;
 
 				i {
 					margin-right: 8px;
@@ -302,7 +342,7 @@
 			margin-top: 10px;
 			font-weight: 100;
 			width: 100%;
-    	clear: both;
+			clear: both;
 		}
 
 		.author {
@@ -350,20 +390,6 @@
 
 	&.featured {
 		order: 0;
-	}
-
-	&.page {
-		.page-head {
-			/*padding: 0 30px;*/
-			@media(max-width: 800px) {
-				margin: 0;
-
-				h1 {
-					font-size: 3em;
-					font-weight: 700;
-				}
-			}
-		}
 	}
 
 	.featured {
@@ -419,6 +445,7 @@
 			/*white-space: nowrap;*/
 			@media(max-width: 800px) {
 				white-space: normal;
+				text-align: center;
 			}
 
 			a {
@@ -431,14 +458,9 @@
 			}
 		}
 
-		.post-excerpt {
-			margin: 5px auto 0;
-			line-height: 1;
-			font-weight: 600;
-			text-align: left;
-			@media(max-width: 800px) {
-				font-weight: 500;
-				font-size: 1.2em;
+		h5 {
+			@media (max-width: 800px) {
+				text-align: center;
 			}
 		}
 
@@ -449,8 +471,6 @@
 			margin: 15px 0 0;
 			font-size: 12px;
 			text-align: left;
-
-
 
 			div {
 				display: inline-block;
@@ -464,6 +484,8 @@
 			}
 		}
 
+
+
 		img {
 			height: 14px;
 			width: 14px;
@@ -472,6 +494,10 @@
 		span {
 			margin: 0;
 			white-space: nowrap;
+
+			&:last-child {
+				margin: 0;
+			}
 		}
 
 		.comment-count {
@@ -498,18 +524,16 @@
 		overflow-x: hidden;
 		clear: both;
 
-		h3,
-		h2 {
+		h2,
+		h3 {
 			margin-top: 40px;
 			margin-bottom: 0;
-			color:@text-post-header;
+			color: @text-post-header;
 			line-height: 1;
 		}
 
 		h2,
-		h3 {
-
-		}
+		h3 {}
 
 		ol,
 		ul {
@@ -543,7 +567,6 @@
 			border: 1px solid #eaeaea;
 			margin: 30px auto;
 			display: block;
-
 		}
 
 		a {
