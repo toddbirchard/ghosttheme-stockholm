@@ -684,6 +684,7 @@ pre {
 .post-template h2 {
   font-size: 2.5em;
   line-height: 1;
+  font-weight: 200;
 }
 @media (max-width: 800px) {
   .post-template h2 {
@@ -702,7 +703,7 @@ pre {
   display: none;
 }
 .post-template .post-meta {
-  margin: 10px 80px 0;
+  margin: 0 80px 0;
   color: #9ea1ab;
   font-size: 12px;
   display: block;
@@ -713,17 +714,17 @@ pre {
   color: #467192;
   font-family: 'akzidenz-regular' !important;
 }
-@media (max-width: 800px) {
-  .post-template .post-meta .post-title {
-    text-align: center;
-  }
-}
 .post-template .post-meta .meta-item {
   margin: 0 20px 0 0;
   float: left;
 }
 .post-template .post-meta .meta-item:last-child {
   margin: 0;
+}
+@media (max-width: 800px) {
+  .post-template .post-title {
+    text-align: center !important;
+  }
 }
 .post-template .post-roundup-blurb {
   margin: 55px auto 32px;
@@ -815,7 +816,7 @@ pre {
   }
 }
 .post-template .post-meta {
-  margin: 10px 80px 0;
+  margin: 0 80px 0;
   color: #9ea1ab;
   height: 20px;
 }
@@ -1095,9 +1096,7 @@ pre {
   margin: 0;
   line-height: 1;
   overflow: hidden;
-  /*text-overflow: ellipsis;*/
   display: block;
-  /*white-space: nowrap;*/
 }
 @media (max-width: 800px) {
   .post .post-head .post-title {
@@ -1185,14 +1184,18 @@ pre {
 .post .post-content iframe {
   margin: 0;
   display: block;
+  margin: 0 auto !important;
 }
-@media (max-width: 800px) {
-  .post .post-content iframe {
-    height: 100%;
-  }
+.post .post-content iframe.instagram-media {
+  max-width: 400px !important;
 }
 .post .post-content .twitter-tweet {
   margin: 20px auto;
+  width: 100% !important;
+}
+.post .post-content .twitter-tweet .EmbeddedTweet,
+.post .post-content .twitter-tweet .EmbeddedTweet-tweet {
+  width: 100% !important;
 }
 .post .post-content img {
   max-width: 99%;
@@ -1414,7 +1417,7 @@ pre {
 }
 @media (max-width: 600px) {
   .post-preview .post-head {
-    margin: 0 0 25px;
+    margin: 0 0 20px;
   }
 }
 .post-preview .post-head .post-title {
@@ -1505,7 +1508,7 @@ pre {
   text-align: left;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0 0 10px;
 }
 .post-preview .post-permalink .btn {
   font-size: 14px;
@@ -1522,7 +1525,7 @@ pre {
 }
 .post-preview .post-content {
   line-height: 1.5;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 .post-preview .post-content .kg-card-markdown {
   text-align: justify;
@@ -1619,16 +1622,30 @@ pre {
   padding: 30px;
   margin: 10px 0;
   width: 40%;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px !important;
 }
 @media (max-width: 1040px) {
   .page-about .about-author {
     padding: 20px;
+    border: 0 !important;
+    border-bottom: 1px solid #dcdcdc !important;
+    width: 100% !important;
+  }
+  .page-about .about-author:last-child {
+    border-bottom: 0 !important;
   }
 }
 @media (max-width: 600px) {
   .page-about .about-author {
     display: block !important;
   }
+}
+.page-about .about-author i {
+  color: #959595 !important;
+}
+.page-about .about-author span {
+  color: #959595;
 }
 .page-about .about-author .author-container {
   justify-content: space-around;
@@ -1649,30 +1666,28 @@ pre {
   padding: 0;
 }
 .page-about .about-author .avatar-link {
-  width: 28%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
   display: inline-block;
   height: fit-content;
 }
 @media (max-width: 1040px) {
   .page-about .about-author .avatar-link {
-    width: 12%;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 15px;
     display: block;
   }
 }
 .page-about .about-author .avatar-link .avatar {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-@media (max-width: 600px) {
-  .page-about .about-author .avatar-link .avatar {
-    width: 70px;
-    height: 70px;
-  }
+  max-height: 80px;
 }
 .page-about .about-author .details {
   width: 65%;
@@ -1691,6 +1706,8 @@ pre {
   line-height: 1.5;
   margin: 10px 0 0;
   font-weight: 100;
+  float: left !important;
+  font-size: 14px;
 }
 @media (max-width: 1040px) {
   .page-about .about-author .bio {
@@ -1722,7 +1739,7 @@ pre {
 }
 @media (max-width: 1040px) {
   .page-about .about-author .meta-info span {
-    margin: 0 15px;
+    margin: 0 15px 3px;
   }
 }
 .page-about .about-author .meta-info span i {
@@ -3325,7 +3342,7 @@ pre {
   width: 23%;
   background: white;
   border: 1px solid #f9f9f9;
-  padding: 20px;
+  padding: 30px;
 }
 @media (max-width: 800px) {
   .kanban .column {
@@ -3351,7 +3368,7 @@ pre {
   padding: 10px 15px;
   position: relative;
   border: 1px solid #f1f1f1;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   overflow: hidden;
   border-radius: 3px;
 }
@@ -3464,10 +3481,12 @@ pre {
 .kanban .column .cards .card .info .epic {
   border-radius: 4px;
   text-align: center;
-  /*padding: 1px 10px;*/
+}
+.kanban .column .cards .card .info .epic i {
+  margin-right: 5px;
 }
 .kanban .column .cards .card .info .epic span {
-  color: white;
+  color: #343434;
   font-size: 12px;
   font-family: 'akzidenz';
 }

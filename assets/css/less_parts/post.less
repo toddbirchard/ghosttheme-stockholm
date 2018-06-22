@@ -15,6 +15,7 @@
 	h2 {
 		font-size: 2.5em;
 		line-height: 1;
+		font-weight: 200;
 		@media(max-width: 800px) {
 			font-size: 2em;
 			line-height: 1;
@@ -34,7 +35,7 @@
 	}
 
 	.post-meta {
-		margin: 10px 80px 0;
+		margin: 0 80px 0;
 		color: #9ea1ab;
 		font-size: 12px;
 		display: block;
@@ -48,12 +49,6 @@
 			}
 		}
 
-		.post-title {
-			@media (max-width: 800px) {
-				text-align: center;
-			}
-		}
-
 		.meta-item {
 			margin: 0 20px 0 0;
 			float: left;
@@ -61,6 +56,12 @@
 			&:last-child {
 				margin: 0;
 			}
+		}
+	}
+
+	.post-title {
+		@media (max-width: 800px) {
+			text-align: center !important;
 		}
 	}
 
@@ -158,7 +159,7 @@
 	}
 
 	.post-meta {
-		margin: 10px 80px 0;
+		margin: 0 80px 0;
 		color: #9ea1ab;
 		height: 20px;
 
@@ -446,9 +447,8 @@
 			margin: 0;
 			line-height: 1;
 			overflow: hidden;
-			/*text-overflow: ellipsis;*/
 			display: block;
-			/*white-space: nowrap;*/
+
 			@media(max-width: 800px) {
 				white-space: normal;
 
@@ -471,7 +471,6 @@
 		}
 
 		.post-meta {
-			// font-family: 'mr-eaves-xl-modern', serif;
 			width: auto;
 			max-width: 376px;
 			margin: 15px 0 0;
@@ -559,13 +558,21 @@
 		iframe {
 			margin: 0;
 			display: block;
-			@media(max-width: 800px) {
-				height: 100%;
+			margin: 0 auto !important;
+
+			&.instagram-media {
+				max-width: 400px !important;
 			}
 		}
 
 		.twitter-tweet {
 			margin: 20px auto;
+			width: 100% !important;
+
+			.EmbeddedTweet,
+			.EmbeddedTweet-tweet {
+				width: 100% !important
+			}
 		}
 
 		img {
