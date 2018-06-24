@@ -9,7 +9,7 @@
 		function authorSidebar(docs) {
 			if (docs[0]['website']) {
 				$.ajax({
-					url: 'https://api.linkpreview.net' + "?key=" + linkpreview_key + " &q=" + docs[0]['website'],
+					url: 'https://api.linkpreview.net?key=' + linkpreview_key + '&q=' + docs[0]['website'],
 					contentType: "application/json",
 					dataType: 'json',
 					success: function(result) {
@@ -31,34 +31,55 @@
 
 			if (docs[0]['meetup']) {
 				$.ajax({
-					url: 'https://api.meetup.com/members/' + docs[0]['meetup'],
+					url: 'https://api.meetup.com/members/' + docs[0]['meetup'] + '?key=' + meetup_key,
 					contentType: "application/json",
 					dataType: 'jsonp',
 					success: function(result) {
-						//console.log("JSON.stringify(result) = " + JSON.stringify(result));
+
+						console.log("JSON.stringify(result) = " + JSON.stringify(result));
 						$('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n ' +
-							'<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"> \n ' +
-							'<img src="' + result['data']['photo']['thumb_link'] + '"> \n' +
+							'<div class="userprofile"> \n ' +
+							'<img class="avatar" src="' + result['data']['photo']['thumb_link'] + '"> \n' +
 							'<div class="info">' +
 							'<span class="name">' + result['data']['name'] + '</span> \n ' +
-							'<span class="location">' + result['data']['city'] + '</span></a> \n ' +
-							'<span class="country">' + result['data']['localized_country_name'] + '</span></div></a> \n ' +
+							'<span class="location">' + result['data']['city'] + ', ' + result['data']['state'] + '</span></a> \n ' +
+							'<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"><span class="country">View profile</span></a></div></div></div> \n ' +
 							'<div class="events"></div>');
 					}
 				});
 
 				$.ajax({
-					url: 'https://api.meetup.com/2/events?&sign=true&photo-host=public&rsvp=yes&member_id=' + docs[0]['meetup'] + '&page=20',
+					url: 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + docs[0]['meetup'] + '&offset=0&format=json&limited_events=False&rsvp=yes,maybe&photo-host=public&page=500&fields=&order=time&desc=false&status=upcoming',
 					contentType: "application/json",
 					dataType: 'jsonp',
 					success: function(result) {
-						console.log('result = ' + JSON.stringify(result));
-						if (result.length == 0) {
-							$('.events').append('<span>No upcoming events :(</span>');
+						var rsvps = result.meta.count;
+
+						//console.log('result = ' + JSON.stringify(result));
+						//console.log('result.meta.count = ' + result.meta.count);
+						if (rsvps == 0) {
+							$('.events').append('<span class="noevents">No upcoming events :(</span>');
 						} else {
-							for (var i = 0; i < result.length; i++) {
-								$('.events').append('<div class="event"><div class="content"><h4 class="title">Meetup</h4> \n ' +
-									'<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"> \n ');
+							var events = result.results;
+							var date = new Date(result.time);
+							for (var i = 0; i < events.length; i++) {
+								var eventimage = "";
+								if (events[i].photo_url == null) {
+									eventimage = "https://static.wixstatic.com/media/c9091f_1603cc257ba2428e8d3ea5778ce62886~mv2.png/v1/fill/w_287,h_240,al_c,usm_0.66_1.00_0.01/c9091f_1603cc257ba2428e8d3ea5778ce62886~mv2.png"
+								} else {
+									eventimage = events[i].photo_url
+								}
+								$('.events').append(
+									'<a href="' + events[i].event_url + '"> \n' +
+									'<div class="event"> \n' +
+									'<div class="eventheader"><img class="eventimg" src="' + eventimage + '"> \n ' +
+									'<span class="eventname">' + events[i].name + '</span></div> \n ' +
+									'<div class="eventinfo"> \n ' +
+									'<span class="eventhost"><i class="fas fa-users"></i> ' + events[i].group.name + '</span> \n ' +
+									'<span class="venuename"><i class="fas fa-building"></i> ' + events[i].venue.name + '</span> \n ' +
+									'<span class="venueaddress"><i class="fas fa-map-pin"></i> ' + events[i].venue.address_1 + '</span> \n ' +
+									'<span class="date"><i class="fas fa-calendar"></i> ' + date.toString("MMM dd") + '</span> \n ' +
+									'</div></div></a>');
 							}
 						}
 					}
