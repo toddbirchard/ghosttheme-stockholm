@@ -1,4 +1,5 @@
 <!-- start post -->
+
 {{#foreach posts}}
 	<article class="{{post_class}} post-preview{{!-- {{#has tag="video"}}fluid-width-video-wrapper{{/has}}--}}">
 		{{#if featured}}
@@ -23,9 +24,7 @@
 		<div class="content">
 			<div class="post-head">
 				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-				{{#if excerpt}}
 					<h5 class="post-excerpt">{{excerpt words="20"}}</h5>
-					{{/if}}
 			</div>
 			<div class="post-content">
 				{{content words="80"}}

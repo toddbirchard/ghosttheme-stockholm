@@ -39,19 +39,23 @@
 		}
 	}
 
-	.LI-badge-container.horizontal.light {
+	.LI-badge-container.horizontal.light,
+	.LI-badge-container.vertical.light {
 		width:100% !important;
 		position: relative;
+		box-shadow: none;
 
+		/*
 		.LI-more-info {
 			float: left;
 		}
+		*/
 
 		.LI-footer {
 			position: absolute;
 			right: 15px;
 			bottom: 0;
-			padding: 0;
+			padding: 0 0 10px 0;
 			margin: 0;
 			line-height: 1;
 
@@ -68,10 +72,14 @@
 			}
 		}
 
+		.LI-profile-badge-footer {
+			padding-bottom: 20px;
+		}
+		/*
 		.LI-field {
 			display: block;
 			text-align: left;
-		}
+		}*/
 
 		.LI-logo {
 			display: none;
