@@ -18,7 +18,9 @@
 					{{/if}}
 					<div class="post-head">
 						<h1 class="post-title">{{{title}}}</h1>
-						<h5>{{excerpt}}</h5>
+						{{#if excerpt}}
+							<h4>{{excerpt}}</h4>
+						{{/if}}
 					</div>
 					<div class="post-meta">
 						{{#primary_tag}}
