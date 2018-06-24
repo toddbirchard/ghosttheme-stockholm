@@ -14,7 +14,7 @@ Theme for the [Ghost](https://github.com/TryGhost) blogging platform. Live previ
 
 ## About
 
-_Stockholm_ is a minimalist theme for emphasizing content. Easily configurable settings allow for customization such as contexual widgets, sidebar preferences, and unique page templates. Please note that this project is in *active development*.
+_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contexual widgets, sidebar preferences, and unique page templates. Project is in *active development*.
 
 ## Features
 
@@ -29,8 +29,11 @@ Some features are rolled out in public beta before official release. Features re
 - Embedded link previews
 - Github repository widget
 - Contributors widget
-- Recent articles widget
+- Recent posts widget
+- Related posts widget
+- Series widget
 - Twitter widget
+- Meetup widget
 - Featured posts
 - Link posts
 - Video posts
