@@ -35,12 +35,10 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-	
-	<script src="{{asset "/js/jquery.fitvids.js"}}"></script>
-	<script src="{{asset "/js/bootstrap.min.js"}}"></script>
-	<script src="{{asset "/js/jflickrfeed.min.js"}}"></script>
-	<script src="{{asset "/js/highlight.pack.js"}}"></script>
-	<script src="{{asset "/js/main.js"}}"></script>
+
+	<script src="{{asset "/js/includes/jquery.fitvids.js"}}"></script>
+	<script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+	<script src="{{asset "/js/main.min.js"}}"></script>
 	{{#has tag="roundup"}}<script src="{{asset "/js/previews.js"}}"></script>{{/has}}
 	{{> analytics}}
 </body>

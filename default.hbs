@@ -11,18 +11,18 @@
 	<!-- stylesheets -->
 	{{! Styles'n'Scripts }}
 	<link rel="stylesheet" href="https://use.typekit.net/okj4emy.css">
-	<link rel="stylesheet" type="text/css" href="{{asset "css/fontawesome-all.min.css"}}">
-	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
-	<link rel="stylesheet" type="text/css" href="{{asset "css/hl-styles/code.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/includes/fontawesome-all.min.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/includes/code.css"}}">
 
-	<script src="{{asset "/js/secret.js"}}"></script>
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
 
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	<script src="{{asset "/js/jquery.min.js"}}"></script>
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}

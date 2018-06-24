@@ -1,86 +1,72 @@
-// Include gulp
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-// Include Our Plugins
-var jshint = require('gulp-jshint');
-var less = require('gulp-less');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var del = require('del');
-var watch = require('gulp-watch');
-var livereload = require('gulp-livereload');
-var autoprefixer = require('gulp-autoprefixer');
-var handlebars = require('gulp-handlebars');
-var sourcemaps = require('gulp-sourcemaps');
-var bs = require("browser-sync").create();
-var reload      = bs.reload;
+// Gulpfile.js running on stratumui,
+// a css framework available on npmjs.com
+var gulp 	= require('gulp'),
+  	less 	= require('gulp-less'),
+  	concat 	= require('gulp-concat'),
+  	uglify 	= require('gulp-uglify'),
+  	rename 	= require('gulp-rename'),
+    handlebars = require('gulp-handlebars'),
+    declare = require('gulp-declare'),
+    cleanCSS = require('gulp-clean-css');
 
-bs.init({
-    proxy: 'http://127.0.0.1:3001'
-});
+var paths = {
+  styles: {
+    src: 'src/less/*.less',
+    dest: 'assets/css'
+  },
+  scripts: {
+    src: 'src/js/*.js',
+    dest: 'assets/js'
+  },
+  html: {
+    src: 'views/*.hbs',
+    dest: 'assets/'
+  }
+};
 
-livereload({ start: true })
+function styles() {
+  return gulp
+  	.src(paths.styles.src, {
+      sourcemaps: true
+    })
+	.pipe(less())
+	.pipe(rename({
+	  basename: 'main',
+	  suffix: '.min'
+	}))
+.pipe(cleanCSS({debug: true}))
+.pipe(concat('main.min.css'))
+.pipe(gulp.dest(paths.styles.dest));
+}
 
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('src/js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
+function scripts() {
+  return gulp
+	.src(paths.scripts.src, {
+		sourcemaps: true
+	})
+	.pipe(uglify())
+	.pipe(concat('main.min.js'))
+	.pipe(gulp.dest(paths.scripts.dest));
+}
 
-
-
-gulp.task('styles', function() {
-    return gulp.src('assets/css/*.less')
-        .pipe(less({outputStyle: 'expanded', unix_newlines: true, linefeed: "lf"}))
-        .pipe(autoprefixer())
-        .pipe(minifyCss({
-            keepSpecialComments: 1
-        }))
-        .pipe(rename("style.min.css"))
-        .pipe(gulp.dest('dist/css/'))
-        .pipe(livereload())
-        pipe(bs.reload({
-          stream: true
-        }));
-});
-
-// Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('assets/js/*.js')
-        .pipe(sourcemaps.init())
-          .pipe(concat('all.js'))
-          .pipe(gulp.dest('dist'))
-          .pipe(rename('all.min.js'))
-          .pipe(uglify())
-          .pipe(gulp.dest('dist/js'))
-        .pipe(sourcemaps.init())
-        .pipe(livereload())
-        .pipe(bs.reload({
-          stream: true
-        }));
-});
-
-/*
-gulp.task('templates', function(){
+function templates(){
   gulp.src('views/*.hbs')
     .pipe(handlebars())
+    //.pipe(wrap('Handlebars.template(<%= contents %>)'))
     .pipe(declare({
       namespace: 'MyApp.templates',
       noRedeclare: true, // Avoid duplicate declarations
     }))
     .pipe(concat('templates.js'))
-    .pipe(gulp.dest('dist/'));
-});
-*/
+    .pipe(gulp.dest('assets/js/'));
+}
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('assets/js/*.js', ['lint', 'scripts']);
-    gulp.watch('assets/less/*.less', ['styles']);
-});
+function watch() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.styles.src, styles);
+}
 
-// Default Task
-gulp.task('default', ['lint', 'styles', 'scripts', 'watch']);
+var build = gulp.parallel(styles, scripts, templates, watch);
+
+gulp.task(build);
+gulp.task('default', build);

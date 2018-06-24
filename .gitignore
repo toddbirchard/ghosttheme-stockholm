@@ -62,3 +62,5 @@ typings/
 
 # keys
 assets/js/secret.js
+assets/js/includes/secret.js
+/assets/js/includes/secret.js

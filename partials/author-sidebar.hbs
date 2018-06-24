@@ -23,7 +23,7 @@
 			}
 
 			if (docs[0]['linkedin']) {
-				$('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">LinkedIn</h4><div style="width:100%;" class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="' + docs[0]['linkedin'] +'"><a class="LI-simple-link" href="https://www.linkedin.com/in/' + docs[0]['linkedin'] + '?trk=profile-badge">' + docs[0]['name'] + '</a></div></div></div>');
+				$('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">LinkedIn</h4><div style="width:100%;" class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="toddbirchard"><a class="LI-simple-link" href="https://www.linkedin.com/in/' + docs[0]['linkedin'] + '?trk=profile-badge">' + docs[0]['linkedin'] + '</a></div></div></div>');
 			}
 
 			if (docs[0]['meetup']) {
@@ -69,5 +69,5 @@
 			});
 		});
 	</script>
-	<script src="{{asset "/js/gh-profile-card.min.js"}}"></script>
+	<script src="{{asset "/js/includes/gh-profile-card.min.js"}}"></script>
 {{/author}}
