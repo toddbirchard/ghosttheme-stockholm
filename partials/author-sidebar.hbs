@@ -1,15 +1,15 @@
 {{#author}}
 	<div class="sidebar"></div>
 
-	<script src="https://s3.amazonaws.com/stitch-sdks/js/library/v3/stable/stitch.min.js"></script>
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script type="text/javascript" src="{{asset "/js/includes/stitch.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "/js/includes/linkedin.js"}}"></script>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 	<script>
 		function authorSidebar(docs) {
 			if (docs[0]['website']) {
 				$.ajax({
-					url: 'https://api.linkpreview.net?key=' + linkpreview_key + '&q=' + docs[0]['website'],
+					url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + docs[0]['website'],
 					contentType: "application/json",
 					dataType: 'json',
 					success: function(result) {
@@ -35,8 +35,7 @@
 					contentType: "application/json",
 					dataType: 'jsonp',
 					success: function(result) {
-
-						console.log("JSON.stringify(result) = " + JSON.stringify(result));
+						//console.log("JSON.stringify(result) = " + JSON.stringify(result));
 						$('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n ' +
 							'<div class="userprofile"> \n ' +
 							'<img class="avatar" src="' + result['data']['photo']['thumb_link'] + '"> \n' +
@@ -54,31 +53,32 @@
 					dataType: 'jsonp',
 					success: function(result) {
 						var rsvps = result.meta.count;
-
 						//console.log('result = ' + JSON.stringify(result));
 						//console.log('result.meta.count = ' + result.meta.count);
 						if (rsvps == 0) {
 							$('.events').append('<span class="noevents">No upcoming events :(</span>');
 						} else {
 							var events = result.results;
-							var date = new Date(result.time);
+
 							for (var i = 0; i < events.length; i++) {
-								var eventimage = "";
-								if (events[i].photo_url == null) {
-									eventimage = "https://static.wixstatic.com/media/c9091f_1603cc257ba2428e8d3ea5778ce62886~mv2.png/v1/fill/w_287,h_240,al_c,usm_0.66_1.00_0.01/c9091f_1603cc257ba2428e8d3ea5778ce62886~mv2.png"
-								} else {
+								var date = new Date(events[i].time);
+								var eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", { month: "short" }) + '</span></span></time>';
+								/*if (events[i].photo_url == null) {
+									//eventimage = "https://hackers.nyc3.digitaloceanspaces.com/meetup.png"
+									eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", { month: "short" }) + '</span></span></time>';
+								} /*else {
 									eventimage = events[i].photo_url
-								}
+								}*/
 								$('.events').append(
 									'<a href="' + events[i].event_url + '"> \n' +
 									'<div class="event"> \n' +
-									'<div class="eventheader"><img class="eventimg" src="' + eventimage + '"> \n ' +
+									'<div class="eventheader">'+ eventimage + ' \n ' +
 									'<span class="eventname">' + events[i].name + '</span></div> \n ' +
 									'<div class="eventinfo"> \n ' +
 									'<span class="eventhost"><i class="fas fa-users"></i> ' + events[i].group.name + '</span> \n ' +
 									'<span class="venuename"><i class="fas fa-building"></i> ' + events[i].venue.name + '</span> \n ' +
 									'<span class="venueaddress"><i class="fas fa-map-pin"></i> ' + events[i].venue.address_1 + '</span> \n ' +
-									'<span class="date"><i class="fas fa-calendar"></i> ' + date.toString("MMM dd") + '</span> \n ' +
+									//'<span class="date"><i class="fas fa-calendar"></i> ' + date.toString("MMM dd") + '</span> \n ' +
 									'</div></div></a>');
 							}
 						}

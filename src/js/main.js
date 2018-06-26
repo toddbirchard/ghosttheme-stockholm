@@ -108,18 +108,6 @@ var themeApp = {
 			}
 		});
 	},
-	flickr:function() {
-		$('.flkr-widget').jflickrfeed({
-			limit: 8,
-			qstrings: {
-				id: flickr_id
-			},
-			itemTemplate:
-			'<li>' +
-				'<a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_s}}" alt="{{title}}" /></a>' +
-			'</li>'
-		});
-	},
 	highlighter: function() {
 		$('pre code').each(function(i, block) {
 		    hljs.highlightBlock(block);

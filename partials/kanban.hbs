@@ -49,6 +49,7 @@
         '</div> \n' +
       '</div>');
     }
+    $('#' + status).append('<span class="count">' + cards.length + ' issues total</span>');
   }
 
   const clientPromise = stitch.StitchClientFactory.create('hackerjira-bzmfe');

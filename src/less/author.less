@@ -54,19 +54,20 @@
 					background: #fafafa;
 					padding: 15px;
 					margin-bottom: 10px;
-					transition: all .2s easeout;
+					transition: all 0.2s easeout;
 
 					&:hover {
-						    background: #d5f0f3;
-								span {
-									color: white;
-								}
+						background: #d5f0f3;
+
+						span {
+							color: white;
+						}
 					}
 
 					.eventheader {
 						display: flex;
 						justify-content: space-between;
-						margin-bottom: 10px;
+						margin-bottom: 15px;
 
 						.eventimg {
 							display: inline-block;
@@ -74,9 +75,59 @@
 							height: auto;
 							width: 60px;
 							height: 60px;
+							min-width: 60px;
 							background-size: cover;
 							background-position: center;
 							border-radius: 2px;
+						}
+
+						time {
+							display: flex;
+							-webkit-box-orient: vertical;
+							flex-direction: column;
+							text-align: center;
+							background: #f6f7f8;
+							border: 1px solid rgba(46,62,72,.12);
+							border-radius: 8px;
+							padding: 8px;
+							min-width: 36px;
+							min-height: 36px;
+							margin-right: 15px;
+							transition: all 0.2s easeout;
+
+							&:hover {
+								background: #797979;
+
+								.day,
+								.month {
+									color: white;
+								}
+							}
+
+							.day {
+								color: #f13a59;
+								font-size: 20px;
+								line-height: 1.1;
+								font-weight: 600;
+								display: block;
+								width: 100%;
+								height: 15px;
+								margin-bottom: 5px;
+								text-transform: uppercase;
+							}
+
+							.month {
+								color: rgba(46,62,72,.6);
+								font-weight: 500;
+								text-transform: uppercase;
+								display: block;
+								text-align: center;
+								line-height: 1.1;
+								width: 100%;
+								height: 14px;
+								font-family: mr-eaves-xl-modern;
+								margin-top: 3px;
+							}
 						}
 
 						.eventname {
@@ -94,18 +145,17 @@
 						overflow: hidden;
 						width: 100%;
 
-						.eventhost {
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
-							width: 257px;
-						}
+						.eventhost {}
 
 						i {
 							margin-right: 5px;
 						}
 
 						span {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							width: 257px;
 							display: block;
 							color: #505050;
 							margin: 0 0 5px 10px;
