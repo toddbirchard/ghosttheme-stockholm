@@ -1,0 +1,120 @@
+@import "variables.less";
+@import "mixin.less";
+
+/*====================================================
+	footer
+====================================================*/
+.main-footer {
+	background: linear-gradient(to bottom, rgba(0,255,196,0.2), rgba(41,58,63,0));
+	padding: 35px 12%;
+	color: white;
+	margin-top: 30px;
+	background-color: #3c465a;
+	box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
+	display: flex;
+	justify-content: space-around;
+
+	@media(max-width: 1000px) {
+		padding: 30px;
+	}
+
+	@media(max-width: 600px) {
+		margin-top: 10px;
+		display: block;
+		padding: 35px 20px;
+	}
+
+	.widget {
+		padding: 10px 0;
+		width:25%;
+		margin:0;
+
+		.post-title {
+			margin:0;
+		}
+
+		@media(max-width: 800px){
+			padding: 0;
+	    width: 30%;
+	    margin: 10px 20px 60px 20px;
+		}
+
+		@media(max-width: 600px){
+	    width: auto;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		.title {
+			color: @white;
+			font-size: 28px;
+		}
+
+		& > div > div:last-child {
+			border-bottom: 0 !important;
+		}
+
+		.tag-cloud {
+			a {
+				border: 0;
+				border-radius: 2px;
+				color: #FFFFFF;
+				background: #3d888c;
+				padding: 7px 15px;
+
+				&:hover {
+					border: 1px solid @white;
+					background: @white;
+					color: @theme-color;
+				}
+			}
+		}
+
+		.recent-post {
+			.single-author {
+				font-size: 18px;
+				font-weight: 200;
+				font-family: 'mr-eaves-xl-modern', serif;
+				transition: all 0.2s ease;
+			}
+
+			.recent-single-post,
+			.single-author {
+				border-bottom: 0;
+
+				a {
+					margin: 0;
+				}
+
+				.post-title,
+				.single-author-name {
+					color: @white;
+					font-size: 18px;
+					    margin: 0;
+
+					img {
+						height:20px;
+						width:20px;
+						border-radius: 50%;
+					}
+
+					&:hover {
+						color: @theme-color;
+					}
+				}
+
+				.date,
+				.tags{
+					color: @white;
+					opacity: 0.5;
+
+					a {
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+	{{#author}}
+	<div class="sidebar"></div>
+	<script type="text/javascript" src="{{asset "/js/includes/stitch.min.js"}}"></script>
+	<!--<script type="text/javascript" src="{{asset "/js/includes/linkedin.js"}}"></script>-->
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="{{asset "/js/includes/gh-profile-card.min.js"}}"></script>
+		<script>
+			const clientPromise = stitch.StitchClientFactory.create('hackerauthors-kjmze');
+			clientPromise.then(client => {
+				const db = client.service('mongodb', 'mongodb-atlas').db('authors');
+				client.login().then(() =>
+					db.collection('social').find({
+						author: '{{slug}}'
+					}).execute()
+				).then(docs => {
+					authorSidebar(docs)
+				}).catch(err => {
+					console.error(err)
+				});
+			});
+		</script>
+	{{/author}}

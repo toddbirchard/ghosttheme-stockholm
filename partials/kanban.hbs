@@ -1,0 +1,78 @@
+<div class="kanban">
+  <div class="column" id="backlog">
+    <h2>Backlog</h2>
+    <div class="cards">
+      <!--<div class="card">
+        <h5>Title of issue</h5>
+        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
+        <div class="issuetype"><img src="https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646212__340.png"></div>
+        <div class="info">
+          <div class="left">
+            <div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div>
+            <div class="priority"><i class="fas fa-arrow-up"></i></div>
+          </div>
+          <div class="epic"><span>epic name</span></div>
+      </div>
+    </div>-->
+    </div>
+  </div>
+  <div class="column" id="todo">
+    <h2>To Do</h2>
+    <div class="cards"></div>
+  </div>
+  <div class="column" id="progress">
+    <h2>In Progess</h2>
+    <div class="cards"></div>
+  </div>
+  <div class="column" id="done">
+    <h2>Done</h2>
+    <div class="cards"></div>
+  </div>
+</div>
+<script type="text/javascript" src="{{asset "/js/includes/stitch.min.js"}}"></script>
+{{!--<script type="text/javascript" src="{{asset "/js/includes/fetch.min.js"}}"></script>--}}
+<!--<script type="text/javascript" src="{{asset "/js/kanban.js"}}"></script>-->
+<script>
+
+  function populateCards(cards, status) {
+    for (var i = 0; i < cards.length; i++) {
+      $('#' + status + ' .cards').append('<div class="card"> \n' +
+        '<h5>' + cards[i].summary + '</h5> \n' +
+        '<p>' + cards[i].description + '</p> \n' +
+        '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' +
+        '<div class="info"> \n' +
+          '<div class="left"> \n' +
+            '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
+            '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
+          '</div> \n' +
+          '<div class="epic ' + cards[i].epic_name + '"><i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i> <span>' + cards[i].epic_name + '</span></div> \n' +
+        '</div> \n' +
+      '</div>');
+    }
+    $('#' + status).append('<span class="count">' + cards.length + ' issues total</span>');
+  }
+
+  const clientPromise = stitch.StitchClientFactory.create('hackerjira-bzmfe');
+  clientPromise.then(client => {
+    const db = client.service('mongodb', 'mongodb-atlas').db('jira');
+    client.login().then(() =>
+      db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(7).sort({ updated: -1 }).execute()
+    ).then(docs => {
+      populateCards(docs, 'backlog')
+    }).then(() =>
+      db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
+    ).then(docs => {
+      populateCards(docs, 'todo')
+    }).then(() =>
+      db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
+    ).then(docs => {
+      populateCards(docs, 'progress')
+    }).then(() =>
+      db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(7).sort({ updated: -1 }).execute()
+    ).then(docs => {
+      populateCards(docs, 'done')
+    }).catch(err => {
+      console.error(err)
+    });
+  });
+</script>

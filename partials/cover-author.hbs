@@ -1,0 +1,30 @@
+<div class="cover author-cover">
+	<div class="avatar-wrap">
+		{{#if author.profile_image}}
+			<img src="{{author.profile_image}}" alt="Author image" class="avatar">
+			{{else}}
+			<img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar">
+		{{/if}}
+	</div>
+	<h3 class="author-name">
+		{{author.name}}
+	</h3>
+	<div class="meta-info">
+		<span class="post-count"><i class="fal fa-pencil"></i>{{plural pagination.total empty=(t "No Post") singular=(t "1 Post") plural=(t "% Posts")}}</span>
+		{{#if author.location}}
+		<span class="loaction"><i class="fal fa-map-marker-alt"></i>{{author.location}}</span>
+		{{/if}}
+		{{#if author.website}}
+		<span class="website"><i class="fal fa-globe"></i><a href="{{author.website}}" targer="_BLANK">{{t "Website"}}</a></span>
+		{{/if}}
+		{{#if author.twitter}}
+		<span class="twitter"><a href="{{author.twitter_url}}"><i class="fab fa-twitter"></i> {{author.twitter}}</a></span>
+		{{/if}}
+		{{#if author.facebook}}
+		<span class="facebook"><a href="{{author.facebook_url}}"><i class="fa fa-facebook"></i></a></span>
+		{{/if}}
+	</div>
+	{{#if author.bio}}
+	<div class="bio">{{{author.bio}}}</div>
+	{{/if}}
+</div>

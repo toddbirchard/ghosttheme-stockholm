@@ -1,0 +1,55 @@
+@import "variables.less";
+@import "mixin.less";
+
+.post-header {
+  .mobile-branding {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin: 15px;
+    z-index: 100;
+    opacity: 1;
+    float: left;
+  }
+
+  .post-navigation{
+    .menu {
+      width: 300px;
+      float: right;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 40px 0 0;
+      margin: 0;
+      list-style: none;
+
+      @media(max-width: 600px) {
+        width: 230px;
+        padding: 25px 20px;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          color:white;
+          font-family: 'mr-eaves-xl-modern', serif;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 600;
+          transition: all 0.2s ease-out;
+
+          &:hover {
+            color: @hover-color;
+            cursor: pointer;
+          }
+
+          @media(max-width: 600px) {
+              font-size: 16px;
+          }
+        }
+      }
+    }
+
+  }
+
+}

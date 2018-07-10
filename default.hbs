@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<!-- stylesheets -->
+	{{! Styles'n'Scripts }}
+	<link rel="stylesheet" href="https://use.typekit.net/okj4emy.css">
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/includes/fontawesome-all.min.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/includes/code.css"}}">
+
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
+
+	{{#is "post"}}
+		<meta property="og:image" content="{{img_url feature_image}}">
+	{{else}}
+		<meta property="og:image" content="{{@blog.cover_image}}"/>
+	{{/is}}
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	{{! inserting theme config partial}}
+	{{> config}}
+	{{> analytics}}
+	{{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+	{{! insert header partial}}
+	{{> header}}
+
+	{{{body}}}
+
+	{{! insert footer partial}}
+
+{{> footer}}

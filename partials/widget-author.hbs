@@ -1,0 +1,37 @@
+<!-- start about the author -->
+{{#foreach authors}}
+  <div class="about-author clearfix widget">
+    <h4 class="title">Author</h4>
+    {{#if profile_image}}
+      <a href="{{url}}"><img src="{{profile_image}}" alt="Author image" class="avatar pull-left"></a>
+    {{else}}
+      <a href="{{url}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar pull-left"></a>
+    {{/if}}
+    <div class="details">
+      <div class="author">
+        {{!--{{t "About"}}--}}<a href="{{url}}">{{name}}</a>
+      </div>
+      <div class="meta-info">
+        {{!--<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>--}}
+        {{#if location}}
+          <span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
+        {{/if}}
+        {{#if website}}
+          <span class="website"><a href="{{website}}" targer="_BLANK"><i class="fal fa-globe"></i>{{t "Website"}}</a></span>
+        {{/if}}
+        {{#if twitter}}
+          <span class="twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i>{{twitter}}</a></span>
+        {{/if}}
+        {{#if facebook}}
+          <span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
+        {{/if}}
+      </div>
+    </div>
+    {{#if bio}}
+      <div class="bio">
+        {{{bio}}}
+        </div>
+    {{/if}}
+  </div>
+{{/foreach}}
+<!-- end about the author -->
