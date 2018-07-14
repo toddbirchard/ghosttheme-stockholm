@@ -1,0 +1,321 @@
+@import "variables.less";
+@import "mixin.less";
+
+.page-projects {
+  .sidebar {
+    display: none;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .repo {
+    .author {
+      margin-top: 10px;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+
+  .featured-media {
+    @media(max-width: 800px) {
+      width: 129% !important;
+      margin-left: -13% !important;
+      margin-top: -8% !important;
+    }
+  }
+
+  .col-md-8 {
+    background: white;
+  }
+
+  .kg-card-markdown {
+    margin-bottom: 30px;
+    width: 75%;
+    float: left;
+    @media(max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  .post-content {
+    margin: 0;
+  }
+
+  .dropdown {
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #bbbbbb;
+    float: right;
+    margin-top: 20px;
+
+    &after {
+      content: " ";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #f00;
+    }
+
+    &:hover {
+      cursor: no-drop;
+    }
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  .intro {
+    padding: 30px;
+    width: auto;
+    background: white;
+    margin: auto;
+
+    h1 {
+      margin: 10px 0 30px;
+      @media(max-width: 800px) {
+        margin: 30px 0 0;
+      }
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+
+    .kg-card-markdown {
+      margin-bottom: 0;
+    }
+  }
+
+  .kanban {
+    width: auto;
+    max-height: 1180px;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    padding: 20px 0;
+    @media(max-width: 800px) {
+      width: 350%;
+      margin-left: 20px;
+    }
+
+    .column {
+      width: 23%;
+      background: white;
+      border: 1px solid #f9f9f9;
+      padding: 30px 30px 35px;
+      position: relative;
+      margin-bottom: 7px;
+      @media(max-width: 800px) {
+        width: 80%;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 1.8em;
+        margin-bottom: 20px !important;
+        border-bottom: 1px solid fade(@theme-color, 40%);
+        padding-bottom: 10px;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 90px;
+          height: 1px;
+          background: #26a2c7;
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+        }
+      }
+
+      .cards {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &.last-child {
+          margin-bottom: 0;
+        }
+
+        .card {
+          background-color: #f9f9f9;
+          padding: 10px 15px;
+          position: relative;
+          border: 1px solid #f1f1f1;
+          margin-bottom: 10px;
+          overflow: hidden;
+          border-radius: 3px;
+
+          &.last-child {
+            margin-bottom: 0;
+          }
+
+          h5 {
+            font-size: 1.1em;
+            font-family: 'akzidenz-regular';
+            color: #3c3d46;
+            width: 80%;
+            line-height: 1.2;
+          }
+
+          p {
+            line-height: 1.3;
+            font-size: 0.9em;
+            margin: 10px 0 15px;
+            width: auto;
+            overflow: hidden;
+          }
+
+          .issuetype {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            top: 0;
+            width: 24px;
+            height: 23px;
+            padding: 5px 0;
+            background: red;
+            color: white;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-align: center;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              margin: 0;
+              border-bottom: 7px solid #f9f9f9;
+              border-left: 12px solid transparent;
+              border-right: 13px solid transparent;
+            }
+
+            img {
+              width: 15px;
+              height: 15px;
+            }
+
+            &.Subtask,
+            &.Task {
+              background-color: #b8d8f1;
+            }
+
+            &.Story {
+              background-color: #b6d49c;
+            }
+
+            &.Content {
+              background-color: purple;
+            }
+
+            &.Integration {
+              background-color: #F28B8B;
+            }
+
+            &.Idea {
+              background-color: orange;
+            }
+
+            &.Bug {
+              background-color: #F28B8B;
+            }
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+              display: flex;
+              justify-content: space-between;
+              width: 60px;
+
+              .avatar,
+              .priority {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0;
+                text-align: center;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .priority {
+                &.Highest {
+                  color: red;
+                }
+
+                &.High {
+                  color: #ea7272;
+                }
+
+                &.Medium,
+                &.undefined {
+                  color: orange;
+                }
+
+                &.Low {
+                  color: #7abb7a;
+                  transform: rotate(180deg);
+                }
+
+                &.Lowest {
+                  color: green;
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
+            .epic {
+              border-radius: 4px;
+              text-align: center;
+
+              i {
+                margin-right: 5px;
+              }
+
+              span {
+                color: #343434;
+                font-size: 12px;
+                font-family: 'akzidenz';
+              }
+
+              &.Creative span,
+              &.Lynx span,
+              &.Widgets span {
+                color: #42526E;
+              }
+            }
+          }
+        }
+      }
+
+      .count {
+        color: #ababab;
+        font-size: 14px;
+        font-family: 'proxima-nova',sans-serif;
+        position: absolute;
+        bottom: 0;
+        padding: 4px;
+      }
+    }
+  }
+}

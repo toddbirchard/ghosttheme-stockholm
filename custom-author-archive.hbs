@@ -1,0 +1,75 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap archive">
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+
+			{{> sidebar}}
+			<div class="col-md-8 main-content">
+				<!-- start post -->
+				{{#post}}
+					<article class="{{post_class}}">
+						{{#if feature_image}}
+							<div class="featured-media" style="background-image: url({{feature_image}});">
+							</div>
+						{{/if}}
+						<h1 class="post-title">{{{title}}}</h1>
+						<div class="post-content">
+							{{content}}
+						</div>
+						<div class="author-container">
+ 						{{#get "users" limit="all" include="count.posts" order="count.posts desc" }}
+ 							{{#foreach users}}
+
+								<div class="about-author" style="background: url({{cover_img}}) center center; background-color: rgba(255, 255, 255, 0.9); background-blend-mode: overlay;">
+									<div class="author-specs">
+									{{#if profile_image}}
+ 										<a href="{{url}}" class="avatar-link"><img src="{{profile_image}}" alt="Author image" class="avatar"></a>
+ 									{{else}}
+ 										<a href="{{url}}" class="avatar-link"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar"></a>
+ 									{{/if}}
+ 									<div class="details">
+ 										<div class="author">
+ 											<a href="{{url}}">{{name}}</a>
+ 										</div>
+ 										<div class="meta-info">
+ 											<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
+ 											{{#if location}}
+ 												<span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
+ 											{{/if}}
+ 											{{#if website}}
+ 												<span class="website"><i class="fal fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
+ 											{{/if}}
+ 											{{#if twitter}}
+ 												<span class="twitter"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
+ 											{{/if}}
+ 											{{#if facebook}}
+ 												<span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
+ 											{{/if}}
+ 										</div>
+										</div>
+ 									</div>
+
+ 									{{#if bio}}
+ 										<p class="bio">
+ 											{{{bio}}}
+ 										</p>
+ 									{{/if}}
+ 								</div>
+
+ 							{{/foreach}}
+ 						{{/get}}
+ 					</div>
+
+					</article>
+				{{/post}}
+				<!-- end post -->
+			</div>
+			<!-- end main post area -->
+		</div>
+	</div>
+</section>
+<script src="{{asset "/js/includes/jquery-ui.min.js"}}"></script>
+<!-- end site's main content area -->

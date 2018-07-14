@@ -1,0 +1,77 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap">
+	<div class="container">
+		<div class="row">
+			{{#post}}
+			<!-- start main post area -->
+			<div class="col-md-8 main-content">
+				<!-- start post -->
+
+				<article class="{{post_class}} post-page">
+					{{#if feature_image}}
+					<div class="featured-media">
+						{{> postheader}}
+						<img src="{{feature_image}}" alt="{{{title}}}">
+					</div>
+					{{/if}}
+					<div class="post-head">
+						<h1 class="post-title">{{{title}}}</h1>
+							<h4>{{excerpt}}</h4>
+					</div>
+					<div class="post-meta">
+						{{#primary_tag}}
+								<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> {{name}}</span>
+						{{/primary_tag}}
+						{{#author}}
+							{{#unless profile_image}}
+								<a href="{{url}}" class="meta-item"><i class="fas fa-user" style="width:13px; height: 13px; margin-top: 6px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+							{{/unless}}
+							{{#if profile_image}}
+								<a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{slug}}</span></a>
+							{{/if}}
+						{{/author}}
+						<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+					</div>
+
+
+					{{#has tag="Roundup"}}
+					<div class="post-roundup-blurb">
+						<div class="blurb-icon"></div>
+						<p>Each night resident scientist Snkia emerges from the shadows bearing gifts for human and robot-kind. Frantic research summed up in just a few choice hyperlinks, only on Lynx Roundup.</p>
+					</div>
+					{{/has}}
+
+					<div class="post-content">
+						{{content}}
+						<footer class="post-footer">
+							<div class="tag-list">
+								{{#if tags}}
+									<div class="tag-cloud">{{tags separator=""}}</div>
+								{{/if}}
+							</div>
+							<div class="share">
+								{{! insert share_links partials}}
+								{{> share_links}}
+							</div>
+						</footer>
+					</div>
+
+				</article>
+				{{> about-author}}
+				{{> prev-next}}
+
+			</div>
+			<!-- end main post area -->
+
+		</div>
+	</div>
+</section>
+{{#has tag="Roundup"}}
+	<script src="{{asset "/js/includes/previews.js"}}"></script>
+{{/has}}
+{{> analytics}}
+{{/post}}
+<!-- end post -->
+<!-- end site's main content area -->

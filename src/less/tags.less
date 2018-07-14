@@ -1,0 +1,171 @@
+@import "variables.less";
+@import "mixin.less";
+
+.meta,
+.post-meta {
+  .nodejs {
+    color: #83cc00;
+
+    i {
+      color: #83cc00 !important;
+    }
+  }
+
+  .aws {
+    color: #e9903a;
+
+    i {
+      color: #e9903a !important;
+    }
+  }
+
+  .django {
+    color: #43b78b;
+
+    i {
+      color: #43b78b !important;
+    }
+  }
+
+  .nosql {
+    color: #7bc553;
+
+    i {
+      color: #7bc553 !important;
+    }
+  }
+
+  .mysql {
+    color: #7277F4;
+
+    i {
+      color: #7277F4 !important;
+    }
+  }
+
+  .apis {
+    color: #7934b9;
+
+    i {
+      color: #7934b9 !important;
+    }
+  }
+
+  .frontend {
+    color: #e8bf29;
+
+    i {
+      color: #e8bf29 !important;
+    }
+  }
+
+  .data {
+    color: #83cc00;
+
+    i {
+      color: #83cc00 !important;
+    }
+  }
+
+  .roundup {
+    color: #7f8aca;
+
+    i {
+      color: #7f8aca !important;
+    }
+  }
+
+  .excel {
+    color: #099c09;
+
+    i {
+      color: #099c09 !important;
+    }
+  }
+
+  .devops {
+    color: #495f6d;
+
+    i {
+      color: #495f6d !important;
+    }
+  }
+
+  .pandas {
+    color: #d65daf;
+
+    i {
+      color: #d65daf !important;
+    }
+  }
+
+  .datascience {
+    color: #1CBBAF;
+
+    i {
+      color: #1CBBAF !important;
+    }
+  }
+
+  .tableau {
+    color: #da910b;
+
+    i {
+      color: #da910b;
+    }
+  }
+
+  .python {
+    color: #06bdea;
+
+    i {
+      color: #06bdea;
+    }
+  }
+
+  .meta-item {
+    display: flex;
+    margin: auto 0;
+    font-family: 'akzidenz-medium';
+
+    &.author {
+      span {
+        font-family: 'akzidenz';
+      }
+    }
+
+    &.date {
+      span {
+        font-family: 'akzidenz' !important;
+        color: #8e8e8e !important;
+      }
+      i {
+        color: #8e8e8e !important;
+      }
+    }
+
+    * {
+      /*color: #6e7980;*/
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: @hover-color;
+
+        & > span {
+          color: @hover-color !important;
+        }
+      }
+    }
+
+    .avi {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  }
+}

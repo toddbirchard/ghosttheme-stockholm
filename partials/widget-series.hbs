@@ -1,0 +1,18 @@
+<!-- start tag cloud widget -->
+<div class="widget">
+	<h4 class="title">Series'</h4>
+	<div class="content series">
+		{{#get "tags" limit="5" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts DESC"}}{{tags separator="" }}
+    {{#foreach tags}}
+      <div class="recent-single-post">
+        <a href="{{url}}" class="post-title">{{meta_title}}</a>
+        {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
+        {{#if description}}
+          <p class="description">{{description}}</p>
+        {{/if}}
+      </div>
+    {{/foreach}}
+    {{/get}}
+	</div>
+</div>
+<!-- end tag cloud widget -->

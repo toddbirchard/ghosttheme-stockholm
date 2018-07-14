@@ -1,0 +1,32 @@
+<!-- start sidebar -->
+<div class="col-md-4 sidebar">
+	{{#is "author"}}
+		{{> widget-authorwebsite}}
+		{{> widget-upcoming}}
+		{{> widget-authortwitter}}
+	{{/is}}
+	{{#is "post"}}
+		{{> widget-author}}
+	{{/is}}
+	{{#is "home"}}
+		{{> widget-text}}
+	{{/is}}
+	{{^is "author"}}
+		{{> widget-social}}
+	{{/is}}
+	{{#is "home"}}
+		{{> widget-series}}
+	{{else}}
+		{{> widget-recentpost}}
+	{{/is}}
+	{{^is "author"}}
+		{{> widget-sendgrid}}
+		{{> widget-tagcloud}}
+		{{> widget-facebook}}
+	{{/is}}
+	{{^is "page,author"}}
+		{{> widget-twitter}}
+	{{/is}}
+	{{!-- {{> widget-google-plus}} --}}
+</div>
+<!-- end sidebar -->

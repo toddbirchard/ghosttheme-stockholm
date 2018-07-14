@@ -1,0 +1,13 @@
+<!-- start widget -->
+
+  <script src="{{asset "/js/secret.js"}}"></script>
+  <script src="{{asset "/js/previews.js"}}"></script>
+   {{#author}}
+   {{#if website}}
+    <div class="widget author-website">
+    	<h4 class="title">Website</h4>
+      <a href="{{website}}">{{website}}</a>
+    </div>
+    {{/if}}
+   {{/author}}
+  <!-- end widget -->

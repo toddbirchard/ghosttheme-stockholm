@@ -1,0 +1,11 @@
+<div class="widget">
+    <h4 class="title">{{t "Newsletter"}}</h4>
+	 <div class="content newsletter input-group">
+    {{#if @labs.subscribers}}
+      <section class="gh-subscribe">
+        {{subscribe_form placeholder="Your email address"}}
+        {{!--<span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/"><i class="fas fa-rss"></i></a></span>--}}
+      </section>
+    {{/if}}
+  </div>
+</div>
