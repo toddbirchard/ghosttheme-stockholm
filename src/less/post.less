@@ -15,6 +15,17 @@
 		}
 	}
 
+	.post-title {
+		font-weight: 700;
+		font-size: 2em;
+	}
+
+	.excerpt {
+		font-weight: 200;
+	 font-size: 1.3em;
+	 margin-top: 20px;
+	}
+
 	h2 {
 		margin-bottom: 20px;
 		color: @text-post-header;
@@ -23,9 +34,9 @@
 		font-size: 2.3em;
 		border-bottom: 1px solid #efefef;
 		padding-bottom: 20px;
-		font-weight: 100 !important;
+		font-weight: 200 !important;
 		@media(max-width: 800px) {
-			font-size: 2em;
+			font-size: 1.6em;
 			line-height: 1;
 		}
 	}
@@ -225,6 +236,8 @@
 
 		img {
 			border: 1px solid #eaeaea;
+
+
 		}
 
 		a {
@@ -610,6 +623,16 @@
 		figure {
 			width: fit-content;
     	margin: 40px auto;
+
+			@media(max-width: 800px) {
+				width: 100%;
+				img {
+					width: 99%;
+					max-height: none;
+					margin:auto;
+				}
+			}
+
 		}
 
 		a {
