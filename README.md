@@ -1,10 +1,11 @@
 # Stockholm
 
-![ghost badge](https://img.shields.io/badge/ghost-1.22.4-green.svg?longCache=true&style=flat-square)
-![ghost CLI badge](https://img.shields.io/badge/ghost_CLI-1.6.0-green.svg?longCache=true&style=flat-square)
-![node badge](https://img.shields.io/badge/node-%3E6.9%20%3C7.*-green.svg?longCache=true&style=flat-square)
-![gulp less badge](https://img.shields.io/badge/less_js-3.0.2-green.svg?longCache=true&style=flat-square)
-![express-hbs badge](https://img.shields.io/badge/express_hbs-1.0.4-green.svg?longCache=true&style=flat-square)
+![ghost badge](https://img.shields.io/badge/ghost-1.24.8-lightgrey.svg?longCache=true&style=flat-square)
+![ghost CLI badge](https://img.shields.io/badge/ghost_CLI-1.8.1-lightgrey.svg?longCache=true&style=flat-square)
+![node badge](https://img.shields.io/badge/node-v8.11.3-green.svg?longCache=true&style=flat-square)
+![gulp](https://img.shields.io/badge/gulp-v4.0.0-green.svg?longCache=true&style=flat-square)
+![less](https://img.shields.io/badge/lessjs-v3.7.0-blue.svg?longCache=true&style=flat-square)
+![mongodb](https://img.shields.io/badge/mongodb-v4.0-green.svg?longCache=true&style=flat-square)
 ![jquery badge](https://img.shields.io/badge/jquery-3.3.1-green.svg?longCache=true&style=flat-square)
 
 
