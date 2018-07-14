@@ -16,8 +16,10 @@
 	}
 
 	.post-title {
-		font-weight: 700;
-		font-size: 2em;
+		@media(max-width: 800px{
+			font-weight: 700;
+			font-size: 2em;
+			}
 	}
 
 	.excerpt {
@@ -29,7 +31,7 @@
 	h2 {
 		margin-bottom: 20px;
 		color: @text-post-header;
-		line-height: 1;
+		line-height: 1.2;
 		font-family: montserrat;
 		font-size: 2.3em;
 		border-bottom: 1px solid #efefef;
@@ -38,6 +40,7 @@
 		@media(max-width: 800px) {
 			font-size: 1.6em;
 			line-height: 1;
+			padding-bottom: 10px;
 		}
 	}
 
@@ -336,6 +339,10 @@
                     text-align: center;
                 margin: -10px auto 40px;
                  font-size: 12px;
+
+								 @media(max-width: 800px){
+									     margin: 5px auto 40px;
+								 }
                 }
 
 	.about-author {
