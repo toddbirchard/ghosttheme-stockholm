@@ -16,24 +16,24 @@
 	}
 
 	.post-title {
-		@media(max-width: 800px){
+		@media(max-width: 800px) {
 			font-weight: 700;
 			font-size: 2em;
-			}
-
-			@media(max-width: 600px){
-				font-size: 1.8em;
-				}
+		}
+		@media(max-width: 600px) {
+			font-size: 1.8em;
+		}
 	}
 
 	.excerpt {
 		font-weight: 200;
-	 font-size: 1.5em;
-	 margin-top: 20px;
-	 @media(max-width: 800px){
-		 margin-top: 15px;
-		 font-size: 1.3em;
-	 }
+		font-size: 1.5em;
+		margin-top: 20px;
+		@media(max-width: 800px) {
+			margin-top: 15px;
+			font-size: 1.3em;
+			text-align: center;
+		}
 	}
 
 	h2 {
@@ -60,11 +60,11 @@
 
 	blockquote {
 		border-left: 4px solid #26a2c7;
-    font-family: mr-eaves-xl-modern,serif;
-    font-style: normal;
-    background: #f3f3f3;
-    padding: 20px;
-    font-size: 1.1em;
+		font-family: mr-eaves-xl-modern,serif;
+		font-style: normal;
+		background: #f9f9f9;
+		padding: 20px;
+		font-size: 1.1em;
 	}
 
 	.main-header,
@@ -74,7 +74,7 @@
 	}
 
 	.post-meta {
-		margin: 0 80px 0;
+		margin: 0 80px;
 		color: #9ea1ab;
 		font-size: 12px;
 		display: block;
@@ -92,7 +92,6 @@
 			margin: 0 20px 0 0;
 			float: left;
 			font-size: 1.2em;
-
 
 			&:last-child {
 				margin: 0;
@@ -115,14 +114,13 @@
 		border-bottom: 1px solid #ececec;
 		border-top: 1px solid #ececec;
 		width: 70%;
-
 		@media(max-width: 800px) {
-			 width: 80%;
-			 align-items: start;
+			width: 80%;
+			align-items: start;
 		}
 
 		.blurb-icon {
-			background:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/flask-icon.png');
+			background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/flask-icon.png");
 			height: 75px;
 			height: 75px;
 			min-width: 75px;
@@ -138,10 +136,10 @@
 			font-size: 1.1em;
 			width: auto;
 			margin: 0;
-			text-align:justify;
-
+			text-align: justify;
 			@media (max-width: 800px) {
 				font-size: 1em;
+				text-align:justify;
 			}
 		}
 	}
@@ -174,8 +172,8 @@
 				}
 			}
 
-			tr:nth-child(odd) td {
-				background: #f1f4f7;
+			tr:nth-child(even) td {
+				background: #f4f8fd;
 			}
 
 			th {
@@ -199,23 +197,23 @@
 	}
 
 	.post-meta {
-		margin: 0 80px 0;
+		margin: 0 80px;
 		color: #9ea1ab;
 		height: 20px;
 
-		span,
-		a {
+		a,
+		span {
 			@media(max-width: 800px) {
 				margin: 0;
 			}
 		}
-		@media(max-width: 800px) {
+		@media(max-width: 600px) {
 			display: flex;
-	    justify-content: space-between;
-	    padding: 0;
-	    width: 100%;
+			justify-content: space-between;
+			padding: 0;
+			width: 100%;
 			border-top: 1px solid #e8e8e8;
-    padding-top: 20px;
+			padding-top: 20px;
 		}
 
 		& > div {
@@ -251,8 +249,6 @@
 
 		img {
 			border: 1px solid #eaeaea;
-
-
 		}
 
 		a {
@@ -348,22 +344,20 @@
 	}
 
 	figcaption {
-                    text-align: center;
-                margin: -10px auto 40px;
-                 font-size: 12px;
-
-								 @media(max-width: 800px){
-									     margin: 10px auto 40px;
-											 font-size:14px;
-								 }
-                }
+		text-align: center;
+		margin: -10px auto 40px;
+		font-size: 12px;
+		@media(max-width: 800px) {
+			margin: 10px auto 40px;
+			font-size: 14px;
+		}
+	}
 
 	.about-author {
 		background: @white;
 		padding: 40px 80px;
 		margin: 20px 0;
 		min-height: 88px;
-
 		@media(max-width: 1000px) {
 			padding: 30px 40px;
 			margin: 20px;
@@ -505,10 +499,8 @@
 			line-height: 1;
 			overflow: hidden;
 			display: block;
-
 			@media(max-width: 800px) {
 				white-space: normal;
-
 			}
 
 			a {
@@ -518,16 +510,6 @@
 				&:hover {
 					text-decoration: none;
 				}
-			}
-		}
-
-		h5,
-		h4 {
-			margin-top: 5px;
-			margin-bottom: 0;
-
-			@media (max-width: 800px) {
-				text-align: center;
 			}
 		}
 
@@ -549,8 +531,6 @@
 				}
 			}
 		}
-
-
 
 		img {
 			height: 14px;
@@ -587,7 +567,7 @@
 	}
 
 	.post-content {
-		overflow-x: hidden;
+		overflow-x: visible;
 		clear: both;
 
 		h2,
@@ -595,7 +575,6 @@
 			margin-top: 40px;
 			color: @text-post-header;
 		}
-
 
 		ol,
 		ul {
@@ -628,7 +607,7 @@
 
 			.EmbeddedTweet,
 			.EmbeddedTweet-tweet {
-				width: 100% !important
+				width: 100% !important;
 			}
 		}
 
@@ -641,17 +620,20 @@
 
 		figure {
 			width: fit-content;
-    	margin: 40px auto;
-
+			margin: 40px auto;
 			@media(max-width: 800px) {
-				width: 100%;
+				margin: 0 calc(50% - 50vw) !important;
+    		width: auto !important;
+
 				img {
-					width: 99%;
+					width: 100%;
 					max-height: none;
-					margin:auto;
+					margin: auto;
+					border: 1px solid #bcccd4;
+					border-left: 0;
+					border-right: 0;
 				}
 			}
-
 		}
 
 		a {
