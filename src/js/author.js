@@ -16,9 +16,7 @@
     }
 
     if (docs[0]['linkedin']) {
-      $('.sidebar').append(
-        '<div class="widget"><div class="content"><h4 class="title">LinkedIn</h4><div style="width:100%;" class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="toddbirchard"><a class="LI-simple-link" href="https://www.linkedin.com/in/' +
-        docs[0]['linkedin'] + '?trk=profile-badge">' + docs[0]['linkedin'] + '</a></div></div></div>');
+      $('.sidebar').append('<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/' + docs[0]['linkedin'] + '" data-format="inline" data-related="false"></script>');
     }
 
     if (docs[0]['meetup']) {
