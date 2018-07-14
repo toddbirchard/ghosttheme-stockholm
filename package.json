@@ -1,8 +1,8 @@
 {
-  "name": "Stockholm",
+  "name": "stockholm",
   "description": "Stockholm: Minimal Ghost Theme.",
   "demo": "https://hackersandslackers.com",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "engines": {
     "ghost": ">=1.0.0"
   },
