@@ -45,7 +45,7 @@
 		font-size: 2.3em;
 		border-bottom: 1px solid #efefef;
 		padding-bottom: 20px;
-		font-weight: 200 !important;
+		font-weight: 300 !important;
 		@media(max-width: 800px) {
 			font-size: 1.6em;
 			padding-bottom: 10px;
@@ -170,6 +170,7 @@
 				margin-left: calc(~"-50vw + 50%");
 		    margin-right: calc(~"-50vw + 50%");
 		    width: 116%;
+				box-shadow: 0 0 15px #dcdcdc;
 			}
 
 			td,
@@ -224,7 +225,7 @@
 			padding: 0;
 			max-width: none;
 			width: auto;
-			margin: 0 30px;
+			margin: 0 30px !important;
 			border-top: 1px solid #e8e8e8;
 			padding-top: 20px;
 		}
@@ -271,7 +272,7 @@
 		blockquote {
 			margin: 40px;
 			@media(max-width: 600px) {
-				margin: 20px;
+				margin: 20px auto;
 			}
 
 			p {
@@ -364,9 +365,12 @@
 		margin: -10px auto 40px;
 		font-size: 12px;
 		color: #8c8c8c;
-		@media(max-width: 800px) {
-			margin: 10px auto 40px;
-			font-size: 14px;
+		@media(max-width: 600px) {
+			margin: 0px auto 60px;
+	    font-size: 14px;
+	    padding: 0;
+	    height: 0;
+	    line-height: 4;
 		}
 	}
 
@@ -641,6 +645,7 @@
 				margin-left: calc(~"-50vw + 50%");
     		margin-right: calc(~"-50vw + 50%");
     		width: auto !important;
+				box-shadow: 0 0 15px #dcdcdc;
 
 				img {
 					width: 100%;
