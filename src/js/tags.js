@@ -15,7 +15,8 @@ $(document).ready(function() {
     devops: '<i class="fas fa-server"></i>',
     pandas: '<i class="fal fa-database"></i>',
     datascience: '<i class="fas fa-flask"></i>',
-    tableau: '<i class="far fa-asterisk"></i>'
+    tableau: '<i class="far fa-asterisk"></i>',
+    googlecloud: '<i class="fab fa-google"></i>'
   };
 
   for (var key in tags) {
