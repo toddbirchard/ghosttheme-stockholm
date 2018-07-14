@@ -31,6 +31,15 @@
 		color: #504f5f;
 	}
 
+	blockquote {
+		border-left: 4px solid #26a2c7;
+    font-family: mr-eaves-xl-modern,serif;
+    font-style: normal;
+    background: #f3f3f3;
+    padding: 20px;
+    font-size: 1.1em;
+	}
+
 	.main-header,
 	.main-navigation,
 	.sidebar {
@@ -123,13 +132,12 @@
 			border-radius: 3px;
 			width: 100%;
 			font-size: 13px;
-			border: 1px solid #d2d2d2;
+			border: 1px solid #e5e9ef;
 			border-spacing: 0;
 
 			td,
 			th {
 				padding: 7px 20px;
-				min-width: 200px;
 				text-align: center;
 				@media(max-width: 800px) {
 					min-width: 40px;
@@ -142,9 +150,9 @@
 			}
 
 			th {
-				background: #64828c;
+				background: #94b6c1;
 				font-weight: 500;
-				text-transform: capitalize;
+				text-transform: uppercase;
 				color: white;
 				font-size: 16px;
 			}
@@ -592,10 +600,15 @@
 		}
 
 		img {
-			max-width: 99%;
+			max-height: 400px;
 			border: 1px solid #eaeaea;
 			margin: 30px auto;
 			display: block;
+		}
+
+		figure {
+			width: fit-content;
+    	margin: 40px auto;
 		}
 
 		a {
