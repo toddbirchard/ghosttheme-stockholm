@@ -16,7 +16,8 @@ $(document).ready(function() {
     pandas: '<i class="fal fa-database"></i>',
     datascience: '<i class="fas fa-flask"></i>',
     tableau: '<i class="far fa-asterisk"></i>',
-    googlecloud: '<i class="fab fa-google"></i>'
+    googlecloud: '<i class="fab fa-google"></i>',
+    sql: '<i class="fas fa-database"></i>'
   };
 
   for (var key in tags) {
