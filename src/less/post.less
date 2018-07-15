@@ -53,9 +53,11 @@
 		margin-top: 10px;
 		margin-bottom: 0;
 		@media(max-width: 800px) {
-			margin-top: 15px;
-			font-size: 1.3em;
+			margin: 15px auto 0;
+			font-size: 1.4em;
 			text-align: center;
+			line-height: 1.1;
+			max-width: 450px;
 		}
 	}
 
@@ -110,7 +112,8 @@
 		width: auto;
 
 		@media(max-width: 800px) {
-			margin: 0 44px !important;
+			max-width: 450px;
+			margin: 0 auto !important;
 				width: auto;
 				display: flex;
 				justify-content: space-around;
@@ -192,17 +195,31 @@
 	}
 
 	.post-roundup-blurb {
-		margin: 55px auto 32px;
+		border-bottom: 0;
+    border-top: 0;
+    padding: 15px 20px;
+    background: #f1f4f7;
+    border-left: 5px solid #26ae60;
+    margin: 30px 80px;
+    width: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
-		border-bottom: 1px solid #ececec;
-		border-top: 1px solid #ececec;
-		width: 70%;
+		min-height: 78px;
+
 		@media(max-width: 800px) {
-			width: 80%;
+			margin: 30px 40px;
 			align-items: start;
+		}
+		@media(max-width: 600px) {
+			padding: 20px 0;
+	    border-bottom: 0;
+	    border-top: 0;
+			padding: 15px 20px;
+			background: #f1f4f7;
+			border-left: 5px solid #26ae60;
+			margin: 30px;
+			width: auto;
 		}
 
 		.blurb-icon {
@@ -212,20 +229,36 @@
 			min-width: 75px;
 			margin-right: 25px;
 			background-size: cover;
+			 display: inline-block;
+			 float:left;
+
+
+			@media(max-width: 600px) {
+				height: 65px;
+    		min-width: 65px;
+				margin-right: 15px;
+				display: none;
+			}
 		}
 
 		p {
-			line-height: 1.5;
-			font-style: italic;
-			font-family: 'akzidenz';
-			color: #a2a2a2;
-			font-size: 1.1em;
+			line-height: 1.5 !important;
+			font-family: akzidenz;
+			color: #777373;
+			font-size: 1em;
 			width: auto;
 			margin: 0;
 			text-align: justify;
 			@media (max-width: 800px) {
 				font-size: 1em;
 				text-align: justify;
+			}
+			@media (max-width: 600px) {
+				font-size: .9em;
+				text-align: justify;
+				line-height: 1.6 !important;
+				color: #494b56;
+    		font-style: normal;
 			}
 		}
 	}
@@ -459,6 +492,10 @@
 			width: 100%;
 			clear: both;
 			font-size: 18px;
+
+			@media(max-width: 800px) {
+				font-size: 16px;
+			}
 		}
 
 		.author {
