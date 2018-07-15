@@ -95,6 +95,7 @@
 			font-weight:100;
 
 
+
 			&:hover {
 				color: @hover-color;
 			}
@@ -235,6 +236,10 @@
 				font-family: 'akzidenz-regular', sans-serif;
 				.transition(all 0.2s ease);
 				font-weight: 100;
+
+				@media(max-width: 600px) {
+					text-align: left;
+				}
 
 				&:hover {
 					color: @theme-color;
