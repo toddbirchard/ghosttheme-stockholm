@@ -69,9 +69,10 @@
 
 			@media(max-width: 800px) {
 				height: 44px;
-				width: 65%;
-				bottom: auto;
-				top: 30%;
+		    max-width: 280px;
+		    bottom: auto;
+		    top: 29%;
+		    width: 65%;
 			}
 
 			&:hover {
@@ -119,14 +120,16 @@
 	}
 
 	.menu {
-		padding: 0;
-		margin: 30px 40px 0 auto;
+		width: 300px;
+		float: right;
 		display: flex;
 		justify-content: space-between;
-		width: 300px;
+		padding: 35px 40px 0 0;
+		margin: 0;
+		list-style: none;
 
 		@media(max-width: 800px) {
-			width: 240px;
+			max-width: 280px;
 			margin: auto;
 			left: 0;
 			right: 0;
@@ -139,15 +142,13 @@
 			position: relative;
 
 			a {
-				color: white;
-				line-height: 1;
-				display: block;
-				padding: 0;
-				font-family: 'mr-eaves-xl-modern', serif;
-				text-transform: uppercase;
-				font-size: 18px;
-				font-weight: 600;
-				transition: all 0.2s ease-out;
+				color: #fff;
+		    font-family: mr-eaves-xl-modern,serif;
+		    text-transform: uppercase;
+		    font-size: 20px;
+		    font-weight: 500;
+		    letter-spacing: .5px;
+		    transition: all .2s ease-out;
 				@media(max-width: 800px) {
 					padding: 0;
 					font-weight: 500;

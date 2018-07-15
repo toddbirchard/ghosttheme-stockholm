@@ -43,7 +43,7 @@
 			font-size: 2.4em;
 		}
 		@media(max-width: 600px) {
-			font-size: 1.8em;
+			font-size: 2em;
 		}
 	}
 
@@ -53,7 +53,7 @@
 		margin-top: 10px;
 		margin-bottom: 0;
 		@media(max-width: 800px) {
-			margin: 15px auto 0;
+			margin: 10px auto 0;
 			font-size: 1.4em;
 			text-align: center;
 			line-height: 1.1;
@@ -67,7 +67,7 @@
 		line-height: 1.2;
 		font-family: montserrat;
 		font-size: 2.3em;
-		border-bottom: 1px solid #efefef;
+		border-bottom: 1px solid #d7e8ec;
 		padding-bottom: 10px;
 		font-weight: 300 !important;
 		@media(max-width: 800px) {
@@ -87,6 +87,10 @@
 		text-align: justify;
 		font-size: 18px;
 		line-height: 1.8 !important;
+
+		@media(max-width: 600px) {
+			font-size:16px;
+		}
 	}
 
 	blockquote {
@@ -127,7 +131,7 @@
 			width: auto;
 			margin: 0 30px !important;
 			border-top: 1px solid #e8e8e8;
-			padding-top: 20px;
+			padding-top: 10px;
 			padding-bottom: 10px;
 		}
 
@@ -161,6 +165,7 @@
 			font-size: 1.3em;
 			display: flex;
 			align-items: center;
+			text-transform: capitalize;
 
 			@media(max-width: 600px) {
 				margin: 0;
@@ -168,7 +173,7 @@
 			}
 
 			span {
-				font-weight: 100;
+				font-weight: 200;
 				font-family: 'montserrat';
 			}
 
@@ -197,7 +202,7 @@
 	.post-roundup-blurb {
 		border-bottom: 0;
     border-top: 0;
-    padding: 15px 20px;
+    padding: 10px 20px;
     background: #f1f4f7;
     border-left: 5px solid #26ae60;
     margin: 30px 80px;
@@ -209,7 +214,6 @@
 
 		@media(max-width: 800px) {
 			margin: 30px 40px;
-			align-items: start;
 		}
 		@media(max-width: 600px) {
 			padding: 20px 0;
@@ -218,25 +222,25 @@
 			padding: 15px 20px;
 			background: #f1f4f7;
 			border-left: 5px solid #26ae60;
-			margin: 30px;
+			margin: 15px 30px 30px;
 			width: auto;
 		}
 
 		.blurb-icon {
 			background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/flask-icon.png");
-			height: 75px;
-			height: 75px;
-			min-width: 75px;
+			height: 55px;
+			width: 55px;
+			min-width: 55px;
 			margin-right: 25px;
 			background-size: cover;
-			 display: inline-block;
-			 float:left;
-
+			display: inline-block;
+			 @media(max-width: 800px) {
+				 margin-right: 15px;
+			 }
 
 			@media(max-width: 600px) {
 				height: 65px;
     		min-width: 65px;
-				margin-right: 15px;
 				display: none;
 			}
 		}
@@ -252,6 +256,7 @@
 			@media (max-width: 800px) {
 				font-size: 1em;
 				text-align: justify;
+				line-height: 1.3 !important;
 			}
 			@media (max-width: 600px) {
 				font-size: .9em;
@@ -292,7 +297,6 @@
 				padding: 7px 20px;
 				text-align: center;
 				@media(max-width: 800px) {
-					min-width: 40px;
 					padding: 7px 0;
 				}
 			}
@@ -307,6 +311,11 @@
 				text-transform: uppercase;
 				color: white;
 				font-size: 16px;
+
+				@media(max-width: 600px){
+					font-size: 14px;
+					font-weight: 800;
+				}
 			}
 		}
 	}
@@ -464,6 +473,10 @@
 			margin-bottom: 20px;
 			float: left;
 
+			@media(max-width: 600px) {
+				margin-right: 20px;
+			}
+
 			img {
 				width: 100%;
 			}
@@ -476,7 +489,7 @@
 			span {
 				display: block;
 				line-height: 1em;
-				margin-bottom: 5px;
+				margin-bottom: 8px;
 
 				i {
 					margin-right: 8px;
