@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var api_url = 'http://api.linkpreview.net/';
+  var api_url = 'https://api.linkpreview.net/';
 
   function verifyImage(input) {
     if (input.length > 0) {
