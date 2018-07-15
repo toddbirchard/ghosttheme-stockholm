@@ -12,7 +12,7 @@
     float: left;
   }
 
-  .post-navigation{
+  .post-navigation {
     .menu {
       width: 300px;
       float: right;
@@ -21,7 +21,6 @@
       padding: 40px 40px 0 0;
       margin: 0;
       list-style: none;
-
       @media(max-width: 600px) {
         width: 230px;
         padding: 25px 20px;
@@ -31,25 +30,24 @@
         display: inline-block;
 
         a {
-          color:white;
+          color: white;
           font-family: 'mr-eaves-xl-modern', serif;
           text-transform: uppercase;
-          font-size: 16px;
-          font-weight: 600;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 0.5px;
           transition: all 0.2s ease-out;
 
           &:hover {
             color: @hover-color;
             cursor: pointer;
           }
-
           @media(max-width: 600px) {
-              font-size: 16px;
+            font-size: 16px;
+            font-weight: 600;
           }
         }
       }
     }
-
   }
-
 }
