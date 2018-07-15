@@ -4,7 +4,6 @@
 @import "variables.less";
 @import "mixin.less";
 @import "code.less";
-
 @import "author.less";
 @import "global.less";
 @import "footer.less";
@@ -13,7 +12,6 @@
 @import "postfooter.less";
 @import "postpreview.less";
 @import "variables.less";
-
 @import "customtemplates.less";
 @import "hacks.less";
 @import "linkpreview.less";
@@ -25,8 +23,6 @@
 @import "tags.less";
 @import 'githubcard.less';
 @import 'kanban.less';
-
-
 /*====================================================
 	fonts
 ====================================================*/
@@ -34,31 +30,25 @@
 	font-family: 'akzidenz';
 	src: url("../fonts/akzidenzgrotesk-bq-light-regular.otf") format("opentype");
 }
-
 @font-face {
 	font-family: 'akzidenz-bold';
 	src: url("../fonts/akzidenzgrotesk-bq-bold.otf") format("opentype");
 }
-
 @font-face {
 	font-family: 'akzidenz-medium';
 	src: url("../fonts/akzidenzgrotesk-bq-medium.otf") format("opentype");
 }
-
 @font-face {
 	font-family: 'akzidenz-regular';
 	src: url("../fonts/akzidenzgrotesk-bq-regular.otf") format("opentype");
 }
-
 @font-face {
 	font-family: 'Lulo-Bold';
 	src: url("../fonts/Lulo Clean One Bold.otf") format("opentype");
 }
-
 /*====================================================
 	about author and comment and next-prev link
 ====================================================*/
-
 .page-about {
 	.about-author {
 		border: 1px solid #dcdcdc;
@@ -100,13 +90,6 @@
 		margin: 0;
 	}
 }
-
-
-
-
-
-
-
 /*====================================================
 	Tag page & author page cover
 ====================================================*/
@@ -121,7 +104,7 @@
 
 		i {
 			font-size: 16px;
-    	margin-right: 5px;
+			margin-right: 5px;
 		}
 	}
 
@@ -153,9 +136,7 @@
 			}
 		}
 	}
-
 }
-
 
 .copyright {
 	background: @bg-color-footer-dark;
@@ -230,52 +211,19 @@ p {
 		color: @text-color;
 	}
 }
-
-
 /*====================================================
 	media query
 ====================================================*/
-@media (max-width:1000px) {
-	.sidebar {
-		display: none;
-	}
-
-	.main-navigation {
-		text-align: left;
-		padding: 0;
 
 
-		.menu {
-			li {
-				display: block;
 
-				a {
-					color: white;
-					font-size: 17px;
-				}
-
-				&:hover > a {
-					text-decoration: none;
-				}
-
-				ul {
-					visibility: visible;
-					margin: 0;
-					position: relative;
-					top: 0;
-					width: 100%;
-					.opacity(1);
-				}
-			}
-		}
-	}
 
 	.prev-next-wrap {
 		a {
 			display: block;
 		}
 	}
-}
+
 @media (min-width: 768px) {
 	.nav-toggle-button {
 		display: none;
@@ -293,7 +241,6 @@ p {
 	iframe {
 		margin: 0 auto !important;
 	}
-
 
 	.mobile-branding {
 		float: left;
@@ -323,12 +270,10 @@ p {
 	.tag-list {
 		margin: 3px;
 	}
-
-
 }
 
-.post-template,
-.page-template {
+.page-template,
+.post-template {
 	.mobile-branding {
 		@media(max-width: 800px) {
 			display: block;

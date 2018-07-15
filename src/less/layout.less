@@ -3,15 +3,28 @@
 section > .container {
 	max-width: 1050px;
 	margin:auto;
+
+	@media(max-width: 1050px) {
+		  width: 95%;
+			max-width: none;
+	}
+
+	@media(max-width: 600px) {
+		  width: 100%;
+	}
 }
 
 /* Content excluding sidebar */
 .main-content {
-  @media (min-width: 992px) {
+  @media (min-width: 1000px) {
 		width: 67%;
 	}
 }
 
 .sidebar {
   width: 30%;
+
+	@media (max-width:800px) {
+			display: none;
+}
 }

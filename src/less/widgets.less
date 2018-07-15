@@ -1,28 +1,73 @@
 @import "variables.less";
 @import "mixin.less";
-
 /*====================================================
 	sidebar
 ====================================================*/
 .sidebar {
+
+	.tag-cloud {
+		a {
+			border: 1px solid #e6e6e6;
+			padding: 3px 11px;
+			color: #627e90;
+			line-height: 1.5em;
+			display: inline-block;
+			margin: 0 10px 10px 0;
+			border-radius: 2px;
+			.transition(all 0.2s ease);
+			@media(max-width: 1000px) {
+				font-size: 0.77em !important;
+				padding: 2px 9px !important;
+				margin: 0 5px 5px 0;
+			}
+
+			&:hover {
+				color: @white;
+				background: @theme-color;
+				border: 1px solid @theme-color;
+				text-decoration: none;
+			}
+		}
+	}
 	.widget {
 		background: @white;
 		padding: 20px 25px;
-
-		.social {
-				padding:0;
-				display: flex;
-				justify-content: space-between;
+		@media(max-width: 800px) {
+			padding: 15px 20px !important;
 		}
 
+
+
+		.social {
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+
+					@media (max-width: 1000px) {
+						a {
+							font-size: 12px !important;
+						}
+						li {
+							border: 0 !important;
+							padding: 0 !important;
+							}
+
+					i {
+						font-size: 16px;
+					}
+
+
+				}
+			}
+
 		.fb {
-			 height: 220px;
+			height: 220px;
 		}
 
 		.newsletter {
 			button {
-		    background: #26a2c7;
-		    color: #FFFFFF;
+				background: #26a2c7;
+				color: #FFFFFF;
 				width: 100%;
 				padding: 10px 20px;
 				border: 0;
@@ -42,8 +87,8 @@
 
 			.gh-subscribe-rss {
 				padding-top: 10px;
-		    display: block;
-		    text-align: right;
+				display: block;
+				text-align: right;
 			}
 		}
 
@@ -60,11 +105,11 @@
 
 			.recent-single-post {
 				border-bottom: 1px dashed #ebebeb;
-				padding: 12px 0px;
+				padding: 12px 0;
 
 				&:last-child {
 					border-bottom: 0;
-					padding: 12px 0 0 0;
+					padding: 12px 0 0;
 				}
 
 				&:nth-of-type(1) {
@@ -72,7 +117,7 @@
 				}
 
 				&:nth-of-type(2) {
-					padding: 0 0 12px 0;
+					padding: 0 0 12px;
 				}
 			}
 
@@ -89,10 +134,10 @@
 		.post-title {
 			color: #627e90;
 			line-height: 1;
-			font-size: 15px;
-			margin:0;
+			font-size: 16px;
+			margin: 0;
 			font-family: 'akzidenz-regular', sans-serif;
-			font-weight:100;
+			font-weight: 100;
 
 			&:hover {
 				color: @hover-color;
@@ -134,7 +179,6 @@
 	}
 }
 
-
 .widget {
 	margin-bottom: 20px;
 	margin-top: 0;
@@ -161,57 +205,35 @@
 		overflow: hidden;
 	}
 
+	li {
+		display: inline-block;
+		text-align: center;
+		border: 1px solid @border-color;
+		padding: 5px 7px;
 
-
-		li {
-			display: inline-block;
-			text-align: center;
-			border: 1px solid @border-color;
-			padding: 5px 7px;
-
-			a {
-				i {
-					line-height: 1;
-					color: #bbbbbb;
-					.transition(all 0.2s);
-					height: 15px;
-					width: 21px;
-					font-size: 13px;
-					transition: all 0.2s ease-out;
-				}
-			}
-
-			&:hover {
-				background: @theme-color;
-				border: 1px solid @theme-color;
-				cursor: pointer;
-
-				i {
-					color: @white;
-				}
+		a {
+			i {
+				line-height: 1;
+				color: #bbbbbb;
+				.transition(all 0.2s);
+				height: 15px;
+				width: 21px;
+				font-size: 13px;
+				transition: all 0.2s ease-out;
 			}
 		}
 
+		&:hover {
+			background: @theme-color;
+			border: 1px solid @theme-color;
+			cursor: pointer;
 
-	.tag-cloud {
-		a {
-			border: 1px solid #e6e6e6;
-			padding: 3px 11px;
-			color: #627e90;
-			line-height: 1.5em;
-			display: inline-block;
-			margin: 0 10px 10px 0;
-			border-radius: 2px;
-			.transition(all 0.2s ease);
-
-			&:hover {
+			i {
 				color: @white;
-				background: @theme-color;
-				border: 1px solid @theme-color;
-				text-decoration: none;
 			}
 		}
 	}
+
 
 
 	.recent-post {
@@ -223,10 +245,10 @@
 
 			img {
 				vertical-align: middle;
-		    height: 30px;
-		    width: 30px;
-		    border-radius: 50%;
-		    margin-right: 10px;
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				margin-right: 10px;
 			}
 
 			.post-title,
@@ -234,7 +256,6 @@
 				font-family: 'akzidenz-regular', sans-serif;
 				.transition(all 0.2s ease);
 				font-weight: 100;
-
 				@media(max-width: 600px) {
 					text-align: left;
 				}
@@ -264,9 +285,10 @@
 	}
 
 	.newsletter {
-		width:100%;
-		.form-group{
-			width:100%;
+		width: 100%;
+
+		.form-group {
+			width: 100%;
 		}
 
 		.subscribe-email {
@@ -276,8 +298,8 @@
 			/*color: #ebebeb;*/
 		}
 
-		.input-group,
-		.form-group  {
+		.form-group,
+		.input-group {
 			margin-bottom: 20px;
 			display: block;
 
@@ -287,9 +309,10 @@
 
 			.btn {
 				width: 100%;
+
 				span {
 					font-size: 12px;
-    			text-transform: capitalize;
+					text-transform: capitalize;
 				}
 			}
 		}
