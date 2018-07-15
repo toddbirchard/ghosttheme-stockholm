@@ -13,6 +13,32 @@
 		margin: auto;
 	}
 
+	&.featured {
+		order: 0;
+	}
+
+	.featured {
+		position: absolute;
+		background: @theme-color;
+		color: @white;
+		text-align: center;
+		top: -12px;
+		right: -32px;
+		width: 80px;
+		height: 40px;
+		line-height: 54px;
+		.transform(rotate(45deg));
+		font-size: 12px;
+		z-index: 10;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+
+		i {
+			.transform(rotate(-45deg));
+			margin-right: 2px;
+    	font-size: 13px;
+		}
+	}
+
 	.post-head {
 		margin: 10px 0 20px;
 
@@ -77,6 +103,16 @@
 			justify-items: center;
 			margin: auto 0;
 			font-family: 'akzidenz-medium';
+			align-items: center;
+
+			i {
+				height: 23px;
+    		display: inline-block;
+			}
+
+			&.tags span {
+				line-height:1;
+			}
 
 			@media(max-width: 600px){
 				font-family: 'akzidenz';
