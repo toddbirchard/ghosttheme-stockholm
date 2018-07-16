@@ -13,7 +13,7 @@ $(document).ready(function() {
     roundup: '<i class="fas fa-undo-alt"></i>',
     excel: '<i class="fal fa-table"></i>',
     devops: '<i class="fas fa-server"></i>',
-    pandas: '<i class="fal fa-database"></i>',
+    pandas: '<i class="fas fa-database"></i>',
     datascience: '<i class="fas fa-flask"></i>',
     tableau: '<i class="far fa-asterisk"></i>',
     googlecloud: '<i class="fab fa-google"></i>',
