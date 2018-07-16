@@ -17,7 +17,8 @@ $(document).ready(function() {
     datascience: '<i class="fas fa-flask"></i>',
     tableau: '<i class="far fa-asterisk"></i>',
     googlecloud: '<i class="fab fa-google"></i>',
-    sql: '<i class="fas fa-database"></i>'
+    sql: '<i class="fas fa-database"></i>',
+    statistics: '<i class="far fa-chart-bar"></i>'
   };
 
   for (var key in tags) {
