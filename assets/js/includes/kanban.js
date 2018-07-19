@@ -7,7 +7,7 @@ $(document).ready(function() {
     }
   }
 
-  const clientPromise = stitch.StitchClientFactory.create('hackerjira-bzmfe');
+  const clientPromise = stitch.StitchClientFactory.create('hackers-authors');
   clientPromise.then(client => {
     const db = client.service('mongodb', 'mongodb-atlas').db('HackersBlog');
     client.login().then(() =>

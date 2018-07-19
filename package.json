@@ -6,8 +6,10 @@
   "engines": {
     "ghost": ">=1.0.0"
   },
-    "presets": ["env"],
-    "author": {
+  "presets": [
+    "env"
+  ],
+  "author": {
     "name": "Todd Birchard",
     "email": "toddbirchard@gmail.com",
     "url": "https://toddbirchard.com"
@@ -32,6 +34,7 @@
   },
   "dependencies": {
     "github-profile-card": "^2.0.1",
+    "mongodb-stitch-browser-sdk": "^4.0.9",
     "node-getpocket": "^1.0.0"
   },
   "devDependencies": {

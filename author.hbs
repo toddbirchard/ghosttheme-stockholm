@@ -18,4 +18,14 @@
 		</div>
 	</div>
 </section>
-<!-- end site's main content area -->
+
+<script type="text/javascript" src="{{asset "/js/includes/stitch.min.js"}}"></script>
+<script>
+
+  const client = stitch.Stitch.initializeDefaultAppClient('hackerauthors-kjmze');
+
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, "mongodb-atlas").db('authors');
+	var authors = db.collection('social').find({}).asArray()
+	console.log(authors)
+</script>
+<!-- end sites main content area -->
