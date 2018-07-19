@@ -18,9 +18,9 @@ $(document).ready(function() {
   }
 
   function postLinkPreviews() {
-    $(".kg-post a").each(function(index, element) {
+    $(".kg-post p > a").each(function(index, element) {
       $.ajax({
-        url: api_url + "?key=5b439c179073fae7b9928e83dc64e969bd01b9562d693&q=" + $(this).text(),
+        url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
         contentType: "application/json",
         dataType: 'json',
         success: function(result) {
@@ -47,10 +47,9 @@ $(document).ready(function() {
     });
   }
 
-  if ($('body').hasClass('tag-roundup') == true) {
     postLinkPreviews();
-  }
 
+    
   if ($('.author-template').length) {
     authorLinkPreviews();
   }

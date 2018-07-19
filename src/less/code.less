@@ -1,18 +1,41 @@
+pre {
+  white-space: pre-wrap;
+    @media(max-width: 600px) {
+      margin-left: calc(~"-50vw + 50%") !important;
+      margin-right: calc(~"-50vw + 50%") !important;
+      width: auto !important;
+  }
+
+  span{
+    display: inline-block;
+  }
+}
+
+code{
+  margin:0;
+}
+
+
+
 .hljs{
   display: block;
   overflow-x: auto;
   padding: 1em;
   color: #166c8b;
   background: #f1f5f8;
+  overflow-wrap: break-word;
+  margin:0;
+  
 }
 
 code  {
   padding: 5px;
   background: #fafbfc;
-  font-size: 16px;
+  font-size: 13px;
   color: #2e9eb7;
   border-radius: 4px;
   margin: 0 5px;
+  font-style: italic;
 }
 
 .hljs-comment,
