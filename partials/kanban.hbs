@@ -2,18 +2,6 @@
   <div class="column" id="backlog">
     <h2>Backlog</h2>
     <div class="cards">
-      <!--<div class="card">
-        <h5>Title of issue</h5>
-        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
-        <div class="issuetype"><img src="https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646212__340.png"></div>
-        <div class="info">
-          <div class="left">
-            <div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div>
-            <div class="priority"><i class="fas fa-arrow-up"></i></div>
-          </div>
-          <div class="epic"><span>epic name</span></div>
-      </div>
-    </div>-->
     </div>
   </div>
   <div class="column" id="todo">
@@ -29,9 +17,7 @@
     <div class="cards"></div>
   </div>
 </div>
-<script type="text/javascript" src="{{asset 'js/includes/stitch.min.js'}"></script>
-{{!--<script type="text/javascript" src="{{asset "/js/includes/fetch.min.js"}}"></script>--}}
-<!--<script type="text/javascript" src="{{asset "/js/kanban.js"}}"></script>-->
+<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 <script>
 
   function populateCards(cards, status) {

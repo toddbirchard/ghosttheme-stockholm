@@ -7,7 +7,7 @@ $(document).ready(function() {
     nosql: '<i class="fab fa-envira"></i>',
     apis: '<i class="fab fa-hubspot"></i>',
     frontend: '<i class="far fa-code"></i>',
-    data: '<i class="fab fa-js-square"></i>',
+    data: '<i class="fas fa-chart-pie"></i>',
     mysql: '<i class="fas fa-database"></i>',
     javascript: '<i class="fab fa-js-square"></i>',
     roundup: '<i class="fas fa-undo-alt"></i>',
@@ -18,6 +18,7 @@ $(document).ready(function() {
     tableau: '<i class="far fa-asterisk"></i>',
     googlecloud: '<i class="fab fa-google"></i>',
     sql: '<i class="fas fa-database"></i>',
+    statistics: '<i class="far fa-chart-bar"></i>',
     statistics: '<i class="far fa-chart-bar"></i>'
   };
 

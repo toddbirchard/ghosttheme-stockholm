@@ -19,13 +19,19 @@
 	</div>
 </section>
 
-<script type="text/javascript" src="{{asset "/js/includes/stitch.min.js"}}"></script>
+<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 <script>
+  const client = stitch.Stitch.initializeDefaultAppClient('authors-gwezt');
 
-  const client = stitch.Stitch.initializeDefaultAppClient('hackerauthors-kjmze');
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('authors');
 
-  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, "mongodb-atlas").db('authors');
-	var authors = db.collection('social').find({}).asArray()
-	console.log(authors)
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
+    db.collection('social').find({}, { limit: 100}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      console.log("[MongoDB Stitch] Connected to Stitch")
+  }).catch(err => {
+    console.error(err)
+  });
 </script>
 <!-- end sites main content area -->
