@@ -38,27 +38,26 @@
     $('#' + status).append('<span class="count">' + cards.length + ' issues total</span>');
   }
 
-  const clientPromise = stitch.StitchClientFactory.create('hackerjira-bzmfe');
-  clientPromise.then(client => {
-    const db = client.service('mongodb', 'mongodb-atlas').db('jira');
-    client.login().then(() =>
-      db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(7).sort({ updated: -1 }).execute()
-    ).then(docs => {
-      populateCards(docs, 'backlog')
-    }).then(() =>
-      db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
-    ).then(docs => {
-      populateCards(docs, 'todo')
-    }).then(() =>
-      db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
-    ).then(docs => {
-      populateCards(docs, 'progress')
-    }).then(() =>
-      db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(7).sort({ updated: -1 }).execute()
-    ).then(docs => {
-      populateCards(docs, 'done')
-    }).catch(err => {
-      console.error(err)
-    });
+  const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('authors');
+  
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
+    db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(7).sort({ updated: -1 }).execute()
+  ).then(docs => {
+    populateCards(docs, 'backlog')
+  }).then(() =>
+    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
+  ).then(docs => {
+    populateCards(docs, 'todo')
+  }).then(() =>
+    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}).limit(7).sort({ updated: -1 }).execute()
+  ).then(docs => {
+    populateCards(docs, 'progress')
+  }).then(() =>
+    db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(7).sort({ updated: -1 }).execute()
+  ).then(docs => {
+    populateCards(docs, 'done')
+  }).catch(err => {
+    console.error(err)
   });
 </script>
