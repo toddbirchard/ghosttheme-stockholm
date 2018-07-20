@@ -27,3 +27,14 @@ var success_message = "Please check your inbox and confirm your email address. T
 
 
 </script>
+
+
+<CORSConfiguration xmlns="http://s3.amazonaws.com">
+    <CORSRule>
+        <AllowedOrigin>http://127.0.0.1:2368</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>POST</AllowedMethod>
+        <AllowedMethod>PUT</AllowedMethod>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
