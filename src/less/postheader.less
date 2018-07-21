@@ -2,6 +2,16 @@
 @import "mixin.less";
 
 .post-header {
+  @media(max-width: 600px) {
+    margin: auto;
+    position: relative !important;
+    width: 100%;
+    padding: 0;
+    background: @theme-color !important;
+    height: 59px;
+    box-shadow: 0px 0px 5pc #083880;
+  }
+
   .mobile-branding {
     height: 40px;
     width: 40px;
@@ -10,6 +20,14 @@
     z-index: 100;
     opacity: 1;
     float: left;
+
+    @media(max-width: 800px){
+      margin: 8px !important;
+    }
+  }
+
+  nav {
+    overflow: hidden;
   }
 
   .post-navigation {
@@ -26,7 +44,33 @@
       }
       @media(max-width: 600px) {
         width: 230px;
-        padding: 25px 20px;
+        padding:15px;
+        overflow: hidden;
+
+        li::before {
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        .nav-about::before {
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          content: "\f129";
+        }
+
+        .nav-projects::before {
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 400;
+          content: "\f120";
+        }
+
+        .nav-series::before {
+          font-family: "Font Awesome 5 Pro";
+          content: "\f099";
+        }
       }
 
       li {
@@ -47,7 +91,6 @@
           }
           @media(max-width: 600px) {
             font-size: 16px;
-            font-weight: 600;
           }
         }
       }
