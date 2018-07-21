@@ -22,7 +22,7 @@
 
 const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
-    client.callFunction('populateCards', 'Backlog').then((documents) => {
+    client.callFunction("populateCards", "Backlog").then((documents) => {
         documents.forEach((document) => function(document){
           $('#' + document['status'] + ' .cards').append('<div class="card"> \n' +
             '<h5>' + document.summary + '</h5> \n' +
