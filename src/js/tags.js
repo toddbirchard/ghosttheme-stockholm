@@ -18,7 +18,6 @@ $(document).ready(function() {
     tableau: '<i class="far fa-asterisk"></i>',
     googlecloud: '<i class="fab fa-google"></i>',
     sql: '<i class="fas fa-database"></i>',
-    statistics: '<i class="far fa-chart-bar"></i>',
     statistics: '<i class="far fa-chart-bar"></i>'
   };
 
