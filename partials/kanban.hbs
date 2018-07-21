@@ -36,7 +36,7 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
               '<div class="epic ' + document.epic_name + '"><i class="fas fa-bolt" style=color:' + document.epic_color + ';"></i> <span>' + document.epic_name + '</span></div> \n' +
             '</div> \n' +
           '</div>');
-        }
+        });
         $('#' + status).append('<span class="count">' + document.length + ' issues total</span>');
         });
     });
