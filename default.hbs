@@ -26,16 +26,7 @@
 	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
-	<?xml version="1.0" encoding="UTF-8"?>
-<CORSConfiguration xmlns="http://s3.amazonaws.com">
-    <CORSRule>
-        <AllowedOrigin>http://127.0.0.1:2368</AllowedOrigin>
-        <AllowedMethod>GET</AllowedMethod>
-        <AllowedMethod>POST</AllowedMethod>
-        <AllowedMethod>PUT</AllowedMethod>
-        <AllowedHeader>*</AllowedHeader>
-    </CORSRule>
-</CORSConfiguration>
+
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
 
