@@ -5,7 +5,7 @@
 	{{/foreach}}
 {{/get}}
 
-{{#get "posts" filter="featured:false" include="author,tags" limit="all"}}
+{{#get "posts" filter="featured:false" include="author,tags" limit="10"}}
 {{#foreach posts}}
 	{{> postpreview}}
 {{/foreach}}

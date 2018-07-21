@@ -43,9 +43,19 @@
         padding: 26px 40px 0 0;
       }
       @media(max-width: 600px) {
-        width: 230px;
-        padding:15px;
+        width: 250px;
+        padding:15px 5px;
         overflow: hidden;
+
+
+
+        li {
+          margin-right:15px;
+
+          a {
+            font-size:14px;
+          }
+        }
 
         li::before {
           display: inline-block;
@@ -53,6 +63,9 @@
           font-variant: normal;
           text-rendering: auto;
           -webkit-font-smoothing: antialiased;
+          color:white;
+          font-size: 12px;
+          margin-right: 10px;
         }
 
         .nav-about::before {
@@ -69,12 +82,13 @@
 
         .nav-series::before {
           font-family: "Font Awesome 5 Pro";
-          content: "\f099";
+          content: "\f15b";
         }
       }
 
       li {
         display: inline-block;
+
 
         a {
           color: white;
