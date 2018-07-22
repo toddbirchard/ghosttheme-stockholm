@@ -8,21 +8,21 @@
 	<title>{{meta_title}}</title>
 	<meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-	<!-- stylesheets -->
-	{{! Styles'n'Scripts }}
+	{{! Styles }}
 	<link rel="stylesheet" href="https://use.typekit.net/okj4emy.css">
 	<link rel="stylesheet" type="text/css" href="{{asset "/css/includes/fontawesome-all.min.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet">
-
+	{{! Scripts }}
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "/js/includes/secret.js"}}"></script>
-
+	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+
 	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
