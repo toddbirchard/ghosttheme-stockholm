@@ -25,9 +25,6 @@ var themeApp = {
 			}
 		});
 	},
-	responsiveIframe: function() {
-		$('.post').fitVids();
-	},
 	sidebarConfig:function() {
 		if(sidebar_left == true) {
 			$('.main-content').addClass('col-md-push-4');
@@ -37,7 +34,6 @@ var themeApp = {
 	facebook:function() {
 		var fb_page = '<iframe src="//www.facebook.com/plugins/likebox.php?href='+facebook_page_url+'&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px; width:100%;" allowTransparency="true"></iframe>';
 		$('.fb').append(fb_page);
-		$(".fb").fitVids();
 	},
 	googlePlus:function() {
 		if(badge_type !== "" && google_plus_url !== "") {
@@ -146,7 +142,6 @@ var themeApp = {
 		},
 	init: function() {
 		themeApp.featuredMedia();
-		themeApp.responsiveIframe();
 		themeApp.sidebarConfig();
 		themeApp.facebook();
 		themeApp.highlighter();

@@ -5,6 +5,8 @@
 ====================================================*/
 .sidebar {
 
+
+
 	.tag-cloud {
 		a {
 			border: 1px solid #e6e6e6;
@@ -14,8 +16,8 @@
 			display: inline-block;
 			margin: 0 10px 10px 0;
 			border-radius: 2px;
-			font-size: 13px;
-			
+			font-size: 13px !important;
+
 			.transition(all 0.2s ease);
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
@@ -95,6 +97,25 @@
 		}
 
 		.series {
+			.recent-single-post{
+				overflow: hidden;
+				display: flex !important;
+    		align-items: center;
+			}
+			.series-image {
+				height: 50px;
+		    width: 50px;
+		    display: flex;
+		    align-items: center;
+		    background-size: cover!important;
+		    margin-right: 10px;
+		    min-width: 50px;
+		    border-radius: 50%;
+
+				@media(max-width: 1000px) {
+					display: none;
+				}
+			}
 			& > a {
 				display: none;
 			}
@@ -128,6 +149,9 @@
 				font-size: 12px;
 				opacity: 0.8;
 				margin: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 	}
