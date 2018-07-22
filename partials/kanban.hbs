@@ -21,7 +21,7 @@
 
 const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
-    client.callFunction("populateCards", "Backlog").then((documents) => {
+    client.callFunction("populateCards", "Backlog").then(docs => {
       console.log(documents)
         /*documents.forEach((document) => function(document){
           var card = EJSON.parse(document);
