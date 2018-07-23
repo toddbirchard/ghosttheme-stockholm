@@ -16,7 +16,6 @@
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "/js/includes/secret.js"}}"></script>
-	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
@@ -29,7 +28,6 @@
 
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
-
 </head>
 <body class="{{body_class}}">
 	{{! insert header partial}}

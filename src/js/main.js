@@ -140,6 +140,22 @@ var themeApp = {
 				console.log('clicked');
 			})
 		},
+	/*kanban: function() {
+		  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
+		    document.getElementById('auth-status').innerHTML =
+		      `Logged in as anonymous user with id ${user.id}`;
+		  });
+
+			client.callFunction("populateCards", "Backlog").then(echoedResult => {
+			  console.log(`Echoed result: ${echoedResult}`);
+			})
+
+			client.defaultAppClient.callFunction("populateCards", "Backlog").then(
+			  function(result) {
+			      console.log(result);
+			      // prints {"a": "1", "b": false, "c": "hello"}
+			  })
+		},*/
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();

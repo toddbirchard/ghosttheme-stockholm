@@ -1,5 +1,7 @@
 // Gulpfile.js running on stratumui,
 // a css framework available on npmjs.com
+'use strict';
+
 var gulp 	= require('gulp'),
   	less 	= require('gulp-less'),
   	concat 	= require('gulp-concat'),
