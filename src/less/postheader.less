@@ -2,28 +2,54 @@
 @import "mixin.less";
 
 .post-header {
-  @media(max-width: 600px) {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  width: auto;
+  padding: 0;
+  background: @theme-color;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 0 5pc #083880;
+
+  @media(max-width: 800px) {
     margin: auto;
     position: relative !important;
-    width: 100%;
-    padding: 0;
+    width: auto;
+    padding: 0 10px;
     background: @theme-color !important;
     height: 59px;
     box-shadow: 0px 0px 5pc #083880;
   }
 
+  .logo {
+        height: 50px;
+      img {
+          width: 220px;
+      }
+      @media(max-width: 800px) {
+        display:none !important;
+      }
+    }
+
   .mobile-branding {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     display: block;
     margin: 15px;
     z-index: 100;
     opacity: 1;
-    float: left;
+    display: none;
 
     @media(max-width: 800px){
       margin: 8px !important;
-    }
+      height: 40px;
+      width: 40px;
+      display: block;
+      }
   }
 
   nav {
@@ -33,18 +59,12 @@
   .post-navigation {
     .menu {
       width: 300px;
-      float: right;
       display: flex;
       justify-content: space-between;
-      padding: 35px 40px 0 0;
       margin: 0;
       list-style: none;
-      @media(max-width: 800px){
-        padding: 26px 40px 0 0;
-      }
       @media(max-width: 600px) {
         width: 270px;
-        padding:15px 5px;
         overflow: hidden;
 
 
@@ -94,7 +114,7 @@
           color: white;
           font-family: 'mr-eaves-xl-modern', serif;
           text-transform: uppercase;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 500;
           letter-spacing: 0.5px;
           transition: all 0.2s ease-out;
