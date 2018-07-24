@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "ghost-email-service": "^1.2.0",
     "github-profile-card": "^2.0.1",
     "mongodb-stitch": "^3.1.7",
     "mongodb-stitch-browser-core": "^4.0.9",

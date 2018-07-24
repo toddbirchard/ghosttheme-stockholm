@@ -631,9 +631,17 @@
 			margin: 0;
 			display: block;
 			margin: 0 auto !important;
+			height:fit-content;
 
 			&.instagram-media {
 				max-width: 400px !important;
+			}
+
+			@media(max-width: 600px) {
+				margin-left: calc(~"-50vw + 50%") !important;
+				margin-right: calc(~"-50vw + 50%") !important;
+		    height: 300px;
+		    width: 115%;
 			}
 		}
 
