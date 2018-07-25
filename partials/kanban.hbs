@@ -23,7 +23,7 @@
 
 
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
-    client.callFunction("populateCards", ["Backlog"]).then(
+    client.callFunction("populateCards", ["Backlog"]).then( result =>
         result.forEach((document) => {
           $('#' + document['status'] + ' .cards').append('<div class="card"> \n' +
             '<h5>' + document.summary + '</h5> \n' +
