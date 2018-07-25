@@ -21,11 +21,11 @@
 <script>
   const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
 
-<<<<<<< HEAD
-const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
+
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
     client.callFunction("populateCards", "Backlog").then((documents) => {
-        documents.forEach((document) => function(JSON.stringify(document)){
+        documents.forEach((document) => {
+          document = JSON.stringify(document);
           $('#' + document['status'] + ' .cards').append('<div class="card"> \n' +
             '<h5>' + document.summary + '</h5> \n' +
             '<p>' + document.description + '</p> \n' +
@@ -42,12 +42,4 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
         $('#' + status).append('<span class="count">' + document.length + ' issues total</span>');
         });
     });
-
-
-/*
-=======
->>>>>>> b9c9abbe9ba58c4f0a85d2d56ec083ccbb017a78
-  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
-    client.callFunction("populateCards", "Backlog").then(
-      console.log(JSON.stringify(result))));
 </script>
