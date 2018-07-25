@@ -2,6 +2,44 @@
 @import "mixin.less";
 
 .page-template {
+
+  .mobile-branding {
+		float: left;
+		margin: 16px 5px;
+		height: 40px;
+		width: 40px;
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 10px;
+		z-index: 40;
+		display: none;
+
+
+    @media(max-width: 800px) {
+      display:block;
+    }
+  }
+
+  .main-navigation {
+
+
+    @media(max-width: 800px){
+          margin: 0 20px;
+          display:flex;
+          justify-content: space-between;
+          align-items: center;
+    }
+
+  .menu{
+      @media(max-width: 800px) {
+				width: 222px;
+				margin: 20px;
+				padding: 0;
+    }
+  }
+}
+
   .post-title {
     margin: 40px 40px 10px;
   }
