@@ -23,9 +23,8 @@
 
 
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
-    client.callFunction("populateCards", "Backlog").then((documents) => {
-        documents.forEach((document) => {
-          document = JSON.stringify(document);
+    client.callFunction("populateCards", ["Backlog"]).then(
+        result.forEach((document) => {
           $('#' + document['status'] + ' .cards').append('<div class="card"> \n' +
             '<h5>' + document.summary + '</h5> \n' +
             '<p>' + document.description + '</p> \n' +
@@ -38,8 +37,8 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
               '<div class="epic ' + document.epic_name + '"><i class="fas fa-bolt" style=color:' + document.epic_color + ';"></i> <span>' + document.epic_name + '</span></div> \n' +
             '</div> \n' +
           '</div>');
-        });
-        $('#' + status).append('<span class="count">' + document.length + ' issues total</span>');
-        });
+        })
+        //$('#' + status).append('<span class="count">' + document.length + ' issues total</span>');
+        );
     });
 </script>
