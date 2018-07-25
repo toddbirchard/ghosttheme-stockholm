@@ -1,0 +1,41 @@
+<article class="{{post_class}} post-preview">
+  {{#if featured}}
+    <div class="featured">
+      <i class="far fa-star"></i>
+    </div>
+  {{/if}}
+
+  {{#if feature_image}}
+    <div class="featured-media">
+      <a href="{{url}}"><img src="{{feature_image}}" alt="{{{title}}}"></a>
+      {{!-- div class="postimage" style="background:url({{feature_image}});" alt="{{{title}}}"></div> --}}
+    </div>
+  {{/if}}
+
+  <div class="content">
+    <div class="post-head">
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <h5 class="post-excerpt">{{excerpt words="20"}}</h5>
+    </div>
+    <div class="post-content">
+      {{content words="80"}}
+    </div>
+    <div class="post-permalink">
+      <div class="meta">
+        {{#primary_tag}}
+            <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+        {{/primary_tag}}
+        {{#author}}
+          {{#unless profile_image}}
+            <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+          {{/unless}}
+          {{#if profile_image}}
+            <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+          {{/if}}
+        {{/author}}
+        <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
+      </div>
+      <a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
+    </div>
+  </div>
+</article>

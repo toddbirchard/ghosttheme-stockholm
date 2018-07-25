@@ -13,6 +13,7 @@ pre {
 
 code{
   margin:0;
+      font-size: 1.3em;
 }
 
 
@@ -25,7 +26,11 @@ code{
   background: #f1f5f8;
   overflow-wrap: break-word;
   margin:0;
-  
+  font-size: 1.3em;
+
+  @media(max-width: 600px) {
+    font-size: .9em;
+  }
 }
 
 code  {
@@ -35,13 +40,11 @@ code  {
   color: #2e9eb7;
   border-radius: 4px;
   margin: 0 5px;
-  font-style: italic;
 }
 
 .hljs-comment,
 .hljs-quote {
   color: #b5bac4;
-  font-style: italic;
 }
 
 .hljs-doctag,
@@ -94,10 +97,6 @@ code  {
 .hljs-selector-id,
 .hljs-title {
   color: #61aeee;
-}
-
-.hljs-emphasis {
-  font-style: italic;
 }
 
 .hljs-strong {

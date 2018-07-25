@@ -1,14 +1,12 @@
 <!-- start post -->
-{{#get "posts" filter="featured:true" include="author,tags" limit="all"}}
-{{#foreach posts}}
-	{{> postpreview}}
-	{{/foreach}}
-{{/get}}
 
-{{#get "posts" filter="featured:false" include="author,tags" limit="10"}}
 {{#foreach posts}}
-	{{> postpreview}}
+		{{#if featured}}
+			{{> featuredpostpreview}}
+		{{else}}
+			{{> postpreview}}
+		{{/if}}
 {{/foreach}}
-{{/get}}
+
 
 <!-- end post -->

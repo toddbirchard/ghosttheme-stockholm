@@ -4,13 +4,17 @@
 	<div class="content series">
 		{{#get "tags" limit="5" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts DESC"}}{{tags separator="" }}
     {{#foreach tags}}
+
       <div class="recent-single-post">
+				<div class="series-image" style="background:url({{feature_image}})"></div>
+				<div class="series-info">
         <a href="{{url}}" class="post-title">{{meta_title}}</a>
         {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
         {{#if description}}
           <p class="description">{{description}}</p>
         {{/if}}
       </div>
+		</div>
     {{/foreach}}
     {{/get}}
 	</div>

@@ -17,9 +17,11 @@
     <div class="cards"></div>
   </div>
 </div>
-<script src="{{asset "/js/includes/stitch.min.js"}}"></script>
+<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 <script>
+  const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
 
+<<<<<<< HEAD
 const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
     client.callFunction("populateCards", "Backlog").then((documents) => {
@@ -43,26 +45,9 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
 
 
 /*
+=======
+>>>>>>> b9c9abbe9ba58c4f0a85d2d56ec083ccbb017a78
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
-    db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}), {
-    limit: 7,
-    sort: { "updated": -1 }
-  }).asArray().then(populateCards)*/
-/*
-    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}, {
-    limit: 7,
-    sort: { "updated": -1 }
-  }).asArray().then(populateCards);
-
-    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}, {
-      limit: 7,
-      sort: { "updated": -1 }
-  }).asArray().then(populateCards);
-
-    db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, {
-      limit: 7,
-      sort: { "updated": -1 }
-  }).asArray().then(populateCards);
-    console.error(err)
-  );*/
+    client.callFunction("populateCards", "Backlog").then(
+      console.log(JSON.stringify(result))));
 </script>
