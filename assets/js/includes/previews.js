@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
 
   function postLinkPreviews() {
-    $(".kg-post p > a").each(function(index, element) {
+    $(".post-content p > a").each(function(index, element) {
       $.ajax({
         url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
         contentType: "application/json",
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
     postLinkPreviews();
 
-    
+
   if ($('.author-template').length) {
     authorLinkPreviews();
   }
