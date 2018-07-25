@@ -37,6 +37,7 @@
     "posts_per_page": 10
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "github-profile-card": "^2.0.1",
     "mongodb-stitch-browser-core": "^4.0.9",
     "mongodb-stitch-browser-sdk": "^4.0.9",
