@@ -20,6 +20,7 @@
 <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 <script>
   const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
 
 
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>{
