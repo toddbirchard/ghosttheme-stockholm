@@ -11,6 +11,24 @@ pre {
   }
 }
 
+code,
+&post-content > .hljs {
+  background: #f1f5f8 !important;
+  white-space: pre-wrap;
+
+  @media(max-width: 600px) {
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+    overflow-y: hidden !important;
+  }
+}
+
+p > code {
+  display:inline;
+  overflow-y: visible !important;
+      width: fit-content;
+}
+
 code{
   margin:0;
       font-size: 1.3em;
@@ -18,24 +36,34 @@ code{
 
 
 
-.hljs{
+.hljs,
+.python.hljs,
+.language-python{
   display: block;
   overflow-x: auto;
   padding: 1em;
   color: #166c8b;
-  background: #f1f5f8;
+  background: #f1f5f8 !important;
   overflow-wrap: break-word;
   margin:0;
   font-size: 1.3em;
+  white-space: pre-wrap;
+  overflow-y: hidden !important;
+
+
 
   @media(max-width: 600px) {
-    font-size: .9em;
+    font-size: 1.1em;
+    padding: 0;
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+
   }
 }
 
 code  {
   padding: 5px;
-  background: #fafbfc;
+  background: #f1f5f8;
   font-size: 13px;
   color: #2e9eb7;
   border-radius: 4px;
@@ -59,7 +87,7 @@ code  {
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e06c75;
+  color:#8652c4;
 }
 
 .hljs-literal {
@@ -71,7 +99,7 @@ code  {
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #47989a;
+  color: #47989a !important;
 }
 
 .hljs-built_in,
