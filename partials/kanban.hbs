@@ -35,7 +35,7 @@ login(new stitch.AnonymousCredential()).then(() => {
     RemoteMongoClient.factory,
     "mongodb-atlas"
   );
-  client.callFunction("populateCards", ["Backlog"])
+  stitchClient.callFunction("populateCards", ["Backlog"])
 }).then(displaycards);
 
   // Get a hook to the card collection
