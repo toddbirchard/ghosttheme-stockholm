@@ -17,31 +17,55 @@
     <div class="cards"></div>
   </div>
 </div>
+
 <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
 <script>
-  const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
-  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
 
+const {
+  Stitch,
+  RemoteMongoClient,
+  UserPasswordCredential
+} = stitch;
 
-  client.authenticate("anon").then(user => {
-    client.callFunction("populateCards", ["Backlog"]).then(result => {
-      result.forEach((document) => {
-        $('#' + document['status'] + ' .cards').append('<div class="card"> \n' +
-          '<h5>' + document.summary + '</h5> \n' +
-          '<p>' + document.description + '</p> \n' +
-          '<div style="background-color:' + document.issuetype_color + ';" class="issuetype ' + document.issuetype + '"><img src="' + document.issuetype_url + '"></div> \n' +
-          '<div class="info"> \n' +
-          '<div class="left"> \n' +
-          '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
-          '<div class="priority ' + document.priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
-          '</div> \n' +
-          '<div class="epic ' + document.epic_name + '"><i class="fas fa-bolt" style=color:' + document.epic_color + ';"></i> <span>' + document.epic_name + '</span></div> \n' +
-          '</div> \n' +
-          '</div>');
-      })
-    ).then(result => {
-      console.log(result);
-    })
+const stitchClient = Stitch.initializeDefaultAppClient("hackerjira-bzmfe");
+
+login(new stitch.AnonymousCredential()).then(() => {
+  // Initialize a MongoDB Service Client
+  const mongodb = stitchClient.getServiceClient(
+    RemoteMongoClient.factory,
+    "mongodb-atlas"
+  );
+  client.callFunction("populateCards", ["Backlog"])
+}).then(displaycards);
+
+  // Get a hook to the card collection
+  const card = mongodb.db("jira").collection("hackersandslackers");
+
+  async function login() {
+    await stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential())
   }
-});
+
+
+// Renders the the card' information in the table
+function displaycards(card) {
+  const cardTableBody = document.getElementById("backlog");
+  //const numResultsEl = document.getElementById("num-results");
+  const tableRows = card.map(card => {
+    return `
+    <div class="card">
+      <h5>${card.summary}</h5>
+      <p>${card.document}</p>
+      <div style="background-color:${card.issuetype_color};" class="issuetype ${card.issuetype}"><img src="${card.issuetype_url}"></div>
+      <div class="info">
+      <div class="left">
+      <div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div>
+      <div class="priority ${card.priority}"><i class="fas fa-arrow-up"></i></div>
+      </div>
+      <div class="epic ${card.epic_name}"><i class="fas fa-bolt" style=color:${card.epic_color};"></i> <span>${card.epic_name}</span></div>
+      </div>
+    `;
+  });
+  cardTableBody.innerHTML = tableRows.join("");
+  numResultsEl.innerHTML = card.length;
+}
 </script>
