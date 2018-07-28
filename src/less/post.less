@@ -87,9 +87,8 @@
 		text-align: justify;
 		font-size: 18px;
 		line-height: 1.8 !important;
-
 		@media(max-width: 600px) {
-			font-size:16px;
+			font-size: 16px;
 		}
 	}
 
@@ -103,9 +102,9 @@
 	}
 
 	.kg-post > div {
-		@media(max-width: 600px){
+		@media(max-width: 600px) {
 			margin-left: calc(~"-50vw + 50%") !important;
-	    margin-right: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
 		}
 	}
 
@@ -121,15 +120,13 @@
 		font-size: 12px;
 		display: flex;
 		width: auto;
-
 		@media(max-width: 800px) {
 			max-width: 450px;
 			margin: 0 auto !important;
-				width: auto;
-				display: flex;
-				justify-content: space-around;
+			width: auto;
+			display: flex;
+			justify-content: space-around;
 		}
-
 		@media(max-width: 600px) {
 			display: flex;
 			justify-content: space-between;
@@ -143,22 +140,23 @@
 		}
 
 		&.date {
-      span {
-        color: #8e8e8e !important;
-      }
-      i {
-        color: #8e8e8e !important;
-      }
-    }
+			span {
+				color: #8e8e8e !important;
+			}
+
+			i {
+				color: #8e8e8e !important;
+			}
+		}
 
 		.author {
 			.avi {
-	      width: 20px;
-	      height: 20px;
-	      display: inline-block;
-	      margin-right: 10px;
-	      border-radius: 50%;
-	    }
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				margin-right: 10px;
+				border-radius: 50%;
+			}
 
 			span {
 				text-transform: capitalize;
@@ -173,7 +171,6 @@
 			display: flex;
 			align-items: center;
 			text-transform: capitalize;
-
 			@media(max-width: 600px) {
 				margin: 0;
 				font-size: 1.2em;
@@ -189,16 +186,16 @@
 			}
 
 			a {
-	      text-decoration: none;
+				text-decoration: none;
 
-	      &:hover {
-	        color: @hover-color;
+				&:hover {
+					color: @hover-color;
 
-	        & > span {
-	          color: @hover-color !important;
-	        }
-	      }
-	    }
+					& > span {
+						color: @hover-color !important;
+					}
+				}
+			}
 
 			&:last-child {
 				margin: 0;
@@ -208,24 +205,23 @@
 
 	.post-roundup-blurb {
 		border-bottom: 0;
-    border-top: 0;
-    padding: 10px 20px;
-    background: #e7f1ed;
-    border-left: 5px solid #26ae60;
-    margin: 30px 80px;
-    width: auto;
+		border-top: 0;
+		padding: 10px 20px;
+		background: #e7f1ed;
+		border-left: 5px solid #26ae60;
+		margin: 30px 80px;
+		width: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		min-height: 78px;
-
 		@media(max-width: 800px) {
 			margin: 30px 40px;
 		}
 		@media(max-width: 600px) {
 			padding: 20px 0;
-	    border-bottom: 0;
-	    border-top: 0;
+			border-bottom: 0;
+			border-top: 0;
 			padding: 15px 20px;
 			background: #f1f4f7;
 			border-left: 5px solid #26ae60;
@@ -241,13 +237,12 @@
 			margin-right: 25px;
 			background-size: cover;
 			display: inline-block;
-			 @media(max-width: 800px) {
-				 margin-right: 15px;
-			 }
-
+			@media(max-width: 800px) {
+				margin-right: 15px;
+			}
 			@media(max-width: 600px) {
 				height: 65px;
-    		min-width: 65px;
+				min-width: 65px;
 				display: none;
 			}
 		}
@@ -266,10 +261,10 @@
 				line-height: 1.4 !important;
 			}
 			@media (max-width: 600px) {
-				font-size: .9em;
+				font-size: 0.9em;
 				text-align: justify;
 				line-height: 1.5 !important;
-    		font-style: normal;
+				font-style: normal;
 			}
 		}
 	}
@@ -285,135 +280,145 @@
 		padding: 0 !important;
 
 		table.highlight > tbody > tr {
-		  -webkit-transition: background-color .25s ease;
-		  transition: background-color .25s ease;
+			-webkit-transition: background-color 0.25s ease;
+			transition: background-color 0.25s ease;
 		}
 
 		table.highlight > tbody > tr:hover {
-		  background-color: rgba(242, 242, 242, 0.5);
+			background-color: rgba(242, 242, 242, 0.5);
 		}
 
-		table.centered thead tr th, table.centered tbody tr td {
-		  text-align: center;
+		table.centered tbody tr td,
+		table.centered thead tr th {
+			text-align: center;
 		}
 
 		tr {
-		  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 		}
 
-		td, th {
-		  padding: 15px 5px;
-		  display: table-cell;
-		  text-align: left;
-		  vertical-align: middle;
-		  border-radius: 2px;
+		td,
+		th {
+			padding: 15px 5px;
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+			border-radius: 2px;
 		}
 
+		table.responsive-table {
+			width: 99%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			display: block;
+			position: relative;
+			cellspacing: 0;
+			/* sort out borders */
+			@media (max-width: 600px) {
+				margin-left: calc(~"-50vw + 50%") !important;
+				margin-right: calc(~"-50vw + 50%") !important;
+				width: 120%;
+			}
+		}
 
-		  table.responsive-table {
-		    width: 99%;
-		    border-collapse: collapse;
-		    border-spacing: 0;
-		    display: block;
-		    position: relative;
-				cellspacing:0;
-		    /* sort out borders */
+		table.responsive-table td:empty:before {
+			content: '\00a0';
+		}
 
-				@media (max-width: 600px) {
-					margin-left: calc(~"-50vw + 50%") !important;
-					margin-right: calc(~"-50vw + 50%") !important;
-					width: 120%;
-				}
-		  }
-		  table.responsive-table td:empty:before {
-		    content: '\00a0';
-		  }
-		  table.responsive-table th,
-		  table.responsive-table td {
-		    margin: 0;
-		    vertical-align: top;
-				font-size: 1em;
-		  }
-		  table.responsive-table th {
-		    padding-right: 10px;
+		table.responsive-table td,
+		table.responsive-table th {
+			margin: 0;
+			vertical-align: top;
+			font-size: 1em;
+		}
 
-				@media (max-width: 600px) {
-					    max-width: 125px;
-					}
-		  }
-		  table.responsive-table thead {
-		    display: block;
-		    float: left;
-		  }
-		  table.responsive-table thead tr {
-		    display: block;
-		    padding: 0;
-		  }
-		  table.responsive-table thead tr th::before {
-		    //content: "\00a0";
-		  }
-		  table.responsive-table tbody {
-		    display: block;
-		    width: auto;
-		    position: relative;
-		    overflow-x: auto;
-		    white-space: nowrap;
+		table.responsive-table th {
+			padding-right: 10px;
+			@media (max-width: 600px) {
+				max-width: 125px;
+			}
+		}
 
-				&:hover{
+		table.responsive-table thead {
+			display: block;
+			float: left;
+		}
+
+		table.responsive-table thead tr {
+			display: block;
+			padding: 0;
+		}
+
+		table.responsive-table thead tr th::before {
+			//content: "\00a0";
+		}
+
+		table.responsive-table tbody {
+			display: block;
+			width: auto;
+			position: relative;
+			overflow-x: auto;
+			white-space: nowrap;
+			&:hover {
+				cursor: ew-resize;
+			}
+		}
+
+		table.responsive-table tbody tr {
+			display: inline-block;
+			vertical-align: top;
+			width: 55%;
+			@media(max-width: 600px) {
+				width: 50%;
+
+				&:hover {
 					cursor: grab;
 				}
-		  }
-		  table.responsive-table tbody tr {
-		    display: inline-block;
-		    vertical-align: top;
-				width: 70%;
+			}
+		}
 
-				@media(max-width: 600px){
-					    width: 50%;
-				}
-		  }
-		  table.responsive-table th {
-		    display: block;
-		    text-align: right;
-				height: 17px;
+		table.responsive-table th {
+			display: block;
+			text-align: right;
+			height: 17px;
+			@media(max-width: 600px) {
+				font-size: 0.9em;
+				height: 16px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
 
-				@media(max-width: 600px) {
-					font-size: .9em;
-					height: 16px;
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-				}
-		  }
-		  table.responsive-table td {
-		    display: block;
-		    height: 17px;
-		    text-align: left;
-				border: 0;
+		table.responsive-table td {
+			display: block;
+			height: 17px;
+			text-align: left;
+			border: 0;
+			@media(max-width: 600px) {
+				height: 16px;
+				padding: 7px 10px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
 
-				@media(max-width: 600px) {
-					    height: 16px;
-							padding: 7px 10px;
-							white-space: nowrap;
-							text-overflow: ellipsis;
-							overflow: hidden;
-				}
-		  }
-		  table.responsive-table tr {
-		    border-bottom: none;
-		    padding:0;
-				border: none;
-				padding: 0 0 0 10px;
-		  }
-		  table.responsive-table thead {
-		    border: 0;
-		    border-right: 1px solid rgba(0, 0, 0, 0.12);
+		table.responsive-table tr {
+			border-bottom: none;
+			padding: 0;
+			border: none;
+			padding: 0 0 0 10px;
+		}
 
-				tr {
-					padding:0 !important;
-				}
-		  }
+		table.responsive-table thead {
+			border: 0;
+			border-right: 1px solid rgba(0, 0, 0, 0.12);
 
+			tr {
+				padding: 0 !important;
+			}
+		}
 
 		table {
 			margin: 30px auto;
@@ -429,7 +434,7 @@
 				text-align: center;
 				word-wrap: break-word;
 				padding: 10px;
-				border-right: 1px solid #e6e9f0;
+				border-right: 1px solid #e5e9ee;
 				@media(max-width: 800px) {
 					padding: 7px 0;
 				}
@@ -441,7 +446,7 @@
 
 			td {
 				border-style: none;
-				border-right: 1px solid #c9dada;
+				border-right: 1px solid #e5e9ee;
 				border-left: 0;
 				line-height: 1.3;
 			}
@@ -454,14 +459,23 @@
 				font-size: 14px;
 				border-style: none;
 				line-height: 1.2;
-			  font-family: montserrat;
-
-				@media(max-width: 600px){
+				font-family: montserrat;
+				@media(max-width: 600px) {
 					font-size: 14px;
 					font-weight: 800;
 				}
 			}
 		}
+	}
+
+	.tableshadow {
+		position: absolute;
+		height: 120%;
+		width: 20%;
+		box-shadow: inset -47px -10px 65px 34px rgba(255,255,255,0.9);
+		z-index: 100;
+		right: 0;
+		top: -50px;
 	}
 
 	.post-head {
@@ -515,7 +529,6 @@
 	}
 
 	.post-header {
-
 		.branding {
 			float: left;
 			z-index: 40;
@@ -562,7 +575,6 @@
 		font-size: 15px;
 		color: #8c8c8c;
 		white-space: nowrap;
-
 		@media(max-width: 600px) {
 			margin: 0 auto 60px;
 			font-size: 14px;
@@ -581,7 +593,6 @@
 			padding: 30px 40px;
 			margin: 20px;
 		}
-
 		@media(max-width: 600px) {
 			padding: 30px;
 		}
@@ -596,7 +607,6 @@
 			.border-radius(50%);
 			margin-bottom: 20px;
 			float: left;
-
 			@media(max-width: 600px) {
 				width: 80px;
 				height: 80px;
@@ -616,7 +626,7 @@
 				display: block;
 				line-height: 1em;
 				margin-bottom: 8px;
-				font-size: .9em;
+				font-size: 0.9em;
 
 				i {
 					margin-right: 8px;
@@ -632,7 +642,6 @@
 			width: 100%;
 			clear: both;
 			font-size: 18px;
-
 			@media(max-width: 800px) {
 				font-size: 16px;
 			}
@@ -642,9 +651,8 @@
 			font-size: 1.5em;
 			margin-bottom: 5px;
 			font-family: 'akzidenz-regular';
-
 			@media(max-width: 600px) {
-				 font-size: 1.3em;
+				font-size: 1.3em;
 			}
 
 			a {
@@ -718,7 +726,7 @@
 
 			&:hover {
 				opacity: 0.8;
-				cursor: pointer;
+				cursor: ew-resize;
 			}
 		}
 	}
@@ -751,14 +759,13 @@
 		iframe {
 			margin: 0;
 			display: block;
-			margin: 0 auto 30px!important;
-			height:400px;
+			margin: 0 auto 30px!important !important;
+			height: 400px;
 			margin-bottom: 20px;
 
 			&.instagram-media {
 				max-width: 400px !important;
 			}
-
 			@media(max-width: 800px) {
 				margin-left: calc(~"-50vw + 50%") !important;
 				margin-right: calc(~"-50vw + 50%") !important;
