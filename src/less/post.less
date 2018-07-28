@@ -318,6 +318,12 @@
 		    position: relative;
 				cellspacing:0;
 		    /* sort out borders */
+
+				@media (max-width: 600px) {
+					margin-left: calc(~"-50vw + 50%") !important;
+					margin-right: calc(~"-50vw + 50%") !important;
+					width: 120%;
+				}
 		  }
 		  table.responsive-table td:empty:before {
 		    content: '\00a0';
@@ -356,12 +362,16 @@
 		  table.responsive-table tbody tr {
 		    display: inline-block;
 		    vertical-align: top;
-				width: 70%
+				width: 70%;
+
+				@media(max-width: 600px){
+					    width: 50%;
+				}
 		  }
 		  table.responsive-table th {
 		    display: block;
 		    text-align: right;
-				min-height: 1.3em;
+				height: 17px;
 
 				@media(max-width: 600px) {
 					font-size: .9em;
@@ -373,7 +383,7 @@
 		  }
 		  table.responsive-table td {
 		    display: block;
-		    min-height: 1em;
+		    height: 17px;
 		    text-align: left;
 				border: 0;
 
