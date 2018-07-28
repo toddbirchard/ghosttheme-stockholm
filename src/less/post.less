@@ -370,10 +370,6 @@
 			width: 55%;
 			@media(max-width: 600px) {
 				width: 50%;
-
-				&:hover {
-					cursor: grab;
-				}
 			}
 		}
 
@@ -478,6 +474,10 @@
 		right: 0;
 		top: -50px;
 		display: block;
+
+		@media(max-width: 600px) {
+			box-shadow: inset -47px -10px 68px 7px rgba(255,255,255,.9);
+		}
 	}
 
 	.post-head {
