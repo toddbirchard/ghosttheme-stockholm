@@ -102,7 +102,7 @@
 		font-size: 1.1em;
 	}
 
-	.post-content > div {
+	.kg-post > div {
 		@media(max-width: 600px){
 			margin-left: calc(~"-50vw + 50%") !important;
 	    margin-right: calc(~"-50vw + 50%") !important;
@@ -329,7 +329,11 @@
 				font-size: 1em;
 		  }
 		  table.responsive-table th {
-		    text-align: left;
+		    padding-right: 10px;
+
+				@media (max-width: 600px) {
+					    max-width: 125px;
+					}
 		  }
 		  table.responsive-table thead {
 		    display: block;
@@ -358,21 +362,34 @@
 		    display: block;
 		    text-align: right;
 				min-height: 1.3em;
+
+				@media(max-width: 600px) {
+					font-size: .9em;
+					height: 16px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
 		  }
 		  table.responsive-table td {
 		    display: block;
-		    min-height: 1.3em;
+		    min-height: 1em;
 		    text-align: left;
 				border: 0;
+
+				@media(max-width: 600px) {
+					    height: 16px;
+							padding: 7px 10px;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							overflow: hidden;
+				}
 		  }
 		  table.responsive-table tr {
 		    border-bottom: none;
 		    padding:0;
 				border: none;
-
-				&:first-child {
-					padding: 0 0 0 10px;
-				}
+				padding: 0 0 0 10px;
 		  }
 		  table.responsive-table thead {
 		    border: 0;
