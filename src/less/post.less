@@ -318,6 +318,7 @@
 				margin-left: calc(~"-50vw + 50%") !important;
 				margin-right: calc(~"-50vw + 50%") !important;
 				width: 120%;
+				margin-left: 0 !important;
 			}
 		}
 
@@ -432,7 +433,10 @@
 				padding: 10px;
 				border-right: 1px solid #e5e9ee;
 				@media(max-width: 800px) {
-					padding: 7px 0;
+					padding: 7px 15px;
+					overflow-x: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
 				}
 			}
 
@@ -468,7 +472,8 @@
 		@media(max-width: 600px) {
 			margin-left: calc(~"-50vw + 50%") !important;
 			margin-right: calc(~"-50vw + 50%") !important;
-			width: 120%;
+			overflow: visible;
+			width: 114%;
 		}
 	}
 
@@ -485,6 +490,7 @@
 
 		@media(max-width: 600px) {
 			box-shadow: inset -47px -10px 68px 7px rgba(255,255,255,.9);
+			right: 0px;
 		}
 	}
 
