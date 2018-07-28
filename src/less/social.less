@@ -2,14 +2,16 @@
 .social-btns .btn,
 .social-btns .btn:before,
 .social-btns .btn .fa {
+  padding:0;
   transition: all 0.35s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  color: #c1c1c1;
 }
 .social-btns .btn:before {
-  top: 90%;
-  left: -110%;
+  top: 150%;
+  left: -100%;
 }
-.social-btns .btn .fa {
+.social-btns .btn .fab {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
@@ -34,28 +36,40 @@
 .social-btns .btn.dribbble:before {
   background-color: #f26798;
 }
+.social-btns .btn.tumblr:before {
+  background-color: #35465c;
+}
 .social-btns .btn.dribbble .fa {
   color: #f26798;
 }
 .social-btns .btn.skype:before {
   background-color: #00aff0;
 }
-.social-btns .btn.skype .fa {
+.social-btns .btn.skype .fab {
   color: #00aff0;
 }
 .social-btns .btn.rss:before {
   background-color: #ff6501;
+}
+.social-btns .btn.medium:before,
+.social-btns .btn.github:before
+ {
+  background-color: #000;
 }
 .social-btns .btn.rss .fa {
   color: #ff6501;
 }
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
-  top: -10%;
-  left: -10%;
+  top: -35%;
+  left: -35%;
 }
-.social-btns .btn:focus .fa,
-.social-btns .btn:hover .fa {
+
+
+.social-btns .btn:focus .fab,
+.social-btns .btn:hover .fab,
+.social-btns .btn:hover .fas,
+ {
   color: #fff;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -63,13 +77,8 @@
 .social-btns {
   height: 40px;
   margin: auto;
-  font-size: 0;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+justify-content: space-between;
 }
 .social-btns .btn {
   display: inline-block;
@@ -77,20 +86,19 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
-  margin: 0 10px;
+  margin: 0 5px;
   text-align: center;
   position: relative;
   overflow: hidden;
   border: 1px solid #ebebeb;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.08);
   opacity: 0.99;
-  width: 40px;
-  height: 40px;
+  padding:0;
 }
 .social-btns .btn:before {
   content: '';
-  width: 120%;
-  height: 120%;
+  width: 200%;
+  height: 200%;
   position: absolute;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
