@@ -269,6 +269,15 @@
 		}
 	}
 
+	[data-simplebar] {
+		@media (max-width: 600px) {
+			margin-left: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
+			width: 120%;
+			overflow: visible;
+		}
+	}
+
 	.container {
 		margin: 0 auto;
 		padding: 0;
@@ -335,6 +344,7 @@
 
 		table.responsive-table th {
 			padding-right: 10px;
+			max-width: 186px;
 			@media (max-width: 600px) {
 				max-width: 125px;
 			}
@@ -425,6 +435,12 @@
 			border: 1px solid #e5e9ef;
 			border-spacing: 0;
 
+			@media(max-width: 600px) {
+				margin-left: calc(~"-50vw + 50%") !important;
+				margin-right: calc(~"-50vw + 50%") !important;
+				width: 114%;
+			}
+
 			td,
 			th {
 				padding: 7px 5px;
@@ -489,7 +505,7 @@
 		display: block;
 
 		@media(max-width: 600px) {
-			box-shadow: inset -47px -10px 68px 7px rgba(255,255,255,.9);
+			box-shadow: inset -47px -10px 32px 33px rgba(255,255,255,1);
 			right: 0px;
 		}
 	}
