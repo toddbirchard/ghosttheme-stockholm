@@ -40,7 +40,7 @@ stitchClient.auth
   function getCards() {
   return stitchClient
     .callFunction("populateCards", ["Backlog"])
-    .then(({ body }) => JSON.parse(body.toString());
+    .then(({ body }) => JSON.parse(body.toString()));
 }
 
 const backlogColumn = document.getElementById("backlog");
