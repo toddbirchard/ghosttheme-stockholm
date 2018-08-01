@@ -18,8 +18,8 @@
   </div>
 </div>
 
-<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
-<script>
+
+<!--<script>
 
 const {
   Stitch,
@@ -43,11 +43,81 @@ stitchClient.auth
     .then(({ body }) => JSON.parse(body.toString()));
 }
 
+
+
+
+
+
+</script>-->
+
+
+<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
+<script>
+
+function populateCards(cards, status) {
+    for (var i = 0; i < cards.length; i++) {
+      $('#' + status + ' .cards').append('<div class="card"> \n' +
+        '<h5>' + cards[i].summary + '</h5> \n' +
+        //'<p>' + cards[i].description + '</p> \n' +
+        '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' +
+        '<div class="info"> \n' +
+          '<div class="left"> \n' +
+            '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
+            '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
+          '</div> \n' +
+          '<div class="epic ' + cards[i].epic_name + '"><i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i> <span>' + cards[i].epic_name + '</span></div> \n' +
+        '</div> \n' +
+      '</div>');
+    }
+    $('#' + status).append('<span class="count">' + cards.length + ' issues total</span>');
+  }
+
+
+
 const backlogColumn = document.getElementById("backlog");
 const todoColumn = document.getElementById("todo");
 const progressColumn = document.getElementById("inprogress");
 const doneColumn = document.getElementById("done");
 
+  const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
+
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
+
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 7}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populateCards(docs, 'backlog')
+    }).catch(err => {
+    console.error(err)
+  });
+
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}, { limit: 7}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populateCards(docs, 'todo')
+    }).catch(err => {
+    console.error(err)
+  });
+
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}, { limit: 7}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populateCards(docs, 'progress')
+    }).catch(err => {
+    console.error(err)
+  });
+
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 7}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populateCards(docs, 'done')
+    }).catch(err => {
+    console.error(err)
+  });
 
 
 
