@@ -1,4 +1,7 @@
-/*function authorSidebar(docs) {
+$( document ).ready(function() {
+
+
+function authorSidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
         url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + docs[0]['website'],
@@ -15,9 +18,9 @@
       $('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">Github</h4><div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + docs[0]['github'] + '"></div></div></div>');
     }
 
-    if (docs[0]['linkedin']) {
+    /*if (docs[0]['linkedin']) {
       $('.sidebar').append('<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/' + docs[0]['linkedin'] + '" data-format="inline" data-related="false"></script>');
-    }
+    }*/
 
     if (docs[0]['meetup']) {
       $.ajax({
@@ -53,7 +56,7 @@
               var eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", {
                 month: "short"
               }) + '</span></span></time>';
-              /*if (events[i].photo_url == null) {
+              if (events[i].photo_url == null) {
                 //eventimage = "https://hackers.nyc3.digitaloceanspaces.com/meetup.png"
                 eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", { month: "short" }) + '</span></span></time>';
               }
@@ -83,4 +86,6 @@
     if (docs[0]['tableau']) {
       var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
     }
-  }*/
+  }
+
+});
