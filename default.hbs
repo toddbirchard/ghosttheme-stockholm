@@ -17,6 +17,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/utils/Draggable.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js"></script>
+	<script src="{{asset "/js/includes/EasePack.min.js"}}"></script>
+	<script src="{{asset "/js/includes/CustomEase.min.js"}}"></script>
+
 	<script src="{{asset "/js/includes/secret.js"}}"></script>
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
