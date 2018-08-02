@@ -2,59 +2,62 @@
 @import "mixin.less";
 
 .page-template {
-
   .post-header {
     display: none;
-
+    padding: 10px 0 0 25px;
     @media(max-width: 800px) {
-      display:block;
+      display: block;
       display: relative;
+          padding: 0;
+          padding-right:15px;
     }
   }
 
   .mobile-branding {
-		float: left;
-		margin: 16px 5px;
-		height: 40px;
-		width: 40px;
-		position: relative;
-		top: 0;
-		bottom: 0;
-		left: 10px;
-		z-index: 40;
-		display: none;
-
-
+    display: none;
     @media(max-width: 800px) {
-      display:block;
+      float: left;
+      margin: 0 !important;
+      height: 40px;
+      width: 40px;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      z-index: 40;
+      display: block;
+    }
+  }
+
+  .menu {
+    @media(max-width: 800px) {
+      padding: 0 !important;
     }
   }
 
   .main-navigation {
-
-
-    @media(max-width: 800px){
-          margin: 0 20px;
-          display:flex;
-          justify-content: space-between;
-          align-items: center;
+    @media(max-width: 800px) {
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-  .menu{
+    .menu {
       @media(max-width: 800px) {
-				width: 222px;
-				margin: 20px;
-				padding: 0;
+        width: 222px;
+        margin: 20px;
+        padding: 0;
+      }
     }
   }
-}
 
   .post-title {
     margin: 40px 40px 10px;
   }
 
   .main-header {
-    @media(max-width: 800px){
+    @media(max-width: 800px) {
       height: 100px;
     }
   }
@@ -90,19 +93,18 @@
   }
 
   .featured-media {
-    display:none;
-    @media(max-width: 800px){
-      display:block;
-      height:250px !important;
+    display: none;
+    @media(max-width: 800px) {
+      display: block;
+      height: 250px !important;
     }
   }
 
   .page-head {
     .post-title {
       margin: 40px 40px 0;
-
-      @media(max-width: 800px){
-        margin:40px 30px 0;
+      @media(max-width: 800px) {
+        margin: 40px 30px 0;
       }
     }
   }
@@ -110,9 +112,8 @@
   .post-content {
     margin: 20px 40px;
     /*width: 68%;*/
-
-    @media(max-width: 800px){
-      margin:25px 30px 0;
+    @media(max-width: 800px) {
+      margin: 25px 30px 0;
     }
   }
 

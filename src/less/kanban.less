@@ -110,7 +110,7 @@
       width: 21%;
       background: #fff;
       border: 1px solid #f9f9f9;
-      padding: 19px;
+      padding: 20px 20px 30px;
       position: relative;
       margin-bottom: 7px;
       @media(max-width: 800px) {
@@ -181,34 +181,22 @@
 
           .issuetype {
             position: absolute;
-            top: 0;
-            right: 15px;
-            top: 0;
-            width: 24px;
-            height: 23px;
-            padding: 5px 0;
-            background: red;
-            color: white;
-            font-size: 11px;
-            letter-spacing: 0.2em;
+            background: #0db0e2;
+            color: #fff;
             text-align: center;
+            top: -19px;
+            right: -36px;
+            width: 80px;
+            height: 40px;
+            line-height: 54px;
+            transform: rotate(45deg);
 
-            &:after {
-              content: "";
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              width: 0;
-              height: 0;
-              margin: 0;
-              border-bottom: 7px solid #f9f9f9;
-              border-left: 12px solid transparent;
-              border-right: 13px solid transparent;
-            }
 
             img {
               width: 15px;
               height: 15px;
+              transform: rotate(-45deg);
+                  margin-top: 22px;
             }
 
             &.Subtask,
@@ -267,21 +255,21 @@
                 }
 
                 &.High {
-                  color: #ea7272;
+                  color: #e49191;
                 }
 
                 &.Medium,
                 &.undefined {
-                  color: orange;
+                  color: #e4b45c;
                 }
 
                 &.Low {
-                  color: #7abb7a;
+                  color: #96cc96;
                   transform: rotate(180deg);
                 }
 
                 &.Lowest {
-                  color: green;
+                  color: #60b760;
                   transform: rotate(180deg);
                 }
               }
@@ -299,6 +287,7 @@
                 color: #343434;
                 font-size: 12px;
                 font-family: 'akzidenz';
+                margin-right: 5px;
               }
 
               &.Creative span,
@@ -313,11 +302,11 @@
 
       .count {
         color: #ababab;
-        font-size: 14px;
+        font-size: 16px;
         font-family: 'proxima-nova',sans-serif;
-        position: absolute;
         bottom: 0;
         padding: 4px;
+        float:right;
       }
     }
   }
