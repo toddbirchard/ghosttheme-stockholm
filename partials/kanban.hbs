@@ -123,9 +123,41 @@ const doneColumn = document.getElementById("done");
 
 
   var swiper = new Swiper('.swiper-container', {
-     slidesPerView: 1,
-     spaceBetween: 10
-   });
+     height: 800,
+     breakpoints: {
+    // when window width is <= 320px
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        noSwiping: false
+      },
+      800: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        noSwiping: false,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 0
+      },
+      600: {
+        slidesPerView: 1,
+        spaceBetween: 100,
+        noSwiping: false,
+        centeredSlides: true,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 0,
+        slidesPerColumnFill: 'column'
+      },
+      400: {
+        slidesPerView: 1,
+        spaceBetween: 80,
+        noSwiping: false,
+        centeredSlides: true,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 0,
+        slidesPerColumnFill: 'column'
+      }
+   }
+ });
 
 
 </script>
