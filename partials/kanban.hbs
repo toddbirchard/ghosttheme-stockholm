@@ -141,7 +141,7 @@ const doneColumn = document.getElementById("done");
       },
       600: {
         slidesPerView: 1,
-        spaceBetween: 100,
+        spaceBetween: 60,
         noSwiping: false,
         centeredSlides: true,
         slidesOffsetBefore: 20,
@@ -150,7 +150,7 @@ const doneColumn = document.getElementById("done");
       },
       400: {
         slidesPerView: 1,
-        spaceBetween: 80,
+        spaceBetween: 120,
         noSwiping: false,
         centeredSlides: true,
         slidesOffsetBefore: 20,
@@ -159,6 +159,8 @@ const doneColumn = document.getElementById("done");
       }
    }
  });
+
+ swiper.on('slideChange', updateSlides());
 
 
 </script>
