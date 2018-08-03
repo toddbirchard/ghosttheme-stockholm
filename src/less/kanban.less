@@ -94,27 +94,28 @@
     }
   }
 
+  .kanbancontainer {
+    margin-bottom: 20px;
+    @media(max-width: 800px) {
+    }
+  }
+
   .kanban {
     width: auto;
     max-height: 1180px;
     display: flex;
     justify-content: space-between;
     background: none;
-    padding: 20px 0;
-    @media(max-width: 800px) {
-      width: 350%;
-      margin-left: 20px;
-    }
 
     .column {
-      width: 21%;
+      width: 21% !important;
       background: #fff;
       border: 1px solid #f9f9f9;
       padding: 20px 20px 30px;
       position: relative;
       margin-bottom: 7px;
       @media(max-width: 800px) {
-        width: 80%;
+        width: 92% !important;
       }
 
       h2 {

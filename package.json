@@ -42,7 +42,8 @@
     "mongodb-stitch-browser-core": "^4.0.9",
     "mongodb-stitch-browser-sdk": "^4.0.12",
     "node-getpocket": "^1.0.0",
-    "simplebar": "^3.0.0-beta.1"
+    "simplebar": "^3.0.0-beta.1",
+    "swiper": "^4.3.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

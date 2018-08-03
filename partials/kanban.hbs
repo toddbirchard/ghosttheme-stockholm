@@ -1,23 +1,24 @@
-<div class="kanban">
-  <div class="column" id="backlog">
+<div class="kanbancontainer swiper-container">
+<div class="kanban swiper-wrapper">
+  <div class="column swiper-slide" id="backlog">
     <h2>Backlog</h2>
     <div class="cards">
     </div>
   </div>
-  <div class="column" id="todo">
+  <div class="column swiper-slide" id="todo">
     <h2>To Do</h2>
     <div class="cards"></div>
   </div>
-  <div class="column" id="progress">
+  <div class="column swiper-slide" id="progress">
     <h2>In Progess</h2>
     <div class="cards"></div>
   </div>
-  <div class="column" id="done">
+  <div class="column swiper-slide" id="done">
     <h2>Done</h2>
     <div class="cards"></div>
   </div>
 </div>
-
+</div>
 
 <!--<script>
 
@@ -117,6 +118,14 @@ const doneColumn = document.getElementById("done");
     console.error(err)
   });
 
+
+
+
+
+  var swiper = new Swiper('.swiper-container', {
+     slidesPerView: 1,
+     spaceBetween: 10
+   });
 
 
 </script>
