@@ -126,7 +126,6 @@ const doneColumn = document.getElementById("done");
      height: 800,
      noSwiping: true,
      spaceBetween: 10,
-     width: 391,
      centeredSlides: false,
      slidesPerView: 4,
      grabCursor: false,
@@ -136,31 +135,43 @@ const doneColumn = document.getElementById("done");
         slidesPerView: 2,
         noSwiping: false,
         grabCursor: true,
-        initialSlide: 0
+        initialSlide: 0,
+        centeredSlides:false
       },
       800: {
         slidesPerView: 1,
         noSwiping: false,
-        centeredSlides: true,
         grabCursor: true,
         slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        centeredSlides:true
       },
       600: {
         slidesPerView: 1,
         noSwiping: false,
         slidesPerColumnFill: 'column',
-        centeredSlides: true,
-        grabCursor: true
+        grabCursor: true,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        centeredSlides:true
       },
       400: {
         slidesPerView: 1,
         noSwiping: false,
         slidesPerColumnFill: 'column',
-        centeredSlides: true,
-        grabCursor: true
+        grabCursor: true,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        centeredSlides:true
       }
    }
  });
+
+ swiper.on('resize', function () {
+  swiper.slideTo(0, 300, false);
+});
+
+
 
 
 </script>

@@ -8,6 +8,11 @@
 
   .container {
     max-width: 1200px;
+
+    @media(max-width: 1000px) {
+      width:100%;
+      max-width: auto;
+    }
   }
 
   .repo {
@@ -112,30 +117,34 @@
     .column {
       background: #fff;
       border: 1px solid #f9f9f9;
-      padding: 20px 20px 30px;
       position: relative;
       margin-bottom: 7px;
-      width: 21% !important;
-      height: 800px;
+      height: 900px;
+      min-width: 24%;
 
       @media(max-width: 1000px) {
-        width: 45% !important;
+        min-width: auto;
       }
       @media(max-width: 800px) {
-        /*max-width: 80% !important;*/
+        min-width: auto;
+        /*max-width: 90%;*/
       }
       @media(max-width: 600px) {
-        max-width: 80% !important;
+        min-width: auto;
+        /*max-width: 90%;*/
       }
 
 
       h2 {
         margin-top: 0;
         font-size: 1.8em;
-        margin-bottom: 20px !important;
+        margin: 20px auto 30px;
         border-bottom: 1px solid fade(@theme-color, 40%);
         padding-bottom: 10px;
         position: relative;
+        width: 89%;
+
+
 
         &::after {
           content: "";
@@ -149,11 +158,12 @@
       }
 
       .cards {
-        width: auto;
+        width: 90%;
         height: auto;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        margin: auto;
 
         &.last-child {
           margin-bottom: 0;
@@ -177,7 +187,7 @@
             font-size: 1em;
             font-family: 'akzidenz';
             color: #3c3d46;
-            width: 80%;
+            max-width: 180px;
             line-height: 1.2;
             font-weight: 100;
             margin: 5px 0 20px;
