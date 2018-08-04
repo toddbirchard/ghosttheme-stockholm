@@ -96,6 +96,9 @@
 
   .kanbancontainer {
     margin-bottom: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
     @media(max-width: 800px) {
     }
   }
@@ -112,18 +115,14 @@
       padding: 20px 20px 30px;
       position: relative;
       margin-bottom: 7px;
-      max-width: 21% !important;
-
-
-
-
+      width: 21% !important;
+      height: 800px;
 
       @media(max-width: 1000px) {
-        max-width: none !important;
-        max-width: 45% !important;
+        width: 45% !important;
       }
       @media(max-width: 800px) {
-        max-width: 80% !important;
+        /*max-width: 80% !important;*/
       }
       @media(max-width: 600px) {
         max-width: 80% !important;

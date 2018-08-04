@@ -125,42 +125,42 @@ const doneColumn = document.getElementById("done");
   var swiper = new Swiper('.swiper-container', {
      height: 800,
      noSwiping: true,
+     spaceBetween: 10,
+     width: 391,
+     centeredSlides: false,
+     slidesPerView: 4,
+     grabCursor: false,
      breakpoints: {
     // when window width is <= 320px
       1000: {
         slidesPerView: 2,
-        spaceBetween: 10,
-        noSwiping: false
+        noSwiping: false,
+        grabCursor: true,
+        initialSlide: 0
       },
       800: {
         slidesPerView: 1,
-        spaceBetween: 40,
         noSwiping: false,
+        centeredSlides: true,
+        grabCursor: true,
         slidesOffsetBefore: 20,
-        slidesOffsetAfter: 0
       },
       600: {
         slidesPerView: 1,
-        spaceBetween: 60,
         noSwiping: false,
+        slidesPerColumnFill: 'column',
         centeredSlides: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 0,
-        slidesPerColumnFill: 'column'
+        grabCursor: true
       },
       400: {
         slidesPerView: 1,
-        spaceBetween: 120,
         noSwiping: false,
+        slidesPerColumnFill: 'column',
         centeredSlides: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 0,
-        slidesPerColumnFill: 'column'
+        grabCursor: true
       }
    }
  });
-
- swiper.on('slideChange', updateSlides());
 
 
 </script>
