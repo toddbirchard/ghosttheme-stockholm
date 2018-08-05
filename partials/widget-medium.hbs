@@ -8,7 +8,8 @@
 <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
 
 <script>
-/*function createMeetupCard(medium){
+function createMediumCard(medium){
+  console.log('medium= ' + medium);
   MediumWidget.Init({
     renderTo: '#medium-widget',
     params: {
@@ -20,10 +21,8 @@
       "ratio": "square"
     }
   })
-  $('.medium').css('display', 'block');
-}*/
-
-var mediumURL = '';
+  $('#medium').css('display', 'block');
+}
 
 
 authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
@@ -31,23 +30,24 @@ authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(us
 });
 
 authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-  MediumWidget.Init({
-    renderTo: '#medium-widget',
-    params: {
-      "resource": result.medium,
-      "postsPerLine": 1,
-      "limit": 3,
-      "picture": "small",
-      "fields": ["description", "publishAt"],
-      "ratio": "square"
-    }
-  })
+  createMediumCard(result.medium)
 });
 
-$( document ).ready(function() {
-  if ($('.medium-widget__wrapper').length > 0) {
-    $('#medium').css('display', 'block');
+/*
+MediumWidget.Init({
+  renderTo: '#medium-widget',
+  params: {
+    "resource": result.medium,
+    "postsPerLine": 1,
+    "limit": 3,
+    "picture": "small",
+    "fields": ["description", "publishAt"],
+    "ratio": "square"
   }
-});
+})
+
+$( document ).ready(function() {
+
+});*/
 
 </script>
