@@ -64,3 +64,4 @@ typings/
 assets/js/secret.js
 assets/js/includes/secret.js
 /assets/js/includes/secret.js
+sendgrid.env
