@@ -20,36 +20,6 @@
 </div>
 </div>
 
-<!--<script>
-
-const {
-  Stitch,
-  RemoteMongoClient,
-  UserPasswordCredential
-} = stitch;
-
-const stitchClient = Stitch.initializeDefaultAppClient("hackerjira-bzmfe");
-stitchClient.auth
-  .loginWithCredential(new AnonymousCredential())
-  .then(display)
-  .catch(console.error);
-
-
-  // Get a hook to the card collection
-  const card = mongodb.db("jira").collection("hackersandslackers");
-
-  function getCards() {
-  return stitchClient
-    .callFunction("populateCards", ["Backlog"])
-    .then(({ body }) => JSON.parse(body.toString()));
-}
-
-
-
-
-
-
-</script>-->
 
 
 <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
@@ -170,8 +140,4 @@ const doneColumn = document.getElementById("done");
  swiper.on('resize', function () {
   swiper.slideTo(0, 300, false);
 });
-
-
-
-
 </script>

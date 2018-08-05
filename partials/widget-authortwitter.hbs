@@ -1,13 +1,9 @@
-{{#if author.twitter}}
+
 <!-- start widget -->
-<!-- start widget -->
-<div class="widget">
+<div class="widget twitter">
 	<div class="content twitter">
 		<h4 class="title">Twitter</h4>
-			<a class="twitter-timeline" data-chrome="nofooter noheader noscrollbar" data-tweet-limit="5" data-link-color="#26a2c7" href="https://twitter.com/" + author.twitter + "?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" data-chrome="nofooter noheader noscrollbar" data-tweet-limit="3" data-link-color="#26a2c7" href="{{twitter_url}}"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 </div>
 <!-- end widget -->
-  </div>
-<!-- end widget -->
-{{/if}}

@@ -1,3 +1,37 @@
 <!-- start widget -->
-<script src="{{asset "/js/repos.js"}}"></script>
+<div class="widget github" style="display:none;">
+  <div class="content">
+    <h4 class="title">Github</h4>
+    <div id="github-card-author"></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="http://github-profile.com/dist/gh-profile-card.min.js"></script>
+<script>
+  function createCard(username) {
+    var widget = new GitHubCard({
+      username: username,
+      template: '#github-card-author',
+      sortBy: 'stars',
+      reposHeaderText: 'Most starred',
+      maxRepos: 3
+    });
+
+    widget.init();
+    $('.github').css('display', 'block');
+  }
+
+  //const authorsClient = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
+  //const db = authorsClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
+
+  authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+    console.log('logged in anonymously as user')
+  });
+
+  authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+    console.log(JSON.stringify(result))
+    console.log(result.github)
+    if (result.github) {createCard(result.github)}
+  });
+</script>
 <!-- end widget -->
