@@ -1,4 +1,4 @@
-<div class="widget medium" style="display:none;">
+<div class="widget" id="medium" style="display:none;">
   <div class ="content">
     <h4 class="title" style="margin-bottom:0;">Medium</h4>
     <div id="medium-widget"></div>
@@ -46,7 +46,7 @@ authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
 
 $( document ).ready(function() {
   if ($('.medium-widget__wrapper').length > 0) {
-    $('.medium').css('display', 'block');
+    $('#medium').css('display', 'block');
   }
 });
 
