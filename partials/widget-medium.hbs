@@ -4,20 +4,11 @@
     <div id="medium-widget"></div>
   </div>
 </div>
+
 <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+
 <script>
-
-authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-  console.log('logged in anonymously as user')
-});
-
-authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-  console.log(JSON.stringify(result))
-  if (result.medium != undefined) {createMeetupCard(result.medium)}
-});
-
-
-function createMeetupCard(medium){
+/*function createMeetupCard(medium){
   MediumWidget.Init({
     renderTo: '#medium-widget',
     params: {
@@ -25,10 +16,38 @@ function createMeetupCard(medium){
       "postsPerLine": 1,
       "limit": 3,
       "picture": "small",
-      "fields": ["description"],
-      "ratio": "original"
+      "fields": ["description", "publishAt"],
+      "ratio": "square"
     }
   })
   $('.medium').css('display', 'block');
-}
+}*/
+
+var mediumURL = '';
+
+
+authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  console.log('logged in anonymously as user')
+});
+
+authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+  MediumWidget.Init({
+    renderTo: '#medium-widget',
+    params: {
+      "resource": result.medium,
+      "postsPerLine": 1,
+      "limit": 3,
+      "picture": "small",
+      "fields": ["description", "publishAt"],
+      "ratio": "square"
+    }
+  })
+});
+
+$( document ).ready(function() {
+  if ($('.medium-widget__wrapper').length > 0) {
+    $('.medium').css('display', 'block');
+  }
+});
+
 </script>

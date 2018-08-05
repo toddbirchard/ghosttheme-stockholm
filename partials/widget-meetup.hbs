@@ -33,12 +33,13 @@ function createMeetupCard(meetup) {
     url: 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup + '&offset=0&format=json&limited_events=False&rsvp=yes,maybe&photo-host=public&page=500&fields=&order=time&desc=false&status=upcoming',
     contentType: "application/json",
     dataType: 'jsonp',
-    success: function(ajaxResult) {
-      var rsvps = ajaxResult.meta.count;
+    success: function(ajaxResult2) {
+      var rsvps = ajaxResult2.meta.count;
+      console.log('rsvps = ' + rsvps);
       if (rsvps == 0) {
         $('.events').append('<span class="noevents">No upcoming events :(</span>');
       } else {
-        var events = ajaxResult.results;
+        var events = ajaxResult2.results;
 
         for (var i = 0; i < events.length; i++) {
           var date = new Date(events[i].time);
