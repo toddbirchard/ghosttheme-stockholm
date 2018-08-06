@@ -31,10 +31,12 @@
   }
 
   .about-author {
-    background: @white;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px !important;
+    background: #f7f7f7 !important;
     padding: 20px;
     margin: 10px 0;
-    width: 41%;
+    width: 42%;
     border: 1px solid #dcdcdc;
 		border-radius: 4px !important;
 
@@ -43,6 +45,14 @@
       border: 0 !important;
       border-bottom: 1px solid #dcdcdc !important;
       width: 100% !important;
+
+  		i {
+  			color: @text-color-light !important;
+  		}
+
+  		span {
+  			color: @text-color-light;
+  		}
 
       &:last-child {
         border-bottom: 0 !important;
@@ -86,7 +96,6 @@
       height: 80px;
       margin-bottom: 15px;
       display: inline-block;
-      height: fit-content;
 
       @media(max-width: 1040px) {
         width: 80px;
