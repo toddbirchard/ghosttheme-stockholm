@@ -1,24 +1,40 @@
 <div class="kanbancontainer swiper-container">
 <div class="kanban swiper-wrapper">
-  <div class="column swiper-slide" id="backlog">
+
+  <div class="column swiper-slide">
+  <div id="backlog">
     <h2>Backlog</h2>
     <div class="cards">
     </div>
   </div>
+</div>
+
+<div class="column swiper-slide">
   <div class="column swiper-slide" id="todo">
     <h2>To Do</h2>
     <div class="cards"></div>
   </div>
-  <div class="column swiper-slide" id="progress">
+  </div>
+
+  <div class="column swiper-slide">
+  <div id="progress">
     <h2>In Progess</h2>
     <div class="cards"></div>
   </div>
-  <div class="column swiper-slide" id="done">
+  </div>
+
+  <div class="column swiper-slide">
+  <div id="done">
     <h2>Done</h2>
     <div class="cards"></div>
   </div>
 </div>
+
 </div>
+<div class="swiper-pagination"></div>
+</div>
+
+<!-- If we need pagination -->
 
 
 
@@ -93,12 +109,16 @@ const doneColumn = document.getElementById("done");
 
 
   var swiper = new Swiper('.swiper-container', {
-     height: 800,
+     height: 1000,
      noSwiping: true,
-     spaceBetween: 10,
+     spaceBetween: 8,
      centeredSlides: false,
      slidesPerView: 4,
      grabCursor: false,
+     pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
      breakpoints: {
     // when window width is <= 320px
       1000: {
@@ -109,35 +129,35 @@ const doneColumn = document.getElementById("done");
         centeredSlides:false
       },
       800: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         noSwiping: false,
         grabCursor: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 20,
-        centeredSlides:true
+        //slidesOffsetBefore: 20,
+        //slidesOffsetAfter: 20,
       },
       600: {
         slidesPerView: 1,
         noSwiping: false,
         slidesPerColumnFill: 'column',
         grabCursor: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 20,
-        centeredSlides:true
+        //slidesOffsetBefore: 20,
+        //slidesOffsetAfter: 20,
       },
       400: {
         slidesPerView: 1,
         noSwiping: false,
         slidesPerColumnFill: 'column',
         grabCursor: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 20,
-        centeredSlides:true
+        //slidesOffsetBefore: 20,
+        //slidesOffsetAfter: 20,
       }
    }
  });
 
+ swiper.pagination.render();
+
  swiper.on('resize', function () {
   swiper.slideTo(0, 300, false);
+  swiper.pagination.update();
 });
 </script>
