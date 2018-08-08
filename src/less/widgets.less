@@ -92,9 +92,17 @@
 				font-weight: 100;
 				transition: all .3s all;
 
+				&::placeholder {
+					opacity:0.7;
+				}
+
 				&:hover{
 					background: #e5f9ff;
 					border-color: #bbd8e2;
+
+					&::placeholder {
+						opacity:0.1;
+					}
 				}
 			}
 

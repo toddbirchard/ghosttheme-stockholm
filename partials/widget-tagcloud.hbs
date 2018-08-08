@@ -2,7 +2,7 @@
 <div class="widget">
 	<h4 class="title">Tags</h4>
 	<div class="content tag-cloud">
-		{{#get "tags" limit="15" filter="feature_image:null" include="count.posts" order="count.posts DESC"}}{{tags separator="" }}{{/get}}
+		{{#get "tags" limit="20" filter="feature_image:null+name:-Roundup" include="count.posts" order="count.posts DESC"}}{{tags separator="" }}{{/get}}
 	</div>
 </div>
 <!-- end tag cloud widget -->

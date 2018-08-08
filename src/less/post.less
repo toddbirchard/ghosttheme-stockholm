@@ -555,6 +555,7 @@
 
 		blockquote {
 			margin: 40px;
+			background: #e5f1f5;
 			@media(max-width: 600px) {
 				margin: 20px auto;
 			}
@@ -562,7 +563,8 @@
 			p {
 				padding-left: 20px;
 				font-size: 24px;
-				line-height: 1;
+				line-height: 1.2 !important;
+				margin:0 !important;
 				color: #26a2c7;
 			}
 		}
@@ -711,9 +713,8 @@
 		iframe {
 			margin: 0;
 			display: block;
-			margin: 0 auto 30px!important !important;
+			margin: 0 auto 30px !important;
 			height: 400px;
-			margin-bottom: 20px !important;
 
 			&.instagram-media {
 				max-width: 400px !important;
@@ -739,8 +740,9 @@
 		img {
 			max-height: 550px;
 			border: 1px solid #eaeaea;
-			margin: 30px auto;
+			margin: 10px auto;
 			display: block;
+			max-width: 99%;
 		}
 
 		figure {
