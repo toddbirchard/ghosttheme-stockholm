@@ -78,7 +78,7 @@ const doneColumn = document.getElementById("done");
   });
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Data']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 7}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'todo')
@@ -87,7 +87,7 @@ const doneColumn = document.getElementById("done");
   });
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug', 'Content', 'Data']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 7}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'progress')
