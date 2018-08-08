@@ -13,21 +13,16 @@ Theme for the [Ghost](https://github.com/TryGhost) blogging platform. Live previ
 
 ![Stockholm Theme](https://miscellaneous.nyc3.digitaloceanspaces.com/stockholm.jpg)
 
-## About
+### About
 
 _Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contexual widgets, sidebar preferences, and unique page templates. Project is in *active development*.
 
-## Features
+## Live Features
 
 Some features are rolled out in public beta before official release. Features released in beta are usable to the end user, although less intuitive to configure until official completion.
 
-### Live Features
+#### Widgets
 
-- Responsive layout
-- Editorial 'series' page
-- Authors page
-- Contextual sidebars
-- Embedded link previews
 - Github repository widget
 - Contributors widget
 - Recent posts widget
@@ -35,23 +30,31 @@ Some features are rolled out in public beta before official release. Features re
 - Series widget
 - Twitter widget
 - Meetup widget
+- Responsive layout
+- Medium Widget
+- Embedded link previews
+
+#### Page templates
+
 - Featured posts
-- Link posts
+- 'Link' posts, for post link previews
 - Video posts
+- Project page with JIRA Kanban plugin
+- Authors page
+- Editorial 'series' page
+- Contextual sidebars
 
-### In Development
+## Features In Development
 
-- JIRA Kanban plugin
-- Sendgrid email signups
+- Sendgrid Email signups
 - Github activity feed
+- 'Series' widgets support
 
 ### Planned Features
 
 - Open user registration
-- 'Series' widgets support
 - Activity feed page template
 - Guest posts
-- Gulp
 
 # Installation
 
@@ -89,6 +92,8 @@ Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is 
 - Handlebars
 - LESS
 - JQuery
+- MongoDB
+- Various APIs
 
 ### Maintenance
 
