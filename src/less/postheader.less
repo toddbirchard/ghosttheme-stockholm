@@ -52,7 +52,7 @@
     opacity: 1;
     display: none;
 
-    @media(max-width: 800px){
+    @media(max-width: 800px) {
       margin: 8px !important;
       height: 40px;
       width: 40px;
@@ -120,6 +120,15 @@
 
       li {
         display: inline-block;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          i {
+            color: #11004e;
+            cursor: pointer;
+          }
+
+        }
 
 
         a {
@@ -132,8 +141,13 @@
           transition: all 0.2s ease-out;
 
           &:hover {
-            color: @hover-color;
+            color: #11004e;
             cursor: pointer;
+
+            &::before{
+              color: #11004e;
+              cursor: pointer;
+            }
           }
           @media(max-width: 600px) {
             font-size: 16px;
