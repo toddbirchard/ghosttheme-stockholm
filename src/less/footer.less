@@ -90,14 +90,19 @@
 				font-weight: 200;
 				font-family: 'mr-eaves-xl-modern', serif;
 				transition: all 0.2s ease;
+				border-bottom: 1px dashed rgba(255,255,255,.1) !important;
+
+				&:last-child {
+					border-bottom: none !important;
+				}
 			}
 
 			.recent-single-post {
-				border-bottom: 1px dashed rgba(255,255,255, .1);
-			}
+				border-bottom: 1px dashed rgba(255,255,255,.1) !important;
 
-			.single-author {
-				border-bottom: 0;
+				&:last-child {
+					border-bottom: none !important;
+				}
 			}
 
 			.recent-single-post,
