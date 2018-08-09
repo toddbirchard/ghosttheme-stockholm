@@ -4,6 +4,7 @@
   <div class="column swiper-slide">
   <div id="backlog">
     <h2>Backlog</h2>
+    <span class="count"></span>
     <div class="cards">
     </div>
   </div>
@@ -12,6 +13,7 @@
 <div class="column swiper-slide">
   <div class="column swiper-slide" id="todo">
     <h2>To Do</h2>
+    <span class="count"></span>
     <div class="cards"></div>
   </div>
   </div>
@@ -19,6 +21,7 @@
   <div class="column swiper-slide">
   <div id="progress">
     <h2>In Progess</h2>
+    <span class="count"></span>
     <div class="cards"></div>
   </div>
   </div>
@@ -26,6 +29,7 @@
   <div class="column swiper-slide">
   <div id="done">
     <h2>Done</h2>
+    <span class="count"></span>
     <div class="cards"></div>
   </div>
 </div>
@@ -69,7 +73,7 @@ const doneColumn = document.getElementById("done");
   const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'backlog')
@@ -78,7 +82,7 @@ const doneColumn = document.getElementById("done");
   });
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'todo')
@@ -87,7 +91,7 @@ const doneColumn = document.getElementById("done");
   });
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'progress')
@@ -96,7 +100,7 @@ const doneColumn = document.getElementById("done");
   });
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 7}).asArray()
+    db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'done')
@@ -104,8 +108,21 @@ const doneColumn = document.getElementById("done");
     console.error(err)
   });
 
+  client.callFunction("numCards", ["Backlog"]).then(result => {
+      $('#backlog .count').text(result + ' issues');
+  });
 
+  client.callFunction("numCards", ["To Do"]).then(result => {
+      $('#todo .count').text(result + ' issues');
+  });
 
+  client.callFunction("numCards", ["In Progress"]).then(result => {
+      $('#progress .count').text(result + ' issues');
+  });
+
+  client.callFunction("numCards", ["Done"]).then(result => {
+      $('#done .count').text(result + ' issues');
+  });
 
 
   var swiper = new Swiper('.swiper-container', {
