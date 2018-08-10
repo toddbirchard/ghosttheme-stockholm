@@ -1,0 +1,34 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3620837, 2018-08-10T13:15:39-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: AvenirNextLight by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-light/
+ * Copyright: Copyright &#x00A9; 2012 - 2017 Monotype GmbH. All rights reserved.
+ *
+ * Webfont: AvenirNextMedium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-medium/
+ * Copyright: Copyright &#x00A9; 2004 - 2017 Monotype GmbH. All rights reserved.
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3620837
+ * Licensed pageviews: 500,000
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/373fe5");
+
+
+@font-face {font-family: 'AvenirNextLight';src: url('../fonts/AvenirNextLight.eot');src: url('../fonts/AvenirNextLight.eot?#iefix') format('embedded-opentype'),url('../fonts/AvenirNextLight.woff2') format('woff2'),url('../fonts/AvenirNextLight.woff') format('woff'),url('../fonts/AvenirNextLight.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNextMedium';src: url('../fonts/AvenirNextMedium.eot');src: url('../fonts/AvenirNextMedium.eot?#iefix') format('embedded-opentype'),url('../fonts/AvenirNextMedium.woff2') format('woff2'),url('../fonts/AvenirNextMedium.woff') format('woff'),url('../fonts/AvenirNextMedium.ttf') format('truetype');}
