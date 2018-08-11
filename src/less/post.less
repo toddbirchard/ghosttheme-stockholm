@@ -56,7 +56,7 @@
 			font-size: 2.4em;
 		}
 		@media(max-width: 600px) {
-			font-size: 2em;
+			font-size: 1.8em;
 		}
 	}
 
@@ -69,7 +69,7 @@
 
 		@media(max-width: 800px) {
 			margin: 10px auto 0;
-			font-size: 1.4em;
+			font-size: 1.2em;
 			text-align: center;
 			line-height: 1.1;
 			max-width: 450px;
@@ -159,17 +159,28 @@
 		.tags {
 			 padding: 5px 14px;
 			 height: 30px;
+
+			 @media(max-width: 600px){
+				 font-size: 1.1em;
+				 height: 24px;
+			 }
 		}
 
 		&.date {
 			span {
 				color: #8e8e8e !important;
+
+				@media(max-width: 600px){
+					font-size: 1.1em;
+				}
 			}
 
 			i {
 				color: #8e8e8e !important;
 				font-size: 1.2em !important;
 			}
+
+
 		}
 
 		.author {
