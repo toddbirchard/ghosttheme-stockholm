@@ -16,12 +16,16 @@
     transform: translate3d(0,0,0);
     z-index: 10;
     width: 115px !important;
-    display: flex;
     justify-content: space-between;
     margin: auto;
     bottom: 20px!important;
     left: 0!important;
     right: 0!important;
+    display:none;
+
+    @media(max-width: 1000px) {
+      display: flex;
+    }
 
     .swiper-pagination-bullet {
         width: 10px;

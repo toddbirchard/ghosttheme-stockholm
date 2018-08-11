@@ -12,8 +12,8 @@
   }
 }
 .social-btns .btn:before {
-  top: 150%;
-  left: -100%;
+  top: 165%;
+  left: -140%;
 }
 .social-btns .btn .fab {
   -webkit-transform: scale(0.8);
@@ -31,6 +31,12 @@
 .social-btns .btn.twitter .fa {
   color: #3cf;
 }
+
+.social-btns .btn.linkedin .fa {
+  color: #4875B4;
+}
+
+
 .social-btns .btn.google:before {
   background-color: #dc4a38;
 }
@@ -39,6 +45,9 @@
 }
 .social-btns .btn.dribbble:before {
   background-color: #f26798;
+}
+.social-btns .btn.linkedin:before {
+  background-color: #4875B4;
 }
 .social-btns .btn.tumblr:before {
   background-color: #35465c;
@@ -65,8 +74,8 @@
 }
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
-  top: -35%;
-  left: -35%;
+  top: -30%;
+  left: -30%;
 }
 
 
@@ -84,7 +93,7 @@
   display: flex;
 justify-content: space-between;
 }
-.social-btns .btn {
+.widget .social-btns .btn {
   display: inline-block;
   background-color: #fff;
   width: 35px;
@@ -99,10 +108,36 @@ justify-content: space-between;
   opacity: 0.99;
   padding:0;
 }
-.social-btns .btn:before {
+
+.post .social-btns .btn {
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+  height: 13px;
+  padding: 10px !important;
+
+  span {
+    z-index:20;
+  }
+
+  &:hover {
+    background:white;
+  }
+}
+
+.widget .social-btns .btn:before {
   content: '';
   width: 200%;
   height: 200%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.social-btns .btn:before {
+  content: '';
+  width: 200%;
+  height: 340%;
   position: absolute;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);

@@ -1,18 +1,18 @@
-<ul class="share-icons">
+<ul class="share-icons social-btns">
 	<!-- twitter -->
-	<li>
+	<li class="btn twitter">
 		<a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fab fa-twitter"></i><span>twitter</span></a>
 	</li>
 	<!-- facebook -->
-	<li>
+	<li class="btn facebook">
 		<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fab fa-facebook"></i><span>facebook</span></a>
 	</li>
 	<!-- linkedin -->
-	<li>
+	<li class="btn linkedin">
 		<a href="https://www.linkedin.com/shareArticle?mini=true%26url={{url absolute="true"}}%26source={{@blog.url}}" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;"><i class="fab fa-linkedin"></i><span>linkedin</span></a>
 	</li>
 	<!-- Y Combinator -->
-	<li>
+	<li class="btn rss">
 		<a href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)"><i class="fab fa-y-combinator"></i><span>hackernews</span></a>
 	</li>
 </ul>

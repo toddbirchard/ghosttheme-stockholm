@@ -15,11 +15,11 @@
 		justify-content: space-between;
 		margin: 0 !important;
 		padding-left: 0 !important;
-		width: 420px;
+		width: 450px;
 
 		li {
 			list-style: none;
-			display: inline-block;
+			display: inline-block !important;
 			border: 1px solid #ebebeb;
 			padding: 5px 10px !important;
 			transition: 0.2s all ease-out;
@@ -99,8 +99,6 @@
 
 			&:hover {
 				color: @white;
-				background: @theme-color;
-				border: 1px solid @theme-color;
 				text-decoration: none;
 
 				span {
@@ -132,6 +130,7 @@
 
 		.share-icons {
 			width:100%;
+			z-index:20;
 		}
 
 		.share,
