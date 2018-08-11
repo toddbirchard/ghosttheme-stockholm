@@ -22,13 +22,3 @@
  *
  * © 2018 MyFonts Inc
 */
-
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/373fe5");
-
-
-@font-face {font-family: 'AvenirNextLight';src: url('../fonts/AvenirNextLight.eot');src: url('../fonts/AvenirNextLight.eot?#iefix') format('embedded-opentype'),url('../fonts/AvenirNextLight.woff2') format('woff2'),url('../fonts/AvenirNextLight.woff') format('woff'),url('../fonts/AvenirNextLight.ttf') format('truetype');}
-
-
-@font-face {font-family: 'AvenirNextMedium';src: url('../fonts/AvenirNextMedium.eot');src: url('../fonts/AvenirNextMedium.eot?#iefix') format('embedded-opentype'),url('../fonts/AvenirNextMedium.woff2') format('woff2'),url('../fonts/AvenirNextMedium.woff') format('woff'),url('../fonts/AvenirNextMedium.ttf') format('truetype');}
