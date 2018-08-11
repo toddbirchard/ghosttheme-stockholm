@@ -118,7 +118,7 @@
 		display: flex;
 		width: 70%;
 		justify-content: space-between;
-		max-width: 800px;
+		max-width: 500px;
 
 		a {
 			color: #5aa8bf;
@@ -128,20 +128,25 @@
 		.meta-item {
 			display: flex;
 			justify-items: center;
-			margin: auto 0;
+			margin: auto 15px auto 0;
 			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
 			align-items: center;
 			font-size: 14px;
-			padding:12px;
+			padding:0;
+
 
 			i {
 				height: 15px;
     		display: inline-block;
 			}
 
-			&.tags span {
+			&.tags {
+				padding:12px;
+
+			span {
 				line-height:1;
 			}
+		}
 
 			@media(max-width: 600px){
 				font-family: 'AvenirNextLTPro-Light';
@@ -153,6 +158,9 @@
 					font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light' !important;
 					color: #627d90;
 					font-size: 16px;
+					overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
 				}
 			}
 
@@ -161,6 +169,9 @@
 					font-family: 'AvenirNextLTPro-Medium' !important;
 					color: #8e8e8e !important;
 					font-size:16px;
+					overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
 				}
 				i {
 					color: #8e8e8e !important;
