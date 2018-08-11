@@ -124,11 +124,11 @@
         transition: all 0.2s ease-out;
 
         &:hover {
-          i {
+          &::before,
+          a {
             color: #11004e;
             cursor: pointer;
           }
-
         }
 
 
@@ -141,15 +141,6 @@
           letter-spacing: 0.5px;
           transition: all 0.2s ease-out;
 
-          &:hover {
-            color: #11004e;
-            cursor: pointer;
-
-            &::before{
-              color: #11004e;
-              cursor: pointer;
-            }
-          }
           @media(max-width: 600px) {
             font-size: 16px;
           }
