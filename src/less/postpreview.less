@@ -5,6 +5,13 @@
 	padding: 0 !important;
 	border: 1px solid #dadada;
 
+	.meta {
+		@media(max-width:800) {
+			 max-width: 350px !important;
+			 width:60%;
+		}
+	}
+
 	.featured-media {
 		box-sizing: border-box;
 		max-height: 400px;
@@ -120,6 +127,10 @@
 		justify-content: space-between;
 		max-width: 500px;
 
+		@media(max-width:800) {
+			 max-width: 350px !important;
+		}
+
 		a {
 			color: #5aa8bf;
 			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
@@ -201,13 +212,15 @@
 			}
 		}
 		@media(max-width: 800px) {
-			.date,
-			.tags {
+			.date {
 				display: none;
 			}
 		}
 		@media(max-width: 600px) {
 			 font-weight: 600;
+			 .tags {
+ 				display: none;
+ 			}
 		}
 	}
 
@@ -224,7 +237,7 @@
 
 		.btn {
 			font-size: 16px;
-			font-weight: 100;
+			font-family: 'AvenirNextLTPro-Medium',serif;
 			text-transform: uppercase;
 			padding: 14px 20px;
 	    line-height: 1;
