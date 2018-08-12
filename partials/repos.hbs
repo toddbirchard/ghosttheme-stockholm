@@ -4,6 +4,8 @@
   /*===========================
    1. function declaretion
    ==========================*/
+   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
+   const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
    var repos = [];
 
   var githubRepos = {
@@ -28,8 +30,6 @@
         });
     },
     getRepoDocs: function() {
-      const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
-      const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
       repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
         repoDB.collection('repos').find({}).asArray()
       ).then(docs => {
