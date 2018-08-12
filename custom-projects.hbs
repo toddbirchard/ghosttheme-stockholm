@@ -5,7 +5,8 @@
 	{{> postheader}}
 	<div class="container">
 		<!-- start post -->
-		{{#post}}
+		{{#post}}+
+
 			<div class="intro">
 				{{#if feature_image}}
 					<div class="featured-media" style="background-image: url({{feature_image}});">
@@ -13,11 +14,10 @@
 				{{/if}}
 				<h1>{{{title}}}</h1>
 				<p>{{content}}</p>
+				{{> repos}}
 				<div class="dropdown">hackersandslackers.com <i class="far fa-angle-down"></i></div>
 				<div style="clear:both"></div>
-				{{> repos}}
 			</div>
-
 			{{> kanban}}
 		{{/post}}
 	</div>

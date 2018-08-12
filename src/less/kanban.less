@@ -361,16 +361,34 @@
     display: flex;
     justify-content: space-between;
 
+    @media(max-width:800px) {
+      flex-direction: column;
+    }
+
     a {
       max-width: 24%;
+      @media(max-width:800px) {
+        max-width: none;
+      }
 
       .link-preview {
         min-height: 91px;
+
+        @media(max-width:800px) {
+          min-height: none;
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+          justify-content: left;
+        }
         i {
           margin-right: 10px;
           color: #6f929e;
           font-size: 54px;
           margin: 20px 0 0 20px;
+          @media(max-width:800px) {
+            margin: 0 10px 0 20px;
+          }
         }
         .repo-image {
           height: 100px;
