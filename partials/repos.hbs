@@ -13,7 +13,7 @@
       ).then(docs => {
         console.log("Found docs", docs)
         for (var i = 0; i < docs.length; i++) {
-          $('.repos').append('<a class="repo" href="' + docs.repo + '">' + docs.repo + '</a>');
+          $('.repos').append('<a class="repo" href="' + docs[i].repo + '">' + docs[i].repo + '</a>');
         }
       }).then(() => {
         var api_url = 'https://api.linkpreview.net/';
