@@ -14,7 +14,7 @@
         repoDB.collection('repos').find({}).asArray()
       ).then(docs => {
         console.log("Found docs", docs)
-        repoArray = docs;
+        repos = docs;
       }).catch(err => {
         console.error(err)
       });
