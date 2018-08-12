@@ -14,11 +14,11 @@
         var api_url = 'https://api.linkpreview.net/';
         for (var i = 0; i < docs.length; i++) {
 
-            var cat = $.ajax({url: 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/CgvwZne5R4Wpo2bpo/lastExec/results?token=xZqY6AxGF4AjHpvhC4rZK8AB3',
+            var cat = $.ajax({url: 'https://api.apify.com/v1/execs/kbHJtkiqZxHzLFqJ2/results?format=json&simplified=1',
               contentType: "application/json",
-              dataType: 'json',
+              dataType: 'jsonp',
               success: function(result){
-                return JSON.stringify(result[0].pageFunctionResult);
+                return result[0].value;
               }
             });
 
