@@ -29,7 +29,8 @@
               success: function(result) {
                 $('.repos').append('<a href="' + result.repo + '"> \n' +
                   '<div class="link-preview"> \n' +
-                  '<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
+                  '<i class="fab fa-github"></i> \n' +
+                  //'<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
                     '<div class="info"> \n' +
                     '<h4>' + result.title.split('/')[1] + '</h4> \n' +
                     '<p>' + result.description.split(' - ')[1] + '</p> \n' +
