@@ -10,7 +10,7 @@
 
       repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
         repoDB.collection('repos').find({}).asArray()
-      }).then(docs => {
+      ).then(docs => {
         var api_url = 'https://api.linkpreview.net/';
         for (var i = 0; i < docs.length; i++) {
             $.ajax({
