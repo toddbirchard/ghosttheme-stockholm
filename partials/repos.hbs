@@ -2,13 +2,14 @@
 <div class="repos"></div>
 <script>
 
-
 function populateRepos(repos) {
+    console.log('repos = ' + repos);
     for (var i = 0; i < repos[i].length; i++) {
       $('.repos').append('<a class="repo" href="' + repos.url + '">' + repos.url + '</a>');
     }
     var api_url = 'https://api.linkpreview.net/';
     $(".repo").each(function(index, element) {
+      console.log('this = ' + this);
       $.ajax({
         url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
         contentType: "application/json",
