@@ -3,11 +3,10 @@
 
 function populateRepos(repos) {
     for (var i = 0; i < repos.length; i++) {
-      $('repos').append('<a class="repo" href="' + repos.url + '"> \n' +
+      $('.repos').append('<a class="repo" href="' + repos.url + '"> \n' +
         '<h5>' + repos.name + '</h5> \n' +
       '</a>');
     }
-    $('#' + status).append('<span class="count"></span>');
   }
 
   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
@@ -15,7 +14,7 @@ function populateRepos(repos) {
   const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
 
   repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-    repoDB.collection('repos').find({}, { limit: 100}).asArray()
+    repoDB.collection('repos').find({}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populateRepos(docs)
