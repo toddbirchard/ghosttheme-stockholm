@@ -16,9 +16,10 @@
 
             var cat = $.ajax({url: 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/CgvwZne5R4Wpo2bpo/lastExec/results?token=xZqY6AxGF4AjHpvhC4rZK8AB3',
               contentType: "application/json",
-              dataType: 'json'
+              dataType: 'json',
               success: function(result){return result['pageFunctionResult']
-            }});
+              }
+            });
 
             $.ajax({
               url: api_url + '?key=' + linkpreview_key + '&q=' + docs[i].repo,
