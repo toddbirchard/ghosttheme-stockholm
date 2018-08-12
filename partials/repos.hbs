@@ -4,11 +4,23 @@
 
 
 function populateRepos(repos) {
-    for (var i = 0; i < repos.length; i++) {
-      $('.repos').append('<a class="repo" href="' + repos.url + '"> \n' +
-        '<h5>' + repos.name + '</h5> \n' +
-      '</a>');
+    for (var i = 0; i < repos[i].length; i++) {
+      $('.repos').append('<a class="repo" href="' + repos.url + '">' + repos.url + '</a>');
     }
+    var api_url = 'https://api.linkpreview.net/';
+    $(".repos > a").each(function(index, element) {
+      $.ajax({
+        url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
+        contentType: "application/json",
+        dataType: 'json',
+        success: function(result) {
+          var link_image = verifyImage(result.image);
+          var verify_title = verifyTitle(result);
+          $(element).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
+          $(element).remove();
+        }
+      });
+    });
   }
 
   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
