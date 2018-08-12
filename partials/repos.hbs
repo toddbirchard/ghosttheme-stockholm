@@ -25,6 +25,8 @@
             dataType: 'json',
             success: function(result) {
               $(element).append('<a href="' + result.repo + '">' + result.repo + '</a>');
+              $(element).append('<a href="' + result.url + '"><div class="link-preview"><div style="background:url(' + result.image + ')"></div><h4>' + result.title + '</h4></div></a>');
+
             }
           });
         });
