@@ -6,50 +6,36 @@
      ==========================*/
   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
   const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
-  var repos = [];
 
-  var githubRepos = {
-    getRepoDocs: function() {
+
       repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
         repoDB.collection('repos').find({}).asArray()
       ).then(docs => {
         console.log("Found docs", docs)
-        repos = docs;
+        for (var i = 0; i < docs.length; i++) {
+          $('.repos').append('<a class="repo" href="' + docs.url + '">' + docs.url + '</a>');
+        }
+      }).then(() => {
+        var api_url = 'https://api.linkpreview.net/';
+        $(".repo").each(function(index, element) {
+          console.log('this = ' + this);
+          $.ajax({
+            url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
+            contentType: "application/json",
+            dataType: 'json',
+            success: function(result) {
+              $(element).append('<a href="' + result.repo + '">' + result.repo + '</a>');
+            }
+          });
+        });
       }).catch(err => {
         console.error(err)
       });
-    },
-    populateRepos: function() {
-      console.log('repos = ' + repos);
-      for (var i = 0; i < repos.length; i++) {
-        $('.repos').append('<a class="repo" href="' + repos.url + '">' + repos.url + '</a>');
-      }
-    },
-    createCards: function() {
-      var api_url = 'https://api.linkpreview.net/';
-      $(".repo").each(function(index, element) {
-        console.log('this = ' + this);
-        $.ajax({
-          url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
-          contentType: "application/json",
-          dataType: 'json',
-          success: function(result) {
-            $(element).append('<a href="' + result.repo + '">' + result.repo + '</a>');
-          }
-        });
-      });
-    },
-    init: function() {
-      githubRepos.getRepoDocs();
-      githubRepos.populateRepos();
-      githubRepos.createCards();
-    }
-  }
+
+
 
   /*===========================
   2. Initialization
   ==========================*/
-  $(document).ready(function() {
-    githubRepos.init();
-  });
+
 </script>
