@@ -14,15 +14,13 @@ function populateRepos(repos) {
         contentType: "application/json",
         dataType: 'json',
         success: function(result) {
-          $(element).after('<a href="' + result.url + '"><div class="link-preview">' + link_image + '<div class="link-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
-          $(element).remove();
+          $(element).append('<a href="' + result.url + '"><div class="repo-preview">' + link_image + '<div class="repo-info"><h4>' + verify_title + '</h4><p>' + result.description + '</p></div></div></a>');
         }
       });
     });
   }
 
   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
-
   const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
 
   repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
