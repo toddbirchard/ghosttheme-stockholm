@@ -27,7 +27,7 @@
               contentType: "application/json",
               dataType: 'json',
               success: function(result) {
-                $('.repos').append('<a href="' + docs[i].repo + '"> \n' +
+                $('.repos').append('<a href="' + result.url + '"> \n' +
                   '<div class="link-preview"> \n' +
                   '<i class="fab fa-github"></i> \n' +
                   //'<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
