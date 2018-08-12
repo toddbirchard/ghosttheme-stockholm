@@ -1,4 +1,15 @@
 <script>
+
+
+function populateRepos(repos) {
+    for (var i = 0; i < repos.length; i++) {
+      $('repos').append('<a class="repo" href="' + repos.url + '"> \n' +
+        '<h5>' + repos.name + '</h5> \n' +
+      '</a>');
+    }
+    $('#' + status).append('<span class="count"></span>');
+  }
+
   const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
 
   const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
@@ -7,6 +18,7 @@
     repoDB.collection('repos').find({}, { limit: 100}).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
+      populateRepos(docs)
   }).catch(err => {
     console.error(err)
   });
