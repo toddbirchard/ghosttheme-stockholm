@@ -6,6 +6,11 @@
     display: none;
   }
 
+  .swiper-wrapper{
+    width: 99%;
+  }
+
+
   .swiper-pagination {
     position: absolute;
     text-align: center;
@@ -222,12 +227,12 @@
         margin-top: 0;
         font-size: 1.38em;
         margin: 20px auto 30px;
-        border-bottom: 1px solid fade(@theme-color, 40%);
+        /*border-bottom: 1px solid fade(@theme-color, 40%);*/
         padding-bottom: 10px;
         position: relative;
         width: 89%;
 
-        &::after {
+      /*  &::after {
           content: "";
           width: 90px;
           height: 1px;
@@ -235,7 +240,7 @@
           position: absolute;
           left: 0;
           bottom: -1px;
-        }
+        }*/
       }
 
       .cards {

@@ -5,7 +5,7 @@
 	{{> postheader}}
 	<div class="container">
 		<!-- start post -->
-		{{#post}}+
+		{{#post}}
 
 			<div class="intro">
 				{{#if feature_image}}
@@ -15,8 +15,6 @@
 				<h1>{{{title}}}</h1>
 				<p>{{content}}</p>
 				{{> repos}}
-				<h2>Kanban</h2>
-				<p>While a work in progress in itself, our Kanban board is a good way to see what we're working on.</p>
 			</div>
 			{{> kanban}}
 		{{/post}}
