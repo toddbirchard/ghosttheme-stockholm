@@ -172,6 +172,9 @@
 
 		.date {
 			padding:0;
+			@media(max-width: 600px){
+				display:none !important;
+			}
 			span {
 				color: #8e8e8e !important;
 
@@ -200,6 +203,10 @@
 			span {
 				text-transform: capitalize;
 				color: #467192;
+
+				@media(max-width: 600px){
+					font-size: .8em;
+				}
 			}
 		}
 
@@ -219,7 +226,7 @@
 
 			span {
 				font-weight: 400 !important;
-				font-family: ''sofia-pro'';
+				font-family: AvenirNextLTPro-Medium,sans-serif !important;
 			}
 
 			i {
