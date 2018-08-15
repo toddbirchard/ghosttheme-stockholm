@@ -7,7 +7,7 @@
   }
 
   .swiper-wrapper{
-    width: 99%;
+    width: 99.9%;
   }
 
 
@@ -131,7 +131,7 @@
 
   .kanbancontainer {
     margin-bottom: 20px;
-    width: 100%;
+    width: 99.5%;
     display: block;
     overflow: hidden;
     @media(max-width: 800px) {
@@ -150,7 +150,7 @@
       border: 1px solid #f9f9f9;
       position: relative;
       margin-bottom: 7px;
-      height: 900px;
+      height: -webkit-fill-available;
       min-width: 24%;
       border-radius: 5px;
       box-shadow: 2px 3px 4px rgba(58, 59, 103, 0.19);
@@ -226,9 +226,9 @@
       h2 {
         margin-top: 0;
         font-size: 1.38em;
-        margin: 20px auto 30px;
+        margin: 20px auto;
         /*border-bottom: 1px solid fade(@theme-color, 40%);*/
-        padding-bottom: 10px;
+        padding-bottom: 0;
         position: relative;
         width: 89%;
 
@@ -423,6 +423,8 @@
   .repos {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 
     @media(max-width:800px) {
       flex-direction: column;
@@ -430,6 +432,10 @@
 
     a {
       max-width: 24%;
+
+      &:hover{
+        cursor: pointer;
+      }
       @media(max-width:800px) {
         max-width: none;
       }
