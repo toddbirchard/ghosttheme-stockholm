@@ -10,6 +10,10 @@
 	justify-content: space-between;
   align-items: center;
 
+	@media(max-width: 800px) {
+		display: block;
+	}
+
 	.share-icons {
 		display: flex;
 		justify-content: space-between;
@@ -17,18 +21,23 @@
 		padding-left: 0 !important;
 		width: 450px;
 
-		li {
+		@media(max-width: 800px) {
+			justify-content: space-around !important;
+		}
+
+		.btn {
 			list-style: none;
 			display: inline-block !important;
-			border: 1px solid #ebebeb;
-			padding: 5px 10px !important;
+			border: 0;
+			padding: 0 !important;
 			transition: 0.2s all ease-out;
 			border-radius: 2px;
 			margin-left: 0 !important;
 
-			@media(max-width: 600px) {
-				 padding: 8px 15px !important;
-				 border: 0 !important;
+			a {
+				width: 100%;
+				margin: 0;
+				padding: 5px 10px;
 			}
 
 			&:hover span {
@@ -41,17 +50,17 @@
 			margin-right: 10px;
 
 			@media(max-width: 600px) {
-				font-size: 20px;
+				font-size: 24px;
 				margin-right: 0;
 			}
 		}
 
 		span {
-			font-size: 14px;
+			font-size: 12px;
 			color:#989898;
 
 			@media(max-width: 600px) {
-				display:none;
+				display: none;
 			}
 		}
 
@@ -60,29 +69,19 @@
 			align-items: center;
 		}
 
-		@media(max-width: 900px){
+		@media(max-width: 800px){
 			width: 100%;
 		}
 	}
 
-	.tag-list{
+	.tag-list {
 		width:40%;
 
-		@media(max-width: 900px){
+		@media(max-width: 800px){
 			width: 100%;
+			text-align: center;
 		}
 	}
-
-	.tag-cloud {
-		display: block;
-    width: 100%;
-
-		@media(max-width: 800px){
-			display: flex;
-	    justify-content: space-between;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
 
 		a {
 			border: 0;
@@ -109,21 +108,24 @@
 	}
 
 	.share-icons {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
 		@media(max-width: 800px) {
-			padding: 0;
-			display: flex;
-			justify-content: space-between;
 			margin: auto;
+			justify-content: space-around;
 		}
 	}
 
 	.share {
 		padding-left: 0;
-
-	@media(max-width: 900px) {
-		border-top: 1px solid #f0f1f4;
-		display: block;
 		max-width: 450px;
+		width: 65%;
+		min-width: 220px;
+
+		@media(max-width: 800px) {
+			width: 100%;
+		}
 
 		.share-icons {
 			width:100%;
@@ -144,15 +146,10 @@
 
 			a {
 				margin: 0 10px 10px !important;
+				color: @theme-color;
 			}
 		}
 
-		.share {
-			width: 65%;
-			min-width: 220px;
-		}
-	}
-}
 
 .container {
 	.postlist {
