@@ -18,12 +18,10 @@
 .social-btns .btn .fab {
   -webkit-transform: scale(1);
           transform: scale(1);
-              margin-top: 9px;
+           margin: 0 10px 0 0;
 
               @media(max-width: 800px) {
                 -webkit-transform: scale(0.8);
-                        transform: scale(0.8);
-                            margin-top: 0;
               }
 }
 .social-btns .btn.facebook:before {
@@ -81,8 +79,8 @@
 }
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
-  top: -205%;
-  left: -205%;
+  top: -100%;
+  left: -100%;
   @media(max-width: 800px){
     top: -75%;
     left: -75%;
@@ -146,7 +144,7 @@ justify-content: space-between;
 
 .social-btns .btn:before {
   content: '';
-  width: 250%;
+  width: 275%;
   height: 340%;
   position: absolute;
   -webkit-transform: rotate(45deg);
