@@ -2,14 +2,14 @@
 
   <script src="{{asset "/js/secret.js"}}"></script>
   <script src="{{asset "/js/previews.js"}}"></script>
-   {{#author}}
+   {{primary_author.bio}}
    {{#if website}}
     <div class="widget author-website">
     	<h4 class="title">Website</h4>
       <a href="{{website}}">{{website}}</a>
     </div>
     {{/if}}
-   {{/author}}
+   {{/primary_author}}
 
    <script>
    authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {

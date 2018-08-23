@@ -24,14 +24,14 @@
 						{{#primary_tag}}
 								<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
 						{{/primary_tag}}
-						{{#author}}
+						{{#primary_author}}
 							{{#unless profile_image}}
 								<a href="{{url}}" class="meta-item"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
 							{{/unless}}
 							{{#if profile_image}}
 								<a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
 							{{/if}}
-						{{/author}}
+						{{/primary_author}}
 						<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
 					</div>
 
