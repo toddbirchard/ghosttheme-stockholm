@@ -11,7 +11,7 @@
       repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
         repoDB.collection('repos').find({}).asArray()
       ).then(docs => {
-        var api_url = 'https://api.linkpreview.net/';
+        //var api_url = 'https://api.linkpreview.net/';
         for (var i = 0; i < docs.length; i++) {
 /*
             var cat = $.ajax({url: 'https://api.apify.com/v1/execs/kbHJtkiqZxHzLFqJ2/results?format=json&simplified=1',
@@ -22,11 +22,11 @@
               }
             });
 */
-            $.ajax({
-              url: api_url + '?key=' + linkpreview_key + '&q=' + docs[i].repo,
-              contentType: "application/json",
-              dataType: 'json',
-              success: function(result) {
+            //$.ajax({
+              //url: api_url + '?key=' + linkpreview_key + '&q=' + docs[i].repo,
+              //contentType: "application/json",
+              //dataType: 'json',
+              //success: function(result) {
                 $('.repos').append('<a href="' + result.url + '"> \n' +
                   '<div class="link-preview"> \n' +
                   '<i class="fab fa-github"></i> \n' +
@@ -36,8 +36,8 @@
                     '<p>' + result.description + '</p> \n' +
                 '</div></div></a>');
               }
-            });
-          }
+            //});
+          //}
         }).catch(err => {
         console.error(err)
       });
