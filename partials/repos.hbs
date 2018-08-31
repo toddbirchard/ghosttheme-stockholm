@@ -27,13 +27,13 @@
               //contentType: "application/json",
               //dataType: 'json',
               //success: function(result) {
-                $('.repos').append('<a href="' + result.url + '"> \n' +
+                $('.repos').append('<a href="' + docs[i].url + '"> \n' +
                   '<div class="link-preview"> \n' +
                   '<i class="fab fa-github"></i> \n' +
                   //'<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
                     '<div class="info"> \n' +
-                    '<h4>' + result.title.split('/')[1] + '</h4> \n' +
-                    '<p>' + result.description + '</p> \n' +
+                    '<h4>' + docs[i].name + '</h4> \n' +
+                    '<p>' + docs[i].description + '</p> \n' +
                 '</div></div></a>');
               }
             //});
