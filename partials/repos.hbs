@@ -13,7 +13,7 @@
       ).then(docs => {
         var api_url = 'https://api.linkpreview.net/';
         for (var i = 0; i < docs.length; i++) {
-
+/*
             var cat = $.ajax({url: 'https://api.apify.com/v1/execs/kbHJtkiqZxHzLFqJ2/results?format=json&simplified=1',
               contentType: "application/json",
               dataType: 'jsonp',
@@ -21,7 +21,7 @@
                 return result[0].value;
               }
             });
-
+*/
             $.ajax({
               url: api_url + '?key=' + linkpreview_key + '&q=' + docs[i].repo,
               contentType: "application/json",
@@ -33,7 +33,7 @@
                   //'<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
                     '<div class="info"> \n' +
                     '<h4>' + result.title.split('/')[1] + '</h4> \n' +
-                    '<p>' + result.description.split(' - ')[1] + '</p> \n' +
+                    '<p>' + result.description + '</p> \n' +
                 '</div></div></a>');
               }
             });
