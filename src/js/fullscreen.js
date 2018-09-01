@@ -7,7 +7,7 @@ $(document).ready(function(){
       $(this).closest('pre').css('max-height', 'none');
       $(this).closest('pre').css('height', height);
       $([document.documentElement, document.body]).animate({
-        scrollTop: $(this).offset().top
-    }, 2000);
+        scrollTop: $(this).closest('pre').offset().top
+    }, 1000);
     })
 });
