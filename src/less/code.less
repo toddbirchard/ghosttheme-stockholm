@@ -1,6 +1,8 @@
 pre {
   white-space: pre-wrap;
   transition: all .5s easeout;
+  position: relative;
+
   @media(max-width: 600px) {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
@@ -145,12 +147,22 @@ code {
 
 
 .fullscreenbtn {
-  display: none;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  height: 50px;
-  width: 50px;
+  left: 0;
+  bottom: 10px;
+  right: 10px;
+  top: 0;
+  margin: auto;
+  font-size: 30px;
+  width: fit-content;
+  height: fit-content;
+  color: #6c8699;
+  cursor: pointer;
+  transition: all .3s easeout;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
 
   i {
