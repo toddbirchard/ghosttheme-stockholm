@@ -6,5 +6,8 @@ $(document).ready(function(){
       $(this).closest('pre').addClass('fullscreen');
       $(this).closest('pre').css('max-height', 'none');
       $(this).closest('pre').css('height', height);
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(this).offset().top
+    }, 2000);
     })
 });
