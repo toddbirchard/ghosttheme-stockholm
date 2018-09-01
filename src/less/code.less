@@ -1,5 +1,6 @@
 pre {
   white-space: pre-wrap;
+  transition: all .5s easeout;
   @media(max-width: 600px) {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
@@ -33,6 +34,7 @@ p > code {
 
 code {
   margin: 0;
+
 }
 
 .hljs,
@@ -51,6 +53,7 @@ code {
   max-height: 500px;
   border-left: 5px solid #ccd4da;
 
+
   * {
     font-size: 13px;
   }
@@ -60,6 +63,9 @@ code {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
     white-space: pre-line !important;
+    max-height: 400px;
+
+
   }
 }
 
@@ -135,4 +141,33 @@ code {
 
 .hljs-link {
   text-decoration: underline;
+}
+
+
+.fullscreenbtn {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+
+
+  i {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin:auto;
+  }
+
+  @media(max-width: 600px) {
+    display: block;
+  }
+}
+
+.fullscreen {
+  height:100%;
+  width:100%;
 }
