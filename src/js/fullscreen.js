@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.fullscreenbtn').on('click', function(){
       var height = $(window).height();
       $(this).closest('pre').addClass('fullscreen');
-      $(this).closest('pre').css('max-width', 'none');
+      $(this).closest('pre').css('max-height', 'none');
       $(this).closest('pre').css('height', height);
     })
 });
