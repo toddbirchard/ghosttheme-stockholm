@@ -68,3 +68,6 @@ sendgrid.env
 
 # readme
 README.md
+
+# compiled css
+assets/css/main.min.css
