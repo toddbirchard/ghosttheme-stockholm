@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $('article img').materialbox();
-    $('pre').append('<div class="fullscreenbtn"><i class="fal fa-square"></i></div>')
+    $('pre').append('<div class="fullscreenbtn"><i class="fal fa-square"></i></div>');
     $('.fullscreenbtn').on('click', function(){
-      $(this).closest('pre').addClass('fullscreen')
+      var height = $(window).height();
+      $(this).closest('pre').addClass('fullscreen');
+      $(this).closest('pre').css('height', height);
     })
 });
