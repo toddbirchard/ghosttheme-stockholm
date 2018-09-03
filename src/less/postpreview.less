@@ -5,6 +5,22 @@
 	padding: 0 !important;
 	border: 1px solid #dadada;
 
+	.post-content {
+			text-align: justify;
+
+			* {
+				display: none;
+			}
+
+			p:first-child * {
+					display:inline;
+					overflow: hidden;
+					display: -webkit-box !important;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+				}
+			}
+
 	.meta {
 		@media(max-width:800) {
 			 max-width: 350px !important;
@@ -97,21 +113,7 @@
 
 
 
-	.post-content {
-			text-align: justify;
 
-			* {
-				display: none;
-			}
-
-			p:first-child * {
-					display:inline;
-					overflow: hidden;
-					display: -webkit-box!important;
-					-webkit-line-clamp: 4;
-					-webkit-box-orient: vertical;
-				}
-			}
 
 	i {
 		margin-right: 10px;
