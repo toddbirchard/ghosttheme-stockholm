@@ -12,7 +12,7 @@ $(document).ready(function(){
         height: $(window).height()
     }, 1000);
     $('html,body').animate({
-        scrollTop: codeContainer.position().top;
+        scrollTop: codeContainer.position().top
     });
   });
 });
