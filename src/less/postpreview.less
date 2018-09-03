@@ -105,7 +105,11 @@
 			}
 
 			p:first-child * {
-					display:inline !important;
+					display:inline;
+					overflow: hidden;
+					display: -webkit-box!important;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
 				}
 			}
 
@@ -244,18 +248,6 @@
 
 
 	.post-content {
-
-		*{
-			display: none;
-		}
-
-		p {
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-line-clamp: 4;
-			-webkit-box-orient: vertical;
-		}
-
 		line-height: 1.5;
 		margin: 0 0 20px;
 
