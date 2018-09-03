@@ -12,12 +12,15 @@
 				display: none;
 			}
 
-			p:first-child * {
+			p:first-child {
+				display: -webkit-box !important;
+
+				* {
 					display:inline;
 					overflow: hidden;
-					display: -webkit-box !important;
 					-webkit-line-clamp: 4;
 					-webkit-box-orient: vertical;
+				}
 				}
 			}
 
