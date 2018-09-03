@@ -3,7 +3,7 @@ pre {
   transition: all .5s easeout;
   position: relative;
   overflow-y: hidden;
-  padding: 22px 20px !important;
+  padding: 0 !important;
 
   @media(max-width: 600px) {
     margin-left: calc(~"-50vw + 50%") !important;
@@ -22,9 +22,11 @@ pre {
 pre > code {
   background: #f1f5f8 !important;
   white-space: pre-wrap !important;
+  padding: 22px 20px !important;
   @media(max-width: 600px) {
     overflow-y: hidden !important;
     white-space: pre-line !important;
+    padding: 26px 20px !important;
   }
 }
 
