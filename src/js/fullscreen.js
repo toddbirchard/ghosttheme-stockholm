@@ -5,7 +5,7 @@ $(document).ready(function(){
       var height = $(window).height();
       $(this).closest('pre').toggleClass('fullscreen');
       $(this).closest('pre').css('max-height', 'none');
-      $(this).closest('pre').find('code').css('padding', '64px 20px !important')
+      $(this).closest('code').css('padding', '64px 20px !important')
       $(this).css('opacity', 0);
       $(this).closest('pre').animate({
         scrollTop: $(this).closest('pre').offset().top,
