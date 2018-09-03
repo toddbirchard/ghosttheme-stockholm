@@ -3,14 +3,16 @@ $(document).ready(function(){
     $('pre').append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
     $('.fullscreenbtn').on('click', function(event){
       var height = $(window).height();
-      $(this).closest('pre').toggleClass('fullscreen');
-      $(this).closest('pre').css('max-height', 'none');
-      $(this).closest('code').css('padding', '64px 20px !important')
+      var codeContainer = $(this).closest('pre');
+      //codeContainer.toggleClass('fullscreen');
+      codeContainer.css('max-height', 'none');
+      codeContainer.css('padding', '64px 20px !important')
       $(this).css('opacity', 0);
-      $(this).closest('pre').animate({
-        scrollTop: $(this).closest('pre').offset().top,
+      codeContainer.animate({
         height: $(window).height()
     }, 1000);
-
-    })
+    $('html,body').animate({
+        scrollTop: codeContainer.position().top;
+    });
+  });
 });
