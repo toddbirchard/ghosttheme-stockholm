@@ -14,15 +14,15 @@
 
 			p:first-child {
 				display: -webkit-box !important;
+				overflow: hidden;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
 
 				* {
-					display:inline;
-					overflow: hidden;
-					-webkit-line-clamp: 4;
-					-webkit-box-orient: vertical;
-				}
+					display:inline !important;
 				}
 			}
+		}
 
 	.meta {
 		@media(max-width:800) {
