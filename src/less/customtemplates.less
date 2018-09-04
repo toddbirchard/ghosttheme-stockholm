@@ -30,6 +30,19 @@
     }
   }
 
+  .author-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    margin: 0 30px 20px;
+
+    .meta-info {
+      color: @text-color;
+    }
+  }
+
   .about-author {
     border: 1px solid #ececec;
     border-radius: 2px !important;
@@ -69,18 +82,7 @@
 			color: @text-color-light;
 		}
 
-    .author-container {
-    	display: flex;
-    	justify-content: space-between;
-    	flex-wrap: wrap;
-    	align-content: flex-start;
-    	flex-flow: row wrap;
-    	margin: 0 30px 20px;
 
-    	.meta-info {
-    		color: @text-color;
-    	}
-    }
 
     .author-specs {
       display: flex;
