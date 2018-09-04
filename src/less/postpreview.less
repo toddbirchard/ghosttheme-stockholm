@@ -15,7 +15,7 @@
 			p:first-child {
 				display: -webkit-box !important;
 				overflow: hidden;
-				-webkit-line-clamp: 4;
+				-webkit-line-clamp: 7;
 				-webkit-box-orient: vertical;
 				 line-height: 1.8em;
 
@@ -167,7 +167,8 @@
 				padding:0;
 			}
 
-			&.author {
+			&.author,
+			&.author-mobile {
 				span {
 					font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light' !important;
 					color: #627d90;
@@ -176,6 +177,19 @@
 			    white-space: nowrap;
 			    text-overflow: ellipsis;
 				}
+			}
+
+			&.author {
+				@media (max-width: 600px) {
+					display:none;
+				}
+
+				&.author-mobile {
+					display:none;
+
+					@media (max-width: 600px) {
+						display:inline-block;
+					}
 			}
 
 			&.date {
