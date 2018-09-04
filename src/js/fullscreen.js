@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.post-template article img').materialbox();
     $('.post pre').each(function(){
-      if ( $(this).height > 40 ) {
+      if ( $(this).height== 500 ) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
       }
     });
