@@ -897,6 +897,14 @@
 			font-size: 1.3em;
 		}
 
+		&.mobile {
+			display:none;
+
+			@media(max-width: 600px) {
+				display:inline-block;
+			}
+		}
+
 		a {
 			&:hover {
 				text-decoration: none;
@@ -908,13 +916,7 @@
 		}
 	}
 
-	.author-mobile {
-		display:none;
 
-		@media(max-width: 600px) {
-			display:inline-block;
-		}
-	}
 
 	.meta-info {
 		font-size: 12px;
