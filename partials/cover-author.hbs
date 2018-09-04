@@ -11,7 +11,7 @@
 		{{name}}
 	</h3>
 	<div class="meta-info">
-		<span class="post-count"><i class="fal fa-pencil"></i>{{plural pagination.total empty=(t "No Post") singular=(t "1 Post") plural=(t "% Posts")}}</span>
+		<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
 		{{#if location}}
 		<span class="loaction"><i class="fal fa-map-marker-alt"></i>{{location}}</span>
 		{{/if}}
