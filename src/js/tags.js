@@ -20,7 +20,9 @@ $(document).ready(function() {
     sql: '<i class="fas fa-database"></i>',
     statistics: '<i class="far fa-chart-bar"></i>',
     flask: '<i class="fab fa-affiliatetheme"></i>',
-    expressjs: '<i class="fab fa-etsy"></i>'
+    expressjs: '<i class="fab fa-etsy"></i>',
+    atlassian: '<i class="fab fa-trello"></i>',
+    codesnippetcorner: '<i class="fal fa-laptop-code"></i>'
   };
 
   for (var key in tags) {

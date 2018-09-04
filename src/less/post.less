@@ -69,7 +69,7 @@
 			font-size: 1.2em;
 			text-align: center;
 			line-height: 1.1;
-			max-width: 450px;
+			max-width:  px;
 		}
 	}
 
@@ -135,7 +135,7 @@
 		align-items: center;
 
 		@media(max-width: 800px) {
-			max-width: 450px;
+			max-width: 500px;
 			margin: 0 auto !important;
 			width: auto;
 			display: flex;
@@ -219,6 +219,27 @@
 			@media(max-width: 600px) {
 				margin: 0;
 				font-size: 1.2em;
+			}
+
+			&.desktop {
+				display:flex;
+
+				@media(max-width: 600px) {
+					display:none;
+				}
+			}
+
+			&.mobile {
+				display:none;
+
+				@media(max-width: 600px) {
+					display:flex;
+				}
+			}
+
+			&.tags span {
+				font-weight: 200 !important;
+				font-family: AvenirNextLTPro-Light,sans-serif !important;
 			}
 
 			span {
@@ -667,7 +688,7 @@
 			line-height: 4;
 		}
 	}
-	
+
 	#materialbox-overlay {
 		background-color: rgba(0,0,0,.5);
 		position: absolute;
@@ -730,6 +751,11 @@
 			color: @text-post-header;
 		}
 
+		h3 {
+			font-size: 1.2em;
+    	font-weight: 200;
+		}
+
 		ol,
 		ul {
 			margin-left: 15px;
@@ -778,6 +804,10 @@
 			margin: 10px auto;
 			display: block;
 			max-width: 99%;
+
+			&:hover {
+				cursor: zoom-in;
+			}
 		}
 
 		figure {
@@ -879,6 +909,7 @@
 		font-size: 1.5em;
 		margin-bottom: 5px;
 		font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
+
 		@media(max-width: 600px) {
 			font-size: 1.3em;
 		}
@@ -888,7 +919,13 @@
 				text-decoration: none;
 			}
 		}
+
+		@media(max-width: 600px) {
+
+		}
 	}
+
+
 
 	.meta-info {
 		font-size: 12px;

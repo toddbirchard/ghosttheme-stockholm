@@ -1,10 +1,16 @@
 pre {
   white-space: pre-wrap;
+  transition: all .5s easeout;
+  position: relative;
+  overflow-y: hidden;
+  padding: 0 !important;
+
   @media(max-width: 600px) {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
     width: auto !important;
     white-space: pre-line !important;
+    max-height: 400px;
   }
 
   span {
@@ -16,9 +22,8 @@ pre {
 pre > code {
   background: #f1f5f8 !important;
   white-space: pre-wrap !important;
+  padding: 22px 20px !important;
   @media(max-width: 600px) {
-    margin-left: calc(~"-50vw + 50%") !important;
-    margin-right: calc(~"-50vw + 50%") !important;
     overflow-y: hidden !important;
     white-space: pre-line !important;
   }
@@ -33,6 +38,7 @@ p > code {
 
 code {
   margin: 0;
+  height: 100%;
 }
 
 .hljs,
@@ -41,22 +47,22 @@ code {
   display: block;
   overflow-y: scroll !important;
   overflow-x: hidden !important;
-  padding: 1em 1.5em;
+  /*padding: 1em 1.5em;*/
   color: #166c8b;
   background: #f1f5f8 !important;
   overflow-wrap: break-word;
   margin: 0;
   font-size: 14px;
   white-space: pre-wrap !important;
-  max-height: 500px;
   border-left: 5px solid #ccd4da;
+
 
   * {
     font-size: 13px;
   }
   @media(max-width: 600px) {
     font-size: 13px;
-    padding: 20px;
+    /* padding: 20px; */
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
     white-space: pre-line !important;
@@ -135,4 +141,45 @@ code {
 
 .hljs-link {
   text-decoration: underline;
+}
+
+
+.fullscreenbtn {
+  position: absolute;
+  bottom: 30px;
+  right: 42px;
+  margin: auto;
+  font-size: 30px;
+  width: fit-content;
+  height: fit-content;
+  color: #6c8699;
+  cursor: pointer;
+  transition: all .3s easeout;
+  display: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+
+  i {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin:auto;
+    height: 30px;
+    width: 16px;
+    opacity: .6;
+  }
+
+  @media(max-width: 600px) {
+    display: block;
+  }
+}
+
+.fullscreen {
+  height:100%;
+  width:100%;
 }

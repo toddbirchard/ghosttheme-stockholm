@@ -5,6 +5,26 @@
 	padding: 0 !important;
 	border: 1px solid #dadada;
 
+	.post-content {
+			text-align: justify;
+
+			* {
+				display: none;
+			}
+
+			p:first-child {
+				display: -webkit-box !important;
+				overflow: hidden;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
+				 line-height: 1.8em;
+
+				* {
+					display:inline !important;
+				}
+			}
+		}
+
 	.meta {
 		@media(max-width:800) {
 			 max-width: 350px !important;
@@ -97,28 +117,11 @@
 
 
 
-	.kg-post {
-			text-align: justify;
 
-			* {
-				display: none;
-			}
-
-			p:first-child,
-			em,
-			strong,
-			a {
-				display:inline;
-			}
-	}
 
 	i {
 		margin-right: 10px;
 		font-size: 15px;
-	}
-
-	p {
-		line-height: 1.7;
 	}
 
 	.meta {
@@ -251,21 +254,6 @@
 
 
 	.post-content {
-
-		*{
-			display: none;
-		}
-
-		p {
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-line-clamp: 4;
-			-webkit-box-orient: vertical;
-		}
-
-		p, a {
-			display: inline !important;
-		}
 		line-height: 1.5;
 		margin: 0 0 20px;
 

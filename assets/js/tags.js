@@ -1419,7 +1419,8 @@ $(document).ready(function () {
     googlecloud: '<i class="fab fa-google"></i>',
     sql: '<i class="fas fa-database"></i>',
     statistics: '<i class="far fa-chart-bar"></i>',
-    flask: '<i class="fab fa-affiliatetheme"></i>'
+    flask: '<i class="fab fa-affiliatetheme"></i>',
+		atlassian: '<i class="fab fa-trello"></i>'
   };
 
   for (var key in tags) {
