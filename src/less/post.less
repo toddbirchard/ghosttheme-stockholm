@@ -153,22 +153,6 @@
 			padding-bottom: 10px;
 		}
 
-		&.desktop {
-			display:inline-block;
-
-			@media(max-width: 600px) {
-				display:none;
-			}
-		}
-
-		&.mobile {
-			display:none;
-
-			@media(max-width: 600px) {
-				display:inline-block;
-			}
-		}
-
 		.tags {
 			 padding: 5px 10px;
 			 height: 30px;
@@ -235,6 +219,22 @@
 			@media(max-width: 600px) {
 				margin: 0;
 				font-size: 1.2em;
+			}
+
+			&.desktop {
+				display:inline-block;
+
+				@media(max-width: 600px) {
+					display:none;
+				}
+			}
+
+			&.mobile {
+				display:none;
+
+				@media(max-width: 600px) {
+					display:inline-block;
+				}
 			}
 
 			&.tags span {
