@@ -70,7 +70,16 @@
 		}
 
     .author-container {
-      justify-content: space-around;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    	align-content: flex-start;
+    	flex-flow: row wrap;
+    	margin: 0 30px 20px;
+
+    	.meta-info {
+    		color: @text-color;
+    	}
     }
 
     .author-specs {
@@ -242,8 +251,8 @@
 
   .tag-wrapper {
     background: #15475a;
-    width: 49%;
-    margin: 0 0 10px;
+    width: 48%;
+    margin: 0 0 20px;
     border: 1px solid #dadada;
     transition: all 0.3s ease-out;
     @media(max-width: 800px) {

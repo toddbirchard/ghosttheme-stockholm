@@ -126,7 +126,6 @@
   }
 
   .kanban {
-    max-height: 1180px;
     display: flex;
     justify-content: space-between;
     background: none;
@@ -136,7 +135,7 @@
       border: 1px solid #f9f9f9;
       position: relative;
       margin-bottom: 7px;
-      height: -webkit-fill-available;
+      height: auto;
       min-width: 24%;
       border-radius: 5px;
       box-shadow: 2px 3px 4px rgba(58, 59, 103, 0.1);
@@ -412,6 +411,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 30px;
 
     @media(max-width:800px) {
       flex-direction: column;
@@ -431,6 +431,7 @@
 
       .link-preview {
         min-height: 91px;
+        margin: 0 0 10px 0;
 
         @media(max-width:800px) {
           min-height: none;
