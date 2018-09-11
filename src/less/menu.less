@@ -25,6 +25,7 @@
 		margin: auto;
 		height: fit-content;
 		z-index: 100;
+		transition: all .3s easeout;
 
 		@media(max-width: 800px) {
 			 width: 239px;
@@ -32,6 +33,10 @@
 
 		img {
 			width: 100%;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }
@@ -147,12 +152,13 @@
 		list-style: none;
 
 		@media(max-width: 800px) {
-			max-width: 247px;
+			max-width: 234px;
 			left: 0;
 			right: 0;
-			margin: 135px auto;
+			margin: 145px auto;
 			float: none;
 			padding: 0;
+			line-height: 1;
 		}
 
 		li {
@@ -165,21 +171,21 @@
 				color: #fff;
 		    font-family: 'sofia-pro',serif;
 		    text-transform: uppercase;
-				font-size: 18px;
+				font-size: 16px;
 				font-weight: 300;
 		    letter-spacing: .5px;
 		    transition: all .2s ease-out;
 				@media(max-width: 800px) {
 					padding: 0;
 					font-weight: 500;
-					font-size: 16px;
+					font-size: 15px;
 				}
 			}
 
 			&:hover > a {
 				text-decoration: none;
 				cursor: pointer;
-				opacity: .8;
+				color: @theme-color;
 			}
 
 			&.nav-current {
