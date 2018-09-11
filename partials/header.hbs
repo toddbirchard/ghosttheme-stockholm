@@ -1,0 +1,46 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8VFCPW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- start header -->
+<nav class="main-navigation">
+		<a class="mobile-branding" href="{{@blog.url}}"><img src="../mobilelogo.png"></a>
+		{{navigation}}
+</nav>
+<header class="main-header videoHeader">
+		<!-- start logo -->
+	{{#if @blog.logo}}
+		<a class="branding" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+	{{else}}
+		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
+	{{/if}}
+	<!-- start navigation -->
+	<video class="videoObject" autoplay muted loop id="myVideo">
+		<source src="https://hackersandslackers.com/assets/vid/bg2.mp4" type="video/mp4">
+	</video>
+</header>
+{{!--
+<header class="main-header">
+	<!-- start logo -->
+	<a class="mobile-branding" href="{{@blog.url}}"><img src="https://hackers.nyc3.digitaloceanspaces.com/logowhite.png"></a>
+	{{#if @blog.logo}}
+		<a class="branding" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+	{{else}}
+		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
+	{{/if}}
+	<!-- start navigation -->
+	<nav class="main-navigation">
+		<div id="main-menu">
+			{{! insert navigation partial}}
+			{{navigation}}
+				{{! insert manuala navigation if there is no navigation}}
+				{{#unless @blog.navigation}}
+					{{> manual-navigation}}
+				{{/unless}}
+		</div>
+	</nav>
+</header>
+<!-- end header -->
+--}}
+<!-- end navigation -->

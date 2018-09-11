@@ -1,0 +1,72 @@
+@mainColor: #ace2d5;
+@mainHover: #37bc9b;
+@secondaryColor: #3a3a3a;
+@secondaryHover: #333;
+
+.dropdownmenu {
+  position: relative;
+  width: 100%;
+
+  margin: 0 auto 10px;
+  & ul {
+    background: @mainColor;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & li {
+      position: relative;
+      display: inline-block;
+      margin-right: -4px;
+      text-align: center;
+      &:first-child a {
+        background: @mainHover;
+        width: 49px;
+        padding: 15px 0;
+      }
+      &:last-child {
+        margin: 0;
+      }
+      & a {
+        display: block;
+        background: @mainColor;
+        padding: 15px 20px;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        transition: 0.2s linear;
+        &:hover {
+          background: @mainHover;
+        }
+      }
+      & ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 240px;
+        border-bottom: 4px solid @mainColor;
+        & li {
+          display: block;
+          width: 100%;
+          margin: 0;
+          text-align: left;
+          & a {
+            display: block;
+            background: @secondaryColor;
+            padding: 10px 15px;
+            &:first-child {
+              background: @secondaryColor;
+              width: auto;
+              border-left: 4px solid transparent;
+              padding: 10px 15px;
+              font-size: 14px;
+            }
+            &:hover {
+              background: @secondaryHover;
+              border-left: 4px solid @mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

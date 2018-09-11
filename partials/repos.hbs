@@ -1,0 +1,43 @@
+<div class="repos">
+</div>
+<script>
+  /*===========================
+     1. function declaretion
+     ==========================*/
+  const repoClient = stitch.Stitch.initializeDefaultAppClient('githubrepos-bhnhv');
+  const repoDB = repoClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('github');
+
+
+      repoClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+        repoDB.collection('repos').find({}).asArray()
+      ).then(docs => {
+        for (var i = 0; i < docs.length; i++) {
+/*
+            var cat = $.ajax({url: 'https://api.apify.com/v1/execs/kbHJtkiqZxHzLFqJ2/results?format=json&simplified=1',
+              contentType: "application/json",
+              dataType: 'jsonp',
+              success: function(result){
+                return result[0].value;
+              }
+            });
+*/
+                $('.repos').append('<a href="' + docs[i].url + '"> \n' +
+                  '<div class="link-preview"> \n' +
+                  '<i class="fab fa-github"></i> \n' +
+                  //'<div class="repo-image" style="background:url(https://octodex.github.com' + cat + ')"></div> \n' +
+                    '<div class="info"> \n' +
+                    '<h4>' + docs[i].name + '</h4> \n' +
+                    '<p>' + docs[i].description + '</p> \n' +
+                '</div></div></a>');
+              }
+        }).catch(err => {
+        console.error(err)
+      });
+
+
+
+  /*===========================
+  2. Initialization
+  ==========================*/
+
+</script>

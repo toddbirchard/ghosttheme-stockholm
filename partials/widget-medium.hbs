@@ -1,0 +1,53 @@
+<div class="widget" id="medium" style="display:none;">
+  <div class ="content">
+    <h4 class="title" style="margin-bottom:0;">Medium</h4>
+    <div id="medium-widget"></div>
+  </div>
+</div>
+
+<script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+
+<script>
+function createMediumCard(medium){
+  console.log('medium= ' + medium);
+  MediumWidget.Init({
+    renderTo: '#medium-widget',
+    params: {
+      "resource": medium,
+      "postsPerLine": 1,
+      "limit": 3,
+      "picture": "small",
+      "fields": ["description", "publishAt"],
+      "ratio": "square"
+    }
+  })
+  $('#medium').css('display', 'block');
+}
+
+
+authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  console.log('logged in anonymously as user')
+});
+
+authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+  createMediumCard(result.medium)
+});
+
+/*
+MediumWidget.Init({
+  renderTo: '#medium-widget',
+  params: {
+    "resource": result.medium,
+    "postsPerLine": 1,
+    "limit": 3,
+    "picture": "small",
+    "fields": ["description", "publishAt"],
+    "ratio": "square"
+  }
+})
+
+$( document ).ready(function() {
+
+});*/
+
+</script>

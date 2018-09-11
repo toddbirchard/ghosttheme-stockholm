@@ -1,0 +1,22 @@
+{{#author}}
+<div class="sidebar">
+	<script>
+		const authorsClient  = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
+		const db = authorsClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
+	</script>
+	{{> widget-authorwebsite}}
+	{{> widget-github}}
+	{{> widget-medium}}
+	{{> widget-meetup}}
+	{{> widget-authortwitter}}
+</div>
+{{/author}}
+<script>
+function authorSidebar(docs) {
+
+    if (docs[0]['tableau']) {
+      var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
+    }
+  }
+
+</script>

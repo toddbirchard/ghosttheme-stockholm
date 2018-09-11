@@ -1,0 +1,71 @@
+{
+  "name": "stockholm",
+  "description": "Stockholm: Minimal Ghost Theme.",
+  "demo": "https://hackersandslackers.com",
+  "version": "0.0.1",
+  "scripts": {
+    "babel": "babel --presets es2015 assets/js/includes/index.js -o assets/js/index.js",
+    "start": "http-server"
+  },
+  "presets": [
+    "env"
+  ],
+  "author": {
+    "name": "Todd Birchard",
+    "email": "toddbirchard@gmail.com",
+    "url": "https://toddbirchard.com"
+  },
+  "keywords": [
+    "ghost-theme",
+    "nodejs",
+    "ghost",
+    "express",
+    "blog",
+    "theme"
+  ],
+  "screenshots": {
+    "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toddbirchard/ghosttheme-stockholm.git"
+  },
+  "config": {
+    "posts_per_page": 10
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "babel-runtime": "^6.26.0",
+    "ghost-email-service": "^1.2.0",
+    "github-profile-card": "^2.0.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "mongodb": "^3.1.4",
+    "mongodb-stitch": "^3.2.1",
+    "mongodb-stitch-browser-core": "^4.0.13",
+    "mongodb-stitch-browser-sdk": "^4.0.13",
+    "mongodb-stitch-server-sdk": "^4.0.13",
+    "node-getpocket": "^1.0.0",
+    "simplebar": "^3.0.0-beta.4",
+    "swiper": "^4.3.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^5.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "uglify-js": "^3.4.8",
+    "webpack-stream": "^5.1.1"
+  }
+}

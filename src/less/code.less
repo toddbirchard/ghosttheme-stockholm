@@ -1,0 +1,185 @@
+pre {
+  white-space: pre-wrap;
+  transition: all .5s easeout;
+  position: relative;
+  overflow-y: hidden;
+  padding: 0 !important;
+
+  @media(max-width: 600px) {
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+    width: auto !important;
+    white-space: pre-line !important;
+    max-height: 400px;
+  }
+
+  span {
+    display: inline-block;
+  }
+}
+
+&post-content > .hljs,
+pre > code {
+  background: #f1f5f8 !important;
+  white-space: pre-wrap !important;
+  padding: 22px 20px !important;
+  @media(max-width: 600px) {
+    overflow-y: hidden !important;
+    white-space: pre-line !important;
+  }
+}
+
+p > code {
+  display: inline;
+  overflow-y: visible !important;
+  width: fit-content;
+  font-size: 13px !important;
+}
+
+code {
+  margin: 0;
+  height: 100%;
+}
+
+.hljs,
+.language-python,
+.python.hljs {
+  display: block;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  /*padding: 1em 1.5em;*/
+  color: #166c8b;
+  background: #f1f5f8 !important;
+  overflow-wrap: break-word;
+  margin: 0;
+  font-size: 14px;
+  white-space: pre-wrap !important;
+  border-left: 5px solid #ccd4da;
+
+
+  * {
+    font-size: 13px;
+  }
+  @media(max-width: 600px) {
+    font-size: 13px;
+    /* padding: 20px; */
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+    white-space: pre-line !important;
+  }
+}
+
+code {
+  padding: 5px;
+  background: #f1f5f8;
+  font-size: 13px;
+  color: #2e9eb7;
+  margin: 0 5px;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #b5bac4;
+}
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: #00b1d5;
+  font-weight: 600;
+}
+
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #8652c4;
+}
+
+.hljs-literal {
+  color: #56b6c2;
+}
+
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-regexp,
+.hljs-string {
+  color: #47989a !important;
+  font-size: 13px;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #8652c4;
+}
+
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: #3fb44b;
+}
+
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: #61aeee;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+
+.fullscreenbtn {
+  position: absolute;
+  bottom: 30px;
+  right: 42px;
+  margin: auto;
+  font-size: 30px;
+  width: fit-content;
+  height: fit-content;
+  color: #6c8699;
+  cursor: pointer;
+  transition: all .3s easeout;
+  display: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+
+  i {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin:auto;
+    height: 30px;
+    width: 16px;
+    opacity: .6;
+  }
+
+  @media(max-width: 600px) {
+    display: block;
+  }
+}
+
+.fullscreen {
+  height:100%;
+  width:100%;
+}

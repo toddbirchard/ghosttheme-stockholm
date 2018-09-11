@@ -1,0 +1,215 @@
+/*====================================================
+	Importing less files
+====================================================*/
+@import url("//hello.myfonts.net/count/37415b");
+@import "variables.less";
+@import "mixin.less";
+@import "code.less";
+@import "author.less";
+@import "global.less";
+@import "footer.less";
+@import "menu.less";
+@import "post.less";
+@import "postfooter.less";
+@import "postpreview.less";
+@import "variables.less";
+@import "customtemplates.less";
+@import "hacks.less";
+@import "linkpreview.less";
+@import "widgets.less";
+@import "pagination.less";
+@import "page.less";
+@import "postheader.less";
+@import "postlist.less";
+@import "tags.less";
+@import 'githubcard.less';
+@import 'kanban.less';
+@import 'code.less';
+@import 'social.less';
+@import 'swiper.less';
+@import 'floatingbutton.less';
+
+/*====================================================
+	fonts
+====================================================*/
+@font-face {
+font-family: "Font Awesome 5 Pro";
+font-weight: normal;
+font-style : normal;
+       src : url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.eot?v=5.3.1");
+       src : url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.eot?#iefix&v=5.3.1") format("embedded-opentype"),
+             url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.woff2?v=5.3.1") format("woff2"),
+             url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.woff?v=5.3.1") format("woff"),
+             url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.ttf?v=5.3.1") format("truetype"),
+             url("https://pro.fontawesome.com/releases/v5.3.1/fonts/fontawesome-webfont.svg?v=5.3.1#fontawesomeregular") format("svg");
+}
+@font-face {font-family: 'AvenirNextLTPro-Light';src: url('../fonts/37415B_0_0.eot');src: url('../fonts/37415B_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/37415B_0_0.woff2') format('woff2'),url('../fonts/37415B_0_0.woff') format('woff'),url('../fonts/37415B_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNextLTPro-Medium';src: url('../fonts/37415B_1_0.eot');src: url('../fonts/37415B_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/37415B_1_0.woff2') format('woff2'),url('../fonts/37415B_1_0.woff') format('woff'),url('../fonts/37415B_1_0.ttf') format('truetype');}
+
+
+/*====================================================
+	about author and comment and next-prev link
+====================================================*/
+.prev-next-wrap {
+	text-align: center;
+
+	a {
+		margin: 0;
+	}
+}
+/*====================================================
+	Tag page & author page cover
+====================================================*/
+.cover {
+	text-align: center;
+	background: @white;
+	padding: 25px;
+	margin-bottom: 20px;
+
+	.tag-name {
+		margin-top: 0;
+
+		i {
+			font-size: 16px;
+			margin-right: 5px;
+		}
+	}
+
+	.post-count {
+		color: @text-color-light;
+	}
+
+	h3 {
+		margin-bottom: 10px;
+	}
+
+	.avatar {
+		width: 100px;
+		height: 100px;
+		.border-radius(50%);
+	}
+
+	.meta-info {
+		color: @text-color-light;
+
+		span {
+			margin: 0 7px;
+
+			i {
+				margin-right: 7px;
+			}
+			@media(max-width: 600px) {
+				display: block;
+			}
+		}
+	}
+}
+
+.copyright {
+	background: @bg-color-footer-dark;
+	text-align: center;
+	color: @white;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	border-top: 1px solid @text-color-heading;
+
+	.rights {
+		margin-top: 16px;
+		opacity: 0.6;
+		display: block;
+		font-size: 12px;
+	}
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+#back-to-top {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	background: fade(@secondary-color, 60%);
+	color: @white;
+	text-align: center;
+	.border-radius(2px);
+	z-index: 1;
+	display: none;
+	padding: 6px 12px;
+
+	&:hover {
+		background: @theme-color;
+	}
+}
+/*====================================================
+	tag and author archive
+====================================================*/
+.archive {
+	.featured-media {
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		@media (max-width: 800px) {
+			width: 110%;
+			margin-left: -5%;
+			margin-top: -7%;
+		}
+	}
+}
+
+
+/*====================================================
+	media query
+====================================================*/
+	.prev-next-wrap {
+		a {
+			display: block;
+		}
+	}
+
+@media (min-width: 768px) {
+	.nav-toggle-button {
+		display: none;
+	}
+}
+
+.fluid-width-video-wrapper {
+	/*padding: 0 !important;*/
+	padding-top: 56% !important;
+}
+
+.page-template {
+	margin-bottom: 0;
+
+	iframe {
+		margin: 0 auto !important;
+	}
+
+
+
+		img {
+			width: inherit;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+
+	.post-title {
+		font-weight: 700;
+	}
+
+	.tag-list {
+		margin: 3px;
+	}
+}
+
+.page-template-template,
+.post-template {
+	.mobile-branding {
+		@media(max-width: 800px) {
+			display: block;
+		}
+	}
+}

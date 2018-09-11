@@ -1,0 +1,35 @@
+<!-- start main-footer -->
+	<footer class="main-footer">
+				<!-- start first footer widget area -->
+					{{> widget-recentpost}}
+				<!-- end first footer widget area -->
+				<!-- start second footer widget area -->
+
+					{{#is "post"}}
+						{{#is "page"}}
+							{{> widget-authors}}
+						{{else}}
+							{{#post}}
+								{{> widget-relatedpost}}
+							{{/post}}
+						{{/is}}
+					{{else}}
+						{{> widget-authors}}
+					{{/is}}
+
+				<!-- end second footer widget area -->
+				<!-- start third footer widget area -->
+					{{> widget-tagcloud}}
+				<!-- end third footer widget area -->
+	</footer>
+	<!-- end main-footer -->
+
+	{{ghost_foot}}
+	<!-- scripts -->
+	<script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+	<script src="{{asset "/js/main.min.js"}}"></script>
+	<script src="{{asset "/js/includes/materialize.min.js"}}"></script>
+	{{#has author="Matt Alhonte"}}<script src="{{asset "/js/includes/previews.js"}}"></script>{{/has}}
+
+</body>
+</html>

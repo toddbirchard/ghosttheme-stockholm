@@ -1,0 +1,38 @@
+<!-- start main-footer -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<!-- start first footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-recentpost}}
+				</div>
+				<!-- end first footer widget area -->
+				<!-- start second footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-relatedpost}}
+				</div>
+				<!-- end second footer widget area -->
+				<!-- start third footer widget area -->
+				<div class="col-sm-4">
+					{{> widget-tagcloud}}
+				</div>
+				<!-- end third footer widget area -->
+			</div>
+		</div>
+	</footer>
+	<!-- end main-footer -->
+	{{! Insert copyright partial}}
+	{{> copyright}}
+	<a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></i></a>
+	{{ghost_foot}}
+	<!-- scripts -->
+
+
+	<script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+	<script src="{{asset "/js/includes/materialize.min.js"}}"></script>
+	<script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+	<script src="{{asset "/js/main.min.js"}}"></script>
+	{{!--{{#has author="Matthew Alhonte"}}<script src="{{asset "/js/includes/previews.js"}}"></script>{{/has}}--}}
+	{{> analytics}}
+</body>
+</html>
