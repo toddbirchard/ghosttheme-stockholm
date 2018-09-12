@@ -14,6 +14,22 @@
 		display: block;
 	}
 
+	.tag-list {
+		width:40%;
+		a {
+			color: @text-post-header;
+			background: #f2f3f5;
+			padding: 10px 11px;
+			font-size: .85em;
+		}
+
+
+		@media(max-width: 800px){
+			width: 100%;
+			text-align: center;
+		}
+	}
+
 	.share-icons {
 		display: flex;
 		justify-content: space-between;
@@ -40,9 +56,12 @@
 				padding: 5px 10px;
 			}
 
-			&:hover span {
-				color:white;
-			}
+			&:hover {
+				border: none;
+
+				span {
+					color:white;
+				}
 		}
 
 		i {
@@ -74,14 +93,7 @@
 		}
 	}
 
-	.tag-list {
-		width:40%;
 
-		@media(max-width: 800px){
-			width: 100%;
-			text-align: center;
-		}
-	}
 
 		a {
 			border: 0;
@@ -136,7 +148,7 @@
 		.share,
 		.tag-cloud {
 			float: none;
-			margin: 20px auto;
+			margin: 20px 0;
 
 		}
 
@@ -149,6 +161,7 @@
 				color: @theme-color;
 			}
 		}
+	}
 
 
 .container {
@@ -182,7 +195,5 @@
 		.about-author {
 			background: #fff;
 		}
-
-
 	}
 }
