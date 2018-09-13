@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.post-template article img').materialbox();
+    $('.post-template article .post-content img').materialbox();
     $('.post-content pre').each(function(){
       console.log('pre = ', $(this).height());
       if ( $(this).height() >= 400 ) {

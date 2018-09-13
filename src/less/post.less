@@ -63,11 +63,11 @@
 		line-height: 1.2;
 
 		@media(max-width: 800px) {
-			margin: 10px auto 0;
+			margin: 20px auto 0;
 			font-size: 1.2em;
 			text-align: center;
 			line-height: 1.1;
-			max-width:  px;
+			max-width: 90%;
 		}
 	}
 
@@ -79,7 +79,7 @@
 		font-size: 2em;
 		border-bottom: 1px solid #d7e8ec;
 		padding-bottom: 10px;
-		font-weight: 400 !important;
+		font-weight: 300 !important;
 		@media(max-width: 800px) {
 			font-size: 1.6em;
 		}
@@ -139,15 +139,14 @@
 			display: flex;
 			justify-content: space-around;
 		}
-		@media(max-width: 600px) {
-			display: flex;
+		@media(max-width: 500px) {
 			justify-content: space-between;
+			display: flex;
 			padding: 0;
 			max-width: none;
 			width: auto;
-			margin: 0 30px !important;
-			border-top: 1px solid #e8e8e8;
-			padding-top: 10px;
+			margin: 0 25px !important;
+			padding-top: 0;
 			padding-bottom: 10px;
 		}
 
@@ -165,26 +164,7 @@
 			 }
 		}
 
-		.date {
-			padding:0;
-			@media(max-width: 600px){
-				display:none !important;
-			}
-			span {
-				color: #8e8e8e !important;
 
-				@media(max-width: 600px){
-					font-size: 1.1em;
-				}
-			}
-
-			i {
-				color: #8e8e8e !important;
-				font-size: 1.2em !important;
-			}
-
-
-		}
 
 		.author {
 			.avi {
@@ -200,7 +180,7 @@
 				color: #467192;
 
 				@media(max-width: 600px){
-					font-size: 1.1em;
+					font-size: 1em;
 				}
 			}
 		}
@@ -213,6 +193,7 @@
 			align-items: center;
 			text-transform: capitalize;
 			line-height: 1;
+			font-weight: 200;
 
 			@media(max-width: 600px) {
 				margin: 0;
@@ -235,14 +216,9 @@
 				}
 			}
 
-			&.tags span {
-				font-weight: 200 !important;
-				font-family: AvenirNextLTPro-Light,sans-serif !important;
-			}
-
 			span {
-				font-weight: 400 !important;
-				font-family: AvenirNextLTPro-Medium,sans-serif !important;
+				font-weight: 621!important;
+    		font-family: AvenirNextLTPro-Light,sans-serif!important;
 			}
 
 			i {
@@ -250,13 +226,28 @@
 				font-size: 1em;
 			}
 
-			&.date{
-				font-size: 1.3em;
+			&.date {
+				padding:0;
+				font-weight: 200;
+
+				span, i {
+					font-size: 1em;
+					color: #676767 !important;
+
+					@media(max-width: 800px){
+						font-size: 1em;
+					}
+
+
+				}
 
 				i {
-					font-size: 1.2em;
+					@media(max-width: 600px){
+						display: none;
+					}
 				}
 			}
+
 
 			a {
 				text-decoration: none;
@@ -676,8 +667,9 @@
 		text-align: center;
 		margin: 0 auto 40px;
 		font-size: 15px;
-		color: #8c8c8c;
+		color: #757575;
 		white-space: nowrap;
+		font-style: italic;
 		@media(max-width: 600px) {
 			margin: 0 auto 60px;
 			font-size: 14px;
@@ -750,8 +742,8 @@
 		}
 
 		h3 {
-			font-size: 1.2em;
-    	font-weight: 200;
+			font-size: 1.4em;
+			font-weight: 500;
 		}
 
 		ol,
@@ -763,6 +755,10 @@
 			li {
 				padding: 5px;
 				font-size: 18px;
+
+				@media(max-width: 800px) {
+					font-size: 16px;
+				}
 			}
 		}
 
