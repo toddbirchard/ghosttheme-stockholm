@@ -29,12 +29,19 @@
 		text-align: left;
 		width: 100%;
 		margin: 0;
-		line-height: 1;
-		overflow: hidden;
+		line-height: 1.1;
 		display: block;
+		font-family: sofia-pro !important;
+
 		@media(max-width: 800px) {
 			white-space: normal;
 			text-align: center !important;
+			font-weight: 700;
+			font-size: 2.2em;
+		}
+
+		@media(max-width: 600px) {
+			font-size: 1.8em;
 		}
 
 		a {
@@ -47,20 +54,11 @@
 		}
 	}
 
-	.post-title {
-		@media(max-width: 800px) {
-			font-weight: 700;
-			font-size: 2.4em;
-		}
-		@media(max-width: 600px) {
-			font-size: 1.8em;
-		}
-	}
 
 	.excerpt {
 		font-weight: 100;
-		font-size: 1.5em;
-		margin-top: 10px;
+		font-size: 1.3em;
+		margin-top: 20px;
 		margin-bottom: 0;
 		line-height: 1.2;
 

@@ -21,6 +21,7 @@
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		align-items: flex-start;
+    flex-basis: 0;
 
 		a {
 			color: @text-post-header;
@@ -45,10 +46,6 @@
 		padding-left: 0 !important;
 		width: 450px;
 
-		@media(max-width: 800px) {
-			justify-content: space-around !important;
-		}
-
 		.btn {
 			list-style: none;
 			display: inline-block !important;
@@ -57,6 +54,11 @@
 			transition: 0.2s all ease-out;
 			border-radius: 2px;
 			margin-left: 0 !important;
+
+			@media(max-width:800px) {
+				  width: fit-content !important;
+
+			}
 
 			a {
 				width: 100%;
@@ -133,7 +135,7 @@
 		justify-content: space-between;
 		@media(max-width: 800px) {
 			margin: auto;
-			justify-content: space-around;
+			width: auto;
 		}
 	}
 
@@ -143,12 +145,11 @@
 		width: 65%;
 		min-width: 220px;
 
-		@media(max-width: 800px) {
-			width: 100%;
+		@media(max-width:800px) {
+			max-width: 80% !important;
 		}
 
 		.share-icons {
-			width:100%;
 			z-index:20;
 			}
 		}
@@ -158,6 +159,10 @@
 			float: none;
 			margin: 20px 0;
 
+			@media(max-width: 800px) {
+				width: 100%;
+				margin:20px auto;
+			}
 		}
 
 		.tag-cloud {
