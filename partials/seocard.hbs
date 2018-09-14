@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "{{{title}}}",
+  "image": [
+    "https://example.com/photos/1x1/photo.jpg",
+    "https://example.com/photos/4x3/photo.jpg",
+    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/40644055_645123242540737_6787058134620831744_o.jpg"
+   ],
+  "datePublished": "{{date format="MMM Do"}}",
+  "dateModified": "{{date format="MMM Do"}}",
+  "author": {
+    "@type": "Contributor",
+    "name": "{{#primary_author}}{{name}}{{/primary_author}}"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "{{#primary_author}}{{name}}{{/primary_author}}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/33988245_563407280712334_4067972828387868672_n.jpg"
+    }
+  },
+  "description": "{{excerpt}}"
+}
+</script>
