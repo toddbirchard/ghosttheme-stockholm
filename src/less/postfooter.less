@@ -16,26 +16,37 @@
 
 	.tag-list {
 		width:40%;
-		width: 40%;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
 		align-items: flex-start;
-    flex-basis: 0;
+		justify-items: center;
 
 		a {
 			color: @text-post-header;
-	    background: #f2f3f5;
+	    background: #F2F2F2;
 	    padding: 3px 8px;
 	    font-size: .8em;
-	    margin-bottom: 8px;
-			margin-right: 8px;
+			margin-right: 15px;
+			transition: all .3s;
+			line-height: 1;
+    	padding: 10px 12px;
+
+			@media(max-width:800px) {
+				margin-bottom: 8px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: darken(#f2f3f5, 10%);
+				color: #7cd2ea;
+			}
 		}
 
 
 		@media(max-width: 800px){
 			width: 100%;
 			text-align: center;
+			justify-content: space-evenly;
 		}
 	}
 
@@ -46,24 +57,37 @@
 		padding-left: 0 !important;
 		width: 450px;
 
+		@media(max-width:800px) {
+			margin: auto;
+		}
+
 		.btn {
 			list-style: none;
-			display: inline-block !important;
+			display: flex !important;
 			border: 0;
-			padding: 0 !important;
+			padding: 10px!important;
 			transition: 0.2s all ease-out;
 			border-radius: 2px;
-			margin-left: 0 !important;
+			margin-left: 13px !important;
+			background: #F2F2F3;
 
 			@media(max-width:800px) {
 				  width: fit-content !important;
-
+					padding: 6px 10px 0!important;
 			}
 
 			a {
 				width: 100%;
 				margin: 0;
-				padding: 5px 10px;
+				padding: 0;
+
+				@media(max-width:800px) {
+					padding: 0;
+				}
+			}
+
+			span {
+				line-height: 1;
 			}
 
 			&:hover {
@@ -79,7 +103,7 @@
 			margin: 0 10px 0 0;
 
 			@media(max-width: 600px) {
-				font-size: 24px;
+				font-size: 20px;
 				margin: 0 !important;
 			}
 		}
@@ -141,12 +165,13 @@
 
 	.share {
 		padding-left: 0;
-		max-width: 400px;
-		width: 65%;
+		max-width: 500px;
 		min-width: 220px;
+		margin-right: 0 !important;
 
 		@media(max-width:800px) {
 			max-width: 80% !important;
+			margin: 15px auto !important;
 		}
 
 		.share-icons {
