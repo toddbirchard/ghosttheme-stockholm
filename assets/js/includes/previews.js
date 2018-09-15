@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
 
   function postLinkPreviews() {
-    $(".post-content p > a").each(function(index, element) {
+    $(".post-content > p > a").each(function(index, element) {
       $.ajax({
         url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
         contentType: "application/json",
