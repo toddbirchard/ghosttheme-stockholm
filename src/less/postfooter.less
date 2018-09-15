@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: space-between;
   align-items: center;
+	height: 85px;
 
 	@media(max-width: 800px) {
 		display: block;
@@ -16,6 +17,7 @@
 
 	.tag-list {
 		width:40%;
+		height: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
@@ -38,7 +40,7 @@
 			&:hover {
 				cursor: pointer;
 				background: darken(#f2f3f5, 10%);
-				color: #7cd2ea;
+				color: darken(#7cd2ea, 40%);
 			}
 		}
 
@@ -171,7 +173,7 @@
 		padding-left: 0;
 		max-width: 500px;
 		min-width: 220px;
-		margin-right: 0 !important;
+		margin: 0 !important;
 
 		@media(max-width:800px) {
 			max-width: 80% !important;

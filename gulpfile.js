@@ -9,7 +9,8 @@ var gulp 	= require('gulp'),
   	rename 	= require('gulp-rename'),
     handlebars = require('gulp-handlebars'),
     declare = require('gulp-declare'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    autoprefixer = require('gulp-autoprefixer');;
 
 var paths = {
   styles: {
@@ -37,6 +38,10 @@ function styles() {
 	  suffix: '.min'
 	}))
 .pipe(cleanCSS({debug: true}))
+.pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
 .pipe(concat('main.min.css'))
 .pipe(gulp.dest(paths.styles.dest));
 }
