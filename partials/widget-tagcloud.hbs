@@ -2,7 +2,11 @@
 <div class="widget">
 	<h4 class="title">Tags</h4>
 	<div class="content tag-cloud">
-		{{#get "tags" limit="20" filter="feature_image:null+name:-Roundup" include="count.posts" order="count.posts DESC"}}{{tags separator="" }}{{/get}}
+		{{#get "tags" limit="all" filter="slug:-[roundup,machine-learning,django,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" include="count.posts" order="count.posts DESC" }}{{tags separator="" }}
+			{{#foreach tags}}
+				<a href="{{url}}">{{name}}</a>
+			{{/foreach}}
+		{{/get}}
 	</div>
 </div>
 <!-- end tag cloud widget -->
