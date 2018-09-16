@@ -5,6 +5,10 @@
 .home-template,
 .paged,
 .tag-template {
+  .tag-name {
+    font-size: 1.2em;
+  }
+
   .main-header {
     @media(max-width: 800px) {
       height: 200px;
@@ -20,6 +24,26 @@
 
     @media(max-width: 600px) {
       font-size: 3em;
+    }
+  }
+
+  .featured-media {
+    display:none !important;
+  }
+
+  .welcomevideo,
+  iframe {
+    margin: 0 auto 40px!important;
+
+    @media(max-width: 500px) {
+      height: 265px;
+      width: 115%;
+    }
+
+    @media(max-width: 400px) {
+      width: 120%;
+      height: 235px !important;
+      min-height: auto !important;
     }
   }
 
@@ -201,7 +225,7 @@
   p {
     font-size: 16px;
     color: #505050;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 
   .tag-wrapper {

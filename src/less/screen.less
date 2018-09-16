@@ -1,7 +1,6 @@
 /*====================================================
 	Importing less files
 ====================================================*/
-@import url("//hello.myfonts.net/count/37415b");
 @import "variables.less";
 @import "mixin.less";
 @import "code.less";
@@ -14,7 +13,6 @@
 @import "postpreview.less";
 @import "variables.less";
 @import "customtemplates.less";
-@import "hacks.less";
 @import "linkpreview.less";
 @import "widgets.less";
 @import "pagination.less";
@@ -24,16 +22,8 @@
 @import "tags.less";
 @import 'githubcard.less';
 @import 'kanban.less';
-@import 'code.less';
 @import 'social.less';
 @import 'swiper.less';
-@import 'floatingbutton.less';
-
-/*====================================================
-	fonts
-====================================================*/
-
-
 /*====================================================
 	about author and comment and next-prev link
 ====================================================*/
@@ -44,9 +34,11 @@
 		margin: 0;
 	}
 }
+
 /*====================================================
 	Tag page & author page cover
 ====================================================*/
+
 .cover {
 	text-align: center;
 	background: @white;
@@ -92,42 +84,6 @@
 	}
 }
 
-.copyright {
-	background: @bg-color-footer-dark;
-	text-align: center;
-	color: @white;
-	padding-top: 28px;
-	padding-bottom: 28px;
-	border-top: 1px solid @text-color-heading;
-
-	.rights {
-		margin-top: 16px;
-		opacity: 0.6;
-		display: block;
-		font-size: 12px;
-	}
-}
-
-p {
-	margin-bottom: 20px;
-}
-
-#back-to-top {
-	position: fixed;
-	right: 10px;
-	bottom: 10px;
-	background: fade(@secondary-color, 60%);
-	color: @white;
-	text-align: center;
-	.border-radius(2px);
-	z-index: 1;
-	display: none;
-	padding: 6px 12px;
-
-	&:hover {
-		background: @theme-color;
-	}
-}
 /*====================================================
 	tag and author archive
 ====================================================*/
@@ -143,17 +99,14 @@ p {
 		}
 	}
 }
-
-
 /*====================================================
 	media query
 ====================================================*/
-	.prev-next-wrap {
-		a {
-			display: block;
-		}
+.prev-next-wrap {
+	a {
+		display: block;
 	}
-
+}
 @media (min-width: 768px) {
 	.nav-toggle-button {
 		display: none;
@@ -161,35 +114,7 @@ p {
 }
 
 .fluid-width-video-wrapper {
-	/*padding: 0 !important;*/
 	padding-top: 56% !important;
-}
-
-.page-template {
-	margin-bottom: 0;
-
-	iframe {
-		margin: 0 auto !important;
-	}
-
-
-
-		img {
-			width: inherit;
-
-			&:hover {
-				cursor: pointer;
-			}
-		}
-
-
-	.post-title {
-		font-weight: 700;
-	}
-
-	.tag-list {
-		margin: 3px;
-	}
 }
 
 .page-template-template,

@@ -81,7 +81,6 @@
 .col-md-5,
 .col-md-6,
 .col-md-7,
-.col-md-8,
 .col-md-9,
 .col-sm-1,
 .col-sm-10,
@@ -163,15 +162,21 @@
   }
 }
 
-.page-template,
-.post-template {
+.page-template {
+  .main-header {
+
+  @media(max-width: 800px) {
+    display:none;
+  }
+}
+}
+
   .main-header {
     .branding img {
       width: 300px;
     }
-  }
+
   @media(max-width: 800px) {
-    .main-header {
       padding: 1px;
       background: none;
       position: absolute;
@@ -185,7 +190,7 @@
       }
     }
   }
-}
+
 @media(max-width: 800px) {
   .fluid-width-video-wrapper {
     height: 350px;

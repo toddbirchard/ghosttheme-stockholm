@@ -30,7 +30,7 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3792ee");
-
+@import url("//hello.myfonts.net/count/37415b");
 
 @font-face {font-family: 'AvenirNextLTPro-Light';src: url('../fonts/3792EE_0_0.eot');src: url('../fonts/3792EE_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_0_0.woff2') format('woff2'),url('../fonts/3792EE_0_0.woff') format('woff'),url('../fonts/3792EE_0_0.ttf') format('truetype');}
 
