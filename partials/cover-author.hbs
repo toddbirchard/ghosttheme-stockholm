@@ -11,7 +11,7 @@
 		{{name}}
 	</h3>
 	<div class="meta-info">
-		<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
+			<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural posts.total empty='No posts' singular='% post' plural='% posts'}}</a></span>
 		{{#if location}}
 		<span class="loaction"><i class="fal fa-map-marker-alt"></i>{{location}}</span>
 		{{/if}}
@@ -29,4 +29,16 @@
 	<div class="bio">{{{bio}}}</div>
 	{{/if}}
 </div>
+
+<script>
+$(document).ready(function(){
+	var clientId = "ghost-frontend";
+	var clientSecret = "119ea52da545";
+	var postcount = ghost.url.api('posts', {limit: 'all', include: 'count.posts', filter: 'author:{{slug}}'});
+	console.log(postcount);
+	$('.post-count').append(postcount);
+});
+</script>
+
+
 {{/author}}
