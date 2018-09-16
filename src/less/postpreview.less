@@ -56,16 +56,22 @@
 		}
 
 		.post-title {
-			font-size: 2.3em;
+			font-size: 2.5em;
 			line-height: 1.1;
 			margin: 0;
+
 			@media(max-width: 600px) {
-				font-size: 1.7em !important;
+				font-size: 2em;
+				line-height: .9;
 			}
+
 
 			a {
 				color: @text-color-heading;
 				transition: all .2s ease-out;
+				font-family: sofia-pro !important;
+
+
 
 				&:hover {
 					color: @secondary-color;
@@ -78,6 +84,8 @@
 			line-height: 1.2;
 			font-weight: 100;
 			text-align: left;
+			font-size: 1.3em;
+
 			@media(max-width: 800px) {
 				font-weight: 500;
 				font-size: 1.2em;
@@ -143,7 +151,7 @@
 			display: flex;
 			justify-items: center;
 			margin: auto 15px auto 0;
-			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
+			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light';
 			align-items: center;
 			font-size: 14px;
 			padding:0;
@@ -170,7 +178,7 @@
 			&.author,
 			&.author-mobile {
 				span {
-					font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light' !important;
+					font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light' !important;
 					color: #627d90;
 					font-size: 16px;
 					overflow: hidden;
@@ -199,7 +207,7 @@
 
 			&.date {
 				span {
-					font-family: 'AvenirNextLTPro-Medium' !important;
+					font-family: 'AvenirNextLTPro-Regular' !important;
 					color: #8e8e8e !important;
 					font-size:16px;
 					overflow: hidden;
