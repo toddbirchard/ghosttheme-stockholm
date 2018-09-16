@@ -32,11 +32,11 @@
 
 <script>
 $(document).ready(function(){
-	var clientId = "ghost-frontend";
-	var clientSecret = "119ea52da545";
-	var postcount = ghost.url.api('posts', {limit: 'all', include: 'count.posts', filter: 'author:{{slug}}'});
-	console.log(postcount);
-	$('.post-count').append(postcount);
+	$.get(
+		ghost.url.api('posts', {limit: 'all', include: 'count.posts', filter: 'author:{{slug}}'}).done(function( data ) {
+	    console.log( "Data Loaded: " + data );
+			$('.post-count').append(data.posts.length);
+		});
 });
 </script>
 
