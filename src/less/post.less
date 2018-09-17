@@ -29,7 +29,7 @@
 		text-align: left;
 		width: 100%;
 		margin: 0;
-		line-height: 1.1;
+		line-height: 1.05;
 		display: block;
 		font-family: sofia-pro !important;
 		font-size: 2.2em;
@@ -41,7 +41,7 @@
 		}
 
 		@media(max-width: 600px) {
-			font-size: 2em;
+			font-size: 1.8em;
 		}
 
 		a {
@@ -149,15 +149,19 @@
 		}
 
 		.tags {
-			 padding: 5px 10px;
+			 padding: 5px;
 			 height: 25px;
 
 			 @media(max-width: 600px){
 				 font-size: .9em;
 				 height: 24px;
 
+				 span {
+					 font-size: .9em !important;
+				 }
+
 				 i {
-					 font-size: .9em;
+					 font-size: .9em !important;
 				 }
 			 }
 		}
@@ -198,7 +202,7 @@
 			}
 
 			@media(max-width: 600px) {
-				font-size: 1.1em;
+				font-size: 1em;
 			}
 
 			&.desktop {
