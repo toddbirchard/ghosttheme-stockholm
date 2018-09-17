@@ -56,12 +56,18 @@
 		}
 
 		.post-title {
-			font-size: 2.5em;
+			line-height: .85;
+	    margin: 0 0 25px 0;
+	    font-size: 241%;
 			line-height: .8;
 			margin: 0 0 25px 0;
 
+			@media(max-width: 900px) {
+				font-size: calc(~"1.4vw + 1.4vh + 1.4vmin");
+			}
+
 			@media(max-width: 600px) {
-				font-size: 2em;
+				font-size: 189%;
 				line-height: .9;
 				margin: 0 0 15px 0;
 			}
@@ -135,7 +141,7 @@
 
 	.meta {
 		display: flex;
-		width: 70%;
+		width: 80%;
 		justify-content: space-between;
 		max-width: 500px;
 
@@ -168,6 +174,7 @@
 
 			span {
 				line-height:1;
+				 font-size: 13px;
 			}
 		}
 
@@ -181,7 +188,8 @@
 				span {
 					font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light' !important;
 					color: #627d90;
-					font-size: 17px;
+					font-family: AvenirNextLTPro-Regular,sans-serif;
+					font-weight: 600;
 					line-height: 1;
 					overflow: hidden;
 			    white-space: nowrap;
@@ -209,9 +217,13 @@
 
 			&.date {
 				span {
-					font-family: 'AvenirNextLTPro-Regular' !important;
+					font-family: AvenirNextLTPro-Regular,sans-serif;
+
+
+
+					font-weight: 600;
 					color: #8e8e8e !important;
-					font-size:16px;
+					font-size:14px;
 					overflow: hidden;
 			    white-space: nowrap;
 			    text-overflow: ellipsis;
@@ -241,7 +253,7 @@
 				display: inline-block;
 				margin-right: 10px;
 				border-radius: 50%;
-				
+
 				@media(max-width: 600px) {
 					margin-right: 15px;
 				}
