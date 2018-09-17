@@ -152,6 +152,14 @@
 			 padding: 5px;
 			 height: 25px;
 
+			 &.codesnippetcorner {
+				 i {
+ 				@media(max-width: 600px){
+ 					display: none;
+ 				}
+			}
+ 			}
+
 			 @media(max-width: 600px){
 				 font-size: .9em;
 				 height: 24px;
@@ -244,18 +252,20 @@
 						font-size: 1.1em;
 					}
 				}
+			}
 
-				/*i {
+			i {
+				@media(max-width: 600px){
+					display: none;
+			}
+			}
+
+
+
+			&.readtime {
 					@media(max-width: 600px){
 						display: none;
 					}
-				}*/
-			}
-
-			&.readtime {
-				@media(max-width: 600px){
-					display: none;
-				}
 			}
 
 
