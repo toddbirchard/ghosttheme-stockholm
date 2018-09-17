@@ -64,7 +64,7 @@
 
 		@media(max-width: 800px) {
 			margin: 15px auto 0;
-			font-size: 1em;
+			font-size: 1.2em;
 			text-align: center;
 			line-height: 1.2;
 			max-width: 90%;
@@ -178,7 +178,7 @@
 				color: #467192;
 
 				@media(max-width: 600px){
-					font-size: 1em;
+					font-size: 1.12em;
 				}
 			}
 		}
@@ -198,7 +198,7 @@
 			}
 
 			@media(max-width: 600px) {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 
 			&.desktop {
@@ -237,7 +237,7 @@
 					color: #676767 !important;
 
 					@media(max-width: 800px){
-						font-size: 1em;
+						font-size: 1.1em;
 					}
 				}
 
@@ -851,12 +851,14 @@
 			}
 		}
 
-		figure {
+		figure,
+		.material-placeholder {
 			width: fit-content;
 			margin: 40px auto;
 
 			img {
 				max-width: 100%;
+				border: 1px solid #d8d8d8;
 			}
 			@media(max-width: 600px) {
 				margin-left: calc(~"-50vw + 50%");
