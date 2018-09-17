@@ -517,7 +517,7 @@
 				text-align: center;
 				word-wrap: break-word;
 				padding: 10px;
-				border-right: 1px solid #e5e9ee;
+				border-right: 1px solid #cdd1d6;
 				@media(max-width: 800px) {
 					padding: 7px 15px;
 					overflow-x: hidden;
@@ -527,25 +527,40 @@
 			}
 
 			tr:nth-child(even) td {
-				background: #f4f8fd;
+				background: #f7f9fb;
 			}
 
 			td {
 				border-style: none;
-				border-right: 1px solid #e5e9ee;
+				border-right: 1px solid #cdd1d6;
 				border-left: 0;
 				line-height: 1.3;
+
+				&:last-of-type {
+					border-right: none;
+				}
 			}
 
 			th {
-				background: #94b6c1;
-				font-weight: 600;
+				background: #edf3f7;
+				font-weight: 300;
 				text-transform: uppercase;
-				color: white;
+				color: #585c5f;
 				font-size: 14px;
 				border-style: none;
 				line-height: 1.2;
 				font-family: 'sofia-pro';
+				 border-right: 1px solid #cdd1d6;
+
+				 &:last-of-type {
+ 					border-right: none;
+ 				}
+
+				&:first-of-type{
+					  max-width: 60px;
+						width: 106px;
+						padding: 10px 4px;
+				}
 				@media(max-width: 600px) {
 					font-size: 14px;
 					font-weight: 800;
