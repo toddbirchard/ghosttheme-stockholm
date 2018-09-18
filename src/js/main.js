@@ -80,7 +80,7 @@ var themeApp = {
 				console.log('clicked');
 			})
 		},
-		function resizeIframe(iframe) {
+		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
 	/*kanban: function() {
