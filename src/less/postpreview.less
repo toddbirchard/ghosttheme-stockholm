@@ -160,7 +160,7 @@
 			margin: auto 15px auto 0;
 			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light';
 			align-items: center;
-			font-size: 14px;
+			font-size: 16px;
 			padding:0;
 
 
@@ -170,7 +170,8 @@
 			}
 
 			&.tags {
-				padding:12px;
+				padding:14px;
+				font-weight: 600;
 
 			span {
 				line-height:1;
@@ -282,6 +283,10 @@
 		justify-content: space-between;
 		padding: 10px 0 10px;
 		align-items: center;
+
+		@media(max-width: 800px) {
+		    justify-content: left;
+			}
 
 		.btn {
 			font-size: 16px;

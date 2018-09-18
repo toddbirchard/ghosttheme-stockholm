@@ -80,6 +80,9 @@ var themeApp = {
 				console.log('clicked');
 			})
 		},
+		function resizeIframe(iframe) {
+	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+	  },
 	/*kanban: function() {
 		  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
 		    document.getElementById('auth-status').innerHTML =
