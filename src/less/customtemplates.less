@@ -21,31 +21,22 @@
 
   .post-title {
     margin: 40px 40px 20px !important;
-
-    @media(max-width: 600px) {
+    @media(max-width: 1100px) {
       font-size: 3em;
       display: none;
     }
   }
 
-
   .about-content {
     & > p {
-        margin: 0 40px 20px !important;
+      margin: 0 40px 20px !important;
     }
-
-
-
     @media(max-width: 800px) {
+      display:flex;
+      flex-direction: column;
       margin: -14px 0 0 !important;
     }
   }
-
-
-
-
-
-
 
   .featured-media {
     display: none !important;
@@ -53,24 +44,29 @@
 
   .welcomevideo,
   iframe {
-    margin: 0 0 25px!important;
+    margin: 0 0 25px !important;
     height: 400px;
-
     display: block;
 
-    @media(max-width: 800px) {
+    @media(max-width: 1100px) {
       width: 100%;
-      margin: -12px auto 40px 0!important;
+      margin: -12px auto 20px 0 !important;
     }
+
+    @media(max-width: 900px) {
+      height: 351px;
+    }
+
+
+
+
 
     @media(max-width: 600px) {
       width: 100%;
       height: 360px;
       margin: -12px 0 40px 0!important;
-      position: absolute;
       top: -7px;
     }
-
     @media(max-width: 470px) {
       height: 293px !important;
       min-height: auto !important;
@@ -198,8 +194,9 @@
       margin-bottom: 5px;
 
       a {
-        font-size: .9em;
+        font-size: 0.9em;
         font-weight: 600;
+
         &:hover {
           text-decoration: none;
         }

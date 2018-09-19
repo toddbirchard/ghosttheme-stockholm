@@ -67,7 +67,7 @@
 			}
 
 			@media(max-width: 600px) {
-				font-size: 195%;
+				font-size: 170%;
 				line-height: .9;
 				margin: 0 0 15px 0;
 			}
@@ -190,6 +190,10 @@
 				padding:10px;
 				font-weight: 600;
 
+				@media(max-width: 600px){
+					display:none;
+				}
+
 			span {
 				line-height:1;
 				 font-size: 13px;
@@ -274,7 +278,7 @@
 		}
 		@media(max-width: 800px) {
 			.date {
-				display: none;
+				display: none !important;
 			}
 		}
 		@media(max-width: 600px) {

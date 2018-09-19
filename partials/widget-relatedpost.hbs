@@ -1,7 +1,7 @@
 <!-- start widget -->
 <div class="widget">
 	<h4 class="title">Related</h4>
-	<div class="content recent-post">
+	<div class="recent-post">
 		{{#get "posts" limit="4" include="tags" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
 			{{#foreach posts}}
 				<div class="recent-single-post">
