@@ -79,7 +79,7 @@
 		font-family: 'sofia-pro';
 		font-size: 2em;
 		border-bottom: 1px solid #d7e8ec;
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 		font-weight: 300 !important;
 		@media(max-width: 800px) {
 			font-size: 1.6em;
@@ -132,10 +132,11 @@
 		align-items: center;
 		@media(max-width: 800px) {
 			margin: 10px 40px;
-			justify-content: space-between;
+			justify-content: space-around;
 		}
 		@media(max-width: 500px) {
 			display: flex;
+			justify-content: space-between;
 			padding: 0;
 			max-width: none;
 			width: auto;
@@ -614,7 +615,10 @@
 	.post-head {
 		padding: 30px 0;
 		margin: 0 80px;
-		/*border-bottom: 1px solid #eaeaea;*/
+
+		@media(max-width: 800px) {
+			 margin: 0 40px;
+		}
 		@media(max-width: 600px) {
 			margin: 0 15px;
 			padding: 20px 0 30px;
@@ -650,13 +654,10 @@
 		}
 
 		p {
-			margin: 30px 0;
+			margin: 10px 0 20px
 		}
 		@media(max-width: 800px) {
-			margin: 20px 40px 0;
-		}
-		@media(max-width: 600px) {
-			margin: 20px 35px 0;
+			margin: 35px 40px 0;
 		}
 	}
 
@@ -770,6 +771,7 @@
 
 		a {
 			transition: opacity 0.2s ease-out;
+			color: @theme-color;
 
 			&:hover {
 				opacity: 0.8;
@@ -801,10 +803,7 @@
 
 			li {
 				padding: 5px;
-				font-size: 18px;
-				@media(max-width: 800px) {
-					font-size: 16px;
-				}
+				font-size: 16px;
 			}
 		}
 
