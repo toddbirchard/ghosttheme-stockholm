@@ -82,16 +82,21 @@
 		padding-bottom: 5px;
 		font-weight: 300 !important;
 		@media(max-width: 800px) {
-			font-size: 1.6em;
+			font-size: 1.9em;
 		}
 	}
 
 	h3 {
-		font-size: 1.5em;
+		font-size: 1.4em;
 		line-height: 1.2;
 		color: #365c8e;
-		font-weight: 600;
-		margin-bottom: 10px;
+		font-weight: 500;
+		margin-top: 40px;
+		color: @text-post-header;
+
+		@media(max-width: 800px) {
+			font-size: 1.2em;
+		}
 	}
 
 	p {
@@ -124,7 +129,7 @@
 	}
 
 	.post-meta {
-		margin: auto 80px 50px;
+		margin: auto 60px 50px;
 		color: #9ea1ab;
 		font-size: 12px;
 		display: flex;
@@ -181,6 +186,11 @@
 				display: inline-block;
 				margin-right: 10px;
 				border-radius: 50%;
+
+				@media(max-width: 600px) {
+					width: 25px;
+					height: 25px;
+				}
 			}
 
 			span {
@@ -234,7 +244,7 @@
 				font-weight: 200;
 
 				span {
-					font-size: 1em;
+					font-size: 1.1em;
 					color: #676767 !important;
 					font-weight: 600;
 				}
@@ -244,10 +254,6 @@
 
 				@media(max-width: 800px) {
 					font-size: 1.1em;
-				}
-
-				@media(max-width: 600px) {
-					display: none;
 				}
 			}
 		}
@@ -282,7 +288,7 @@
 		padding: 20px;
 		background: #e6f1ec;
 		border-left: 5px solid #9de2bb;
-		margin: 30px 80px;
+		margin: 30px 60px;
 		width: auto;
 		display: flex;
 		justify-content: space-between;
@@ -430,6 +436,15 @@
 			display: block;
 			float: left;
 			box-shadow: 0 0 20px #9090a9;
+
+			th {
+				padding: 10px 5px;
+				font-weight: 900;
+				font-size: 10px;
+				font-family: AvenirNextLTPro-Medium,sans-serif;
+				}
+
+
 			@media (max-width: 600px) {
 				tr th {
 					width: 106px;
@@ -522,6 +537,7 @@
 				margin-left: calc(~"-50vw + 50%") !important;
 				margin-right: calc(~"-50vw + 50%") !important;
 				width: 120%;
+				    min-width: 128%;
 			}
 
 			thead th {
@@ -614,7 +630,7 @@
 
 	.post-head {
 		padding: 30px 0;
-		margin: 0 80px;
+		margin: 0 60px;
 
 		@media(max-width: 800px) {
 			 margin: 0 40px;
@@ -627,7 +643,11 @@
 	}
 
 	.post-content {
-		margin: 25px 80px 40px;
+		margin: 25px 60px 40px;
+
+		a {
+			color: @theme-color;
+		}
 
 		img {
 			border: 1px solid #cecece;
@@ -785,16 +805,6 @@
 		overflow-x: visible;
 		clear: both;
 
-		h2,
-		h3 {
-			margin-top: 40px;
-			color: @text-post-header;
-		}
-
-		h3 {
-			font-size: 1.4em;
-			font-weight: 500;
-		}
 
 		ol,
 		ul {
@@ -840,8 +850,7 @@
 		iframe {
 			margin: 0;
 			display: block;
-			margin: auto 30px !important;
-			display: block;
+			margin: 30px auto!important;
 
 			&.instagram-media {
 				max-width: 400px !important;
@@ -904,7 +913,7 @@
 		}
 
 		a {
-			color: @secondary-color;
+			color: @theme-color;
 
 			&:hover {
 				color: @hover-color;
@@ -916,7 +925,7 @@
 .post-template {
 	.about-author {
 		background: @white;
-		padding: 40px 80px;
+		padding: 40px 60px;
 		margin: 20px 0;
 		min-height: 88px;
 		@media(max-width: 1000px) {

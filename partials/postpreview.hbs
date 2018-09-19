@@ -29,11 +29,11 @@
         {{primary_author.bio}}
           {{#unless profile_image}}
             <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-            <a href="{{url}}" class="meta-item author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+            <a href="{{url}}" class="author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
           {{/unless}}
           {{#if profile_image}}
             <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
-            <a href="{{url}}" class="meta-item author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{slug}}</span></a>
+            <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{slug}}</span></a>
           {{/if}}
         {{/primary_author}}
         <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>

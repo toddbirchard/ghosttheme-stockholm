@@ -56,9 +56,9 @@
 		}
 
 		.post-title {
-			line-height: .85;
+			font-size: 236%;
+			ine-height: .85;
 	    margin: 0 0 25px 0;
-	    font-size: 241%;
 			line-height: .8;
 			margin: 0 0 25px 0;
 
@@ -67,7 +67,7 @@
 			}
 
 			@media(max-width: 600px) {
-				font-size: 189%;
+				font-size: 195%;
 				line-height: .9;
 				margin: 0 0 15px 0;
 			}
@@ -147,11 +147,28 @@
 
 		@media(max-width:800) {
 			 max-width: 350px !important;
-		}
+			 justify-content: left;
+			 font-family: 'AvenirNextLTPro-Light';
+			 padding:0;
+			 margin-right: 20px;
+			 }
+
 
 		a {
 			color: #5aa8bf;
 			font-family: 'AvenirNextLTPro-Regular';
+		}
+
+		.author-mobile {
+			display:none;
+
+			span {
+				 text-transform: capitalize;
+			}
+
+			@media (max-width: 600px) {
+				display:flex;
+			}
 		}
 
 		.meta-item {
@@ -170,7 +187,7 @@
 			}
 
 			&.tags {
-				padding:14px;
+				padding:10px;
 				font-weight: 600;
 
 			span {
@@ -179,10 +196,10 @@
 			}
 		}
 
-			@media(max-width: 600px){
-				font-family: 'AvenirNextLTPro-Light';
-				padding:0;
-			}
+
+
+
+
 
 			&.author,
 			&.author-mobile {
@@ -204,23 +221,9 @@
 				}
 			}
 
-				&.author-mobile {
-					display:none;
-
-					span {
-						 text-transform: capitalize;
-					}
-
-					@media (max-width: 600px) {
-						display:flex;
-					}
-			}
-
 			&.date {
 				span {
 					font-family: AvenirNextLTPro-Regular,sans-serif;
-
-
 
 					font-weight: 600;
 					color: #8e8e8e !important;
@@ -228,12 +231,21 @@
 					overflow: hidden;
 			    white-space: nowrap;
 			    text-overflow: ellipsis;
+
+
 				}
 				i {
 					color: #8e8e8e !important;
 					height:20px;
 					font-size:16px;
+
+					@media(max-width: 900px){
+						display:none;
+					}
 				}
+			}
+
+
 			}
 
 			a {
@@ -272,6 +284,7 @@
  			}
 		}
 	}
+
 
 	.content {
 		padding: 20px 30px;
@@ -337,5 +350,4 @@
 			overflow-x: hidden !important;
                  }
 	}
-}
 }
