@@ -19,7 +19,8 @@
 				overflow: hidden;
 				-webkit-line-clamp: 7;
 				-webkit-box-orient: vertical;
-				 line-height: 1.8em;
+				 line-height: 1.6em;
+				 font-size: .9em;
 
 				* {
 					display:inline !important;
@@ -90,14 +91,15 @@
 		.post-excerpt {
 			margin: 10px auto 0;
 			line-height: 1.2;
-			font-weight: 100;
+			font-weight: 700;
 			text-align: left;
 			font-size: 1.3em;
-			    color: #5a5c6d;
+			color: #404146;
+			font-style: italic;
+			font-family: AvenirNextLTPro-Regular,serif;
 
 			@media(max-width: 800px) {
-				font-weight: 500;
-				font-size: 1.2em;
+				font-size: 1.1em;
 			}
 		}
 	}
@@ -313,8 +315,12 @@
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
-		padding: 0;
+		padding: 10px 10px;
 		align-items: center;
+
+		@media(max-width: 600px) {
+			padding: 0 0 3px;
+			}
 
 		.btn {
 			font-size: 16px;
@@ -332,8 +338,8 @@
 
 
 	.post-content {
-		line-height: 1.5;
-		margin: 0 0 20px;
+		line-height: 1.3;
+    margin: 0 0 30px;
 
 		@media(max-width: 600px) {
 			font-size: 16px;
