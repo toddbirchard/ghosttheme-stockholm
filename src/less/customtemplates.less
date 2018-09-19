@@ -17,40 +17,60 @@
 }
 
 .page-about {
+  margin-bottom: 0;
 
-  .post-content {
-    @media(max-width: 800px) {
-      margin: -14px 30px 0;
-    }
-
-  }
-  h1 {
-    @media(max-width: 1040px) {
-          margin: 40px 30px 10px !important;
-    }
+  .post-title {
+    margin: 40px 40px 20px !important;
 
     @media(max-width: 600px) {
       font-size: 3em;
-      display:none;
+      display: none;
     }
   }
 
+
+  .about-content {
+    & > p {
+        margin: 0 40px 20px !important;
+    }
+
+
+
+    @media(max-width: 800px) {
+      margin: -14px 0 0 !important;
+    }
+  }
+
+
+
+
+
+
+
   .featured-media {
-    display:none !important;
+    display: none !important;
   }
 
   .welcomevideo,
   iframe {
-    margin: 0 auto 40px!important;
+    margin: 0 auto 25px!important;
+    height: 400px;
+    width: 92%;
+    display: block;
 
-    @media(max-width: 500px) {
-      height: 265px;
-      width: 115%;
+    @media(max-width: 800px) {
+      width: 100%;
+      margin: -12px 0 40px 0!important;
     }
 
-    @media(max-width: 400px) {
-      width: 120%;
-      height: 235px !important;
+    @media(max-width: 600px) {
+      width: 100%;
+      height: 360px;
+      margin: -12px 0 40px 0!important;
+    }
+
+    @media(max-width: 470px) {
+      height: 293px !important;
       min-height: auto !important;
     }
   }
@@ -82,45 +102,40 @@
     padding: 20px;
     margin: 10px 0;
     width: 42.5%;
-
     @media(max-width: 1040px) {
       padding: 20px;
       border: 0 !important;
       border-bottom: 1px solid #dcdcdc !important;
       width: 100% !important;
 
-  		i {
-  			color: @text-color-light !important;
-  		}
+      i {
+        color: @text-color-light !important;
+      }
 
-  		span {
-  			color: @text-color-light;
-  		}
+      span {
+        color: @text-color-light;
+      }
 
       &:last-child {
         border-bottom: 0 !important;
       }
     }
-
     @media(max-width: 600px) {
       display: block !important;
     }
 
     i {
-			color: @text-color-light !important;
-		}
+      color: @text-color-light !important;
+    }
 
-		span {
-			color: @text-color-light;
-		}
-
-
+    span {
+      color: @text-color-light;
+    }
 
     .author-specs {
       display: flex;
       justify-content: space-between;
-
-      @media(max-width: 1040px){
+      @media(max-width: 1040px) {
         display: block;
       }
     }
@@ -137,7 +152,6 @@
       height: 80px;
       margin-bottom: 15px;
       display: inline-block;
-
       @media(max-width: 1040px) {
         width: 80px;
         height: 80px;
@@ -145,23 +159,22 @@
         display: block;
       }
 
-    .avatar {
-      width: 100%;
-      height: auto;
-      margin: 0;
-      .border-radius(50%);
-      max-height: 80px;
+      .avatar {
+        width: 80px;
+        height: auto;
+        margin: 0;
+        .border-radius(50%);
+        height: 80px;
+      }
     }
-  }
 
     .details {
       width: 65%;
       display: inline-block;
       margin-left: 5%;
-
       @media(max-width: 1040px) {
         text-align: center;
-        width:90%;
+        width: 90%;
       }
     }
 
@@ -169,21 +182,22 @@
       display: block;
       width: 100%;
       line-height: 1.5;
-      margin: 10px 0 0;
       font-weight: 100;
       float: left !important;
-			font-size: 14px;
-
+      font-size: 14px;
+      margin: 10 0 !important;
       @media(max-width: 1040px) {
         text-align: center;
       }
     }
 
     .author {
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin-bottom: 5px;
 
       a {
+        font-size: .9em;
+        font-weight: 600;
         &:hover {
           text-decoration: none;
         }
@@ -196,7 +210,6 @@
       font-weight: 100;
       color: @text-color-light;
       margin-bottom: 7px;
-
       @media (max-width: 1040px) {
         justify-content: center !important;
       }
@@ -204,9 +217,8 @@
       span {
         margin-right: 10px;
         display: block;
-
         @media (max-width: 1040px) {
-          margin:0 15px 3px;
+          margin: 0 15px 3px;
         }
 
         i {
@@ -224,7 +236,6 @@
 .page-series {
   .post-title {
     margin: 40px 80px 0;
-
     @media(max-width: 600px) {
       font-size: 3em;
     }
