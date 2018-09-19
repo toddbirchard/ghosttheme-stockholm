@@ -86,7 +86,9 @@
 		@media(max-width: 800px) {
 			font-size: 1.9em;
 			padding-bottom: 5px;
-
+		}
+		@media(max-width: 600px) {
+			font-size: 1.7em;
 		}
 	}
 
@@ -647,7 +649,7 @@
 	}
 
 	.post-content {
-		margin: 25px 60px 40px;
+		margin: 25px 60px 10px;
 
 		a {
 			color: @theme-color;
@@ -821,6 +823,11 @@
 			margin-left: 15px;
 			padding-left: 15px;
 			margin-bottom: 20px;
+			@media(max-width:600px){
+				margin-left: 0;
+				padding-left: 0;
+			}
+
 
 			li {
 				padding: 5px;
