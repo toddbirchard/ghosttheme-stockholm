@@ -10,6 +10,8 @@
 
 			* {
 				display: none;
+				font-family: AvenirNextLTPro-Light,sans-serif !important;
+				line-height: 1.5em;
 			}
 
 			p:first-child {
@@ -57,10 +59,9 @@
 
 		.post-title {
 			font-size: 236%;
-			ine-height: .85;
-	    margin: 0 0 25px 0;
-			line-height: .8;
-			margin: 0 0 25px 0;
+			Line-height: .85;
+	    margin: 0 0 15px 0;
+
 
 			@media(max-width: 900px) {
 				font-size: calc(~"1.4vw + 1.4vh + 1.4vmin");
@@ -92,6 +93,7 @@
 			font-weight: 100;
 			text-align: left;
 			font-size: 1.3em;
+			    color: #5a5c6d;
 
 			@media(max-width: 800px) {
 				font-weight: 500;
@@ -151,6 +153,7 @@
 			 font-family: 'AvenirNextLTPro-Light';
 			 padding:0;
 			 margin-right: 20px;
+			 align-items: center;
 			 }
 
 
@@ -161,9 +164,14 @@
 
 		.author-mobile {
 			display:none;
+			align-items: center;
 
 			span {
 				 text-transform: capitalize;
+				 line-height: 1;
+				 font-size: 1em;
+				 font-family: 'AvenirNextLTPro-Medium';
+				 color: #224a69;
 			}
 
 			@media (max-width: 600px) {
@@ -296,13 +304,16 @@
 
 	.content {
 		padding: 20px 30px;
+		@media(max-width: 600px) {
+			padding: 20px;
+		}
 	}
 
 	.post-permalink {
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
-		padding: 10px 0 10px;
+		padding: 0;
 		align-items: center;
 
 		.btn {
