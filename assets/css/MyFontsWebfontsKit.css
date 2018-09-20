@@ -33,9 +33,11 @@
 @import url("//hello.myfonts.net/count/37415b");
 
 @font-face {font-family: 'AvenirNextLTPro-Light';src: url('../fonts/3792EE_0_0.eot');src: url('../fonts/3792EE_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_0_0.woff2') format('woff2'),url('../fonts/3792EE_0_0.woff') format('woff'),url('../fonts/3792EE_0_0.ttf') format('truetype');}
-
-
 @font-face {font-family: 'AvenirNextLTPro-Medium';src: url('../fonts/3792EE_1_0.eot');src: url('../fonts/3792EE_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_1_0.woff2') format('woff2'),url('../fonts/3792EE_1_0.woff') format('woff'),url('../fonts/3792EE_1_0.ttf') format('truetype');}
-
-
 @font-face {font-family: 'AvenirNextLTPro-Regular';src: url('../fonts/3792EE_2_0.eot');src: url('../fonts/3792EE_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_2_0.woff2') format('woff2'),url('../fonts/3792EE_2_0.woff') format('woff'),url('../fonts/3792EE_2_0.ttf') format('truetype');}
+
+
+
+@font-face {font-family: 'CompassSans-Regular';src: url('../fonts/CompassSans-Regular.woff2');}
+@font-face {font-family: 'CompassSans-Medium';src: url('../fonts/CompassSans-Medium.woff2');}
+@font-face {font-family: 'CompassSans-Bold';src: url('../fonts/CompassSans-Bold.woff2');}

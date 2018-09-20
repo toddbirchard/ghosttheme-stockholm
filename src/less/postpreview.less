@@ -20,17 +20,11 @@
 			-webkit-line-clamp: 7;
 			-webkit-box-orient: vertical;
 			line-height: 1.6em;
-			font-size: 0.9em;
+			font-size: 1em;
 
 			* {
 				display: inline !important;
 			}
-		}
-	}
-
-	.meta {
-		@media(max-width:800) {
-			max-width: 350px !important;
 		}
 	}
 
@@ -58,21 +52,22 @@
 
 		.post-title {
 			font-size: 236%;
-			Line-height: 0.85;
-			margin: 0 0 15px;
+			Line-height: 1.1;
+			margin: 0 0 10px;
+			font-weight: 500;
 			@media(max-width: 900px) {
 				font-size: calc(~"1.4vw + 1.4vh + 1.4vmin");
 			}
 			@media(max-width: 600px) {
 				font-size: 170%;
-				line-height: 0.9;
+				line-height: 1;
 				margin: 0 0 15px;
 			}
 
 			a {
 				color: @text-color-heading;
 				transition: all 0.2s ease-out;
-				font-family: sofia-pro !important;
+				font-family: CompassSans-Medium !important;
 
 				&:hover {
 					color: @secondary-color;
@@ -83,12 +78,12 @@
 		.post-excerpt {
 			margin: 10px auto 0;
 			line-height: 1.2;
-			font-weight: 700;
+			font-weight: 500;
 			text-align: left;
 			font-size: 1.3em;
 			color: #404146;
-			font-style: italic;
-			font-family: AvenirNextLTPro-Regular,serif;
+
+			font-family: 'CompassSans-Regular', AvenirNextLTPro-Regular,serif;
 			@media(max-width: 800px) {
 				font-size: 1.1em;
 			}
@@ -131,11 +126,12 @@
 	}
 
 	.meta {
-		display: flex;
-		width: 80%;
-		justify-content: space-between;
-		max-width: 450px;
+		display:flex;
+		align-items: center;
+		flex-direction: row;
+
 		@media(max-width:800) {
+			width: auto;
 			max-width: 350px !important;
 			justify-content: left;
 			font-family: 'AvenirNextLTPro-Light';
@@ -167,14 +163,18 @@
 
 		.meta-item {
 			display: flex;
-			justify-items: center;
 			margin: auto 15px auto 0;
 			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light';
 			align-items: center;
 			font-size: 16px;
 			padding: 0;
+			margin: auto 50px auto 0;
 			@media(max-width: 800px) {
-				margin: auto 30px auto 0;
+				margin: auto 50px auto 0;
+			}
+
+			&:last-of-type {
+				margin: auto 0 auto 0;
 			}
 
 			i {
@@ -310,7 +310,7 @@
 
 .post-content {
 	line-height: 1.3;
-	margin: 0 0 10px;
+	margin: 0;
 	@media(max-width: 600px) {
 		font-size: 16px;
 	}
