@@ -61,18 +61,27 @@
 			Line-height: 1.15;
 			margin: 0 0 10px;
 			font-weight: 500;
+			text-transform: uppercase;
+			font-family: CompassSans-Medium;
+
+
 			@media(max-width: 900px) {
 				font-size: calc(~"1.4vw + 1.4vh + 1.4vmin");
 			}
 			@media(max-width: 600px) {
 				font-size: 170%;
 				margin: 0 0 15px;
+				font-family: CompassSans-Regular!important;
+				font-weight: 900;
+
+
+
+				
 			}
 
 			a {
 				color: @text-color-heading;
 				transition: all 0.2s ease-out;
-				font-family: CompassSans-Medium !important;
 
 				&:hover {
 					color: @secondary-color;
@@ -294,7 +303,7 @@
 	text-align: left;
 	display: flex;
 	justify-content: space-between;
-	padding: 10px;
+	padding: 10px 0;
 	align-items: center;
 	@media(max-width: 600px) {
 		padding: 0 0 3px;
