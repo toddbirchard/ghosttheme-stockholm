@@ -42,13 +42,10 @@
 	}
 
 	.widget {
-		padding: 20px;
+		 margin-right: 20px;
 
 		&:first-of-type{
 			padding-top: 0;
-		}
-		@media(max-width: 800px) {
-			padding: 15px 20px !important;
 		}
 
 		.social-btns {
@@ -163,13 +160,13 @@
     		display: flex;
 			}
 			.series-image {
-				height: 90px;
+				height: 80px;
 		    width: 90px;
 				min-width: 90px;
 		    display: flex;
 		    align-items: center;
 		    background-size: cover!important;
-		    margin-right: 15px;
+		    margin-right: 20px;
 		    border-radius: 2px;
 
 				@media(max-width: 1000px) {
@@ -188,7 +185,7 @@
 
 			.recent-single-post {
 				padding: 0;
-				box-shadow: 0 0 5px rgba(80,82,204,.11);
+				box-shadow: 0 0 5px rgba(80,82,204,.11), 0 2px 1px rgba(80,82,204,.11);
 
 				&:nth-of-type(1) {
 					display: none;
@@ -198,13 +195,15 @@
 
 			p {
 				color: #636363;
-    font-size: 13px;
-    opacity: .7;
-    margin: 0;
-    white-space: inherit;
-    width: aauto;
-    display: inline-block;
-    line-height: 1.5;
+		    font-size: 13px;
+		    opacity: .7;
+		    margin: 0;
+		    white-space: inherit;
+		    width: aauto;
+		    display: inline-block;
+		    line-height: 1.5;
+				width: auto;
+		    padding-right: 10px;
 			}
 		}
 	}
@@ -268,7 +267,7 @@
 }
 
 .widget {
-	margin-bottom: 40px;
+	margin-bottom: 65px;
 	margin-top: 0;
 
 	.title {

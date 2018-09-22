@@ -17,6 +17,10 @@
 		article {
 			margin: 50px auto 0;
 			box-shadow: @shadow-color;
+
+			@media(max-width: 800px) {
+				margin: 0;
+			}
 		}
 	}
 
@@ -80,7 +84,7 @@
 
 	h2 {
 		margin: 40px auto 15px;
-		color: @text-post-header;
+		color: @header-color;
 		line-height: 1.2;
 		font-family: 'CompassSans-Regular';
 		font-size: 2em;
@@ -102,7 +106,7 @@
 		color: #365c8e;
 		font-weight: 500;
 		margin-top: 50px;
-		color: @text-post-header;
+		color: @header-color;
 		@media(max-width: 800px) {
 			font-weight: 600;
 			font-size: 1.3em;
@@ -148,7 +152,7 @@
 			margin: 10px 40px;
 			justify-content: space-around;
 		}
-		@media(max-width: 500px) {
+		@media(max-width: 600px) {
 			display: flex;
 			justify-content: space-between;
 			padding: 0;
@@ -167,6 +171,12 @@
 			padding: 6px 12px;
 			height: 25px;
 
+			i,
+			span {
+				font-weight: 500 !important;
+				font-size: 1em !important;
+			}
+
 			&.codesnippetcorner {
 				i {
 					@media(max-width: 600px) {
@@ -179,10 +189,12 @@
 				height: 24px;
 
 				span {
-					font-size: 1em !important;
+					font-weight: 500;
+					font-size: 0.9em !important;
 				}
 
 				i {
+					font-weight: 500;
 					font-size: 0.9em !important;
 				}
 			}
@@ -671,7 +683,7 @@
 			margin: 10px 0 20px;
 		}
 		@media(max-width: 800px) {
-			margin: 35px 40px 0;
+			margin: 35px 20px 10px;
 		}
 	}
 
@@ -845,7 +857,7 @@
 		}
 
 		.kg-embed-card > iframe {
-			margin: auto;
+			margin: auto !important;
 			width: 100% !important;
 		}
 
@@ -947,7 +959,7 @@
 		padding: 40px 60px;
 		margin: 20px 0;
 		min-height: 88px;
-		box-shadow: 0 0 5px rgba(80,82,204,.1),0 -1px 3px rgba(80,82,204,.1)!important;
+		box-shadow: 0 0 5px rgba(80,82,204,.1)!important;;
 		@media(max-width: 1000px) {
 			padding: 30px 40px;
 			margin: 20px;
