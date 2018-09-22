@@ -2,15 +2,19 @@
 // a css framework available on npmjs.com
 'use strict';
 
-var gulp 	= require('gulp'),
-  	less 	= require('gulp-less'),
-  	concat 	= require('gulp-concat'),
-  	uglify 	= require('gulp-uglify'),
-  	rename 	= require('gulp-rename'),
-    handlebars = require('gulp-handlebars'),
-    declare = require('gulp-declare'),
-    cleanCSS = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer');;
+var gulp = require('gulp'),
+  less = require('gulp-less'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  rename = require('gulp-rename'),
+  handlebars = require('gulp-handlebars'),
+  declare = require('gulp-declare'),
+  cleanCSS = require('gulp-clean-css'),
+  autoprefixer = require('gulp-autoprefixer'),
+  postcss = require('gulp-postcss'),
+  sourcemaps = require('gulp-sourcemaps'),
+  require = require('precss');
+
 
 var paths = {
   styles: {
@@ -29,34 +33,39 @@ var paths = {
 
 function styles() {
   return gulp
-  	.src(paths.styles.src, {
+    .src(paths.styles.src, {
       sourcemaps: true
     })
-	.pipe(less())
-	.pipe(rename({
-	  basename: 'main',
-	  suffix: '.min'
-	}))
-.pipe(cleanCSS({debug: true}))
-.pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-.pipe(concat('main.min.css'))
-.pipe(gulp.dest(paths.styles.dest));
+    .pipe(less())
+    .pipe(rename({
+      basename: 'main',
+      suffix: '.min'
+    }))
+    .pipe(cleanCSS({
+      debug: true
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(concat('main.min.css'))
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(sourcemaps.init())
+    .pipe(postcss([require('precss'), require('autoprefixer')]))
+    .pipe(sourcemaps.write('.'));
 }
 
 function scripts() {
   return gulp
-	.src(paths.scripts.src, {
-		sourcemaps: true
-	})
-	.pipe(uglify())
-	.pipe(concat('main.min.js'))
-	.pipe(gulp.dest(paths.scripts.dest));
+    .src(paths.scripts.src, {
+      sourcemaps: true
+    })
+    .pipe(uglify())
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
-function templates(){
+function templates() {
   gulp.src('views/*.hbs')
     .pipe(handlebars())
     //.pipe(wrap('Handlebars.template(<%= contents %>)'))

@@ -72,7 +72,27 @@ code {
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    content: "\f3e2 Python";
+    content: "\f3e2";
+  }
+
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-meta-string,
+  .hljs-regexp,
+  .hljs-string {
+    color: #7cdfe4!important;
+    font-size: 13px;
+  }
+
+  .hljs-attr,
+  .hljs-number,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-pseudo,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-variable {
+    color: #997ca7;
   }
 
 
@@ -109,16 +129,15 @@ code {
     font-weight: 600;
   }
 
-  .hljs-attr,
-  .hljs-number,
-  .hljs-selector-attr,
-  .hljs-selector-class,
-  .hljs-selector-pseudo,
-  .hljs-template-variable,
-  .hljs-type,
-  .hljs-variable {
-    color: #997ca7;
+  .hljs-deletion,
+  .hljs-name,
+  .hljs-section,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #8652c4;
   }
+
+
 
   .hljs-literal {
     color: #56b6c2;
@@ -131,6 +150,17 @@ code {
   .hljs-string {
     color: #99abd6!important;
     font-size: 13px;
+  }
+
+  .hljs-attr,
+  .hljs-number,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-pseudo,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-variable {
+    color: #3fb44b;
   }
 }
 
@@ -153,42 +183,20 @@ code {
   font-weight: 600;
 }
 
-.hljs-deletion,
-.hljs-name,
-.hljs-section,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #8652c4;
-}
+
 
 .hljs-literal {
   color: #56b6c2;
 }
 
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string,
-.hljs-regexp,
-.hljs-string {
-  color: #61c7cc !important;
-  font-size: 13px;
-}
+
 
 .hljs-built_in,
 .hljs-class .hljs-title {
   color: #2db1a1;
 }
 
-.hljs-attr,
-.hljs-number,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-selector-pseudo,
-.hljs-template-variable,
-.hljs-type,
-.hljs-variable {
-  color: #3fb44b;
-}
+
 
 .hljs-bullet,
 .hljs-link,

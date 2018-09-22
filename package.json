@@ -40,6 +40,8 @@
     "ghost-email-service": "^1.2.0",
     "github-profile-card": "^2.0.1",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.4",
     "materialize-css": "^1.0.0-rc.2",
     "mongodb": "^3.1.4",
     "mongodb-stitch": "^3.2.1",
@@ -47,6 +49,7 @@
     "mongodb-stitch-browser-sdk": "^4.0.13",
     "mongodb-stitch-server-sdk": "^4.0.13",
     "node-getpocket": "^1.0.0",
+    "precss": "^3.1.2",
     "simplebar": "^3.0.0-beta.4",
     "swiper": "^4.3.5"
   },
