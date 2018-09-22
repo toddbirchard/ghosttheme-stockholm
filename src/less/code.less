@@ -1,12 +1,11 @@
 pre {
   white-space: pre-wrap;
-  transition: all .5s easeout;
+  transition: all 0.5s easeout;
   position: relative;
   overflow-y: hidden;
   padding: 0 !important;
   margin-top: 30px;
   margin-bottom: 30px;
-
   @media(max-width: 600px) {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
@@ -24,7 +23,6 @@ pre {
 pre > code {
   white-space: pre-wrap !important;
   padding: 15px 20px !important;
-
   @media(max-width: 600px) {
     overflow-y: hidden !important;
     white-space: pre-line !important;
@@ -45,14 +43,11 @@ code {
   font-size: 12px;
 }
 
-.hljs,
-.language-python,
-.python.hljs {
+.hljs {
   display: block;
   overflow-y: scroll!important;
   overflow-x: hidden!important;
-  color: #e4f8fd !important;
-  background: #323335 !important;
+  background: #323335!important;
   overflow-wrap: break-word;
   font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
   margin: 0;
@@ -61,11 +56,29 @@ code {
   line-height: 1.9;
   white-space: pre-wrap !important;
   border-left: 5px solid #0f0f10;
+  color: #d3dce0;
+}
+
+.language-python,
+.python.hljs {
+  color: #e4f8fd !important;
+  background: #323335 !important;
+
+  &::before  {
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f3e2 Python";
+  }
+
 
   * {
     font-size: 14px;
     font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
-
     @media(max-width: 600px) {
       font-size: 12px;
     }
@@ -76,6 +89,48 @@ code {
     margin-right: calc(~"-50vw + 50%") !important;
     white-space: pre-line !important;
     font-size: 12px;
+  }
+}
+
+.hljs.javascript {
+  .hljs-bullet,
+  .hljs-link,
+  .hljs-meta,
+  .hljs-selector-id,
+  .hljs-symbol,
+  .hljs-title {
+    color: #7bb8ea;
+  }
+
+  .hljs-doctag,
+  .hljs-formula,
+  .hljs-keyword {
+    color: #5fc576;
+    font-weight: 600;
+  }
+
+  .hljs-attr,
+  .hljs-number,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-pseudo,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-variable {
+    color: #997ca7;
+  }
+
+  .hljs-literal {
+    color: #56b6c2;
+  }
+
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-meta-string,
+  .hljs-regexp,
+  .hljs-string {
+    color: #99abd6!important;
+    font-size: 13px;
   }
 }
 
@@ -121,7 +176,7 @@ code {
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #8652c4;
+  color: #2db1a1;
 }
 
 .hljs-attr,
@@ -152,7 +207,6 @@ code {
   text-decoration: underline;
 }
 
-
 .fullscreenbtn {
   position: absolute;
   bottom: 30px;
@@ -163,32 +217,30 @@ code {
   height: fit-content;
   color: #6c8699;
   cursor: pointer;
-  transition: all .3s easeout;
+  transition: all 0.3s easeout;
   display: none;
 
   &:hover {
     opacity: 0.7;
   }
 
-
   i {
     position: absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    top:0;
-    margin:auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
     height: 30px;
     width: 16px;
-    opacity: .6;
+    opacity: 0.6;
   }
-
   @media(max-width: 600px) {
     display: block;
   }
 }
 
 .fullscreen {
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
 }
