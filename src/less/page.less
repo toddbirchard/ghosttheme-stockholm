@@ -13,6 +13,14 @@
     }
   }
 
+  .featured-media {
+    @media(max-width: 800px) {
+      width: 129% !important;
+      margin-left: -13% !important;
+      margin-top: -12% !important;
+    }
+  }
+
   .mobile-branding {
     display: none;
     @media(max-width: 800px) {
@@ -116,5 +124,11 @@
 
   p {
     margin: 0 auto 20px;
+  }
+
+  @media (max-width: 600px){
+  .main-footer {
+      margin-top: 0;
+    }
   }
 }

@@ -286,7 +286,7 @@
   flex-flow: row wrap;
   margin: 30px 40px;
   @media(max-width: 800px) {
-    margin: 30px 25px;
+    margin: 30px 20px;
   }
 
   .tag-wrapper {
@@ -297,7 +297,11 @@
     transition: all 0.3s ease-out;
     @media(max-width: 800px) {
       width: 100%;
-      margin: 0 0 20px;
+      margin: 0 0 15px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
     }
 
     &:hover {
