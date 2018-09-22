@@ -8,12 +8,12 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{url}}"
+    "@id": "{{@blog.url}}{{url}}"
   },
   "headline": "{{{title}}}",
   "image": [
-    "{{feature_image}}",
-    "{{@blog.cover_image}}"
+    "{{@blog.url}}{{feature_image}}",
+    "{{@blog.url}}{{@blog.cover_image}}"
    ],
   "datePublished": "{{date published_at format="MMMM DD, YYYY"}}",
   "dateModified": "{{date updated_at format="MMMM DD, YYYY"}}",
