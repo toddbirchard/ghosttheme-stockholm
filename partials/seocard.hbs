@@ -1,29 +1,32 @@
+/*====================================================
+  STRUCTURED POST DATA
+====================================================*/
+
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://google.com/article"
+    "@id": "{{url}}"
   },
   "headline": "{{{title}}}",
   "image": [
-    "https://example.com/photos/1x1/photo.jpg",
-    "https://example.com/photos/4x3/photo.jpg",
-    "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/40644055_645123242540737_6787058134620831744_o.jpg"
+    "{{feature_image}}",
+    "{{@blog.cover_image}}"
    ],
-  "datePublished": "{{date format="MMM Do"}}",
-  "dateModified": "{{date format="MMM Do"}}",
+  "datePublished": "{{date published_at format="MMMM DD, YYYY"}}",
+  "dateModified": "{{date updated_at format="MMMM DD, YYYY"}}",
   "author": {
     "@type": "Contributor",
     "name": "{{#primary_author}}{{name}}{{/primary_author}}"
   },
    "publisher": {
     "@type": "Organization",
-    "name": "{{#primary_author}}{{name}}{{/primary_author}}",
+    "name": "{{@blog.title}}",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/33988245_563407280712334_4067972828387868672_n.jpg"
+      "url": "{{@blog.logo}}"
     }
   },
   "description": "{{excerpt}}"
