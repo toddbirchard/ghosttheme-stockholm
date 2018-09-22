@@ -15,9 +15,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
 	{{/if}}
 	<!-- start navigation -->
+
+	{{^is "post"}}
 	<video class="videoObject" autoplay muted loop id="myVideo">
 		<source src="https://hackersandslackers.com/assets/vid/bg2.mp4" type="video/mp4">
 	</video>
+	{{/is}}
 </header>
 {{!--
 <header class="main-header">
