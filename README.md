@@ -7,6 +7,8 @@
 ![less](https://img.shields.io/badge/lessjs-v3.7.0-blue.svg?longCache=true&style=flat-square)
 ![mongodb](https://img.shields.io/badge/mongodb-v4.0-green.svg?longCache=true&style=flat-square)
 ![jquery badge](https://img.shields.io/badge/jquery-3.3.1-green.svg?longCache=true&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)
+
 
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live preview can be viewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
@@ -15,7 +17,7 @@ Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhos
 
 ### About
 
-_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contexual widgets, sidebar preferences, and unique page templates. This project is in *active development*; you are wecome to use this theme if you wish, but be warned that certain oddities may exist as user-friendly configuration is still in development.
+_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contextual widgets, sidebar preferences, and unique page templates. This project is in *active development*; you are welcome to use this theme if you wish, but be warned that certain oddities may exist as the user-friendly configuration is still in development.
 
 ## Live Features
 
@@ -24,30 +26,32 @@ Some features are rolled out in public beta before official release. Features re
 #### Major Features
 
 - Full JIRA integration with functioning Kanban
-- Custom Author page with personalized widgets
+- Custom contributors page
 - Grouping of posts to belong to an ongoing series
-- MongoDB extenstion to expand capabilities of Ghost admin
+- MongoDB extension to expand capabilities of Ghost admin
 - Contextual sidebars
 - Featured posts
 - Video posts
-- Auto-geneated link previews
+- Auto-generated link previews
 - Responsive layout
+- 
 
 #### Widgets
 
-- Github repository widget
-- Contributors widget
-- Recent posts widget
-- Related posts widget
-- Series widget
-- Twitter widget
-- Meetup widget
-- Medium widget
+- Search bar
+- Github repository
+- Github user activity
+- Contributors 
+- Recent posts 
+- Related posts 
+- Series 
+- Twitter 
+- Meetup 
+- Medium 
 
 ## Features In Development
 
 - Sendgrid email signups
-- Github activity feed
 - Additional 'Series' widgets
 
 ### Planned Features
