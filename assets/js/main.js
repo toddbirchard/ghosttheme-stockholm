@@ -11652,7 +11652,7 @@ var Buffer$7 = require$$0.Buffer;
  * @param {Buffer|Uint8Array} potentialBuffer The potential buffer
  * @returns {Buffer} the input if potentialBuffer is a buffer, or a buffer that
  * wraps a passed in Uint8Array
- * @throws {TypeError} If anything other than a Buffer or Uint8Array is passed in 
+ * @throws {TypeError} If anything other than a Buffer or Uint8Array is passed in
  */
 var ensure_buffer = function ensureBuffer(potentialBuffer) {
   if (potentialBuffer instanceof Buffer$7) {
@@ -17893,7 +17893,7 @@ var Buffer$7 = require$$0.Buffer;
  * @param {Buffer|Uint8Array} potentialBuffer The potential buffer
  * @returns {Buffer} the input if potentialBuffer is a buffer, or a buffer that
  * wraps a passed in Uint8Array
- * @throws {TypeError} If anything other than a Buffer or Uint8Array is passed in 
+ * @throws {TypeError} If anything other than a Buffer or Uint8Array is passed in
  */
 var ensure_buffer = function ensureBuffer(potentialBuffer) {
   if (potentialBuffer instanceof Buffer$7) {
@@ -18791,7 +18791,7 @@ var themeApp = {
 	},
 	highlighter: function highlighter() {
 		$('pre code').each(function (i, block) {
-			hljs.highlightBlock(block);
+			//hljs.highlightBlock(block);
 		});
 	},
 	backToTop: function backToTop() {

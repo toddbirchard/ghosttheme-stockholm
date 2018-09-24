@@ -28,9 +28,45 @@
 	<!-- scripts -->
 	<script src="{{asset "/js/includes/stitch.min.js"}}"></script>
 	<script src="{{asset "/js/includes/swiper.min.js"}}"></script>
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
 	<script src="{{asset "/js/main.min.js"}}"></script>
 	{{#is "post"}} {{> postscripts}}  {{/is}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<!--<script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
+	<script type="text/javascript">
+    let ghostSearch = new GhostSearch({
+        input:   '#my-custom-input',
+        results: '#my-custom-results',
+        options: {
+						limit: 5,
+            keys: [
+                'title',
+                'plaintext'
+            ],
+        },
+        api: {
+            resource: 'posts',
+            parameters: {
+                fields: ['title', 'slug', 'plaintext', 'image'],
+                formats: 'plaintext',
+								include: 'tags'
+            },
+        },
+				template: function(result) {
+					console.log(result);
+					console.log(result.image);
+						let tag = result.tags[0];
+            let url = [location.protocol, '//', location.host].join('');
+            return '<li> \n' +
+						'<img src="' + result.feature_image + '"> \n ' +
+						'<div><a href="' + result.url + '/' + result.slug + '">' + result.title + '</a> \n' +
+						'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n '+
+						'</li>';
+        }
+    })
+</script>
 	{{ghost_foot}}
 </body>
 </html>

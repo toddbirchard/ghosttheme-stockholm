@@ -13,7 +13,9 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   postcss = require('gulp-postcss'),
   sourcemaps = require('gulp-sourcemaps'),
-  require = require('precss');
+  precss = require('precss'),
+  babel = require('gulp-babel'),
+  resolveDependencies = require('gulp-resolve-dependencies');
 
 
 var paths = {
@@ -60,6 +62,13 @@ function scripts() {
     .src(paths.scripts.src, {
       sourcemaps: true
     })
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+        presets: ['env']
+    }))
+    .pipe(resolveDependencies({
+            pattern: /\* @requires [\s-]*(.*\.js)/g
+        }))
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
