@@ -29,7 +29,7 @@
 
   .about-content {
     & > p {
-      margin: 0 40px 20px !important;
+      margin: 10px 40px 20px !important;
     }
     @media(max-width: 800px) {
       display:flex;
@@ -115,6 +115,7 @@
     }
     @media(max-width: 600px) {
       display: block !important;
+      margin: 0 0 10px;
     }
 
     i {
@@ -146,13 +147,15 @@
       @media(max-width: 1040px) {
         margin: 0 auto 15px;
         display: block;
+
       }
 
       .avatar {
         width: 70px;
-        margin: 0;
-        .border-radius(50%);
+        margin: 0 auto;
+        border-radius: 50%;
         height: 70px;
+        display: block;
       }
     }
 
@@ -162,7 +165,7 @@
       margin-left: 6px;
       @media(max-width: 1040px) {
         text-align: center;
-        width: 90%;
+        width: 100%;
       }
     }
 
@@ -203,11 +206,11 @@
         justify-content: center !important;
       }
 
-      span {
+      & > span {
         margin-right: 10px;
         display: block;
         @media (max-width: 1040px) {
-          margin: 0 15px 3px;
+          margin: 0 0 3px;
         }
 
         i {
