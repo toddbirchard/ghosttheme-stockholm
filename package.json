@@ -41,7 +41,6 @@
     "fuzzy-search": "^2.1.0",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
-    "ghost-search": "^0.1.0",
     "github-profile-card": "^2.0.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-postcss": "^8.0.0",

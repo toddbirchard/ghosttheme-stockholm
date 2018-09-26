@@ -50,7 +50,8 @@
             parameters: {
                 fields: ['title', 'slug', 'plaintext', 'image'],
                 formats: 'plaintext',
-								include: 'tags'
+								include: 'tags',
+								order: "published_at desc"
             },
         },
 				template: function(result) {
