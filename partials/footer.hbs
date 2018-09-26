@@ -32,18 +32,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<!--<script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>-->
 	{{^is "post"}}
-	<script src="{{asset "/js/ghost-search.min.js"}}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
 
 	<script type="text/javascript">
     let ghostSearch = new GhostSearch({
         input:   '#ghost-search-field',
         results: '#ghost-search-results',
         options: {
-						limit: 5,
             keys: [
                 'title',
                 'plaintext'
             ],
+						limit: 5,
         },
         api: {
             resource: 'posts',
