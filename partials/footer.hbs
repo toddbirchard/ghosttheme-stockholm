@@ -31,13 +31,14 @@
 	<script src="{{asset "/js/main.min.js"}}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<!--<script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>-->
-	{{^is "post"}}
 	<script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
 
 	<script type="text/javascript">
     let ghostSearch = new GhostSearch({
         input:   '#ghost-search-field',
         results: '#ghost-search-results',
+				button: '',
+				development: false,
         options: {
             keys: [
                 'title',
@@ -51,7 +52,9 @@
                 fields: ['title', 'slug', 'plaintext', 'image'],
                 formats: 'plaintext',
 								include: 'tags',
-								order: "published_at desc"
+								order: "published_at desc",
+								client_id: "ghost-frontend",
+								client_secret: "3b276cc0c5cd"
             },
         },
 				template: function(result) {
@@ -67,7 +70,6 @@
         }
     });
 </script>
-	{{/is}}
 	{{ghost_foot}}
 </body>
 </html>
