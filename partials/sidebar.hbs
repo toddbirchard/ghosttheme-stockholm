@@ -1,5 +1,9 @@
 <!-- start sidebar -->
 <div class="col-md-4 sidebar">
+	{{#is "home,paged"}}
+		{{> widget-text}}
+	{{/is}}
+	{{> widget-search}}
 	{{#is "author"}}
 		{{> widget-authorwebsite}}
 		{{> widget-upcoming}}
@@ -7,10 +11,6 @@
 	{{/is}}
 	{{#is "post"}}
 		{{> widget-author}}
-	{{/is}}
-	{{#is "home,paged"}}
-		{{> widget-text}}
-		{{> widget-search}}
 	{{/is}}
 	{{^is "author"}}
 		{{> widget-social}}

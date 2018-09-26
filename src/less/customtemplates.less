@@ -84,6 +84,10 @@
     flex-flow: row wrap;
     margin: 0 40px 20px;
 
+    @media(max-width: 1040px) {
+      margin: 0 10px 30px;
+    }
+
     .meta-info {
       color: @text-color;
     }
@@ -94,12 +98,13 @@
     background: #f6fbfd !important;
     padding: 20px;
     margin: 10px 0;
-    width: 42.5%;
+    width: 42%;
     @media(max-width: 800px) {
       padding: 20px;
       border: 0 !important;
       border-bottom: 1px solid #dcdcdc !important;
-      width: 100% !important;
+      width: 90%!important;
+      margin: 10px auto;
 
       i {
         color: @text-color-light !important;
@@ -146,6 +151,7 @@
       @media(max-width: 1040px) {
         margin: 0 auto 15px;
         display: block;
+        text-align: center;
       }
 
       .avatar {
@@ -162,7 +168,10 @@
       margin-left: 6px;
       @media(max-width: 1040px) {
         text-align: center;
-        width: 90%;
+        width: 100%;
+      }
+      @media(max-width: 1040px) {
+        margin-left: 0px;
       }
     }
 
@@ -278,7 +287,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   flex-flow: row wrap;
-  margin: 30px 40px;
+  margin: 30px 40px 10px;
   @media(max-width: 800px) {
     margin: 30px 20px;
   }

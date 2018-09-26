@@ -4,69 +4,51 @@
 	sidebar
 ====================================================*/
 .sidebar {
-	.form-group {
-		position: relative;
-
-		#my-custom-input {
-			box-shadow: 0 0 5px rgba(65,67,144,.15);
-			background: white;
-			align-items: center;
-			padding: 12px 5%;
-	    width: 90%;
-	    font-size: 1em;
-	    font-family: 'CompassSans-Light',AvenirNextLTPro-Light,sans-serif!important;
-	    font-weight: 200;
-	    -webkit-transition: .3s all;
-	    transition: .3s all;
-	    outline: 0;
-	    -webkit-appearance: none;
-	    border: 1px solid #ebebeb;
-	    border-radius: 2px;
-
-			&:hover {
-				background: #ecf4f7;
-				border-color: #8fbbca;
-			}
-		}
-
-		i {
-			position: absolute;
-			top: 32%;
-			right: 18px;
-
-			&:hover {
-				color: #1b7382;
-			}
-		}
-	}
-
-	#my-custom-results {
-		font-size: 1em;
+	#my-custom-input {
+		padding: 12px 5%;
+		width: 90%;
+		font-size: 1.2em;
 		font-family: CompassSans-Light,AvenirNextLTPro-Light,sans-serif!important;
 		font-weight: 200;
-		transition: 0.3s all;
+		transition: .3s all;
 		outline: none;
 		-webkit-appearance: none;
 		border: 1px solid #ebebeb;
 		border-radius: 2px;
 
+
+		&:hover {
+			background: #ecf4f7;
+			border-color: #8fbbca;
+	}
+
+	&:focus {
+
+	}
+}
+
+	#my-custom-results {
+		box-shadow: 0 0 5px rgba(65,67,144,.15);
+		background: white;
+		align-items: center;
+
 		* {
-			transition: 0.3s all;
+			transition: .3s all;
 		}
+
 
 		li {
 			width: 90%;
-			padding: 10px 5%;
+			padding:10px 5%;
 			text-align: left;
 			display: flex;
 			justify-content: space-between;
-      background: #fff;
 
 			&:nth-child(even) {
 				background: #f5f8fb;
 			}
 
-			&:hover {
+			&:hover{
 				background: lighten(@theme-color, 10%);
 				color: white;
 				border: 0;
@@ -78,28 +60,28 @@
 
 			img {
 				height: 50px;
-				width: 110px;
-				overflow: hidden;
+	    	width: 110px;
+	    	overflow: hidden;
 				margin-right: 15px;
 			}
 
 			div {
-				width: 100%;
-
+				    width: 100%;
 				a {
 					display: block;
 					line-height: 1.4;
-					font-size: 0.9em;
+					font-size: .9em;
 					-webkit-line-clamp: 2;
-					font-weight: 600;
+					 font-weight: 600;
 				}
 
 				.tag {
 					display: block;
 					line-height: 1.5;
 
+
 					span {
-						font-size: 0.7em;
+						font-size: .7em;
 						font-weight: 100;
 						line-height: 1.5;
 						padding: 4px 8px;
@@ -109,12 +91,16 @@
 
 						i {
 							margin-right: 4px;
-							font-size: 0.7em;
+							font-size: .7em;
 							display: none;
 						}
 					}
+
+
 				}
 			}
+
+
 		}
 	}
 
@@ -141,8 +127,6 @@
 			flex-grow: 1;
 			text-align: center;
 			.transition(all 0.2s ease);
-      transition: all .2s ease;
-      box-shadow: 1px 1px 0 #c8d3e2;
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
 				margin: 0 5px 5px 0;
@@ -244,8 +228,17 @@
 		}
 
 		&.series {
+			.title {
+				font-size: 1.5em;
+				font-weight: 500;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
+				letter-spacing: 1px;
+			}
+
 			.post-title {
-				color: #455f6f;
+				color: #627e90;
 				line-height: 1.3;
 				letter-spacing: 0;
 				font-size: 16px;
@@ -258,8 +251,7 @@
 			.recent-single-post {
 				border-bottom: 0;
 				padding: 0;
-				/*background: linear-gradient(190deg,rgb(255, 255, 255) 0,rgba(99, 101, 202, 0.11));*/
-				background: #f4f9ff;
+				background: linear-gradient(190deg,rgb(255, 255, 255) 0,rgba(99, 101, 202, 0.11));
 				margin-bottom: 15px;
 				overflow: hidden;
 				display: inline-block;
@@ -281,13 +273,6 @@
 				}
 			}
 
-      .series-info{
-        @media(max-width: 1000px) {
-          padding: 5px 15px;
-          background: 0;
-        }
-      }
-
 			& > a {
 				display: none;
 			}
@@ -308,8 +293,8 @@
 			}
 
 			p {
-				color: #444444;
-				font-size: 12px;
+				color: #636363;
+				font-size: 13px;
 				opacity: 0.7;
 				margin: 0;
 				white-space: inherit;
@@ -324,11 +309,11 @@
 
 	.recent-single-post {
 		.post-title {
-			color: #455f6f;
+			color: #557082;
 			line-height: 1.4;
 			font-size: 15px;
 			margin: 0;
-			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light', sans-serif;
 			font-weight: 100;
 			display: inline-block;
 
@@ -360,15 +345,14 @@
 		p {
 			margin: 0;
 			font-size: 15px;
-			line-height: 1.65;
-			padding-right: 44px;
+			line-height: 1.75;
 		}
 	}
 
 	.post-title {
 		a {
 			color: #208cad;
-			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light', sans-serif;
 			transition: all 0.2s ease;
 			font-size: 15px !important;
 			font-weight: 500 !important;
@@ -385,23 +369,13 @@
 	margin-bottom: 65px;
 	margin-top: 0;
 
-	h1 {
+	.title {
+		font-size: 1.5em;
+		font-weight: 500;
 		margin-bottom: 15px;
 		text-transform: uppercase;
-		font-size: 1.5em;
-		text-transform: uppercase;
 		font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
-		color: @header-color;
-	}
-
-	.title {
-		font-size: 1.12em;
-		font-weight: 500;
-		margin-bottom: 8px;
-		text-transform: uppercase;
-		font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
-		letter-spacing: 2px;
-		color: #1f5373;
+		letter-spacing: 1px;
 	}
 
 	.google-plus {
@@ -437,11 +411,8 @@
 	}
 
 	.recent-post {
-		margin-top: 13px;
-
 		a {
 			margin: 0 !important;
-			color: #455f6f;
 		}
 
 		single-author img {
@@ -454,14 +425,14 @@
 
 		.recent-single-post,
 		.single-author {
-			border-bottom: 1px solid #d5dde8;
-			padding-bottom: 17px;
-			margin-bottom: 17px;
+			border-bottom: 1px dashed @border-color;
+			padding-bottom: 14px;
+			margin-bottom: 14px;
 			line-height: 1.35;
 
 			.post-title,
 			.single-author-name {
-				font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+				font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light', sans-serif;
 				.transition(all 0.2s ease);
 				font-weight: 100;
 				@media(max-width: 600px) {
@@ -478,7 +449,6 @@
 				color: #8091ab;
 				font-size: 12px;
 				opacity: 0.9;
-				margin-top: 5px;
 
 				i {
 					margin-right: 5px;
