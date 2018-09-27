@@ -37,10 +37,11 @@
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
     "babel-runtime": "^6.26.0",
+    "bson-objectid": "^1.2.3",
     "fuzzy-search": "^2.1.0",
     "fuzzysort": "^1.1.4",
+    "g": "^2.0.1",
     "ghost-email-service": "^1.2.0",
-    "ghost-search": "^0.1.0",
     "github-profile-card": "^2.0.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-postcss": "^8.0.0",
@@ -53,6 +54,7 @@
     "mongodb-stitch-browser-sdk": "^4.0.13",
     "mongodb-stitch-server-sdk": "^4.0.13",
     "node-getpocket": "^1.0.0",
+    "npm-check-updates": "^2.14.2",
     "precss": "^3.1.2",
     "simplebar": "^3.0.0-beta.4",
     "swiper": "^4.3.5"

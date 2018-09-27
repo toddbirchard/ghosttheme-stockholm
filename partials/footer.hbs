@@ -36,23 +36,29 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<!--<script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
+
 	<script type="text/javascript">
     let ghostSearch = new GhostSearch({
-        input:   '#my-custom-input',
-        results: '#my-custom-results',
+        input:   '#ghost-search-field',
+        results: '#ghost-search-results',
+				button: '',
+				development: false,
         options: {
-						limit: 5,
             keys: [
                 'title',
                 'plaintext'
             ],
+						limit: 5,
         },
         api: {
             resource: 'posts',
             parameters: {
                 fields: ['title', 'slug', 'plaintext', 'image'],
                 formats: 'plaintext',
-								include: 'tags'
+								include: 'tags',
+								order: "published_at desc",
+								client_id: "ghost-frontend",
+								client_secret: "3b276cc0c5cd"
             },
         },
 				template: function(result) {
@@ -66,7 +72,7 @@
 						'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n '+
 						'</li>';
         }
-    })
+    });
 </script>
 	{{ghost_foot}}
 </body>

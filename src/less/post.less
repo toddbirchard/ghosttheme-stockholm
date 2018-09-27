@@ -179,6 +179,10 @@
 			padding: 6px 12px;
 			height: 25px;
 
+			@media(max-width: 600px){
+				 padding: 4px 10px;
+			}
+
 			i,
 			span {
 				font-weight: 500 !important;
@@ -209,7 +213,6 @@
 		}
 
 		.author {
-
 			.avi {
 				width: 30px;
 				height: 30px;
@@ -225,6 +228,12 @@
 			span {
 				text-transform: capitalize;
 				color: #467192;
+			}
+		}
+
+		.date {
+			@media(max-width: 600px) {
+				display:none !important;
 			}
 		}
 
@@ -338,7 +347,7 @@
 			line-height: 1.5 !important;
 			font-family: 'AvenirNextLTPro-Regular';
 			color: #1a6948;
-			font-size: 1em;
+			font-size: 1.08em;
 			width: auto;
 			margin: 0;
 			text-align: justify;
@@ -691,7 +700,8 @@
 			margin: 10px 0 20px;
 		}
 		@media(max-width: 800px) {
-			margin: 35px 20px 10px;
+			margin: 35px 35px 10px;
+			font-size: .85em;
 		}
 	}
 
@@ -838,6 +848,7 @@
 
 				 @media(max-width: 600px) {
 					   margin-left: 0;
+						 font-size: 1.08em;
 				 }
 
 				 &::before {
