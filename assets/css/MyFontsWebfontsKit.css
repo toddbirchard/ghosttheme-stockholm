@@ -1,0 +1,43 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3642094, 2018-09-15T13:41:29-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed fonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: AvenirNextLTPro-Light by Linotype
+ * URL: https://www.myfonts.com/../fonts/linotype/avenir-next-pro/pro-light/
+ * Copyright: Copyright &#x00A9; 2012 - 2017 Monotype GmbH. All rights reserved.
+ *
+ * Webfont: AvenirNextLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/../fonts/linotype/avenir-next-pro/pro-medium/
+ * Copyright: Copyright &#x00A9; 2004 - 2017 Monotype GmbH. All rights reserved.
+ *
+ * Webfont: AvenirNextLTPro-Regular by Linotype
+ * URL: https://www.myfonts.com/../fonts/linotype/avenir-next-pro/pro-regular/
+ * Copyright: Copyright &#x00A9; 2004 - 2017 Monotype GmbH. All rights reserved.
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3642094
+ * Licensed pageviews: 500,000
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3792ee");
+@import url("//hello.myfonts.net/count/37415b");
+
+@font-face {font-family: 'AvenirNextLTPro-Light';src: url('../fonts/3792EE_0_0.eot');src: url('../fonts/3792EE_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_0_0.woff2') format('woff2'),url('../fonts/3792EE_0_0.woff') format('woff'),url('../fonts/3792EE_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNextLTPro-Medium';src: url('../fonts/3792EE_1_0.eot');src: url('../fonts/3792EE_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_1_0.woff2') format('woff2'),url('../fonts/3792EE_1_0.woff') format('woff'),url('../fonts/3792EE_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNextLTPro-Regular';src: url('../fonts/3792EE_2_0.eot');src: url('../fonts/3792EE_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3792EE_2_0.woff2') format('woff2'),url('../fonts/3792EE_2_0.woff') format('woff'),url('../fonts/3792EE_2_0.ttf') format('truetype');}
+
+@font-face {font-family: 'DroidSansMonoSlashed';src: url('../fonts/DroidSansMonoSlashed.ttf');}
+
+@font-face {font-family: 'CompassSans-Regular';src: url('../fonts/CompassSans-Regular.woff2');}
+@font-face {font-family: 'CompassSans-Medium';src: url('../fonts/CompassSans-Medium.woff2');}
+@font-face {font-family: 'CompassSans-Bold';src: url('../fonts/CompassSans-Bold.woff2');}

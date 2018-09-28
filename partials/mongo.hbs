@@ -1,0 +1,4 @@
+<script>
+  const authorsClient = stitch.Stitch.initializeDefaultAppClient('authors-gwezt');
+  const authorsDB = authorsClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('authors');
+</script>

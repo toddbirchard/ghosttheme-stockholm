@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+	<!-- Fonts -->
+
+	{{! Scripts }}
+	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
+	<script src="{{asset "/js/includes/stitch.min.js"}}"></script>
+	{{#is "post"}}
+		<meta property="og:image" content="{{img_url feature_image}}">
+	{{else}}
+		<meta property="og:image" content="{{@blog.cover_image}}"/>
+	{{/is}}
+
+	{{! inserting theme config partial}}
+	{{> config}}
+	{{> analytics}}
+
+	{{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	{{! insert header partial}}
+	{{> header}}
+
+	{{{body}}}
+</body>
+	{{! insert footer partial}}
+
+{{> footer}}

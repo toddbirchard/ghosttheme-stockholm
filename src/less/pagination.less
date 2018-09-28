@@ -1,0 +1,61 @@
+@import "variables.less";
+@import "mixin.less";
+
+/*====================================================
+	pagination
+====================================================*/
+.pagination {
+	margin: 10px 0 20px;
+	text-align: center;
+	display: block;
+	order: 20;
+
+	a {
+		text-align: center;
+		display: inline-block;
+		color: #FFFFFF;
+		background: @theme-color;
+		border-radius: 0;
+		padding: 6px 13px;
+
+		&:hover {
+			background: @hover-color;
+			text-decoration: none;
+			color: @white;
+		}
+	}
+
+	.page-number {
+		background: @theme-color;
+		color: @white;
+		margin: 0 5px;
+		display: inline-block;
+		line-height: 1;
+		padding: 12px 14px;
+	}
+}
+
+/* Next & Prev buttons on post pages */
+
+.prev-next-wrap {
+	margin: 0;
+	padding: 0;
+	background: #f0f1f4;
+
+	@media(max-width: 1000px){
+		padding:0 20px;
+	}
+
+	.btn {
+		max-width: 39%;
+		line-height: 1.3;
+		font-size: 1em;
+		font-family: CompassSans-Regular;
+		font-weight: 300;
+		background: @theme-color;
+
+		@media(max-width: 800px){
+			font-size: .9em;
+		}
+	}
+}

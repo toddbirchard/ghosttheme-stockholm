@@ -1,0 +1,56 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap archive">
+	{{> postheader}}
+	<div class="container">
+		<div class="row">
+			<!-- start main post area -->
+			{{> sidebar}}
+			<div class="col-md-8 main-content">
+				<!-- start post -->
+				{{#post}}
+					<article class="{{post_class}}">
+
+						{{#if feature_image}}
+							<div class="featured-media" style="background-image: url({{feature_image}});">
+							</div>
+						{{/if}}
+						<div class="page-head">
+							<h1 class="page-title">{{{title}}}</h1>
+						</div>
+						<div class="post-content">
+							{{content}}
+						</div>
+						<div class="tag-container">
+							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
+								{{#foreach tags}}
+									<div class="tag-wrapper">
+										<a href="{{url}}">
+											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});" {{/if}}>
+												<div class="tag-title">
+													<h2>{{meta_title}}</h2>
+													<div class="meta-info">
+														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+													</div>
+												</div>
+												{{#if description}}
+													<p class="description">{{description}}</p>
+												{{/if}}
+											</div>
+										</a>
+									</div>
+								{{/foreach}}
+							{{/get}}
+						</div>
+					</article>
+				{{/post}}
+				<!-- end post -->
+			</div>
+
+
+			<!-- end main post area -->
+		</div>
+	</div>
+</section>
+<!-- end site's main content area -->

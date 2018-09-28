@@ -1,0 +1,56 @@
+<!-- start main-footer -->
+	<footer class="main-footer">
+				<!-- start first footer widget area -->
+					{{> widget-recentpost}}
+				<!-- end first footer widget area -->
+				<!-- start second footer widget area -->
+
+					{{#is "post"}}
+						{{#is "page"}}
+							{{> widget-authors}}
+						{{else}}
+							{{#post}}
+								{{> widget-relatedpost}}
+							{{/post}}
+						{{/is}}
+					{{else}}
+						{{> widget-authors}}
+					{{/is}}
+
+				<!-- end second footer widget area -->
+				<!-- start third footer widget area -->
+					{{> widget-tagcloud}}
+				<!-- end third footer widget area -->
+	</footer>
+	<!-- end main-footer -->
+
+
+	<!-- scripts -->
+	<script src="{{asset "/js/includes/stitch.min.js"}}"></script>
+	<script src="{{asset "/js/includes/swiper.min.js"}}"></script>
+	<script src="{{asset "/js/main.min.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/includes/ghost-search.min.js"}}"></script>
+	<script type="text/javascript">
+    let ghostSearch = new GhostSearch({
+        input:   '#my-custom-input',
+        results: '#my-custom-results',
+        options: {
+            keys: [
+                'title',
+                'plaintext'
+            ],
+        },
+        api: {
+            resource: 'posts',
+            parameters: {
+                fields: ['title', 'slug', 'plaintext'],
+                formats: 'plaintext',
+            },
+        },
+    })
+</script>
+	{{#is "post"}} {{> postscripts}}  {{/is}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	{{ghost_foot}}
+</body>
+</html>

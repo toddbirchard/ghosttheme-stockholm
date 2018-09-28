@@ -1,0 +1,31 @@
+<script>
+/* ... */
+var pagination = require('ghost-pagination');
+var hbs = require('express-hbs');
+/* ... */
+hbs.registerHelper('paginate', pagination);
+/* ... */
+</script>
+
+
+<div class="pagination center">
+  <ul>
+      {{#paginate page pages limit="8"}}
+          {{#if first}}
+              <li {{#if active}} class="active" {{/if}}><a href="{{page_url n}}">{{n}}</a></li>
+              {{#if ellipsis}}
+                  <li class="pagination-ellipsis"><i class="material-icons">more_horiz</i></li>
+              {{/if}}
+          {{/if}}
+          {{#if middle}}
+              <li {{#if active}} class="active" {{/if}}><a href="{{page_url n}}">{{n}}</a></li>
+          {{/if}}
+          {{#if last}}
+              {{#if ellipsis}}
+                  <li class="pagination-ellipsis"><i class="material-icons">more_horiz</i></li>
+              {{/if}}
+              <li {{#if active}} class="active" {{/if}}><a href="{{page_url n}}">{{n}}</a></li>
+          {{/if}}
+      {{/paginate}}
+  </ul>
+</div>

@@ -1,0 +1,24 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap archive">
+	{{> postheader}}
+	<div class="container">
+		<!-- start post -->
+		{{#post}}
+
+			<div class="intro">
+				{{#if feature_image}}
+					<div class="featured-media" style="background-image: url({{feature_image}});">
+					</div>
+				{{/if}}
+				<h1>{{{title}}}</h1>
+				<p>{{content}}</p>
+				{{> repos}}
+			</div>
+			{{> kanban}}
+		{{/post}}
+	</div>
+	<!-- end main post area -->
+</section>
+<!-- end site's main content area -->

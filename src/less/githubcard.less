@@ -1,0 +1,262 @@
+@import "variables.less";
+@import "mixin.less";
+
+
+.author-template {
+  #github-card-author {
+    width: 100%;
+    font-size: 16px;
+    overflow: hidden;
+
+    @media(max-width: 800px) {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  .profile {
+    background: #FFF;
+    overflow: hidden;
+        padding: 0 14px 0;
+    min-height: 135px;
+
+    @media(max-width: 800px){
+      padding: 10px;
+    }
+  }
+
+  .stats {
+    padding: 5px;
+  }
+
+  .languages {
+    position: relative;
+    clear: both;
+    margin: 0 -10px;
+    padding: 15px 0;
+    border-top: 1px solid #DEDEDE;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    @media(max-width: 800px){
+      margin: 0;
+      padding: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -0.7em;
+      background: #FFF;
+      padding-right: 5px;
+      content: 'Top languages';
+      font-style: italic;
+      color: #555;
+    }
+
+    li {
+      display: inline-block;
+      font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
+      color: #444;
+      font-size: 1.1em;
+      border: 0;
+    }
+  }
+
+  .followMe {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+  }
+
+  .follow-button {
+    font-size: 0.8em;
+    color: white;
+    float: left;
+    padding: 10px 14px;
+    line-height: 1;
+    background: @theme-color;
+    transition: .2s all easeout;
+
+    @media(max-width: 800px){
+      padding: 8px 12px;
+      font-size: 0.7em;
+    }
+  }
+
+  .follow-button:hover {
+    color: inherit;
+    background: @hover-color;
+  }
+  /* followers number */
+  .followMe span {
+    position: relative;
+    background: #FFF;
+    margin-left: 8px;
+    padding: 5px 8px;
+    color: #444;
+    font-size: 0.8em;
+    border: 1px solid;
+    border-color: #BBB;
+    border-radius: 2px;
+    height: 11px;
+    line-height: 1;
+  }
+
+  .followMe span::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    left: -4px;
+    top: 30%;
+    background: inherit;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-color: inherit;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 0 20px 25px 0;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 #DDD;
+
+    @media(max-width: 800px){
+      margin: 0 15px 15px 0;
+    }
+  }
+  /* List of repositories */
+  .repos {
+    & {
+      clear: both;
+    }
+
+    .header {
+      display: block;
+      width: auto;
+      border-width: 1px 0;
+      /* color: #29d4a7; */
+      font-size: 1em;
+      padding: 15px 0 0;
+      height: fit-content;
+      text-transform: uppercase;
+      font-family: 'CompassSans-Medium', sans-serif;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      margin: 7px 0;
+      font-size: 0.9em;
+      border-top: 0;
+      width: auto;
+      background-color: #f9f9f9;
+      padding: 16px;
+      transition: .2s all easeout;
+
+      &:hover,
+      &:hover span {
+        background-color: #d5f0f3;
+        color: white;
+        cursor: pointer;
+      }
+
+      &:hover .star::after {
+        opacity: 1;
+      }
+
+      &:first-of-type {
+        border: none;
+      }
+    }
+
+    .repo-name {
+      max-width: 280px;
+      text-overflow: ellipsis;
+      color: @theme-color;
+      font-family: 'AvenirNextLTPro-Light';
+      font-size: 1.1em;
+    }
+
+    .updated {
+      display: block;
+      font-size: 0.85em;
+      font-style: italic;
+      color: #777;
+    }
+
+    .star {
+      position: absolute;
+      font-size: 0.9em;
+      right: 1em;
+      top: 2em;
+      color: #888;
+
+      &::after {
+        content: '\a0\2605';
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #e99405;
+        opacity: 0.5;
+      }
+    }
+  }
+  /*
+& {
+  width: 280px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Helvetica;
+  background: #FAFAFA;
+  border-width: 1px 1px 2px;
+  border-style: solid;
+  border-color: #DDD;
+  overflow: hidden;
+}
+*/
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #4183C4;
+    }
+  }
+
+  .name {
+    display: block;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    color: #222;
+    text-transform: uppercase;
+    font-family: 'CompassSans-Medium', sans-serif;
+  }
+
+  .error {
+    & {
+      font-size: 0.8em;
+      color: #444;
+      padding: 10px;
+    }
+
+    span {
+      display: block;
+      border-bottom: 1px solid #DDD;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+
+      &.remain {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
