@@ -43,8 +43,11 @@
 
 
 
-<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
 <script>
+
+const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
+const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
+
 
 function populateCards(cards, status) {
     for (var i = 0; i < cards.length; i++) {
@@ -64,14 +67,11 @@ function populateCards(cards, status) {
     $('#' + status).append('<span class="count"></span>');
   }
 
-const backlogColumn = document.getElementById("backlog");
-const todoColumn = document.getElementById("todo");
-const progressColumn = document.getElementById("inprogress");
-const doneColumn = document.getElementById("done");
+  const backlogColumn = document.getElementById("backlog");
+  const todoColumn = document.getElementById("todo");
+  const progressColumn = document.getElementById("inprogress");
+  const doneColumn = document.getElementById("done");
 
-  const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
-
-  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
     db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
