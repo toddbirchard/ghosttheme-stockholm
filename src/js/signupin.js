@@ -158,39 +158,3 @@ function handleError(err) {
   })[errType] || errType
   displayError(msg);
 }
-
-
-/*
-$(document).ready(function{
-	function signup(email, password){
-		$('.signup').on('click', function(){
-			var user = $('input[type=email]').value;
-			var pass = $('input[type=password]').value;
-
-			emailPassClient.registerWithEmail(user, pass)
-		    .then(() => {
-		       console.log("Successfully sent account confirmation email!");
-		    })
-		    .catch(err => {
-		       console.log("Error registering new user:", err);
-		    });
-		});
-		return null;
-	}
-
-
-
-	function signin(email, password){
-		$('.signin').on('click', function(){
-			var user = $('input[type=email]').value;
-			var pass = $('input[type=password]').value;
-
-			const credential = new UserPasswordCredential(user, password);
-
-			Stitch.defaultAppClient.loginWithCredential(credential).then(authedId => {
-			     console.log(`successfully logged in with id: ${authedId}`);
-			  })
-			    .catch(err => console.error(`login failed with error: ${err}`)
-		});
-		return null;
-});*/
