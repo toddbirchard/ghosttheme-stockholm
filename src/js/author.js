@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-/*
+
 function authorSidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
@@ -82,5 +82,5 @@ function authorSidebar(docs) {
       var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
     }
   }
-*/
+
 });

@@ -5,7 +5,7 @@
 var gulp = require('gulp'),
   less = require('gulp-less'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglify-es'),
   rename = require('gulp-rename'),
   handlebars = require('gulp-handlebars'),
   declare = require('gulp-declare'),
