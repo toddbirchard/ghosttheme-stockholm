@@ -4,10 +4,10 @@ const {
   UserPasswordCredential
 } = stitch;
 
-const stitchClient = Stitch.initializeDefaultAppClient("stitch-quickstarts-zhpox");
+const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
+const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
-const emailPasswordClient = stitchClient.auth
-  .getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
 
 // Register a new application user when the user submits their information
 async function handleSignup() {
