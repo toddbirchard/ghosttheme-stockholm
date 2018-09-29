@@ -64,8 +64,9 @@ function scripts() {
     })
     .pipe(sourcemaps.init())
     .pipe(babel({
-        presets: ['env']
-    }))
+			presets: ['@babel/env']
+		}))
+    .on('error', console.error.bind(console));
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
