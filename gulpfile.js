@@ -15,7 +15,9 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   precss = require('precss'),
   babel = require('gulp-babel'),
-  resolveDependencies = require('gulp-resolve-dependencies');
+  resolveDependencies = require('gulp-resolve-dependencies'),
+  livereload = require('gulp-livereload'),
+  browserSync = require('browser-sync');
 
 
 var paths = {
@@ -34,11 +36,10 @@ var paths = {
 };
 
 function styles() {
-  return gulp
-    .src(paths.styles.src, {
-      sourcemaps: true
-    })
+  return gulp.src(paths.styles.src)
+    .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
     .pipe(rename({
       basename: 'main',
       suffix: '.min'
@@ -52,26 +53,28 @@ function styles() {
     }))
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(sourcemaps.init())
+    .pipe(livereload())
     .pipe(postcss([require('precss'), require('autoprefixer')]))
-    .pipe(sourcemaps.write('.'));
+    .pipe(browserSync.reload({stream:true}));
 }
 
 function scripts() {
   return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(babel({
-			presets: ['@babel/env']
-		}))
+          presets: ['@babel/env']
+    }))
     .on('error', console.error.bind(console))
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
     .pipe(sourcemaps.write("."))
-    .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
 }
+
+
+
 
 function templates() {
   gulp.src('views/*.hbs')

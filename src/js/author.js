@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function(){
 
 function authorSidebar(docs) {
     if (docs[0]['website']) {
@@ -52,7 +52,6 @@ function authorSidebar(docs) {
                 month: "short"
               }) + '</span></span></time>';
               if (events[i].photo_url == null) {
-                //eventimage = "https://hackers.nyc3.digitaloceanspaces.com/meetup.png"
                 eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", { month: "short" }) + '</span></span></time>';
               }
               $('.events').append(
@@ -82,5 +81,4 @@ function authorSidebar(docs) {
       var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
     }
   }
-
 });

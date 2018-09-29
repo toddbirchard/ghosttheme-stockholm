@@ -4,8 +4,7 @@
   "demo": "https://hackersandslackers.com",
   "version": "0.0.1",
   "scripts": {
-    "babel": "babel --presets es2015 assets/js/includes/index.js -o assets/js/index.js",
-    "start": "http-server"
+    "build": "babel src -d lib"
   },
   "presets": [
     "env"
@@ -35,8 +34,10 @@
     "posts_per_page": 10
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@sendgrid/mail": "^6.3.1",
     "babel-runtime": "^6.26.0",
+    "browser-sync": "^2.24.7",
     "fuzzy-search": "^2.1.0",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
@@ -46,6 +47,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-resolve-dependencies": "^2.2.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
     "materialize-css": "^1.0.0",
     "mongodb-stitch-browser-sdk": "^4.0.8",
     "node-getpocket": "^1.0.0",
@@ -60,14 +62,14 @@
     "babelify": "^8.0.0",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-declare": "^0.3.0",
     "gulp-handlebars": "^5.0.2",
     "gulp-less": "^4.0.1",
+    "gulp-livereload": "^4.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.1",
     "uglify-js": "^3.4.9",
     "webpack-stream": "^5.1.1"
   }
