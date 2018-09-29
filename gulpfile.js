@@ -60,7 +60,6 @@ function styles() {
 
 function scripts() {
   return gulp.src(paths.scripts.src)
-    .pipe(sourcemaps.init())
     .pipe(babel({
           presets: ['@babel/env']
     }))
@@ -68,7 +67,6 @@ function scripts() {
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
-    .pipe(sourcemaps.write("."))
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
 }
