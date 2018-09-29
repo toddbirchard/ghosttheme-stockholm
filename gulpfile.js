@@ -97,4 +97,4 @@ var buildandexit = gulp.parallel(styles, scripts, templates);
 gulp.task(build);
 
 gulp.task('default', build);
-gulp.task('default', buildandexit);
+gulp.task('buildandexit', buildandexit);
