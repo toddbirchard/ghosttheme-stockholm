@@ -58,10 +58,7 @@ function styles() {
 }
 
 function scripts() {
-  return gulp
-    .src(paths.scripts.src, {
-      sourcemaps: true
-    })
+  return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(babel({
 			presets: ['@babel/env']
