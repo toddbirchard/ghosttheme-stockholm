@@ -66,7 +66,7 @@ function scripts() {
     .pipe(babel({
 			presets: ['@babel/env']
 		}))
-    .on('error', console.error.bind(console));
+    .on('error', console.error.bind(console))
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
