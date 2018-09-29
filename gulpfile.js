@@ -93,4 +93,5 @@ function watch() {
 
 var build = gulp.parallel(styles, scripts, templates, watch);
 
+gulp.task(build);
 gulp.task('default', build);
