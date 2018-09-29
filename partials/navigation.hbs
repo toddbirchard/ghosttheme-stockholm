@@ -1,11 +1,29 @@
 <ul class="menu">
 	{{#foreach navigation}}
-	<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+		<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
 	{{/foreach}}
 	<li class="acount">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-			<ul id="login-dp" class="dropdown-menu">
-								 <form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+		<ul id="login-dp" class="dropdown-menu">
+			<div id="create-a-user" hidden>
+				<h4>Create Email/Password Account</h4>
+				<label for="create-a-user-email">Email:</label>
+				<div class="input-group mb-1">
+					<input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" />
+      </div>
+
+					<label for="create-a-user-password">Password:</label>
+					<div class="input-group mb-2">
+						<input type="password" class="form-control" id="create-a-user-password" aria-label="create-a-user-password" />
+      </div>
+						<button class="btn btn-success" onclick="handleSignup()">
+        Create a New Account
+      </button>
+						<button class="btn btn-secondary" onclick="showControlPanel()">
+        Go Back
+      </button>
+					</div>
+					<!--<form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
 										<div id="create-a-user" class="form-group">
 											   <label for="create-a-user-email">Email:</label>
 											 <input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" />
@@ -19,51 +37,15 @@
 											 <button class="btn btn-success" onclick="handleSignup()">Create Account</button>
 										</div>
 										<div class="forgot"><a href="">Forget password?</a></div>
-								 </form>
-					 </div>
-			</ul>
-    </li>
+								 </form>-->
+				</div>
+		</ul>
+	</li>
 </ul>
 
-<!--
+
 <script>
-  const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
-  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-  const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
-
-
-$(document).ready(function{
-	function signup(email, password){
-		$('.signup').on('click', function(){
-			var user = $('input[type=email]').value;
-			var pass = $('input[type=password]').value;
-
-			emailPassClient.registerWithEmail(user, pass)
-		    .then(() => {
-		       console.log("Successfully sent account confirmation email!");
-		    })
-		    .catch(err => {
-		       console.log("Error registering new user:", err);
-		    });
-		});
-		return null;
-	}
-
-
-
-	function signin(email, password){
-		$('.signin').on('click', function(){
-			var user = $('input[type=email]').value;
-			var pass = $('input[type=password]').value;
-
-			const credential = new UserPasswordCredential(user, password);
-
-			Stitch.defaultAppClient.loginWithCredential(credential).then(authedId => {
-			     console.log(`successfully logged in with id: ${authedId}`);
-			  })
-			    .catch(err => console.error(`login failed with error: ${err}`)
-		});
-		return null;
-	}
-});
-</script>-->
+	const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
+	const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+	const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+</script>
