@@ -1,6 +1,5 @@
 $( document ).ready(function() {
-
-
+/*
 function authorSidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
@@ -17,10 +16,6 @@ function authorSidebar(docs) {
     if (docs[0]['github']) {
       $('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">Github</h4><div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + docs[0]['github'] + '"></div></div></div>');
     }
-
-    /*if (docs[0]['linkedin']) {
-      $('.sidebar').append('<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/' + docs[0]['linkedin'] + '" data-format="inline" data-related="false"></script>');
-    }*/
 
     if (docs[0]['meetup']) {
       $.ajax({
@@ -87,5 +82,5 @@ function authorSidebar(docs) {
       var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
     }
   }
-
+*/
 });
