@@ -2,4 +2,72 @@
 	{{#foreach navigation}}
 	<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
 	{{/foreach}}
+	<li class="acount">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu">
+								 <form class="form" role="form" method="post" action="signup()" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Password</label>
+											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>										</div>
+										<div class="buttons">
+											 <button type="submit" class="btn signin">Sign in</button>
+											 <button class="btn signup">Sign up</button>
+										</div>
+										<div class="forgot"><a href="">Forget password?</a></div>
+								 </form>
+					 </div>
+			</ul>
+    </li>
 </ul>
+<script>
+
+import {
+    Stitch,
+    RemoteMongoClient,
+    AnonymousCredential
+} from "mongodb-stitch-browser-sdk";
+
+  const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+  const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+
+
+$(document).ready(function{
+	function signup(email, password){
+		$('.signup').on('click', function(){
+			var user = $('input[type=email]').value;
+			var pass = $('input[type=password]').value;
+
+			emailPassClient.registerWithEmail(user, pass)
+		    .then(() => {
+		       console.log("Successfully sent account confirmation email!");
+		    })
+		    .catch(err => {
+		       console.log("Error registering new user:", err);
+		    });
+		});
+		return null;
+	}
+
+
+
+	function signin(email, password){
+		$('.signin').on('click', function(){
+			var user = $('input[type=email]').value;
+			var pass = $('input[type=password]').value;
+
+			const credential = new UserPasswordCredential(user, password);
+
+			Stitch.defaultAppClient.loginWithCredential(credential).then(authedId => {
+			     console.log(`successfully logged in with id: ${authedId}`);
+			  })
+			    .catch(err => console.error(`login failed with error: ${err}`)
+		});
+		return null;
+	}
+});
+</script>
