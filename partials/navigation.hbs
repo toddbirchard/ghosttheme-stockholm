@@ -38,14 +38,6 @@
 										</div>
 										<div class="forgot"><a href="">Forget password?</a></div>
 								 </form>-->
-				</div>
 		</ul>
 	</li>
 </ul>
-
-
-<script>
-	const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
-	const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-	const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
-</script>
