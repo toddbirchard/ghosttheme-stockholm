@@ -59,30 +59,3 @@
 </section>
 <!-- end site's main content area -->
 <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
-<script>
-  const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
-  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-  const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
-
-
-  const emailPassClient = Stitch.defaultAppClient.auth
-    .getProviderClient(UserPasswordAuthProviderClient.factory);
-
-
-functionlogin(email, password){
-
-  console.log($('input[name=email]'));
-  console.log($('input[name=password]'));
-
-  emailPassClient.registerWithEmail("<user-email>", "<user-password>")
-    .then(() => {
-       console.log("Successfully sent account confirmation email!");
-    })
-    .catch(err => {
-       console.log("Error registering new user:", err);
-    });
-
-}
-
-
-  </script>
