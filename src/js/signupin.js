@@ -160,7 +160,7 @@ function handleError(err) {
 }
 
 
-
+/*
 $(document).ready(function{
 	function signup(email, password){
 		$('.signup').on('click', function(){
@@ -193,5 +193,4 @@ $(document).ready(function{
 			    .catch(err => console.error(`login failed with error: ${err}`)
 		});
 		return null;
-	}
-});
+});*/
