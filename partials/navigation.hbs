@@ -24,13 +24,6 @@
     </li>
 </ul>
 <script>
-
-import {
-    Stitch,
-    RemoteMongoClient,
-    AnonymousCredential
-} from "mongodb-stitch-browser-sdk";
-
   const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
   const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
   const emailPassClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
