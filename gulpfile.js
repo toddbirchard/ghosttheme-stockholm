@@ -70,6 +70,7 @@ function scripts() {
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
+    .pipe(sourcemaps.write("."))
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
