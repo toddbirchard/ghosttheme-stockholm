@@ -92,6 +92,9 @@ function watch() {
 }
 
 var build = gulp.parallel(styles, scripts, templates, watch);
+var buildandexit = gulp.parallel(styles, scripts, templates);
 
 gulp.task(build);
+
 gulp.task('default', build);
+gulp.task('default', buildandexit);

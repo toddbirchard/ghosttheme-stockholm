@@ -33,24 +33,24 @@
 													<div class="meta-info">
 														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
 													</div>
-												</div>
-												{{#if description}}
-													<p class="description">{{description}}</p>
-												{{/if}}
-											</div>
 										</a>
 									</div>
-								{{/foreach}}
-							{{/get}}
+									{{#if description}}
+										<div class="description"><p>{{description}}</p></div>
+									{{/if}}
 						</div>
-					</article>
-				{{/post}}
-				<!-- end post -->
 			</div>
-
-
-			<!-- end main post area -->
+			{{/foreach}}
+			{{/get}}
 		</div>
+		</article>
+		{{/post}}
+		<!-- end post -->
+	</div>
+
+
+	<!-- end main post area -->
+	</div>
 	</div>
 </section>
 <!-- end site's main content area -->
