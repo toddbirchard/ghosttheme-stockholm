@@ -71,9 +71,6 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
-
-
-
 function templates() {
   gulp.src('views/*.hbs')
     .pipe(handlebars())

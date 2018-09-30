@@ -1,12 +1,84 @@
 @import "variables.less";
-
-#login-dp {
+.menu-wrapper {
   position: absolute;
-  padding: 20px;
-  left: -192px;
-  width: 210px;
-  top: 40px;
+  right: 38px;
+  top: 77px;
   box-shadow: 0 0 5px rgba(65,67,144,.15);
+  overflow-x: hidden;
+  width: 250px;
+  height: fit-content;
+
+
+
+
+
+.dropdown-menu {
+    height: 330px;
+
+  #info {
+    z-index: auto;
+    bottom: -11px;
+    position: absolute;
+    line-height: 1.2;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    height: 53px;
+    margin: auto;
+    padding: 0;
+    opacity: 0;
+    width: 100%;
+    display: none;
+
+    #error {
+      background: #efd0d5;
+      color: #672727;
+      line-height: 1.3;
+      height: auto;
+      display: none;
+      padding: 10px 15%
+    }
+
+    #success{
+      background: #e7f9ef;
+      color: #27674d;
+      line-height: 1.3;
+      height: auto;
+      display: none;
+      padding: 10px 15%
+    }
+  }
+
+
+  #signup,
+  #login {
+    width: 210px;
+    top: 0;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    -webkit-transition: all .6s easeout;
+    transition: all .6s easeout;
+    height:100%
+  }
+
+  form {
+    text-align: left;
+  }
+
+  .secondarylink {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    color: #000 !important;
+    text-align: center;
+    Width: 100%;
+    display: block;
+    margin-top: 12px;
+
+    &:hover {
+      cursor:pointer;
+    }
+  }
 
   * {
     text-shadow: none;
@@ -33,6 +105,7 @@
     margin-bottom: 20px;
     padding-bottom: 6px;
     border-bottom: 1px solid #53586b;
+    text-align: left;
   }
 
   input {
@@ -110,4 +183,5 @@
   a {
     text-shadow: 0;
   }
+}
 }
