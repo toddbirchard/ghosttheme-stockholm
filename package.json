@@ -55,6 +55,7 @@
     "mongodb-stitch-browser-sdk": "^4.0.8",
     "node-getpocket": "^1.0.0",
     "precss": "^3.1.2",
+    "semantic-ui-table": "^2.3.1",
     "simplebar": "^3.0.0-beta.5",
     "swiper": "^4.4.1"
   },
