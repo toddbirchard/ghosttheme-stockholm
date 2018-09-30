@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="transactional">
+<head >
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+</head>
+<body  class="transactional">
+<!-- start site's main content area -->
+<section>
+	<div class="container">
+		<!-- start post -->
+		{{#post}}
+			<div class="card">
+				<h1>{{{title}}}</h1>
+				<p>{{content}}</p>
+			</div>
+
+		{{/post}}
+	</div>
+	<!-- end main post area -->
+</section>
+<!-- end site's main content area -->
+
+
+<!-- Stitch JavaScript SDK -->
+<!-- Base Stitch Browser SDK -->
+<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.0/stitch.js"></script>
+<script>
+  const {
+    Stitch,
+    UserPasswordAuthProviderClient
+  } = stitch;
+  const APP_ID = "hackers-uangn";
+  const stitchClient = Stitch.initializeDefaultAppClient(APP_ID);
+
+  const emailPasswordClient = stitchClient.auth
+    .getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
+
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+  const tokenId = params.get('tokenId');
+
+  emailPasswordClient
+    .confirmUser(token, tokenId)
+    .then(() => displayResult('success'))
+    .catch(err => displayResult('error', err))
+
+  function displ
+  ayResult(result, err) {
+    const message = document.getElementById("message");
+    if (result === "success") {
+      message.innerText = "Successfully confirmed quickstart user. You may close this page.";
+    }
+    else if (result === "error") {
+      message.innerText = "Unable to register user.\n\n" + err;
+    }
+  }
+</script>
+</body>
