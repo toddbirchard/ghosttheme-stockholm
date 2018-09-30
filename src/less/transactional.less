@@ -1,35 +1,156 @@
 @import "variables.less";
 
+@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.eot);src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}
+
+@font-face{font-family:"Font Awesome 5 Pro";font-style:normal;font-weight:400;src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.eot);src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}
+
+@font-face{font-family:"Font Awesome 5 Pro";font-style:normal;font-weight:900;src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.eot);src:url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}
+
 .transactional {
+  background: linear-gradient(135deg,#7d73e4,#0b2971);
+  width: 100%;
+  height: 100%;
+  position: relative;
 
-      background: linear-gradient(135deg,#7d73e4,#0b2971);
-      width: 100%;
-      height: 100%;
-      position: relative;
+  h1 {
+    font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
+    font-weight: 700;
+    color: #276890;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    }
 
-      .card {
-        position: absolute;
-        margin: auto;
-        height: 300px;
-        width: 600px;
-        background-color: #fff;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        padding: 30px;
-        text-align: center;
 
-        p {
-          margin: 20px 25px;
-        }
+  .card {
+    position: absolute;
+    margin: auto;
+    height: fit-content;
+    width: 600px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 30px;
+    text-align: center;
 
-        .btn {
-          display: block;
-          background:@theme-color;
-          color:white;
-          padding: 10px 20px;
-          margin-top: 40px;
-        }
+    p {
+      margin: 20px 25px;
+    }
+
+
+
+    input {
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      background: @theme-color;
+      color: #fff;
+      padding: 15px 25px;
+      margin: 40px auto 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      border: none;
+      transition: all .3s easeout;
+
+      &:hover {
+        background: @secondary-color;
       }
+
+      a {
+        color: @header-color;
+      }
+    }
+  }
+
+  .signup-template {
+    .card{
+      height: 400px;
+      position: relative !important;
+    }
+  }
+
+  .signup {
+
+
+
+
+    form {
+      width: 400px;
+      margin: auto;
+      text-align: left;
+      label {
+        text-align: left;
+      }
+
+      input {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: -webkit-fill-available;
+        margin: 0 0 20px 0  ;
+        font-size: 1.2em;
+        text-align: left;
+        font-weight: 200;
+        font-size: 1.3em;
+        padding: 10px 17px;
+          border: 1px solid #bdbdbd;
+
+       &:focus {
+         border: 1px solid @theme-color;
+         outline: none;
+       }
+      }
+    }
+  }
+
+  #info {
+    margin: auto auto 20px auto;
+    text-align: left;
+    width: 100%;
+    height: 43px;
+
+
+    #error {
+      padding: 5px 10px;
+      background: #ecd3d8;
+      color: #694747;
+      /*border: 1px solid #b5a2a5;*/
+      border-radius: 3px;
+      margin-bottom: 20px;
+      display: none;
+
+      &::before {
+        content:"\f071";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+            margin-right: 10px;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+height: 534px;
+width: 661px;
+}
+
+section,
+.container {
+  height: 100%;
 }

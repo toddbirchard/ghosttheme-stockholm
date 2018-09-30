@@ -1,0 +1,250 @@
+{{!< transactional}}
+<!DOCTYPE html>
+<html lang="{{lang}}" class="transactional">
+
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
+
+
+</head>
+
+<body class="transactional signup-template">
+	<!-- start site's main content area -->
+
+		{{#post}}
+
+				<!-- start post -->
+				<div class="card">
+					<div class="signup">
+						<div id="info">
+							<div id="success"><i class='fas fa-exclamation-triangle'></i></div>
+							<div id="error"></div>
+						</div>
+						<h1>{{title}}</h1>
+
+						<form id="create-a-user">
+							<label for="create-a-user-email">Email:</label>
+							<input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" />
+							<label for="create-a-user-password">Password:</label>
+							<input type="password" class="form-control" id="create-a-user-password" aria-label="create-a-user-password" />
+							<button class="btn btn-success" onclick="handleSignup()">Create Account</button>
+						</form>
+						<a class="secondarylink">Sign in instead</a>
+					</div>
+
+					<div id="resend-confirmation" hidden>
+						<h4>Send a New Confirmation Email</h4>
+						<label for="resend-confirmation-email">Email:</label>
+						<input type="text" class="form-control" id="resend-confirmation-email" aria-label="resend-confirmation-email" />
+						<button class="btn btn-success" onclick="handleResendConfirmation()">Re-Send Confirmation Emai </button>
+						<a href="/" class="btn btn-secondary" onclick="showControlPanel()">Go Back</a>
+					</div>
+				</div>
+		{{/post}}
+		<!-- end main post area -->
+
+
+	<!-- end site's main content area -->
+
+	<script>
+
+	const {
+  Stitch,
+  UserPasswordAuthProviderClient,
+  UserPasswordCredential
+} = stitch;
+
+const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
+
+const emailPasswordClient = stitchClient.auth
+  .getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
+
+
+
+		// Register a new application user when the user submits their information
+		async function handleSignup() {
+			const email = registerEmailEl.value;
+			const password = registerPasswordEl.value;
+
+			try {
+
+				await emailPasswordClient.registerWithEmail(email, password)
+				showPostRegistrationState()
+				displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
+
+			} catch (e) {
+				handleError(e)
+			}
+		}
+
+		// Authenticate an application user based on the submitted information
+		async function handleLogin() {
+			const email = loginEmailEl.value;
+			const password = loginPasswordEl.value;
+			const credential = new UserPasswordCredential(email, password);
+
+			try {
+
+				await stitchClient.auth.loginWithCredential(credential);
+				const user = stitchClient.auth.user;
+				showLoggedInState();
+				displaySuccess(`Logged in as: ${user.profile.data.email}`)
+
+			} catch (e) {
+				handleError(e)
+			}
+		}
+
+		async function handleLogout() {
+			await stitchClient.auth.logout();
+			showControlPanel();
+		}
+
+		async function handleResendConfirmation() {
+			const email = resendConfirmationEmailEl.value;
+			await emailPasswordClient.resendConfirmationEmail(email);
+			showControlPanel();
+		}
+
+		// DOM Element Variables
+		const resendConfirmationEl = document.getElementById("resend-confirmation");
+		const controlPanelEl = document.getElementById("control-panel");
+		const registerFormEl = document.getElementById("create-a-user");
+		const loginFormEl = document.getElementById("login");
+		const registerEmailEl = document.getElementById("create-a-user-email");
+		const registerPasswordEl = document.getElementById("create-a-user-password");
+		const resendConfirmationEmailEl = document.getElementById("resend-confirmation-email");
+		const loginEmailEl = document.getElementById("login-email");
+		const loginPasswordEl = document.getElementById("login-password");
+		const notificationEl = document.getElementById("info");
+		const loggedInEl = document.getElementById("logged-in");
+		const postRegistrationEl = document.getElementById("finished-registration");
+
+		const successEl = document.getElementById("success");
+		const errorEl = document.getElementById("error");
+
+		// Notification Functions
+		function displayError(errorMessage) {
+			clearNotifications();
+			errorEl.innerText = errorMessage;
+		}
+
+		function displaySuccess(successMessage) {
+			clearNotifications();
+			successEl.innerText = successMessage
+		}
+
+		function clearNotifications() {
+			[errorEl, successEl].forEach(el => el.innerText = "")
+		}
+
+		// Helper Functions
+		function clearFields(fields) {
+			fields.forEach(field => field.value = "")
+		}
+
+		function toggleHiddenElementById(id) {
+			document.getElementById(id).classList.toggle("hidden");
+		}
+
+		// UI State Transitions
+		function showRegistrationForm() {
+			clearNotifications();
+			resendConfirmationEl.hidden = true;
+			controlPanelEl.hidden = true;
+			registerFormEl.hidden = false;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showLoginForm() {
+			clearNotifications();
+			resendConfirmationEl.hidden = true;
+			controlPanelEl.hidden = true;
+			loginFormEl.hidden = false;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showControlPanel() {
+			clearNotifications()
+			resendConfirmationEl.hidden = true;
+			controlPanelEl.hidden = false;
+			loginFormEl.hidden = true;
+			registerFormEl.hidden = true;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showResendConfirmationForm() {
+			clearNotifications()
+			resendConfirmationEl.hidden = false;
+			controlPanelEl.hidden = true;
+			loginFormEl.hidden = true;
+			registerFormEl.hidden = true;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showLoggedInState() {
+			clearFields([loginEmailEl, loginPasswordEl]);
+			clearNotifications()
+			resendConfirmationEl.hidden = true;
+			controlPanelEl.hidden = true;
+			loginFormEl.hidden = true;
+			registerFormEl.hidden = true;
+			loggedInEl.hidden = false;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showPostRegistrationState() {
+			clearFields([registerEmailEl, registerPasswordEl]);
+			resendConfirmationEl.hidden = true;
+			controlPanelEl.hidden = true;
+			loginFormEl.hidden = true;
+			registerFormEl.hidden = true;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = false;
+		}
+
+		function setPostRegistrationState() {
+			// Clear registration form inputs then hide the form
+			clearFields([registerEmailEl, registerPasswordEl]);
+			toggleHiddenElementById("create-a-user");
+			return Promise.resolve()
+		}
+
+		function handleError(err) {
+			console.error(err)
+			const errType = err.message || "Error!"
+			const msg = ({
+				"invalid username/password": "Invalid username or password was entered. Please try again.",
+				"name already in use": "An account already exists for that email."
+			})[errType] || errType
+
+			displayError(msg);
+			$('#error').css('display', 'block');
+		}
+
+
+		$('.btn').on('click', function(event) {
+			event.preventDefault();
+			return false;
+		});
+	</script>
+
+</body>
+
+</html>

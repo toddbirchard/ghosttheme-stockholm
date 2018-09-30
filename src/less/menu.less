@@ -157,9 +157,30 @@
 		list-style: none;
 		align-items: center;
 
-		.account {
+		#account {
 			width:35px;
 			height:35px;
+			background-color: rgba(255, 255,255, 0);
+			padding: 7px;
+			transition: all .4s easeInOutCubic;
+			 position: relative;
+			border-right: 1px solid rgba(255, 255,255, 0);
+
+			.accountback {
+				opacity: 0;
+				background: white;
+				z-index: 0;
+				position: absolute;
+				top: 0;
+				right: 0px;
+				border-radius: 10px 10px 0 0;
+			}
+
+			img {
+				position: relative;
+				top:0;
+				z-index: 10;
+			}
 
 			* {
 				width: 100%;
