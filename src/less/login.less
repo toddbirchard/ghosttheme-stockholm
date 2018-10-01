@@ -1,47 +1,52 @@
 @import "variables.less";
 .menu-wrapper {
   position: absolute;
-  right: 40px;
+  right: 41px;
   top: 79px;
-  border-bottom: 1px solid #8596B1;
-    border-right: 1px solid #8596b3;
+  box-shadow: 3px 3px 5px rgba(137, 143, 171, 0.35);
   overflow-x: hidden;
   width: 250px;
-  height: fit-content;
+      height: 285px;
   z-index: 3;
   opacity: 0;
-  transition: all .5s easeout;
-
-
-  .active {
-    background:white;
-  }
-
-.dropdown-menu {
-    height: 330px;
+  transition: all .1s ease-out;
 
   #info {
     z-index: auto;
-    bottom: -11px;
-    position: absolute;
+    top: 0;
+    position: relative;
     line-height: 1.2;
-    padding: 0;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    height: 53px;
     margin: auto;
     padding: 0;
     opacity: 0;
     width: 100%;
+        background: white;
     display: none;
 
     #error {
-      background: #efd0d5;
-      color: #672727;
+      color: #67274f;
       line-height: 1.3;
       height: auto;
       display: none;
-      padding: 10px 15%
+      padding: 13px 0;
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      width: 100%;
+
+      &::before {
+        content: "\f071";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+      }
     }
 
     #success{
@@ -54,16 +59,17 @@
     }
   }
 
+.dropdown-menu {
 
   #signup,
   #login {
     width: 210px;
     top: 0;
-    position: absolute;
-    padding: 20px;
+    position: relative;
+    padding: 30px 20px;
     background: #fff;
-    -webkit-transition: all .6s easeout;
-    transition: all .6s easeout;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
     height:100%
   }
 
@@ -75,19 +81,7 @@
     text-align: left;
   }
 
-  .secondarylink {
-    font-size: 12px !important;
-    letter-spacing: 1px;
-    color: #000 !important;
-    text-align: center;
-    Width: 100%;
-    display: block;
-    margin-top: 12px;
 
-    &:hover {
-      cursor:pointer;
-    }
-  }
 
   * {
     text-shadow: none;
@@ -115,10 +109,11 @@
     padding-bottom: 6px;
     border-bottom: 1px solid #53586b;
     text-align: left;
+        text-transform: uppercase;
+        display: none;
   }
 
   input {
-    box-shadow: 0 0 5px rgba(65,67,144,.15);
     background: #fff;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -128,26 +123,34 @@
     font-size: 0.9em;
     font-family: CompassSans-Light,AvenirNextLTPro-Light,sans-serif!important;
     font-weight: 200;
-    -webkit-transition: 0.3s all;
-    transition: 0.3s all;
+    -webkit-transition: 0.1s all;
+    transition: 0.1s all;
     outline: 0;
     -webkit-appearance: none;
-    border: 1px solid #ebebeb;
+    border: 1px solid #bfc1cc;
     border-radius: 2px;
     margin-bottom: 10px;
+        margin-top: -5px;
   }
 
   .btn {
-    font-size: 12px;
-    font-family: AvenirNextLTPro-Medium,serif;
-    text-transform: uppercase;
-    padding: 14px 20px;
-    line-height: 1;
-    height: 40px;
-    background: linear-gradient(135deg,#4fc388,#21b6b7);
-    color: white;
-    width: 100%;
-    margin-top: 12px;
+    font-size: 14px;
+      font-family: AvenirNextLTPro-Medium,serif;
+      text-transform: uppercase;
+      padding: 13px 20px;
+      line-height: 1;
+      /* height: 40px; */
+      background: linear-gradient(135deg,#4fc388,#21b6b7);
+      color: #fff;
+      width: 100%;
+      margin-top: 12px;
+      border: none;
+      letter-spacing: 1px;
+      transition: all .1s ease-out;
+
+      &:hover {
+        background: linear-gradient(135deg,#3d9898,#2187b7);
+      }
   }
 
   .buttons {
@@ -190,8 +193,42 @@
     }
   }
 
+
+
   a {
     text-shadow: 0;
   }
 }
+.secondarylink {
+  font-size: 10px!important;
+  letter-spacing: 1px;
+  color: #6a83a5;
+  text-align: center;
+  Width: 100%;
+  display: block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  background: #ecf4f7;
+  padding: 5px;
+  border-top: 1px solid #d4e3e8;
+  transition: all .1s ease-out;
+
+  &:hover {
+    cursor:pointer;
+    background: #a5bcc5;
+    color: white;
+  }
+}
+}
+
+.overlay {
+  height:100%;
+  width:100%;
+  position: fixed;
+  background: black;
+  opacity: 0;
+  z-index: 1;
+  display:none;
 }

@@ -8,8 +8,13 @@
 	</li>
 </ul>
 
+<div class="overlay"></div>
 
 <div class="menu-wrapper">
+	<div id="info">
+		<div id="success"></div>
+		<div id="error"></div>
+	</div>
 	<div class="dropdown-menu">
 		<div id="login">
 			<h4>Log in</h4>
@@ -20,28 +25,25 @@
 				<input type="password" class="form-control" id="login-password" aria-label="login-password" /></label>
 				<button class="btn btn-success" onclick="handleLogin()">Log on</button>
 			</form>
-			<a href="/signup-post" class="secondarylink">Create an Account <i class="far fa-arrow-right"></i></a>
-		</div>
-		<div id="info">
-			<div id="success"></div>
-			<div id="error"></div>
 		</div>
 	</div>
+	<a href="/signup-post" class="secondarylink">Create an Account <i class="far fa-arrow-right"></i></a>
+
 </div>
 
 
 
 <script>
 	"use strict";
-		$('#account').on('click', function(event) {
-			event.preventDefault();
-			return false;
-		});
+	$('#account').on('click', function(event) {
+		event.preventDefault();
+		return false;
+	});
 
-		$('.dropdown-menu .btn').on('click', function(event) {
-			event.preventDefault();
-			return false;
-		});
+	$('.dropdown-menu .btn').on('click', function(event) {
+		event.preventDefault();
+		return false;
+	});
 
 
 
@@ -197,18 +199,42 @@
 		})[errType] || errType
 		displayError(msg);
 		$('#info').css('opacity', '1');
+		$('#login').css('padding', '45px 20px');
+		$('.menu-wrapper').css('height', '306px');
 	}
 
 	$('#account').on('click', function(event) {
 		event.preventDefault();
-
+		$('.overlay').css('display', 'block');
 		$('.accountback').animate({
 			opacity: 1
-		}, 500, 'swing');
+		}, 100, 'swing');
 
 		$('.menu-wrapper').animate({
 			opacity: 1
-		}, 500, 'swing');
+		}, 100, 'swing');
+
+		$('.overlay').animate({
+			opacity: .3
+		}, 100, 'swing');
+
 		return false;
+
+	});
+
+	$('.overlay').on('click', function(event) {
+		$('.overlay').animate({
+			opacity: 0
+		}, 100, 'swing', function() {
+			$('.overlay').css('display', 'none');
+		});
+
+		$('.accountback').animate({
+			opacity: 0
+		}, 100, 'swing');
+
+		$('.menu-wrapper').animate({
+			opacity: 0
+		}, 100, 'swing');
 	});
 </script>
