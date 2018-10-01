@@ -19,15 +19,15 @@
 		<div id="login">
 			<h4>Log in</h4>
 			<form>
-				<label for="login-email">Email:</label>
-				<input type="text" class="form-control" id="login-email" aria-label="login-email" />
-				<label for="login-password">Password:</label>
-				<input type="password" class="form-control" id="login-password" aria-label="login-password" /></label>
-				<button class="btn btn-success" onclick="handleLogin()">Log on</button>
+				<label for="login-email"><i class="fal fa-envelope"></i> Email</label>
+				<input type="text" class="form-control" id="login-email" aria-label="login-email" autocomplete="email" />
+				<label for="login-password"><i class="fal fa-lock-alt"></i> Password</label>
+				<input type="password" class="form-control" id="login-password" aria-label="login-password" autocomplete="current-password" /></label>
+				<button class="btn btn-success" onclick="handleLogin()">Log in</button>
 			</form>
 		</div>
 	</div>
-	<a href="/signup-post" class="secondarylink">Create an Account <i class="far fa-arrow-right"></i></a>
+	<a href="/account-signup" class="secondarylink">Create an Account <i class="far fa-arrow-right"></i></a>
 
 </div>
 

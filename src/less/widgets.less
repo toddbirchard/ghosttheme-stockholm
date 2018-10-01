@@ -4,8 +4,22 @@
 	sidebar
 ====================================================*/
 .sidebar {
-	.form-group {
+	.search {
 		position: relative;
+
+		&::after {
+			content: '\f002';
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 900;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			right: 13px;
+			top: 8px;
+			    position: absolute;
+		}
 
 		#my-custom-input {
 			box-shadow: 0 0 5px rgba(65,67,144,.15);
@@ -257,16 +271,17 @@
 			}
 
 			.recent-single-post {
-				border-bottom: 0;
-				padding: 0;
-				/*background: linear-gradient(190deg,rgb(255, 255, 255) 0,rgba(99, 101, 202, 0.11));*/
-				background: #f4f9ff;
+				border-bottom: 1px solid #d5dde8;
 				margin-bottom: 10px;
 				overflow: hidden;
 				display: inline-block;
 				align-items: center;
 				display: flex;
-				padding: 12px !important;
+				padding: 0 0 12px!important;
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
 
 			}
 
@@ -302,7 +317,7 @@
 
 			.recent-single-post {
 				padding: 0;
-				box-shadow: 0 0 5px rgba(80,82,204,.11), 0 2px 1px rgba(80,82,204,.11);
+
 
 				&:nth-of-type(1) {
 					display: none;
@@ -500,6 +515,8 @@
 
 		.form-group {
 			width: 100%;
+
+
 		}
 
 		.subscribe-email {

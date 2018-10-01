@@ -93,7 +93,7 @@
     @media(max-width: 800px) {
       margin: 0 30px 30px;
     }
-    
+
     .meta-info {
       color: @text-color;
     }
@@ -269,8 +269,8 @@
   margin: 0;
   width: auto;
   background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #001b2f 100%);
-  height: 100px;
-  padding: 20px;
+  height: 204px;
+  padding: 20px 20px 0;
 
   h2 {
     line-height: 1;
@@ -304,6 +304,7 @@
     width: 48%;
     margin: 0 0 20px;
     border: 1px solid #dadada;
+        height: 299px;
     transition: all 0.3s ease-out;
     @media(max-width: 800px) {
       width: 100%;
@@ -317,7 +318,6 @@
     &:hover {
       .tag-title {
         background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #007ad4 100%);
-        height: 150px;
       }
     }
 
@@ -335,13 +335,13 @@
       border: 1px solid @theme-color;
     }
 
-    a {
+
       .img-wrapper {
         background-size: cover;
         background-position: center;
         text-align: center;
         width: 100%;
-        height: 250px;
+        height: 225px;
         position: relative;
       }
 
@@ -363,19 +363,24 @@
       }
 
       .description {
-        padding: 15px 0;
-        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        background: rgba(255,255,255,.9);
         margin: 0;
-        position: absolute;
+        position: relative;
         bottom: 0;
         color: #162c52;
-        font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
-        width: 100%;
+        font-family: AvenirNextLTPro-Medium,AvenirNextLTPro-Light;
+        width: auto;
+        display: flex;
+        align-items: center;
+        height: 45px;
       }
 
       p {
         font-size: 14px;
         color: @text-color;
+        margin: 0 auto;
+
       }
 
       &.no-image {
@@ -401,5 +406,14 @@
         }
       }
     }
+
+}
+
+.page-projects {
+  .main-content {
+    box-shadow: 0 0 5px rgba(65,67,144,.15);
+    background: white;
+    padding: 3px 40px 20px;
+    width: auto;
   }
 }

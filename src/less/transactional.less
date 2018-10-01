@@ -1,39 +1,5 @@
 @import "variables.less";
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: normal;
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.eot");
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-brands-400.svg#fontawesome) format("svg");
-}
 
-.fab {
-  font-family: "Font Awesome 5 Brands";
-}
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.eot");
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-regular-400.svg#fontawesome) format("svg");
-}
-
-.far {
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-weight: 900;
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.eot");
-  src: url("https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.woff2) format("woff2"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.woff) format("woff"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.ttf) format("truetype"),url(https://pro.fontawesome.com/releases/v5.3.1/webfonts/fa-solid-900.svg#fontawesome) format("svg");
-}
-
-.fa,
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-}
 
 .transactional {
       background: linear-gradient(135deg,#7376e4,#175d8e);
@@ -114,6 +80,12 @@
       height: 400px;
       position: relative !important;
     }
+
+    #finished-registration {
+      .btn {
+        background: linear-gradient(135deg,#4fc388,#21b6b7);
+      }
+    }
   }
 
   .signup {
@@ -147,6 +119,10 @@
     }
   }
 
+  .secondarylink {
+    color: @header-color;
+  }
+
   #info {
     margin: auto auto 20px;
     text-align: left;
@@ -156,7 +132,7 @@
     position: relative;
 
     #error {
-      padding: 5px 10px;
+      padding: 10px 20px;
       background: #d0b8d2;
       color: #604769;
       /*border: 1px solid #b5a2a5;*/
@@ -164,6 +140,25 @@
 
       &::before {
         content: "\f071";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+      }
+    }
+
+    #success {
+      padding: 10px 20px;
+      background: #b8d2c9;
+      color: #316f45;
+      display: none;
+
+      &::before {
+        content: "\f00c";
         font-family: "Font Awesome 5 Pro";
         font-weight: 900;
         display: inline-block;
