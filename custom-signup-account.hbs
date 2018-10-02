@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
 
-
+{{ghost_head}}
 </head>
 
 <body class="transactional signup-template">
@@ -63,10 +63,6 @@
 	<!-- end site's main content area -->
 
 	<script>
-
-
-
-const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
 
 const emailPasswordClient = stitchClient.auth
   .getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");

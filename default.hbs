@@ -17,7 +17,6 @@
 
 	{{! Scripts }}
 	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
-	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
 
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -30,9 +29,9 @@
 	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
-
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
+
 </head>
 <body class="{{body_class}}">
 	{{! insert header partial}}
