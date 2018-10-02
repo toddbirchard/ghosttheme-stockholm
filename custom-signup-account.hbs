@@ -35,15 +35,15 @@
 
 						<h1>{{title}}</h1>
 
+
+
+
 						<form id="create-a-user">
 							<label for="create-a-user-email">Email:</label>
 							<input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" autocomplete="email" />
 							<label for="create-a-user-password">Password:</label>
 							<input type="password" class="form-control" id="create-a-user-password" aria-label="create-a-user-password" />
 							<button class="btn btn-success" onclick="handleSignup()">Create Account</button>
-							<div id="finished-registration" hidden>
-				      	<a class="btn btn-success" href="/">Ok cool</a>
-					    </div>
 						</form>
 						<div><i class="fal fa-arrow-left"></i><a class="secondarylink">< Actually nevermind</a></div>
 					</div>
@@ -54,6 +54,11 @@
 						<input type="text" class="form-control" id="resend-confirmation-email" aria-label="resend-confirmation-email" autocomplete="new-password"/>
 						<button class="btn btn-success" onclick="handleResendConfirmation()">Re-Send Confirmation Emai </button>
 						<a href="/" class="btn btn-secondary" onclick="showControlPanel()">Go Back</a>
+					</div>
+
+
+					<div id="finished-registration" hidden>
+						<a class="btn btn-success" href="/">Ok cool</a>
 					</div>
 				</div>
 		{{/post}}
@@ -112,7 +117,6 @@
 
 		// DOM Element Variables
 		const resendConfirmationEl = document.getElementById("resend-confirmation");
-		const controlPanelEl = document.getElementById("control-panel");
 		const registerFormEl = document.getElementById("create-a-user");
 		const loginFormEl = document.getElementById("login");
 		const registerEmailEl = document.getElementById("create-a-user-email");
@@ -153,7 +157,6 @@
 		function showRegistrationForm() {
 			clearNotifications();
 			resendConfirmationEl.hidden = true;
-			controlPanelEl.hidden = true;
 			registerFormEl.hidden = false;
 			loggedInEl.hidden = true;
 			postRegistrationEl.hidden = true;
@@ -162,7 +165,6 @@
 		function showLoginForm() {
 			clearNotifications();
 			resendConfirmationEl.hidden = true;
-			controlPanelEl.hidden = true;
 			loginFormEl.hidden = false;
 			loggedInEl.hidden = true;
 			postRegistrationEl.hidden = true;
@@ -171,7 +173,6 @@
 		function showControlPanel() {
 			clearNotifications()
 			resendConfirmationEl.hidden = true;
-			controlPanelEl.hidden = false;
 			loginFormEl.hidden = true;
 			registerFormEl.hidden = true;
 			loggedInEl.hidden = true;
@@ -181,7 +182,6 @@
 		function showResendConfirmationForm() {
 			clearNotifications()
 			resendConfirmationEl.hidden = false;
-			controlPanelEl.hidden = true;
 			loginFormEl.hidden = true;
 			registerFormEl.hidden = true;
 			loggedInEl.hidden = true;
@@ -192,7 +192,6 @@
 			clearFields([loginEmailEl, loginPasswordEl]);
 			clearNotifications()
 			resendConfirmationEl.hidden = true;
-			controlPanelEl.hidden = true;
 			loginFormEl.hidden = true;
 			registerFormEl.hidden = true;
 			loggedInEl.hidden = false;
@@ -202,7 +201,6 @@
 		function showPostRegistrationState() {
 			clearFields([registerEmailEl, registerPasswordEl]);
 			resendConfirmationEl.hidden = true;
-			controlPanelEl.hidden = true;
 			loginFormEl.hidden = true;
 			registerFormEl.hidden = true;
 			loggedInEl.hidden = true;
