@@ -51,10 +51,10 @@ function styles() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(postcss([require('precss'), require('autoprefixer')]))
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(livereload())
-    .pipe(postcss([require('precss'), require('autoprefixer')]))
     .pipe(browserSync.reload({stream:true}));
 }
 
