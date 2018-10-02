@@ -7,7 +7,8 @@
   box-shadow: 3px 3px 5px rgba(137, 143, 171, 0.35);
   overflow-x: hidden;
   width: 250px;
-  height: 285px;
+  min-height: 285px;
+  height: fit-content;
   z-index: 3;
   opacity: 0;
   transition: all 0.1s ease-out;
@@ -27,7 +28,6 @@
     padding: 0;
     opacity: 0;
     width: 100%;
-    background: white;
     display: none;
 
     #error {
@@ -240,6 +240,6 @@
   z-index: 1;
   display: none;
   @media(max-width: 800px) {
-    display: none;
+    display: none !important;
   }
 }
