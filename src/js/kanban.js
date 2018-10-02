@@ -1,5 +1,4 @@
-const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
-const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
+const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
 
 $(document).ready(function(){
 
@@ -30,7 +29,7 @@ $(document).ready(function(){
 
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
+      jiradb.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'backlog')
@@ -39,7 +38,7 @@ $(document).ready(function(){
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
+      jiradb.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'todo')
@@ -48,7 +47,7 @@ $(document).ready(function(){
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
+      jiradb.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'progress')
@@ -57,7 +56,7 @@ $(document).ready(function(){
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
+      jiradb.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'done')

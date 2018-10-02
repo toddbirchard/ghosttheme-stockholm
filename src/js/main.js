@@ -83,22 +83,42 @@ var themeApp = {
 		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
-	/*kanban: function() {
-		  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-		    document.getElementById('auth-status').innerHTML =
-		      `Logged in as anonymous user with id ${user.id}`;
-		  });
+	stitchLogin: function() {
+		const {
+			Stitch,
+			UserPasswordAuthProviderClient,
+			UserPasswordCredential
+		} = stitch;
 
-			client.callFunction("populateCards", "Backlog").then(echoedResult => {
-			  console.log(`Echoed result: ${echoedResult}`);
-			})
+		const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
 
-			client.defaultAppClient.callFunction("populateCards", "Backlog").then(
-			  function(result) {
-			      console.log(result);
-			      // prints {"a": "1", "b": false, "c": "hello"}
-			  })
-		},*/
+		$('#account').on('click', function(event) {
+			event.preventDefault();
+			return false;
+		});
+
+		$('.dropdown-menu .btn').on('click', function(event) {
+			event.preventDefault();
+			return false;
+		});
+
+		// Authenticate an application user based on the submitted information
+		async function handleLogin() {
+			const email = loginEmailEl.value;
+			const password = loginPasswordEl.value;
+			const credential = new UserPasswordCredential(email, password);
+
+			try {
+				await stitchClient.auth.loginWithCredential(credential);
+				const user = stitchClient.auth.user;
+				showLoggedInState();
+				displaySuccess(`Logged in as: ${user.profile.data.email}`)
+
+			} catch (e) {
+				handleError(e)
+			}
+		}
+		},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
@@ -107,6 +127,7 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
+		themeApp.stitchLogin();
 	}
 }
 

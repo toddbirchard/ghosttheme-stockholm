@@ -45,7 +45,7 @@
 				      	<a class="btn btn-success" href="/">Ok cool</a>
 					    </div>
 						</form>
-						<a class="secondarylink"><i class="fal fa-arrow-left"></i> Actually nevermind</a>
+						<div><i class="fal fa-arrow-left"></i><a class="secondarylink">< Actually nevermind</a></div>
 					</div>
 
 					<div id="resend-confirmation" hidden>
@@ -64,11 +64,7 @@
 
 	<script>
 
-	const {
-  Stitch,
-  UserPasswordAuthProviderClient,
-  UserPasswordCredential
-} = stitch;
+
 
 const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
 
@@ -130,8 +126,6 @@ const emailPasswordClient = stitchClient.auth
 		const registerEmailEl = document.getElementById("create-a-user-email");
 		const registerPasswordEl = document.getElementById("create-a-user-password");
 		const resendConfirmationEmailEl = document.getElementById("resend-confirmation-email");
-		const loginEmailEl = document.getElementById("login-email");
-		const loginPasswordEl = document.getElementById("login-password");
 		const notificationEl = document.getElementById("info");
 		const loggedInEl = document.getElementById("logged-in");
 		const postRegistrationEl = document.getElementById("finished-registration");
