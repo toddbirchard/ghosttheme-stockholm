@@ -80,25 +80,7 @@
       position: relative !important;
     }
 
-    #finished-registration {
-      .btn {
-        width: 182px;
-        margin: 0 auto;
-        color: #fff;
-        margin: 0 auto;
-        background: linear-gradient(345deg,#3da771,#21b7b0);
 
-        &:hover {
-            background: linear-gradient(345deg,#1a8645,#0c9696);
-        }
-
-        a {
-            font-size: 15px;
-            line-height: 1;
-            margin: 40px auto 20px;
-        }
-      }
-    }
   }
 
   .signup {
@@ -184,6 +166,7 @@
       background: #b8d2c9;
       color: #316f45;
       display: none;
+      transition: all .3s easeout;
 
       &::before {
         content: "\f00c";
@@ -204,6 +187,7 @@
       padding: 5px;
       color: #004800;
       display: none;
+      transition: all .3s easeout;
 
       &::before {
         content: "\f00c";
@@ -215,6 +199,27 @@
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         margin-right: 10px;
+      }
+    }
+  }
+
+  #finished-registration {
+    .btn {
+      width: 182px;
+      margin: 0 auto;
+      color: #fff;
+      margin: 0 auto;
+      background: linear-gradient(345deg,#3da771,#21b7b0);
+      transition: all .3s easeout;
+
+      &:hover {
+          background: linear-gradient(345deg,#1a8645,#0c9696);
+      }
+
+      a {
+          font-size: 15px;
+          line-height: 1;
+          margin: 40px auto 20px;
       }
     }
   }
