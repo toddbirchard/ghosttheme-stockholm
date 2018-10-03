@@ -67,7 +67,6 @@
 			const password = registerPasswordEl.value;
 
 			try {
-
 				await emailPasswordClient.registerWithEmail(email, password)
 				showPostRegistrationState()
 				displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
@@ -163,7 +162,6 @@
 			clearNotifications()
 			resendConfirmationEl.hidden = false;
 			loginFormEl.hidden = true;
-			registerFormEl.hidden = true;
 			loggedInEl.hidden = true;
 			postRegistrationEl.hidden = true;
 		}
@@ -173,7 +171,6 @@
 			clearNotifications()
 			resendConfirmationEl.hidden = true;
 			loginFormEl.hidden = true;
-			registerFormEl.hidden = true;
 			loggedInEl.hidden = false;
 			postRegistrationEl.hidden = true;
 		}
@@ -182,7 +179,6 @@
 			clearFields([registerEmailEl, registerPasswordEl]);
 			resendConfirmationEl.hidden = true;
 			loginFormEl.hidden = true;
-			registerFormEl.hidden = true;
 			loggedInEl.hidden = true;
 			postRegistrationEl.hidden = false;
 		}
