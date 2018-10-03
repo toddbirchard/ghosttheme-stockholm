@@ -82,8 +82,20 @@
 
     #finished-registration {
       .btn {
+        width: 182px;
+        margin: 0 auto;
+        color: #fff;
+        margin: 0 auto;
+        background: linear-gradient(345deg,#3da771,#21b7b0);
+
+        &:hover {
+            background: linear-gradient(345deg,#1a8645,#0c9696);
+        }
+
         a {
-            background: linear-gradient(135deg,#4fc388,#21b6b7);
+            font-size: 15px;
+            line-height: 1;
+            margin: 40px auto 20px;
         }
       }
     }
@@ -111,6 +123,11 @@
         font-size: 1.3em;
         padding: 10px 17px;
         border: 1px solid #bdbdbd;
+
+        &:hover {
+          border: 1px solid #a5a9b5;
+          background-color: #e5f8fb;
+        }
 
         &:focus {
           border: 1px solid @theme-color;

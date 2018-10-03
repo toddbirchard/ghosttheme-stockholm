@@ -41,7 +41,7 @@
 							<button class="btn btn-success" onclick="handleSignup()">Create Account</button>
 						</form>
 						<div id="finished-registration" hidden>
-							<a class="btn btn-success" href="/">Ok cool</a>
+							<a class="btn btn-success" href="/">You did it!</a>
 						</div>
 						<div id="resend-confirmation" hidden>
 							<h4>Send a New Confirmation Email</h4>
@@ -177,6 +177,8 @@
 			resendConfirmationEl.hidden = true;
 			loggedInEl.hidden = true;
 			postRegistrationEl.hidden = false;
+			$('#create-a-user btn').css('display', 'none');
+			$('.secondarylink').css('display', 'none');
 		}
 
 		function setPostRegistrationState() {
