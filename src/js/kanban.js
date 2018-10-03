@@ -1,4 +1,4 @@
-const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+/*const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
 
 $(document).ready(function(){
 
@@ -136,3 +136,4 @@ $(document).ready(function(){
 
 
 });
+*/

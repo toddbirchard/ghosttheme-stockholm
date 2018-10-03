@@ -8,18 +8,15 @@
 	<title>{{meta_title}}</title>
 	<meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
 	{{! Styles }}
 	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
-	<!-- Fonts -->
-
 	{{! Scripts }}
 	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
-
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="{{asset "/js/includes/secret.js"}}"></script>
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">

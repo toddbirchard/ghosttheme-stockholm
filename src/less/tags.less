@@ -1,5 +1,8 @@
 @import "variables.less";
 @import "mixin.less";
+@import "fonts.less";
+
+
 .meta-item {
   display: flex;
   justify-items: center;
@@ -20,6 +23,17 @@
 
     * {
       color: #69a202 !important;
+    }
+
+    span::before {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 400;
+      content: '\f3d3';
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
     }
   }
 

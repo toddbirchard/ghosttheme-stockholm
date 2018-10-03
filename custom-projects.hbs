@@ -27,6 +27,7 @@
 <script>
 const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
 
+
 $(document).ready(function(){
   function populateCards(cards, status) {
       for (var i = 0; i < cards.length; i++) {
