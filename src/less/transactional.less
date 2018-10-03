@@ -1,8 +1,7 @@
 @import "variables.less";
 
-
 .transactional {
-      background: linear-gradient(135deg,#7376e4,#175d8e);
+  background: linear-gradient(135deg,#7376e4,#175d8e);
   width: 100%;
   height: 100%;
   position: relative;
@@ -26,7 +25,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-        padding: 0 0 30px 0;
+    padding: 0 0 30px;
     text-align: center;
 
     p {
@@ -121,6 +120,15 @@
 
   .secondarylink {
     color: @header-color;
+    font-weight: 700;
+
+    i {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 600;
+      color: #276890;
+      margin-right: 5px;
+      font-size: 0.9em;
+    }
   }
 
   #info {
@@ -128,7 +136,6 @@
     text-align: left;
     width: 100%;
     height: 43px;
-
     position: relative;
 
     #error {
@@ -169,5 +176,11 @@
         margin-right: 10px;
       }
     }
+  }
+
+  input:-webkit-autofill,
+  select:-webkit-autofill,
+  textarea:-webkit-autofill {
+    background-color: rgb(142, 193, 218) !important;
   }
 }
