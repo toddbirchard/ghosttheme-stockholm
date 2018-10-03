@@ -23,9 +23,7 @@
 
 <body class="transactional signup-template">
 	<!-- start site's main content area -->
-
 		{{#post}}
-
 				<!-- start post -->
 				<div class="card">
 					<div id="info">
@@ -36,9 +34,6 @@
 
 						<h1>{{title}}</h1>
 
-
-
-
 						<form id="create-a-user">
 							<label for="create-a-user-email">Email:</label>
 							<input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" autocomplete="email" />
@@ -46,7 +41,7 @@
 							<input type="password" class="form-control" id="create-a-user-password" aria-label="create-a-user-password" />
 							<button class="btn btn-success" onclick="handleSignup()">Create Account</button>
 						</form>
-						<div><i class="fas fa-arrow-alt-left"></i><a href="/" class="secondarylink"> Actually nevermind</a></div>
+						<div><a href="/" class="secondarylink"><i class="fas fa-arrow-alt-left"></i> Actually nevermind</a></div>
 					</div>
 
 					<div id="resend-confirmation" hidden>
@@ -69,8 +64,6 @@
 	<!-- end site's main content area -->
 
 	<script>
-
-
 		// Register a new application user when the user submits their information
 		async function handleSignup() {
 			const email = registerEmailEl.value;
@@ -227,13 +220,10 @@
 			$('#error').css('display', 'block');
 		}
 
-
 		$('.btn').on('click', function(event) {
 			event.preventDefault();
 			return false;
 		});
 	</script>
-
 </body>
-
 </html>

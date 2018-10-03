@@ -110,7 +110,6 @@
 			function showRegistrationForm() {
 				clearNotifications();
 				resendConfirmationEl.hidden = true;
-				controlPanelEl.hidden = true;
 				registerFormEl.hidden = false;
 				loggedInEl.hidden = true;
 				postRegistrationEl.hidden = true;
@@ -119,7 +118,6 @@
 			function showLoginForm() {
 				clearNotifications();
 				resendConfirmationEl.hidden = true;
-				controlPanelEl.hidden = true;
 				loginFormEl.hidden = false;
 				loggedInEl.hidden = true;
 				postRegistrationEl.hidden = true;
@@ -128,7 +126,6 @@
 			function showControlPanel() {
 				clearNotifications()
 				resendConfirmationEl.hidden = true;
-				controlPanelEl.hidden = false;
 				loginFormEl.hidden = true;
 				registerFormEl.hidden = true;
 				loggedInEl.hidden = true;
@@ -138,7 +135,6 @@
 			function showResendConfirmationForm() {
 				clearNotifications()
 				resendConfirmationEl.hidden = false;
-				controlPanelEl.hidden = true;
 				loginFormEl.hidden = true;
 				registerFormEl.hidden = true;
 				loggedInEl.hidden = true;
@@ -149,7 +145,6 @@
 				clearFields([loginEmailEl, loginPasswordEl]);
 				clearNotifications()
 				resendConfirmationEl.hidden = true;
-				controlPanelEl.hidden = true;
 				loginFormEl.hidden = true;
 				registerFormEl.hidden = true;
 				loggedInEl.hidden = false;
@@ -159,7 +154,6 @@
 			function showPostRegistrationState() {
 				clearFields([registerEmailEl, registerPasswordEl]);
 				resendConfirmationEl.hidden = true;
-				controlPanelEl.hidden = true;
 				loginFormEl.hidden = true;
 				registerFormEl.hidden = true;
 				loggedInEl.hidden = true;
