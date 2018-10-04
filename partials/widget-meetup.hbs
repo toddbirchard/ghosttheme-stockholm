@@ -1,10 +1,10 @@
 <script>
 
-stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
   console.log('logged in anonymously as user')
 });
 
-stitchClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+client.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
   console.log(JSON.stringify(result))
   console.log(result.meetup)
   if (result.meetup) {createMeetupCard(result.meetup)}
