@@ -1,9 +1,5 @@
 {{#author}}
 <div class="sidebar">
-	<script>
-		const authorsClient  = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
-		const db = authorsClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
-	</script>
 	{{> widget-authorwebsite}}
 	{{> widget-github}}
 	{{> widget-medium}}

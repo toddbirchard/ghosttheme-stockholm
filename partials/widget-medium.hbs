@@ -25,11 +25,11 @@ function createMediumCard(medium){
 }
 
 
-authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
   console.log('logged in anonymously as user')
 });
 
-authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+stitchClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
   createMediumCard(result.medium)
 });
 
