@@ -13,11 +13,6 @@
 
 
 var themeApp = {
-	initializeAndLogin: function() {
-    stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-      console.log(`Logged in as anonymous user with id ${user.id}`);
-    });
-  },
 	featuredMedia: function(){
 		$(".post").each(function() {
 			var thiseliment = $(this);
