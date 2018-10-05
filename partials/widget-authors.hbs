@@ -12,6 +12,16 @@
         		<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" class="avi"></a>
 					{{/if}}
 					<a href="{{url}}" class="single-author-name">{{name}}</a>
+					<div class="title"><span></span></div>
+					<!--<script>
+					stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
+						consoloe.log('logged in');
+					});
+
+						stitchClient.callFunction("AuthorTitle", ["{{slug}}"]).then(result => {
+							$('.title span').text(${result});
+						});
+					</script>-->
 				</div>
 				{{/foreach}}
 			{{/get}}

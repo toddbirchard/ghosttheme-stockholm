@@ -61,7 +61,8 @@ function styles() {
 function scripts() {
   return gulp.src(paths.scripts.src)
     .pipe(babel({
-          presets: ['@babel/env']
+          presets: ['@babel/env'],
+          plugins: ['@babel/transform-runtime', '@babel/plugin-syntax-dynamic-import']
     }))
     .on('error', console.error.bind(console))
     .pipe(resolveDependencies({

@@ -4,10 +4,20 @@
   2. Initialization
 ====================================================*/
 
+// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+
 /*===========================
  1. function declaretion
  ==========================*/
+
+
+
 var themeApp = {
+	initializeAndLogin: function() {
+    stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(user => {
+      console.log(`Logged in as anonymous user with id ${user.id}`);
+    });
+  },
 	featuredMedia: function(){
 		$(".post").each(function() {
 			var thiseliment = $(this);
@@ -84,7 +94,12 @@ var themeApp = {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
 	stitchLogin: function() {
-		/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
+		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
+			Stitch.defaultAppClient.callFunction("AuthorTitle", ["todd"]).then(
+				function(result) {$('.title span').text(result)}
+				)
+			);
+				/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
 
 		$('#account').on('click', function(event) {
 			event.preventDefault();
