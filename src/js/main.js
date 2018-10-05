@@ -95,7 +95,7 @@ var themeApp = {
 	  },
 	stitchLogin: function() {
 		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
-			Stitch.defaultAppClient.callFunction("AuthorTitle", ["todd"]).then(result => {
+			Stitch.defaultAppClient.callFunction("AuthorTitle", "todd").then(result => {
 					console.log(result);
 					$('.title > span').text(result);
 				})
