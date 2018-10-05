@@ -92,7 +92,7 @@ var themeApp = {
 		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
 			Stitch.defaultAppClient.callFunction("AuthorTitle", ["todd"]).then(result => {
 					console.log(result);
-					$('.title > span').text(result['title']);
+					$('.single-author .info .role').text(result['title']);
 				})
 			);
 				/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
