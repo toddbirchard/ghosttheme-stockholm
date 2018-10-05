@@ -96,7 +96,7 @@ var themeApp = {
 	stitchLogin: function() {
 		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
 			Stitch.defaultAppClient.callFunction("AuthorTitle", ["todd"]).then(
-				function(result) {$('.title span').text(result)}
+				function(result) {console.log(result); $('.title > span').text(result)}
 				)
 			);
 				/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
