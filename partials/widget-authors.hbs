@@ -11,8 +11,10 @@
 					{{#if profile_image}}
         		<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" class="avi"></a>
 					{{/if}}
-					<a href="{{url}}" class="single-author-name">{{name}}</a>
-					<div class="title"><span></span></div>
+					<div class="info">
+						<a href="{{url}}" class="single-author-name">{{name}}</a>
+						<span class="role"></span>
+					</div>
 				</div>
 				{{/foreach}}
 			{{/get}}
