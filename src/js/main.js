@@ -90,11 +90,15 @@ var themeApp = {
 	  },
 	stitchLogin: function() {
 		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
-			Stitch.defaultAppClient.callFunction("AuthorTitle", ["todd"]).then(result => {
-					console.log(result);
-					$('.single-author .info .role').text(result['title']);
-				})
-			);
+			$('.recent-post .single-author').each(function() {
+				var name = $(this).attr('data-value');
+				Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
+						console.log(result);
+						$('.single-author .info .role').text(result['title']);
+					})
+				}
+			)
+		)
 				/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
 
 		$('#account').on('click', function(event) {
