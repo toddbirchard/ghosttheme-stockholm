@@ -48,7 +48,7 @@ code {
   display: block;
   overflow-y: scroll!important;
   overflow-x: hidden!important;
-  background: #323335!important;
+  background: #353540!important;
   overflow-wrap: break-word;
   font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
   margin: 0;
@@ -126,18 +126,20 @@ code {
 .hljs.javascript {
   .hljs-bullet,
   .hljs-link,
-  .hljs-meta,
   .hljs-selector-id,
   .hljs-symbol,
   .hljs-title {
     color: #7bb8ea;
   }
 
+  .hljs-meta {
+    color: #8e75a9;
+  }
+
   .hljs-doctag,
-  .hljs-formula,
-  .hljs-keyword {
-    color: #5fc576;
-    font-weight: 600;
+  .hljs-formula {
+    color: #4285ff;
+    font-weight: 900;
   }
 
   .hljs-deletion,
@@ -159,11 +161,20 @@ code {
   .hljs-meta-string,
   .hljs-regexp,
   .hljs-string {
-    color: #99abd6!important;
+    color: #82b7ec!important;
     font-size: 13px;
   }
 
-  .hljs-attr,
+  .hljs-keyword {
+    color: #d575ec;
+    font-weight: 900;
+  }
+
+
+
+  .hljs-attr{
+    color: #8dd8bc;
+  }
   .hljs-number,
   .hljs-selector-attr,
   .hljs-selector-class,
@@ -216,6 +227,15 @@ code {
 .hljs-symbol,
 .hljs-title {
   color: #61aeee;
+}
+
+.hljs .json {
+  .hljs-attr {
+    color: #ff7fca;
+  }
+  .hljs-string {
+    color: #c39dea;
+  }
 }
 
 .hljs-strong {
