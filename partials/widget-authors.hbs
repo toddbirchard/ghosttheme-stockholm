@@ -22,11 +22,11 @@
 					stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
 						Stitch.defaultAppClient.callFunction("AuthorTitle", "{{slug}}").then(result => {
 								console.log(result);
-								return result;
+								return result['title'];
 							})
 					)
 				}
-					$('.{{slug}} .role').textgetTitles();
+					$('.{{slug}} .role').text(getTitles());
 				</script>
 				{{/foreach}}
 			{{/get}}
