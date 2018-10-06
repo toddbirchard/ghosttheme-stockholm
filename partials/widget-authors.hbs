@@ -17,17 +17,6 @@
 						<span class="role"></span>
 					</div>
 				</div>
-				<script>
-				function getTitles(){
-					stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
-						Stitch.defaultAppClient.callFunction("AuthorTitle", "{{slug}}").then(result => {
-								console.log(result);
-								return result['title'];
-							})
-					)
-				}
-					$('.{{slug}} .role').text(getTitles());
-				</script>
 				{{/foreach}}
 			{{/get}}
 			</div>
