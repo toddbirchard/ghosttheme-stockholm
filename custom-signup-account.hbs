@@ -125,6 +125,7 @@
 		function displaySuccess(successMessage) {
 			clearNotifications();
 			successEl.innerText = successMessage
+			$('.card').append('<img class="successgif" src="{{asset img/succes.gif}}"');
 		}
 
 		function clearNotifications() {
