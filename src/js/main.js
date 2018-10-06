@@ -92,7 +92,7 @@ var themeApp = {
 		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
 			$('.recent-post .single-author').each(function() {
 				var name = $(this).attr('data-value');
-				console.log()name
+				console.log('title = ' + name);
 				Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
 						console.log(result);
 						$('.single-author .info .role').text(result['title']);
