@@ -88,22 +88,6 @@ var themeApp = {
 		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
-	authorTitles: function(title){
-		/*stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
-			Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
-					console.log(result);
-					return result;
-				})
-		)*/
-	},
-	stitchLogin: function() {
-		/*	$('.recent-post .single-author').each(function() {
-				var name = $(this).attr('data-value');
-				$(this).find('role').text(authorTitles(name));
-				console.log('title = ' + name);
-				}
-			)*/
-	},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
