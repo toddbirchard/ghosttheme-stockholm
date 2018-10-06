@@ -96,7 +96,6 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
-		themeApp.stitchLogin();
 		themeApp.tags();
 	}
 }
