@@ -96,7 +96,7 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
-		themeApp.tags();
+		//themeApp.tags();
 	}
 }
 
