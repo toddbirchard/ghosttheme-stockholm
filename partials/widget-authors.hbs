@@ -5,7 +5,7 @@
 		{{#get "users"}}
 			{{#foreach users}}
 
-				<div class="single-author" data-value="{{slug}}">
+				<div class="single-author {{slug}}">
 					{{#unless profile_image}}
 						<a href="{{url}}"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
 					{{/unless}}
