@@ -95,7 +95,7 @@ var themeApp = {
 				console.log('title = ' + name);
 				Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
 						console.log(result);
-						$('.single-author .info .role').text(result['title']);
+						$(this).find('role').text(result['title']);
 					})
 				}
 			)
