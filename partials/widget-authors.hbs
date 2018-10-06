@@ -18,13 +18,16 @@
 					</div>
 				</div>
 				<script>
+				function getTitles(){
 					stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
 						Stitch.defaultAppClient.callFunction("AuthorTitle", "{{slug}}").then(result => {
 								console.log(result);
 								return result;
 							})
 					);
-					$('.{{slug}} .role').text(authorTitles(name));
+				}
+
+					$('.{{slug}} .role').textgetTitles());
 				</script>
 				{{/foreach}}
 			{{/get}}
