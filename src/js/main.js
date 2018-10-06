@@ -88,77 +88,21 @@ var themeApp = {
 		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
-	stitchLogin: function() {
-		stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
-			$('.recent-post .single-author').each(function() {
-				var name = $(this).attr('data-value');
-				console.log('title = ' + name);
-				Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
-						console.log(result);
-						$(this).find('role').text(result['title']);
-					})
-				}
-			)
-		)
-				/*const stitchClient = Stitch.initializeDefaultAppClient("hackers-uangn");
-
-		$('#account').on('click', function(event) {
-			event.preventDefault();
-			return false;
-		});
-
-		$('.dropdown-menu .btn').on('click', function(event) {
-			event.preventDefault();
-			return false;
-		});
-
-		// Authenticate an application user based on the submitted information
-		async function handleLogin() {
-			const email = loginEmailEl.value;
-			const password = loginPasswordEl.value;
-			const credential = new UserPasswordCredential(email, password);
-
-			try {
-				await stitchClient.auth.loginWithCredential(credential);
-				const user = stitchClient.auth.user;
-				showLoggedInState();
-				displaySuccess(`Logged in as: ${user.profile.data.email}`)
-
-			} catch (e) {
-				handleError(e)
-			}
-		}*/
+	authorTitles: function(title){
+		/*stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
+			Stitch.defaultAppClient.callFunction("AuthorTitle", name).then(result => {
+					console.log(result);
+					return result;
+				})
+		)*/
 	},
-	tags: function() {
-		var tags = {
-	    nodejs: '<i class="fab fa-node-js"></i>',
-	    aws: '<i class="fab fa-aws"></i>',
-	    python: '<i class="fab fa-python"></i>',
-	    django: '<i class="fab fa-python"></i>',
-	    nosql: '<i class="fab fa-envira"></i>',
-	    apis: '<i class="fab fa-hubspot"></i>',
-	    frontend: '<i class="far fa-code"></i>',
-	    data: '<i class="fas fa-chart-pie"></i>',
-	    mysql: '<i class="fas fa-database"></i>',
-	    javascript: '<i class="fab fa-js-square"></i>',
-	    roundup: '<i class="fas fa-undo-alt"></i>',
-	    excel: '<i class="fal fa-table"></i>',
-	    devops: '<i class="fas fa-server"></i>',
-	    pandas: '<i class="fas fa-database"></i>',
-	    datascience: '<i class="fas fa-flask"></i>',
-	    tableau: '<i class="far fa-asterisk"></i>',
-	    googlecloud: '<i class="fab fa-google"></i>',
-	    sql: '<i class="fas fa-database"></i>',
-	    statistics: '<i class="far fa-chart-bar"></i>',
-	    flask: '<i class="fab fa-affiliatetheme"></i>',
-	    expressjs: '<i class="fab fa-etsy"></i>',
-	    atlassian: '<i class="fab fa-trello"></i>',
-	    codesnippetcorner: '<i class="fal fa-laptop-code"></i>'
-	  };
-
-	  for (var key in tags) {
-	    $('.' + key).find('i').replaceWith( tags[key] );
-	  }
+	stitchLogin: function() {
+		/*	$('.recent-post .single-author').each(function() {
+				var name = $(this).attr('data-value');
+				$(this).find('role').text(authorTitles(name));
+				console.log('title = ' + name);
+				}
+			)*/
 	},
 	init: function() {
 		themeApp.featuredMedia();

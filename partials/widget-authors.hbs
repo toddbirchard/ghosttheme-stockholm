@@ -4,6 +4,7 @@
 	<div class="recent-post">
 		{{#get "users"}}
 			{{#foreach users}}
+
 				<div class="single-author" data-value="{{slug}}">
 					{{#unless profile_image}}
 						<a href="{{url}}"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
@@ -16,6 +17,15 @@
 						<span class="role"></span>
 					</div>
 				</div>
+				<script>
+					stitchClient.auth.loginWithCredential(new AnonymousCredential()).then(
+						Stitch.defaultAppClient.callFunction("AuthorTitle", "{{slug}}").then(result => {
+								console.log(result);
+								return result;
+							})
+					);
+					$('.{{slug}} .role').text(authorTitles(name));
+				</script>
 				{{/foreach}}
 			{{/get}}
 			</div>
