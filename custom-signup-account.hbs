@@ -126,6 +126,9 @@
 			clearNotifications();
 			successEl.innerText = successMessage;
 			$('.card').append('<img class="successgif" src="/assets/images/success.gif">');
+			$('.card form').animate({
+				'height': 0
+			},500, ease-out);
 		}
 
 		function clearNotifications() {
