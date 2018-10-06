@@ -20,10 +20,9 @@
 				<script>
 
 				function setRole(result) {
-					$('.' + result.slug.find('.role').text(result.title)
+					$('.' + result.slug).find('.role').text(result.title)
 				})
-
-
+ 
 				stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
 					console.log('logged in anonymously as user')
 				});
