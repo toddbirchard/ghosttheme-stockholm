@@ -4,7 +4,17 @@
   2. Initialization
 ====================================================*/
 
-// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+const {
+	Stitch,
+	UserPasswordAuthProviderClient,
+	UserPasswordCredential,
+    AnonymousCredential
+} = stitch;
+
+
+const stitchClient = Stitch.initializeDefaultAppClient('hackers-uangn');
+const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
 
 /*===========================
  1. function declaretion
