@@ -113,6 +113,11 @@
     width: 42%;
     border-right: 1px solid #dcdcdc!important;
     border-bottom: 1px solid #dcdcdc !important;
+
+    @media(max-width: 1040px) {
+      width: 40%;
+    }
+
     @media(max-width: 800px) {
       padding: 20px;
       width: 90%!important;
@@ -161,16 +166,17 @@
       margin-bottom: 15px;
       display: inline-block;
       @media(max-width: 1040px) {
-        margin: 0 auto 15px;
+        margin: 0 auto;
         display: block;
         text-align: center;
       }
 
       .avatar {
-        width: 70px;
+        width: 85px;
         margin: 0;
-        .border-radius(50%);
-        height: 70px;
+        height: 85px;
+
+        
       }
     }
 
@@ -178,6 +184,7 @@
       width: 65%;
       display: inline-block;
       margin-left: 6px;
+          overflow: hidden;
       @media(max-width: 1040px) {
         text-align: center;
         width: 100%;
@@ -194,9 +201,11 @@
       font-weight: 100;
       float: left !important;
       font-size: 14px;
-      margin: 10px 0 !important;
+      margin: 0 auto!important;
+      max-width: 450px;
       @media(max-width: 1040px) {
         text-align: center;
+        float: none !important;
       }
     }
 
@@ -219,7 +228,13 @@
       line-height: 1.5;
       font-weight: 100;
       color: @text-color-light;
-      margin-bottom: 7px;
+
+      a {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline;
+      }
+
       @media (max-width: 1040px) {
         justify-content: center !important;
       }
@@ -227,12 +242,14 @@
       span {
         margin-right: 10px;
         display: block;
+        margin-bottom: 2px;
         @media (max-width: 1040px) {
           margin: 0 15px 3px;
         }
 
         i {
           margin-right: 7px;
+          display: inline;
         }
         @media(max-width: 600px) {
           display: block !important;

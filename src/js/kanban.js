@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  if ($('body').hasClass('page-projects')){
   function populateCards(cards, status) {
       for (var i = 0; i < cards.length; i++) {
         $('#' + status + ' .cards').append('<div class="card"> \n' +
@@ -140,4 +141,5 @@ stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(use
     swiper.slideTo(0, 300, false);
     swiper.pagination.update();
   });
+}
 });
