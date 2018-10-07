@@ -1,7 +1,4 @@
-/*const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-
 $(document).ready(function(){
-
 
   function populateCards(cards, status) {
       for (var i = 0; i < cards.length; i++) {
@@ -26,10 +23,8 @@ $(document).ready(function(){
     const progressColumn = document.getElementById("inprogress");
     const doneColumn = document.getElementById("done");
 
-
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'backlog')
@@ -37,8 +32,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'todo')
@@ -46,8 +41,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'progress')
@@ -55,8 +50,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'done')
@@ -64,19 +59,19 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.callFunction("numCards", ["Backlog"]).then(result => {
+    stitchClient.callFunction("numCards", ["Backlog"]).then(result => {
         $('#backlog .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["To Do"]).then(result => {
+    stitchClient.callFunction("numCards", ["To Do"]).then(result => {
         $('#todo .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["In Progress"]).then(result => {
+    stitchClient.callFunction("numCards", ["In Progress"]).then(result => {
         $('#progress .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["Done"]).then(result => {
+    stitchClient.callFunction("numCards", ["Done"]).then(result => {
         $('#done .count').text(result + ' issues');
     });
 
@@ -133,7 +128,4 @@ $(document).ready(function(){
     swiper.slideTo(0, 300, false);
     swiper.pagination.update();
   });
-
-
 });
-*/
