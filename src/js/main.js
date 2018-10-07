@@ -1,10 +1,9 @@
+'use strict';
 /*====================================================
   TABLE OF CONTENTS
   1. function declaretion
   2. Initialization
 ====================================================*/
-
-// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
 
 /*===========================
  1. function declaretion
