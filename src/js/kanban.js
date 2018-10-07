@@ -23,6 +23,8 @@ $(document).ready(function(){
     const progressColumn = document.getElementById("inprogress");
     const doneColumn = document.getElementById("done");
 
+
+
     stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
@@ -59,21 +61,31 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.callFunction("numCards", ["Backlog"]).then(result => {
-        $('#backlog .count').text(result + ' issues');
-    });
 
-    stitchClient.callFunction("numCards", ["To Do"]).then(result => {
-        $('#todo .count').text(result + ' issues');
-    });
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+     stitchClient.callFunction("numCards", ["Done"]).then(results => {
+       $('#done .count').text(result + ' issues');
+     })
+  });
 
-    stitchClient.callFunction("numCards", ["In Progress"]).then(result => {
-        $('#progress .count').text(result + ' issues');
-    });
+  stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+   stitchClient.callFunction("numCards", ["To Do"]).then(results => {
+     $('#todo .count').text(result + ' issues');
+   })
+});
 
-    stitchClient.callFunction("numCards", ["Done"]).then(result => {
-        $('#done .count').text(result + ' issues');
-    });
+
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ stitchClient.callFunction("numCards", ["In Progress"]).then(results => {
+   $('#progress .count').text(result + ' issues');
+ })
+});
+
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ stitchClient.callFunction("numCards", ["Backlog"]).then(results => {
+   $('#backlog .count').text(result + ' issues');
+ })
+});
 
 
     var swiper = new Swiper('.swiper-container', {
