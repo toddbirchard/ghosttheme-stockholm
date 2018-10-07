@@ -64,26 +64,26 @@ $(document).ready(function(){
 
     stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
      stitchClient.callFunction("numCards", ["Done"]).then(results => {
-       $('#done .count').text(result + ' issues');
+       $('#done .count').text(results + ' issues');
      })
   });
 
   stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
    stitchClient.callFunction("numCards", ["To Do"]).then(results => {
-     $('#todo .count').text(result + ' issues');
+     $('#todo .count').text(results + ' issues');
    })
 });
 
 
 stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
  stitchClient.callFunction("numCards", ["In Progress"]).then(results => {
-   $('#progress .count').text(result + ' issues');
+   $('#progress .count').text(results + ' issues');
  })
 });
 
 stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
  stitchClient.callFunction("numCards", ["Backlog"]).then(results => {
-   $('#backlog .count').text(result + ' issues');
+   $('#backlog .count').text(results + ' issues');
  })
 });
 
