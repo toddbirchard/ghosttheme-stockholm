@@ -20,6 +20,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		 margin-bottom: 20px;
 
 		a {
 			color: @text-post-header;
@@ -68,26 +69,26 @@
 			@media(max-width:900px) {
 				width: fit-content !important;
 				height: fit-content;
-				padding: 12px 11px;
+				padding: 10px;
 			}
 			@media(max-width:600px) {
       	padding: 9px 11px!important;
 			}
 
 			&.facebook {
-			  background-color: lighten(@facebook-color, 20%);
+			  background-color: lighten(@facebook-color, 15%);
 			}
 
 			&.twitter {
-			  background-color: lighten(@twitter-color, 10%);
+			  background-color: lighten(@twitter-color, 5%);
 			}
 
 			&.linkedin {
-			  background-color: lighten(@linkedin-color, 10%);
+			  background-color: lighten(@linkedin-color, 5%);
 			}
 
 			&.rss {
-			  background-color: lighten(@rss-color, 20%);
+			  background-color: lighten(@rss-color, 15%);
 			}
 
 			a {
@@ -155,9 +156,6 @@
 			.transition(all 0.2s ease);
 			font-size: 0.9em;
 			margin: 5px 10px 5px 0;
-
-
-
 
 			&:hover {
 				color: @white;

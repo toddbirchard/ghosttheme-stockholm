@@ -5,7 +5,7 @@
 var gulp = require('gulp'),
   less = require('gulp-less'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglify-es'),
   rename = require('gulp-rename'),
   handlebars = require('gulp-handlebars'),
   declare = require('gulp-declare'),
@@ -15,7 +15,9 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   precss = require('precss'),
   babel = require('gulp-babel'),
-  resolveDependencies = require('gulp-resolve-dependencies');
+  resolveDependencies = require('gulp-resolve-dependencies'),
+  livereload = require('gulp-livereload'),
+  browserSync = require('browser-sync');
 
 
 var paths = {
@@ -34,11 +36,10 @@ var paths = {
 };
 
 function styles() {
-  return gulp
-    .src(paths.styles.src, {
-      sourcemaps: true
-    })
+  return gulp.src(paths.styles.src)
+    .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
     .pipe(rename({
       basename: 'main',
       suffix: '.min'
@@ -50,26 +51,23 @@ function styles() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(postcss([require('precss'), require('autoprefixer')]))
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(sourcemaps.init())
-    .pipe(postcss([require('precss'), require('autoprefixer')]))
-    .pipe(sourcemaps.write('.'));
+    .pipe(livereload())
+    .pipe(browserSync.reload({stream:true}));
 }
 
 function scripts() {
-  return gulp
-    .src(paths.scripts.src, {
-      sourcemaps: true
-    })
-    .pipe(sourcemaps.init())
+  return gulp.src(paths.scripts.src)
     .pipe(babel({
-        presets: ['env']
+          presets: ['@babel/env'],
+          plugins: ['@babel/transform-runtime', '@babel/plugin-syntax-dynamic-import']
     }))
+    .on('error', console.error.bind(console))
     .pipe(resolveDependencies({
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
-    .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -92,9 +90,6 @@ function watch() {
 }
 
 var build = gulp.parallel(styles, scripts, templates, watch);
-var buildandexit = gulp.parallel(styles, scripts, templates);
 
 gulp.task(build);
-
 gulp.task('default', build);
-gulp.task('buildandexit', gulp.series('styles', 'scripts', 'templates'))

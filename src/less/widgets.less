@@ -4,14 +4,29 @@
 	sidebar
 ====================================================*/
 .sidebar {
-	.form-group {
+	.search {
 		position: relative;
+
+		&::after {
+			content: '\f002';
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 800;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			right: 13px;
+			top: 14px;
+			position: absolute;
+			    color: #9aa1bd;
+		}
 
 		#my-custom-input {
 			box-shadow: 0 0 5px rgba(65,67,144,.15);
 			background: white;
 			align-items: center;
-			padding: 12px 5%;
+			padding: 17px 5%;
 	    width: 90%;
 	    font-size: 1em;
 	    font-family: 'CompassSans-Light',AvenirNextLTPro-Light,sans-serif!important;
@@ -127,7 +142,7 @@
 		a {
 			border: 0;
 			padding: 7px 12px;
-			color: #7299b3;
+			color: #497CA6;
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
@@ -137,12 +152,13 @@
 			-ms-transition: all 0.2s ease;
 			-o-transition: all 0.2s ease;
 			transition: all 0.2s ease;
-			background: #dbe7f7;
+			background: #d3e2f5;
 			flex-grow: 1;
-			text-align: center;
+			 text-align: center;
 			.transition(all 0.2s ease);
       transition: all .2s ease;
       box-shadow: 1px 1px 0 #c8d3e2;
+
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
 				margin: 0 5px 5px 0;
@@ -152,6 +168,7 @@
 				color: @white;
 				background: @theme-color;
 				text-decoration: none;
+				box-shadow: 1px 1px 0 #667c98;
 			}
 		}
 	}
@@ -161,6 +178,9 @@
 
 		&:first-of-type {
 			padding-top: 0;
+			margin-right: 0;
+
+
 		}
 
 		.social-btns {
@@ -217,6 +237,7 @@
 
 			input {
 				font-weight: 100;
+				border: 1px solid #d5dbe6;
 				transition: all 0.3s all;
 
 				&::placeholder {
@@ -257,20 +278,22 @@
 			}
 
 			.recent-single-post {
-				border-bottom: 0;
-				padding: 0;
-				/*background: linear-gradient(190deg,rgb(255, 255, 255) 0,rgba(99, 101, 202, 0.11));*/
-				background: #f4f9ff;
+				border-bottom: 1px solid #d5dde8;
 				margin-bottom: 10px;
 				overflow: hidden;
 				display: inline-block;
 				align-items: center;
 				display: flex;
+				padding: 0 0 12px!important;
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
+
 			}
 
 			.series-image {
-				height: 80px;
-				width: 90px;
+				height: 63px;
 				min-width: 90px;
 				display: flex;
 				align-items: center;
@@ -301,7 +324,7 @@
 
 			.recent-single-post {
 				padding: 0;
-				box-shadow: 0 0 5px rgba(80,82,204,.11), 0 2px 1px rgba(80,82,204,.11);
+
 
 				&:nth-of-type(1) {
 					display: none;
@@ -362,7 +385,7 @@
 			margin: 0;
 			font-size: 15px;
 			line-height: 1.65;
-			padding-right: 44px;
+			padding-right: 0;
 		}
 	}
 
@@ -499,6 +522,8 @@
 
 		.form-group {
 			width: 100%;
+
+
 		}
 
 		.subscribe-email {

@@ -6,15 +6,20 @@
   position: relative;
   width: auto;
   padding: 0;
-  background-image: linear-gradient(164deg,#029be8 1%,#2e2ca9 100%);
+  background: radial-gradient( circle 400px at 19.8% 14.4%,  rgb(0, 165, 248) 0%, rgb(55, 86, 212) 100.3% );
   z-index: 100;
   @media(max-width: 800px) {
     margin: auto;
     position: relative !important;
     width: auto;
-    padding: 0 10px;
-    height: 59px;
+    padding: 0 40px;
+    height: 70px;
   }
+
+  @media(max-width: 600px) {
+        padding: 0 25px;
+  }
+
 
   .navcontain {
     max-width: 1000px;
@@ -22,9 +27,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 20px 35px;
+
     @media(max-width: 800px) {
       padding: 0;
+      height: 100%;
     }
   }
 
@@ -49,15 +56,17 @@
     height: 50px;
     width: 50px;
     display: block;
-    margin: 15px;
+    margin: 15px 0;
     z-index: 100;
     opacity: 1;
     display: none;
     @media(max-width: 800px) {
-      margin: 8px !important;
-      height: 40px;
-      width: 40px;
+      height: 45px;
+      width: 45px;
       display: block;
+    }
+    @media(max-width: 600px) {
+      margin:0;
     }
   }
 
@@ -72,6 +81,13 @@
       justify-content: space-between;
       margin: 0;
       list-style: none;
+
+      #account{
+        display:none !important;
+				opacity: 0 !important;
+				width: 0px !important;
+				overflow: hidden !important;
+      }
 
       li::before {
         display: inline-block;

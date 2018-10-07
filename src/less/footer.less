@@ -9,7 +9,7 @@
   padding: 35px 10%;
   color: #fff;
   margin-top: 30px;
-  background-color: #220c44;
+  background-color: #100c44;
 	box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 	display: flex;
 	justify-content: space-around;
@@ -21,7 +21,7 @@
 	@media(max-width: 600px) {
 		margin-top: 10px;
 		display: block;
-		padding: 35px 20px;
+		padding: 40px;
 	}
 
 	.widget {
@@ -49,8 +49,9 @@
 
 		.title {
 			color: @white;
-			font-size: 20px;
-			margin: 10px 0 20px!important;
+			font-weight: 800;
+			margin: 10px 0 30px!important;
+			font-size: 1.5em;
 		}
 
 		& > div > div:last-child {
@@ -67,7 +68,7 @@
 				border: 0;
 		    color: #fff;
 		    background: linear-gradient(-65deg,#4f91ab,#1d9e98);
-				padding: 3px 10px;
+				padding: 4px 12px;
 				font-size: .95em;
 		    display: inline-block;
 		    height: fit-content;
@@ -113,10 +114,10 @@
 				padding-bottom:10px;
 
 				.avi {
-					height:35px;
-					width:35px;
-					border-radius: 50%;
-					margin-right: 15px
+					height: 40px;
+			    width: 40px;
+			    border-radius: 0;
+			    margin-right: 15px;
 				}
 			}
 
@@ -139,10 +140,24 @@
 					line-height: 1.4;
 					font-family: AvenirNextLTPro-Regular,sans-serif !important;
 					font-weight: 500;
-					display: inline-block;
+					display: block;
 
 					&:hover {
 						color: @theme-color;
+					}
+				}
+
+			.info {
+				display:flex;
+				flex-direction: column;
+
+					.role {
+						color: #fff;
+				    opacity: .5;
+						font-size: .8em;
+						margin-top: 2px;
+				    font-weight: 200;
+				    font-family: AvenirNextLTPro-Light,sans-serif;
 					}
 				}
 

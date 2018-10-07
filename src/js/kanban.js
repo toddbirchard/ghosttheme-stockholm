@@ -1,9 +1,6 @@
-const client = stitch.Stitch.initializeDefaultAppClient('hackerjira-bzmfe');
-const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('jira');
-
 $(document).ready(function(){
 
-
+  if ($('body').hasClass('page-projects')){
   function populateCards(cards, status) {
       for (var i = 0; i < cards.length; i++) {
         $('#' + status + ' .cards').append('<div class="card"> \n' +
@@ -29,8 +26,8 @@ $(document).ready(function(){
 
 
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'backlog')
@@ -38,8 +35,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'todo')
@@ -47,8 +44,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'progress')
@@ -56,8 +53,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      db.collection('hackersandslackers').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'done')
@@ -65,21 +62,31 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.callFunction("numCards", ["Backlog"]).then(result => {
-        $('#backlog .count').text(result + ' issues');
-    });
 
-    client.callFunction("numCards", ["To Do"]).then(result => {
-        $('#todo .count').text(result + ' issues');
-    });
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+     stitchClient.callFunction("numCards", ["Done"]).then(results => {
+       $('#done .count').text(results + ' issues');
+     })
+  });
 
-    client.callFunction("numCards", ["In Progress"]).then(result => {
-        $('#progress .count').text(result + ' issues');
-    });
+  stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+   stitchClient.callFunction("numCards", ["To Do"]).then(results => {
+     $('#todo .count').text(results + ' issues');
+   })
+});
 
-    client.callFunction("numCards", ["Done"]).then(result => {
-        $('#done .count').text(result + ' issues');
-    });
+
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ stitchClient.callFunction("numCards", ["In Progress"]).then(results => {
+   $('#progress .count').text(results + ' issues');
+ })
+});
+
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ stitchClient.callFunction("numCards", ["Backlog"]).then(results => {
+   $('#backlog .count').text(results + ' issues');
+ })
+});
 
 
     var swiper = new Swiper('.swiper-container', {
@@ -134,6 +141,5 @@ $(document).ready(function(){
     swiper.slideTo(0, 300, false);
     swiper.pagination.update();
   });
-
-
+}
 });

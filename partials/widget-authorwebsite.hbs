@@ -12,11 +12,11 @@
 
 
    <!--<script>
-   authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+   .auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
      console.log('logged in anonymously as user')
    });
 
-   authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+   .callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
      console.log(JSON.stringify(result))
      console.log(result.website)
      websiteCard(result.website)

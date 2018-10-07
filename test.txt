@@ -1,0 +1,2 @@
+[![npm status](http://img.shields.io/npm/v/stockholm.svg)](https://www.npmjs.org/package/stockholm)
+[![dependency status](https://david-dm.org/toddbirchard/ghosttheme-stockholm.svg)](https://david-dm.org/toddbirchard/ghosttheme-stockholm)

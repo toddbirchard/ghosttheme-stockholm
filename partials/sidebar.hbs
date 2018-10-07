@@ -14,16 +14,13 @@
 	{{/is}}
 	{{^is "author"}}
 		{{> widget-social}}
+		{{> widget-tagcloud}}
+		{{> widget-sendgrid}}
 	{{/is}}
 	{{#is "home"}}
 		{{> widget-series}}
 	{{else}}
 		{{> widget-recentpost}}
-	{{/is}}
-	{{^is "author"}}
-		{{> widget-sendgrid}}
-		{{> widget-tagcloud}}
-		{{!--{{> widget-facebook}}--}}
 	{{/is}}
 	{{^is "page,author"}}
 		{{> widget-twitter}}

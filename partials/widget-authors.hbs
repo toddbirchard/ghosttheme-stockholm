@@ -4,14 +4,18 @@
 	<div class="recent-post">
 		{{#get "users"}}
 			{{#foreach users}}
-				<div class="single-author">
+
+				<div class="single-author {{slug}}">
 					{{#unless profile_image}}
 						<a href="{{url}}"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
 					{{/unless}}
 					{{#if profile_image}}
         		<a href="{{url}}"><img src="{{img_url profile_image}}" alt="Author image" class="avi"></a>
 					{{/if}}
-					<a href="{{url}}" class="single-author-name">{{name}}</a>
+					<div class="info">
+						<a href="{{url}}" class="single-author-name">{{name}}</a>
+						<span class="role"></span>
+					</div>
 				</div>
 				{{/foreach}}
 			{{/get}}

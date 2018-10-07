@@ -4,9 +4,14 @@
   2. Initialization
 ====================================================*/
 
+// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+
 /*===========================
  1. function declaretion
  ==========================*/
+
+
+
 var themeApp = {
 	featuredMedia: function(){
 		$(".post").each(function() {
@@ -83,22 +88,6 @@ var themeApp = {
 		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
-	/*kanban: function() {
-		  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-		    document.getElementById('auth-status').innerHTML =
-		      `Logged in as anonymous user with id ${user.id}`;
-		  });
-
-			client.callFunction("populateCards", "Backlog").then(echoedResult => {
-			  console.log(`Echoed result: ${echoedResult}`);
-			})
-
-			client.defaultAppClient.callFunction("populateCards", "Backlog").then(
-			  function(result) {
-			      console.log(result);
-			      // prints {"a": "1", "b": false, "c": "hello"}
-			  })
-		},*/
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
@@ -107,12 +96,13 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
+		//themeApp.tags();
 	}
 }
 
 /*===========================
 2. Initialization
-==========================*/
+============= =============*/
 $(document).ready(function(){
   themeApp.init();
 });

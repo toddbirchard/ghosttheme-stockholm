@@ -21,14 +21,14 @@
     $('.github').css('display', 'block');
   }
 
-  //const authorsClient = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
-  //const db = authorsClient.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
+  //const  = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
+  //const db = .getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
 
-  authorsClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
     console.log('logged in anonymously as user')
   });
 
-  authorsClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
+  client.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
     console.log(JSON.stringify(result))
     console.log(result.github)
     if (result.github) {createCard(result.github)}

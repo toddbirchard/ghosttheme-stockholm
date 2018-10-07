@@ -1,0 +1,246 @@
+@import "variables.less";
+
+.transactional {
+  background: linear-gradient(135deg,#7376e4,#175d8e);
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  h1 {
+    font-size: 2em;
+    font-family: CompassSans-Medium,AvenirNextLTPro-Medium,serif;
+    font-weight: 700;
+    color: #276890;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+  }
+
+  .card {
+    position: absolute;
+    margin: auto;
+    height: fit-content;
+    width: 600px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 0 30px;
+    text-align: center;
+
+    p {
+      margin: 20px 25px;
+    }
+
+    input {
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      background: @theme-color;
+      color: #fff;
+      padding: 15px 25px;
+      margin: 40px auto 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      border: none;
+      transition: all 0.3s easeout;
+
+      &:hover {
+        background: @secondary-color;
+      }
+
+      a {
+        color: @header-color;
+      }
+    }
+  }
+
+  .signup-template {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 534px;
+      width: 661px;
+    }
+
+    .container,
+    section {
+      height: 100%;
+    }
+
+    .card {
+      height: 400px;
+      position: relative !important;
+    }
+
+
+  }
+
+  .signup {
+    form {
+      width: 400px;
+      margin: auto;
+      text-align: left;
+      transition: all .4s ease-out;
+      overflow-x: hidden;
+
+      label {
+        text-align: left;
+      }
+
+      input {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: -webkit-fill-available;
+        margin: 0 0 20px;
+        font-size: 1.2em;
+        text-align: left;
+        font-weight: 200;
+        font-size: 1.3em;
+        padding: 10px 17px;
+        border: 1px solid #bdbdbd;
+
+        &:hover {
+          border: 1px solid #a5a9b5;
+          background-color: #e5f8fb;
+        }
+
+        &:focus {
+          border: 1px solid @theme-color;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .secondarylink {
+    color: @header-color;
+    color: #276890;
+    font-weight: 500;
+    font-size: .9em;
+
+    i {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 600;
+      color: #276890;
+      margin-right: 5px;
+      font-size: 0.9em;
+    }
+  }
+
+  #info {
+    margin: auto auto 20px;
+    text-align: left;
+    width: 100%;
+    height: 43px;
+    position: relative;
+
+    #error {
+      padding: 5px;
+      background: #d0b8d2;
+      color: #604769;
+      display: none;
+      text-align: center;
+
+      &::before {
+        content: "\f071";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+      }
+    }
+
+    #success {
+      padding: 10px 20px;
+      background: #b8d2c9;
+      color: #316f45;
+      display: none;
+      transition: all .3s easeout;
+
+      &::before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+      }
+    }
+
+    #logged-in {
+      background: #c4e6c4;
+      text-align: center;
+      padding: 5px;
+      color: #004800;
+      display: none;
+      transition: all .3s easeout;
+
+      &::before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .successgif {
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    display: block;
+  }
+
+  #finished-registration {
+    margin: 40px 0 20px;
+
+    .btn {
+      width: 182px;
+      margin: 0 auto;
+      color: #fff;
+      margin: 0 auto;
+      background: linear-gradient(345deg,#3da771,#21b7b0);
+      line-height: 1;
+      transition: all .3s ease-out;
+
+      &:hover {
+          background: linear-gradient(345deg,#1a8645,#0c9696);
+      }
+
+      a {
+          font-size: 15px;
+          line-height: 1;
+          margin: 40px auto;
+      }
+    }
+  }
+
+  input:-webkit-autofill,
+  select:-webkit-autofill,
+
+  textarea:-webkit-autofill {
+    background-color: rgb(142, 193, 218) !important;
+  }
+}

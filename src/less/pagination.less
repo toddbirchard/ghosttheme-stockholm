@@ -40,22 +40,52 @@
 .prev-next-wrap {
 	margin: 0;
 	padding: 0;
-	background: #f0f1f4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: auto;
+	height: 60px;
 
 	@media(max-width: 1000px){
 		padding:0 20px;
 	}
 
 	.btn {
-		max-width: 39%;
+		max-width: 37%;
 		line-height: 1.3;
 		font-size: 1em;
 		font-family: CompassSans-Regular;
-		font-weight: 300;
-		background: @theme-color;
+		font-weight: 100;
+		background: none;
+		border: 1px solid #7EA8B7;
+		color: #7ea8b9;
+		transition: all .3s ease-out;
+
+
+		&:hover {
+			color:white;
+			background-color:#7EA8B7;
+		}
+
+		a {
+			transition: all .3s ease-out;
+			&:hover {
+				color:white;
+				background-color:#7EA8B7;
+			}
+		}
+
+		i {
+			margin: 7px;
+		}
 
 		@media(max-width: 800px){
 			font-size: .9em;
+			 padding: 10px 17px;
+			 display: flex;
+    	align-items: center;
+			height: 40px;
+			    width: 49%;
 		}
 	}
 }

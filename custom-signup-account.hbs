@@ -1,0 +1,212 @@
+{{!< transactional}}
+<!DOCTYPE html>
+<html lang="{{lang}}" class="transactional">
+
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+	<script src="{{asset "/js/includes/secret.js"}}"></script>
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+
+{{ghost_head}}
+</head>
+
+<body class="transactional signup-template">
+	<!-- start site's main content area -->
+		{{#post}}
+				<!-- start post -->
+				<div class="card">
+					<div id="info">
+						<div id="success"><i class='fas fa-exclamation-triangle'></i></div>
+						<div id="error"></div>
+						<div id="logged-in">You're logged in now!</div>
+					</div>
+					<div class="signup">
+						<h1>{{title}}</h1>
+						<form id="create-a-user">
+							<label for="create-a-user-email">Email:</label>
+							<input type="text" class="form-control" id="create-a-user-email" aria-label="create-a-user-email" autocomplete="email" />
+							<label for="create-a-user-password">Password:</label>
+							<input type="password" class="form-control" id="create-a-user-password" aria-label="create-a-user-password" />
+							<button class="btn btn-success" onclick="handleSignup()">Create Account</button>
+						</form>
+						<div id="finished-registration" hidden>
+							<a class="btn btn-success" href="/">You did it!</a>
+						</div>
+						<div id="resend-confirmation" hidden>
+							<h4>Send a New Confirmation Email</h4>
+							<label for="resend-confirmation-email">Email:</label>
+							<input type="text" class="form-control" id="resend-confirmation-email" aria-label="resend-confirmation-email" autocomplete="new-password"/>
+							<button class="btn btn-success" onclick="handleResendConfirmation()">Re-Send Confirmation Email</button>
+						</div>
+						<div>
+							<a href="/" class="secondarylink"><i class="fas fa-arrow-alt-left"></i> Actually nevermind</a>
+						</div>
+					</div>
+					<!--<a href="/" class="btn btn-secondary">Go Back</a>-->
+				</div>
+		{{/post}}
+		<!-- end main post area -->
+
+
+	<!-- end site's main content area -->
+
+	<script>
+		// Register a new application user when the user submits their information
+		async function handleSignup() {
+			const email = registerEmailEl.value;
+			const password = registerPasswordEl.value;
+
+			try {
+				await emailPasswordClient.registerWithEmail(email, password)
+				showPostRegistrationState()
+				displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
+
+			} catch (e) {
+				handleError(e)
+			}
+		}
+
+		// Authenticate an application user based on the submitted information
+		async function handleLogin() {
+			const email = loginEmailEl.value;
+			const password = loginPasswordEl.value;
+			const credential = new UserPasswordCredential(email, password);
+
+			try {
+
+				await stitchClient.auth.loginWithCredential(credential);
+				const user = stitchClient.auth.user;
+				showLoggedInState();
+				displaySuccess(`Logged in as: ${user.profile.data.email}`)
+
+			} catch (e) {
+				handleError(e)
+			}
+		}
+
+		async function handleLogout() {
+			await stitchClient.auth.logout();
+		}
+
+		async function handleResendConfirmation() {
+			const email = resendConfirmationEmailEl.value;
+			await emailPasswordClient.resendConfirmationEmail(email);
+		}
+
+		// DOM Element Variables
+		const resendConfirmationEl = document.getElementById("resend-confirmation");
+		const registerFormEl = document.getElementById("create-a-user");
+		const registerEmailEl = document.getElementById("create-a-user-email");
+		const registerPasswordEl = document.getElementById("create-a-user-password");
+		const resendConfirmationEmailEl = document.getElementById("resend-confirmation-email");
+		const notificationEl = document.getElementById("info");
+		const loggedInEl = document.getElementById("logged-in");
+		const postRegistrationEl = document.getElementById("finished-registration");
+
+		const successEl = document.getElementById("success");
+		const errorEl = document.getElementById("error");
+
+		// Notification Functions
+		function displayError(errorMessage) {
+			clearNotifications();
+			errorEl.innerText = errorMessage;
+		}
+
+		function displaySuccess(successMessage) {
+			clearNotifications();
+			successEl.innerText = successMessage;
+			$('.card').append('<img class="successgif" src="/assets/images/success.gif">');
+			$('.card form').animate({
+				'height': 0
+			},500, ease-out);
+		}
+
+		function clearNotifications() {
+			[errorEl, successEl].forEach(el => el.innerText = "")
+		}
+
+		// Helper Functions
+		function clearFields(fields) {
+			fields.forEach(field => field.value = "")
+		}
+
+		function toggleHiddenElementById(id) {
+			document.getElementById(id).classList.toggle("hidden");
+		}
+
+		// UI State Transitions
+		function showRegistrationForm() {
+			clearNotifications();
+			resendConfirmationEl.hidden = true;
+			registerFormEl.hidden = false;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showLoginForm() {
+			clearNotifications();
+			resendConfirmationEl.hidden = true;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showResendConfirmationForm() {
+			clearNotifications()
+			resendConfirmationEl.hidden = false;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showLoggedInState() {
+			clearFields([loginEmailEl, loginPasswordEl]);
+			clearNotifications()
+			resendConfirmationEl.hidden = true;
+			loggedInEl.hidden = false;
+			postRegistrationEl.hidden = true;
+		}
+
+		function showPostRegistrationState() {
+			clearFields([registerEmailEl, registerPasswordEl]);
+			resendConfirmationEl.hidden = true;
+			loggedInEl.hidden = true;
+			postRegistrationEl.hidden = false;
+			$('#create-a-user .btn').css('display', 'none');
+			$('.secondarylink').css('display', 'none');
+		}
+
+		function setPostRegistrationState() {
+			// Clear registration form inputs then hide the form
+			clearFields([registerEmailEl, registerPasswordEl]);
+			toggleHiddenElementById("create-a-user");
+			return Promise.resolve()
+		}
+
+		function handleError(err) {
+			console.error(err)
+			const errType = err.message || "Error!"
+			const msg = ({
+				"invalid username/password": "Invalid username or password was entered. Please try again.",
+				"name already in use": "An account already exists for that email."
+			})[errType] || errType
+
+			displayError(msg);
+			$('#error').css('display', 'block');
+		}
+
+		$('.btn').on('click', function(event) {
+			event.preventDefault();
+			return false;
+		});
+	</script>
+</body>
+</html>
