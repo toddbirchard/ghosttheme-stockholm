@@ -25,7 +25,6 @@
 	<script src="{{asset "/js/kanban.js"}}"></script>-->
 <!-- end site's main content area -->
 <script>
-const jiradb = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
 
 
 $(document).ready(function(){
@@ -52,10 +51,10 @@ $(document).ready(function(){
     const progressColumn = document.getElementById("inprogress");
     const doneColumn = document.getElementById("done");
 
+			{{!-- Gets JIRS cards --}}
 
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
+    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'backlog')
@@ -63,8 +62,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
+    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'todo')
@@ -72,8 +71,8 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
+    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+      db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'progress')
@@ -81,7 +80,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       jiradb.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -90,19 +89,21 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    client.callFunction("numCards", ["Backlog"]).then(result => {
+		{{!-- Counts number of cards --}}
+
+    stichClient.callFunction("numCards", ["Backlog"]).then(result => {
         $('#backlog .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["To Do"]).then(result => {
+    stichClient.callFunction("numCards", ["To Do"]).then(result => {
         $('#todo .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["In Progress"]).then(result => {
+    stichClient.callFunction("numCards", ["In Progress"]).then(result => {
         $('#progress .count').text(result + ' issues');
     });
 
-    client.callFunction("numCards", ["Done"]).then(result => {
+    stichClient.callFunction("numCards", ["Done"]).then(result => {
         $('#done .count').text(result + ' issues');
     });
 

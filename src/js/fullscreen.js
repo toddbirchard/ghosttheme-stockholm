@@ -13,10 +13,10 @@ $(document).ready(function(){
       codeContainer.css('padding', '64px 20px !important')
       $(this).css('opacity', 0);
       codeContainer.animate({
-        height: $(window).height()
+        //height: $(window).height()
     }, 1000);
     $('html,body').animate({
-        scrollTop: codeContainer.position().top
+        scrollTop: codeContainer.position().top + 100
     });
   });
 });
