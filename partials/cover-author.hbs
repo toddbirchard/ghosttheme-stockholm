@@ -36,7 +36,7 @@ $(document).ready(function(){
 		ghost.url.api('posts', {limit: 'all', include: 'count.posts', filter: 'author:{{slug}}'})).done(function( data ) {
 	    console.log( "Data Loaded: " + data );
 			$('.post-count').append(data.posts.length);
-			$('.post-count').append('Posts');
+			$('.post-count').append(' Posts');
 		});
 });
 </script>
