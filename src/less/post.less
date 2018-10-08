@@ -179,7 +179,7 @@
 	}
 
 	.post-meta {
-		margin: auto 80px 40px;
+		margin: auto 80px 30px;
 		color: #40627b;
 		font-size: 12px;
 		display: flex;
@@ -187,7 +187,7 @@
 		align-items: center;
 		justify-content: flex-start;
 		border-bottom: 1px solid #dfe5ec;
-		padding: 0 0 30px;
+		padding: 0 0 20px;
 
 		@media(max-width: 800px) {
 			margin: auto 40px 30px;
@@ -249,7 +249,7 @@
 				height: 30px;
 				display: inline-block;
 				margin-right: 10px;
-				border-radius: 50%;
+				border-radius: 1px;
 				@media(max-width: 600px) {
 					width: 25px;
 					height: 25px;
@@ -803,14 +803,17 @@
 			margin: 0 auto 70px;
 			font-size: 14px;
 			padding: 0;
-			height: 0;
+			height: auto;
 			line-height: 4;
-			padding-top: 20px;
+			padding: 10px;
 			line-height: 1.5;
 			width: 83%;
 			display: block;
 			white-space: normal;
 			color: #54537d;
+			margin-left: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
+			width: auto!important;
 		}
 	}
 
