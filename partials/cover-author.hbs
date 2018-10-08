@@ -11,7 +11,7 @@
 		{{name}}
 	</h3>
 	<div class="meta-info">
-			<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural posts.total empty='No posts' singular='% post' plural='% posts'}}</a></span><span> Posts</span>
+			<span class="post-count"><i class="fal fa-pencil"></i>{{plural posts.total empty='No posts' singular='% post' plural='% posts'}}</span>
 		{{#if location}}
 		<span class="loaction"><i class="fal fa-map-marker-alt"></i>{{location}}</span>
 		{{/if}}
@@ -36,6 +36,7 @@ $(document).ready(function(){
 		ghost.url.api('posts', {limit: 'all', include: 'count.posts', filter: 'author:{{slug}}'})).done(function( data ) {
 	    console.log( "Data Loaded: " + data );
 			$('.post-count').append(data.posts.length);
+			$('.post-count').append('Posts');
 		});
 });
 </script>
