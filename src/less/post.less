@@ -591,6 +591,11 @@
 				font-size: 12px;
 			}
 
+			tbody th {
+				width: 60px;
+    		max-width: 60px;
+			}
+
 			td,
 			th {
 				padding: 7px 5px;
@@ -725,7 +730,7 @@
 		}
 
 		pre > code {
-			background-color: #1c1c2b;
+			background-color: #202538;
 		}
 
 		p {
@@ -882,7 +887,7 @@
 			}
 
 			li {
-				display: inline-block;
+				display: block;
 				 font-style: normal;
 				 font-variant: normal;
 				 text-rendering: auto;
@@ -1036,12 +1041,11 @@
 			width: 90px;
 			height: 90px;
 			display: inline-block;
-			border-radius: 50%;
 			overflow: hidden;
 			margin-right: 30px;
-			.border-radius(50%);
 			margin-bottom: 20px;
 			float: left;
+			border-radius: 0;
 			@media(max-width: 600px) {
 				width: 80px;
 				height: 80px;

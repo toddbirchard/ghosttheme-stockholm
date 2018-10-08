@@ -4,21 +4,21 @@
 ![node badge](https://img.shields.io/badge/node-v8.11.3-green.svg?longCache=true&style=flat-square)
 ![gulp](https://img.shields.io/badge/gulp-v4.0.0-green.svg?longCache=true&style=flat-square)
 ![less](https://img.shields.io/badge/lessjs-v3.7.0-blue.svg?longCache=true&style=flat-square)
-![mongodb](https://img.shields.io/badge/MongoDB--Atlas-v4.0-green.svg?longCache=true&style=flat-square)
-![Jquery badge](https://img.shields.io/badge/jquery-3.3.1-green.svg?longCache=true&style=flat-square)
-![Jquery badge](https://img.shields.io/badge/@babel/core-7.1.2-yellow.svg?longCache=true&style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)
-[![GitHub issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
-[![GitHub stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
+![MongoDB](https://img.shields.io/badge/mongodb-v4.0-green.svg?longCache=true&style=flat-square)
+![Babel](https://img.shields.io/badge/@babel/core-7.1.2-yellow.svg?longCache=true&style=flat-square)
+![Commit](https://flat.badgen.net/github/last-commit/toddbirchard/ghosttheme-stockholm)
+![Issues](https://flat.badgen.net/github/issues/toddbirchard/ghosttheme-stockholm?color=yellow)
+![Stars](https://flat.badgen.net/github/stars/toddbirchard/ghosttheme-stockholm?color=yellow)
+![Forks](https://flat.badgen.net/github/forks /toddbirchard/ghosttheme-stockholm?color=yellow)
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live preview can be viewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
 ![Stockholm Theme](https://miscellaneous.nyc3.digitaloceanspaces.com/stockholm.jpg)
 
+
 # About
 
-_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contextual widgets, sidebar preferences, and unique page templates. This project is in *active development*; you are welcome to use this theme if you wish, but be warned that certain oddities may exist as the user-friendly configuration is still in development.
+_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contextual widgets, sidebar preferences, and unique page templates. This project is in *active development*: you are welcome to use this theme if you wish, but be warned that certain oddities may exist as the user-friendly configuration is still in development.
 
 ## Features
 
@@ -26,7 +26,7 @@ Some features are rolled out in public beta before official release. Features re
 
 ### Major Features
 
-- Full JIRA integration with functioning Kanban
+- Full JIRA integration with functioning Kanban board
 - Custom contributors page
 - Grouping of posts to belong to an ongoing series
 - MongoDB extension to expand capabilities of Ghost admin
@@ -41,10 +41,10 @@ Some features are rolled out in public beta before official release. Features re
 - Search bar
 - Github repositories
 - Github user activity
-- Blog Contributors 
-- Recent posts 
-- Related posts 
-- Series 
+- Blog Contributors
+- Recent posts
+- Related posts
+- Series
 - Twitter Feed
 - Meetup Events
 - Medium posts authors
@@ -58,9 +58,12 @@ Some features are rolled out in public beta before official release. Features re
 
 ### Planned Features
 
+- User accounts and comments
 - Activity feed page template
 - Guest posts
 - Embed Jupyter Notebooks as posts
+- On-hover link previews
+- Aggregation to Medium
 
 ## Installation
 
@@ -76,23 +79,19 @@ cd ghosttheme-stockholm
 npm install
 ```
 
-### Developers
+### Custom Templates
 
-Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is styled using [LESS](http://lesscss.org/).
-
-**Templates:**
-
-- `default.hbs` Main template
-- `index.hbs` Home page
-- `post.hbs` Individual posts
-- `page.hbs` Standalone pages
-- `tag.hbs` Tag archives
-- `author.hbs` Individual author page
-- `about.hbs` Custom template with authors
-- `series.hbs` Custom template with tag previews
+- `custom-author-archive.hbs` Lists details of all contributing authors, suitable for an 'about' page.
+- `custom-projects.hbs` Contains custom modules to display Github repos and live JIRA Kanban Board.
+- `custom-tag-archive.hbs` Detailed list of tags; can be used to highlight tags as though they were a series.
+- `custom-signup-account.hbs` Account creation for users to leave comments, etc.
+- `custom-confirm-email.hbs` Callback page for new accounts confirming their email.
 
 ### Maintenance
 
-- Documentation
-- Production readiness
+This theme was not created with any frontend CSS frameworks, thus the source code is a patchy embarrassing mess. There is an ongoing effort to improve on this, including the following initiatives:
+
+- Standardization of styles and cleanup of repeated declarations
+- Straightforward configuration
 - Speed optimization
+- Documentation

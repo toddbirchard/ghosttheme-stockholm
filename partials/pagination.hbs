@@ -34,15 +34,33 @@
     //Grab the pagination span element
     var nav = document.getElementById('pagination-list');
 
+		if (pageTotal == 1){
+			$('#pagination-list').css('display', 'none');
+		}
+
+		if (pageTotal > 8){
+			for (i = 1; i <= 8; i++) {
+	        // If you are on the current page, bold the nubmer and do not link
+	        if (i == pageCurrent) {
+	                nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+	        } else {
+	            // Otherwise, add a link to the page
+	            // This is where all the customization can go, space between each link, commas, etc.
+	                nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
+	        }
+	    }
+		} else {
+			for (i = 1; i <= pageTotal; i++) {
+	        // If you are on the current page, bold the nubmer and do not link
+	        if (i == pageCurrent) {
+	                nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+	        } else {
+	            // Otherwise, add a link to the page
+	            // This is where all the customization can go, space between each link, commas, etc.
+	                nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
+	        }
+	    }
+		}
     //For each number, from 1 to the total number of pages, add in the page number and a link to the page
-    for (i = 1; i <= 8; i++) {
-        // If you are on the current page, bold the nubmer and do not link
-        if (i == pageCurrent) {
-                nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
-        } else {
-            // Otherwise, add a link to the page
-            // This is where all the customization can go, space between each link, commas, etc.
-                nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
-        }
-    }
+
 </script>

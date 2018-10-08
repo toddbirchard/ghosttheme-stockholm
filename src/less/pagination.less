@@ -46,7 +46,6 @@
     background: none;
     border-radius: 0;
     padding: 9px 14px;
-    /* width: 20px; */
     line-height: 1;
     font-size: 1em;
     font-weight: 700;
@@ -100,6 +99,9 @@
 		border: 1px solid #7EA8B7;
 		color: #7ea8b9;
 		transition: all .3s ease-out;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 
 		&:hover {
@@ -117,6 +119,14 @@
 
 		i {
 			margin: 7px;
+		}
+
+		.fa-angle-left {
+			margin: 7px 10px 7px 0;
+		}
+
+		.fa-angle-right {
+			margin: 7px 0 7px 10px;
 		}
 
 		@media(max-width: 800px){
