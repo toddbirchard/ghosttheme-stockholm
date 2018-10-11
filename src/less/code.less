@@ -28,15 +28,14 @@ pre {
 &post-content > .hljs,
 pre > code {
   white-space: pre-wrap !important;
-      padding: 45px 25px 15px!important;
+  padding: 45px 25px 15px!important !important;
   @media(max-width: 600px) {
     overflow-y: hidden !important;
-    white-space: pre-line !important;
   }
 }
 
-p > code,
-li > code {
+li > code,
+p > code {
   display: inline;
   overflow-y: visible !important;
   width: fit-content;
@@ -47,7 +46,6 @@ li > code {
 code {
   margin: 0;
   height: 100%;
-  font-size: 12px;
 }
 
 .hljs {
@@ -60,7 +58,7 @@ code {
   margin: 0;
   font-size: 14px;
   font-weight: 200;
-  line-height: 1.9;
+  line-height: 1.5;
   white-space: pre-wrap !important;
   color: #d3dce0;
 }
@@ -68,9 +66,9 @@ code {
 .language-python,
 .python.hljs {
   color: #e4f8fd !important;
-  background: #323335 !important;
+  background: #273041 !important;
 
-  &::before{
+  &::before {
     width: 100%;
     height: auto;
     background: #121925;
@@ -80,14 +78,15 @@ code {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: absolute;;/*
+    position: absolute;
+    /*
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;*/
     top: 0;
     left: 0;
     padding: 4px 20px;
   }
-/*
+  /*
   &::before  {
     display: block;
     font-style: normal;
@@ -105,7 +104,7 @@ code {
   .hljs-string {
     /*color: #7cdfe4!important;*/
     color: #e4f2ff;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .hljs-attribute {
@@ -123,12 +122,11 @@ code {
     color: #bc82d8;
   }
 
-  .hljs-function{
+  .hljs-function {
     .hljs-keyword {
       color: #d667c1;
     }
   }
-
 
   * {
     font-size: 14px;
@@ -173,8 +171,6 @@ code {
     color: #8652c4;
   }
 
-
-
   .hljs-literal {
     color: #56b6c2;
   }
@@ -193,11 +189,10 @@ code {
     font-weight: 900;
   }
 
-
-
-  .hljs-attr{
+  .hljs-attr {
     color: #8dd8bc;
   }
+
   .hljs-number,
   .hljs-selector-attr,
   .hljs-selector-class,
@@ -208,7 +203,7 @@ code {
     color: #3fb44b;
   }
 
-  &::before{
+  &::before {
     width: 100%;
     height: auto;
     background: #121925;
@@ -244,20 +239,14 @@ code {
   font-weight: 600;
 }
 
-
-
 .hljs-literal {
   color: #56b6c2;
 }
-
-
 
 .hljs-built_in,
 .hljs-class .hljs-title {
   color: #2db1a1;
 }
-
-
 
 .hljs-bullet,
 .hljs-link,
@@ -272,11 +261,12 @@ code {
   .hljs-attr {
     color: #e471a6;
   }
+
   .hljs-string {
     color: #c39dea;
   }
 
-  &::before{
+  &::before {
     width: 100%;
     height: auto;
     background: #121925;
@@ -429,7 +419,6 @@ code {
   }
 }
 
-
 .hljs.ini {
   &::before {
     width: 100%;
@@ -446,5 +435,4 @@ code {
     left: 0;
     padding: 4px 20px;
   }
-
 }
