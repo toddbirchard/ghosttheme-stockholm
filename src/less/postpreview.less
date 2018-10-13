@@ -31,6 +31,8 @@
 			font-size: 1em;
 			font-weight: 500;
 			color: #4D4146;
+			text-overflow: ellipsis;
+
 			@media(max-width: 600px) {
 				font-size: 0.9em;
 				line-height: 1.6em;
@@ -177,7 +179,7 @@
 				line-height: 1;
 				font-size: 1em;
 				font-family: 'CompassSans-Regular','AvenirNextLTPro-Medium';
-				color: #224a69;
+				color: #475c6d;
 			}
 			@media (max-width: 900px) {
 				display: flex;
@@ -339,6 +341,11 @@
 		@media(max-width: 600px) {
 			padding: 13px 18px;
 			font-size: 16px;
+
+			&:hover {
+				border-bottom: 1px solid #00309c;
+				border-right: 2px solid #004d9c;
+			}
 		}
 	}
 }

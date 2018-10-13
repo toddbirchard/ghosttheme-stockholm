@@ -59,6 +59,8 @@
 	}
 
 	@media(max-width: 600px) {
+		a:nth-of-type(5),
+		a:nth-of-type(6),
 		a:nth-of-type(7),
 		a:nth-of-type(8) {
 			display: none;
@@ -79,6 +81,10 @@
 		display: flex;
 		justify-content: space-between;
 		max-width: 70%;
+
+		@media(max-width: 600px) {
+			 max-width: 65%;
+		}
 	}
 }
 
