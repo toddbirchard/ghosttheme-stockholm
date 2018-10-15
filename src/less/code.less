@@ -12,6 +12,7 @@ pre {
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
     width: auto !important;
+    white-space: pre-line !important;
     max-height: 400px;
   }
 
@@ -60,26 +61,24 @@ code {
   line-height: 1.5;
   white-space: pre-wrap !important;
   color: #d3dce0;
-  padding: 0 20px 20px;
 }
 
 .language-python,
 .python.hljs {
   color: #e4f8fd !important;
-  background: #1B2E46 !important;
+  background: #17253F!important;
 
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "Python";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin: 0 -17px 15px;
+    position: absolute;
     /*
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;*/
@@ -140,11 +139,13 @@ code {
     /* padding: 20px; */
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
+    white-space: pre-line !important;
     font-size: 12px;
   }
 }
 
 .hljs.javascript {
+   background-color: #1a332f !important;
   .hljs-bullet,
   .hljs-link,
   .hljs-selector-id,
@@ -204,18 +205,19 @@ code {
   }
 
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "Javascript";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
-    margin: 0 -17px 15px;
   }
 }
 
@@ -266,18 +268,19 @@ code {
   }
 
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "JSON";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
-    margin: 0 -17px 15px;
   }
 }
 
@@ -329,102 +332,109 @@ code {
 
 .hljs.bash {
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "Bash";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
-    margin: 0 -17px 15px;
   }
 }
 
 .hljs.sql {
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "SQL";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin: 0 -17px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
   }
 }
 
 .hljs.vim {
+  background-color: #342142 !important;
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "Vim";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
-    margin: 0 -17px 15px;
   }
 }
 
 .hljs.css {
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "CSS";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin: 0 -17px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
   }
 }
 
 .hljs.shell {
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "CSS";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin: 0 -17px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
   }
 }
 
 .hljs.ini {
   &::before {
-    width: auto;
+    width: 100%;
     height: auto;
     background: #121925;
     content: "ini";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin: 0 -17px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 4px 20px;
   }
 }
