@@ -1,3 +1,5 @@
+@import 'fonts.less';
+
 pre {
   white-space: pre-wrap;
   transition: all 0.5s easeout;
@@ -26,15 +28,14 @@ pre {
 &post-content > .hljs,
 pre > code {
   white-space: pre-wrap !important;
-  padding: 15px 20px !important;
+  padding: 45px 25px 15px!important !important;
   @media(max-width: 600px) {
     overflow-y: hidden !important;
-    white-space: pre-line !important;
   }
 }
 
-p > code,
-li > code {
+li > code,
+p > code {
   display: inline;
   overflow-y: visible !important;
   width: fit-content;
@@ -45,7 +46,6 @@ li > code {
 code {
   margin: 0;
   height: 100%;
-  font-size: 12px;
 }
 
 .hljs {
@@ -58,17 +58,35 @@ code {
   margin: 0;
   font-size: 14px;
   font-weight: 200;
-  line-height: 1.9;
+  line-height: 1.5;
   white-space: pre-wrap !important;
-  border-left: 5px solid #0f0f10;
   color: #d3dce0;
 }
 
 .language-python,
 .python.hljs {
   color: #e4f8fd !important;
-  background: #323335 !important;
-/*
+  background: #17253F!important;
+
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "Python";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    /*
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;*/
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+  /*
   &::before  {
     display: block;
     font-style: normal;
@@ -86,7 +104,7 @@ code {
   .hljs-string {
     /*color: #7cdfe4!important;*/
     color: #e4f2ff;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .hljs-attribute {
@@ -104,12 +122,11 @@ code {
     color: #bc82d8;
   }
 
-  .hljs-function{
+  .hljs-function {
     .hljs-keyword {
       color: #d667c1;
     }
   }
-
 
   * {
     font-size: 14px;
@@ -128,6 +145,7 @@ code {
 }
 
 .hljs.javascript {
+   background-color: #1a332f !important;
   .hljs-bullet,
   .hljs-link,
   .hljs-selector-id,
@@ -154,8 +172,6 @@ code {
     color: #8652c4;
   }
 
-
-
   .hljs-literal {
     color: #56b6c2;
   }
@@ -174,11 +190,10 @@ code {
     font-weight: 900;
   }
 
-
-
-  .hljs-attr{
+  .hljs-attr {
     color: #8dd8bc;
   }
+
   .hljs-number,
   .hljs-selector-attr,
   .hljs-selector-class,
@@ -187,6 +202,22 @@ code {
   .hljs-type,
   .hljs-variable {
     color: #3fb44b;
+  }
+
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "Javascript";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
   }
 }
 
@@ -209,20 +240,14 @@ code {
   font-weight: 600;
 }
 
-
-
 .hljs-literal {
   color: #56b6c2;
 }
-
-
 
 .hljs-built_in,
 .hljs-class .hljs-title {
   color: #2db1a1;
 }
-
-
 
 .hljs-bullet,
 .hljs-link,
@@ -237,8 +262,25 @@ code {
   .hljs-attr {
     color: #e471a6;
   }
+
   .hljs-string {
     color: #c39dea;
+  }
+
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "JSON";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
   }
 }
 
@@ -286,4 +328,113 @@ code {
 .fullscreen {
   height: 100%;
   width: 100%;
+}
+
+.hljs.bash {
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "Bash";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+}
+
+.hljs.sql {
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "SQL";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+}
+
+.hljs.vim {
+  background-color: #342142 !important;
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "Vim";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+}
+
+.hljs.css {
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "CSS";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+}
+
+.hljs.shell {
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "CSS";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
+}
+
+.hljs.ini {
+  &::before {
+    width: 100%;
+    height: auto;
+    background: #121925;
+    content: "ini";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+  }
 }
