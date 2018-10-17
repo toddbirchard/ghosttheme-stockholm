@@ -21,7 +21,7 @@ pre {
   }
 
   span {
-    display: inline;
+    display: inline-block;
   }
 }
 
@@ -59,34 +59,33 @@ code {
   font-size: 14px;
   font-weight: 200;
   line-height: 1.5;
+      padding: 0 30px 30px;
   white-space: pre-wrap !important;
   color: #d3dce0;
-  padding: 0 20px 20px;
 }
 
 .language-python,
 .python.hljs {
   color: #e4f8fd !important;
-  background: #131B2E !important;
+  background: #1E2A44!important;
 
   &::before {
     width: 100%;
     height: auto;
     background: #121925;
     content: "Python";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
+    /*
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;*/
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
   /*
   &::before  {
@@ -147,7 +146,7 @@ code {
 }
 
 .hljs.javascript {
-   background-color: #0e2521 !important;
+   background-color: #16282b !important;
   .hljs-bullet,
   .hljs-link,
   .hljs-selector-id,
@@ -209,21 +208,17 @@ code {
   &::before {
     width: 100%;
     height: auto;
-    background: #121925;
+    background: #090f10;
     content: "Javascript";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -278,19 +273,15 @@ code {
     height: auto;
     background: #121925;
     content: "JSON";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -303,7 +294,7 @@ code {
 }
 
 .fullscreenbtn {
-  position: relative;
+  position: absolute;
   bottom: 30px;
   right: 42px;
   margin: auto;
@@ -320,7 +311,7 @@ code {
   }
 
   i {
-    position: relative;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -346,19 +337,15 @@ code {
     height: auto;
     background: #121925;
     content: "Bash";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -368,42 +355,34 @@ code {
     height: auto;
     background: #121925;
     content: "SQL";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
 .hljs.vim {
-  background-color: #1e192d !important;
+  background-color: #28283e !important;
   &::before {
     width: 100%;
     height: auto;
     background: #121925;
     content: "Vim";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -413,19 +392,15 @@ code {
     height: auto;
     background: #121925;
     content: "CSS";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -435,19 +410,15 @@ code {
     height: auto;
     background: #121925;
     content: "CSS";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
 
@@ -457,18 +428,14 @@ code {
     height: auto;
     background: #121925;
     content: "ini";
-    display: block;
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    padding: 7px 2.5%;
-    margin: 0 -17px 15px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    padding: 4px 20px;
   }
 }
