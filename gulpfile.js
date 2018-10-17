@@ -17,7 +17,8 @@ var gulp = require('gulp'),
   babel = require('gulp-babel'),
   resolveDependencies = require('gulp-resolve-dependencies'),
   livereload = require('gulp-livereload'),
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync'),
+  terser = require('gulp-terser');
 
 
 var paths = {
@@ -69,6 +70,7 @@ function scripts() {
             pattern: /\* @requires [\s-]*(.*\.js)/g
         }))
     .pipe(concat('main.min.js'))
+    .pipe(terser())
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
