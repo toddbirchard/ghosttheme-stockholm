@@ -1,9 +1,10 @@
-'use strict';
 /*====================================================
   TABLE OF CONTENTS
   1. function declaretion
   2. Initialization
 ====================================================*/
+
+// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
 
 /*===========================
  1. function declaretion
@@ -50,8 +51,8 @@ var themeApp = {
 	},
 	highlighter: function() {
 		$('pre code').each(function(i, block) {
-		    hljs.highlightBlock(block);
-		  });
+	    hljs.highlightBlock(block);
+	  });
 	},
 	backToTop: function() {
 		$(window).scroll(function(){
@@ -87,6 +88,31 @@ var themeApp = {
 		resizeIframe: function(iframe) {
 	    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 	  },
+		fullScreen: function(){
+			$('.post-template article .post-content img').materialbox();
+	    $('.post-template pre').each(function(){
+	      console.log('pre = ', $(this).height());
+	      if ( $(this).height() >= 400 ) {
+	        $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
+	      }
+	    });
+	    $('.fullscreenbtn').on('click', function(event){
+	      var height = $(window).height();
+	      var codeContainer = $(this).closest('pre');
+	      codeContainer.css('max-height', 'none');
+	      codeContainer.css('padding', '64px 20px !important')
+	      $(this).css('opacity', 0);
+	      codeContainer.animate({
+	        //height: $(window).height()
+	    }, 1000);
+	    $('html,body').animate({
+	        scrollTop: codeContainer.position().top + 100
+	    });
+	  });
+	},
+	codeHighlight: function() {
+		hljs.initHighlightingOnLoad();
+	},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
@@ -95,6 +121,8 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
+		themeApp.fullScreen();
+		themeApp.codeHighlight();
 		//themeApp.tags();
 	}
 }
