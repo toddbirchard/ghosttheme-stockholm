@@ -1,11 +1,58 @@
 @import "variables.less";
 @import "mixin.less";
 
+
+.tag-template{
+  .postlist {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    article {
+      width: 49%;
+      flex-wrap: wrap;
+
+      @media(max-width: 600px){
+        width:100%;
+      }
+
+      .post-head {
+          margin: 0 0 60px;
+      }
+
+      .post-title {
+            font-size: 1.5em;
+      }
+
+      .post-permalink {
+        position: absolute;
+        width: 85%;
+        bottom: 10px;
+      }
+
+      .tags,
+      .author,
+      p {
+        display: none !important;
+      }
+    }
+  }
+}
+
 .postlist {
+
   .tag-description {
-    font-size:14px;
+    font-size: 1.1em;
     line-height: 1.5;
-        margin-top: 5px;
+    margin-top: 5px;
+  }
+  .tag-image {
+    margin-top: 30px;
+
+    @media(max-width: 600px) {
+      display:none;
+    }
   }
   @media(max-width: 1000px) {
     padding: 0 0 0 10px;

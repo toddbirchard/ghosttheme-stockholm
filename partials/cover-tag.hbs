@@ -1,13 +1,17 @@
+{{#tag}}
 <div class="cover tag-cover">
+
 	<h3 class="tag-name">
-		<i class="fal fa-tag"></i> {{tag.name}}
+		<i class="fal fa-tag"></i> {{name}}
 	</h3>
 	<div class="post-count">
 		{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
 	</div>
-	{{#if tag.description}}
+	{{#if description}}
 	<div class="tag-description">
-        {{tag.description}}
+        {{description}}
 	</div>
 	{{/if}}
+	{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}
 </div>
+{{/tag}}
