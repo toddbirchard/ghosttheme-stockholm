@@ -782,24 +782,31 @@
 	}
 
 	figcaption {
-		text-align: center;
-		margin: 0 auto 40px;
-		font-size: 15px;
-		color: #757575;
-		white-space: nowrap;
-		font-style: italic;
+	    text-align: center;
+	    margin: 0 auto 40px;
+	    font-size: 15px;
+	    color: #757575;
+	    white-space: nowrap;
+	    font-style: italic;
+	    background-color: rgba(33, 69, 138, 0.04);
+	    color: #4e5261;
+	    padding: 10px;
+	    margin-top: -10px;
 		@media(max-width: 600px) {
 			margin: 0 auto 70px;
 			font-size: 14px;
 			padding: 0;
-			height: 0;
+			height: auto;
 			line-height: 4;
-			padding-top: 20px;
+			padding: 10px;
 			line-height: 1.5;
 			width: 83%;
 			display: block;
 			white-space: normal;
 			color: #54537d;
+			margin-left: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
+			width: auto!important;
 		}
 	}
 
@@ -887,7 +894,7 @@
 				 font-variant: normal;
 				 text-rendering: auto;
 				 -webkit-font-smoothing: antialiased;
-				 margin-bottom: 20px;
+				 margin-bottom: 15px;
 				 padding-left: 0;
 				 line-height: 1.6;
 
