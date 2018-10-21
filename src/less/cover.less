@@ -1,0 +1,56 @@
+@import "variables.less";
+/*====================================================
+	Tag page & author page cover
+====================================================*/
+
+.cover {
+	text-align: center;
+	background: white;
+	padding: 25px;
+	margin-bottom: 20px;
+
+	.tag-name {
+		margin-top: 0;
+
+		i {
+			font-size: 16px;
+			margin-right: 5px;
+		}
+	}
+
+	.post-count {
+		color: @text-color-light;
+	}
+
+	h3 {
+		margin-bottom: 10px;
+	}
+
+	.avatar {
+		width: 100px;
+		height: 100px;
+	}
+
+	.meta-info {
+		color: @text-color-light;
+		display: flex;
+		justify-content: space-around;
+		width: 81%;
+		margin: auto;
+
+    @media(max-width: 600px) {
+      flex-direction: column;
+    }
+
+		span {
+			margin: 0 7px;
+
+			i {
+				margin-right: 7px;
+			}
+			@media(max-width: 600px) {
+				display: block;
+			}
+		}
+	}
+}

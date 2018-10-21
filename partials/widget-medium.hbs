@@ -1,6 +1,6 @@
 <div class="widget" id="medium" style="display:none;">
   <div class ="content">
-    <h4 class="title" style="margin-bottom:0;">Medium</h4>
+    <h3 class="title" style="margin-bottom:0;">Medium</h3>
     <div id="medium-widget"></div>
   </div>
 </div>
@@ -25,8 +25,8 @@ function createMediumCard(medium){
 }
 
 
-client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-  client.callFunction("getGithubUsers", "{{slug}}").then(result => {
+stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  stitchClient.callFunction("getGithubUsers", "{{slug}}").then(result => {
     createMediumCard(result.medium)
   });
 });

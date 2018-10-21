@@ -1,13 +1,3 @@
-<script>
-/* ... */
-var pagination = require('ghost-pagination');
-var hbs = require('express-hbs');
-/* ... */
-hbs.registerHelper('paginate', pagination);
-/* ... */
-</script>
-
-
 <div class="pagination center">
   <ul>
       {{#paginate page pages limit="8"}}

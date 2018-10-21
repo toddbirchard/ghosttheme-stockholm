@@ -38,7 +38,7 @@ Some features are rolled out in public beta before official release. Features re
 
 ### Widgets
 
-- Search bar
+- Search posts
 - Github repositories
 - Github user activity
 - Blog Contributors 
@@ -80,16 +80,12 @@ npm install
 
 Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is styled using [LESS](http://lesscss.org/).
 
-**Templates:**
+**Custom Templates:**
 
-- `default.hbs` Main template
-- `index.hbs` Home page
-- `post.hbs` Individual posts
-- `page.hbs` Standalone pages
-- `tag.hbs` Tag archives
-- `author.hbs` Individual author page
-- `about.hbs` Custom template with authors
-- `series.hbs` Custom template with tag previews
+- `custom-author-archive.hbs`: Serves as an alternative "about" page which displays 
+- `custom-projects.hbs`: JIRA Kanban functionality
+- `custom-tag-archive.hbs`: Displays posts in a series
+- `custom-signup-account`: Signup page for user accounts
 
 ### Maintenance
 

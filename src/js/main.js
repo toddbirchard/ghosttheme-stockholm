@@ -90,8 +90,8 @@ var themeApp = {
 	  },
 		fullScreen: function(){
 			$('.post-template article .post-content img').materialbox();
-	    $('.post-template pre').each(function(){
-	      console.log('pre = ', $(this).height());
+	    $('article pre').each(function(){
+	      console.log('hljs = ', $(this).find('code').height());
 	      if ( $(this).height() >= 400 ) {
 	        $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
 	      }
@@ -121,8 +121,9 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
 		themeApp.mobileNavigation();
-		themeApp.fullScreen();
 		themeApp.codeHighlight();
+		themeApp.fullScreen();
+
 		//themeApp.tags();
 	}
 }

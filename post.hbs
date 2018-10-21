@@ -17,25 +17,27 @@
 					</div>
 					{{/if}}
 					<div class="post-head">
+						<div class="post-meta">
+							{{#primary_tag}}
+									<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+							{{/primary_tag}}
+							{{#primary_author}}
+								{{#unless profile_image}}
+									<a href="{{url}}" class="meta-item author desktop"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+									<a href="{{url}}" class="meta-item author mobile"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+								{{/unless}}
+								{{#if profile_image}}
+									<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+									<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{slug}}</span></a>
+								{{/if}}
+							{{/primary_author}}
+								<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
+								<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
+						</div>
 						<h1 class="post-title">{{{title}}}</h1>
 							<h4 class="excerpt">{{excerpt}}</h4>
 					</div>
-					<div class="post-meta">
-						{{#primary_tag}}
-								<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
-						{{/primary_tag}}
-						{{#primary_author}}
-							{{#unless profile_image}}
-								<a href="{{url}}" class="meta-item"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-							{{/unless}}
-							{{#if profile_image}}
-								<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
-								<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{slug}}</span></a>
-							{{/if}}
-						{{/primary_author}}
-							<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
-							<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
-					</div>
+
 
 
 					{{#has tag="Roundup"}}

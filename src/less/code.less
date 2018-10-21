@@ -59,19 +59,28 @@ code {
   font-size: 14px;
   font-weight: 200;
   line-height: 1.5;
-      padding: 0 30px 30px;
+  padding: 0 30px 30px;
   white-space: pre-wrap !important;
   color: #d3dce0;
+
+  * {
+    font-size: 14px;
+    font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
+    @media(max-width: 600px) {
+      font-size: 12px;
+    }
+  }
 }
 
 .language-python,
 .python.hljs {
   color: #e4f8fd !important;
-  background: #222b3f!important;
+  background: #262f44!important;
+
 
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -82,8 +91,9 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
-    margin-left: -28px;
+    padding: 8px 20px;
+    margin-left: -40px;
+    font-weight: 700;
   }
   /*
   &::before  {
@@ -101,8 +111,7 @@ code {
   .hljs-meta-string,
   .hljs-regexp,
   .hljs-string {
-    color: #e4f2ff;
-    font-size: 14px;
+    color: #93DCB8;
   }
 
   .hljs-attribute {
@@ -110,11 +119,10 @@ code {
   }
 
   .hljs-class,
-   .hljs-title{
+  .hljs-title {
     color: #ffd712;
     font-weight: 700;
   }
-
 
   .hljs-attr,
   .hljs-number,
@@ -131,24 +139,11 @@ code {
       color: #d667c1;
     }
   }
-
-  * {
-    font-size: 14px;
-    font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
-    @media(max-width: 600px) {
-      font-size: 12px;
-    }
-  }
-  @media(max-width: 600px) {
-    margin-left: calc(~"-50vw + 50%") !important;
-    margin-right: calc(~"-50vw + 50%") !important;
-    white-space: pre-line !important;
-    font-size: 12px;
-  }
 }
 
 .hljs.javascript {
-   background-color: #16282b !important;
+  background-color: #1c2527 !important;
+
   .hljs-bullet,
   .hljs-link,
   .hljs-selector-id,
@@ -185,7 +180,6 @@ code {
   .hljs-regexp,
   .hljs-string {
     color: #82b7ec!important;
-    font-size: 13px;
   }
 
   .hljs-keyword {
@@ -209,7 +203,7 @@ code {
 
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #090f10;
@@ -220,14 +214,14 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    margin-left: -28px;
-    padding: 4px 20px;
+    margin-left: -40px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 code {
   padding: 4px 5px;
-  font-size: 13px;
   color: #2e9eb7;
   margin: 0;
 }
@@ -283,8 +277,9 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    margin-left: -28px;
-    padding: 4px 20px;
+    margin-left: -40px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
@@ -297,9 +292,9 @@ code {
 }
 
 .fullscreenbtn {
-  position: relative;
-  bottom: 30px;
-  right: 42px;
+  position: absolute;
+  bottom: 13px;
+  right: 23px;
   margin: auto;
   font-size: 30px;
   width: fit-content;
@@ -315,10 +310,8 @@ code {
 
   i {
     position: relative;
-
     right: 0;
     bottom: 0;
-
     margin: auto;
     height: 30px;
     width: 16px;
@@ -337,7 +330,7 @@ code {
 .hljs.bash {
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -348,14 +341,16 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 .hljs.sql {
+  background: #343444 !important;
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #29263e;
@@ -366,15 +361,17 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 .hljs.vim {
   background-color: #28283e !important;
+
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -385,14 +382,15 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 .hljs.css {
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -403,14 +401,15 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 .hljs.shell {
   &::before {
     margin-bottom: 11px;
-    margin-left: -28px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -421,14 +420,15 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }
 
 .hljs.ini {
   &::before {
-  margin-bottom: 11px;
-  margin-left: -28px;
+    margin-bottom: 11px;
+    margin-left: -40px;
     width: 110%;
     height: auto;
     background: #121925;
@@ -439,6 +439,7 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 4px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
   }
 }

@@ -5,35 +5,26 @@
    {{author.bio}}
    {{#if website}}
     <div class="widget author-website">
-    	<h4 class="title">Website</h4>
+    	<h3 class="title">Website</h3>
       <a href="{{website}}">{{website}}</a>
     </div>
     {{/if}}
 
+<script>
 
-   <!--<script>
-   .auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-     console.log('logged in anonymously as user')
-   });
-
-   .callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-     console.log(JSON.stringify(result))
-     console.log(result.website)
-     websiteCard(result.website)
-   });
-
-   function websiteCard(website){
-     $.ajax({
-       url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
-       contentType: "application/json",
-       dataType: 'json',
-       success: function(result) {
-         $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
-           '</a><i class="fas fa-link"></i></div></a></div></div>');
-       }
-     });
-   }
-
-
- </script>-->
+$(document).ready(function(){
+  function websiteCard(website){
+    $.ajax({
+      url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
+      contentType: "application/json",
+      dataType: 'json',
+      success: function(result) {
+        $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
+          '</a><i class="fas fa-link"></i></div></a></div></div>');
+      }
+    });
+  }
+  websiteCard('{{website}}');
+})
+ </script>
   <!-- end widget -->

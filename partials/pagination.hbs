@@ -1,5 +1,5 @@
 <!-- start pagination -->
-<nav class="pagination">
+{{!--<nav class="pagination">
 	{{#if prev}}
 	<a class="newer-posts" href="{{page_url prev}}"><i class="fas fa-arrow-left"></i></i></a>
 	{{/if}}
@@ -7,5 +7,60 @@
 	{{#if next}}
 	<a class="older-posts" href="{{page_url next}}"><i class="fas fa-arrow-right"></i></a>
 	{{/if}}
-</nav>
+</nav>--}}
 <!-- end pagination -->
+{{! Pagination file for custom pagination}}
+
+<nav class="pagination" role="navigation">
+	{{#if prev}}
+	<a class="newer-posts" href="{{page_url prev}}"><i class="fas fa-arrow-left"></i></i></a>
+	{{/if}}
+    {{!-- Actual place where the numbers will go --}}
+    <div id="pagination-list" class="page-number"></span>
+    {{!-- Placeholder for number of total pages --}}
+    <div id="page-total" style="display:none;">{{pages}}</div>
+    {{!-- Placeholder for current page --}}
+        <div id="page-current" style="display:none;">{{page}}</div>
+				{{#if next}}
+				<a class="older-posts" href="{{page_url next}}"><i class="fas fa-arrow-right"></i></a>
+				{{/if}}
+</nav>
+
+<script>
+    //Grab the total pages value
+    var pageTotal = document.getElementById('page-total').innerHTML;
+    //Grab the current page value
+    var pageCurrent = document.getElementById('page-current').innerHTML;
+    //Grab the pagination span element
+    var nav = document.getElementById('pagination-list');
+
+		if (pageTotal == 1){
+			$('#pagination-list').css('display', 'none');
+		}
+
+		if (pageTotal > 8){
+			for (i = 1; i <= 8; i++) {
+	        // If you are on the current page, bold the nubmer and do not link
+	        if (i == pageCurrent) {
+	                nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+	        } else {
+	            // Otherwise, add a link to the page
+	            // This is where all the customization can go, space between each link, commas, etc.
+	                nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
+	        }
+	    }
+		} else {
+			for (i = 1; i <= pageTotal; i++) {
+	        // If you are on the current page, bold the nubmer and do not link
+	        if (i == pageCurrent) {
+	                nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+	        } else {
+	            // Otherwise, add a link to the page
+	            // This is where all the customization can go, space between each link, commas, etc.
+	                nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
+	        }
+	    }
+		}
+    //For each number, from 1 to the total number of pages, add in the page number and a link to the page
+
+</script>
