@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 			{{!-- Gets JIRS cards --}}
 
-    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -62,7 +62,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Story', 'Idea', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -71,7 +71,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Integration', 'Story', 'Idea', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -80,7 +80,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stichClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       jiradb.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -91,19 +91,19 @@ $(document).ready(function(){
 
 		{{!-- Counts number of cards --}}
 
-    stichClient.callFunction("numCards", ["Backlog"]).then(result => {
+    stitchClient.callFunction("numCards", ["Backlog"]).then(result => {
         $('#backlog .count').text(result + ' issues');
     });
 
-    stichClient.callFunction("numCards", ["To Do"]).then(result => {
+    stitchClient.callFunction("numCards", ["To Do"]).then(result => {
         $('#todo .count').text(result + ' issues');
     });
 
-    stichClient.callFunction("numCards", ["In Progress"]).then(result => {
+    stitchClient.callFunction("numCards", ["In Progress"]).then(result => {
         $('#progress .count').text(result + ' issues');
     });
 
-    stichClient.callFunction("numCards", ["Done"]).then(result => {
+    stitchClient.callFunction("numCards", ["Done"]).then(result => {
         $('#done .count').text(result + ' issues');
     });
 
