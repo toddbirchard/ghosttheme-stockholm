@@ -81,7 +81,7 @@ $(document).ready(function(){
     });
 
     stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
-      jiradb.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
+      db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
         populateCards(docs, 'done')
