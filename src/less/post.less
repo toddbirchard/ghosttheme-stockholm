@@ -170,8 +170,6 @@
 		display: none;
 	}
 
-
-
 	.post-roundup-blurb {
 		padding: 10px 40px;
 		background: 0 0;
@@ -521,20 +519,20 @@
 		margin: 0 80px;
 
 		.post-meta {
-			margin: 0 0 15px 0;
+			margin: 0 0 15px;
 			color: #40627b;
 			font-size: 12px;
 			display: flex;
 			width: auto;
 			align-items: center;
 			justify-content: left;
-
 			@media(max-width: 600px) {
 				padding: 0;
 				max-width: none;
 				width: auto;
 				margin: 0 10px 13px;
 				padding-top: 0;
+				justify-content: space-between;
 			}
 
 			span {
@@ -546,9 +544,9 @@
 				height: 18px !important;
 				padding: 6px 10px;
 				@media(max-width: 600px) {
- 				 height: 18px !important;
-				 padding: 6px 10px;
- 			 }
+					height: 18px !important;
+					padding: 6px 10px;
+				}
 
 				i,
 				span {
@@ -602,7 +600,7 @@
 				text-transform: capitalize;
 				line-height: 1;
 				@media(max-width: 600px) {
-					 margin: 0 30px 0 0!important;
+					margin: 0 !important;
 				}
 
 				* {
@@ -621,13 +619,11 @@
 						display: none;
 					}
 				}
-
 				/*&.date {
 					@media(max-width: 600px) {
 						display:none;
 					}
 				}*/
-
 				&.mobile {
 					display: none;
 					@media(max-width: 600px) {
@@ -662,8 +658,6 @@
 				}
 			}
 		}
-
-
 		@media(max-width: 800px) {
 			margin: 0 40px;
 		}
@@ -683,6 +677,7 @@
 
 		img {
 			border: 1px solid #cecece;
+			width: 100%;
 		}
 
 		a {
@@ -721,7 +716,7 @@
 			margin: 0 0 20px;
 		}
 		@media(max-width: 800px) {
-			margin: 10px 35px 10px;
+			margin: 10px 35px;
 		}
 	}
 
@@ -770,7 +765,6 @@
 	}
 
 	figcaption {
-
 		text-align: center;
 		margin: 0 auto 40px;
 		font-size: 15px;
@@ -781,7 +775,6 @@
 		color: #4e5261;
 		padding: 10px;
 		margin-top: -10px;
-
 		@media(max-width: 600px) {
 			margin: 0 auto 70px;
 			font-size: 14px;
@@ -896,127 +889,124 @@
 					font-variant: normal;
 					text-rendering: auto;
 					-webkit-font-smoothing: antialiased;
-				  margin-bottom: 15px;
-				  padding-left: 0;
-				  line-height: 1.6;
-          font-family: "Font Awesome 5 Pro";
+					padding-left: 0;
+					font-family: "Font Awesome 5 Pro";
 					content: "\f101";
 					font-size: 13px;
 					margin-right: 10px;
 					font-weight: 600;
-
-				 @media(max-width: 600px) {
-					   margin-left: 0;
-				 }
-			}
-		}
-
-		.kg-embed-card {
-			margin: 20px auto;
-			background: #fafafa;
-			padding: 10px;
-			width: auto !important;
-		}
-
-		.kg-embed-card > iframe {
-			margin: auto !important;
-			width: 100% !important;
-		}
-
-		.kg-width-wide {
-			max-height: 650px;
-			border: 1px solid #eaeaea;
-			margin: 10px auto;
-			display: block;
-			max-width: 99%;
-		}
-
-		.kg-width-full {
-			margin-left: calc(~"-50vw + 50%") !important;
-			margin-right: calc(~"-50vw + 50%") !important;
-		}
-
-		.fluid-width-video-wrapper {
-			margin: 0 auto;
-		}
-
-		iframe {
-			margin: 0;
-			display: block;
-			margin: 30px auto!important !important;
-
-			&.instagram-media {
-				max-width: 400px !important;
-			}
-			@media(max-width: 800px) {
-				margin-left: calc(~"-50vw + 50%") !important;
-				margin-right: calc(~"-50vw + 50%") !important;
-				height: 228px;
-				width: 120%;
-			}
-		}
-
-		.twitter-tweet {
-			margin: 20px auto;
-		}
-
-		img {
-			max-height: 650px;
-			border: 1px solid #eaeaea;
-			margin: 10px auto;
-			display: block;
-			max-width: 99%;
-
-			&:hover {
-				cursor: zoom-in;
-			}
-		}
-
-		.material-placeholder,
-		figure {
-			width: fit-content;
-			margin: 40px auto 11px;
-
-			img {
-				max-width: 100%;
-				border: 1px solid #d8d8d8;
-			}
-			@media(max-width: 600px) {
-				margin-left: calc(~"-50vw + 50%");
-				margin-right: calc(~"-50vw + 50%");
-				width: auto !important;
-				margin-top: 25px;
-				margin-bottom: 0;
-
-				img {
-					width: 100%;
-					max-height: none;
-					margin: auto;
-					border: 1px solid #e2e2e2;
-					border-left: 0;
-					border-right: 0;
+					@media(max-width: 600px) {
+						margin-left: 0;
+					}
 				}
 			}
-		}
 
-		.material-placeholder {
-			@media(max-width: 600px) {
-				box-shadow: 0 0 15px #dcdcdc;
+			.kg-embed-card {
+				margin: 20px auto;
+				background: #fafafa;
+				padding: 10px;
+				width: auto !important;
 			}
-		}
 
-		a {
-			color: @theme-color;
+			.kg-embed-card > iframe {
+				margin: auto !important;
+				width: 100% !important;
+			}
 
-			&:hover {
-				color: @hover-color;
+			.kg-width-wide {
+				max-height: 650px;
+				border: 1px solid #eaeaea;
+				margin: 10px auto;
+				display: block;
+				max-width: 99%;
+			}
+
+			.kg-width-full {
+				margin-left: calc(~"-50vw + 50%") !important;
+				margin-right: calc(~"-50vw + 50%") !important;
+			}
+
+			.fluid-width-video-wrapper {
+				margin: 0 auto;
+			}
+
+			iframe {
+				margin: 0;
+				display: block;
+				margin: 30px auto!important !important;
+
+				&.instagram-media {
+					max-width: 400px !important;
+				}
+				@media(max-width: 800px) {
+					margin-left: calc(~"-50vw + 50%") !important;
+					margin-right: calc(~"-50vw + 50%") !important;
+					height: 228px;
+					width: 120%;
+				}
+			}
+
+			.twitter-tweet {
+				margin: 20px auto;
+			}
+
+			img {
+				max-height: 650px;
+				border: 1px solid #eaeaea;
+				margin: 10px auto;
+				display: block;
+				width: 99%;
+
+				&:hover {
+					cursor: zoom-in;
+				}
 			}
 		}
 	}
 }
-}
 
 .post-template {
+	figure {
+		width: fit-content;
+		margin: 40px auto 11px;
+
+		img {
+			width: 100%;
+			border: 1px solid #d8d8d8;
+		}
+		@media(max-width: 600px) {
+			margin-left: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
+			width: auto !important;
+			margin-top: 25px;
+			margin-bottom: 0;
+
+			img {
+				width: 100%;
+				max-height: none;
+				margin: auto;
+				border: 1px solid #e2e2e2;
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+	}
+
+	.material-placeholder {
+		@media(max-width: 600px) {
+			box-shadow: 0 0 15px #dcdcdc;
+		}
+	}
+
+	a {
+		color: @theme-color;
+
+		&:hover {
+			color: @hover-color;
+		}
+	}
+
+
 	.about-author {
 		background: @white;
 		padding: 40px 80px;
@@ -1076,8 +1066,6 @@
 			clear: both;
 			font-size: 15px;
 		}
-
-
 
 		.author {
 			font-size: 1.5em;
