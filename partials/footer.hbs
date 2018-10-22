@@ -57,7 +57,7 @@
             let url = [location.protocol, '//', location.host].join('');
             return '<li> \n' +
 						'<img src="' + result.feature_image + '"> \n ' +
-						'<div><a href="' + result.url + '/' + result.slug + '">' + result.title + '</a> \n' +
+						'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
 						'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n '+
 						'</li>';
         }
