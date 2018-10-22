@@ -1,0 +1,151 @@
+@table-border-color: rgba(0,0,0,.12);
+@table-striped-color: rgba(242, 242, 242, 0.5);
+
+table, th, td {
+   border: none;
+}
+
+table {
+  width:100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px 0 40px;
+  box-shadow: 0px 0px 6px #b8bace;
+
+  thead tr {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    background-color: #5f6779 !important;
+    color:white;
+  }
+
+  &.striped {
+    tr {
+      border-bottom: none;
+    }
+
+  tbody {
+    tr:nth-child(odd) {
+        background-color: @table-striped-color;
+      }
+
+    tr > td {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.highlight > tbody > tr {
+    transition: background-color .25s ease;
+    &:hover {
+      background-color: @table-striped-color;
+    }
+  }
+
+  &.centered {
+    thead tr th, tbody tr td {
+      text-align: center;
+    }
+  }
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f8ff;
+}
+
+
+
+td, th{
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+      text-align: center;
+}
+
+// Responsive Table
+@media (max-width:600px) {
+
+  table {
+    width: 112%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+
+    td:empty:before {
+      content: '\00a0';
+    }
+
+    th,
+    td {
+      margin: 0;
+      vertical-align: top;
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+    }
+
+    th { text-align: left; }
+    thead {
+      display: block;
+      float: left;
+
+      tr {
+        display: block;
+        padding: 0 10px 0 0;
+
+        th::before {
+          content: "\00a0";
+        }
+      }
+    }
+    tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      & > tr> th {
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      tr {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    th {
+      display: block;
+      text-align: right;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+      padding: 15px;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    tr {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    /* sort out borders */
+    thead {
+      border: 0;
+      border-right: 1px solid @table-border-color;
+    }
+  }
+
+}
