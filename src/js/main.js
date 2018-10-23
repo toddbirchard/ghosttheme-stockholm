@@ -111,7 +111,15 @@ var themeApp = {
 	  });
 	},
 	codeHighlight: function() {
-		hljs.initHighlightingOnLoad();
+		console.log(hljs.listLanguages());
+		hljs.configure({
+			  tabReplace: '    ', // 4 spaces
+			  classPrefix: '',     // don't append class prefix
+			  languages: ['python', 'javascript']
+			});
+			$('pre code').each(function(i, block) {
+		    hljs.highlightBlock(block);
+		  });
 	},
 	init: function() {
 		themeApp.featuredMedia();
@@ -123,7 +131,6 @@ var themeApp = {
 		themeApp.mobileNavigation();
 		themeApp.codeHighlight();
 		themeApp.fullScreen();
-
 		//themeApp.tags();
 	}
 }

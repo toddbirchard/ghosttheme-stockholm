@@ -69,7 +69,7 @@
 		    color: #fff;
 		    background: linear-gradient(-40deg,#0359a2,#10909c);
 				padding: 4px 12px;
-				font-size: .95em;
+				font-size: .8em;
 		    display: inline-block;
 		    height: fit-content;
 		    width: fit-content;
@@ -135,7 +135,7 @@
 				.post-title,
 				.single-author-name {
 					color: @white;
-					font-size: 16px;
+					font-size: .95em;
 					margin: 0;
 					line-height: 1.4;
 					font-family: Gordita-Regular,sans-serif !important;
@@ -169,16 +169,22 @@
 				.tags{
 					color: @white;
 					opacity: 0.5;
-					font-size: 0.9em;
+					font-size: 0.8em;
 					margin-top: 9px;
 					font-weight: 200;
-					font-family: 'Gordita-Light', sans-serif;
+					font-family: 'Gordita-Regular', sans-serif;
 
 					a {
 						color: @white;
 					}
 				}
 			}
+		}
+	}
+
+	@media(max-width:600px){
+		.widget.recent {
+			display:none;
 		}
 	}
 }

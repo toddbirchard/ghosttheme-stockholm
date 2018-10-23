@@ -58,9 +58,8 @@
     "precss": "^3.1.2",
     "semantic-ui-table": "^2.3.1",
     "simplebar": "^3.0.0-beta.5",
-    "swiper": "^4.4.1",
-    "yeoman-generator": "^3.1.1"
-  },
+    "swiper": "^4.4.1"
+    },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
