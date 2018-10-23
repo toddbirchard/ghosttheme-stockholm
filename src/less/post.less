@@ -90,9 +90,9 @@
 		margin: 40px 0 10px;
 		color: #276890;
 		line-height: 1.2;
-		font-family: CompassSans-Regular;
+		font-family: 'Gordita-Regular';
+		font-weight: 600!important;
 		font-size: 2em;
-		font-weight: 200!important;
 		font-size: 1.8em;
 		width: fit-content;
 		/* text-align: left; */
@@ -138,8 +138,8 @@
 
 	p {
 		text-align: justify;
-		font-size: 1em;
-		line-height: 1.8;
+		font-size: .95em;
+		line-height: 2;
 	}
 
 	blockquote {
@@ -215,7 +215,7 @@
 
 		p {
 			line-height: 1.5!important;
-			font-family: AvenirNextLTPro-Regular;
+			font-family: Gordita-Regular;
 			color: #559d6c;
 			font-size: 1.1em;
 			width: 100%;
@@ -260,6 +260,14 @@
 		padding: 20px 0;
 		margin: 0 80px;
 
+		@media(max-width: 800px) {
+			margin: 0 35px !important;
+		}
+
+		@media(max-width: 600px) {
+			margin: 0 20px !important;
+		}
+
 		.post-meta {
 			margin: 0 0 15px;
 			color: #40627b;
@@ -278,7 +286,7 @@
 			}
 
 			span {
-				font-family: 'CompassSans-Regular', AvenirNextLTPro-Regular,sans-serif !important;
+				font-family: 'CompassSans-Regular', Gordita-Regular,sans-serif !important;
 				font-weight: 500;
 			}
 
@@ -401,14 +409,8 @@
 				}
 			}
 		}
-		@media(max-width: 800px) {
-			margin: 0 40px;
-		}
-		@media(max-width: 600px) {
-			margin: 0 27px;
-			padding: 20px 0 30px;
-			border-bottom: 0;
-		}
+
+
 	}
 
 	.post-content {
@@ -424,7 +426,7 @@
 		}
 
 		a {
-			font-family: 'AvenirNextLTPro-Regular';
+			font-family: 'Gordita-Regular';
 			font-size: 16px;
 		}
 
@@ -456,7 +458,7 @@
 		}
 
 		p {
-			margin: 0 0 20px;
+			margin: 0 0 30px;
 		}
 		@media(max-width: 800px) {
 			margin: 10px 35px;
@@ -812,7 +814,7 @@
 		.author {
 			font-size: 1.5em;
 			margin-bottom: 5px;
-			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light';
+			font-family: 'Gordita-Medium', 'Gordita-Light';
 			@media(max-width: 600px) {
 				font-size: 1.3em;
 			}
