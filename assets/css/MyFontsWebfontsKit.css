@@ -28,11 +28,6 @@
 */
 
 
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3792ee");
-@import url("//hello.myfonts.net/count/37415b");
-
-
 @font-face {
 	font-family: 'Gordita-Light';
 	src: url('../fonts/gordita-light.eot');
