@@ -22,8 +22,6 @@ $(document).ready(function(){
     const progressColumn = document.getElementById("inprogress");
     const doneColumn = document.getElementById("done");
 
-			{{!-- Gets JIRS cards --}}
-
     stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(6).asArray()
     ).then(docs => {
