@@ -1,9 +1,37 @@
 
 <!-- start widget -->
-<div class="widget twitter">
+<!--<div class="widget twitter">
 	<div class="twitter">
 		<h3 class="title">Twitter</h3>
 			<a class="twitter-timeline" data-chrome="nofooter noheader noscrollbar" data-tweet-limit="3" data-link-color="#26a2c7" href="{{twitter_url}}"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
-</div>
+</div>-->
+<div class="widget twitter">
+<h3 class="title">Twitter</h3>
+<a class="twitter-timeline"
+    data-chrome="noheader noborders transparent nofooter"
+    data-link-color="#8e1d08"
+    data-dnt="true"
+    data-widget-id="your-widget-id"
+    href="https://twitter.com/toddrbirchard"></a>
+	</div>
+
+		<script src="{{asset '/js/includes/customtwitter.js'}}"></script>
+
+		<script>
+		$('document').ready(function(){
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+			    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+			    js.src="//platform.twitter.com/widgets.js";
+			    fjs.parentNode.insertBefore(js,fjs);}
+			}(document,"script","twitter-wjs");
+
+			var options = {
+			    "url": '{{asset "/css/twitter.css"}}'
+			};
+
+			CustomizeTwitterWidget(options);
+		});
+
+		</script>
 <!-- end widget -->
