@@ -155,17 +155,18 @@
     a {
       position: relative;
       display: block;
-      margin: 7px 0;
+      margin: 10px 0;
       font-size: 0.9em;
       border-top: 0;
       width: auto;
-      background-color: #f9f9f9;
-      padding: 16px;
+      background-color: #fff;
+      padding: 10px 16px;
       transition: .2s all easeout;
+      border: 1px solid #dedede;
 
       &:hover,
       &:hover span {
-        background-color: #d5f0f3;
+        background-color: @theme-color;
         color: white;
         cursor: pointer;
       }
@@ -173,33 +174,29 @@
       &:hover .star::after {
         opacity: 1;
       }
-
-      &:first-of-type {
-        border: none;
-      }
     }
 
     .repo-name {
       max-width: 280px;
       text-overflow: ellipsis;
       color: @theme-color;
-      font-family: 'Gordita-Light';
-      font-size: 1.1em;
+      font-family: Gordita-Regular;
+      font-size: 1.2em;
     }
 
     .updated {
       display: block;
       font-size: 0.85em;
-      font-style: italic;
       color: #777;
     }
 
     .star {
       position: absolute;
-      font-size: 0.9em;
+      font-size: 1em;
       right: 1em;
-      top: 2em;
-      color: #888;
+      top: 1.6em;
+      color: #ab8102;
+      font-weight: 600;
 
       &::after {
         content: '\a0\2605';

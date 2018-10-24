@@ -1,6 +1,8 @@
 {{#author}}
 <div class="sidebar">
-	{{> widget-authorwebsite}}
+	{{#if website}}
+		{{> widget-authorwebsite}}
+	{{/if}}
 	{{> widget-github}}
 	{{> widget-medium}}
 	{{> widget-meetup}}
