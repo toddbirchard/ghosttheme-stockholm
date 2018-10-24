@@ -24,7 +24,7 @@
   width: 45px !important;
   height: 45px !important;
   top: -11px !important;
-    left: -65 !important;
+  left: -54px !important;
   position: absolute !important;
 }
 
@@ -54,12 +54,16 @@
   width: 230px;
   margin-right: 0;
   transition: all .3s ease-out;
+  padding: 15px;
+      position: relative;
 }
 
 .timeline-tweet:hover {
   background: rgba(139, 158, 175, 0.6) !important;
 }
-
+.timeline-Tweet-text {
+      margin-left: 0;
+}
 
 .root.timeline.twitter-timeline p, .root.timeline.twitter-timeline a, .root.timeline.twitter-timeline ol, .root.timeline.twitter-timeline ul, .root.timeline.twitter-timeline li {
   font-family: "Oxygen", "Ubuntu", "Helvetica Neue", Helvetica, arial, sans-serif;
