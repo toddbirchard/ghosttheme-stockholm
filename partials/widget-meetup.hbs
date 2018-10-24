@@ -18,7 +18,7 @@ function createMeetupCard(meetup) {
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(ajaxResult) {
-      $('.sidebar').append('<div class="widget meetup"><div class="widget-body" style="padding: 0 10px;"><h3 class="title">Meetup</h3> \n ' +
+      $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' +
         '<div class="userprofile"> \n ' +
         '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '"> \n' +
         '<div class="info">' +
