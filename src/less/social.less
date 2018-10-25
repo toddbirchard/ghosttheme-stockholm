@@ -21,6 +21,7 @@
 .social-btns .btn .fab {
   transform: scale(1);
   margin: 0 10px 0 0;
+  transition: all .2s ease-out;
   @media(max-width: 800px) {
     -webkit-transform: scale(0.8);
   }
@@ -99,14 +100,25 @@
     top: -75%;
     left: -75%;
   }
+  @media(max-width: 600px) {
+    top:-999%;
+    left:-999%;
+    display:none;
+    opacity: 1;
+  }
 }
 
 .social-btns .btn:focus .fab,
 .social-btns .btn:hover .fab,
 .social-btns .btn:hover .fas {
   color: #fff;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.social-btns .btn:hover i {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .social-btns {
