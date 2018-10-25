@@ -146,15 +146,6 @@
 		}
 	}
 
-	blockquote {
-		border-left: 4px solid #26a2c7;
-		font-family: 'CompassSans-Medium',serif;
-		font-style: normal;
-		background: #f9f9f9;
-		padding: 20px;
-		font-size: 1.1em;
-	}
-
 	.kg-post > div {
 		@media(max-width: 600px) {
 			margin-left: calc(~"-50vw + 50%") !important;
@@ -221,7 +212,7 @@
 			line-height: 1.5!important;
 			font-family: Gordita-Regular;
 			color: #559d6c;
-			font-size: 1.1em;
+			font-size: .9em;
 			width: 100%;
 			margin: 0;
 			text-align: justify;
@@ -442,18 +433,24 @@
 		}
 
 		blockquote {
-			margin: 40px;
-			background: #e5f1f5;
-			@media(max-width: 600px) {
-				margin: 20px auto;
+			border-left: 4px solid #26a2c7;
+			background: #e0eef3;
+			padding: 20px;
+			font-family: Gordita-Regular,sans-serif;
+			font-style: normal;
+			font-size: .9em;
+			line-height: 1.6;
+			overflow: hidden;
+			margin: 20px 0;
+			* {
+				font-family: Gordita-Regular,sans-serif;
+				font-style: normal;
+				font-size: .9em;
+				line-height: 1.6;
 			}
 
-			* {
-				padding-left: 20px;
-				font-size: 24px;
-				line-height: 1.2 !important;
-				margin: 0 !important;
-				color: #26a2c7;
+			@media(max-width: 600px) {
+				margin: 20px auto;
 			}
 		}
 
