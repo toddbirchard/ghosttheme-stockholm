@@ -67,6 +67,10 @@
 
 @font-face {font-family: 'DroidSansMonoSlashed';src: url('../fonts/DroidSansMonoSlashed.ttf');}
 
+@font-face {font-family: 'GoogleSans-Regular';src: url('../fonts/GoogleSans-Regular.ttf');}
+@font-face {font-family: 'GoogleSans-Medium';src: url('../fonts/GoogleSans-Medium.ttf');}
+@font-face {font-family: 'GoogleSans-Bold';src: url('../fonts/GoogleSans-Bold.ttf');}
+
 @font-face {font-family: 'CompassSans-Regular';src: url('../fonts/CompassSans-Regular.woff2');}
 @font-face {font-family: 'CompassSans-Medium';src: url('../fonts/CompassSans-Medium.woff2');}
 @font-face {font-family: 'CompassSans-Bold';src: url('../fonts/CompassSans-Bold.woff2');}

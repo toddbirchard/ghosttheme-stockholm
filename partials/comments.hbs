@@ -1,0 +1,91 @@
+<div id="comment-box">
+  <div class="body">
+
+    <ul class="comments">
+      <li>
+        <div class="comment"><button type="button" class="contract-button" style="display: none;"><span class="line"></span><small><span class="icon-unfold_less"></span><br>0</small></button>
+          <div class="comment-form-with-avatar">
+            <div class="avatar">
+              <div class="image" style="background-image: url(&quot;https://pbs.twimg.com/profile_images/898064718048481280/X1yM5A_e_normal.jpg&quot;);"></div>
+            </div>
+            <div class="comment-content">
+              <div class="comment-body">
+                <p>test</p>
+              </div>
+              <div class="actions">
+                <a class="author-button" value="history"><i class="fas fa-user"></i> Todd</a>
+                <time datetime="2018-10-25T17:13:06.580Z" title="2018-10-25 17:13"><i class="fal fa-clock"></i> 51m</time>
+                <!--<a class="options-button"><span class="icon-unfold_more"></span></a>-->
+                <div class="collapsible"><a class="up-vote-button" disabled=""><i class="fas fa-thumbs-up"></i> <small>(0)</small></a></div>
+                <div class="collapsible"><a value="reply" class="reply-button"><i class="fas fa-comment-alt"></i> reply</a></div>
+                <!--<div class="hidden collapsible"><button type="button" value="delete" class="remove-button"><span class="icon-delete words"></span>delete </button></div>-->
+              </div>
+            </div>
+            <div class="children">
+              <div class="level level-1">
+                <ul class="comments"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="write-comment">
+      <div class="comment-form-with-avatar">
+        <div class="avatar">
+          <div class="image" style="background-image: url(&quot;https://pbs.twimg.com/profile_images/898064718048481280/X1yM5A_e_normal.jpg&quot;);"><button type="button" class=""></button></div><span class="icon-settings"></span>
+        </div>
+        <div class="comment-form">
+          <form>
+            <div class="textarea-container"><textarea id="new_comment" placeholder="Leave a comment" maxlength="16384"></textarea></div>
+            <div class="footer">
+              <button class="primary-button" type="button" type="submit" onClick="addComment()">Post Comment</button>
+            <!--<div class="options"><label><input type="checkbox" disabled="" value="false"><span class="icon-person"></span> anonymous</label><label><input type="checkbox" disabled="" value="false"><span class="icon-notifications_active"></span> email replies</label></div><button type="submit" class="btn primary-button" disabled="">Post Comment</button>-->
+              <div class="logout">
+                <p>Posting as <span class="display-name">Todd</span></p>
+                <p><span class="icon-exit_to_app"></span> log out
+              </p>
+            </div>
+        </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    function displayComments() {
+      db.collection("comments")
+        .find({}, {
+          limit: 1000
+        })
+        .asArray()
+        .then(docs => docs.map(doc => `<div>${doc.comment}</div>`))
+        .then(comments => document.getElementById("comments").innerHTML = comments)
+    }
+
+    function displayCommentsOnLoad() {
+      client.auth
+        .loginWithCredential(new stitch.AnonymousCredential())
+        .then(displayComments)
+        .catch(console.error);
+    }
+
+    function addComment() {
+      const newComment = document.getElementById("new_comment");
+      console.log("add comment", client.auth.user.id)
+      db.collection("comments")
+        .insertOne({
+          owner_id: client.auth.user.id,
+          comment: newComment.value
+        })
+        .then(displayComments);
+      newComment.value = "";
+    }
+
+    displayCommentsOnLoad();
+  });
+</script>
