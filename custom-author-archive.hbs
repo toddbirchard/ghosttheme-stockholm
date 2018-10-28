@@ -123,10 +123,10 @@ stitchClient.callFunction("FullAuthorDetails").then(result => {
 		console.log('value' + value);
 		console.log('key' + key);
 		var author = authorObj.author;
-		$("." + author).find('.title').html(authorObj.title);
+		$("." + author).find('.title').html(authorObj['title']);
 
 		if (authorObj.facebook){
-			$("." + author).find('.facebook').children().attr('href', authorObj.facebook);
+			$("." + author).find('.facebook').children().attr('href', authorObj['facebook']);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
