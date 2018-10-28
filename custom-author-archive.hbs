@@ -112,14 +112,40 @@
 </section>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
-
-
 stitchClient.callFunction("FullAuthorDetails").then(result => {
 	console.log(JSON.stringify(result))
 	$.each( result, function( key, value ) {
 	  console.log(value);
 		var author = result.author;
 		$("." + author).find('title').html(result.title);
+
+		if (result.facebook){
+			$("." + author).find('facebook').attr('href', result.facebook));
+		}
+
+		if (result.linkedin){
+			$("." + author).find('linkedin').attr('href', result.linkedin));
+		}
+
+		if (result.twitter){
+			$("." + author).find('twitter').attr('href', result.twitter));
+		}
+
+		if (result.quora){
+			$("." + author).find('quora').attr('href', (result.quora));
+		}
+
+		if (result.pocket){
+			$("." + author).find('facebook'.attr('href', result.pocket));
+		}
+
+		if (result.github){
+			$("." + author).find('facebook').attr('href', result.github));
+		}
+
+
+
+
 	});
 });
 </script>

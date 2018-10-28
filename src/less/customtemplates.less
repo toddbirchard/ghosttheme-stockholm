@@ -141,10 +141,6 @@
       width: 90%!important;
       margin: 10px auto;
 
-      i {
-        color: @text-color-light !important;
-      }
-
       span {
         color: @text-color-light;
       }
@@ -155,10 +151,6 @@
     }
     @media(max-width: 600px) {
       display: block !important;
-    }
-
-    i {
-      color: @text-color-light !important;
     }
 
     span {
@@ -257,12 +249,18 @@
     }
 
     .author-social {
+      .share-icons{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px;
+      }
       .social-btns{
         padding:0;
         display:block;
       }
       .btn {
-        font-size: 18px;
+        font-size: 21px;
         height: fit-content;
       }
 
