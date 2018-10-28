@@ -109,6 +109,14 @@
       margin: 0 30px 30px;
     }
 
+    .author-cover {
+      width: 100%;
+      height: 110px;
+      background-size: cover !important;
+      background-position-y: center !important;
+      background: linear-gradient(-15deg, rgba(255, 255, 255, .1) 100px ,transparent 0), linear-gradient(15deg, rgba(255, 255, 255, .1) 100px ,transparent 0),linear-gradient(-15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(0deg, #749BE1 150px, #9267C7);
+    }
+
     .meta-info {
       color: @text-color;
     }
@@ -117,11 +125,12 @@
   .about-author {
     border-radius: 2px !important;
     background: #f6fbfd !important;
-    padding: 20px;
+    padding: 0;
     margin: 10px 0;
-    width: 42%;
+    width: 48%;
     border-right: 1px solid #dcdcdc!important;
     border-bottom: 1px solid #dcdcdc !important;
+    position: relative;;
 
     @media(max-width: 1040px) {
       width: 40%;
@@ -174,6 +183,14 @@
     .avatar-link {
       margin-bottom: 15px;
       display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 75px;
+      height: 75px;
+      margin: auto;
+      top: 62px;
+      border: 3px solid white;
       @media(max-width: 1040px) {
         margin: 0 auto;
         display: block;
@@ -181,19 +198,22 @@
       }
 
       .avatar {
-        width: 85px;
+        width: 100%;
         margin: 0;
-        height: 85px;
+        height: 100%;
 
 
       }
     }
 
     .details {
-      width: 65%;
+      width: -webkit-fill-available;
       display: inline-block;
-      margin-left: 6px;
-          overflow: hidden;
+      /* margin-left: 6px; */
+      overflow: hidden;
+      padding: 17px;
+      text-align: center;
+      margin-top: 21px;
       @media(max-width: 1040px) {
         text-align: center;
         width: 100%;
@@ -205,13 +225,16 @@
 
     .bio {
       display: block;
-      width: 100%;
+      width: -webkit-fill-available;
       line-height: 1.5;
       font-weight: 100;
-      float: left !important;
-      font-size: 14px;
+      float: left!important;
+      font-size: .8em;
       margin: 0 auto!important;
       max-width: 450px;
+      padding: 0 25px 30px;
+      text-align: center;
+      text-align: justify;
       @media(max-width: 1040px) {
         text-align: center;
         float: none !important;
@@ -225,6 +248,7 @@
       a {
         font-size: 0.9em;
         font-weight: 600;
+        color: #0e7d9a;
 
         &:hover {
           text-decoration: none;
@@ -249,7 +273,6 @@
       }
 
       span {
-        margin-right: 10px;
         display: block;
         margin-bottom: 2px;
         @media (max-width: 1040px) {

@@ -21,10 +21,17 @@
 							{{content}}
 						</div>
 						<div class="author-container">
- 						{{#get "users" limit="all" include="count.posts" order="count.posts desc" }}
- 							{{#foreach users}}
+ 						{{#get "authors" limit="all" include="count.posts" order="count.posts desc" }}
+ 							{{#foreach authors}}
 
 								<div class="about-author">
+									{{#if cover_image}}
+									<div class="author-cover" style="background:url({{cover_image}})">
+									</div>
+									{{else}}
+									<div class="author-cover">
+									</div>
+									{{/if}}
 									<div class="author-specs">
 									{{#if profile_image}}
  										<a href="{{url}}" class="avatar-link"><img src="{{profile_image}}" alt="Author image" class="avatar"></a>
@@ -60,6 +67,10 @@
  									{{/if}}
  								</div>
 
+								<div class="author-social">
+
+								</div>
+
  							{{/foreach}}
  						{{/get}}
  					</div>
@@ -74,5 +85,17 @@
 </section>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="{{asset '/js/includes/gh-profile-card.min.js'}}"></script>
+<script>
 
+	function authorSocial(author){
+
+	}
+
+stitchClient.callFunction("FullAuthorDetails").then(result => {
+	console.log(JSON.stringify(result))
+	$.each( result, function( key, value ) {
+	  console.log(value)
+	});
+});
+</script>
 <!-- end site's main content area -->
