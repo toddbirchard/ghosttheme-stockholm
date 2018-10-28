@@ -45,10 +45,10 @@ const url = window.location.search;
 const params = new URLSearchParams(url);
 const token = params.get('token');
 const tokenId = params.get('tokenId');
-
+console.log('token = '+ token);
+console.log('tokenID = '+ tokenID);
 // Confirm the user's email/password account
-const emailPassClient = Stitch.defaultAppClient.auth
-  .getProviderClient(UserPasswordAuthProviderClient.factory);
+const emailPassClient = stitchClient.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
 return emailPassClient.confirmUser(token, tokenId);
 </script>
