@@ -66,43 +66,37 @@
  											{{{bio}}}
  										</p>
  									{{/if}}
+									<div class="author-social">
+										<ul class="share-icons social-btns">
+											<!-- twitter -->
+											<li class="btn twitter">
+												<a><i class="fab fa-twitter"></i></a>
+											</li>
+											<!-- facebook -->
+											<li class="btn facebook">
+												<a><i class="fab fa-facebook"></i></a>
+											</li>
+											<!-- linkedin -->
+											<li class="btn linkedin">
+												<a><i class="fab fa-linkedin"></i></a>
+											</li>
+											<li class="btn medium">
+												<a><i class="fab fa-medium"></i></a>
+											</li>
+											<li class="btn quora">
+												<a><i class="fab fa-quora"></i></a>
+											</li>
+											<li class="btn github">
+												<a><i class="fab fa-github"></i></a>
+											</li>
+											<li class="btn pocket">
+												<a><i class="fab fa-get-pocket"></i></a>
+											</li>
+											</ul>
+									</div>
  								</div>
 
-								<div class="author-social">
-									<ul class="share-icons social-btns">
-										<!-- twitter -->
-										<li class="btn twitter">
-											<a><i class="fab fa-twitter"></i></a>
-										</li>
-										<!-- facebook -->
-										<li class="btn facebook">
-											<a><i class="fab fa-facebook"></i></a>
-										</li>
-										<!-- linkedin -->
-										<li class="btn linkedin">
-											<a><i class="fab fa-linkedin"></i></a>
-										</li>
-										<li class="btn medium">
-											<a><i class="fab fa-medium"></i></a>
-										</li>
-										<li class="btn quora">
-											<a><i class="fab fa-quora"></i></a>
-										</li>
-										<li class="btn github">
-											<a><i class="fab fa-github"></i></a>
-										</li>
-										<li class="btn pocket">
-											<a><i class="fab fa-get-pocket"></i></a>
-										</li>
 
-
-
-
-
-
-
-										</ul>
-								</div>
 
  							{{/foreach}}
  						{{/get}}
@@ -117,12 +111,8 @@
 	</div>
 </section>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script src="{{asset '/js/includes/gh-profile-card.min.js'}}"></script>
 <script>
 
-	function authorSocial(author){
-
-	}
 
 stitchClient.callFunction("FullAuthorDetails").then(result => {
 	console.log(JSON.stringify(result))
