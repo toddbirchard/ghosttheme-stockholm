@@ -162,13 +162,13 @@ var themeApp = {
 	    .from(".signup-form", 1.5,{y:500, opacity: 0, ease: Elastic.easeOut.config(1, 1.5)}, "nextScreen")
 	    .from([".float-left",".float-right"], 1.5,{y:35, opacity: 0, ease: Elastic.easeOut.config(1, 1.5)},"-=0.4");
 
-	    $("#createBtn").mousedown(function() {
+	    $("#signup-button").mousedown(function() {
 	        $(this).css("box-shadow","unset");
 	    });
 
-			$("#createBtn").on('click', function(){
-				var email = $('#email').text();
-				var pass = $('#password').text();
+			$("#signup-button").on('click', function(){
+				var email = $('#signup-email').text();
+				var pass = $('#signup-password').text();
 
 				emailPasswordClient.registerWithEmail(email, pass)
 					.then(() => {
@@ -179,7 +179,7 @@ var themeApp = {
 				});
 			})
 
-	    $("#createBtn").mouseup(function() {
+	    $("#signup-button").mouseup(function() {
 	        $(this).css("box-shadow","0px 5px 11px 0px #0000001a");
 	    });
 
