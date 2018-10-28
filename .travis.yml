@@ -1,6 +1,15 @@
+sudo: required
+
 language: node_js
 node_js:
   - "lts/*"
-before_script:
+
+before_install:
   - npm install -g gulp-cli
-script: gulp
+
+install:
+  - npm install
+  - npm audit fix
+
+script:
+  - gulp zip
