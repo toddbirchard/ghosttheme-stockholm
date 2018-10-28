@@ -189,6 +189,12 @@ var themeApp = {
 	    });
 	})(jQuery);
 	},
+	triggerSignup: function {
+		$('.rss').on('click', function(e){
+			e.preventDefault();
+			themeApp.signup();
+		})
+	},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
@@ -199,7 +205,7 @@ var themeApp = {
 		themeApp.mobileNavigation();
 		themeApp.codeHighlight();
 		themeApp.fullScreen();
-		themeApp.signup();
+		themeApp.triggerSignup();
 		//themeApp.tags();
 	}
 }
