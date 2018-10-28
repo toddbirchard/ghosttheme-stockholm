@@ -67,7 +67,7 @@
  										</p>
  									{{/if}}
 									<div class="author-social">
-										<ul class="share-icons social-btns">
+										<ul class="share-icons">
 											<!-- twitter -->
 											<li class="btn twitter">
 												<a><i class="fab fa-twitter"></i></a>
@@ -119,7 +119,7 @@ stitchClient.callFunction("FullAuthorDetails").then(result => {
 	$.each( result, function( key, value ) {
 	  console.log(value);
 		var author = result.author;
-		$("." + author).find('title').html(result.title;)
+		$("." + author).find('title').html(result.title);
 	});
 });
 </script>
