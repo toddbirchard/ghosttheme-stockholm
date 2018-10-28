@@ -24,7 +24,7 @@
  						{{#get "users" limit="all" include="count.posts" order="count.posts desc" }}
  							{{#foreach users}}
 
-								<div class="about-author">
+								<div class="about-author {{slug}}">
 									{{#if cover_image}}
 									<div class="author-cover" style="background:url({{cover_image}})">
 									</div>
@@ -43,6 +43,7 @@
  											<a href="{{url}}">{{name}}</a>
  										</div>
  										<div class="meta-info">
+											<span class="title"></span>
  											<span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
  											{{#if location}}
  												<span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
@@ -68,7 +69,39 @@
  								</div>
 
 								<div class="author-social">
+									<ul class="share-icons social-btns">
+										<!-- twitter -->
+										<li class="btn twitter">
+											<a><i class="fab fa-twitter"></i></a>
+										</li>
+										<!-- facebook -->
+										<li class="btn facebook">
+											<a><i class="fab fa-facebook"></i></a>
+										</li>
+										<!-- linkedin -->
+										<li class="btn linkedin">
+											<a><i class="fab fa-linkedin"></i></a>
+										</li>
+										<li class="btn medium">
+											<a><i class="fab fa-medium"></i></a>
+										</li>
+										<li class="btn quora">
+											<a><i class="fab fa-quora"></i></a>
+										</li>
+										<li class="btn github">
+											<a><i class="fab fa-github"></i></a>
+										</li>
+										<li class="btn pocket">
+											<a><i class="fab fa-get-pocket"></i></a>
+										</li>
 
+
+
+
+
+
+
+										</ul>
 								</div>
 
  							{{/foreach}}
@@ -94,7 +127,9 @@
 stitchClient.callFunction("FullAuthorDetails").then(result => {
 	console.log(JSON.stringify(result))
 	$.each( result, function( key, value ) {
-	  console.log(value)
+	  console.log(value);
+		var author = result.author;
+		$("." + author).find('title').html(result.title;)
 	});
 });
 </script>
