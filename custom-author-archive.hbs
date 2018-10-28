@@ -113,44 +113,41 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 stitchClient.callFunction("FullAuthorDetails").then(result => {
-	console.log(JSON.stringify(result))
+	console.log(JSON.stringify(result));
 	$.each( result, function( key, value ) {
 	  console.log(value);
 		var author = result.author;
 		$("." + author).find('.title').html(result.title);
 
 		if (result.facebook){
-			$("." + author).find('.facebook').children().attr('href', result.facebook));
+			$("." + author).find('.facebook').children().attr('href', result.facebook);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (result.linkedin){
-			$("." + author).find('.linkedin').children().attr('href', result.linkedin));
+			$("." + author).find('.linkedin').children().attr('href', result.linkedin);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (result.twitter){
-			$("." + author).find('.twitter').children().attr('href', result.twitter));
+			$("." + author).find('.twitter').children().attr('href', result.twitter);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (result.quora){
-			$("." + author).find('.quora').children().attr('href', (result.quora));
+			$("." + author).find('.quora').children().attr('href', result.quora);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (result.pocket){
-			$("." + author).find('.facebook'.children().attr('href', result.pocket));
+			$("." + author).find('.facebook').children().attr('href', result.pocket);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (result.github){
-			$("." + author).find('.github').children().attr('href', result.github));
+			$("." + author).find('.github').children().attr('href', result.github);
 			$("." + author).find('.facebook').css('display', 'block');
 		}
-
-
-
 
 	});
 });
