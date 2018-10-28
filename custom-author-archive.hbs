@@ -115,8 +115,8 @@
 stitchClient.callFunction("FullAuthorDetails").then(result => {
 
 
-	$.each( result, function( key, value ) {
-		authorObj = JSON.stringify(result);
+	for (var obj in result) {
+		obj = JSON.stringify(obj);
 		console.log('plain authorObj = ' + authorObj);
 		console.log('value' + value.toString());
 		console.log('key' + key.toString());
