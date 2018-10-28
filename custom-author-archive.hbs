@@ -113,9 +113,10 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 stitchClient.callFunction("FullAuthorDetails").then(result => {
-	authorObj = result;
 
-	$.each( authorObj, function( key, value ) {
+
+	$.each( result, function( key, value ) {
+		authorObj = JSON.stringify(result);
 		console.log('plain authorObj = ' + authorObj);
 	  console.log('authorObj' + authorObj);
 		console.log('value' + value);
