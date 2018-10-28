@@ -67,7 +67,7 @@
  										</p>
  									{{/if}}
 									<div class="author-social">
-										<ul class="share-icons">
+										<ul class="author-icons">
 											<!-- twitter -->
 											<li class="btn twitter">
 												<a><i class="fab fa-twitter"></i></a>
@@ -113,10 +113,13 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 stitchClient.callFunction("FullAuthorDetails").then(result => {
-	console.log(JSON.stringify(result));
+	//console.log(JSON.stringify(result));
+
 	$.each( result, function( key, value ) {
+		console.log('plain result = ' + result);
 	  console.log('result' + result);
 		console.log('value' + value);
+		console.log('key' + key);
 		console.log('key' + key);
 		var author = result.author;
 		$("." + author).find('.title').html(result.title);
