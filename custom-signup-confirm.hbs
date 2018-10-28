@@ -49,7 +49,7 @@ $(document).ready(function(){
   console.log('token = '+ token);
   console.log('tokenId = '+ tokenId);
   // Confirm the user's email/password account
-  const emailPassClient = stitchClient.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+  const emailPassClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
   return emailPassClient.confirmUser(token, tokenId);
 });
