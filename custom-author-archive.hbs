@@ -115,7 +115,9 @@
 stitchClient.callFunction("FullAuthorDetails").then(result => {
 	console.log(JSON.stringify(result));
 	$.each( result, function( key, value ) {
-	  console.log(value);
+	  console.log('result' + result);
+		console.log('value' + value);
+		console.log('key' + key);
 		var author = result.author;
 		$("." + author).find('.title').html(result.title);
 
