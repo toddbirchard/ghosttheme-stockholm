@@ -148,6 +148,7 @@ var themeApp = {
 	    tlScreen1
 	    .set(".text_max", {visibility: "visible"})
 	    .add("start")
+			.to(".signup", 0.2, {top: 50%})
 	    .set("#thunder", {fillOpacity: 1})
 	    .from("#thunder", 1.2, {y:-500, ease: Elastic.easeOut.config(1, 1.1)})
 	    .from(".text_max", 1.3, {opacity: 0, y:200, ease: Elastic.easeOut.config(1, 1.5)},"start")
