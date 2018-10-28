@@ -41,14 +41,17 @@
 		{{/post}}
 
 <script>
-const url = window.location.search;
-const params = new URLSearchParams(url);
-const token = params.get('token');
-const tokenId = params.get('tokenId');
-console.log('token = '+ token);
-console.log('tokenID = '+ tokenID);
-// Confirm the user's email/password account
-const emailPassClient = stitchClient.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+$(document).ready(function(){
+  const url = window.location.search;
+  const params = new URLSearchParams(url);
+  const token = params.get('token');
+  const tokenId = params.get('tokenId');
+  console.log('token = '+ token);
+  console.log('tokenID = '+ tokenID);
+  // Confirm the user's email/password account
+  const emailPassClient = stitchClient.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
-return emailPassClient.confirmUser(token, tokenId);
+  return emailPassClient.confirmUser(token, tokenId);
+});
+
 </script>
