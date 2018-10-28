@@ -189,11 +189,11 @@ var themeApp = {
 	    });
 	})(jQuery);
 	},
-	triggerSignup: function {
+	triggerSignup: function (){
 		$('.rss').on('click', function(e){
 			e.preventDefault();
 			themeApp.signup();
-		})
+		});
 	},
 	init: function() {
 		themeApp.featuredMedia();
