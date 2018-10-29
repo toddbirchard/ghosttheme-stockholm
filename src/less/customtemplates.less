@@ -50,7 +50,7 @@
 
   .about-content {
     & > p {
-      margin: 30px 44px 30px!important;
+      margin: 0 44px 30px!important;
       font-size: .9em;
     }
     @media(max-width: 800px) {
@@ -234,9 +234,6 @@
       text-align: center;
       text-align: justify;
       min-height: 70px;
-      @media(max-width: 600px) {
-      padding: 0 15px 30px;
-      }
     }
 
     .author {
@@ -322,6 +319,11 @@
     color: #505050;
     margin: 0 auto;
     font-weight: 100;
+
+    @media(max-width: 900px) {
+          min-height: 63px;
+          font-size: 13px;
+    }
   }
 
   .tag-wrapper {
@@ -358,8 +360,8 @@
   align-content: flex-start;
   flex-flow: row wrap;
   margin: 30px 40px 10px;
-  @media(max-width: 800px) {
-    margin: 30px 20px;
+  @media(max-width: 900px) {
+    margin: 30px 30px 10px;
   }
 
   .tag-wrapper {
@@ -371,7 +373,7 @@
     transition: all 0.3s ease-out;
     height: -webkit-fit-content !important;
 
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
       width: 100%;
       margin: 0 0 15px;
 

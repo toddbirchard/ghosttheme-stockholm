@@ -4,6 +4,7 @@
 	sidebar
 ====================================================*/
 .sidebar {
+	 min-width: 300px;
 	.search {
 		position: relative;
 
@@ -39,8 +40,11 @@
 	    outline: 0;
 	    -webkit-appearance: none;
 	    border: 1px solid #eaeaea;
-
 	    border-radius: 2px;
+
+			&::placeholder {
+				color: grey;
+			}
 
 			&:hover {
 				background: #ecf4f7;
@@ -221,6 +225,10 @@
 		}
 
 		.newsletter {
+
+			input::placeholder {
+				color: grey;
+			}
 
 			.form-group {
 				position: relative;
@@ -541,7 +549,6 @@
 			&:last-child {
 				margin-bottom: 0;
 				border-bottom: 0;
-				padding-bottom: 0;
 			}
 		}
 	}

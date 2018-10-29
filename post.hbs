@@ -73,55 +73,7 @@
 		</div>
 	</div>
 </section>
-<!--
-<style>
-	.comment-form .body .textarea-container {
-		margin: 0 !important;
-		max-width: none;
-	}
-</style>
-<script src="{{asset "/js/includes/comments.js"}}"></script><script>
-commentBox('5681150794137600-proj', {
-    className: 'commentbox', // the class of divs to look for
-    defaultBoxId: 'commentbox', // the default ID to associate to the div
-    tlcParam: 'tlc', // used for identifying links to comments on your page
-    backgroundColor: '#fff', // default transparent
-    textColor: '#505050', // default black
-    subtextColor: null, // default grey
-    /**
-     * Creates a unique URL to each box on your page.
-     *
-     * @param {string} boxId
-     * @param {Location} pageLocation - a copy of the current window.location
-     * @returns {string}
-     */
-    createBoxUrl(boxId, pageLocation) {
 
-        pageLocation.search = ''; // removes query string!
-        pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
-        return pageLocation.href; // return url string
-    },
-    /**
-     * Fires once the plugin loads its comments.
-     * May fire multiple times in its lifetime.
-     *
-     */
-    onCommentCount(count) {
-			console.log(this);
-    }
-});
-
-$(document).ready(function() {
-	$('iframe').ready(function() {
-		document.getElementById("commentbox").contentWindow.remove();
-		console.log(box);
-    $('iframe').contents().find('.branding').remove();
-		var $head = $("iframe").contents().find("head");
-$head.append($("<link/>",
-    { rel: "stylesheet", href: "http://jsfiddle.net/css/dist-editor-dark.css?update_09_10_2018_1", type: "text/css" }));
-});
-});
-</script>-->
 {{#has tag="Roundup"}}
 	<script src="{{asset "/js/includes/previews.js"}}"></script>
 {{/has}}

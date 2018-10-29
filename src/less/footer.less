@@ -5,7 +5,7 @@
 	footer
 ====================================================*/
 .main-footer {
-	background: url(../images/FOOT5.jpg);
+	background: url(../images/FOOT8.jpg);
 	background-size: cover;
 	/*background: #0089b7;*/
   padding: 35px 10%;
@@ -14,11 +14,19 @@
 	box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);
 	background-repeat-y: repeat;
 
+	@media(max-width: 1040px) {
+		    background-size: contain;
+	}
+
 	.footer-container{
 		max-width: 1000px;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+
+		@media(max-width: 600px) {
+			flex-direction: column;
+		}
 	}
 
 	@media(max-width: 1000px) {
@@ -59,7 +67,7 @@
 		}
 
 		@media(max-width: 600px){
-	    width: auto;
+	    width: 100%;
 
 			&:last-child{
 				margin-bottom: 0;
@@ -69,12 +77,12 @@
 		.title {
 			color: @white;
 			font-weight: 800;
-			margin: 10px 0 15px !important;
+			margin: 10px 0 25px !important;
 			font-size: 1.5em;
 
 			@media(max-width: 600px){
-				margin: 10px 0 20px!important;
-				font-size: 1.3em;
+				margin: 10px 0 30px!important;
+				font-size: 1.6em;
 				}
 			}
 
@@ -91,7 +99,7 @@
 			a {
 				border: 0;
 		    color: #fff;
-		    background: #1d5477;
+		    background: #067bff;
 				padding: 4px 12px;
 				font-size: .85em;
 		    display: inline-block;
@@ -102,7 +110,8 @@
 		    text-align: center;
 				font-family: Gordita-Regular;
 				transition: all .3s easeout;
-
+				border-bottom: 1px solid black;
+				border-right: 1px solid black;
 
 				&:hover {
 					background: @white;
@@ -125,12 +134,10 @@
 			}
 
 			.recent-single-post {
-				border-bottom: 1px dashed rgba(255,255,255,.1) !important;
-
-
-				&:last-child {
-					border-bottom: none !important;
-				}
+				background: rgba(6, 123, 255, 0.30);
+				padding: 15px;
+				border-bottom: none;
+				margin-bottom: 10px;
 			}
 
 			.single-author {
