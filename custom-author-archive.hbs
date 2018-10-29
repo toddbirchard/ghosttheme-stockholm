@@ -116,7 +116,7 @@ stitchClient.callFunction("FullAuthorDetails").then(result => {
 
 
 	for (var i = 0; i < result.length; i++) {
-		var authorObj = JSON.stringify(result[i]);
+		var authorObj = result[i];
 		console.log('plain authorObj = ' + authorObj);
 		var author = authorObj['author'];
 		console.log("authorObj['title'] = " + authorObj['title']);
