@@ -125,33 +125,33 @@ stitchClient.callFunction("FullAuthorDetails").then(result => {
 		}
 
 		if (authorObj['facebook']){
-			$("." + author).find('.facebook').children().attr('href', authorObj['facebook'].toString());
+			$("." + author).find('.facebook').children().attr('href', 'https://facebook.com/'+ authorObj['facebook'].toString());
 			$("." + author).find('.facebook').css('display', 'block');
 		}
 
 		if (authorObj['linkedin']){
-			$("." + author).find('.linkedin').children().attr('href', authorObj['linkedin']);
-			$("." + author).find('.facebook').css('display', 'block');
+			$("." + author).find('.linkedin').children().attr('href', 'https://linkedin.com/'+ authorObj['linkedin']);
+			$("." + author).find('.linkedin').css('display', 'block');
 		}
 
 		if (authorObj['twitter']){
-			$("." + author).find('.twitter').children().attr('href', authorObj['twitter']);
-			$("." + author).find('.facebook').css('display', 'block');
+			$("." + author).find('.twitter').children().attr('href', 'https://twitter.com/'+ authorObj['twitter']);
+			$("." + author).find('.twitter').css('display', 'block');
 		}
 
 		if (authorObj['quora']){
-			$("." + author).find('.quora').children().attr('href', authorObj['quora']);
-			$("." + author).find('.facebook').css('display', 'block');
+			$("." + author).find('.quora').children().attr('href', 'https://quora.com/'+ authorObj['quora']);
+			$("." + author).find('.quora').css('display', 'block');
 		}
 
 		if (authorObj['pocket']){
-			$("." + author).find('.facebook').children().attr('href', authorObj['pocket']);
-			$("." + author).find('.facebook').css('display', 'block');
+			$("." + author).find('.pocket').children().attr('href', 'https://getpocket.com/' + authorObj['pocket']);
+			$("." + author).find('.pocket').css('display', 'block');
 		}
 
 		if (authorObj['github']){
-			$("." + author).find('.github').children().attr('href', authorObj['github']);
-			$("." + author).find('.facebook').css('display', 'block');
+			$("." + author).find('.github').children().attr('href', 'https://github.com/'+ authorObj['github']);
+			$("." + author).find('.github').css('display', 'block');
 		}
 
 	}
