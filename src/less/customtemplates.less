@@ -115,6 +115,7 @@
       height: 110px;
       background-size: cover !important;
       background-position-y: center !important;
+      box-shadow: 0 4px 2px -2px rgba(20, 24, 53, 0.15);
       background: linear-gradient(-15deg, rgba(255, 255, 255, .1) 100px ,transparent 0), linear-gradient(15deg, rgba(255, 255, 255, .1) 100px ,transparent 0),linear-gradient(-15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(0deg, #749BE1 150px, #9267C7);
     }
 
@@ -158,7 +159,7 @@
       margin: 10px auto;
 
       span {
-        color: @text-color-light;
+        color: #656565;
       }
 
       &:last-child {
@@ -199,6 +200,7 @@
       margin: auto;
       top: 62px;
       border: 3px solid white;
+          box-shadow: 2px 2px 2px rgba(20, 24, 53, 0.15);
       @media(max-width: 1040px) {
         margin: 0 auto;
         display: block;
@@ -221,7 +223,7 @@
       overflow: hidden;
       padding: 17px;
       text-align: center;
-      margin-top: 21px;
+      margin-top: 30px;
       @media(max-width: 1040px) {
         text-align: center;
         width: 100%;
@@ -243,6 +245,7 @@
       padding: 0 25px 30px;
       text-align: center;
       text-align: justify;
+          min-height: 70px;
       @media(max-width: 1040px) {
         text-align: center;
         float: none !important;
@@ -253,6 +256,7 @@
 
       a {
         color: #105a6d;
+        font-family: Gordita-Medium;
 
         &:hover {
           text-decoration: none;
