@@ -147,20 +147,14 @@
     width: 48%;
     border-right: 1px solid #dcdcdc!important;
     border-bottom: 1px solid #dcdcdc !important;
-    position: relative;;
+    position: relative;
+    border: 1px solid #d5d5d5;
+    width: -moz-available;
 
-    @media(max-width: 1040px) {
-      width: 40%;
-    }
-
-    @media(max-width: 800px) {
-      padding: 20px;
-      width: 90%!important;
+    @media(max-width: 600px){
+      width: 100%!important;
       margin: 10px auto;
-
-      span {
-        color: #656565;
-      }
+    }
 
       &:last-child {
         border-bottom: 0 !important;
@@ -224,13 +218,7 @@
       padding: 17px;
       text-align: center;
       margin-top: 30px;
-      @media(max-width: 1040px) {
-        text-align: center;
-        width: 100%;
-      }
-      @media(max-width: 1040px) {
-        margin-left: 0;
-      }
+      margin-left: 0;
     }
 
     .bio {
@@ -245,10 +233,9 @@
       padding: 0 25px 30px;
       text-align: center;
       text-align: justify;
-          min-height: 70px;
-      @media(max-width: 1040px) {
-        text-align: center;
-        float: none !important;
+      min-height: 70px;
+      @media(max-width: 600px) {
+      padding: 0 15px 30px;
       }
     }
 
