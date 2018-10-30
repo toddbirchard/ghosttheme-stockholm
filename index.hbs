@@ -10,7 +10,7 @@
 				<!-- start main post area -->
 				<div class="col-md-8 main-content">
 					<div class="postlist">
-						{{> loop}} {{pagination}}
+						{{#get "posts"}}{{> loop}}{{/get}} {{pagination}}
 					</div>
 				</div>
 		</div>
