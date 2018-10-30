@@ -9,6 +9,33 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    .cover {
+      background-size:cover;
+      background-position-y: center;
+      height: 300px;
+      background-color: #305790;
+      background-blend-mode: soft-light;
+
+      .tag-name {
+        font-size: 2.2em;
+        color: white !important;
+        font-family: CompassSans-Medium;
+        text-shadow: 0 0 20px #2f2d56;
+        margin-top:110px;
+      }
+
+      .tag-description {
+        font-size: 1.3em;
+        font-weight: 600;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 20px auto 0;
+        color: white;
+        font-family: CompassSans-Regular;
+        text-shadow: 0 0 20px #2f2d56;
+      }
+    }
+
     article {
       width: 49%;
       flex-wrap: wrap;
@@ -21,14 +48,20 @@
           margin: 0 0 60px;
       }
 
+      .post-title {
+        font-size: 1.5em;
+      }
+
+      .featured-media {
+        max-height: 145px;
+      }
+
       .post-excerpt {
-        font-size: 1em;
+        font-size: 1.1em;
         font-family: 'CompassSans-Medium';
       }
 
-      .post-title {
-            font-size: 1.5em;
-      }
+
 
       .post-permalink {
         position: absolute;
@@ -48,12 +81,11 @@
 
 .postlist {
 
-  .tag-description {
-    font-size: .9em;
-    line-height: 1.5;
-    max-width: 90%;
-    margin: 20px auto 0;
+  .tag-title {
+    color: white;
   }
+
+
   .tag-image {
     margin-top: 30px;
 

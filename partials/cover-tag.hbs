@@ -1,5 +1,6 @@
 {{#tag}}
-<div class="cover tag-cover">
+{{#if feature_image}}
+<div class="cover tag-cover" style="background-image: url({{feature_image}});">
 
 	<h3 class="tag-name">
 		<i class="fal fa-tag"></i> {{name}}
@@ -12,6 +13,7 @@
         {{description}}
 	</div>
 	{{/if}}
-	{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}
+	{{!--{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}--}}
 </div>
+{{/if}}
 {{/tag}}
