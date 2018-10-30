@@ -65,7 +65,7 @@
 				</article>
 
 				{{> about-author}}
-				{{#author}}{{> author-card}}{{/author}}
+				{{#author include="count.posts"}}{{> author-card}}{{/author}}
 				{{> prev-next}}
 
 			</div>

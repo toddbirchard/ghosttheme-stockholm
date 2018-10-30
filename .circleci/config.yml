@@ -1,0 +1,12 @@
+jobs:
+  build:
+    working_directory: ~/content/themes/hackers
+    docker:
+      - image: circleci/node:8.12.0
+      - image: circleci/ghost:2.3.0-alpine
+    steps:
+      - run: |
+          bundle install
+          bundle exec rake db:schema:load
+          bundle exec rspec spec
+          bundle exec cucumber
