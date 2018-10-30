@@ -281,13 +281,17 @@
 			}
 
 			span {
-				font-family: 'Gordita-Regular',sans-serif !important;
+				font-family: 'Gordita-Regular',sans-serif;
 				font-weight: 500;
 			}
 
 			.tags {
 				height: 18px !important;
 				padding: 6px 10px;
+				span {
+					font-family: 'Gordita-Medium',sans-serif !important;
+				}
+
 				@media(max-width: 600px) {
 					height: 18px !important;
 					padding: 6px 10px;
@@ -722,11 +726,14 @@
 		img {
 			width: 99%;
 			border: 1px solid #d8d8d8;
+			@media(max-width: 600px) {
+			    margin-bottom: -5px;
+				}
 		}
 		@media(max-width: 600px) {
-			margin-left: calc(~"-51vw + 50%") !important;
+			margin-left: calc(~"-50vw + 50%") !important;
 			margin-right: calc(~"-50vw + 50%") !important;
-			width: 120% !important;
+			width: 125% !important;
 			margin-top: 25px;
 			margin-bottom: 0;
 
