@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "/js/includes/secret.js"}}"></script>
+
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
@@ -27,6 +28,10 @@
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
+	<script>Stitch.defaultAppClient.auth.loginWithCredential(new AnonymousCredential()).then(user => {
+	   console.log(`Logged in as anonymous user with id: ${user.id}`);
+	}).catch(console.error);
+</script>
 
 </head>
 <body class="{{body_class}}">

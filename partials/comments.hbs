@@ -68,7 +68,7 @@
     }
 
     function displayCommentsOnLoad() {
-      client.auth
+      stitchClient.auth
         .loginWithCredential(new stitch.AnonymousCredential())
         .then(displayComments)
         .catch(console.error);
@@ -76,10 +76,10 @@
 
     function addComment() {
       const newComment = document.getElementById("new_comment");
-      console.log("add comment", client.auth.user.id)
+      console.log("add comment", stitchClient.auth.user.id)
       db.collection("comments")
         .insertOne({
-          owner_id: client.auth.user.id,
+          owner_id: stitchClient.auth.user.id,
           comment: newComment.value
         })
         .then(displayComments);

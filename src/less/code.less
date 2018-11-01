@@ -62,12 +62,30 @@ code {
   overflow-wrap: break-word;
   font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
   margin: 0;
-  font-size: 14px;
+  font-size: .9em;
   font-weight: 200;
-  line-height: 1.5;
+  line-height: 1.7;
   padding: 0 30px 30px;
   white-space: pre-wrap !important;
   color: #d3dce0;
+
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    background: #121925;
+    content: "Code Snippet";
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: 8px 20px;
+    margin-left: -40px;
+    font-weight: 700;
+  }
 
   * {
     font-size: 14px;
@@ -90,8 +108,8 @@ code {
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #121925;
-    content: "Python";
+    background: #121925 !important;
+    content: "Python" !important;
     display: block;
     font-style: normal;
     font-variant: normal;
@@ -213,7 +231,7 @@ code {
     width: 110%;
     height: auto;
     background: #090f10;
-    content: "Javascript";
+    content: "Javascript" !important;
     display: block;
     font-style: normal;
     font-variant: normal;
@@ -276,7 +294,7 @@ code {
     width: 110%;
     height: auto;
     background: #121925;
-    content: "JSON";
+    content: "JSON"  !important;
     display: block;
     font-style: normal;
     font-variant: normal;
@@ -418,7 +436,7 @@ code {
     width: 110%;
     height: auto;
     background: #121925;
-    content: "Bash";
+    content: "Bash"  !important;
     display: block;
     font-style: normal;
     font-variant: normal;

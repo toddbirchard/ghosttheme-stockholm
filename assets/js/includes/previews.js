@@ -20,9 +20,10 @@ $(document).ready(function() {
   function postLinkPreviews() {
     $(".post-content > p > a").each(function(index, element) {
       $.ajax({
-        url: api_url + '?key=' + linkpreview_key + '&q=' + $(this).text(),
+        url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
         contentType: "application/json",
-        dataType: 'json',
+        data: {url: $(this).text()},
+        dataType: 'jsonp',
         success: function(result) {
           var link_image = verifyImage(result.image);
           var verify_title = verifyTitle(result);

@@ -16,6 +16,10 @@
       background-color: #305790;
       background-blend-mode: soft-light;
 
+      @media(max-width: 600px){
+
+      }
+
       .tag-name {
         font-size: 2.2em;
         color: white !important;
@@ -53,8 +57,13 @@
       }
 
       .featured-media {
-        max-height: 145px;
-      }
+    		box-sizing: border-box;
+    		height: 200px;
+    		display: block;
+    		overflow: hidden;
+    		margin: auto;
+    		background-size: cover;
+    	}
 
       .post-excerpt {
         font-size: 1.1em;
