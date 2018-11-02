@@ -290,14 +290,15 @@ var themeApp = {
     themeApp.adjustTileHeight();
     themeApp.mobileNavigation();
     themeApp.codeHighlight();
-    themeApp.fullScreen();
     themeApp.triggerSignup();
     //themeApp.tags();
-		themeApp.postLinkPreviews();
 
 
     if ($('body').hasClass('post-template')) {
       themeApp.highlighter();
+      themeApp.postLinkPreviews();
+      themeApp.fullScreen();
+
     }
   }
 }
