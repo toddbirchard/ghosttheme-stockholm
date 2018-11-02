@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
       function postLinkPreviews() {
         $(".post-content > p > a").each(function(index, element) {
             $.ajax({
@@ -19,7 +18,7 @@ $(document).ready(function() {
           }
         }
 
-        function authorLinkPreviews() {
+      function authorLinkPreviews() {
           $(".author-website a").each(function(index, element) {
             $.ajax({
               url: api_url + "?key=" + linkpreview_key + " &q=" + $(this).text(),
@@ -31,11 +30,11 @@ $(document).ready(function() {
               }
             });
           });
-        }
+      }
 
-        postLinkPreviews();
+      postLinkPreviews();
 
-        if ($('.author-template').length) {
-          authorLinkPreviews();
-        }
+      if ($('.author-template').length) {
+        authorLinkPreviews();
+      }
 });
