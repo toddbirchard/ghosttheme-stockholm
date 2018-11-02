@@ -7,7 +7,6 @@ $(document).ready(function() {
               contentType: "application/json",
               data: {
                 q: $(element).text(),
-                key: results
               },
               dataType: 'jsonp',
               /*headers: {
