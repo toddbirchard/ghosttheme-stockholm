@@ -270,7 +270,7 @@ var themeApp = {
         async: true,
         contentType: "application/json",
         data: {
-          q: $(this).attr('href'),
+          url: $(this).attr('href'),
         },
         dataType: 'json',
         success: function(result) {
