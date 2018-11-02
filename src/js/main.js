@@ -269,9 +269,9 @@ var themeApp = {
         url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
         async: true,
         contentType: "application/json",
-        data: JSON.stringify({
+        data: {
           q: $(this).attr('href'),
-        }),
+        },
         dataType: 'json',
         success: function(result) {
           console.log(result)
