@@ -6,7 +6,7 @@ $(document).ready(function() {
               url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
               contentType: "application/json",
               data: {
-                q: $(element).attr('href'),
+                q: $(element.index).attr('href'),
               },
               dataType: 'json',
               /*headers: {
