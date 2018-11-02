@@ -4,15 +4,12 @@ $(document).ready(function() {
         $(".post-content > p > a").each(function(index, element) {
             $.ajax({
               url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
+              async: true,
               contentType: "application/json",
-              data: {
+              data: JSON.stringify({
                 q: $(element).attr('href'),
-              },
+              }),
               dataType: 'json',
-              /*headers: {
-                Access-Control-Allow-Origin: "*",
-                Content-Type: "application/json",
-              }*/
               success: function(result) {
                 console.log(result)
                 $(element).after('<a href="' + result.url + '"><div class="link-preview">' + result.image + '<div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
