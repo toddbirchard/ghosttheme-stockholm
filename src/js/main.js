@@ -275,7 +275,7 @@ var themeApp = {
         dataType: 'json',
         success: function(result) {
           console.log(result)
-          $(element).after('<a href="' + result.url + '"><div class="link-preview" style="url(' + result.image + ')"><div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
+          $(element).after('<a href="' + result.url + '"><div class="link-preview"><div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
           $(element).remove();
         }
       });
