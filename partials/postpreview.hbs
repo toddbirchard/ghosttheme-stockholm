@@ -6,9 +6,11 @@
   {{/if}}
 
   {{#if feature_image}}
-      <a href="{{url}}"><div class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}"></a>
+      <a href="{{url}}">
+        <div class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}"></div>
+        </a>
       {{!-- div class="postimage" style="background:url({{feature_image}});" alt="{{{title}}}"></div> --}}
-    </div>
+
   {{/if}}
 
   <div class="content">
