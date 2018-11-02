@@ -196,6 +196,32 @@ var themeApp = {
 			themeApp.signup();
 		});
 	},
+	displayCommentsOnLoad: function () {
+		stitchClient.auth
+			.loginWithCredential(new stitch.AnonymousCredential())
+			.then(displayComments)
+			.catch(console.error);
+
+		db.collection("comments")
+			.find({}, {
+				limit: 1000
+			})
+			.asArray()
+			.then(docs => docs.map(doc => `<div>${doc.comment}</div>`))
+			.then(comments => document.getElementById("comments").innerHTML = comments);
+
+		},
+	addComment: function() {
+		const newComment = document.getElementById("new_comment");
+		console.log("add comment", stitchClient.auth.user.id)
+		db.collection("comments")
+			.insertOne({
+				owner_id: stitchClient.auth.user.id,
+				comment: newComment.value
+			})
+			.then(displayComments);
+		newComment.value = "";
+	},
 	init: function() {
 		themeApp.featuredMedia();
 		themeApp.sidebarConfig();
