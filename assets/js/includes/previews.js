@@ -10,6 +10,10 @@ $(document).ready(function() {
                 key: results
               },
               dataType: 'jsonp',
+              headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+              }
               success: function(result) {
                 $(element).after('<a href="' + result.url + '"><div class="link-preview">' + result.image + '<div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
                 $(element).remove();
