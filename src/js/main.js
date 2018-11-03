@@ -153,44 +153,44 @@ var themeApp = {
         .set(".text_max", {
           visibility: "visible"
         })
+        .set(".signup", {
+          visibility: "visible"
+        })
         .add("start")
-        .to(".signup", 0.2, {
-          y: 1600
+        .from(".signup", 0.4, {
+          y: '-900px'
         })
         .set("#thunder", {
           fillOpacity: 1
         })
-        .from("#thunder", 1.2, {
-          y: 300,
+        .from("#thunder", 1, {
+          y: -300,
           ease: Elastic.easeOut.config(1, 1.1)
         })
-        .from(".text_max", 1.3, {
+        .from(".text_max", 1, {
           opacity: 0,
           y: 200,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "start")
-        .set(".loader", {
-          visibility: "visible"
-        })
-        .from(".loader", 1, {
-          x: -375,
-          ease: Power0.easeNone
-        })
-        .to("#logo", 1, {
-          y: 50,
+        .from("#logo", .3, {
+          y: '-400px',
           scale: 1
         })
         .to(".text_max", 0.2, {
           opacity: 0
         }, "-=0.5")
         .add("nextScreen")
-        .set([".options", ".signup-form", ".text-signup"], {
+        .set([".options", ".signup-form", ".signup-head", ".description"], {
           visibility: "visible"
+        })
+        .from(".description", .35, {
+          y: '-500px',
+          opacity: 0
         })
         .to("#logo-txt", 2, {
           opacity: 1
         })
-        .from(".text-signup", 1.5, {
+        .from(".signup-head", 1.5, {
           y: 500,
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
@@ -205,8 +205,6 @@ var themeApp = {
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "-=0.4");
-
-
 
       $("#signup-button").mousedown(function() {
         $(this).css("box-shadow", "unset");
@@ -298,7 +296,6 @@ var themeApp = {
     themeApp.triggerSignup();
     //themeApp.tags();
 
-
     if ($('body').hasClass('post-template')) {
       themeApp.highlighter();
       themeApp.postLinkPreviews();
@@ -313,6 +310,4 @@ var themeApp = {
 ============= =============*/
 $(document).ready(function() {
   themeApp.init();
-
-
 });

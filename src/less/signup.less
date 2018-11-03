@@ -1,46 +1,74 @@
 .signup {
   position: fixed;
-  left: 50%;
-  top: -100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin: auto;
   overflow: hidden;
   width: 375px;
   height: 667px;
   background-image: linear-gradient(135deg, #29DAC6 0%, #329DE3 100%);
   box-shadow: 0 0 24px 0 rgba(0,0,0,0.1);
   z-index: 500;
+
+  .description {
+    color: white;
+    width: 258px;
+    margin: 30px auto auto;
+    text-align: center;
+    font-family: Gordita-Medium;
+    line-height: 1.35;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    top: 200px;
+  }
 }
 
 .signup #logo {
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  -webkit-transform: translate(-50%, -50%);
   height: 200px;
-  width: 200px;
-  margin-top: 75px;
+  max-width: 50px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  transform: scale(2.5);
 }
 
 #logoGroup {
-  transform: translate(120px, 235px);
+  transform: translate(90px, 235px);
 }
 
 #thunder {
   background-repeat: no-repeat;
   background-position: center;
   background: url("../images/logo.svg");
-  height: 60px;
-  width: 38px;
+  height: 51px;
+  width: 32px;
   margin: auto;
   overflow: hidden;
   background-size: cover;
-  margin-top:80px;
+  margin-top: 80px;
 }
 
 #halfCircle {
   height: 100px;
   width: 100px;
+}
+
+input {
+  border-radius: 0 !important;
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px white inset;
+  }
+
+  &:focus {
+    border: 1px solid #c7e4f3 !important;
+  }
 }
 
 .text_max {
@@ -49,8 +77,11 @@
   color: #fff;
   font-weight: 300;
   position: absolute;
-  left: 50%;
-  bottom: 8%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  bottom: -100px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
@@ -122,6 +153,10 @@
   width: 300px !important;
 }
 
+button {
+  border-radius: 0 !important;
+}
+
 .signup-form input:focus {
   box-shadow: 0 0 15px 0 #0000000d;
   border-left: 3px solid #fff;
@@ -163,10 +198,11 @@
 .options a {
   pointer-events: none;
   position: absolute;
-  color: rgba(255,255,255,0.8);
-  font-size: 12px;
+  color: rgba(255,255,255,.8);
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 0.8px;
+  font-family: Gordita-Medium;
 }
 
 .float-left {
@@ -181,18 +217,20 @@
   bottom: 3%;
 }
 
-.un {
+.signup-head {
   margin: auto;
-display: block;
-margin-top: 30px;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
+  display: block;
+  left: 0;
+  top: 31%;
+  right: 0;
+  color: white;
+  font-family: CompassSans-Medium;
+  letter-spacing: 4px;
+  font-size: 3em;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  margin-top: 40px;
 }
 
 .tr {
