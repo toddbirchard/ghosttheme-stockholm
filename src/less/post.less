@@ -774,6 +774,8 @@
 		margin: 20px 0;
 		min-height: 88px;
 		box-shadow: 0 0 5px rgba(80,82,204,.1)!important;
+		display: flex;
+		justify-content: space-between;
 		@media(max-width: 1000px) {
 			padding: 30px 40px;
 			margin: 20px;
@@ -783,13 +785,13 @@
 		}
 
 		.avatar {
-			width: 90px;
-			height: 90px;
+			width: 150px;
+			height: 150px;
+			min-width: 150px;
 			display: inline-block;
 			overflow: hidden;
 			margin-right: 30px;
-			margin-bottom: 20px;
-			float: left;
+
 			@media(max-width: 600px) {
 				width: 80px;
 				height: 80px;
@@ -808,7 +810,7 @@
 			span {
 				display: block;
 				line-height: 1em;
-				margin-bottom: 8px;
+				margin-bottom: 10px;
 				font-size: 0.9em;
 
 				i {
@@ -829,7 +831,7 @@
 
 		.author {
 			font-size: 1.5em;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 			font-family: 'Gordita-Medium', 'Gordita-Light';
 			@media(max-width: 600px) {
 				font-size: 1.3em;

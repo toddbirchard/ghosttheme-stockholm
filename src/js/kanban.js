@@ -120,6 +120,8 @@ stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(use
           noSwiping: false,
           slidesPerColumnFill: 'column',
           grabCursor: true,
+          centerInsufficientSlides: true,
+          centeredSlides: true
           //slidesOffsetBefore: 20,
           //slidesOffsetAfter: 20,
         },
@@ -138,7 +140,21 @@ stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(use
 
    swiper.on('resize', function () {
     swiper.slideTo(0, 300, false);
+
     swiper.pagination.update();
+    if ($(window).width() < 600) {
+      swiper.centeredSlides = true;
+    }
+  });
+
+  swiper.on('slideChange', function () {
+    if ($(window).width() < 600) {
+      swiper.centeredSlides = true;
+      swiper.spaceBetween = 0;
+      swiper.normalizeSlideIndex = true;
+      swiper.updateSize();
+      swiper.updateSlides() 
+    }
   });
 }
 });
