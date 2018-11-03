@@ -139,6 +139,9 @@ var themeApp = {
     });
   },
   signup: function() {
+    $(".overlay").css('display', 'block');
+    $(".overlay").css('opacity', '.4');
+
     (function($) {
 
       var tlScreen1 = new TimelineMax();
@@ -152,13 +155,13 @@ var themeApp = {
         })
         .add("start")
         .to(".signup", 0.2, {
-          y: 700
+          y: 1600
         })
         .set("#thunder", {
           fillOpacity: 1
         })
         .from("#thunder", 1.2, {
-          y: -500,
+          y: 300,
           ease: Elastic.easeOut.config(1, 1.1)
         })
         .from(".text_max", 1.3, {
@@ -169,13 +172,13 @@ var themeApp = {
         .set(".loader", {
           visibility: "visible"
         })
-        .from(".loader", 3, {
+        .from(".loader", 1, {
           x: -375,
           ease: Power0.easeNone
         })
-        .to("#logo", 0.5, {
-          y: -575,
-          scale: 0.5
+        .to("#logo", 1, {
+          y: 50,
+          scale: 1
         })
         .to(".text_max", 0.2, {
           opacity: 0
@@ -184,7 +187,7 @@ var themeApp = {
         .set([".options", ".signup-form", ".text-signup"], {
           visibility: "visible"
         })
-        .to(".logo-txt", 2, {
+        .to("#logo-txt", 2, {
           opacity: 1
         })
         .from(".text-signup", 1.5, {
@@ -202,6 +205,8 @@ var themeApp = {
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "-=0.4");
+
+
 
       $("#signup-button").mousedown(function() {
         $(this).css("box-shadow", "unset");
