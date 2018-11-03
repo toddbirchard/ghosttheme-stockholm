@@ -31,6 +31,10 @@
   margin: 0 !important;
 }
 
+.TweetAuthor-link {
+  margin-bottom: 0 !important;
+}
+
 .timeline-Viewport {}
 
 .timeline-Tweet-author {

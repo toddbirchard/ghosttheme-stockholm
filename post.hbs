@@ -16,6 +16,17 @@
 						<img src="{{feature_image}}" alt="{{{title}}}">
 					</div>
 					{{/if}}
+
+					{{#primary_tag}}
+					{{#if feature_image}}
+					{{#get "posts" filter="primary_tag:" include="count.posts" order="published_at desc" }}
+						{{count.posts}}
+        {{/get}}
+				{{/if}}
+				{{/primary_tag}}
+
+
+
 					<div class="post-head">
 						<div class="post-meta">
 							{{#primary_tag}}

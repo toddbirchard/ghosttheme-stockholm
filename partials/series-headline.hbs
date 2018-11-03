@@ -1,0 +1,22 @@
+<script>
+var postcount = 0;
+  $.ajax({
+    url: 'https://hackersandslackers.com/ghost/api/v0.1/posts/',
+    async: true,
+    contentType: "application/json",
+    data: {
+      limit: 'all',
+      include: 'count.posts',
+      order: 'count.posts desc',
+      client_secret: 'ae0ec4a95079',
+      client_id: 'ghost-frontend',
+      formats: 'plaintext',
+      filter: 'tags:[{{primary_tag.slug}}]'
+    },
+    dataType: 'json',
+    success: function(results) {
+      console.log('counted posts ' + results.posts.length);
+      //console.log('result of the fuckin ajax = ' + JSON.stringify(results));
+    }
+  });
+</script>
