@@ -1,0 +1,62 @@
+
+@media (max-width:1000px) {
+  .main-navigation {
+    text-align: left;
+    padding: 0;
+
+    .menu {
+      li {
+        display: block;
+
+        a {
+          color: white;
+          font-size: 17px;
+        }
+
+        &:hover {
+          color: #11004e;
+
+          a {
+            text-decoration: none;
+            color: #11004e;
+          }
+
+          ul {
+            visibility: visible;
+            margin: 0;
+            position: relative;
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  @media(max-width: 800px) {
+    padding: 0 6%;
+    margin: 0;
+    border: 0;
+
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+
+      .row {
+        margin: 0;
+
+        .col-sm-12 {
+          padding: 0;
+
+          .navbar-collapse {
+            .menu {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

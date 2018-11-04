@@ -1,0 +1,270 @@
+@import "variables.less";
+@import "mixin.less";
+/*====================================================
+	post footer
+====================================================*/
+.post-footer {
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 85px;
+	padding: 0;
+  padding-bottom: 20px;
+	/*border-bottom: 1px solid #efefef;*/
+	@media(max-width: 800px) {
+		display: block;
+		height: fit-content;
+	}
+
+	.tag-list {
+		width: 40%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 20px;
+		margin: 20px 0;
+
+		a {
+			color: #119ac3;
+			background: #ecf1f9;
+			font-size: 0.8em;
+			margin-right: 15px;
+			transition: all 0.3s;
+			line-height: 1;
+			padding: 10px 12px;
+			@media(max-width:800px) {
+				margin: 0 0 8px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: darken(#f2f3f5, 10%);
+				color: darken(#7cd2ea, 40%);
+			}
+		}
+		@media(max-width: 800px) {
+			width: 100%;
+			text-align: center;
+			justify-content: space-evenly;
+		}
+	}
+
+	.share-icons {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 !important;
+		padding-left: 0 !important;
+		width: 450px;
+		height: 100%;
+		@media(max-width:800px) {
+			margin: auto;
+		}
+
+		.btn {
+			list-style: none;
+			display: flex !important;
+			border: 0;
+			padding: 8px 8px 8px 5px !important;
+			transition: 0.2s all ease-out;
+			border-radius: 2px;
+			background: #f3f3f3;
+			color: white;
+			height:15px;
+			margin: auto 0;
+			@media(max-width:900px) {
+				width: fit-content !important;
+				height: fit-content;
+				padding: 10px;
+			}
+			@media(max-width:600px) {
+      	padding: 9px 11px!important;
+
+			}
+
+			&.facebook {
+			  background-color: lighten(@facebook-color, 15%);
+
+				@media(max-width:600px) {
+					background-color: white !important;
+					i {
+						color: lighten(@facebook-color, 15%) !important;
+					}
+
+				}
+			}
+
+			&.twitter {
+			  background-color: lighten(@twitter-color, 5%);
+
+				@media(max-width:600px) {
+					background-color: white !important;
+					i {
+						color: lighten(@twitter-color, 5%)!important;
+					}
+
+				}
+			}
+
+			&.linkedin {
+			  background-color: lighten(@linkedin-color, 5%);
+
+				@media(max-width:600px) {
+					background-color: white !important;
+					i {
+						color: lighten(@linkedin-color, 5%) !important;
+					}
+
+				}
+			}
+
+			&.ycombinator {
+			  background-color: lighten(@rss-color, 15%);
+
+				@media(max-width:600px) {
+					background-color: white !important;
+					i {
+						color: lighten(@rss-color, 15%) !important;
+					}
+
+				}
+			}
+
+			a {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				@media(max-width:800px) {
+					padding: 0;
+					height: fit-content;
+				}
+			}
+
+			span {
+				line-height: 1;
+				font-size: .7em;
+			}
+
+			&:hover {
+				border: none;
+
+				span {
+					color: white;
+				}
+			}
+
+			i {
+				font-size: 14px;
+				margin: 10px 8px;
+				color: white;
+
+				@media(max-width: 800px) {
+				    margin: 0 5px 0 2px;
+						font-size: 16px;
+					}
+
+				@media(max-width: 600px) {
+					font-size: 30px;
+					margin: 0!important;
+					opacity: .8;
+				}
+			}
+
+			span {
+				color: white;
+				font-size: .7em;
+				@media(max-width: 600px) {
+					display: none;
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+			}
+			@media(max-width: 800px) {
+				width: 100%;
+			}
+		}
+
+		a {
+			border: 0;
+			padding: 5px 11px;
+			color: #fff;
+			line-height: 1.5em;
+			display: inline-block;
+			border-radius: 2px;
+			.transition(all 0.2s ease);
+			font-size: 0.9em;
+			margin: 5px 10px 5px 0;
+
+			&:hover {
+				color: @white;
+				text-decoration: none;
+
+				span {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.share-icons {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		@media(max-width: 800px) {
+			margin: auto;
+			width: auto;
+		}
+	}
+
+	.share {
+		padding-left: 0;
+		min-width: 220px;
+		margin: 0;
+		height:100%;
+		@media(max-width:900px) {
+			max-width: 80%;
+			margin: 15px auto !important;
+			padding-bottom: 20px;
+		}
+
+		@media(max-width:900px) {
+			max-width: none;
+			width: 100%;
+			margin: 15px 0 !important;
+			padding-bottom: 20px;
+		}
+
+		span {
+			font-size: .7em;
+		}
+
+		.share-icons {
+			z-index: 20;
+
+		}
+	}
+
+	.share,
+	.tag-cloud {
+		float: none;
+		margin: 20px 0;
+		@media(max-width: 800px) {
+			width: 80%;
+    	margin: 20px auto 0 !important;
+		}
+	}
+
+	.tag-cloud {
+		display: flex;
+		justify-content: center;
+
+		a {
+			margin: 0 10px 10px !important;
+			color: @theme-color;
+		}
+	}
+}

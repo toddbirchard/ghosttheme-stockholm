@@ -58,9 +58,13 @@ var themeApp = {
     }
   },
   highlighter: function() {
-    $('pre code').each(function(i, block) {
+    hljs.configure({
+      tabReplace: '    ', // 4 spaces
+    })
+    hljs.initHighlighting();
+    /*$('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
-    });
+    });*/
   },
   backToTop: function() {
     $(window).scroll(function() {
@@ -128,13 +132,14 @@ var themeApp = {
       classPrefix: '', // don't append class prefix
       languages: ['python', 'javascript']
     });
+    hljs.initHighlighting();
     $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
+      //hljs.highlightBlock(block);
       console.log('hljs = ', $(this).find('code').height());
       if ($(this).height() >= 400) {
         var color = $(this).css('background');
         console.log('wtf color = ' + color);
-        $(this).append('<div class="codeoverflow" style="width:100%; position:absolute; bottom:0; background: linear-gradient(to bottom,rgba(123, 123, 123, 0),rgba(5, 13, 29, 0.84)); height: 60px; left: 0;"></div>');
+        $(this).append('<div class="codeoverflow" style=""></div>');
       }
     });
   },

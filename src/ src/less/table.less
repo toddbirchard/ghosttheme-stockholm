@@ -11,18 +11,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   margin: 20px 0 40px;
-  box-shadow: 1px 1px 4px #dbddec;
+  box-shadow: 0px 0px 6px #b8bace;
+
+  th {
+    text-align: center;
+    font-family: 'Gordita-Medium';
+  }
 
   thead tr {
     border-bottom: 1px solid rgba(0,0,0,.12);
     background-color: #5f6779 !important;
     color:white;
-
-    th {
-      text-align: center;
-      font-family: Gordita-Medium;
-       min-width: 30px;
-    }
   }
 
   &.striped {
@@ -65,28 +64,26 @@ tr:nth-child(even) {
 
 
 
-td, th{
+td, th {
   padding: 15px 5px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   text-align: center;
-  font-size:.8em;
-  text-align: center;
+  font-size: .8em;
 }
 
 // Responsive Table
 @media (max-width:600px) {
 
   table {
-    width: 120%;
+    width: 112%;
     border-collapse: collapse;
     border-spacing: 0;
     display: block;
     position: relative;
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
-    overflow-x: scroll;
 
     &:hover{
       cursor: grab;
@@ -102,17 +99,12 @@ td, th{
       vertical-align: top;
       border-spacing: 0 !important;
       border-collapse: collapse !important;
-      font-size: .8em;
     }
 
     th { text-align: left; }
     thead {
       display: block;
       float: left;
-      th {
-        font-family: Gordita-Medium;
-        text-align: center;
-      }
 
       tr {
         display: block;
@@ -144,6 +136,7 @@ td, th{
     }
     th {
       display: block;
+      text-align: right;
     }
     td {
       display: block;
@@ -164,14 +157,5 @@ td, th{
       border-right: 1px solid @table-border-color;
     }
   }
-}
 
-.dataframe thead th {
-  text-align: center !important;
-  font-family: 'Gordita-Medium' !important;
-}
-
-.dataframe tbody tr th:only-of-type {
-    vertical-align: middle;
-    text-align: center;
 }

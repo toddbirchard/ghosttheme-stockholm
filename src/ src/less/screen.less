@@ -1,0 +1,114 @@
+/*====================================================
+	Importing less files
+====================================================*/
+@import "variables.less";
+@import "mixin.less";
+@import "code.less";
+@import "author.less";
+@import "global.less";
+@import "footer.less";
+@import "menu.less";
+@import "post.less";
+@import "postfooter.less";
+@import "postpreview.less";
+@import "variables.less";
+@import "customtemplates.less";
+@import "linkpreview.less";
+@import "widgets.less";
+@import "pagination.less";
+@import "page.less";
+@import "postheader.less";
+@import "postlist.less";
+@import "tags.less";
+@import 'githubcard.less';
+@import 'kanban.less';
+@import 'social.less';
+@import 'swiper.less';
+@import 'transactional.less';
+@import 'table.less';
+@import 'comments.less';
+@import 'signup.less';
+@import 'author-card.less';
+
+/*====================================================
+	about author and comment and next-prev link
+====================================================*/
+
+
+/*====================================================
+	Tag page & author page cover
+====================================================*/
+
+.cover {
+	text-align: center;
+	background: @white;
+	padding: 25px;
+	margin-bottom: 20px;
+	min-width: -webkit-fill-available;
+	min-width: -moz-available;
+
+	.post-count {
+		color: @text-color-light;
+	}
+
+	h3 {
+		margin-bottom: 10px;
+	}
+
+	.avatar {
+		width: 100px;
+		height: 100px;
+	}
+
+	.meta-info {
+		color: @text-color-light;
+
+		span {
+			margin: 0 7px;
+
+			i {
+				margin-right: 7px;
+			}
+			@media(max-width: 600px) {
+				display: block;
+			}
+		}
+	}
+}
+
+/*====================================================
+	tag and author archive
+====================================================*/
+.archive {
+	.featured-media {
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		@media (max-width: 800px) {
+			width: 110%;
+			margin-left: -5%;
+			margin-top: -7%;
+		}
+	}
+}
+/*====================================================
+	media query
+====================================================*/
+@media (min-width: 768px) {
+	.nav-toggle-button {
+		display: none;
+	}
+}
+
+.fluid-width-video-wrapper {
+	padding-top: 56% !important;
+}
+
+.page-template-template,
+.post-template {
+	.mobile-branding {
+		@media(max-width: 800px) {
+			display: block;
+		}
+	}
+}
