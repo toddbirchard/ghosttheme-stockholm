@@ -13,17 +13,28 @@ table {
   margin: 20px 0 40px;
   box-shadow: 1px 1px 4px #dbddec;
 
-  thead tr {
+  @media(max-width: 600px) {
+    display: block !important;
+  }
+
+  thead {
+  tr {
     border-bottom: 1px solid rgba(0,0,0,.12);
     background-color: #5f6779 !important;
     color:white;
+  }
 
     th {
       text-align: center;
       font-family: Gordita-Medium;
-       min-width: 30px;
+      min-width: 30px;
+
+      &::before{
+        font-family: Gordita-Medium!important;
+      }
     }
   }
+
 
   &.striped {
     tr {
@@ -79,14 +90,14 @@ td, th{
 @media (max-width:600px) {
 
   table {
-    width: 120%;
+    width: auto;
     border-collapse: collapse;
     border-spacing: 0;
-    display: block;
-    position: relative;
+    display: table;
+  /*  position: relative;
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
-    overflow-x: scroll;
+    overflow-x: scroll;*/
 
     &:hover{
       cursor: grab;
@@ -174,4 +185,18 @@ td, th{
 .dataframe tbody tr th:only-of-type {
     vertical-align: middle;
     text-align: center;
+}
+
+.tableContainer,
+.post-content div {
+  @media (max-width: 600px){
+    margin-left: calc(~"-50vw + 50%");
+    margin-right: calc(~"-50vw + 50%");
+    width: auto!important;
+    overflow: hidden;
+
+    &:hover{
+      cursor: move;
+    }
+  }
 }
