@@ -11,7 +11,7 @@
 	<!-- Fonts -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
 	{{! Styles }}
-	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
+	<!--<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">-->
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	{{! Scripts }}
 	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
@@ -27,10 +27,7 @@
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
-	<script>Stitch.defaultAppClient.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-	   console.log(`Logged in as anonymous user with id: ${user.id}`);
-	}).catch(console.error);
-</script>
+
 
 </head>
 <body class="{{body_class}}">

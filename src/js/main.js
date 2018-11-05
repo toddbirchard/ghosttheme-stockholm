@@ -96,7 +96,6 @@ var themeApp = {
   mobileNavigation: function() {
     $('nav').on('click', function(event) {
       $('.navbar-collapse').toggleClass("active");
-      console.log('clicked');
     })
   },
   resizeIframe: function(iframe) {
@@ -105,7 +104,6 @@ var themeApp = {
   fullScreen: function() {
     $('.post-template article .post-content img').materialbox();
     $('article pre').each(function() {
-      console.log('hljs = ', $(this).find('code').height());
       if ($(this).height() >= 400) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
       }
@@ -126,7 +124,6 @@ var themeApp = {
     });
   },
   codeHighlight: function() {
-    console.log(hljs.listLanguages());
     hljs.configure({
       tabReplace: '    ', // 4 spaces
       classPrefix: '', // don't append class prefix
@@ -135,10 +132,8 @@ var themeApp = {
     hljs.initHighlighting();
     $('pre code').each(function(i, block) {
       //hljs.highlightBlock(block);
-      console.log('hljs = ', $(this).find('code').height());
       if ($(this).height() >= 400) {
         var color = $(this).css('background');
-        console.log('wtf color = ' + color);
         $(this).append('<div class="codeoverflow" style=""></div>');
       }
     });
