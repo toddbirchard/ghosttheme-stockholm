@@ -38,9 +38,9 @@ var paths = {
 
 function styles() {
   return gulp.src(paths.styles.src)
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
+    //.pipe(sourcemaps.write('.', { sourceRoot: '/' }))
     .pipe(rename({
       basename: 'main',
       suffix: '.min'
@@ -56,7 +56,7 @@ function styles() {
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(livereload())
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -89,6 +89,8 @@ function templates() {
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.styles.src).on('change', browserSync.reload);
+  gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
 var build = gulp.parallel(styles, scripts);

@@ -215,8 +215,7 @@ var themeApp = {
         var email = $('#signup-email').val();
         var pass = $('#signup-password').val();
 
-        const emailPassClient = stitchClient.defaultAppClient.auth
-  .getProviderClient(UserPasswordAuthProviderClient.factory);
+        const emailPassClient = stitchClient.getProviderClient(UserPasswordAuthProviderClient.factory);
 
         emailPasswordClient.registerWithEmail(email, pass)
           .then(() => {

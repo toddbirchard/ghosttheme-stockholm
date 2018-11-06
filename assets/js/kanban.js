@@ -58,8 +58,6 @@ $(document).ready(function(){
       console.error(err)
     });
 
-		{{!-- Counts number of cards --}}
-
     stitchClient.callFunction("numCards", ["Backlog"]).then(result => {
         $('#backlog .count').text(result + ' issues');
     });
