@@ -291,7 +291,7 @@ var themeApp = {
     let content = viewport.querySelector('table');
 
 
-    let sb = new ScrollBooster({
+    /*let sb = new ScrollBooster({
       viewport, // this parameter is required
       content, // scrollable element
       mode: 'x', // scroll only in horizontal dimension
@@ -300,7 +300,7 @@ var themeApp = {
         // your scroll logic goes here
         content.style.transform = `translateX(${-data.position.x}px)`;
       }
-    })
+    })*/
   },
   init: function() {
     themeApp.featuredMedia();
@@ -317,7 +317,7 @@ var themeApp = {
       themeApp.highlighter();
       themeApp.postLinkPreviews();
       themeApp.fullScreen();
-      //themeApp.scrollableTables();
+      themeApp.scrollableTables();
     }
   }
 }
