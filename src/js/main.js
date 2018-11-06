@@ -173,6 +173,7 @@ var themeApp = {
           ease: Elastic.easeOut.config(1, 1.5)
         }, "start")
         .from("#logo", .3, {
+          delay: .2,
           y: '-400px',
           scale: 1
         })
@@ -183,27 +184,27 @@ var themeApp = {
         .set([".options", ".signup-form", ".signup-head", ".description"], {
           visibility: "visible"
         })
-        .from(".description", .35, {
-          y: '-500px',
+        .from(".description", .8, {
+          y: '-400px',
           opacity: 0
         })
-        .to("#logo-txt", 2, {
+        .to("#logo-txt", .8, {
           opacity: 1
         })
-        .from(".signup-head", 1.5, {
+        .from(".signup-head", .5, {
           y: 500,
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "nextScreen")
-        .from(".signup-form", 1.5, {
-          y: 500,
+        .from(".signup-form", 1.2, {
+          y: 300,
           opacity: 0,
-          ease: Elastic.easeOut.config(1, 1.5)
+          ease: Elastic.easeOut.config(.8, 1.5)
         }, "nextScreen")
-        .from([".float-left", ".float-right"], 1.5, {
+        .from([".float-left", ".float-right"], 1, {
           y: 35,
           opacity: 0,
-          ease: Elastic.easeOut.config(1, 1.5)
+          ease: Elastic.easeOut.config(.8, 1.5)
         }, "-=0.4");
 
       $("#signup-button").mousedown(function() {
@@ -213,6 +214,9 @@ var themeApp = {
       $("#signup-button").on('click', function() {
         var email = $('#signup-email').val();
         var pass = $('#signup-password').val();
+
+        const emailPassClient = stitchClient.defaultAppClient.auth
+  .getProviderClient(UserPasswordAuthProviderClient.factory);
 
         emailPasswordClient.registerWithEmail(email, pass)
           .then(() => {
