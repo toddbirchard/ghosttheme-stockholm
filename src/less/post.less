@@ -429,7 +429,41 @@
 			margin-left: 20px;
 			padding-left: 20px;
 			display: block;
+		}
 
+		.protip {
+			background: rgba(255, 222, 196, 0.42);
+			padding: 0 20px 20px;
+			margin-bottom: 20px;
+			font-size: .9em;
+
+			&::before {
+		    margin-bottom: 11px;
+		    font-size: 14px;
+		    width: 100%;
+		    height: auto;
+		    background: rgba(255, 222, 196, 0.8);
+		    content: "Protip";
+		    display: block;
+		    font-style: normal;
+		    font-variant: normal;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    position: relative;
+		    padding: 8px 20px;
+		    margin-left: -20px;
+		    font-weight: 700;
+		  }
+			li::before {
+				color:#dc9e5f;
+			}
+			code {
+				border-radius: .3em;
+				white-space: normal;
+				background: #f1dbc6;
+				padding: 2px 4px;
+				color: #6f4e11;
+			}
 		}
 
 		blockquote {
