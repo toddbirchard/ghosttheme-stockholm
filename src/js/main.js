@@ -150,7 +150,7 @@ var themeApp = {
       //    TweenLite.to("#astro", 3, { ease: Elastic.easeOut.config(1, 1), x: 500, scale: 0.5});
 
       tlScreen1
-        .set(".text_max", {
+        .set(".signup .text_max", {
           visibility: "visible"
         })
         .set(".signup", {
@@ -160,44 +160,44 @@ var themeApp = {
         .from(".signup", 0.4, {
           y: '-900px'
         })
-        .set("#thunder", {
+        .set(".signup #thunder", {
           fillOpacity: 1
         })
-        .from("#thunder", 1, {
+        .from(".signup #thunder", 1, {
           y: -300,
           ease: Elastic.easeOut.config(1, 1.1)
         })
-        .from(".text_max", 1, {
+        .from(".signup .text_max", 1, {
           opacity: 0,
           y: 200,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "start")
-        .from("#logo", .3, {
+        .from(".signup #logo", .3, {
           delay: .2,
-          y: '-400px',
+          y: '-300px',
           scale: 1
         })
-        .to(".text_max", 0.2, {
+        .to(".signup .text_max", 0.2, {
           opacity: 0
         }, "-=0.5")
         .add("nextScreen")
         .set([".options", ".signup-form", ".signup-head", ".description"], {
           visibility: "visible"
         })
-        .from(".description", .8, {
-          y: '-400px',
+        .from(".signup .description", .8, {
+          y: '-300px',
           opacity: 0
         })
-        .to("#logo-txt", .8, {
+        .to(".signup #logo-txt", .8, {
           opacity: 1
         })
-        .from(".signup-head", .5, {
-          y: 500,
+        .from(".signup .signup-head", .5, {
+          y: 150,
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "nextScreen")
-        .from(".signup-form", 1.2, {
-          y: 300,
+        .from(".signup .signup-form", 1.2, {
+          y: 200,
           opacity: 0,
           ease: Elastic.easeOut.config(.8, 1.5)
         }, "nextScreen")
@@ -207,11 +207,11 @@ var themeApp = {
           ease: Elastic.easeOut.config(.8, 1.5)
         }, "-=0.4");
 
-      $("#signup-button").mousedown(function() {
+      $(".signup #signup-button").mousedown(function() {
         $(this).css("box-shadow", "unset");
       });
 
-      $("#signup-button").on('click', function() {
+      $(".signup #signup-button").on('click', function() {
         var email = $('#signup-email').val();
         var pass = $('#signup-password').val();
 
@@ -226,7 +226,7 @@ var themeApp = {
           });
       })
 
-      $("#signup-button").mouseup(function() {
+      $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
       });
 
