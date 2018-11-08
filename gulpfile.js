@@ -12,13 +12,13 @@ var gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
   postcss = require('gulp-postcss'),
-  sourcemaps = require('gulp-sourcemaps'),
   precss = require('precss'),
   babel = require('gulp-babel'),
   resolveDependencies = require('gulp-resolve-dependencies'),
   livereload = require('gulp-livereload'),
   browserSync = require('browser-sync'),
-  terser = require('gulp-terser');
+  terser = require('gulp-terser'),
+  gzip = require('gulp-gzip');
 
 
 var paths = {
@@ -54,6 +54,7 @@ function styles() {
     }))
     .pipe(postcss([require('precss'), require('autoprefixer')]))
     .pipe(concat('main.min.css'))
+    .pipe(gzip({append: false}))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(livereload())
     .pipe(browserSync.stream());
@@ -71,6 +72,7 @@ function scripts() {
         }))
     .pipe(concat('main.min.js'))
     .pipe(terser())
+    .pipe(gzip({append: false}))
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
@@ -83,6 +85,7 @@ function templates() {
       noRedeclare: true, // Avoid duplicate declarations
     }))
     .pipe(concat('templates.js'))
+    .pipe(gzip({append: false}))
     .pipe(gulp.dest('assets/js/'));
 }
 
