@@ -17,8 +17,7 @@ var gulp = require('gulp'),
   resolveDependencies = require('gulp-resolve-dependencies'),
   livereload = require('gulp-livereload'),
   browserSync = require('browser-sync'),
-  terser = require('gulp-terser'),
-  gzip = require('gulp-gzip');
+  terser = require('gulp-terser');
 
 
 var paths = {
