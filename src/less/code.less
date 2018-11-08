@@ -75,9 +75,9 @@ code {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
-    font-size: 14px;
-    font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;
-    width: 110%;
+    font-size: 1.2em;
+    font-family: 'CompassSans-Regular';
+    width: 104%;
     height: auto;
     background: #121925;
     content: "Code Snippet";
@@ -87,9 +87,17 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 8px 20px;
-    margin-left: -40px;
+    padding: 8px 4%;
+    margin-left: -6%;
     font-weight: 700;
+
+    &::before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 
   * {

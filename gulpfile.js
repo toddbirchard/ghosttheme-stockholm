@@ -54,7 +54,6 @@ function styles() {
     }))
     .pipe(postcss([require('precss'), require('autoprefixer')]))
     .pipe(concat('main.min.css'))
-    .pipe(gzip({append: false}))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(livereload())
     .pipe(browserSync.stream());
@@ -72,7 +71,6 @@ function scripts() {
         }))
     .pipe(concat('main.min.js'))
     .pipe(terser())
-    .pipe(gzip({append: false}))
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
@@ -85,7 +83,6 @@ function templates() {
       noRedeclare: true, // Avoid duplicate declarations
     }))
     .pipe(concat('templates.js'))
-    .pipe(gzip({append: false}))
     .pipe(gulp.dest('assets/js/'));
 }
 
