@@ -64,6 +64,8 @@ typings/
 assets/js/secret.js
 assets/js/includes/secret.js
 /assets/js/includes/secret.js
+/assets/js/main.min.js
+/assets/js/*.map
 sendgrid.env
 
 # readme

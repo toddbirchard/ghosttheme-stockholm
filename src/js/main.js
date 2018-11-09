@@ -216,7 +216,11 @@ var themeApp = {
               .set([".confirm-head", ".confirm-description"], {
                 visibility: "visible"
               })
-              .from([".confirm-head", ".confirm-description"], 0.4, {
+              .from(".confirm-head", 0.4, {
+                y: '-900px',
+                ease: Elastic.easeOut.config(1, 1.5)
+              })
+              .from(".confirm-description", 0.4, {
                 y: '-900px',
                 ease: Elastic.easeOut.config(1, 1.5)
               })
