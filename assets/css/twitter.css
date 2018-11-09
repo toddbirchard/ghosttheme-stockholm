@@ -67,6 +67,7 @@ html {
   float: right;
   position: relative;
   width: -webkit-fill-available;
+  padding: 0 10px;
 }
 
 .root.timeline.twitter-timeline p, .root.timeline.twitter-timeline a, .root.timeline.twitter-timeline ol, .root.timeline.twitter-timeline ul, .root.timeline.twitter-timeline li {

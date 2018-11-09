@@ -1,3 +1,4 @@
+{{! Series Page with background image}}
 {{#tag}}
 	{{#if feature_image}}
 		<div class="cover tag-cover" style="background-image: url({{feature_image}});">
@@ -11,9 +12,10 @@
 		<div class="tag-description">
 			{{description}}
 		</div>
+		</div>
 	{{/if}}
-	{{!--{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}--}}
-	</div>
+
+{{! Regular tag page}}
 	{{else}}
 		<div class="cover">
 			<h3 class="tag-name">
