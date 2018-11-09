@@ -220,7 +220,16 @@ var themeApp = {
               }, "-=0.4")
               .to(".signup .text_max", 0.2, {
                 opacity: 0
-              }, "-=0.5");
+              }, "-=0.5")
+            .to(".signup .description", .8, {
+                y: '-300px',
+                opacity: 0
+              })
+            .to(".signup .signup-head", .8, {
+                y: 100,
+                opacity: 0,
+                ease: Elastic.easeOut.config(1, 1.5)
+              }, "nextScreen");
             })
           .catch(err => {
             console.log("Error registering new user:", err);
