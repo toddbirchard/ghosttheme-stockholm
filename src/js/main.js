@@ -208,40 +208,24 @@ var themeApp = {
           .then(() => {
             console.log("Successfully sent account confirmation email!");
             tlScreen1
-            .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
-              y: 100,
-              opacity: 0,
-              ease: Elastic.easeOut.config(1, 1.5)
-            })
-            .catch(err => {
-              console.log("Error registering new user:", err);
-            });
-          });
-            /*.to(".signup .signup-form", 1.2, {
-              y: 200,
-              opacity: 0,
-              ease: Elastic.easeOut.config(.8, 1.5)
-            }, "nextScreen")
-            .to([".float-left", ".float-right"], 1, {
-                y: 35,
-                opacity: 0,
-                ease: Elastic.easeOut.config(.8, 1.5)
-              }, "-=0.4")
-              .to(".signup .text_max", 0.2, {
-                opacity: 0
-              }, "-=0.5")
-            .to(".signup .description", .8, {
-                y: '-300px',
-                opacity: 0
-              })
-            .to(".signup .signup-head", .8, {
+              .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
                 y: 100,
                 opacity: 0,
                 ease: Elastic.easeOut.config(1, 1.5)
-              }, "nextScreen");
-            })*/
-          });
+              })
+              .catch(err => {
+                console.log("Error registering new user:", err);
+              });
 
+            tlScreen1
+              .set([".confirm-head", ".confirm-description"], {
+                visibility: "visible"
+              })
+              .from([".confirm-head", ".confirm-description"], 0.4, {
+                y: '-900px'
+              });
+          });
+      });
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
       });
