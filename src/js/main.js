@@ -212,6 +212,7 @@ var themeApp = {
               y: 200,
               opacity: 0,
               ease: Elastic.easeOut.config(.8, 1.5)
+            }, "nextScreen")
             .to([".float-left", ".float-right"], 1, {
                 y: 35,
                 opacity: 0,
@@ -219,13 +220,12 @@ var themeApp = {
               }, "-=0.4")
               .to(".signup .text_max", 0.2, {
                 opacity: 0
-              }, "-=0.5")
-            }
-          })
+              }, "-=0.5");
+            })
           .catch(err => {
             console.log("Error registering new user:", err);
           });
-      });
+        });
 
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
@@ -234,7 +234,7 @@ var themeApp = {
       $("#account").click(function() {
         $(".signup-form input").val("");
         tlScreen1.restart();
-      });
+      })
     })(jQuery);
   },
   triggerSignup: function() {
