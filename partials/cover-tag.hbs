@@ -15,5 +15,20 @@
 	{{/if}}
 	{{!--{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}--}}
 </div>
+{{#else}}
+<div class="cover">
+
+	<h3 class="tag-name">
+		<i class="fal fa-tag"></i> {{name}}
+	</h3>
+	<div class="post-count">
+		{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
+	</div>
+	{{#if description}}
+	<div class="tag-description">
+        {{description}}
+	</div>
+	{{/if}}
+
 {{/if}}
 {{/tag}}
