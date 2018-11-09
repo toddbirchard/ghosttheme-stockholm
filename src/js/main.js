@@ -207,6 +207,20 @@ var themeApp = {
         emailPasswordClient.registerWithEmail(email, pass)
           .then(() => {
             console.log("Successfully sent account confirmation email!");
+            tlScreen1
+            .to(".signup .signup-form", 1.2, {
+              y: 200,
+              opacity: 0,
+              ease: Elastic.easeOut.config(.8, 1.5)
+            .to([".float-left", ".float-right"], 1, {
+                y: 35,
+                opacity: 0,
+                ease: Elastic.easeOut.config(.8, 1.5)
+              }, "-=0.4")
+              .to(".signup .text_max", 0.2, {
+                opacity: 0
+              }, "-=0.5")
+            }
           })
           .catch(err => {
             console.log("Error registering new user:", err);
@@ -256,25 +270,25 @@ var themeApp = {
     newComment.value = "";
   },
   postLinkPreviews: function() {
-		if ($('article').hasClass('tag-roundup')) {
-    $(".post-content > p > a").each(function(index, element) {
-      $.ajax({
-        url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
-        async: true,
-        contentType: "application/json",
-        data: {
-          url: $(this).attr('href'),
-        },
-        dataType: 'json',
-        success: function(result) {
-          $(element).after('<a href="' + result.url + '"><div class="link-preview">' + result.image + '<div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
-          $(element).remove();
-        }
+    if ($('article').hasClass('tag-roundup')) {
+      $(".post-content > p > a").each(function(index, element) {
+        $.ajax({
+          url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
+          async: true,
+          contentType: "application/json",
+          data: {
+            url: $(this).attr('href'),
+          },
+          dataType: 'json',
+          success: function(result) {
+            $(element).after('<a href="' + result.url + '"><div class="link-preview">' + result.image + '<div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
+            $(element).remove();
+          }
+        });
       });
-    });
-	}
+    }
   },
-  scrollableTables: function(){
+  scrollableTables: function() {
     $('.post-content').find('table').parent('div').addClass('tableContainer');
     let viewport = document.querySelector('.tableContainer');
     let content = viewport.querySelector('table');
