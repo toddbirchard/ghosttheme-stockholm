@@ -11,10 +11,9 @@
 	<!-- Fonts -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt" crossorigin="anonymous">
 	{{! Styles }}
-	<!--<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">-->
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	{{! Scripts }}
-	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
+	<script type="text/javascript" src="{{@blog.url}}/public/ghost-sdk.min.js"></script>
 	<script async src="{{asset "/js/includes/jquery.min.js"}}"></script>
 
 	{{#is "post"}}
@@ -22,7 +21,6 @@
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}

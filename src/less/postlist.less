@@ -1,31 +1,27 @@
 @import "variables.less";
 @import "mixin.less";
 
-
-.tag-template{
+.tag-template {
   .postlist {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
 
-    .cover {
-      background-size:cover;
+    .series-cover {
+      background-size: cover;
       background-position-y: center;
       height: 300px;
       background-color: #305790;
       background-blend-mode: soft-light;
-
-      @media(max-width: 600px){
-
-      }
+      @media(max-width: 600px) {}
 
       .tag-name {
         font-size: 2.2em;
         color: white !important;
         font-family: CompassSans-Medium;
         text-shadow: 0 0 20px #2f2d56;
-        margin-top:110px;
+        margin-top: 110px;
       }
 
       .tag-description {
@@ -43,13 +39,12 @@
     article {
       width: 49%;
       flex-wrap: wrap;
-
-      @media(max-width: 600px){
-        width:100%;
+      @media(max-width: 600px) {
+        width: 100%;
       }
 
       .post-head {
-          margin: 0 0 60px;
+        margin: 0 0 60px;
       }
 
       .post-title {
@@ -57,30 +52,28 @@
       }
 
       .featured-media {
-    		box-sizing: border-box;
-    		height: 200px;
-    		display: block;
-    		overflow: hidden;
-    		margin: auto;
-    		background-size: cover;
-    	}
+        box-sizing: border-box;
+        height: 200px;
+        display: block;
+        overflow: hidden;
+        margin: auto;
+        background-size: cover;
+      }
 
       .post-excerpt {
         font-size: 1.1em;
         font-family: 'CompassSans-Medium';
       }
 
-
-
       .post-permalink {
         position: absolute;
         width: 85%;
         bottom: 10px;
-        padding-bottom:10px;
+        padding-bottom: 10px;
       }
 
-      .tags,
       .author,
+      .tags,
       p {
         display: none !important;
       }
@@ -89,30 +82,26 @@
 }
 
 .postlist {
-
   .tag-title {
     color: white;
   }
 
-
   .tag-image {
     margin-top: 30px;
-
     @media(max-width: 600px) {
-      display:none;
+      display: none;
     }
   }
   @media(max-width: 1000px) {
     padding: 0 0 0 10px;
   }
-
   @media(max-width: 800px) {
     padding: 0;
-    margin: 5% 5%;
+    margin: 5%;
     width: 90%;
   }
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 }
