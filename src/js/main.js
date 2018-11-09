@@ -213,17 +213,15 @@ var themeApp = {
                 opacity: 0,
                 ease: Elastic.easeOut.config(1, 1.5)
               })
-              .catch(err => {
-                console.log("Error registering new user:", err);
-              });
-
-            tlScreen1
               .set([".confirm-head", ".confirm-description"], {
                 visibility: "visible"
               })
               .from([".confirm-head", ".confirm-description"], 0.4, {
                 y: '-900px',
                 ease: Elastic.easeOut.config(1, 1.5)
+              })
+              .catch(err => {
+                console.log("Error registering new user:", err);
               });
           });
       });
