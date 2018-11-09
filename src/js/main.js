@@ -208,7 +208,16 @@ var themeApp = {
           .then(() => {
             console.log("Successfully sent account confirmation email!");
             tlScreen1
-            .to(".signup .signup-form", 1.2, {
+            .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
+              y: 100,
+              opacity: 0,
+              ease: Elastic.easeOut.config(1, 1.5)
+            })
+            .catch(err => {
+              console.log("Error registering new user:", err);
+            });
+          });
+            /*.to(".signup .signup-form", 1.2, {
               y: 200,
               opacity: 0,
               ease: Elastic.easeOut.config(.8, 1.5)
@@ -230,11 +239,8 @@ var themeApp = {
                 opacity: 0,
                 ease: Elastic.easeOut.config(1, 1.5)
               }, "nextScreen");
-            })
-          .catch(err => {
-            console.log("Error registering new user:", err);
+            })*/
           });
-        });
 
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
