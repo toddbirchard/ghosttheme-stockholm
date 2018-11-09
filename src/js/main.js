@@ -204,8 +204,6 @@ var themeApp = {
         var email = $('#signup-email').val();
         var pass = $('#signup-password').val();
 
-        const emailPassClient = stitchClient.getProviderClient(UserPasswordAuthProviderClient.factory);
-
         emailPasswordClient.registerWithEmail(email, pass)
           .then(() => {
             console.log("Successfully sent account confirmation email!");
@@ -213,7 +211,7 @@ var themeApp = {
           .catch(err => {
             console.log("Error registering new user:", err);
           });
-      })
+      });
 
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
