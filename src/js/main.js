@@ -222,7 +222,8 @@ var themeApp = {
                 visibility: "visible"
               })
               .from([".confirm-head", ".confirm-description"], 0.4, {
-                y: '-900px'
+                y: '-900px',
+                ease: Elastic.easeOut.config(1, 1.5)
               });
           });
       });
