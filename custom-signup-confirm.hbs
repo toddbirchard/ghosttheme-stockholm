@@ -13,8 +13,7 @@
 	{{! Styles }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
-
-	{{ghost_head}}
+	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
 </head>
 
 <body class="transactional signup-template">
@@ -33,6 +32,17 @@
 	{{/post}}
 
 	<script>
+	const {
+		Stitch,
+		UserPasswordAuthProviderClient,
+		UserPasswordCredential,
+	  AnonymousCredential
+	} = stitch;
+
+	  const client = Stitch.initializeDefaultAppClient('hackers-uangn');
+	  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+	  const emailPasswordClient = client.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+
 		function confirmSignup() {
 			const url = window.location.search;
 			const params = new URLSearchParams(url);
