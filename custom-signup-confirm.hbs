@@ -38,6 +38,7 @@
 			const params = new URLSearchParams(url);
 			const token = params.get('token');
 			const tokenId = params.get('tokenId');
+			emailPasswordClient.confirmUser(token, tokenId);
 			return emailPasswordClient.confirmUser(token, tokenId);
 		}
 
