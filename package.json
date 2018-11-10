@@ -4,6 +4,7 @@
   "homepage": "https://hackersandslackers.com",
   "demo": "https://hackersandslackers.com",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "build": "babel src -d lib"
   },
