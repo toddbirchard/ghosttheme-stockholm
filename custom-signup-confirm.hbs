@@ -14,33 +14,35 @@
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 
-{{ghost_head}}
+	{{ghost_head}}
 </head>
 
 <body class="transactional signup-template">
 	<!-- start site's main content area -->
-		{{#post}}
-				<!-- start post -->
-				<div class="card">
-						<h1>{{{title}}}</h1>
-						<div class="post-content">
-							{{content}}
-							<div id="finished-registration">
-								<a class="btn btn-success" href="/">You did it!</a>
-							</div>
-						</div>
+	{{#post}}
+		<!-- start post -->
+		<div class="card">
+			<h1>{{{title}}}</h1>
+			<div class="post-content">
+				{{content}}
+				<div id="finished-registration">
+					<a class="btn btn-success" href="/">You did it!</a>
 				</div>
-		{{/post}}
+			</div>
+		</div>
+	{{/post}}
 
-<script>
-(function(){
-	const url = window.location.search;
-	const params = new URLSearchParams(url);
-	const token = params.get('token');
-	const tokenId = params.get('tokenId');
+	<script>
+		function confirmSignup() {
+			const url = window.location.search;
+			const params = new URLSearchParams(url);
+			const token = params.get('token');
+			const tokenId = params.get('tokenId');
+			return emailPasswordClient.confirmUser(token, tokenId);
+		}
 
-	return emailPasswordClient.confirmUser(token, tokenId);
-	})();
-</script>
+		confirmSignup();
+	</script>
 </body>
+
 </html>
