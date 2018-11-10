@@ -33,12 +33,14 @@
 		{{/post}}
 
 <script>
+(function(){
 	const url = window.location.search;
 	const params = new URLSearchParams(url);
 	const token = params.get('token');
 	const tokenId = params.get('tokenId');
 
 	return emailPassClient.confirmUser(token, tokenId);
+	})();
 </script>
 </body>
 </html>
