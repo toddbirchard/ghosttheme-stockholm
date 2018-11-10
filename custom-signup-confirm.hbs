@@ -11,9 +11,7 @@
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	{{! Styles }}
-	<script src="{{asset "/js/includes/secret.js"}}"></script>
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 
@@ -24,19 +22,16 @@
 	<!-- start site's main content area -->
 		{{#post}}
 				<!-- start post -->
-				<div class="card">
-					<div id="info">
-						<div id="success"><i class='fas fa-exclamation-triangle'></i></div>
-						<div id="error"></div>
-						<div id="logged-in">You're logged in now!</div>
-					</div>
-					<div class="signup">
-						<h1>{{title}}</h1>
-						<div id="finished-registration" hidden>
+				<div class="card signup">
+					<div class="">
+						<h1>{{{title}}}</h1>
+						<div class="post-content">
+							{{content}}
+						</div>
+						<div id="finished-registration">
 							<a class="btn btn-success" href="/">You did it!</a>
 						</div>
 					</div>
-					<!--<a href="/" class="btn btn-secondary">Go Back</a>-->
 				</div>
 		{{/post}}
 
@@ -55,3 +50,5 @@ $(document).ready(function(){
 });
 
 </script>
+</body>
+</html>
