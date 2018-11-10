@@ -36,19 +36,12 @@
 		{{/post}}
 
 <script>
-$(document).ready(function(){
-  const url = window.location.search;
-  const params = new URLSearchParams(url);
-  const token = params.get('token');
-  const tokenId = params.get('tokenId');
-  console.log('token = '+ token);
-  console.log('tokenId = '+ tokenId);
-  // Confirm the user's email/password account
-  const emailPassClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+	const url = window.location.search;
+	const params = new URLSearchParams(url);
+	const token = params.get('token');
+	const tokenId = params.get('tokenId');
 
-  return emailPassClient.confirmUser(token, tokenId);
-});
-
+	return emailPassClient.confirmUser(token, tokenId);
 </script>
 </body>
 </html>
