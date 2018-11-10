@@ -131,6 +131,24 @@ var themeApp = {
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '.4');
 
+    $(".overlay").on('click', function(){
+      var signupGone = new TimelineMax();
+
+      signupGone
+      .to(".overlay", 0.4, {
+        opacity: 0,
+        ease: Elastic.easeOut.config(1, 1.1)
+      }, "-=0.5")
+      .to(".signup", 0.4, {
+        opacity: 0,
+        y: 100,
+        ease: Elastic.easeOut.config(1, 1.1)
+        }, "-=0.5")
+        .set([".overlay", ".signup"], {
+          visibility: "hidden"
+        })
+    });
+
     (function($) {
 
       var tlScreen1 = new TimelineMax();
