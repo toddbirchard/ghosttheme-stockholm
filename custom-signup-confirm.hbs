@@ -24,6 +24,7 @@
 			<h1>{{{title}}}</h1>
 			<div class="post-content">
 				{{content}}
+				<p id="message"></p>
 				<div id="finished-registration">
 					<a class="btn btn-success" href="/">You did it!</a>
 				</div>
@@ -32,28 +33,36 @@
 	{{/post}}
 
 	<script>
-	const {
-		Stitch,
-		UserPasswordAuthProviderClient,
-		UserPasswordCredential,
-	  AnonymousCredential
-	} = stitch;
+  const {
+    Stitch,
+    UserPasswordAuthProviderClient
+  } = stitch;
+	
+  const APP_ID = "hackers-uangn";
+  const stitchClient = Stitch.initializeDefaultAppClient(APP_ID);
 
-	  const client = Stitch.initializeDefaultAppClient('hackers-uangn');
-	  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-	  const emailPasswordClient = client.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+  const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
 
-		function confirmSignup() {
-			const url = window.location.search;
-			const params = new URLSearchParams(url);
-			const token = params.get('token');
-			const tokenId = params.get('tokenId');
-			emailPasswordClient.confirmUser(token, tokenId);
-			return emailPasswordClient.confirmUser(token, tokenId);
-		}
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+  const tokenId = params.get('tokenId');
 
-		confirmSignup();
-	</script>
+  emailPasswordClient
+    .confirmUser(token, tokenId)
+    .then(() => displayResult('success'))
+    .catch(err => displayResult('error', err))
+
+  function displayResult(result, err) {
+    const message = document.getElementById("message");
+    if (result === "success") {
+      message.innerText = "Successfully confirmed quickstart user. You may close this page.";
+    }
+    else if (result === "error") {
+      message.innerText = "Unable to register user.\n\n" + err;
+    }
+  }
+</script>
+
 </body>
 
 </html>
