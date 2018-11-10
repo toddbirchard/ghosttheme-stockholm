@@ -25,7 +25,7 @@ $(document).ready(function(){
     const doneColumn = document.getElementById("done");
 
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -34,7 +34,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Content']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -43,7 +43,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Data']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -52,7 +52,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}, { limit: 6}).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -62,27 +62,27 @@ $(document).ready(function(){
     });
 
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-     stitchClient.callFunction("numCards", ["Done"]).then(results => {
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+     client.callFunction("numCards", ["Done"]).then(results => {
        $('#done .count').text(results + ' issues');
      })
   });
 
-  stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-   stitchClient.callFunction("numCards", ["To Do"]).then(results => {
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+   client.callFunction("numCards", ["To Do"]).then(results => {
      $('#todo .count').text(results + ' issues');
    })
 });
 
 
-stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
- stitchClient.callFunction("numCards", ["In Progress"]).then(results => {
+client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ client.callFunction("numCards", ["In Progress"]).then(results => {
    $('#progress .count').text(results + ' issues');
  })
 });
 
-stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
- stitchClient.callFunction("numCards", ["Backlog"]).then(results => {
+client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ client.callFunction("numCards", ["Backlog"]).then(results => {
    $('#backlog .count').text(results + ' issues');
  })
 });

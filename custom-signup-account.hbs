@@ -82,8 +82,8 @@
 
 			try {
 
-				await stitchClient.auth.loginWithCredential(credential);
-				const user = stitchClient.auth.user;
+				await client.auth.loginWithCredential(credential);
+				const user = client.auth.user;
 				showLoggedInState();
 				displaySuccess(`Logged in as: ${user.profile.data.email}`)
 
@@ -93,7 +93,7 @@
 		}
 
 		async function handleLogout() {
-			await stitchClient.auth.logout();
+			await client.auth.logout();
 		}
 
 		async function handleResendConfirmation() {

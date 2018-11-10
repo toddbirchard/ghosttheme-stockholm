@@ -22,7 +22,7 @@ $(document).ready(function(){
     const progressColumn = document.getElementById("inprogress");
     const doneColumn = document.getElementById("done");
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Backlog', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}, priority: { $in: ['Highest', 'High', 'Medium']}}).limit(6).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -31,7 +31,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'To Do', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Data', 'Story', 'Idea', 'Content']}}).limit(6).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -40,7 +40,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'In Progress', issuetype: { $in: ['Task', 'Story', 'Integration', 'Bug', 'Content', 'Integration', 'Story', 'Idea', 'Data']}}).limit(6).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -49,7 +49,7 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() =>
       db.collection('jira').find({status: 'Done', issuetype: { $in: ['Task', 'Story', 'Integrations', 'Bug']}}).limit(6).asArray()
     ).then(docs => {
         console.log("Found docs", docs)
@@ -58,19 +58,19 @@ $(document).ready(function(){
       console.error(err)
     });
 
-    stitchClient.callFunction("numCards", ["Backlog"]).then(result => {
+    client.callFunction("numCards", ["Backlog"]).then(result => {
         $('#backlog .count').text(result + ' issues');
     });
 
-    stitchClient.callFunction("numCards", ["To Do"]).then(result => {
+    client.callFunction("numCards", ["To Do"]).then(result => {
         $('#todo .count').text(result + ' issues');
     });
 
-    stitchClient.callFunction("numCards", ["In Progress"]).then(result => {
+    client.callFunction("numCards", ["In Progress"]).then(result => {
         $('#progress .count').text(result + ' issues');
     });
 
-    stitchClient.callFunction("numCards", ["Done"]).then(result => {
+    client.callFunction("numCards", ["Done"]).then(result => {
         $('#done .count').text(result + ' issues');
     });
 

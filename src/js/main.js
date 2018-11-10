@@ -264,7 +264,7 @@ var themeApp = {
     });
   },
   displayCommentsOnLoad: function() {
-    stitchClient.auth
+    client.auth
       .loginWithCredential(new stitch.AnonymousCredential())
       .then(displayComments)
       .catch(console.error);
@@ -280,10 +280,10 @@ var themeApp = {
   },
   addComment: function() {
     const newComment = document.getElementById("new_comment");
-    console.log("add comment", stitchClient.auth.user.id)
+    console.log("add comment", client.auth.user.id)
     db.collection("comments")
       .insertOne({
-        owner_id: stitchClient.auth.user.id,
+        owner_id: client.auth.user.id,
         comment: newComment.value
       })
       .then(displayComments);

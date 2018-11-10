@@ -40,9 +40,9 @@
     UserPasswordAuthProviderClient
   } = stitch;
   const APP_ID = "hackers-uangn";
-  const stitchClient = Stitch.initializeDefaultAppClient(APP_ID);
+  const client = Stitch.initializeDefaultAppClient(APP_ID);
 
-  const emailPasswordClient = stitchClient.auth
+  const emailPasswordClient = client.auth
     .getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
 
   const params = new URLSearchParams(window.location.search);
