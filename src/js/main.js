@@ -127,6 +127,38 @@ var themeApp = {
       }
     });
   },
+  sendConfirmationEmail: function(){
+    const email_field = document.getElementById('signup-email');
+    const pass_field = document.getElementById('signup-password')
+
+    var email = email_field.value;
+    var pass = pass_field.value;
+
+    emailPasswordClient.registerWithEmail(email, pass)
+      .then(() => {
+        console.log("Successfully sent account confirmation email!");
+        tlScreen1
+          .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
+            y: 100,
+            opacity: 0,
+            ease: Elastic.easeOut.config(1, 1.5)
+          })
+          .set([".confirm-head", ".confirm-description"], {
+            visibility: "visible"
+          })
+          .from(".confirm-head", 0.4, {
+            y: '-900px',
+            ease: Elastic.easeOut.config(1, 1.5)
+          })
+          .from(".confirm-description", 0.4, {
+            y: '-900px',
+            ease: Elastic.easeOut.config(1, 1.5)
+          })
+          .catch(err => {
+            console.log("Error registering new user:", err);
+          });
+      });
+  },
   signup: function() {
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '.4');
@@ -219,7 +251,7 @@ var themeApp = {
       });
 
       $(".signup #signup-button").on('click', sendConfirmationEmail());
-      
+
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
       });
@@ -229,38 +261,6 @@ var themeApp = {
         tlScreen1.restart();
       })
     })(jQuery);
-  },
-  sendConfirmationEmail: function(){
-    const email_field = document.getElementById('signup-email');
-    const pass_field = document.getElementById('signup-password')
-
-    var email = email_field.value;
-    var pass = pass_field.value;
-
-    emailPasswordClient.registerWithEmail(email, pass)
-      .then(() => {
-        console.log("Successfully sent account confirmation email!");
-        tlScreen1
-          .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
-            y: 100,
-            opacity: 0,
-            ease: Elastic.easeOut.config(1, 1.5)
-          })
-          .set([".confirm-head", ".confirm-description"], {
-            visibility: "visible"
-          })
-          .from(".confirm-head", 0.4, {
-            y: '-900px',
-            ease: Elastic.easeOut.config(1, 1.5)
-          })
-          .from(".confirm-description", 0.4, {
-            y: '-900px',
-            ease: Elastic.easeOut.config(1, 1.5)
-          })
-          .catch(err => {
-            console.log("Error registering new user:", err);
-          });
-      });
   },
   triggerSignup: function() {
     $('.rss').on('click', function(e) {
