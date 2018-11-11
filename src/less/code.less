@@ -752,3 +752,41 @@ code {
     font-weight: 700;
   }
 }
+
+.hljs.html,
+.hljs.xml {
+    .tag {
+      color:#98bfd4;
+    }
+
+  .attr {
+    color:#a9a7d4;
+  }
+
+  .string {
+    color: #9ebfa5;
+  }
+
+  .name {
+    color:#2aaed0;
+  }
+
+  background: #272738 !important;
+
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    background: #14141f;
+    content: "HTML";
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: 8px 20px;
+    font-weight: 700;
+  }
+}

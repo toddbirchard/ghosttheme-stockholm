@@ -433,15 +433,16 @@
 
 		.protip {
 			background: rgba(255, 222, 196, 0.42);
-			padding: 0 20px 20px;
+			padding: 0 30px 20px;
 			margin-bottom: 20px;
 			font-size: .9em;
-			line-height: 1.7;
+			line-height: 2;
+			overflow: hidden;
 
 			&::before {
 		    margin-bottom: 11px;
 		    font-size: 14px;
-		    width: 100%;
+		    width: 110%;
 		    height: auto;
 		    background: rgba(255, 222, 196, 0.8);
 		    content: "Protip";
@@ -452,13 +453,14 @@
 		    -webkit-font-smoothing: antialiased;
 		    position: relative;
 		    padding: 8px 20px;
-		    margin-left: -20px;
+		    margin-left: -30px;
 		    font-weight: 700;
 		  }
 			li::before {
 				color:#dc9e5f;
 			}
-			code {
+			code,
+			pre > code {
 				border-radius: .3em;
 				white-space: normal;
 				background: #f1dbc6;
