@@ -46,15 +46,6 @@ var themeApp = {
       container.append(google_plus_code);
     }
   },
-  highlighter: function() {
-    hljs.configure({
-      tabReplace: '    ', // 4 spaces
-    })
-    hljs.initHighlighting();
-    /*$('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-    });*/
-  },
   backToTop: function() {
     $(window).scroll(function() {
       if ($(this).scrollTop() > 100) {
@@ -116,7 +107,6 @@ var themeApp = {
     hljs.configure({
       tabReplace: '    ', // 4 spaces
       classPrefix: '', // don't append class prefix
-      languages: ['python', 'javascript']
     });
     hljs.initHighlighting();
     $('pre code').each(function(i, block) {
@@ -335,12 +325,11 @@ var themeApp = {
     themeApp.backToTop();
     themeApp.adjustTileHeight();
     themeApp.mobileNavigation();
-    themeApp.codeHighlight();
     themeApp.triggerSignup();
     //themeApp.tags();
 
     if ($('body').hasClass('post-template')) {
-      themeApp.highlighter();
+      themeApp.codeHighlight();
       themeApp.postLinkPreviews();
       themeApp.fullScreen();
       themeApp.scrollableTables();
