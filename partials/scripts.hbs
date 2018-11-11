@@ -6,4 +6,26 @@
 <script src="{{asset "/js/main.min.js"}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
+
+<script>
+const email_field = document.getElementById('signup-email');
+const pass_field = document.getElementById('signup-password')
+
+var email = email_field.value;
+var pass = pass_field.value;
+async function handleSignup() {
+  const email = registerEmailEl.value;
+  const password = registerPasswordEl.value;
+
+  try {
+
+    await emailPasswordClient.registerWithEmail(email, password)
+    showPostRegistrationState()
+    displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
+
+  } catch(e) {
+    handleError(e)
+  }
+}
+</script>
 <!-- end scripts -->

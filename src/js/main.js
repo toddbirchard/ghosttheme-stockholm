@@ -122,6 +122,8 @@ var themeApp = {
     $(".overlay").css('opacity', '.4');
 
     $(".overlay").on('click', function(){
+      $("body").scroll(function(e){ e.preventDefault()});
+
       var signupGone = new TimelineMax();
 
       signupGone
@@ -209,15 +211,6 @@ var themeApp = {
       });
 
       $(".signup #signup-button").on('click', function() {
-        const email_field = document.getElementById('signup-email');
-        const pass_field = document.getElementById('signup-password')
-
-        var email = email_field.value;
-        var pass = pass_field.value;
-
-        emailPasswordClient.registerWithEmail(email, pass)
-          .then(() => {
-            console.log("Successfully sent account confirmation email!");
             tlScreen1
               .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
                 y: 100,
@@ -234,12 +227,9 @@ var themeApp = {
               .from(".confirm-description", 0.4, {
                 y: '-900px',
                 ease: Elastic.easeOut.config(1, 1.5)
-              })
-              .catch(err => {
-                console.log("Error registering new user:", err);
               });
-          });
-      });
+            });
+
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
       });
