@@ -27,5 +27,14 @@ async function handleSignup() {
     handleError(e)
   }
 }
+
+$('.float-right').on('click', function(){
+  if (!client.auth.isLoggedIn) {
+      const credential = new GoogleRedirectCredential();
+      client.auth.loginWithRedirect(credential);
+  }
+});
+
+
 </script>
 <!-- end scripts -->
