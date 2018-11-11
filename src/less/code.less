@@ -91,16 +91,12 @@ code {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 8px 10%;
+    padding: 8px 40px;
     margin-left: -6%;
     font-weight: 700;
 
-    &::before {
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
+    @media(max-width: 600px) {
+      padding: 8px 15%;
     }
   }
 
