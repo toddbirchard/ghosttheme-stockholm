@@ -110,7 +110,7 @@ var themeApp = {
     });
     hljs.initHighlightingOnLoad();
     $('pre code').each(function(i, block) {
-      //hljs.highlightBlock(block);
+      hljs.highlightBlock(block);
       if ($(this).height() >= 400) {
         var color = $(this).css('background');
         $(this).parent().append('<div class="codeoverflow" style=""></div>');
