@@ -211,6 +211,38 @@ var themeApp = {
       });
 
       $(".signup #signup-button").on('click', function() {
+
+        const email_field = document.getElementById('signup-email');
+        const pass_field = document.getElementById('signup-password')
+
+        var email = email_field.value;
+        var pass = pass_field.value;
+        async function handleSignup() {
+          const email = registerEmailEl.value;
+          const password = registerPasswordEl.value;
+
+          try {
+
+            await emailPasswordClient.registerWithEmail(email, password)
+            showPostRegistrationState()
+            displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
+
+          } catch(e) {
+            handleError(e)
+          }
+        }
+
+        $('.float-right').on('click', function(){
+          if (!client.auth.isLoggedIn) {
+              const credential = new GoogleRedirectCredential();
+              client.auth.loginWithRedirect(credential);
+          }
+        });
+
+
+
+
+
             tlScreen1
               .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
                 y: 100,
