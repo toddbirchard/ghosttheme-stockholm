@@ -113,7 +113,7 @@ var themeApp = {
       //hljs.highlightBlock(block);
       if ($(this).height() >= 400) {
         var color = $(this).css('background');
-        $(this).append('<div class="codeoverflow" style=""></div>');
+        $(this).parent().append('<div class="codeoverflow" style=""></div>');
       }
     });
   },
