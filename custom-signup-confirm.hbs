@@ -33,15 +33,16 @@
 	{{/post}}
 
 	<script>
-  const {
-    Stitch,
-    UserPasswordAuthProviderClient
-  } = stitch;
+	const {
+	  Stitch,
+	  UserPasswordAuthProviderClient,
+	  UserPasswordCredential
+	} = stitch;
 
   const APP_ID = "hackers-uangn";
   const stitchClient = Stitch.initializeDefaultAppClient(APP_ID);
 
-  const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+  const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
 
   const params = new URLSearchParams(window.location.search);
   const token = params.get('token');
