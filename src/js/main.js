@@ -108,7 +108,7 @@ var themeApp = {
       tabReplace: '    ', // 4 spaces
       classPrefix: '', // don't append class prefix
     });
-    hljs.initHighlighting();
+    hljs.initHighlightingOnLoad();
     $('pre code').each(function(i, block) {
       //hljs.highlightBlock(block);
       if ($(this).height() >= 400) {
