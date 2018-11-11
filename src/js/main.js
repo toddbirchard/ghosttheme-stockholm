@@ -247,7 +247,7 @@ var themeApp = {
     });
   },
   displayCommentsOnLoad: function() {
-    client.auth
+    /*client.auth
       .loginWithCredential(new stitch.AnonymousCredential())
       .then(displayComments)
       .catch(console.error);
@@ -259,7 +259,7 @@ var themeApp = {
       .asArray()
       .then(docs => docs.map(doc => `<div>${doc.comment}</div>`))
       .then(comments => document.getElementById("comments").innerHTML = comments);
-
+      */
   },
   addComment: function() {
     const newComment = document.getElementById("new_comment");
