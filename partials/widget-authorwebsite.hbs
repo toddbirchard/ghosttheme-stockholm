@@ -14,17 +14,17 @@
       client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
        client.callFunction("secret_linkpreview", []).then(results => {
          const linkpreview_key = results;
-       })
-      });
 
-      $.ajax({
-        url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
-        contentType: "application/json",
-        dataType: 'json',
-        success: function(result) {
-          $('.sidebar .author-website').append('<div class="content" style="padding:0;"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
-            '</a><i class="fas fa-link"></i></div></a></div>');
-        }
+         $.ajax({
+           url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
+           contentType: "application/json",
+           dataType: 'json',
+           success: function(result) {
+             $('.sidebar .author-website').append('<div class="content" style="padding:0;"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
+               '</a><i class="fas fa-link"></i></div></a></div>');
+           }
+         });
+       })
       });
     }
     websiteCard('{{website}}');
