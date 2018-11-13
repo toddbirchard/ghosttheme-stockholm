@@ -287,7 +287,7 @@ code {
   color: #2e9eb7;
   margin: 0;
 }
-
+/*
 .comment,
 .quote {
   color: #6a6c6f;
@@ -317,6 +317,7 @@ code {
 .title {
   color: #61aeee;
 }
+*/
 
 .json {
   .attr {
@@ -389,14 +390,11 @@ code {
   width: 110%;
 }
 
-.hljs.bash {
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #abb2bf;
-    background: #282c34;
-  }
+.hljs.bash,
+.language-bash,
+.hljs.shell,
+.language-shell {
+  background: #2c2938!important;
 
   .comment,
   .quote {
@@ -432,7 +430,7 @@ code {
 
   .built_in,
   .class .title {
-    color: #e6c07b;
+    color: #7baee6;
   }
 
   .attr,
@@ -473,7 +471,7 @@ code {
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #121925;
+    background: #201d29;
     content: "Bash"  !important;
     display: block;
     font-style: normal;
@@ -696,7 +694,8 @@ code {
   }
 }
 
-.hljs.css {
+.hljs.css
+.language-css {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
@@ -715,26 +714,10 @@ code {
   }
 }
 
-.hljs.shell {
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #121925;
-    content: "CSS";
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
 
-    font-weight: 700;
-  }
-}
 
-.hljs.ini {
+.hljs.ini,
+.language-ini {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
@@ -753,8 +736,46 @@ code {
   }
 }
 
+.hljs.yaml,
+.language-yaml {
+  background: #31252f!important;
+
+  .attr {
+    color: #7f9fd4;
+    font-weight: 600;
+  }
+
+  .string {
+    color: #c4b1d4;
+  }
+
+  .comment {
+    color: #584f55;
+  }
+
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    background: #13080e;
+    content: "Yaml";
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+
+    font-weight: 700;
+  }
+}
+
+
+
+
 .hljs.html,
-.hljs.xml {
+.hljs.xml, {
     .tag {
       color:#98bfd4;
     }
