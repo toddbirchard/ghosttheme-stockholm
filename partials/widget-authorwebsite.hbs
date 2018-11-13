@@ -12,7 +12,7 @@
   $(document).ready(function() {
     function websiteCard(website) {
       client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-       client.callFunction("secret_linkpreview").then(results => {
+       client.callFunction("secret_linkpreview", []).then(results => {
          const linkpreview_key = results;
        })
       });
