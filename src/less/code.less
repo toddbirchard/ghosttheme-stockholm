@@ -1,4 +1,6 @@
 @import 'fonts.less';
+@import 'nord.less';
+@import 'javascript.less';
 
 pre {
   white-space: pre-wrap;
@@ -121,7 +123,7 @@ code {
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #121925 !important;
+    background: #1e2538 !important;
     content: "Python" !important;
     display: block;
     font-style: normal;
@@ -204,83 +206,7 @@ code {
   }
 }
 
-.hljs.javascript {
-  background: #242c38;
 
-
-  .keyword,
-  .selector-tag,
-  .literal,
-  .section,
-  .link {
-    color: #8be9fd;
-  }
-
-  .function .keyword {
-    color: #ff79c6;
-  }
-
-  .hljs,
-  .subst {
-    color: #f8f8f2;
-  }
-
-  .string,
-  .title,
-  .name,
-  .type,
-  .attribute,
-  .symbol,
-  .bullet,
-  .addition,
-  .variable,
-  .template-tag,
-  .template-variable {
-    color: #f1fa8c;
-  }
-
-  .comment,
-  .quote,
-  .deletion,
-  .meta {
-    color: #6272a4;
-  }
-
-  .keyword,
-  .selector-tag,
-  .literal,
-  .title,
-  .section,
-  .doctag,
-  .type,
-  .name,
-  .strong {
-    font-weight: bold;
-  }
-
-  .emphasis {
-    font-style: italic;
-  }
-
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #090f10;
-    content: "Javascript" !important;
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin-left: -40px;
-
-    font-weight: 700;
-  }
-}
 
 code {
   padding: 4px 5px;
@@ -389,7 +315,7 @@ code {
   height: 100%;
   width: 110%;
 }
-
+/*
 .hljs.bash,
 .language-bash,
 .hljs.shell,
@@ -482,7 +408,7 @@ code {
 
     font-weight: 700;
   }
-}
+}*/
 
 .hljs.sql {
   background-color: #22202f !important;
@@ -725,41 +651,6 @@ code {
     height: auto;
     background: #121925;
     content: "ini";
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-
-    font-weight: 700;
-  }
-}
-
-.hljs.yaml,
-.language-yaml {
-  background: #31252f!important;
-
-  .attr {
-    color: #7f9fd4;
-    font-weight: 600;
-  }
-
-  .string {
-    color: #c4b1d4;
-  }
-
-  .comment {
-    color: #584f55;
-  }
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #13080e;
-    content: "Yaml";
     display: block;
     font-style: normal;
     font-variant: normal;
