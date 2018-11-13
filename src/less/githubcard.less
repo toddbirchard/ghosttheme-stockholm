@@ -61,6 +61,14 @@
       color: #444;
       font-size: 1.1em;
       border: 0;
+      line-height: 1;
+      transition: all .2s ease-out;
+
+      &:hover {
+        color: white;
+
+      }
+
     }
   }
 
@@ -159,16 +167,21 @@
       font-size: 0.9em;
       border-top: 0;
       width: auto;
-      background-color: #fff;
+      transition: .2s all easeout;
+      background-color: #f1f0f5;
       padding: 10px 16px;
       transition: .2s all easeout;
-      border: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      border-left: 0;
 
-      &:hover,
-      &:hover span {
+      &:hover {
         background-color: @theme-color;
         color: white;
         cursor: pointer;
+
+        span {
+          color: white;
+        }
       }
 
       &:hover .star::after {
