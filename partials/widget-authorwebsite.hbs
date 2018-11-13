@@ -7,6 +7,12 @@
 
 
 <script>
+client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+ client.callFunction("secret_linkpreview").then(results => {
+   const linkpreview_key = results;
+ })
+});
+
   $(document).ready(function() {
     function websiteCard(website) {
       $.ajax({

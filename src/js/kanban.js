@@ -88,6 +88,9 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
 });
 
 
+
+
+
     var swiper = new Swiper('.swiper-container', {
        height: 1000,
        noSwiping: true,
@@ -153,7 +156,7 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
       swiper.spaceBetween = 0;
       swiper.normalizeSlideIndex = true;
       swiper.updateSize();
-      swiper.updateSlides() 
+      swiper.updateSlides()
     }
   });
 }
