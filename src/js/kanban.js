@@ -82,6 +82,7 @@ $(document).ready(function() {
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
       client.callFunction("numCards", ["Backlog", "To Do", "In Progress", "Done"]).then(results => {
+        results = JSON.parse(results)
         $('#done .count').text(results["Done"] + ' issues');
         $('#todo .count').text(results["To Do"] + ' issues');
         $('#progress .count').text(results["In Progress"] + ' issues');
