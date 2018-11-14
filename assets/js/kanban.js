@@ -81,21 +81,14 @@ db.collection('jira').find({
     console.error(err)
   });
 
-client.callFunction("numCards", ["Backlog"]).then(result => {
-  $('#backlog .count').text(result + ' issues');
-});
-
-client.callFunction("numCards", ["To Do"]).then(result => {
-  $('#todo .count').text(result + ' issues');
-});
-
-client.callFunction("numCards", ["In Progress"]).then(result => {
-  $('#progress .count').text(result + ' issues');
-});
-
-client.callFunction("numCards", ["Done"]).then(result => {
-  $('#done .count').text(result + ' issues');
-});
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+    client.callFunction("numCards", ["Backlog", "To Do", "In Progress", "Done"]).then(results => {
+      $('#done .count').text(results["Done"] + ' issues');
+      $('#todo .count').text(results["To Do"] + ' issues');
+      $('#progress .count').text(results["In Progress"] + ' issues');
+      $('#backlog .count').text(results["Backlog"] + ' issues');
+    })
+  });
 
 
 var swiper = new Swiper('.swiper-container', {

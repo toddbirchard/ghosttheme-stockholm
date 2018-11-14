@@ -89,9 +89,6 @@ $(document).ready(function() {
       })
     });
 
-
-
-
     var swiper = new Swiper('.swiper-container', {
       height: 1000,
       noSwiping: true,
