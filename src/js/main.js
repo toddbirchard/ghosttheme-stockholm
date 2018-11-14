@@ -105,7 +105,7 @@ var themeApp = {
   },
   codeHighlight: function() {
     hljs.configure({
-      tabReplace: '    ', // 4 spaces
+      tabReplace: '  ', // 4 spaces
       classPrefix: '', // don't append class prefix
     });
     hljs.initHighlightingOnLoad();
