@@ -80,7 +80,7 @@ $(document).ready(function() {
       console.error(err)
     });
 
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => {
       client.callFunction("numCards", ["Backlog", "To Do", "In Progress", "Done"]).then(results => {
         $('#done .count').text(results["Done"] + ' issues');
         $('#todo .count').text(results["To Do"] + ' issues');
