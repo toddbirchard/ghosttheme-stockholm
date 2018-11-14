@@ -18,6 +18,15 @@ table {
     display: block !important;
   }
 
+  &.left {
+    tbody{
+      td {
+        text-align: left;
+        vertical-align: top;
+      }
+    }
+  }
+
   thead {
   tr {
     border-bottom: 1px solid rgba(0,0,0,.12);
@@ -78,7 +87,7 @@ tr:nth-child(even) {
 
 
 td, th{
-  padding: 15px 5px;
+  padding: 15px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -161,7 +170,7 @@ td, th{
       display: block;
       min-height: 1.25em;
       text-align: left;
-      padding: 15px;
+      padding: 15px !important;
       border-spacing: 0;
       border-collapse: collapse;
     }

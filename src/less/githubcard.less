@@ -1,13 +1,11 @@
 @import "variables.less";
 @import "mixin.less";
 
-
 .author-template {
   #github-card-author {
     width: 100%;
     font-size: 16px;
     overflow: hidden;
-
     @media(max-width: 800px) {
       width: auto;
       margin-bottom: 30px;
@@ -17,10 +15,9 @@
   .profile {
     background: #FFF;
     overflow: hidden;
-        padding: 0 14px 0;
+    padding: 10px 14px 0;
     min-height: 135px;
-
-    @media(max-width: 800px){
+    @media(max-width: 800px) {
       padding: 10px;
     }
   }
@@ -39,8 +36,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-
-    @media(max-width: 800px){
+    @media(max-width: 800px) {
       margin: 0;
       padding: 15px;
     }
@@ -61,6 +57,12 @@
       color: #444;
       font-size: 1.1em;
       border: 0;
+      line-height: 1;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 
@@ -77,9 +79,8 @@
     padding: 10px 14px;
     line-height: 1;
     background: @theme-color;
-    transition: .2s all easeout;
-
-    @media(max-width: 800px){
+    transition: 0.2s all easeout;
+    @media(max-width: 800px) {
       padding: 8px 12px;
       font-size: 0.7em;
     }
@@ -129,8 +130,7 @@
     margin: 0 20px 25px 0;
     border-radius: 2px;
     box-shadow: 0 0 2px 0 #DDD;
-
-    @media(max-width: 800px){
+    @media(max-width: 800px) {
       margin: 0 15px 15px 0;
     }
   }
@@ -159,16 +159,21 @@
       font-size: 0.9em;
       border-top: 0;
       width: auto;
-      background-color: #fff;
+      transition: 0.2s all easeout;
+      background-color: #f1f0f5;
       padding: 10px 16px;
-      transition: .2s all easeout;
-      border: 1px solid #dedede;
+      transition: 0.2s all easeout;
+      border-bottom: 1px solid #dedede;
+      border-left: 0;
 
-      &:hover,
-      &:hover span {
+      &:hover {
         background-color: @theme-color;
         color: white;
         cursor: pointer;
+
+        span {
+          color: white;
+        }
       }
 
       &:hover .star::after {

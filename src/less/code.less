@@ -1,4 +1,6 @@
 @import 'fonts.less';
+@import 'nord.less';
+@import 'javascript.less';
 
 pre {
   white-space: pre-wrap;
@@ -121,7 +123,7 @@ code {
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #121925 !important;
+    background: #1e2538 !important;
     content: "Python" !important;
     display: block;
     font-style: normal;
@@ -133,18 +135,7 @@ code {
     margin-left: -40px;
     font-weight: 700;
   }
-  /*
-  &::before  {
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    content: "\f3e2";
-  }
-*/
+
   .addition,
   .meta-string,
   .regexp,
@@ -204,118 +195,10 @@ code {
   }
 }
 
-.hljs.javascript {
-  background: #242c38;
-
-
-  .keyword,
-  .selector-tag,
-  .literal,
-  .section,
-  .link {
-    color: #8be9fd;
-  }
-
-  .function .keyword {
-    color: #ff79c6;
-  }
-
-  .hljs,
-  .subst {
-    color: #f8f8f2;
-  }
-
-  .string,
-  .title,
-  .name,
-  .type,
-  .attribute,
-  .symbol,
-  .bullet,
-  .addition,
-  .variable,
-  .template-tag,
-  .template-variable {
-    color: #f1fa8c;
-  }
-
-  .comment,
-  .quote,
-  .deletion,
-  .meta {
-    color: #6272a4;
-  }
-
-  .keyword,
-  .selector-tag,
-  .literal,
-  .title,
-  .section,
-  .doctag,
-  .type,
-  .name,
-  .strong {
-    font-weight: bold;
-  }
-
-  .emphasis {
-    font-style: italic;
-  }
-
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #090f10;
-    content: "Javascript" !important;
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    margin-left: -40px;
-
-    font-weight: 700;
-  }
-}
-
 code {
   padding: 4px 5px;
   color: #2e9eb7;
   margin: 0;
-}
-
-.comment,
-.quote {
-  color: #6a6c6f;
-}
-
-.doctag,
-.formula,
-.keyword {
-  color: #00b1d5;
-  font-weight: 600;
-}
-
-.literal {
-  color: #56b6c2;
-}
-
-.built_in,
-.class .title {
-  color: #2db1a1;
-}
-
-.bullet,
-.link,
-.meta,
-.selector-id,
-.symbol,
-.title {
-  color: #61aeee;
 }
 
 .json {
@@ -389,102 +272,6 @@ code {
   width: 110%;
 }
 
-.hljs.bash {
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #abb2bf;
-    background: #282c34;
-  }
-
-  .comment,
-  .quote {
-    color: #5c6370;
-    font-style: italic;
-  }
-
-  .doctag,
-  .keyword,
-  .formula {
-    color: #c678dd;
-  }
-
-  .section,
-  .name,
-  .selector-tag,
-  .deletion,
-  .subst {
-    color: #e06c75;
-  }
-
-  .literal {
-    color: #56b6c2;
-  }
-
-  .string,
-  .regexp,
-  .addition,
-  .attribute,
-  .meta-string {
-    color: #98c379;
-  }
-
-  .built_in,
-  .class .title {
-    color: #e6c07b;
-  }
-
-  .attr,
-  .variable,
-  .template-variable,
-  .type,
-  .selector-class,
-  .selector-attr,
-  .selector-pseudo,
-  .number {
-    color: #d19a66;
-  }
-
-  .symbol,
-  .bullet,
-  .link,
-  .meta,
-  .selector-id,
-  .title {
-    color: #61aeee;
-  }
-
-  .emphasis {
-    font-style: italic;
-  }
-
-  .strong {
-    font-weight: bold;
-  }
-
-  .link {
-    text-decoration: underline;
-  }
-
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #121925;
-    content: "Bash"  !important;
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-
-    font-weight: 700;
-  }
-}
 
 .hljs.sql {
   background-color: #22202f !important;
@@ -696,7 +483,8 @@ code {
   }
 }
 
-.hljs.css {
+.hljs.css
+.language-css {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
@@ -715,26 +503,10 @@ code {
   }
 }
 
-.hljs.shell {
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    background: #121925;
-    content: "CSS";
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
 
-    font-weight: 700;
-  }
-}
 
-.hljs.ini {
+.hljs.ini,
+.language-ini {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
@@ -753,8 +525,13 @@ code {
   }
 }
 
+
+
+
 .hljs.html,
-.hljs.xml {
+.hljs.xml,
+.language-handlebars,
+.handlebars {
     .tag {
       color:#98bfd4;
     }
