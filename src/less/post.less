@@ -606,7 +606,7 @@
 
 	figcaption {
 		text-align: center;
-		margin: 0 auto 40px;
+		margin: 0 auto 0;
 		font-size: 13px;
 		color: #8d929a;
 		white-space: nowrap;
@@ -809,15 +809,16 @@
 .post-template {
 	figure {
 		width: fit-content;
-		margin: 30px auto 11px;
+		margin: 30px auto 30px;
 		overflow: visible;
+		box-shadow: 1px 0px 1px rgba(154, 154, 165, 0.27);
+		border: 1px solid rgba(206, 206, 206, 0.42);
 
 		&:hover {
 			cursor: zoom-in;
 		}
 
 		img {
-			border: 1px solid #d8d8d8;
 			@media(max-width: 600px) {
 				margin-bottom: -5px !important;
 			}
@@ -867,7 +868,7 @@
 		justify-content: space-between;
 		@media(max-width: 1000px) {
 			padding: 30px 40px;
-			margin: 20px;
+			margin: 20px 0 0;
 		}
 		@media(max-width: 600px) {
 			padding: 30px;
