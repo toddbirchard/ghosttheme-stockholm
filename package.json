@@ -52,7 +52,7 @@
     "ghost-search": "^0.1.0",
     "github-profile-card": "^2.0.1",
     "grabity": "^1.0.4",
-    "materialize-css": "^1.0.0",
+    "lightbox2": "^2.10.0",
     "mongodb-stitch-browser-core": "^4.0.14-5",
     "mongodb-stitch-browser-sdk": "^4.0.14",
     "mongodb-stitch-browser-services-http": "^4.0.14-5",

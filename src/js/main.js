@@ -82,7 +82,19 @@ var themeApp = {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   },
   fullScreen: function() {
-    $('.post-template article .post-content img').materialbox();
+    $('.post-template article .post-content img').each(function(item){
+      var alt = $(this).closest('figure').find('figcaption').text();
+      var src = $(this).attr('src')
+      $(this).attr('data-lightbox', alt);
+      $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
+    });
+    var window_height = $( window ).height();
+    var window_portion= window_height * .2;
+    lightbox.option({
+      'resizeDuration': 100,
+      'wrapAround': true,
+      'positionFromTop': window_height/2 - window_portion
+    });
     $('article pre').each(function() {
       if ($(this).height() >= 400) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
