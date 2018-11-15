@@ -32,16 +32,6 @@ $(document).ready(function() {
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'To Do',
-      issuetype: {
-        $in: [
-          'Task',
-          'Story',
-          'Integration',
-          'Bug',
-          'Data',
-          'Content'
-        ]
-      }
     }, {limit: 6}).asArray()).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'todo')
@@ -51,16 +41,6 @@ $(document).ready(function() {
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'In Progress',
-      issuetype: {
-        $in: [
-          'Task',
-          'Story',
-          'Integration',
-          'Bug',
-          'Content',
-          'Data'
-        ]
-      }
     }, {limit: 6}).asArray()).then(docs => {
       console.log("Found docs", docs)
       populateCards(docs, 'progress')
