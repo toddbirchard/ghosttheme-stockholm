@@ -82,18 +82,18 @@ var themeApp = {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   },
   fullScreen: function() {
-    $('.post-template article .post-content img').each(function(item){
+    $('.post-template article .post-content img').each(function(item) {
       var alt = $(this).closest('figure').find('figcaption').text();
       var src = $(this).attr('src')
       $(this).attr('data-lightbox', alt);
       $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
     });
-    var window_height = $( window ).height();
-    var window_portion= window_height * .2;
+    var window_height = $(window).height();
+    var window_portion = window_height * .2;
     lightbox.option({
       'resizeDuration': 100,
       'wrapAround': true,
-      'positionFromTop': window_height/2 - window_portion
+      'positionFromTop': window_height / 2 - window_portion
     });
     $('article pre').each(function() {
       if ($(this).height() >= 400) {
@@ -130,23 +130,28 @@ var themeApp = {
     });
   },
   signup: function() {
+    const email_field = document.getElementById('signup-email');
+    const pass_field = document.getElementById('signup-password');
+
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '.4');
 
-    $(".overlay").on('click', function(){
-      $("body").scroll(function(e){ e.preventDefault()});
+    $(".overlay").on('click', function() {
+      $("body").scroll(function(e) {
+        e.preventDefault()
+      });
 
       var signupGone = new TimelineMax();
 
       signupGone
-      .to(".overlay", 0.4, {
-        opacity: 0,
-        ease: Elastic.easeOut.config(1, 1.1)
-      }, "-=0.5")
-      .to(".signup", 0.4, {
-        opacity: 0,
-        y: 100,
-        ease: Elastic.easeOut.config(1, 1.1)
+        .to(".overlay", 0.4, {
+          opacity: 0,
+          ease: Elastic.easeOut.config(1, 1.1)
+        }, "-=0.5")
+        .to(".signup", 0.4, {
+          opacity: 0,
+          y: 100,
+          ease: Elastic.easeOut.config(1, 1.1)
         }, "-=0.5")
         .set([".overlay", ".signup"], {
           visibility: "hidden"
@@ -224,55 +229,38 @@ var themeApp = {
 
       $(".signup #signup-button").on('click', function() {
 
-        const email_field = document.getElementById('signup-email');
-        const pass_field = document.getElementById('signup-password')
-
-        var email = email_field.value;
-        var pass = pass_field.value;
         async function handleSignup() {
-          const email = registerEmailEl.value;
-          const password = registerPasswordEl.value;
+          var email = email_field.value;
+          var pass = pass_field.value;
 
           try {
-
             await emailPasswordClient.registerWithEmail(email, password)
             showPostRegistrationState()
             displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
 
-          } catch(e) {
+          } catch (e) {
             handleError(e)
           }
         }
 
-        $('.float-right').on('click', function(){
-          if (!client.auth.isLoggedIn) {
-              const credential = new GoogleRedirectCredential();
-              client.auth.loginWithRedirect(credential);
-          }
-        });
-
-
-
-
-
-            tlScreen1
-              .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
-                y: 100,
-                opacity: 0,
-                ease: Elastic.easeOut.config(1, 1.5)
-              })
-              .set([".confirm-head", ".confirm-description"], {
-                visibility: "visible"
-              })
-              .from(".confirm-head", 0.4, {
-                y: '-900px',
-                ease: Elastic.easeOut.config(1, 1.5)
-              })
-              .from(".confirm-description", 0.4, {
-                y: '-900px',
-                ease: Elastic.easeOut.config(1, 1.5)
-              });
-            });
+        tlScreen1
+          .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
+            y: 100,
+            opacity: 0,
+            ease: Elastic.easeOut.config(1, 1.5)
+          })
+          .set([".confirm-head", ".confirm-description"], {
+            visibility: "visible"
+          })
+          .from(".confirm-head", 0.4, {
+            y: '-900px',
+            ease: Elastic.easeOut.config(1, 1.5)
+          })
+          .from(".confirm-description", 0.4, {
+            y: '-900px',
+            ease: Elastic.easeOut.config(1, 1.5)
+          });
+      });
 
       $(".signup #signup-button").mouseup(function() {
         $(this).css("box-shadow", "0px 5px 11px 0px #0000001a");
@@ -283,6 +271,12 @@ var themeApp = {
         tlScreen1.restart();
       })
     })(jQuery);
+    $('.float-right').on('click', function() {
+      if (!client.auth.isLoggedIn) {
+        const credential = new GoogleRedirectCredential();
+        client.auth.loginWithRedirect(credential);
+      }
+    });
   },
   triggerSignup: function() {
     $('.rss').on('click', function(e) {
@@ -346,7 +340,7 @@ var themeApp = {
       content, // scrollable element
       mode: 'x', // scroll only in horizontal dimension
       bounce: true,
-      onUpdate: (data)=> {
+      onUpdate: (data) => {
         // your scroll logic goes here
         content.style.transform = `translateX(${-data.position.x}px)`;
       }
