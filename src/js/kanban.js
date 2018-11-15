@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   if ($('body').hasClass('page-projects')) {
     function populateCards(cards, status) {
@@ -140,4 +140,4 @@ $(document).ready(function() {
       }
     });
   }
-});
+});*/
