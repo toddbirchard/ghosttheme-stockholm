@@ -457,11 +457,15 @@
 	}
 
 	.post-content {
-		margin: 25px 80px 30px;
+		margin: 10px 80px 30px;
 
 		a {
 			color: @theme-color;
 			font-family: 'Gordita-Regular';
+		}
+
+		p > a {
+			 font-weight: 600;
 		}
 
 		img {
@@ -696,9 +700,10 @@
 
 		ol,
 		ul {
-			margin-left: 15px;
+			margin-left: 0;
 			padding-left: 0;
 			margin-bottom: 20px;
+			margin-top: 0;
 			@media(max-width:600px) {
 				margin: 0 15px;
 				padding-left: 0;
@@ -804,7 +809,7 @@
 .post-template {
 	figure {
 		width: fit-content;
-		margin: 40px auto 11px;
+		margin: 30px auto 11px;
 		overflow: visible;
 
 		&:hover {

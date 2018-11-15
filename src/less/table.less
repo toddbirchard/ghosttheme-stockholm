@@ -15,7 +15,7 @@ table {
   border: 1px solid rgba(77, 87, 109, 0.25);
 
   @media(max-width: 600px) {
-    display: block !important;
+    /*display: block !important;*/
   }
 
   &.left {
@@ -104,10 +104,10 @@ td, th{
     border-collapse: collapse;
     border-spacing: 0;
     display: table;
-  /*  position: relative;
+    position: relative;
     margin-left: calc(~"-50vw + 50%") !important;
     margin-right: calc(~"-50vw + 50%") !important;
-    overflow-x: scroll;*/
+    overflow-x: scroll;
 
     &:hover{
       cursor: grab;
@@ -128,8 +128,11 @@ td, th{
 
     th { text-align: left; }
     thead {
-      display: block;
-      float: left;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      width: 120px;
+      height: 100%;
       th {
         font-family: Gordita-Medium;
         text-align: center;
@@ -138,6 +141,7 @@ td, th{
       tr {
         display: block;
         padding: 0 10px 0 0;
+        height: 100%;
 
         th::before {
           content: "\00a0";
@@ -145,11 +149,16 @@ td, th{
       }
     }
     tbody {
-      display: block;
+      margin-left: 120px;
       width: auto;
       position: relative;
       overflow-x: auto;
       white-space: nowrap;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+
 
       & > tr> th {
         border-bottom: 1px solid #e0e0e0;
@@ -159,8 +168,14 @@ td, th{
       }
 
       tr {
-        display: inline-block;
+        /*display: inline-block;*/
         vertical-align: top;
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: normal;
+        line-break: strict;
+        white-space: inherit;
+        padding: 0 15px;
       }
     }
     th {
@@ -170,9 +185,14 @@ td, th{
       display: block;
       min-height: 1.25em;
       text-align: left;
-      padding: 15px !important;
+      padding: 15px 0 !important;
       border-spacing: 0;
       border-collapse: collapse;
+      overflow-wrap: normal;
+      line-break: normal;
+      white-space: normal;
+      width: max-content;
+      max-width: 200px;
     }
     tr {
       border-bottom: none;
@@ -202,7 +222,7 @@ td, th{
     margin-left: calc(~"-50vw + 50%");
     margin-right: calc(~"-50vw + 50%");
     width: auto!important;
-    overflow: hidden;
+
 
     &:hover{
       cursor: move;

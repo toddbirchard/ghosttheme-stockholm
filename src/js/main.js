@@ -326,10 +326,10 @@ var themeApp = {
   scrollableTables: function() {
     $('.post-content').find('table').parent('div').addClass('tableContainer');
     let viewport = document.querySelector('.tableContainer');
-    let content = viewport.querySelector('table');
+    let content = viewport.querySelector('tbody');
 
 
-    /*let sb = new ScrollBooster({
+    let sb = new ScrollBooster({
       viewport, // this parameter is required
       content, // scrollable element
       mode: 'x', // scroll only in horizontal dimension
@@ -338,7 +338,7 @@ var themeApp = {
         // your scroll logic goes here
         content.style.transform = `translateX(${-data.position.x}px)`;
       }
-    })*/
+    })
   },
   init: function() {
     themeApp.featuredMedia();
