@@ -17,9 +17,9 @@
     "url": "https://toddbirchard.com"
   },
   "keywords": [
-    "ghost-theme",
-    "data",
-    "engineering",
+    "ghost theme",
+    "nodejs",
+    "blog theme",
     "blog",
     "theme"
   ],
@@ -40,11 +40,12 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@babel/runtime": "^7.1.2",
-    "@babel/runtime-corejs2": "^7.1.2",
+    "@babel/runtime": "^7.1.5",
+    "@babel/runtime-corejs2": "^7.1.5",
     "@sendgrid/mail": "^6.3.1",
+    "autoprefixer": "^9.3.1",
     "babel-runtime": "^6.26.0",
-    "browser-sync": "^2.26.0",
+    "browser-sync": "^2.26.3",
     "fuzzy-search": "^2.1.0",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
@@ -53,20 +54,20 @@
     "github-profile-card": "^2.0.1",
     "grabity": "^1.0.4",
     "lightbox2": "^2.10.0",
-    "mongodb-stitch-browser-core": "^4.0.14-5",
+    "mongodb-stitch-browser-core": "^4.0.14",
     "mongodb-stitch-browser-sdk": "^4.0.14",
-    "mongodb-stitch-browser-services-http": "^4.0.14-5",
+    "mongodb-stitch-browser-services-http": "^4.0.14",
     "nord-highlightjs": "^0.1.0",
     "paginate": "^0.2.0",
     "precss": "^3.1.2",
-    "swiper": "^4.4.1"
+    "swiper": "^4.4.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.1.6",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
@@ -85,9 +86,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-terser": "^1.1.5",
     "gulp-uglify-es": "^1.0.4",
-    "terser": "^3.10.1",
-    "uglify-js": "^3.4.9",
-    "webpack-stream": "^5.1.1"
+    "terser": "^3.10.11"
   },
   "babel": {
     "presets": [
