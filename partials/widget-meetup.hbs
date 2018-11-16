@@ -4,14 +4,6 @@ client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
   console.log('logged in anonymously as user')
 });
 
-client.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-  console.log(JSON.stringify(result))
-  console.log(result.meetup)
-  if (result.meetup) {createMeetupCard(result.meetup)}
-});
-
-
-
 function createMeetupCard(meetup) {
   $.ajax({
     url: 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key,
@@ -27,6 +19,11 @@ function createMeetupCard(meetup) {
         '<a href="https://www.meetup.com/members/' + ajaxResult['data']['id'] + '/"><span class="country">View profile</span></a></div></div> \n ' +
         '<div class="events"></div></div>');
     }
+  });
+  
+  client.callFunction("secret_meetup").then(result => {
+    console.log(JSON.stringify(result));
+    if (result.meetup) {createMeetupCard(JSON.stringify(result.meetup))}
   });
 
   $.ajax({
