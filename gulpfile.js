@@ -38,8 +38,8 @@ var paths = {
     dest: 'assets/'
   },
   images: {
-    src: '/Users/todd.birchard/Dropbox/Sites/_Personal/h3/content/images/2018/',
-    dest: '/Users/todd.birchard/Dropbox/Sites/_Personal/h3/content/images/2018/'
+    src: '/var/www/hackers/content/images/2018/',
+    dest: '/var/www/hackers/content/images/2018/'
   }
 };
 
