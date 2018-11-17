@@ -18,7 +18,7 @@
 							{{content}}
 						</div>
 						<div class="tag-container">
-							{{#get "tags" visibility="internal" include="count.posts,meta_title" order="count.posts desc" }}
+							{{#get "tags" filter="feature_image:-null" visibility="internal" include="count.posts,meta_title" order="count.posts desc" }}
 								{{#foreach tags}}
 									<div class="tag-wrapper">
 										<a href="{{url}}">
