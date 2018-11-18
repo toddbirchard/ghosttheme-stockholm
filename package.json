@@ -52,7 +52,6 @@
     "ghost-search": "^0.1.0",
     "github-profile-card": "^2.0.1",
     "grabity": "^1.0.4",
-    "imagemin-jpegtran": "^6.0.0",
     "lightbox2": "^2.10.0",
     "mongodb-stitch-browser-core": "^4.0.14",
     "mongodb-stitch-browser-sdk": "^4.0.14",
@@ -89,6 +88,7 @@
     "gulp-terser": "^1.1.5",
     "gulp-uglify-es": "^1.0.4",
     "imagemin": "^6.0.0",
+    "imagemin-jpegtran": "^6.0.0",
     "imagemin-webp": "^4.1.0",
     "terser": "^3.10.11"
   },

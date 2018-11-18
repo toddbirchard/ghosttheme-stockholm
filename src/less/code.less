@@ -1,6 +1,6 @@
 @import 'fonts.less';
 @import 'nord.less';
-@import 'javascript.less';
+/*@import 'javascript.less';*/
 
 pre {
   white-space: pre-wrap;
@@ -564,6 +564,114 @@ code {
     -webkit-font-smoothing: antialiased;
     position: relative;
 
+    font-weight: 700;
+  }
+}
+
+.javascript,
+.language-javascript {
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: #2a2d2a;
+  color: #779477;
+
+  &::-moz-selection,  {
+  text-shadow: none;
+  background: #435643;
+  }
+
+  .inserted {
+  border-bottom: 1px dotted #f0fff0;
+  text-decoration: none;
+  }
+
+  .italic {
+  font-style: italic;
+  }
+
+  .important,
+  .bold {
+  font-weight: bold;
+  }
+
+  .important {
+  color: #b3d6b3;
+  }
+
+  .entity {
+  cursor: help;
+  }
+
+  .highlight {
+  outline: .4em solid #5c705c;
+  outline-offset: .4em;
+  }
+
+  .comment,
+  .prolog,
+  .doctype,
+  .cdata {
+  color: #535f53;
+  }
+
+  .punctuation {
+  color: #535f53;
+  }
+
+  .namespace {
+  opacity: .7;
+  }
+
+  .tag,
+  .operator,
+  .number {
+  color: #a2b34d;
+  }
+
+  .property,
+  .function {
+  color: #687d68;
+  }
+
+  .tag-id,
+  .selector,
+  .atrule-id {
+  color: #f0fff0;
+  }
+
+  .attr-name {
+  color: #b3d6b3;
+  }
+
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    background: #1d1e1f;
+    content: "Javascript" !important;
+    color:white;
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    margin-left: -40px;
     font-weight: 700;
   }
 }

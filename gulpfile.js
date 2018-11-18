@@ -48,14 +48,24 @@ function styles() {
   //.pipe(sourcemaps.init())
     .pipe(less())
   //.pipe(sourcemaps.write('.', { sourceRoot: '/' }))
-    .pipe(rename({basename: 'main', suffix: '.min'})).pipe(cleanCSS({debug: true})).pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false})).pipe(postcss([require('precss'), require('autoprefixer')])).pipe(concat('main.min.css')).pipe(gulp.dest(paths.styles.dest)).pipe(livereload()).pipe(browserSync.stream());
+    .pipe(rename({basename: 'main', suffix: '.min'}))
+    .pipe(cleanCSS({debug: true}))
+    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+    .pipe(postcss([require('precss'), require('autoprefixer')]))
+    .pipe(concat('main.min.css')).pipe(gulp.dest(paths.styles.dest))
+    .pipe(livereload())
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
   return gulp.src(paths.scripts.src).pipe(babel({
     presets: ['@babel/env'],
     //plugins: ['@babel/transform-runtime', '@babel/plugin-syntax-dynamic-import']
-  })).on('error', console.error.bind(console)).pipe(resolveDependencies({pattern: /\* @requires [\s-]*(.*\.js)/g})).pipe(concat('main.min.js')).pipe(terser()).pipe(gulp.dest(paths.scripts.dest));
+  })).on('error', console.error.bind(console))
+  .pipe(resolveDependencies({pattern: /\* @requires [\s-]*(.*\.js)/g}))
+  .pipe(concat('main.min.js'))
+  .pipe(terser())
+  .pipe(gulp.dest(paths.scripts.dest));
 }
 
 function templates() {
@@ -76,17 +86,10 @@ function images(folder_path) {
 }
 
 function image_loop() {
-  var folder_arr = []
   fs.readdir(paths.images.src, function(err, folders) {
-    console.log('folders = ' + folders);
     for(var i =0; i < folders.length; i++){
-      console.log(folders[i]);
       var folder_path = path.join(paths.images.src, folders[i]);
-      folder_arr.push(folder_path);
-    }
-    for(var i =0; i < folder_arr.length; i++) {
-        console.log('folder = ' + folder_arr[i]);
-        images(folder_arr[i]);
+      images(folders[i]);
     }
   });
 }

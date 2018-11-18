@@ -11,11 +11,6 @@
 				<!-- start post -->
 				{{#post}}
 					<article class="{{post_class}}">
-
-						{{!--{{#if feature_image}}
-							<div class="featured-media" style="background-image: url({{feature_image}});">
-							</div>
-						{{/if}}--}}
 						<div class="page-head">
 							<h1 class="page-title">{{{title}}}</h1>
 						</div>
@@ -23,19 +18,19 @@
 							{{content}}
 						</div>
 						<div class="tag-container">
-							{{#get "tags" include="count.posts,meta_title" order="count.posts desc" }}
+							{{#get "tags" filter="feature_image:-null" visibility="internal" include="count.posts,meta_title" order="count.posts desc" }}
 								{{#foreach tags}}
 									<div class="tag-wrapper">
 										<a href="{{url}}">
-											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});"{{/if}} ></div>
-													<div class="description">
-														<h2>{{meta_title}}</h2>
-														<p>{{description}}</p>
-														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
-													</div>
+											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});" {{/if}}></div>
+											<div class="description">
+												<h2>{{meta_title}}</h2>
+												<p>{{description}}</p>
+												<span class="postcount">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+											</div>
 										</a>
 									</div>
-						{{/foreach}}
+								{{/foreach}}
 						{{/get}}
 						</div>
 			</div>
@@ -43,8 +38,6 @@
 			{{/post}}
 			<!-- end post -->
 		</div>
-
-
 		<!-- end main post area -->
 	</div>
 </section>
