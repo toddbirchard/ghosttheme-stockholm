@@ -19,7 +19,6 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync'),
   terser = require('gulp-terser'),
   imagemin = require('gulp-imagemin'),
-  imageminWebp = require('imagemin-webp'),
   imageminJpegtran = require('imagemin-jpegtran'),
   fs = require('fs'),
   path = require('path');
