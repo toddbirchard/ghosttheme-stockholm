@@ -1,0 +1,17 @@
+.fw-tw-feed-item-description {
+  font-family: Gordita-Regular,sans-serif !important;
+}
+
+.fw-tw-feed-item-username,
+.fw-tw-feed-item-date,
+.fw-tw-links-in-tweets {
+  font-family: CompassSans-Regular,Gordita-Medium,serif;
+}
+
+.fw-tw-feed-item {
+  padding:20px;
+}
+
+.fw-tw-feed-item-user-img {
+  margin-right: 0;
+}
