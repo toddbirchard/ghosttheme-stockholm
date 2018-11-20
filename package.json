@@ -25,7 +25,7 @@
   ],
   "engines": {
     "node": "8.12.0",
-    "ghost": ">=2.0.0"
+    "ghost": ">=2.5.0"
   },
   "screenshots": {
     "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
