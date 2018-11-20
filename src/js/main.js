@@ -105,7 +105,7 @@ var themeApp = {
       var codeContainer = $(this).closest('pre');
       codeContainer.css('max-height', 'none');
       codeContainer.css('padding', '64px 20px !important')
-      $(this).closest('code').find('codeoverflow').css('display', 'none');
+      $(this).closest('pre').find('.codeoverflow').css('opacity', '0');
       $(this).css('opacity', 0);
       codeContainer.animate({
         //height: $(window).height()
