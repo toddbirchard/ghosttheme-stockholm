@@ -28,7 +28,7 @@
 
 .fw-tw-feed-item {
   padding:15px !important;
-  background: white !important;
+  background: rgba(255, 255, 255, 0.5) !important;
   margin-bottom: 10px !important;
   border-bottom: 0 !important;
   border-radius: 2px !important;
