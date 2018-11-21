@@ -1,17 +1,56 @@
+#fw-tw-feed-items {
+  background: none !important;
+}
+
+
 .fw-tw-feed-item-description {
   font-family: Gordita-Regular,sans-serif !important;
+  line-height: 1.4!important;
+  font-size: .8em!important;
+  text-align: left!important;
+      position: relative!important;
 }
 
 .fw-tw-feed-item-username,
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
-  font-family: CompassSans-Regular,Gordita-Medium,serif;
+  font-family: CompassSans-Regular,Gordita-Medium,serif!important;
 }
 
+.fw-tw-feed-item-username{
+  font-weight: 600!important;
+}
+
+
 .fw-tw-feed-item {
-  padding:20px;
+  padding:15px !important;
+  background: white!important;
+  margin-bottom: 10px!important;
+  border-bottom: 0!important;
+  border-radius: 2px!important;
+}
+
+.fw-tw-feed-item-module {
+  padding:10px !important;
+  position: relative!important;
 }
 
 .fw-tw-feed-item-user-img {
-  margin-right: 0;
+  margin-right: 3px !important;
+}
+
+.fw-tw-feed-item-username {
+  font-family: HackerSans-Medium,CompassSans-Regular!important;
+}
+
+
+.fw-tw-feed-item-date {
+  font-family: Gordita-Regular,sans-serif !important;
+}
+
+.fw-tw-feed-item-tweet-action {
+  text-align: right;
+  margin: -27px 0 0 0;
+  position: absolute;
+  right: 10px;
 }
