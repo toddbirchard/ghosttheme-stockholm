@@ -6,10 +6,9 @@
   {{/if}}
 
   {{#if feature_image}}
-      <a href="{{url}}" class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}" id="{{{title}}}">
-        <!--<div class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}"></div>-->
+        <a href="{{url}}" class="featured-media" href="{{url}}">
+          <div class="post-card-image" style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/fetch/w_640,h_400,c_fit/{{img_url feature_image absolute="true"}})"></div>
         </a>
-      {{!-- div class="postimage" style="background:url({{feature_image}});" alt="{{{title}}}"></div> --}}
   {{/if}}
 
   <div class="content">
