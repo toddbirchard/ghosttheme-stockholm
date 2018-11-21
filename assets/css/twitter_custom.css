@@ -2,6 +2,10 @@
   background: none !important;
 }
 
+#fw-tw-feed-items-scroll-area {
+  background:none !important;
+}
+
 
 .fw-tw-feed-item-description {
   font-family: Gordita-Regular,sans-serif !important;
@@ -14,20 +18,20 @@
 .fw-tw-feed-item-username,
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
-  font-family: CompassSans-Regular,Gordita-Medium,serif!important;
+  font-family: CompassSans-Regular,Gordita-Medium,serif !important;
 }
 
 .fw-tw-feed-item-username{
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 
 
 .fw-tw-feed-item {
   padding:15px !important;
-  background: white!important;
-  margin-bottom: 10px!important;
-  border-bottom: 0!important;
-  border-radius: 2px!important;
+  background: white !important;
+  margin-bottom: 10px !important;
+  border-bottom: 0 !important;
+  border-radius: 2px !important;
 }
 
 .fw-tw-feed-item-module {
@@ -49,8 +53,8 @@
 }
 
 .fw-tw-feed-item-tweet-action {
-  text-align: right;
-  margin: -27px 0 0 0;
-  position: absolute;
-  right: 10px;
+  text-align: right !important;
+  margin: -27px 0 0 0 !important;
+  position: absolute !important;
+  right: 10px !important;
 }
