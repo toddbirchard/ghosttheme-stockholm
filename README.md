@@ -1,6 +1,6 @@
 # Stockholm Ghost Theme
 
-![ghost badge](https://img.shields.io/badge/ghost-2.1.4-lightgrey.svg?longCache=true&style=flat-square)
+![ghost badge](https://img.shields.io/badge/ghost-2.6.0-lightgrey.svg?longCache=true&style=flat-square)
 ![node badge](https://img.shields.io/badge/node-v8.11.3-green.svg?longCache=true&style=flat-square)
 ![gulp](https://img.shields.io/badge/gulp-v4.0.0-green.svg?longCache=true&style=flat-square)
 ![less](https://img.shields.io/badge/lessjs-v3.7.0-blue.svg?longCache=true&style=flat-square)
