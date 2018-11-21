@@ -1,30 +1,33 @@
 <!-- start widget -->
 
-  <script src="{{asset "/js/secret.js"}}"></script>
-  <script src="{{asset "/js/previews.js"}}"></script>
-   {{author.bio}}
-   {{#if website}}
-    <div class="widget author-website">
-    	<h3 class="title">Website</h3>
-      <a href="{{website}}">{{website}}</a>
-    </div>
-    {{/if}}
+
+<div class="widget author-website" style="0">
+
+</div>
+
 
 <script>
 
-$(document).ready(function(){
-  function websiteCard(website){
-    $.ajax({
-      url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
-      contentType: "application/json",
-      dataType: 'json',
-      success: function(result) {
-        $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
-          '</a><i class="fas fa-link"></i></div></a></div></div>');
-      }
-    });
-  }
-  websiteCard('{{website}}');
-})
- </script>
-  <!-- end widget -->
+
+  $(document).ready(function() {
+    function websiteCard(website) {
+      client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+       client.callFunction("secret_linkpreview", []).then(results => {
+         var linkpreview_key = results;
+
+         $.ajax({
+           url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + website,
+           contentType: "application/json",
+           dataType: 'json',
+           success: function(result) {
+             $('.sidebar .author-website').append('<div class="content" style="padding:0;"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
+               '</a><i class="fas fa-link"></i></div></a></div>');
+           }
+         });
+       })
+      });
+    }
+    websiteCard('{{website}}');
+  })
+</script>
+<!-- end widget -->

@@ -3,6 +3,10 @@
 .author-template {
 	.widget {
 		order: 1;
+
+		.widget-body {
+			background-color: white;
+		}
 	}
 
 	.sidebar {
@@ -12,12 +16,17 @@
 			display: none !important;
 		}
 
+		.author-website {
+			content {
+				padding:0;
+			}
+		}
+
 		.github {
 			order: 1;
 
-			.content {
-				padding: 5px 14px;
-    		background: white;
+			.widget-body {
+				padding: 15px;
 			}
 		}
 
@@ -27,11 +36,24 @@
 
 		.meetup {
 			order: 2;
-			background: white;
 			padding: 0 12px;
 
+			.widget-body {
+				 padding: 15px 10px;
+			}
+
+			.noevents {
+				text-align: center;
+				padding: 20px;
+				display: block;
+				color: #6f6f6f;
+				font-size: 16px;
+				font-style: italic;
+				margin-bottom: 30px;
+			}
+
 			.userprofile {
-				padding-bottom: 10px;
+				padding: 0 10px 10px;
 				margin-bottom: 10px;
 				/*border-bottom: 1px solid #e8e8e8;*/
 				.avatar {
@@ -44,25 +66,19 @@
 					display: inline-block;
 
 					.name {
-						font-size: 1.4em;
-						font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light', sans-serif;
+						font-size: 1.2em;
+						font-family: 'Gordita-Medium', 'Gordita-Light', sans-serif;
 					}
 
 					.country,
 					.location {
 						display: block;
-					}
+						font-size: .9em;
+						line-height: 1.5;
 				}
 			}
 
-			.noevents {
-				text-align: center;
-				padding: 20px;
-				display: block;
-				color: #a7a7a7;
-				font-size: 16px;
-				font-style: italic;
-			}
+
 
 			.events {
 				.event {
@@ -182,17 +198,14 @@
 			}
 		}
 	}
-
+}
+/*
 	.LI-badge-container.horizontal.light,
 	.LI-badge-container.vertical.light {
 		width: 100% !important;
 		position: relative;
 		box-shadow: none;
-		/*
-		.LI-more-info {
-			float: left;
-		}
-		*/
+
 		.LI-footer {
 			position: absolute;
 			right: 15px;
@@ -217,16 +230,12 @@
 		.LI-profile-badge-footer {
 			padding-bottom: 20px;
 		}
-		/*
-		.LI-field {
-			display: block;
-			text-align: left;
-		}*/
+
 		.LI-logo {
 			display: none;
 		}
 	}
-
+*/
 	.main-content {
 		width: 67%;
 		margin: auto;
@@ -255,7 +264,8 @@
 		}
 
 		.bio {
-			max-width: 630px;
+			font-size: .9em;
+			max-width: 450px;
 			margin: 15px auto 0;
 		}
 	}
@@ -285,7 +295,7 @@
 			display: block;
 			white-space: nowrap;
 			font-size: 15px;
-			font-family: 'AvenirNextLTPro-Medium', 'AvenirNextLTPro-Light', sans-serif;
+			font-family: 'Gordita-Medium', 'Gordita-Light', sans-serif;
 		}
 
 		i {

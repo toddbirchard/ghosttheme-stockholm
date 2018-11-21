@@ -1,16 +1,8 @@
 <script>
 
-stitchClient.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
   console.log('logged in anonymously as user')
 });
-
-stitchClient.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-  console.log(JSON.stringify(result))
-  console.log(result.meetup)
-  if (result.meetup) {createMeetupCard(result.meetup)}
-});
-
-
 
 function createMeetupCard(meetup) {
   $.ajax({
@@ -18,15 +10,20 @@ function createMeetupCard(meetup) {
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(ajaxResult) {
-      $('.sidebar').append('<div class="widget meetup"><div class="content"><h3 class="title">Meetup</h3> \n ' +
+      $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' +
         '<div class="userprofile"> \n ' +
         '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '"> \n' +
         '<div class="info">' +
         '<span class="name">' + ajaxResult['data']['name'] + '</span> \n ' +
         '<span class="location">' + ajaxResult['data']['city'] + ', ' + ajaxResult['data']['state'] + '</span></a> \n ' +
-        '<a href="https://www.meetup.com/members/' + ajaxResult['data']['id'] + '/"><span class="country">View profile</span></a></div></div></div> \n ' +
-        '<div class="events"></div>');
+        '<a href="https://www.meetup.com/members/' + ajaxResult['data']['id'] + '/"><span class="country">View profile</span></a></div></div> \n ' +
+        '<div class="events"></div></div>');
     }
+  });
+  
+  client.callFunction("secret_meetup").then(result => {
+    console.log(JSON.stringify(result));
+    if (result.meetup) {createMeetupCard(JSON.stringify(result.meetup))}
   });
 
   $.ajax({

@@ -1,0 +1,123 @@
+
+
+<div class="author-card-small {{slug}}">
+  {{#if cover_image}}
+  <div class="author-cover" style="background:url({{cover_image}})">
+  </div>
+  {{else}}
+  <div class="author-cover">
+  </div>
+  {{/if}}
+  <div class="author-specs">
+  {{#if profile_image}}
+    <a href="{{url}}" class="avatar-link"><img src="{{profile_image}}" alt="Author image" class="avatar"></a>
+  {{else}}
+    <a href="{{url}}" class="avatar-link"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar"></a>
+  {{/if}}
+  <div class="details">
+    <div class="author">
+      <a href="{{url}}">{{name}}</a>
+    </div>
+    <div class="meta-info">
+      <span class="title"></span>
+      <span class="post-count"><i class="fal fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
+      {{#if location}}
+        <span class="loaction"><i class="fal fa-home"></i>{{location}}</span>
+      {{/if}}
+      {{#if website}}
+        <span class="website"><i class="fal fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
+      {{/if}}
+      {{!--{{#if twitter}}
+        <span class="twitter"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
+      {{/if}}
+      {{#if facebook}}
+        <span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
+      {{/if}}--}}
+    </div>
+    </div>
+  </div>
+
+  {{#if bio}}
+    <p class="bio">
+      {{bio}}
+    </p>
+  {{/if}}
+  <div class="author-social">
+    <ul class="author-icons">
+      <!-- twitter -->
+      <li class="btn twitter">
+        <a><i class="fab fa-twitter"></i></a>
+      </li>
+      <!-- facebook -->
+      <li class="btn facebook">
+        <a><i class="fab fa-facebook"></i></a>
+      </li>
+      <!-- linkedin -->
+      <li class="btn linkedin">
+        <a><i class="fab fa-linkedin"></i></a>
+      </li>
+      <li class="btn medium">
+        <a><i class="fab fa-medium"></i></a>
+      </li>
+      <li class="btn quora">
+        <a><i class="fab fa-quora"></i></a>
+      </li>
+      <li class="btn github">
+        <a><i class="fab fa-github"></i></a>
+      </li>
+      <li class="btn pocket">
+        <a><i class="fab fa-get-pocket"></i></a>
+      </li>
+      </ul>
+  </div>
+</div>
+<script>
+client.callFunction("FullAuthorDetails").then(result => {
+
+
+	for (var i = 0; i < result.length; i++) {
+		var authorObj = result[i];
+		console.log('plain authorObj = ' + authorObj);
+		var author = authorObj['author'];
+		console.log("authorObj['title'] = " + authorObj['title']);
+		if (authorObj['title']){
+			$("." + author).find('.title').html(authorObj['title'].toString());
+		}
+
+		if (authorObj['facebook']){
+			$("." + author).find('.facebook').children().attr('href', 'https://facebook.com/'+ authorObj['facebook'].toString());
+			$("." + author).find('.facebook').css('display', 'block');
+		}
+
+		if (authorObj['linkedin']){
+			$("." + author).find('.linkedin').children().attr('href', 'https://linkedin.com/in/'+ authorObj['linkedin']);
+			$("." + author).find('.linkedin').css('display', 'block');
+		}
+
+		if (authorObj['twitter']){
+			$("." + author).find('.twitter').children().attr('href', 'https://twitter.com/'+ authorObj['twitter']);
+			$("." + author).find('.twitter').css('display', 'block');
+		}
+
+		if (authorObj['quora']){
+			$("." + author).find('.quora').children().attr('href', 'https://quora.com/profile/'+ authorObj['quora']);
+			$("." + author).find('.quora').css('display', 'block');
+		}
+
+		if (authorObj['pocket']){
+			$("." + author).find('.pocket').children().attr('href', 'https://getpocket.com/' + authorObj['pocket']);
+			$("." + author).find('.pocket').css('display', 'block');
+		}
+
+		if (authorObj['github']){
+			$("." + author).find('.github').children().attr('href', 'https://github.com/'+ authorObj['github']);
+			$("." + author).find('.github').css('display', 'block');
+		}
+
+		if (authorObj['medium']){
+			$("." + author).find('.medium').children().attr('href', 'https://hackingandslacking.com/'+ authorObj['medium']);
+			$("." + author).find('.medium').css('display', 'block');
+		}
+	}
+});
+</script>

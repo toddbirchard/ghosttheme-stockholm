@@ -1,0 +1,129 @@
+.root.timeline.twitter-timeline {
+  background-color: #2c3e50;
+}
+
+.Icon--twitter,
+.timeline-Tweet-brand {
+  display: none !important;
+}
+
+.timeline-Viewport {
+  width: -webkit-fill-available !important;
+  height: fit-content !important;
+}
+
+.Avatar {
+  width: 100% !important;
+  border-radius: 50%;
+}
+
+.TweetAuthor-avatar {
+  overflow: visible !important;
+  width: 45px !important;
+  height: 45px !important;
+  top: 2px !important;
+  left: -54px !important;
+  position: absolute !important;
+  margin: 0 !important;
+}
+
+.timeline-Tweet-media {
+  margin: 0 !important;
+}
+
+.TweetAuthor-link {
+  margin-bottom: 0 !important;
+}
+
+.timeline-Viewport {}
+
+.timeline-Tweet-author {
+  position: unset;
+  padding-left: 0 !important;
+}
+
+.timeline-Tweet-retweetCredit {
+  margin-left: 0;
+}
+
+.timeline-Tweet-metadata,
+.timeline-Tweet-actions {
+  display: none !important;
+}
+
+.timeline-tweet {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, .6);
+  border-radius: 5px;
+  margin-right: 19px;
+  color: #565656;
+  float: right;
+  width: 76%;
+  margin-right: 0;
+  transition: all .3s ease-out;
+  padding: 15px;
+  position: relative;
+}
+
+.timeline-tweet a:first-of-type {
+  display: block;
+  margin: 10px 0px;
+}
+
+.timeline-tweet:hover {
+  background: rgba(139, 158, 175, 0.6) !important;
+}
+
+.timeline-Tweet-text {
+  margin-left: 0;
+}
+
+.root.timeline.twitter-timeline p, .root.timeline.twitter-timeline a, .root.timeline.twitter-timeline ol, .root.timeline.twitter-timeline ul, .root.timeline.twitter-timeline li {
+  font-family: "Oxygen", "Ubuntu", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+.root.twitter-timeline .tweet {
+  padding: 7px 10px;
+  border-bottom: 1px solid white;
+}
+
+.root.twitter-timeline a,
+.root.twitter-timeline a:visited {
+  text-decoration: underline;
+}
+
+.root.twitter-timeline .u-url,
+.root.twitter-timeline .expand,
+.root.twitter-timeline .hashtag,
+.root.twitter-timeline .profile {
+  text-decoration: none;
+}
+
+.root.twitter-timeline .u-url:hover,
+.root.twitter-timeline .expand:hover,
+.root.twitter-timeline .hashtag:hover,
+.root.twitter-timeline .profile:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.u-photo,
+.full-name,
+.inline-media {
+  /*display: none;*/
+}
+
+.timeline-TweetList-tweet {
+  display: block;
+  position: relative;
+  width: -webkit-fill-available;
+}
+
+.timeline-TweetList .timeline-TweetList-tweet:nth-of-type(1),
+.timeline-TweetList .timeline-TweetList-tweet:nth-of-type(2),
+.timeline-TweetList .timeline-TweetList-tweet:nth-of-type(3),
+.timeline-TweetList .timeline-TweetList-tweet:nth-of-type(4) {}
+
+.timeline-LoadMore-prompt {
+  display: none;
+}

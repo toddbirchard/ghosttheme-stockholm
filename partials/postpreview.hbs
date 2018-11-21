@@ -6,10 +6,10 @@
   {{/if}}
 
   {{#if feature_image}}
-    <div class="featured-media">
-      <a href="{{url}}"><img src="{{feature_image}}" alt="{{{title}}}"></a>
+      <a href="{{url}}" class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}" id="{{{title}}}">
+        <!--<div class="featured-media" style="background:url({{feature_image}});" alt="{{{title}}}"></div>-->
+        </a>
       {{!-- div class="postimage" style="background:url({{feature_image}});" alt="{{{title}}}"></div> --}}
-    </div>
   {{/if}}
 
   <div class="content">
@@ -22,6 +22,10 @@
         {{content words="40"}}
       </div>
     {{/has}}
+
+    {{> series-headline}}
+
+
     <div class="post-permalink">
       <div class="meta">
         {{#primary_tag}}

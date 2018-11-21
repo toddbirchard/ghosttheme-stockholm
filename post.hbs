@@ -1,13 +1,14 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
+{{> postheader}}
 <section class="content-wrap">
-	{{> postheader}}
+
 	<div class="container">
 		<div class="row">
 			{{#post}}
 			<!-- start main post area -->
-			<div class="col-md-8 main-content">
+			<div class=" main-content">
 				<!-- start post -->
 
 				<article class="{{post_class}} post-page">
@@ -16,6 +17,17 @@
 						<img src="{{feature_image}}" alt="{{{title}}}">
 					</div>
 					{{/if}}
+
+					{{#primary_tag}}
+					{{#if feature_image}}
+					{{#get "posts" filter="primary_tag:" include="count.posts" order="published_at desc" }}
+						{{count.posts}}
+        {{/get}}
+				{{/if}}
+				{{/primary_tag}}
+
+
+
 					<div class="post-head">
 						<div class="post-meta">
 							{{#primary_tag}}
@@ -61,17 +73,19 @@
 							</div>
 						</footer>
 					</div>
-
+					{{> comments}}
 				</article>
-				{{> about-author}}
-				{{> prev-next}}
 
-			</div>
+				{{> about-author}}
+				{{#author include="count.posts"}}{{> author-card}}{{/author}}
+				{{> prev-next}}
+</div>
 			<!-- end main post area -->
 
 		</div>
 	</div>
 </section>
+
 {{#has tag="Roundup"}}
 	<script src="{{asset "/js/includes/previews.js"}}"></script>
 {{/has}}

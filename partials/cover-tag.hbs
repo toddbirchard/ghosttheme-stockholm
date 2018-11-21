@@ -1,6 +1,7 @@
+{{! Series Page with background image}}
 {{#tag}}
-<div class="cover tag-cover">
-
+	{{#if feature_image}}
+		<div class="cover tag-cover series-cover" style="background-image: url({{feature_image}});">
 	<h3 class="tag-name">
 		<i class="fal fa-tag"></i> {{name}}
 	</h3>
@@ -8,10 +9,26 @@
 		{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
 	</div>
 	{{#if description}}
-	<div class="tag-description">
-        {{description}}
-	</div>
+		<div class="tag-description">
+			{{description}}
+		</div>
+		</div>
 	{{/if}}
-	{{#if feature_image}}<div style="background:url('{{feature_image}}');" class="tag-image"></div>{{/if}}
-</div>
+
+{{! Regular tag page}}
+	{{else}}
+		<div class="cover">
+			<h3 class="tag-name">
+				<i class="fal fa-tag"></i> {{name}}
+			</h3>
+			<div class="post-count">
+				{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
+			</div>
+			{{#if description}}
+				<div class="tag-description">
+					{{description}}
+				</div>
+				{{/if}}
+		</div>
+		{{/if}}
 {{/tag}}

@@ -11,10 +11,8 @@
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	{{! Styles }}
-	<script src="{{asset "/js/includes/secret.js"}}"></script>
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 
 {{ghost_head}}
@@ -84,8 +82,8 @@
 
 			try {
 
-				await stitchClient.auth.loginWithCredential(credential);
-				const user = stitchClient.auth.user;
+				await client.auth.loginWithCredential(credential);
+				const user = client.auth.user;
 				showLoggedInState();
 				displaySuccess(`Logged in as: ${user.profile.data.email}`)
 
@@ -95,7 +93,7 @@
 		}
 
 		async function handleLogout() {
-			await stitchClient.auth.logout();
+			await client.auth.logout();
 		}
 
 		async function handleResendConfirmation() {

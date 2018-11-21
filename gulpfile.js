@@ -12,14 +12,16 @@ var gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
   postcss = require('gulp-postcss'),
-  sourcemaps = require('gulp-sourcemaps'),
   precss = require('precss'),
   babel = require('gulp-babel'),
   resolveDependencies = require('gulp-resolve-dependencies'),
   livereload = require('gulp-livereload'),
   browserSync = require('browser-sync'),
-  terser = require('gulp-terser');
-
+  terser = require('gulp-terser'),
+  imagemin = require('gulp-imagemin'),
+  imageminJpegtran = require('imagemin-jpegtran'),
+  fs = require('fs'),
+  path = require('path');
 
 var paths = {
   styles: {
@@ -33,65 +35,72 @@ var paths = {
   html: {
     src: 'views/*.hbs',
     dest: 'assets/'
+  },
+  images: {
+    src: '/var/www/hackers/content/images/2018/',
+    dest: '/var/www/hackers/content/images/2018/'
   }
 };
 
 function styles() {
   return gulp.src(paths.styles.src)
-    .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
-    .pipe(rename({
-      basename: 'main',
-      suffix: '.min'
-    }))
-    .pipe(cleanCSS({
-      debug: true
-    }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+  //.pipe(sourcemaps.write('.', { sourceRoot: '/' }))
+    .pipe(rename({basename: 'main', suffix: '.min'}))
+    .pipe(cleanCSS({debug: true}))
+    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
     .pipe(postcss([require('precss'), require('autoprefixer')]))
-    .pipe(concat('main.min.css'))
-    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(concat('main.min.css')).pipe(gulp.dest(paths.styles.dest))
     .pipe(livereload())
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
-  return gulp.src(paths.scripts.src)
-    .pipe(babel({
-          presets: ['@babel/env'],
-          plugins: ['@babel/transform-runtime', '@babel/plugin-syntax-dynamic-import']
-    }))
-    .on('error', console.error.bind(console))
-    .pipe(resolveDependencies({
-            pattern: /\* @requires [\s-]*(.*\.js)/g
-        }))
-    .pipe(concat('main.min.js'))
-    .pipe(terser())
-    .pipe(gulp.dest(paths.scripts.dest));
+  return gulp.src(paths.scripts.src).pipe(babel({
+    presets: ['@babel/env'],
+    //plugins: ['@babel/transform-runtime', '@babel/plugin-syntax-dynamic-import']
+  })).on('error', console.error.bind(console))
+  .pipe(resolveDependencies({pattern: /\* @requires [\s-]*(.*\.js)/g}))
+  .pipe(concat('main.min.js'))
+  .pipe(terser())
+  .pipe(gulp.dest(paths.scripts.dest));
 }
 
 function templates() {
-  gulp.src('views/*.hbs')
-    .pipe(handlebars())
-    //.pipe(wrap('Handlebars.template(<%= contents %>)'))
+  gulp.src('views/*.hbs').pipe(handlebars())
+  //.pipe(wrap('Handlebars.template(<%= contents %>)'))
     .pipe(declare({
-      namespace: 'MyApp.templates',
-      noRedeclare: true, // Avoid duplicate declarations
-    }))
-    .pipe(concat('templates.js'))
-    .pipe(gulp.dest('assets/js/'));
+    namespace: 'MyApp.templates', noRedeclare: true, // Avoid duplicate declarations
+  })).pipe(concat('templates.js'))
+}
+
+function images(folder_path) {
+  return gulp.src(folder_path + '/*.jpg')
+  .pipe(imagemin(
+    [imageminJpegtran({progressive: true})],
+    {verbose: true}
+  ))
+  .pipe(gulp.dest(paths.images.dest));
+}
+
+function image_loop() {
+  fs.readdir(paths.images.src, function(err, folders) {
+    for(var i =0; i < folders.length; i++){
+      var folder_path = path.join(paths.images.src, folders[i]);
+      images(folders[i]);
+    }
+  });
 }
 
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.styles.src).on('change', browserSync.reload);
+  gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
-var build = gulp.parallel(styles, scripts, templates, watch);
+var build = gulp.parallel(styles, scripts); // , image_loop
 
 gulp.task(build);
 gulp.task('default', build);

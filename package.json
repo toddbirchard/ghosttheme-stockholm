@@ -1,9 +1,10 @@
 {
   "name": "stockholm",
-  "description": "Stockholm: Minimal Ghost Theme.",
+  "description": "Fully featured theme with minimalist presentation.",
   "homepage": "https://hackersandslackers.com",
   "demo": "https://hackersandslackers.com",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "build": "babel src -d lib"
   },
@@ -16,15 +17,15 @@
     "url": "https://toddbirchard.com"
   },
   "keywords": [
-    "ghost-theme",
+    "ghost theme",
     "nodejs",
-    "ghost",
-    "express",
+    "blog theme",
     "blog",
     "theme"
   ],
   "engines": {
-    "node": "8.12.0"
+    "node": "8.12.0",
+    "ghost": ">=2.5.0"
   },
   "screenshots": {
     "desktop": "https://miscellaneous.nyc3.digitaloceanspaces.com/hacker.jpg",
@@ -39,45 +40,45 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@babel/runtime": "^7.1.2",
-    "@babel/runtime-corejs2": "^7.1.2",
+    "@babel/runtime": "^7.1.5",
+    "@babel/runtime-corejs2": "^7.1.5",
     "@sendgrid/mail": "^6.3.1",
+    "autoprefixer": "^9.3.1",
     "babel-runtime": "^6.26.0",
-    "badgify": "^1.2.1",
-    "browser-sync": "^2.26.0",
     "fuzzy-search": "^2.1.0",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
     "ghost-pagination": "^0.1.3",
     "ghost-search": "^0.1.0",
     "github-profile-card": "^2.0.1",
-    "materialize-css": "^1.0.0",
-    "mongodb-stitch-browser-sdk": "^4.0.13",
-    "node-getpocket": "^1.0.0",
+    "grabity": "^1.0.4",
+    "lightbox2": "^2.10.0",
+    "mongodb-stitch-browser-core": "^4.0.14",
+    "mongodb-stitch-browser-sdk": "^4.0.14",
+    "mongodb-stitch-browser-services-http": "^4.0.14",
+    "nord-highlightjs": "^0.1.0",
     "paginate": "^0.2.0",
     "precss": "^3.1.2",
-    "semantic-ui-table": "^2.3.1",
-    "simplebar": "^3.0.0-beta.5",
-    "swiper": "^4.4.1",
-    "yeoman-generator": "^3.1.1"
+    "swiper": "^4.4.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.1.6",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "browserify": "^16.2.3",
+    "@babel/preset-env": "^7.1.6",
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-babel-minify": "^0.5.0",
-    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-declare": "^0.3.0",
     "gulp-exit": "0.0.2",
+    "gulp-gzip": "^1.4.2",
     "gulp-handlebars": "^5.0.2",
+    "gulp-imagemin": "^5.0.3",
     "gulp-less": "^4.0.1",
     "gulp-livereload": "^4.0.0",
     "gulp-postcss": "^8.0.0",
@@ -86,9 +87,10 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-terser": "^1.1.5",
     "gulp-uglify-es": "^1.0.4",
-    "terser": "^3.10.1",
-    "uglify-js": "^3.4.9",
-    "webpack-stream": "^5.1.1"
+    "imagemin": "^6.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-webp": "^4.1.0",
+    "terser": "^3.10.11"
   },
   "babel": {
     "presets": [

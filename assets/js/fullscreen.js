@@ -1,7 +1,6 @@
 "use strict";
 
 $(document).ready(function () {
-  $('.post-template article .post-content img').materialbox();
   $('.post-content pre').each(function () {
     console.log('pre = ', $(this).height());
 

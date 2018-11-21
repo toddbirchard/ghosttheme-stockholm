@@ -60,10 +60,17 @@ typings/
 # next.js build output
 .next
 
+# CI/CD
+buddy.yaml
+.travis.yaml
+
+
 # keys
 assets/js/secret.js
 assets/js/includes/secret.js
 /assets/js/includes/secret.js
+/assets/js/main.min.js
+/assets/js/*.map
 sendgrid.env
 
 # readme
@@ -71,4 +78,9 @@ README.md
 
 # compiled
 assets/js/main.min.js
+/assets/js/main.min.js
+main.min.js
 index.js
+
+# assets
+bg.mp4

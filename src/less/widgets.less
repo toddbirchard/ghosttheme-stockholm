@@ -4,6 +4,7 @@
 	sidebar
 ====================================================*/
 .sidebar {
+	 min-width: 300px;
 	.search {
 		position: relative;
 
@@ -32,15 +33,18 @@
 			padding: 17px 5%;
 	    width: 90%;
 	    font-size: 1em;
-	    font-family: 'CompassSans-Light',AvenirNextLTPro-Light,sans-serif!important;
+	    font-family: 'CompassSans-Light',Gordita-Light,sans-serif!important;
 	    font-weight: 200;
 	    -webkit-transition: .3s all;
 	    transition: .3s all;
 	    outline: 0;
 	    -webkit-appearance: none;
 	    border: 1px solid #eaeaea;
-
 	    border-radius: 2px;
+
+			&::placeholder {
+				color: #9A9AB1;
+			}
 
 			&:hover {
 				background: #ecf4f7;
@@ -61,7 +65,7 @@
 
 	#my-custom-results {
 		font-size: 1em;
-		font-family: CompassSans-Light,AvenirNextLTPro-Light,sans-serif!important;
+		font-family: CompassSans-Light,Gordita-Light,sans-serif!important;
 		font-weight: 200;
 		transition: 0.3s all;
 		outline: none;
@@ -151,13 +155,13 @@
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
-			font-size: 14px!important;
+			font-size: .8em !important;
 			-webkit-transition: all 0.2s ease;
 			-moz-transition: all 0.2s ease;
 			-ms-transition: all 0.2s ease;
 			-o-transition: all 0.2s ease;
 			transition: all 0.2s ease;
-			background: #d3e2f5;
+			background: #d4e5f7;
 			flex-grow: 1;
 			 text-align: center;
 			.transition(all 0.2s ease);
@@ -222,6 +226,10 @@
 
 		.newsletter {
 
+			input::placeholder {
+				color: grey;
+			}
+
 			.form-group {
 				position: relative;
 				&::after {
@@ -245,7 +253,7 @@
 
 			button {
 				width: 100%;
-				background: linear-gradient(135deg,#40a270,#1f8ea7);
+				background: linear-gradient(165deg,#40a2a2,#1f68a7);
 				padding: 13px 20px;
 				font-size: 16px;
 				color: white;
@@ -301,7 +309,7 @@
 				letter-spacing: 0;
 				font-size: 16px;
 				margin: 0;
-				font-family: CompassSans-Regular,AvenirNextLTPro-Medium,AvenirNextLTPro-Light,sans-serif;
+				font-family: CompassSans-Regular,Gordita-Medium,Gordita-Light,sans-serif;
 				font-weight: 500;
 				display: inline-block;
 			}
@@ -381,7 +389,7 @@
 			line-height: 1.4;
 			font-size: 15px;
 			margin: 0;
-			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+			font-family: 'Gordita-Regular', 'Gordita-Light', sans-serif;
 			font-weight: 100;
 			display: inline-block;
 
@@ -409,12 +417,17 @@
 			letter-spacing: 1px;
 			margin-top: 0;
 			white-space: nowrap;
+			font-family: CompassSans-Medium,Gordita-Medium,serif;
+
+			@media(max-width: 1040px){
+				font-size: 1.3em;
+			}
 		}
 
 		p {
 			margin: 0;
 			font-size: 15px;
-			line-height: 1.65;
+			line-height: 1.8;
 			padding-right: 0;
 		}
 	}
@@ -422,10 +435,10 @@
 	.post-title {
 		a {
 			color: #208cad;
-			font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+			font-family: 'Gordita-Regular', 'Gordita-Light', sans-serif;
 			transition: all 0.2s ease;
 			font-size: 15px !important;
-			font-weight: 500 !important;
+			font-weight: 600 !important;
 
 			&:hover {
 				cursor: pointer;
@@ -443,17 +456,17 @@
 		margin-bottom: 15px;
 		text-transform: uppercase;
 		font-size: 1.5em;
-		font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
+		font-family: CompassSans-Regular,Gordita-Medium,serif;
 		color: @header-color;
 		font-weight: 500;
 	}
 
 	.title {
-		font-size: 1.12em;
+		font-size: 1.25em;
 		font-weight: 500;
 		margin-bottom: 8px;
 		text-transform: uppercase;
-		font-family: CompassSans-Regular,AvenirNextLTPro-Medium,serif;
+		font-family: CompassSans-Regular,Gordita-Medium,serif;
 		letter-spacing: 2px;
 		color: #1f5373;
 	}
@@ -502,7 +515,6 @@
 			vertical-align: middle;
 			height: 40px;
 			width: 40px;
-			border-radius: 50%;
 			margin-right: 10px;
 		}
 
@@ -515,7 +527,7 @@
 
 			.post-title,
 			.single-author-name {
-				font-family: 'AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light', sans-serif;
+				font-family: 'Gordita-Regular', 'Gordita-Light', sans-serif;
 				.transition(all 0.2s ease);
 				font-weight: 100;
 				@media(max-width: 600px) {
@@ -542,7 +554,6 @@
 			&:last-child {
 				margin-bottom: 0;
 				border-bottom: 0;
-				padding-bottom: 0;
 			}
 		}
 	}

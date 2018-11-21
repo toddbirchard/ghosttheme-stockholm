@@ -98,7 +98,8 @@
 	align-items: center;
 	justify-content: space-between;
 	width: auto;
-	height: 60px;
+	max-height: 100px;
+	height: fit-content;
 
 	@media(max-width: 1000px){
 		padding:0 20px;
@@ -117,6 +118,8 @@
 		display: flex;
     justify-content: space-between;
     align-items: center;
+		min-height: fit-content;
+		height: -webkit-fill-available;
 
 
 		&:hover {

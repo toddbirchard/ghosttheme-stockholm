@@ -1,0 +1,231 @@
+@table-border-color: rgba(0,0,0,.12);
+@table-striped-color: rgba(242, 242, 242, 0.5);
+
+table, th, td {
+   border: none;
+}
+
+table {
+  width:100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px 0 40px;
+  box-shadow: 1px 1px 4px #dbddec;
+  border: 1px solid rgba(77, 87, 109, 0.25);
+
+  @media(max-width: 600px) {
+    /*display: block !important;*/
+  }
+
+  &.left {
+    tbody{
+      td {
+        text-align: left;
+        vertical-align: top;
+      }
+    }
+  }
+
+  thead {
+  tr {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    background-color: #5f6779 !important;
+    color:white;
+  }
+
+    th {
+      text-align: center;
+      font-family: Gordita-Medium;
+      min-width: 30px;
+
+      &::before{
+         font-family: Gordita-Medium!important;
+      }
+    }
+  }
+
+
+  &.striped {
+    tr {
+      border-bottom: none;
+    }
+
+  tbody {
+    tr:nth-child(odd) {
+        background-color: @table-striped-color;
+      }
+
+    tr > td {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.highlight > tbody > tr {
+    transition: background-color .25s ease;
+    &:hover {
+      background-color: @table-striped-color;
+    }
+  }
+
+  &.centered {
+    thead tr th, tbody tr td {
+      text-align: center;
+    }
+  }
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f8ff;
+}
+
+
+
+td, th{
+  padding: 15px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  text-align: center;
+  font-size:.8em;
+  text-align: center;
+}
+
+// Responsive Table
+@media (max-width:600px) {
+
+  table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    position: relative;
+    margin-left: calc(~"-50vw + 50%") !important;
+    margin-right: calc(~"-50vw + 50%") !important;
+    overflow-x: scroll;
+
+    &:hover{
+      cursor: grab;
+    }
+
+    td:empty:before {
+      content: '\00a0';
+    }
+
+    th,
+    td {
+      margin: 0;
+      vertical-align: top;
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      font-size: .8em;
+    }
+
+    th { text-align: left; }
+    thead {
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      width: 120px;
+      height: 100%;
+      th {
+        font-family: Gordita-Medium;
+        text-align: center;
+      }
+
+      tr {
+        display: block;
+        padding: 0 10px 0 0;
+        height: 100%;
+
+        th::before {
+          content: "\00a0";
+        }
+      }
+    }
+    tbody {
+      margin-left: 120px;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+
+
+      & > tr> th {
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      tr {
+        /*display: inline-block;*/
+        vertical-align: top;
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: normal;
+        line-break: strict;
+        white-space: inherit;
+        padding: 0 15px;
+      }
+    }
+    th {
+      display: block;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+      padding: 15px 0 !important;
+      border-spacing: 0;
+      border-collapse: collapse;
+      overflow-wrap: normal;
+      line-break: normal;
+      white-space: normal;
+      width: max-content;
+      max-width: 200px;
+    }
+    tr {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    /* sort out borders */
+    thead {
+      border: 0;
+      border-right: 1px solid @table-border-color;
+    }
+  }
+}
+
+.dataframe thead th {
+  text-align: center !important;
+  font-family: 'Gordita-Medium' !important;
+}
+
+.dataframe tbody tr th:only-of-type {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tableContainer {
+  @media (max-width: 600px){
+    margin-left: calc(~"-50vw + 50%");
+    margin-right: calc(~"-50vw + 50%");
+    width: auto!important;
+
+
+    &:hover{
+      cursor: move;
+    }
+  }
+}

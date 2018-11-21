@@ -15,7 +15,7 @@
 	}
 
 	.post-content {
-		text-align: justify;
+		text-align: left;
 
 		* {
 			display: none;
@@ -26,9 +26,9 @@
 			overflow: hidden;
 			-webkit-line-clamp: 7;
 			-webkit-box-orient: vertical;
-			font-family: 'CompassSans-Light', AvenirNextLTPro-Light,sans-serif !important;
-			line-height: 1.5em;
-			font-size: 1em;
+			font-family: 'Gordita-Regular',sans-serif !important;
+			line-height: 1.55;
+			font-size: .9em;
 			font-weight: 500;
 			color: #2d2f35;
 			@media(max-width: 600px) {
@@ -45,9 +45,18 @@
 	.featured-media {
 		box-sizing: border-box;
 		max-height: 400px;
+		height: 48vw;
 		display: block;
 		overflow: hidden;
 		margin: auto;
+		background-size: cover !important;
+		box-shadow: 0 0 8px rgba(93, 97, 140, .35);
+		transition: all .2s ease-out;
+
+		&:hover {
+			opacity: .7;
+			cursor: pointer;
+		}
 	}
 
 	.postimage {
@@ -65,16 +74,16 @@
 		}
 
 		.post-title {
-			font-size: 200%;
+			font-size: 2.2em;
 			Line-height: 1.15;
 			margin: 0 0 10px;
 			font-weight: 900;
-			font-family: 'CompassSans-Regular';
+			font-family: 'HackerSans-Medium', 'CompassSans-Regular';
 			@media(max-width: 600px) {
 				font-size: 160%;
 				margin: 0 0 10px;
 				font-family: 'CompassSans-Regular'!important;
-				font-weight: 600;
+				font-weight: 700;
 				line-height: 1.2em;
 			}
 
@@ -91,11 +100,11 @@
 		.post-excerpt {
 			margin: 10px auto 0;
 			line-height: 1.21;
-			font-weight: 500;
+			font-weight: 100;
 			text-align: left;
-			font-size: 1.3em;
-			color: #404146;
-			font-family: 'CompassSans-Regular', AvenirNextLTPro-Regular,serif;
+			font-size: 1.4em;
+			color: #153b52;
+			font-family: 'HackerSans-Medium', 'CompassSans-Medium',Gordita-Regular,serif;
 			@media(max-width: 800px) {
 				font-size: 1.18em;
 			}
@@ -142,14 +151,15 @@
 
 	i {
 		margin-right: 10px;
-		font-size: 15px;
+		font-size: 17px;
+		font-weight: 400;
 	}
 
 	.meta {
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		font-family: 'CompassSans-Regular','AvenirNextLTPro-Regular',serif;
+		font-family: 'CompassSans-Regular','Gordita-Regular',serif;
 		width: 100%;
 		padding-right: 50px;
 		justify-content: space-between;
@@ -164,7 +174,7 @@
 
 		a {
 			color: #5aa8bf;
-			font-family: 'CompassSans-Regular','AvenirNextLTPro-Regular';
+			font-family: 'CompassSans-Regular','Gordita-Regular';
 		}
 
 		.author-mobile {
@@ -175,7 +185,7 @@
 				text-transform: capitalize;
 				line-height: 1;
 				font-size: 1em;
-				font-family: 'CompassSans-Regular','AvenirNextLTPro-Medium';
+				font-family: 'CompassSans-Regular','Gordita-Medium';
 				color: #224a69;
 			}
 			@media (max-width: 900px) {
@@ -186,7 +196,7 @@
 		.meta-item {
 			display: flex;
 			margin: auto 15px auto 0;
-			font-family: 'CompassSans-Regular','AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light';
+			font-family: 'CompassSans-Regular','Gordita-Regular', 'Gordita-Light';
 			align-items: center;
 			font-size: 16px;
 			padding: 0;
@@ -204,12 +214,12 @@
 			}
 
 			i {
-				height: 15px;
+				height: 22px;
 				display: inline-block;
 			}
 
 			&.tags {
-				padding: 10px;
+				padding: 8px 10px;
 				font-weight: 600;
 
 				span {
@@ -220,6 +230,11 @@
 					display: none;
 				}
 
+				i {
+					font-size: 22px;
+					font-weight: 400;
+				}
+
 				span {
 					font-size: 13px;
 				}
@@ -228,7 +243,7 @@
 			&.author,
 			&.author-mobile {
 				span {
-					font-family: 'CompassSans-Regular','AvenirNextLTPro-Regular', 'AvenirNextLTPro-Light' !important;
+					font-family: 'CompassSans-Regular','Gordita-Regular', 'Gordita-Light' !important;
 					color: #627d90;
 					line-height: 1;
 					overflow: hidden;
@@ -245,7 +260,7 @@
 
 			&.date {
 				span {
-					font-family: 'CompassSans-Regular',AvenirNextLTPro-Regular,sans-serif;
+					font-family: 'CompassSans-Regular',Gordita-Regular,sans-serif;
 					color: #687088 !important;
 					overflow: hidden;
 					white-space: nowrap;
@@ -319,7 +334,7 @@
 
 	.btn {
 		font-size: 16px;
-		font-family: 'AvenirNextLTPro-Medium',serif;
+		font-family: 'Gordita-Medium',serif;
 		text-transform: uppercase;
 		padding: 14px 20px;
 		line-height: 1;
@@ -337,7 +352,8 @@
 
 		@media(max-width: 600px) {
 			padding: 13px 18px;
-			font-family: AvenirNextLTPro-Regular,serif;
+			font-size: 14px;
+			font-family: Gordita-Regular,serif;
 		}
 	}
 }

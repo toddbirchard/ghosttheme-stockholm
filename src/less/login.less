@@ -141,7 +141,7 @@
       padding: 10px 4%;
       width: 90%;
       font-size: 0.9em;
-      font-family: CompassSans-Light,AvenirNextLTPro-Light,sans-serif!important;
+      font-family: CompassSans-Light,Gordita-Light,sans-serif!important;
       font-weight: 200;
       -webkit-transition: 0.2s all;
       transition: 0.2s all;
@@ -191,6 +191,7 @@
       border-right: 2px solid #009c83;
       display: inline-block;
       color: white;
+      z-index: 100;
     }
 
     .signup {
@@ -198,6 +199,7 @@
       border: 1px solid #009c83;
       background: white;
       left: 300px;
+      z-index: 100;
     }
 
     .forgot {
@@ -248,8 +250,8 @@
   position: fixed;
   background: black;
   opacity: 0;
-  z-index: 1;
   display: none;
+  transition: all .3s ease-out;
 
   @media(max-width: 800px) {
     display: none !important;

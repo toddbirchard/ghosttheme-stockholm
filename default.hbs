@@ -9,29 +9,29 @@
 	<meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt" crossorigin="anonymous">
 	{{! Styles }}
-	<link rel="stylesheet" type="text/css" href="{{asset "/css/MyFontsWebfontsKit.css"}}">
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	{{! Scripts }}
-	<script type="text/javascript" src="https://hackersandslackers.com/public/ghost-sdk.min.js"></script>
-	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	<script src="{{asset "/js/includes/secret.js"}}"></script>
+	<script type="text/javascript" src="{{@blog.url}}/public/ghost-sdk.min.js"></script>
+	<script async src="{{asset "/js/includes/jquery.min.js"}}"></script>
+
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	{{! inserting theme config partial}}
 	{{> config}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
 
+
 </head>
 <body class="{{body_class}}">
 	{{! insert header partial}}
 	{{> header}}
+	{{> signup}}
 
 	{{{body}}}
 </body>

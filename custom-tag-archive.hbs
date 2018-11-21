@@ -7,15 +7,15 @@
 		<div class="row">
 			<!-- start main post area -->
 			{{> sidebar}}
-			<div class="col-md-8 main-content">
+			<div class=" main-content">
 				<!-- start post -->
 				{{#post}}
 					<article class="{{post_class}}">
 
-						{{#if feature_image}}
+						{{!--{{#if feature_image}}
 							<div class="featured-media" style="background-image: url({{feature_image}});">
 							</div>
-						{{/if}}
+						{{/if}}--}}
 						<div class="page-head">
 							<h1 class="page-title">{{{title}}}</h1>
 						</div>
@@ -27,16 +27,16 @@
 								{{#foreach tags}}
 									<div class="tag-wrapper">
 										<a href="{{url}}">
-											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});"{{/if}} ></div>
-													<div class="description">
-														<h2>{{meta_title}}</h2>
-														<p>{{description}}</p>
-														<span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
-													</div>
+											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});" {{/if}}></div>
+											<div class="description">
+												<h2>{{meta_title}}</h2>
+												<p>{{description}}</p>
+												<span class="postcount">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
+											</div>
 										</a>
 									</div>
-						{{/foreach}}
-						{{/get}}
+								{{/foreach}}
+							{{/get}}
 						</div>
 			</div>
 			</article>
@@ -49,4 +49,3 @@
 	</div>
 </section>
 <!-- end site's main content area -->
-f
