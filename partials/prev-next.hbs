@@ -1,8 +1,8 @@
 <!-- start prev next wrap -->
 <div class="prev-next-wrap">
-	{{#get "posts" limit="3" include="tags" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
+	{{#get "posts" limit="3" include="tags,authors" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
 		{{#foreach posts}}
-			{{> article-preview}}
+				{{> article-preview}}
 			{{/foreach}}
 		{{/get}}
 </div>

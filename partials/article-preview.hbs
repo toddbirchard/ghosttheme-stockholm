@@ -3,7 +3,11 @@
     <div class="img-wrapper " style="background-image: url({{img_url feature_image absolute="true"}});"></div>
     <div class="description">
       <h5 class="related-title">{{title}}</h5>
-      <p>{{excerpt}}</p>
+      {{#primary_author}}
+        {{#if profile_image}}
+          <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
+        {{/if}}
+      {{/primary_author}}
     </div>
 </div>
 </a>
