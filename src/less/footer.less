@@ -4,7 +4,7 @@
 	footer
 ====================================================*/
 .main-footer {
-	background: url("../images/FOOT10.jpg");
+	background: rgb(39, 118, 206) !important;
 	background-size: cover;
 	/*background: #0089b7;*/
 	padding: 35px 10%;
@@ -186,6 +186,8 @@
 			border-bottom: 0 !important;
 		}
 
+
+
 		.tag-cloud {
 			display: flex;
 			flex-direction: row;
@@ -195,7 +197,7 @@
 			a {
 				border: 0;
 				color: #fff;
-				background: #457fc1;
+				background: #325e90;
 				padding: 4px 12px;
 				font-size: 0.85em;
 				display: inline-block;
@@ -206,8 +208,8 @@
 				text-align: center;
 				font-family: Gordita-Regular;
 				transition: all 0.3s easeout;
-				border-bottom: 1px solid black;
-				border-right: 1px solid black;
+				border-bottom: 1px solid #2d5f84;
+				border-right: 1px solid #2d5f84;
 
 				&:hover {
 					background: @white;
@@ -215,6 +217,7 @@
 				}
 			}
 		}
+
 
 		.recent-post {
 			.single-author {
@@ -406,4 +409,9 @@
 			display: none;
 		}
 	}
+
+	.widget.tag{
+		 min-width: 34%;
+	}
+
 }

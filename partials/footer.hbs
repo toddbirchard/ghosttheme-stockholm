@@ -5,16 +5,11 @@
 					{{> widget-sendgrid}}
 				<!-- end first footer widget area -->
 				<!-- start second footer widget area -->
-
-
-						{{#is "page"}}
-							{{> widget-authors}}
+						{{#is "post"}}
+							{{> widget-recentpost}}
 						{{else}}
-								{{> widget-recentpost}}
+								{{> widget-authors}}
 							{{/is}}
-
-
-
 				<!-- end second footer widget area -->
 				<!-- start third footer widget area -->
 					{{> widget-tagcloud}}
