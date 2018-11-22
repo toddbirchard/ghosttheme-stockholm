@@ -6,17 +6,14 @@
 				<!-- end first footer widget area -->
 				<!-- start second footer widget area -->
 
-					{{#is "post"}}
+
 						{{#is "page"}}
 							{{> widget-authors}}
 						{{else}}
-							{{#post}}
-								{{> widget-relatedpost}}
-							{{/post}}
-						{{/is}}
-					{{else}}
-						{{> widget-authors}}
-					{{/is}}
+								{{> widget-recentpost}}
+							{{/is}}
+
+
 
 				<!-- end second footer widget area -->
 				<!-- start third footer widget area -->

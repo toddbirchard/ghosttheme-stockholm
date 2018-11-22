@@ -191,7 +191,7 @@
       height: -webkit-fit-content !important;
       @media(max-width: 900px) {
         width: 100%;
-        margin: 0 0 15px;
+        margin: 0 0 25px;
 
         &:last-of-type {
           margin-bottom: 0;
@@ -199,6 +199,8 @@
       }
 
       &:hover {
+        cursor:pointer !important;
+        
         .tag-title {
           background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, #007ad4 100%);
         }
@@ -268,7 +270,7 @@
         }
 
         p {
-          font-size: .8em;
+          font-size: .9em;
           color: @text-color;
           margin: 5px 0 5px;
           line-height: 1.5;
@@ -276,6 +278,10 @@
           font-weight: 100;
           font-family: Gordita-Regular;
           min-height: 42px;
+
+          @media(max-width: 600px){
+            margin:10px 0 5px
+          }
         }
 
         span {

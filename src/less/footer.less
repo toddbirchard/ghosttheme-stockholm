@@ -43,9 +43,16 @@
 		.news-description {
 			margin-bottom: 15px;
 			font-size: .9em;
-			line-height: 1.4;
+			line-height: 1.8;
 			text-align: justify;
 			margin-top: 0;
+			color:white;
+			font-weight: 600;
+
+			@media(max-width: 600px) {
+				margin-bottom: 15px;
+				text-align: left;
+			}
 		}
 
 		.btn {
@@ -390,6 +397,12 @@
 	}
 	@media(max-width:600px) {
 		.widget.recent {
+			display: none;
+		}
+	}
+
+	.related{
+		@media(max-width: 800px) {
 			display: none;
 		}
 	}
