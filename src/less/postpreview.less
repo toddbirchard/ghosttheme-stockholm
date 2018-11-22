@@ -66,6 +66,7 @@
 
 		@media(max-width: 600px) {
 			height: 50vw;
+			max-height: 180px;
 		}
 
 		.post-card-image {
@@ -126,7 +127,7 @@
 			@media(max-width: 600px) {
 				font-size: 1em;
 				font-family: HackerSans-Regular;
-				-webkit-line-clamp: 3;
+				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				display: -webkit-box;
@@ -263,16 +264,22 @@
 					font-size: 1em;
 					margin: 0;
 					max-height: 33px;
-					padding: 2px 8px;
+					padding: 3px 10px;
 
 					span,
 					i {
 						font-size: 12px;
 					}
 
+					span {
+						font-size: 13px;
+						font-weight: 100;
+					}
+
 					i {
 						height: 12px;
 						margin-right: 3px;
+						font-weight: 400;
 					}
 				}
 			}
@@ -337,8 +344,8 @@
 
 			@media(max-width: 600px) {
 				margin-right: 15px;
-				width: 40px;
-				height: 40px;
+				width: 50px;
+				height: 50px;
 			}
 		}
 }
