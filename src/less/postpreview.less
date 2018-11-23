@@ -27,10 +27,8 @@
 
 	.post-content {
 		text-align: left;
-
-		* {
-			display: none;
-		}
+		line-height: 1.3;
+		margin: 17px 3px 15px;
 
 		p:first-child {
 			display: -webkit-box;
@@ -42,7 +40,7 @@
 			font-size: .9em;
 			font-weight: 500;
 			color: #2d2f35;
-			display:none;
+
 			@media(max-width: 600px) {
 				font-size: 0.9em;
 				line-height: 1.6em;
@@ -140,12 +138,6 @@
 
 	&.featured {
 		order: 0;
-	}
-
-	&.tag-roundup {
-		.post-content {
-			display: none;
-			}
 	}
 
 	.featured {
@@ -396,13 +388,7 @@
 	}
 }
 
-.post-content {
-	line-height: 1.3;
-	margin: 17px 3px 15px;
-	@media(max-width: 600px) {
-		display:none;
-	}
-}
+
 
 .twitter-tweet {
 	display: none !important;
