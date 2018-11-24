@@ -100,7 +100,7 @@ function watch() {
   gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
-var build = gulp.parallel(styles, scripts); // , image_loop
+var build = gulp.parallel(styles, scripts, image_loop); // , 
 
 gulp.task(build);
 gulp.task('default', build);
