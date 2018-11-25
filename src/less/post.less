@@ -36,13 +36,14 @@
 	.post-title {
 		text-align: left;
 		width: -webkit-fill-available;
-		margin: 40px 80px 10px;
+		margin: 45px 80px 10px;
 		line-height: 1.2;
 		display: block;
 		font-family: 'HackerSans-Medium', 'CompassSans-Medium' !important;
 		font-size: 2.5em;
 		font-weight: 600;
 		color: @h1-color;
+		letter-spacing: 1px;
 		@media(max-width: 800px) {
 			font-weight: 500;
 			font-size: 2em;
@@ -71,7 +72,7 @@
 	.excerpt {
 		font-weight: 100;
 		font-size: 1.4em;
-		margin: 10px 80px 25px;
+		margin: 10px 80px 40px;
 		line-height: 1.2;
 		color: @h1-color;
 		font-family: 'HackerSans-Medium', 'CompassSans-Regular';
@@ -548,7 +549,8 @@
 			font-size: 1em;
 			line-height: 1.6;
 			overflow: hidden;
-			margin: 20px 0;
+			margin: 20px auto;
+			max-width: 88%;
 			font-style: italic;
 
 			* {
@@ -712,10 +714,11 @@
 
 		ol,
 		ul {
-			margin-left: 0;
+			margin-left: 10px;
 			padding-left: 0;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 			margin-top: 0;
+
 			@media(max-width:600px) {
 				margin: 0 15px;
 				padding-left: 0;
