@@ -39,10 +39,9 @@
 	  UserPasswordCredential
 	} = stitch;
 
-  const APP_ID = "hackers-uangn";
-  const stitchClient = Stitch.initializeDefaultAppClient(APP_ID);
+  const stitchClient = Stitch.initializeDefaultAppClient('hackers-uangn');
 
-  const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory, "userpass");
+  const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
   const params = new URLSearchParams(window.location.search);
   const token = params.get('token');
