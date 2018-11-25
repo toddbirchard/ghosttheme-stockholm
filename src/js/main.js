@@ -228,20 +228,17 @@ var themeApp = {
       });
 
       $(".signup #signup-button").on('click', function() {
-
-        async function handleSignup() {
           var email = email_field.value;
           var pass = pass_field.value;
 
-          try {
-            await emailPasswordClient.registerWithEmail(email, password)
-            showPostRegistrationState()
-            displaySuccess("Successfully registered. Check your inbox for a confirmation email.")
+          emailPassClient.registerWithEmail(email, password)
+            .then(() => {
+               console.log("Successfully sent account confirmation email!");
+            })
+            .catch(err => {
+               console.log("Error registering new user:", err);
+            });
 
-          } catch (e) {
-            handleError(e)
-          }
-        }
 
         tlScreen1
           .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
