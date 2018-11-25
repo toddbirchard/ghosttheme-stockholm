@@ -229,7 +229,7 @@ var themeApp = {
 
       $(".signup #signup-button").on('click', function() {
           var email = $('#signup-email').val();
-          var pass = $('#signup-password').val();
+          var password = $('#signup-password').val();
 
           emailPasswordClient.registerWithEmail(email, password)
             .then(() => {
