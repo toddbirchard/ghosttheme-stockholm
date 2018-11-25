@@ -1,0 +1,19 @@
+<div class="widget newsletter">
+    <h3 class="title">{{t "Newsletter"}}</h3>
+	 <div class="newsletter input-group">
+    <p class="news-description">Are you into data to the point where it's almost embarrasing? Toss your email in for occasional, not-annoying updates!</p>
+    {{#if @labs.subscribers}}
+      <section class="gh-subscribe">
+        {{subscribe_form
+          placeholder="Your email address"
+          input_class="subscribe-email"
+          button_class="btn"
+          form_class="newsletter-form"
+          form_id="footer-newsletter-form"
+          input_id="footer-newsletter-input"
+          button_id="footer-newsletter-button"
+        }}
+      </section>
+    {{/if}}
+  </div>
+</div>

@@ -6,9 +6,13 @@
       <section class="gh-subscribe">
         {{subscribe_form
           placeholder="Your email address"
-           button_class="btn"
+          input_class="subscribe-email"
+          button_class="btn"
+          form_class="newsletter-form"
+          form_id="sidebar-newsletter-form"
+          input_id="sidebar-newsletter-input"
+          button_id="sidebar-newsletter-button"
         }}
-        {{!--<span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/"><i class="fas fa-rss"></i></a></span>--}}
       </section>
     {{/if}}
   </div>
