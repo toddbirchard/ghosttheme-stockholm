@@ -1,0 +1,26 @@
+<script>
+  const {
+    Stitch,
+    UserPasswordAuthProviderClient,
+    UserPasswordCredential,
+    AnonymousCredential
+  } = stitch;
+
+
+  const client = Stitch.initializeDefaultAppClient('hackers-uangn');
+  const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
+  const emailPasswordClient = client.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+
+  function handleError(err) {
+    console.error(err)
+    const errType = err.message || "Error!"
+    const msg = ({
+      "invalid username/password": "Invalid username or password was entered. Please try again.",
+      "name already in use": "An account already exists for that email."
+    })[errType] || errType
+    displayError(msg);
+    $('#info').css('opacity', '1');
+  }
+
+  // Authenticate an application user based on the submitted information
+</script>
