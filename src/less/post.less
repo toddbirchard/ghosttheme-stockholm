@@ -45,17 +45,15 @@
 		color: @h1-color;
 		letter-spacing: 1px;
 		@media(max-width: 800px) {
-			font-weight: 500;
-			font-size: 2em;
-			white-space: normal;
-			text-align: left !important;
+			margin: 30px 60px 10px;
+			font-size: 2.2em;
 		}
 		@media(max-width: 600px) {
 			font-size: 1.7em;
 			max-width: auto;
 			margin: 25px 25px 10px;
 			width: -webkit-fill-available;
-			letter-spacing: 1px;
+			letter-spacing: 0;
 			font-weight: 600;
 		}
 
@@ -77,10 +75,7 @@
 		color: @h1-color;
 		font-family: 'HackerSans-Medium', 'CompassSans-Regular';
 		@media(max-width: 800px) {
-			margin: 10px auto 0;
-			font-size: 1.2em;
-			line-height: 1.2;
-			font-weight: 600;
+			 margin: 10px 60px 40px;
 		}
 		@media(max-width: 600px) {
 			font-weight: 100;
@@ -438,7 +433,7 @@
 				}
 
 				&.readtime {
-					@media(max-width: 850px) {
+					@media(max-width: 600px) {
 						display: none;
 					}
 				}
@@ -847,6 +842,7 @@
 			margin-left: calc(~"-50vw + 50%") !important;
 			margin-right: calc(~"-50vw + 50%") !important;
 			width: 125% !important;
+			max-width: none;
 			margin-top: 25px;
 			margin-bottom: 30px;
 
