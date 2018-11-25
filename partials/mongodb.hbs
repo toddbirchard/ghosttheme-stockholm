@@ -9,7 +9,8 @@
 
   const client = Stitch.initializeDefaultAppClient('hackers-uangn');
   const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-  const emailPasswordClient = client.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+  const emailPasswordClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+
 
   function handleError(err) {
     console.error(err)
