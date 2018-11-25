@@ -36,19 +36,19 @@
 
 	.newsletter {
 		padding: 13px 40px 0 0;
+
 		input::placeholder {
 			color: grey;
 		}
 
 		.news-description {
 			margin-bottom: 15px;
-			font-size: .9em;
+			font-size: 0.9em;
 			line-height: 1.8;
 			text-align: justify;
 			margin-top: 0;
-			color:white;
+			color: white;
 			font-weight: 600;
-
 			@media(max-width: 800px) {
 				margin-bottom: 15px;
 				text-align: left;
@@ -63,7 +63,7 @@
 			color: #fff;
 			border: 0;
 			text-transform: Uppercase;
-			transition: all .3s easeout;
+			transition: all 0.3s easeout;
 		}
 
 		.form-group {
@@ -140,7 +140,6 @@
 	.contributors {
 		.single-author-name {
 			font-size: 0.9em !important;
-
 			font-family: Gordita-Medium, sans-serif !important;
 		}
 
@@ -175,6 +174,8 @@
 			font-weight: 800;
 			margin: 10px 0 15px !important;
 			font-size: 1.5em;
+			text-shadow: -1px 1px 1px #133e6d;
+
 			@media(max-width: 800px) {
 				margin: 10px 0 30px!important !important;
 				font-size: 1.3em;
@@ -184,8 +185,6 @@
 		& > div > div:last-child {
 			border-bottom: 0 !important;
 		}
-
-
 
 		.tag-cloud {
 			display: flex;
@@ -217,7 +216,6 @@
 			}
 		}
 
-
 		.recent-post {
 			.single-author {
 				font-size: 18px;
@@ -243,27 +241,29 @@
 				align-items: center;
 				padding-bottom: 10px;
 
-				.avi {
-					height: 40px;
-					width: 40px;
-					border-radius: 0;
-					margin-right: 15px;
-					border-bottom: 2px solid #002686;
-					border-right: 2px solid #002686;
+				.avatar-link {
+					margin-right: 15px !important;
+
+					.avi {
+						height: 40px;
+						width: 40px;
+						border-radius: 0;
+						margin: 0;
+						border-bottom: 2px solid #2a4488;
+	    			border-right: 2px solid #2a4488;
+					}
 				}
 			}
 
-
-
 			.widget .newsletterbtn-footer {
-			    width: 100%;
-			    background: linear-gradient(165deg,#40a2a2,#1f68a7);
-			    padding: 13px 20px;
-			    font-size: 16px;
-			    color: #fff;
-			    border: 0;
-			    text-transform: Uppercase;
-			    transition: all .3s easeout;
+				width: 100%;
+				background: linear-gradient(165deg,#40a2a2,#1f68a7);
+				padding: 13px 20px;
+				font-size: 16px;
+				color: #fff;
+				border: 0;
+				text-transform: Uppercase;
+				transition: all 0.3s easeout;
 			}
 
 			.newsletter {
@@ -277,7 +277,7 @@
 					&::after {
 						content: '\f0e0';
 						font-family: "Font Awesome 5 Pro";
-						font-weight: 100;
+						font-weight: 400;
 						display: inline-block;
 						font-style: normal;
 						-webkit-font-feature-settings: normal;
@@ -295,7 +295,7 @@
 
 				button {
 					width: 100%;
-					background: #27c6b5;
+					background: #039c8c;
 					padding: 13px 20px;
 					font-size: 16px;
 					color: white;
@@ -403,14 +403,13 @@
 		}
 	}
 
-	.related{
+	.related {
 		@media(max-width: 800px) {
 			display: none;
 		}
 	}
 
-	.widget.tag{
-		 min-width: 34%;
+	.widget.tag {
+		min-width: 34%;
 	}
-
 }
