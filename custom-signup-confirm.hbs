@@ -47,24 +47,22 @@
 	const token = params.get('token');
 	const tokenId = params.get('tokenId');
 
+	emailPasswordClient
+    .confirmUser(token, tokenId)
+    .then(() => displayResult('success'))
+    .catch(err => displayResult('error', err));
 
   function displayResult(result, err) {
     const message = document.getElementById("message");
     if (result === "success") {
 			console.log('token = ' + token);
 			console.log('tokenId = ' + tokenId);
-			emailPasswordClient.confirmUser(token, tokenId);
-    }
+			message.innerText = "User Successfully created.";
+		}
     else if (result === "error") {
       message.innerText = "Unable to register user.\n\n" + err;
     }
   }
-
-	emailPasswordClient
-    .confirmUser(token, tokenId)
-    .then(() => displayResult('success'))
-    .catch(err => displayResult('error', err));
-
 
 </script>
 
