@@ -43,9 +43,10 @@
 
   const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
-  const tokenId = params.get('tokenId');
+	const url = window.location.search;
+	const params = new URLSearchParams(url);
+	const token = params.get('token');
+	const tokenId = params.get('tokenId');
 
   emailPasswordClient
     .confirmUser(token, tokenId)
@@ -56,6 +57,7 @@
     const message = document.getElementById("message");
     if (result === "success") {
       message.innerText = "Successfully created user. You may close this page.";
+			return emailPasswordClient.confirmUser(token, tokenId);
     }
     else if (result === "error") {
       message.innerText = "Unable to register user.\n\n" + err;
