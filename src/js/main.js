@@ -231,7 +231,7 @@ var themeApp = {
           var email = email_field.value;
           var pass = pass_field.value;
 
-          emailPassClient.registerWithEmail(email, password)
+          emailPasswordClient.registerWithEmail(email, password)
             .then(() => {
                console.log("Successfully sent account confirmation email!");
             })
