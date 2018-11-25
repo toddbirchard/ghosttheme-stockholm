@@ -1,55 +1,56 @@
 <!-- start main-footer -->
-	<footer class="main-footer">
-		<div class="footer-container">
-				<!-- start first footer widget area -->
-					{{> widget-sendgrid}}
-				<!-- end first footer widget area -->
-				<!-- start second footer widget area -->
-				{{> widget-authors}}
-				<!-- end second footer widget area -->
-				<!-- start third footer widget area -->
-					{{> widget-tagcloud}}
-				<!-- end third footer widget area -->
-			</div>
-	</footer>
-	<!-- end main-footer -->
+<footer class="main-footer">
+	<div class="footer-container">
+		<!-- start first footer widget area -->
+		{{> widget-sendgrid}}
+		<!-- end first footer widget area -->
+		<!-- start second footer widget area -->
+		{{> widget-authors}}
+		<!-- end second footer widget area -->
+		<!-- start third footer widget area -->
+		{{> widget-tagcloud}}
+		<!-- end third footer widget area -->
+	</div>
+</footer>
+<!-- end main-footer -->
 
-  {{> scripts}}
+{{> scripts}}
 
-	{{ghost_foot}}
+{{ghost_foot}}
 
-	<script type="text/javascript">
-    let ghostSearch = new GhostSearch({
-        input:   '#my-custom-input',
-        results: '#my-custom-results',
-        options: {
-						limit: 5,
-            keys: [
-                'title',
-                'plaintext'
-            ],
-        },
-        api: {
-            resource: 'posts',
-            parameters: {
-                fields: ['title', 'slug', 'plaintext', 'image'],
-                formats: 'plaintext',
-								include: 'tags'
-            },
-        },
-				template: function(result) {
-					console.log(result);
-					console.log(result.image);
-						let tag = result.tags[0];
-            let url = [location.protocol, '//', location.host].join('');
-            return '<li> \n' +
-						'<img src="' + result.feature_image + '"> \n ' +
-						'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
-						'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n '+
-						'</li>';
-        }
-    })
+<script type="text/javascript">
+	let ghostSearch = new GhostSearch({
+		input: '#my-custom-input',
+		results: '#my-custom-results',
+		options: {
+			limit: 5,
+			keys: [
+				'title',
+				'plaintext'
+			],
+		},
+		api: {
+			resource: 'posts',
+			parameters: {
+				fields: ['title', 'slug', 'plaintext', 'image'],
+				formats: 'plaintext',
+				include: 'tags'
+			},
+		},
+		template: function(result) {
+			console.log(result);
+			console.log(result.image);
+			let tag = result.tags[0];
+			let url = [location.protocol, '//', location.host].join('');
+			return '<li> \n' +
+				'<img src="' + result.feature_image + '"> \n ' +
+				'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
+				'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n ' +
+				'</li>';
+		}
+	})
 </script>
 
 </body>
+
 </html>
