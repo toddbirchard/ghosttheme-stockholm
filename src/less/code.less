@@ -199,7 +199,8 @@
     margin: 0;
   }
 
-  .json {
+  .json,
+  .language-json {
     .attr {
       color: #e471a6;
     }
@@ -589,10 +590,17 @@
     }
 
     .cdata,
-    .comment,
     .doctype,
     .prolog {
       color: #535f53;
+    }
+
+    .comment {
+      color: #5e5e6f;
+    }
+
+    .built_in {
+      font-weight: 700;
     }
 
     .punctuation {
@@ -622,6 +630,14 @@
 
     .attr-name {
       color: #b3d6b3;
+    }
+
+    .params {
+      color: #bec155;
+    }
+
+    .attr {
+      color: #787793;
     }
 
     &::before {
