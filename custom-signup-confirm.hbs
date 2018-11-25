@@ -66,6 +66,8 @@
   function displayResult(result, err) {
     const message = document.getElementById("message");
     if (result === "success") {
+			console.log('token = ' + token);
+			console.log('tokenId = ' + tokenId);
 			emailPasswordClient.confirmUser(token, tokenId);
       success();
     }
