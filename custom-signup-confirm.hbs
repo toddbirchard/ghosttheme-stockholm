@@ -51,17 +51,9 @@
   emailPasswordClient
     .confirmUser(token, tokenId)
     .then(() => displayResult('success'))
-    .catch(err => displayResult('error', err))
+    .catch(err => displayResult('error', err));
 
 
-	function success(){
-		message.innerText = "Successfully created user. You may close this page.";
-		return emailPasswordClient.confirmUser(token, tokenId);
-	}
-
-	function failure(){
-
-	}
 
   function displayResult(result, err) {
     const message = document.getElementById("message");
@@ -69,7 +61,6 @@
 			console.log('token = ' + token);
 			console.log('tokenId = ' + tokenId);
 			emailPasswordClient.confirmUser(token, tokenId);
-      success();
     }
     else if (result === "error") {
       message.innerText = "Unable to register user.\n\n" + err;
