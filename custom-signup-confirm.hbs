@@ -40,19 +40,12 @@
 	} = stitch;
 
   const stitchClient = Stitch.initializeDefaultAppClient('hackers-uangn');
-
   const emailPasswordClient = stitchClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
 	const url = window.location.search;
 	const params = new URLSearchParams(url);
 	const token = params.get('token');
 	const tokenId = params.get('tokenId');
-
-  emailPasswordClient
-    .confirmUser(token, tokenId)
-    .then(() => displayResult('success'))
-    .catch(err => displayResult('error', err));
-
 
 
   function displayResult(result, err) {
@@ -66,6 +59,13 @@
       message.innerText = "Unable to register user.\n\n" + err;
     }
   }
+
+	emailPasswordClient
+    .confirmUser(token, tokenId)
+    .then(() => displayResult('success'))
+    .catch(err => displayResult('error', err));
+
+
 </script>
 
 </body>
