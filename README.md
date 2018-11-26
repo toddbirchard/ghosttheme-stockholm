@@ -1,12 +1,12 @@
 # Stockholm Ghost Theme
 
-![ghost badge](https://img.shields.io/badge/ghost-2.6.0-lightgrey.svg?longCache=true&style=flat-square)
-![node badge](https://img.shields.io/badge/node-v8.11.3-green.svg?longCache=true&style=flat-square)
+![ghost badge](https://img.shields.io/badge/ghost-2.6.1-lightgrey.svg?longCache=true&style=flat-square)
+![node badge](https://img.shields.io/badge/node-v10.13.0-green.svg?longCache=true&style=flat-square)
 ![gulp](https://img.shields.io/badge/gulp-v4.0.0-green.svg?longCache=true&style=flat-square)
-![less](https://img.shields.io/badge/lessjs-v3.7.0-blue.svg?longCache=true&style=flat-square)
+![lightbox](https://img.shields.io/badge/lightbox-v2.10.0-blue.svg?longCache=true&style=flat-square)
 ![mongodb](https://img.shields.io/badge/MongoDB--Atlas-v4.0-green.svg?longCache=true&style=flat-square)
-![Jquery badge](https://img.shields.io/badge/jquery-3.3.1-green.svg?longCache=true&style=flat-square)
-![Jquery badge](https://img.shields.io/badge/@babel/core-7.1.2-yellow.svg?longCache=true&style=flat-square)
+![ghost-pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square)
+![Babel](https://img.shields.io/badge/@babel/core-7.1.2-yellow.svg?longCache=true&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)
 [![GitHub issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
 [![GitHub stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
@@ -14,7 +14,7 @@
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live preview can be viewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
-![Stockholm Theme](https://miscellaneous.nyc3.digitaloceanspaces.com/stockholm.jpg)
+![Stockholm Theme](https://github.com/toddbirchard/ghosttheme-stockholm/blob/master/assets/images/stockholm2.jpg)
 
 # About
 
