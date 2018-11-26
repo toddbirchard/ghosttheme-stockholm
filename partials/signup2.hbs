@@ -9,7 +9,7 @@
   <p class="description" style="visibility: hidden;">Automation is inevitable. Join the winning side.</p>
   <p class="text_max un" style="visibility: hidden;">Step up your shitposting game.</p>
 
-  <form action="https://getform.io/f/f475106e-c578-418d-b299-48f97233c840" method="POST" class="signup-form un" style="visibility:hidden;">
+  <form id="signup-form" action="https://getform.io/f/f475106e-c578-418d-b299-48f97233c840" method="POST" class="signup-form un" style="visibility:hidden;">
     <input id="signup-username" type="text" name="username" placeholder="username" required>
     <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
     <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
@@ -28,6 +28,52 @@
 </div>
 
 <script>
+
+$(function(){
+       $("#signup-form").submit(function(e){
+           e.preventDefault();
+           var action = $(this).attr("action");
+           $.when($.ajax({
+               type: "POST",
+               url: action,
+               crossDomain: true,
+               data: new FormData(this),
+               dataType: "json",
+               contentType: 'multipart/form-data',
+               processData: false,
+               contentType: false,
+               success: function(response){
+                 if(response.status == "success"){
+                   alert("We received your submission, thank you!");
+                 }else{
+                   alert("An error occured.");
+               }
+             }
+           }))then(function( data, textStatus, jqXHR ) {
+             client.callFunction("secret_byepass").then(byekey => {
+               var email = $('#signup-email').val();
+               var user = $('#signup-username').val();
+
+               $.ajax({
+               method: "POST",
+               url: "https://byepass.co/redirect",
+               data: {
+                 identifier: email,
+                 username: user,
+                 block_proxy: 0,
+                 key: byekey
+               },
+               headers: {
+                 contentType: 'application/x-www-form-urlencoded'
+               }
+             })
+               .done(function( msg ) {
+                 alert( "Data Saved: " + msg );
+               });
+             });
+           });
+         });
+       });
 /*var password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");
 
@@ -42,29 +88,5 @@ function validatePassword(){
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 */
-
-$('#submit-account').on('click', function(){
-  client.callFunction("secret_byepass").then(byekey => {
-    var email = $('#signup-email').val();
-    var user = $('#signup-username').val();
-
-    $.ajax({
-    method: "POST",
-    url: "https://byepass.co/redirect",
-    data: {
-      identifier: email,
-      username: user,
-      block_proxy: 0,
-      key: byekey
-    },
-    headers: {
-      contentType: 'application/x-www-form-urlencoded';
-    }
-  })
-    .done(function( msg ) {
-      alert( "Data Saved: " + msg );
-    });
-  });
-});
 
 </script>
