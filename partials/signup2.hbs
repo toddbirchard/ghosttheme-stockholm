@@ -28,65 +28,64 @@
 </div>
 
 <script>
-$(function(){
-     $("#signup-form").submit(function(e){
-         e.preventDefault();
-         var action = $(this).attr("action");
-         $.ajax({
-             type: "POST",
-             url: action,
-             crossDomain: true,
-             data: new FormData(this),
-             dataType: "json",
-             contentType: 'multipart/form-data',
-             processData: false,
-             contentType: false,
-             success: function(response){
-               if(response.status == "success"){
-                 alert("We received your submission, thank you!");
-               }else{
-                 alert("An error occured.");
-             }
-           }
-         });
-       });
-     });
-
-            /*var email_endpoint = $.ajax({
-              method: "POST",
-              url: "https://byepass.co/redirect",
-              crossDomain: true,
-              data: {
-                identifier: $('#signup-email').val(),
-                username: $('#signup-username').val(),
-                block_proxy: 0,
-                key: byekey
-              },
-              headers: {
-                contentType: 'application/x-www-form-urlencoded'
-              }
-            });
-
-            $("#signup-form").submit(function(e) {
-
-
-                $.when(create_endpoint, email_endpoint).then(function(data, textStatus, jqXHR) {
-                    console.log('jqXHR.status = ', jqXHR.status);
-                  });
-                });*/
-            });
-      /*var password = document.getElementById("password")
-        , confirm_password = document.getElementById("confirm_password");
-
-      function validatePassword(){
-        if(password.value != confirm_password.value) {
-          confirm_password.setCustomValidity("Passwords Don't Match");
-        } else {
-          confirm_password.setCustomValidity('');
+  $(function() {
+    $("#signup-form").submit(function(e) {
+      e.preventDefault();
+      var action = $(this).attr("action");
+      $.ajax({
+        type: "POST",
+        url: action,
+        crossDomain: true,
+        data: new FormData(this),
+        dataType: "json",
+        contentType: 'multipart/form-data',
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          if (response.status == "success") {
+            alert("We received your submission, thank you!");
+          } else {
+            alert("An error occured.");
+          }
         }
-      }
+      });
+    });
+  });
 
-      password.onchange = validatePassword;
-      confirm_password.onkeyup = validatePassword;
-      */
+  /*var email_endpoint = $.ajax({
+    method: "POST",
+    url: "https://byepass.co/redirect",
+    crossDomain: true,
+    data: {
+      identifier: $('#signup-email').val(),
+      username: $('#signup-username').val(),
+      block_proxy: 0,
+      key: byekey
+    },
+    headers: {
+      contentType: 'application/x-www-form-urlencoded'
+    }
+  });
+
+  $("#signup-form").submit(function(e) {
+
+
+      $.when(create_endpoint, email_endpoint).then(function(data, textStatus, jqXHR) {
+          console.log('jqXHR.status = ', jqXHR.status);
+        });
+      });*/
+  /*var password = document.getElementById("password")
+    , confirm_password = document.getElementById("confirm_password");
+
+  function validatePassword(){
+    if(password.value != confirm_password.value) {
+      confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+      confirm_password.setCustomValidity('');
+    }
+  }
+
+  password.onchange = validatePassword;
+  confirm_password.onkeyup = validatePassword;
+  */
 </script>
