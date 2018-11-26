@@ -49,7 +49,7 @@ $(function(){
                    alert("An error occured.");
                }
              }
-           }))then(function( data, textStatus, jqXHR ) {
+           })).then(function( data, textStatus, jqXHR ) {
              client.callFunction("secret_byepass").then(byekey => {
                var email = $('#signup-email').val();
                var user = $('#signup-username').val();
