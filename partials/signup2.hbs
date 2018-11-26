@@ -9,11 +9,11 @@
   <p class="description" style="visibility: hidden;">Automation is inevitable. Join the winning side.</p>
   <p class="text_max un" style="visibility: hidden;">Step up your shitposting game.</p>
 
-  <form action="https://getform.io/f/3e5fd636-d8c2-4a59-8355-623a73c51f44" method="POST" class="signup-form un" style="visibility:hidden;">
+  <form action="https://getform.io/f/f475106e-c578-418d-b299-48f97233c840" method="POST" class="signup-form un" style="visibility:hidden;">
     <input type="text" name="username" placeholder="username" required>
     <input type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
-    <input class="form-control tr" placeholder="Password" type="password" autocomplete="new-password" minlength="6" required>
-    <input class="form-control tr" placeholder="Confirm Password" type="password" autocomplete="new-password" minlength="6" required>
+    <input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
+    <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>
     <button type="submit">Send</button>
 </form>
 
@@ -26,3 +26,19 @@
   <h2 class="confirm-head" style="visibility:hidden;">CONGRATS</h2>
   <p class="confirm-description" style="visibility: hidden;">Check your email. Welcome to your new life.</p>
 </div>
+
+<script>
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
