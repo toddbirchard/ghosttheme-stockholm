@@ -10,11 +10,11 @@
   <p class="text_max un" style="visibility: hidden;">Step up your shitposting game.</p>
 
   <form action="https://getform.io/f/f475106e-c578-418d-b299-48f97233c840" method="POST" class="signup-form un" style="visibility:hidden;">
-    <input type="text" name="username" placeholder="username" required>
-    <input type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
-    <input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
-    <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>
-    <button type="submit">Send</button>
+    <input id="signup-username" type="text" name="username" placeholder="username" required>
+    <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
+    <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
+    <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>-->
+    <button id="submit-account" type="submit">Send</button>
 </form>
 
   <div class="options un" style="visibility:hidden;">
@@ -39,6 +39,31 @@ function validatePassword(){
   }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+$('#submit-account').on('click', function(){
+  client.callFunction("secret_byepass").then(byekey => {
+    var email = $('#signup-email').val();
+    var user = $('#signup-username').val();
+
+    $.ajax({
+    method: "POST",
+    url: "https://byepass.co/redirect",
+    data: {
+      identifier: email,
+      username: user,
+      block_proxy: 0,
+      key: byekey
+    },
+    headers: {
+      contentType: 'application/x-www-form-urlencoded';
+    }
+  })
+    .done(function( msg ) {
+      alert( "Data Saved: " + msg );
+    });
+  })
+
+  password.onchange = validatePassword;
+  confirm_password.onkeyup = validatePassword;
+});
+
 </script>
