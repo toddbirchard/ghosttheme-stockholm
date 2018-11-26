@@ -18,17 +18,17 @@ Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhos
 
 # About
 
-_Stockholm_ is the most fully featured Ghost theme on the market with a minimalist presentation. Easily configurable settings allow for customization such as contextual widgets, sidebar preferences, and unique page templates. This project is in *active development*; you are welcome to use this theme if you wish, but be warned that certain oddities may exist as the user-friendly configuration is still in development.
+_Stockholm_ is the most fully featured theme currently on the market. Easily configurable settings allow for customization such as contextual widgets, sidebar preferences, and unique page templates. This project is in *active development*; you are welcome to use this theme if you wish, but be warned that certain oddities may exist as the user-friendly configuration is still in development.
 
 ## Features
 
-Some features are rolled out in public beta before official release. Features released in beta are usable to the end user, although less intuitive to configure until official completion.
+Some features are rolled out in public beta before official release. Features released in beta may appearusable to the end user, although these features are surely less intuitive to configure on individual preference.
 
 ### Major Features
 
 - Full JIRA integration with functioning Kanban
 - Custom contributors page
-- Grouping of posts to belong to an ongoing series
+- Dynamic routing of post collections
 - MongoDB extension to expand capabilities of Ghost admin
 - Contextual sidebars
 - Featured posts
@@ -38,8 +38,8 @@ Some features are rolled out in public beta before official release. Features re
 
 ### Widgets
 
-- Search posts
-- Github repositories
+- Search all posts
+- Github project modules
 - Github user activity
 - Blog Contributors 
 - Recent posts 
@@ -47,7 +47,8 @@ Some features are rolled out in public beta before official release. Features re
 - Series 
 - Twitter Feed
 - Meetup Events
-- Medium posts authors
+- Medium posts by author
+- 
 
 ### Features In Development
 
