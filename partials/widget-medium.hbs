@@ -26,7 +26,7 @@ function createMediumCard(medium){
 
 
 client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-  client.callFunction("getGithubUsers", "{{slug}}").then(result => {
+  client.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
     createMediumCard(result.medium)
     console.log(JSON.stringify(result))
     if (result.medium) {createMediumCard(result.medium)}
