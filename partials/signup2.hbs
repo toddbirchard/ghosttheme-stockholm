@@ -28,26 +28,29 @@
 </div>
 
 <script>
-  $(function() {
-    e.preventDefault();
-    var action = $(this).attr("action");
-        $.ajax({
-              type: "POST",
-              url: action,
-              crossDomain: true,
-              data: new FormData(this),
-              dataType: "json",
-              contentType: 'multipart/form-data',
-              processData: false,
-              contentType: false,
-              success: function(response) {
-                if (response.status == "success") {
-                  alert("We received your submission, thank you!");
-                } else {
-                  alert("An error occured.");
-                }
-              }
-            });
+$(function(){
+     $("#signup-form").submit(function(e){
+         e.preventDefault();
+         var action = $(this).attr("action");
+         $.ajax({
+             type: "POST",
+             url: action,
+             crossDomain: true,
+             data: new FormData(this),
+             dataType: "json",
+             contentType: 'multipart/form-data',
+             processData: false,
+             contentType: false,
+             success: function(response){
+               if(response.status == "success"){
+                 alert("We received your submission, thank you!");
+               }else{
+                 alert("An error occured.");
+             }
+           }
+         });
+       });
+     });
 
             /*var email_endpoint = $.ajax({
               method: "POST",
