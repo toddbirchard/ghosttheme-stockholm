@@ -28,7 +28,7 @@
 </div>
 
 <script>
-var password = document.getElementById("password")
+/*var password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");
 
 function validatePassword(){
@@ -38,6 +38,10 @@ function validatePassword(){
     confirm_password.setCustomValidity('');
   }
 }
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+*/
 
 $('#submit-account').on('click', function(){
   client.callFunction("secret_byepass").then(byekey => {
@@ -60,10 +64,7 @@ $('#submit-account').on('click', function(){
     .done(function( msg ) {
       alert( "Data Saved: " + msg );
     });
-  })
-
-  password.onchange = validatePassword;
-  confirm_password.onkeyup = validatePassword;
+  });
 });
 
 </script>
