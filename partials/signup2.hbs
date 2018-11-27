@@ -12,6 +12,7 @@
   <form id="signup-form" action="https://getform.io/f/f475106e-c578-418d-b299-48f97233c840" method="POST" class="signup-form un" style="visibility:hidden;">
     <input id="signup-username" type="text" name="username" placeholder="username" required>
     <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
+    <input id="signup-gravatar" type="text" name="gravatar" visibility="hidden">
     <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
     <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>-->
     <button id="submit-account" type="submit">Send</button>
@@ -26,67 +27,3 @@
   <h2 class="confirm-head" style="visibility:hidden;">CONGRATS</h2>
   <p class="confirm-description" style="visibility: hidden;">Check your email. Welcome to your new life.</p>
 </div>
-
-<script>
-/*
-  $(function() {
-    $("#signup-form").submit(function(e) {
-      e.preventDefault();
-      var action = $(this).attr("action");
-      $.ajax({
-        type: "POST",
-        url: action,
-        crossDomain: true,
-        data: new FormData(this),
-        dataType: "json",
-        contentType: 'multipart/form-data',
-        processData: false,
-        contentType: false,
-        success: function(response) {
-          if (response.status == "success") {
-            alert("We received your submission, thank you!");
-          } else {
-            alert("An error occured.");
-          }
-        }
-      });
-    });
-  });
-*/
-  /*var email_endpoint = $.ajax({
-    method: "POST",
-    url: "https://byepass.co/redirect",
-    crossDomain: true,
-    data: {
-      identifier: $('#signup-email').val(),
-      username: $('#signup-username').val(),
-      block_proxy: 0,
-      key: byekey
-    },
-    headers: {
-      contentType: 'application/x-www-form-urlencoded'
-    }
-  });
-
-  $("#signup-form").submit(function(e) {
-
-
-      $.when(create_endpoint, email_endpoint).then(function(data, textStatus, jqXHR) {
-          console.log('jqXHR.status = ', jqXHR.status);
-        });
-      });*/
-  /*var password = document.getElementById("password")
-    , confirm_password = document.getElementById("confirm_password");
-
-  function validatePassword(){
-    if(password.value != confirm_password.value) {
-      confirm_password.setCustomValidity("Passwords Don't Match");
-    } else {
-      confirm_password.setCustomValidity('');
-    }
-  }
-
-  password.onchange = validatePassword;
-  confirm_password.onkeyup = validatePassword;
-  */
-</script>

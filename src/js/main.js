@@ -276,7 +276,7 @@ var themeApp = {
     });
   },
   triggerSignup: function() {
-    $('.rss').on('click', function(e) {
+    $('.account').on('click', function(e) {
       e.preventDefault();
       themeApp.signup();
     });

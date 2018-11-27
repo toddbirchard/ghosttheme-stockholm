@@ -143,7 +143,9 @@ input {
   transform: translate(-50%, -50%);
 }
 
-.form-control {
+.form-control,
+#signup-username,
+#signup-email {
   padding: 14px 15px;
   width: 300px;
   background: rgba(255,255,255,0.35);
@@ -176,7 +178,8 @@ button {
   border-left: 3px solid #fff;
 }
 
-.button-control {
+.button-control,
+button {
   padding: 13px 15px;
   width: 330px;
   color: #31A4E0;
@@ -185,7 +188,17 @@ button {
   letter-spacing: 1px;
   font-weight: 400;
   box-shadow: 0 5px 11px 0 #0000001a;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
 }
+
+#signup-gravatar{
+  visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
 
 .signup-form input:focus::placeholder {
   opacity: 1;
