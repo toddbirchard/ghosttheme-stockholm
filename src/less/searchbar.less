@@ -1,11 +1,11 @@
 header{
   margin-bottom: 40px;
-  box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.4) !important;
+  box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.2) !important;
 }
 
 .banner {
   position: relative;
-      background: radial-gradient(circle 400px at 19.8% 14.4%,rgb(0, 165, 248) 0,rgb(55, 86, 212) 100.3%);
+  background: radial-gradient(circle 400px at 48.8% 40.4%,rgb(0, 165, 248) 0,rgb(55, 86, 212) 100.3%);
       height: 80px;
 
   .logo {
@@ -109,10 +109,15 @@ header{
   .search > div > input:hover  {
     width: 150px;
     padding: 13px;
+    background: rgba(0, 0, 0, 0.32);
 
     &:after{
       opacity: 0;
     }
+  }
+
+  .search > div > input:focus {
+
   }
 
   .search > div:hover {
@@ -149,9 +154,9 @@ header{
     justify-content: space-around;
     align-items: center;
     height: -webkit-fill-available;
-    color: grey;
+    height: -moz-fill-available;
     margin-bottom: 20px;
-        max-width: 400px;
+    max-width: 400px;
 
     a {
       color: #696780;
