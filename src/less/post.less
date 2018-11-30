@@ -36,7 +36,7 @@
 	.post-title {
 		text-align: left;
 		width: -webkit-fill-available;
-		margin: 45px 80px 10px;
+		margin: 35px 60px 10px;
 		line-height: 1.2;
 		display: block;
 		font-family: 'HackerSans-Medium', 'CompassSans-Medium' !important;
@@ -70,7 +70,7 @@
 	.excerpt {
 		font-weight: 100;
 		font-size: 1.4em;
-		margin: 10px 80px 40px;
+		margin: 10px 60px 40px;
 		line-height: 1.2;
 		color: @h1-color;
 		font-family: 'HackerSans-Medium', 'CompassSans-Regular';
@@ -217,7 +217,7 @@
 		padding: 10px 40px;
 		background: 0 0;
 		border-top: 0;
-		margin: 30px 80px 60px;
+		margin: 30px 60px 60px;
 		width: auto;
 		display: flex;
 		justify-content: space-between;
@@ -295,12 +295,12 @@
 
 	.main-content {
 		width: 100%;
-		max-width: 1000px;
+		max-width: 900px;
 		padding: 0 !important;
 
 		.post-head {
 			padding: 20px 0;
-			margin: 0 80px;
+			margin: 0 60px;
 			@media(max-width: 900px) {
 				margin: 0 60px;
 			}
@@ -309,6 +309,7 @@
 			}
 			@media(max-width: 600px) {
 				padding: 15px 0 !important;
+				margin: 0 25px !important;
 			}
 
 			.post-meta {
@@ -338,17 +339,19 @@
 					padding: 6px 10px;
 
 					span {
-						font-family: 'CompassSans-Medium',sans-serif !important;
+						font-family: 'CompassSans-Regular',sans-serif !important;
 					}
 					@media(max-width: 600px) {
-						height: 18px !important;
-						padding: 6px 10px;
+						height: 20px !important;
+						padding: 8px 10px;
 					}
 
-					i,
+					i {
+						font-size: 1.3em !important;
+					}
 					span {
 						font-weight: 500 !important;
-						font-size: 1em !important;
+						font-size: 1.1em !important;
 					}
 
 					&.codesnippetcorner {
@@ -458,7 +461,7 @@
 	}
 
 	.post-content {
-		margin: 10px 80px 30px;
+		margin: 10px 60px 30px;
 
 		a {
 			color: @theme-color;
@@ -492,7 +495,7 @@
 			margin: 30px auto;
 			border-radius: 5px;
 			max-width: 88%;
-			line-height: 1.5;
+			line-height: 1.7;
 
 			@media(max-width: 600px) {
 				line-height: 1.8;
@@ -677,8 +680,7 @@
 
 	.featured-media {
 		line-height: 1;
-		margin: 10px 80px 5px;
-		    margin: 20px 80px 10px;
+	  margin: 20px 60px 0px;
 		@media(max-width: 800px) {
 			margin: 40px 40px 0;
 		}
@@ -881,7 +883,7 @@
 
 	.about-author {
 		background: @white;
-		padding: 40px 80px;
+		padding: 40px 60px;
 		margin: 0 0 20px;
 		min-height: 88px;
 		box-shadow: 0 0 5px rgba(80,82,204,.1)!important;

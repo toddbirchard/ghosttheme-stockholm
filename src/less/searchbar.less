@@ -12,10 +12,11 @@ header{
 .banner {
   position: relative;
   background: radial-gradient(circle 400px at 48.8% 40.4%,rgb(0, 165, 248) 0,rgb(55, 86, 212) 100.3%);
-      height: 80px;
+  height: 80px;
 
   .logo {
-    height: 45px;
+    height: 50px;
+        width: 230px;
     position: absolute;
     left: 0;
     right: 0;
@@ -25,7 +26,7 @@ header{
     width: fit-content;
 
     img {
-      height: 45px;
+      height: 50px;
     }
   }
 }
@@ -179,18 +180,29 @@ header{
       right: 0;
     }
 
+    li {
+      position: relative;
+      width: 50px;
+      height: 25px;
+    }
+
     a {
       color: #696780;
       font-size: .9em;
       font-family: HackerSans-Medium;
       text-transform: uppercase;
       transform: scale(1);
-      transition: all .3s ease-out;
+      transition: all .2s ease-out;
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
 
       &:hover {
         color: @theme-color;
         cursor: pointer;
-        transform: scale(1.2);
+        transform: scale(1.15);
       }
     }
   }
