@@ -13,7 +13,8 @@
     <input id="signup-username" type="text" name="username" placeholder="username" required>
     <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
     <input id="signup-gravatar" type="text" name="gravatar" visibility="hidden">
-    <input id="signup-checkbox" type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
+    <input id="signup-subscription" type="checkbox" name="subscribe">
+    <!--<input id="signup-checkbox" type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">-->
     <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
     <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>-->
     <button id="submit-account" type="submit">Send</button>
@@ -28,3 +29,18 @@
   <h2 class="confirm-head" style="visibility:hidden;">CONGRATS</h2>
   <p class="confirm-description" style="visibility: hidden;">Check your email. Welcome to your new life.</p>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('#signup-subscription').css('opacity', 0);
+    $('#signup-subscription').css('position', 'absolute');
+    $('#signup-form').ajaxForm({
+      beforeSubmit: validate
+    });
+
+  var sub = $('#signup-subscription').is(":checked");
+      if (sub) {
+        return false;
+      }
+    });
+</script>

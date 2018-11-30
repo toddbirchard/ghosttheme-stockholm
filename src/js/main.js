@@ -231,6 +231,8 @@ var themeApp = {
           var email = $('#signup-email').val();
           var password = $('#signup-password').val();
 
+
+
           emailPasswordClient.registerWithEmail(email, password)
             .then(() => {
                console.log("Successfully sent account confirmation email!");
