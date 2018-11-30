@@ -22,7 +22,8 @@ $(document).ready(function() {
     flask: '<i class="fab fa-affiliatetheme"></i>',
     expressjs: '<i class="fab fa-etsy"></i>',
     atlassian: '<i class="fab fa-trello"></i>',
-    codesnippetcorner: '<i class="fal fa-laptop-code"></i>'
+    codesnippetcorner: '<i class="fal fa-laptop-code"></i>',
+    saas: '<i class="fal fa-desktop-alt"></i>'
   };
 
   for (var key in tags) {

@@ -1,6 +1,12 @@
+@import "variables.less";
+
 header{
   margin-bottom: 40px;
-  box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.4) !important;
+  box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.2) !important;
+
+  @media(max-width: 600px){
+    margin-bottom: 0;
+  }
 }
 
 .banner {
@@ -34,6 +40,10 @@ header{
   right: 0;
   top: 0;
   bottom: 0;
+
+  @media(max-width: 600px) {
+    display: none;
+  }
 
   .flexbox {
     width: 300px;
@@ -107,12 +117,19 @@ header{
   .search > div > input:focus,
   .search > div > input:valid,
   .search > div > input:hover  {
-    width: 150px;
+    width: 200px;
     padding: 13px;
+    background: rgba(0, 0, 0, 0.2);
+    border: solid 1px #fff!important;
+    border-radius:3px !important;
 
     &:after{
       opacity: 0;
     }
+  }
+
+  .search > div > input:focus {
+
   }
 
   .search > div:hover {
@@ -138,8 +155,9 @@ header{
 
 .navigation {
   background: white;
-  height: 45px;
+  height: 50px;
   text-align: center;
+  position: relative;
 
   .menu {
     margin: auto;
@@ -149,15 +167,120 @@ header{
     justify-content: space-around;
     align-items: center;
     height: -webkit-fill-available;
-    color: grey;
+    height: -moz-fill-available;
     margin-bottom: 20px;
-        max-width: 400px;
+    max-width: 400px;
+
+    @media(max-width: 600px) {
+      width: 300px;
+      margin: 0 auto !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
 
     a {
       color: #696780;
       font-size: .9em;
       font-family: HackerSans-Medium;
       text-transform: uppercase;
+      transform: scale(1);
+      transition: all .3s ease-out;
+
+      &:hover {
+        color: @theme-color;
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+#nav-search-results {
+  width: 226px;
+  position: absolute;
+  font-size: 1em;
+  font-family: CompassSans-Light,CompassSans-Light,sans-serif!important;
+  font-weight: 200;
+  transition: 0.3s all;
+  outline: none;
+  -webkit-appearance: none;
+  border: 1px solid #cfd3e0;
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+  opacity: 0;
+  z-index: 10;
+
+  * {
+    transition: 0.3s all;
+  }
+
+  li {
+    width: -webkit-fill-available;
+    padding: 10px 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+
+    a {
+      font-size: .8em;
+      font-family: CompassSans-Regular;
+    }
+
+    &:nth-child(even) {
+      background: #f5f8fb;
+    }
+
+    &:hover {
+      background: lighten(@theme-color, 10%);
+      color: white;
+      border: 0;
+
+      a {
+        color: white;
+
+      }
+    }
+
+    img {
+      height: 55px;
+      width: 133px;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+
+    div {
+      width: 100%;
+
+      a {
+        display: block;
+        line-height: 1.4;
+        font-size: 0.9em;
+        -webkit-line-clamp: 2;
+        font-weight: 600;
+      }
+
+      .tag {
+        display: block;
+        line-height: 1.5;
+
+        span {
+          font-size: 0.7em;
+          font-weight: 100;
+          line-height: 1.5;
+          padding: 5px 10px;
+          margin-top: 4px;
+          display: block;
+          width: fit-content;
+
+          i {
+            margin-right: 4px;
+            font-size: 0.7em;
+            display: none;
+          }
+        }
+      }
     }
   }
 }
