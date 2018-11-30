@@ -184,6 +184,14 @@ header{
       font-size: .9em;
       font-family: HackerSans-Medium;
       text-transform: uppercase;
+      transform: scale(1);
+      transition: all .3s ease-out;
+
+      &:hover {
+        color: @theme-color;
+        cursor: pointer;
+        transform: scale(1.2);
+      }
     }
   }
 }
