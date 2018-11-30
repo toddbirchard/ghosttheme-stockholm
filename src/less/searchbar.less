@@ -3,6 +3,10 @@
 header{
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.2) !important;
+
+  @media(max-width: 600px){
+    margin-bottom: 0;
+  }
 }
 
 .banner {
@@ -36,6 +40,10 @@ header{
   right: 0;
   top: 0;
   bottom: 0;
+
+  @media(max-width: 600px) {
+    display: none;
+  }
 
   .flexbox {
     width: 300px;
@@ -113,7 +121,7 @@ header{
     padding: 13px;
     background: rgba(0, 0, 0, 0.2);
     border: solid 1px #fff!important;
-    border-radius:3px;
+    border-radius:3px !important;
 
     &:after{
       opacity: 0;
@@ -149,6 +157,7 @@ header{
   background: white;
   height: 50px;
   text-align: center;
+  position: relative;
 
   .menu {
     margin: auto;
@@ -162,6 +171,14 @@ header{
     margin-bottom: 20px;
     max-width: 400px;
 
+    @media(max-width: 600px) {
+      width: 300px;
+      margin: 0 auto !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
     a {
       color: #696780;
       font-size: .9em;
@@ -172,7 +189,7 @@ header{
 }
 
 #nav-search-results {
-  width: 200px;
+  width: 226px;
   position: absolute;
   font-size: 1em;
   font-family: CompassSans-Light,CompassSans-Light,sans-serif!important;
@@ -181,7 +198,7 @@ header{
   outline: none;
   -webkit-appearance: none;
   border: 1px solid #cfd3e0;
-  border-radius: 2px;
+  border-radius: 0 0 5px 5px;
   border-top: 0;
   opacity: 0;
   z-index: 10;
@@ -191,12 +208,17 @@ header{
   }
 
   li {
-    width: 90%;
-    padding: 15px 5%;
+    width: -webkit-fill-available;
+    padding: 10px 10px;
     text-align: left;
     display: flex;
     justify-content: space-between;
     background: #fff;
+
+    a {
+      font-size: .8em;
+      font-family: CompassSans-Regular;
+    }
 
     &:nth-child(even) {
       background: #f5f8fb;
@@ -209,6 +231,7 @@ header{
 
       a {
         color: white;
+
       }
     }
 
