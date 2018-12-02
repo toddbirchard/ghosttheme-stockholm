@@ -134,7 +134,7 @@ var themeApp = {
     const pass_field = document.getElementById('signup-password');
 
     $(".overlay").css('display', 'block');
-    $(".overlay").css('opacity', '.7');
+    $(".overlay").css('opacity', '1');
 
     $(".overlay").on('click', function() {
       $("body").scroll(function(e) {

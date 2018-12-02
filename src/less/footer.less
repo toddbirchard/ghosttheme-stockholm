@@ -49,27 +49,31 @@
 			position: relative;
 			overflow: hidden;
 
+			.subscribe-email {
+				&::after {
+					content: '\f0e0';
+					font-family: "Font Awesome 5 Pro";
+					font-weight: 400;
+					display: inline-block;
+					font-style: normal;
+					-webkit-font-feature-settings: normal;
+					font-feature-settings: normal;
+					font-variant: normal;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+					right: 17px;
+					top: 11px;
+					position: absolute;
+					color: #9aa1bd;
+					font-size: 1.1em;
+				}
+			}
+
 			input::placeholder {
 				color: grey;
 			}
 
-			&::after {
-				content: '\f0e0';
-				font-family: "Font Awesome 5 Pro";
-				font-weight: 400;
-				display: inline-block;
-				font-style: normal;
-				-webkit-font-feature-settings: normal;
-				font-feature-settings: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				-webkit-font-smoothing: antialiased;
-				right: 17px;
-				top: 11px;
-				position: absolute;
-				color: #9aa1bd;
-				font-size: 1.1em;
-			}
+
 
 			button {
 				width: 100%;

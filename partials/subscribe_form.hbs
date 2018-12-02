@@ -1,6 +1,6 @@
 <div class="form-group{{#if error}} error{{/if}}">
-    <input id="signup-username" class="subscribe-input-class" type="text" name="username" placeholder="username" required>
-    {{input_email class=input_class placeholder=placeholder value=email autofocus=autofocus}}
+    <input id="signup-username" class="subscribe-input-class" type="text" name="username" onfocus="" placeholder="username" required>
+    {{input_email class=input_class placeholder=placeholder onfocus="" value=email autofocus=autofocus}}
     <input id="signup-gravatar" type="text" name="gravatar" visibility="hidden" />
-    {{button class=btn type=submit }}
+    <button id="btn" type="submit" name="signup" value="Sign Up"/>Sign Up</button>
 </div>
