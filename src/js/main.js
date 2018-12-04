@@ -135,6 +135,7 @@ var themeApp = {
 
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '1');
+    $('body').addClass('stop-scrolling')
 
     $(".overlay").on('click', function() {
       $("body").scroll(function(e) {
@@ -231,7 +232,7 @@ var themeApp = {
           var email = $('#signup-email').val();
           var password = $('#signup-password').val();
 
-
+          $('body').removeClass('stop-scrolling')
 
           emailPasswordClient.registerWithEmail(email, password)
             .then(() => {
