@@ -14,6 +14,127 @@
 				{{/if}}
 				<h1>{{{title}}}</h1>
 				<p>{{content}}</p>
+				<div class="github-cards">
+  <a href="https://github.com/toddbirchard/ghosttheme-stockholm" class="github-card" data-github="toddbirchard/ghosttheme-stockholm">
+    <h3>ghosttheme-stockholm</h3>
+    <p>Clean & minimalist theme</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #F1E05A;">●</span> Javascript
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+
+   <a href="https://github.com/toddbirchard/ghosttheme-tokyo" class="github-card" data-github="toddbirchard/ghosttheme-tokyo">
+    <h3>ghosttheme-tokyo</h3>
+    <p>Ghost theme used on Toddzilla blog</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #F1E05A;">●</span> Javascript
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+
+  <a href="https://github.com/toddbirchard/Link-Preview-API" class="github-card" data-github="toddbirchard/Link-Preview-API">
+    <h3>Link-Preview-API</h3>
+    <p>Generates a JSON object containing link preview information by passing a URL parameter.</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #3572A5;">●</span> Python
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+
+ <a href="https://github.com/toddbirchard/account-creation-endpoint" class="github-card" data-github="toddbirchard/account-creation-endpoint">
+    <h3>account-creation-endpoint</h3>
+    <p>Serverless function which creates and welcomes new users.</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #3572A5;">●</span> Python
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+
+  <a href="https://github.com/toddbirchard/planetjupyter" class="github-card" data-github="toddbirchard/planetjupyter">
+    <h3>planetjupyter</h3>
+    <p>Beautify your Jupyter Notebooks.</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #3572A5;">●</span> Python
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+
+  <a href="https://github.com/toddbirchard/onelogin-getallusers" class="github-card" data-github="toddbirchard/onelogin-getallusers">
+    <h3>onelogin-getallusers</h3>
+    <p>Script to export all users from a Onelogin instance</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" style="color: #3572A5;">●</span> Python
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        <i class="fa fa-spinner" aria-hidden="true"></i>
+      </span>
+    </span>
+  </a>
+</div>
 				{{!--{{> repos}}--}}
 			</div>
 			{{> kanban}}
@@ -23,4 +144,30 @@
 </section>
 
 <script src="{{asset "/js/kanban.js"}}"></script>
+<script>
+
+  client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
+    db.collection('github').find({}, { limit: 100}).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+
+			//Retrieve the template data from the HTML .
+			var template = $('#handlebars-demo').html();
+
+			var context = {
+			  "language" : "<h3>handlebars</h3>",
+			  "adjective": "<h3>awesome</h3>"
+			}
+
+			//Compile the template data into a function
+			var templateScript = Handlebars.compile(template);
+
+			var html = templateScript(context);
+			//html = 'My name is Ritesh Kumar . I am a developer.'
+
+$(document.body).append(html);
+  }).catch(err => {
+    console.error(err)
+  });
+</script>
 <!-- end site's main content area -->
