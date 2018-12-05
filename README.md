@@ -67,6 +67,7 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 - Recommended services & tools
 - Guest posts
 - Embedded executable code interpreters
+- Author/tag subscriptions
 
 ## Installation
 
