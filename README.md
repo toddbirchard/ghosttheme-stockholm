@@ -5,10 +5,10 @@
 ![Gulp](https://img.shields.io/badge/gulp-v4.0.0-green.svg?longCache=true&style=flat-square&logo=gulp&logoColor=white&colorB=DA4648&colorA=36363e)
 ![lightbox](https://img.shields.io/badge/lightbox-v2.10.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
 ![mongodb](https://img.shields.io/badge/MongoDB--Atlas-v4.0-green.svg?longCache=true&style=flat-square&logo=MongoDB&logoColor=white&colorB=47A248&colorA=36363e)
-![ghost-pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e)
+![ghost-pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&logo=flicker)
 ![Babel](https://img.shields.io/badge/@babel/core-7.1.2-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=FCC624&colorA=36363e)
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=36363e)
-[![GitHub issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/issues?colorB=FCC624&colorA=36363e)
+[![GitHub issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/issues?colorB=FCC624&colorA=36363e&icon=trello)
 [![GitHub stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers?colorB=FCC624&colorA=36363e)
 [![GitHub forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorA=36363e)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
 
