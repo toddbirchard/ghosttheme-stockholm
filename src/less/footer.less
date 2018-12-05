@@ -44,6 +44,11 @@
 		transition: all 0.3s ease-out;
 		position: relative;
 
+		@media(max-width: 600px){
+			width: -webkit-fill-available;
+			max-width: none;
+		}
+
 		.form-group {
 			padding: 0;
 			position: relative;
@@ -252,7 +257,8 @@
 			margin: 0;
 		}
 		@media(max-width: 800px) {
-			padding: 0;
+			padding: 0 20px;
+			width: -webkit-fill-available;
 			margin: 10px 10px 60px;
 		}
 		@media(max-width: 800px) {
