@@ -2,7 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 
-<section class="content-wrap series-template">
+<section class="content-wrap series-template {{body_class}}">
 	<div class="container">
 			<!-- end main post area -->
 			{{! insert sidebar partial}}
@@ -10,10 +10,17 @@
 				<!-- start main post area -->
 				<div class=" main-content">
 					<div class="postlist">
-            {{> cover-tag}}
-            {{#foreach posts include="tags"}}
-            		{{> seriespreview}}
-            {{/foreach}}
+						<div class="sort-container">
+							<div class="sort">
+								<span class="sort-title">Sort</span> <span class="sort-method">asc</span> <i class="fal fa-arrow-to-bottom"></i>
+							</div>
+							</div>
+							{{#foreach posts include="tags"}}
+	            		{{> seriespreview}}
+	            {{/foreach}}
+						</div>
+						</div>
+
     				{{pagination}}
 
 					</div>

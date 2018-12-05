@@ -1,5 +1,4 @@
 
-
 <article class="{{post_class}} post-preview">
     {{#if feature_image}}
       <a href="{{url}}" class="featured-media" href="{{url}}">
@@ -10,8 +9,9 @@
     <div class="details">
       <div class="post-head">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <h5 class="number" aria-hidden="true">{{#foreach tags visibility="internal" include="count.posts"}}{{meta_title}}:{{/foreach}} Post {{@number}}</h5>
-      </div>
+        <span class="post-excerpt"  aria-hidden="true">{{#foreach tags visibility="internal" include="count.posts"}}{{meta_title}}:{{/foreach}} Post {{@number}}</span>
+        <span class="post-count">{{excerpt words="40"}}</span>
+    </div>
 
 
 
@@ -43,11 +43,10 @@
 
 <script>
 $( document ).ready(function() {
-  $.get(ghost.url.api('tags')).done(function (data){
-console.log('tags', data.tags);
-}).fail(function (err){
-console.log(err);
-});
+  $('.sort').on('click', function(e){
+    $('.sort-method').html('desc');
+    $('.sort i').addClass('flip');
+  });
 });
 
 </script>

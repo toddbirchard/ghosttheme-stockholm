@@ -4,8 +4,6 @@
   2. Initialization
 ====================================================*/
 
-// import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
-
 /*===========================
  1. function declaretion
  ==========================*/
@@ -133,6 +131,7 @@ var themeApp = {
     const email_field = document.getElementById('signup-email');
     const pass_field = document.getElementById('signup-password');
 
+    $(".signup").css('display', 'block');
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '1');
     $('body').addClass('stop-scrolling')
