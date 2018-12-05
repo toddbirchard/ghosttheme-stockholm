@@ -312,7 +312,7 @@
 				font-weight: 100;
 				border: 1px solid #d5dbe6 !important;
 				transition: all 0.3s all;
-				width: 300px;
+				width: -webkit-fill-available;
 				margin-bottom: 10px;
 				padding: 14px 15px;
 				border: 0;
@@ -386,7 +386,7 @@
 			}
 
 			button {
-				width: 100%;
+				width: -webkit-fill-available !important;
 				background: linear-gradient(165deg,#40a2a2,#1f68a7);
 				box-shadow: 2px 2px 3px 0 #647498;
 				padding: 13px 20px;
@@ -478,7 +478,6 @@
 			opacity: 0.7;
 			margin: 0;
 			white-space: inherit;
-			width: aauto;
 			display: inline-block;
 			line-height: 1.5;
 			width: auto;
@@ -625,7 +624,7 @@
 			padding-bottom: 17px;
 			margin-bottom: 17px;
 			line-height: 1.35;
-			padding: 0 10px 10px;
+			padding: 0 0 10px;
 
 			.post-title,
 			.single-author-name {
@@ -671,7 +670,11 @@
 		}
 
 		.form-group {
-			width: 100%;
+			width: -webkit-fill-available;
+
+			input {
+				width: -webkit-fill-available;
+			}
 		}
 
 		.subscribe-input-class {
@@ -691,6 +694,8 @@
 			}
 
 			.btn {
+				width: -webkit-fill-available;
+
 				span {
 					font-size: 12px;
 					text-transform: capitalize;
