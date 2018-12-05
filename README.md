@@ -18,9 +18,9 @@ Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhos
 
 # About
 
-_Stockholm_ is simply the most feature-rich Ghost theme on the market. Customization is simple via config settings, allowing blog owners to personalize their themes with contextual widgets, fully integrated user sign up, and unique page templates which support unique ways of presenting your content and self. 
+_Stockholm_ is arguably the most feature-rich Ghost theme on the market. With somelight  configuration, users can extend their app's functionality by accessing data which would be otherwise innaccessible vis Ghost, thus introducing a plethora of features and widgets.  Users can personalize their themes via simple config files, enabling contextual widgets, fully integrated user sign ups, and unique page templates. 
 
-This project is in *active development*; you are welcome to use this theme, but oddities _will_ exist until more user-friendly configuration is completed.
+This project is in *active development*. All are welcome to use this theme, but oddities _will_ exist until more user-friendly configuration is completed. For example, certain services are specificslly whitelisted to the working domian and will break when cloned. This is being fixed.
 
 ## Features
 
@@ -75,12 +75,14 @@ For information on installing the Ghost platform, please reference the [Ghost CL
 ### Theme Quickstart
 
 ```
-git clone https://github.com/toddbirchard/ghosttheme-stockholm.git
-
-cd ghosttheme-stockholm
-
-npm install
+$ git clone https://github.com/toddbirchard/ghosttheme-stockholm.git
+$ cd ghosttheme-stockholm
+$ npm install
+$ npm install gulp-cli -g
+$ npm install gulp -D
+$ gulp
 ```
+As always, remeber to restart your ghost instance when introducing new themes or templates.
 
 ### Developers
 
