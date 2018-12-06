@@ -43,7 +43,7 @@
 			let tag = result.tags[0];
 			let url = [location.protocol, '//', location.host].join('');
 			return '<li> \n' +
-				'<img src="' + result.feature_image + '"> \n ' +
+				'<img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/' + result.feature_image + '"> \n ' +
 				'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
 				'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n ' +
 				'</li>';
@@ -75,7 +75,7 @@
 			let tag = result.tags[0];
 			let url = [location.protocol, '//', location.host].join('');
 			return '<li> \n' +
-				'<img src="' + result.feature_image + '"> \n ' +
+				'<img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/' + result.feature_image + '"> \n ' +
 				'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
 				'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n ' +
 				'</li>';
