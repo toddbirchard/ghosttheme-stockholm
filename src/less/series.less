@@ -1,5 +1,11 @@
 .series-template {
 
+  article {
+    @media(max-width:600px){
+          height: 150px !important;
+    }
+  }
+
   i {
     height: 15px !important;
     font-size: 15px !important;
@@ -47,6 +53,12 @@
     justify-content: space-between;
     margin-bottom: 15px;
 
+    .featured-media {
+      margin: 0;
+      height: auto;
+      width: auto;
+    }
+
 
     .details {
       min-width: -webkit-fill-available;
@@ -79,10 +91,17 @@
       }
     }
 
-    .featured-media {
+    .post-card-image {
       min-width: 250px;
       height: 200px;
       margin: 0;
+
+      @media(max-width: 600px) {
+        background-position-x: center;
+        background-size: cover;
+        min-width: 200px;
+        width: -webkit-fill-available !important;
+      }
     }
 
 
