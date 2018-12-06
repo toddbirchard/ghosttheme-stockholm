@@ -2,7 +2,7 @@
 
 <div class="author-card-small {{slug}}">
   {{#if cover_image}}
-  <div class="author-cover" style="background:url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{cover_image}})">
+  <div class="author-cover" style="background:url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{cover_image}})">
   </div>
   {{else}}
   <div class="author-cover">
@@ -10,7 +10,7 @@
   {{/if}}
   <div class="author-specs">
   {{#if profile_image}}
-    <a href="{{url}}" class="avatar-link"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{profile_image}}" alt="Author image" class="avatar"></a>
+    <a href="{{url}}" class="avatar-link"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{profile_image}}" alt="Author image" class="avatar"></a>
   {{else}}
     <a href="{{url}}" class="avatar-link"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar"></a>
   {{/if}}
