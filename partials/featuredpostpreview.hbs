@@ -7,7 +7,7 @@
 
   {{#if feature_image}}
     <div class="featured-media">
-      <a href="{{url}}"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{feature_image}}" alt="{{{title}}}"></a>
+      <a href="{{url}}"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{feature_image}}" alt="{{{title}}}"></a>
       {{!-- div class="postimage" style="background:url({{feature_image}});" alt="{{{title}}}"></div> --}}
     </div>
   {{/if}}
@@ -30,7 +30,7 @@
             <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
           {{/unless}}
           {{#if profile_image}}
-            <a href="{{url}}" class="meta-item author"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+            <a href="{{url}}" class="meta-item author"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
           {{/if}}
         {{/primary_author}}
         <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>
