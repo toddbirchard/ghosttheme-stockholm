@@ -1,6 +1,3 @@
-
-
-
 <!-- start header -->
 <nav class="main-navigation">
 		{{navigation}}
@@ -8,15 +5,10 @@
 <header class="main-header videoHeader">
 		<!-- start logo -->
 	{{#if @blog.logo}}
-		<a class="branding" href="{{@blog.url}}"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{@blog.logo}}" alt="{{@blog.title}}"></a>
+		<a class="branding" href="{{@blog.url}}"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{@blog.logo}}" alt="{{@blog.title}}"></a>
 	{{else}}
 		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
 	{{/if}}
 	<!-- start navigation -->
 
-	{{^is "post"}}
-	<video class="videoObject" autoplay muted loop id="myVideo">
-		<source src="https://hackersandslackers.com/assets/vid/bg2.mp4" type="video/mp4">
-	</video>
-	{{/is}}
 </header>
