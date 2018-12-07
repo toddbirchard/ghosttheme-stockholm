@@ -22,7 +22,7 @@
 								{{#foreach tags visibility="internal"}}
 									<div class="tag-wrapper">
 										<a href="{{slug}}">
-											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" {{#if feature_image}} style="background-image: url({{feature_image}});" {{/if}}></div>
+											{{#if feature_image}}<div class="img-wrapper>{{feature_image}}</div>{{/if}}
 											<div class="description">
 												<h2>{{meta_title}}</h2>
 												<p>{{description}}</p>
