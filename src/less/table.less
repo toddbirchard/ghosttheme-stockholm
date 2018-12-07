@@ -36,11 +36,13 @@ table {
 
     th {
       text-align: center;
-      font-family: CompassSans-Medium;
+      font-family: 'CompassSans-Regular';
       min-width: 30px;
+      padding: 10px;
+      font-size: .9em;
 
       &::before{
-         font-family: CompassSans-Medium!important;
+         font-family: 'CompassSans-Medium' !important;
       }
     }
   }
@@ -94,6 +96,7 @@ td, th{
   text-align: center;
   font-size:.8em;
   text-align: center;
+  line-height: 1.2;
 }
 
 // Responsive Table
@@ -218,6 +221,7 @@ td, th{
 }
 
 .tableContainer {
+  margin-top: 30px;
   @media (max-width: 600px){
     margin-left: calc(~"-50vw + 50%");
     margin-right: calc(~"-50vw + 50%");
