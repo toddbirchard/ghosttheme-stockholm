@@ -23,7 +23,8 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   imageminJpegtran = require('imagemin-jpegtran'),
   fs = require('fs'),
-  path = require('path');
+  path = require('path'),
+  assemble = require('assemble');
 
 var paths = {
   styles: {
