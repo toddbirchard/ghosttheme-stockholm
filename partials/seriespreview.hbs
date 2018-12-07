@@ -5,16 +5,12 @@
         <div class="post-card-image" style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/upload//images/{{img_url feature_image}})"></div>
       </a>
     {{/if}}
-
     <div class="details">
       <div class="post-head">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         <span class="post-excerpt"  aria-hidden="true">{{#foreach tags visibility="internal" include="count.posts"}}{{meta_title}}:{{/foreach}} Post {{@number}}</span>
         <span class="post-count">{{excerpt words="40"}}</span>
     </div>
-
-
-
       <div class="post-permalink">
         <div class="meta">
           {{#primary_tag}}
@@ -48,5 +44,4 @@ $( document ).ready(function() {
     $('.sort i').addClass('flip');
   });
 });
-
 </script>

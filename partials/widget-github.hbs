@@ -1,5 +1,4 @@
 <!-- start widget -->
-
 <div class="widget github" style="display:none;">
   <h3 class="title">Github</h3>
   <div class="widget-body">
@@ -21,9 +20,6 @@
     widget.init();
     $('.github').css('display', 'block');
   }
-
-  //const  = stitch.Stitch.initializeDefaultAppClient('authors-rxtmg');
-  //const db = .getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
 
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
     console.log('logged in anonymously as user')
