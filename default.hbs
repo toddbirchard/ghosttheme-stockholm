@@ -19,9 +19,9 @@
 	{{> mongodb}}
 
 	{{#is "post"}}
-		<meta property="og:image" content="{{img_url feature_image}}">
+		<meta property="og:image" content="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url feature_image}}">
 	{{else}}
-		<meta property="og:image" content="{{@blog.cover_image}}"/>
+		<meta property="og:image" content="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{@blog.cover_image}}"/>
 	{{/is}}
 	{{> config}}
 	{{> analytics}}
