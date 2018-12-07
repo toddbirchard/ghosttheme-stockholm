@@ -5,7 +5,7 @@
 		{{#get "tags" limit="9" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts DESC"}}
     {{#foreach tags}}
       <div class="recent-single-post">
-				<div class="series-image" style="background:url({{feature_image}})"></div>
+				<div class="series-image" style="background:url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{feature_image}})"></div>
 				<div class="series-info">
         <a href="{{url}}" class="post-title">{{meta_title}}</a>
         {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
