@@ -12,30 +12,53 @@ body {
   flex-flow: row;
   flex-wrap: wrap;
   width: 100%;
+  color: white;
 }
 
-.repo-title{
+.repo-title {
   font-family: 'CompassSans-Regular',serif;
-  font-size: 18px;
+  font-size: 18px !important;
+  font-weight: 500;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .github-card {
   display: block;
   box-sizing: border-box;
   border: 1px solid @gray;
-  margin: @spacing/2;
+  margin: 10px 0;
   padding: @spacing;
   color: @text;
   text-decoration: none;
   font-size: 13px;
   flex: 1;
   min-width: 250px;
+  border-radius: 3px;
 
-  > h3 {
+   h3 {
     margin-top: 0;
     color: @color-github;
-    font-size: 15px;
+    font-size: 18px !important;
+
+    &:hover {
+      color: white;
+    }
   }
+
+
+
+  &:hover {
+    background: #1fc1c1;
+
+    p {
+      color: white;
+    }
+  }
+
+
 }
 
 .github-card__meta {
