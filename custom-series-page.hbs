@@ -21,7 +21,7 @@
 								{{#foreach tags visibility="internal"}}
 									<div class="tag-wrapper">
 										<a href="{{slug}}">
-											{{#if feature_image}}<div class="img-wrapper" style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{feature_image}})"></div>{{/if}}
+											{{#if feature_image}}<div class="img-wrapper" style="background-image: url({{feature_image}})"></div>{{/if}}
 											<div class="description">
 												<h2>{{meta_title}}</h2>
 												<p>{{description}}</p>
