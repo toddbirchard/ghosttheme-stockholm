@@ -5,7 +5,7 @@
 		{{#get "tags" limit="9" filter="feature_image:-null" include="count.posts,meta_title,slug" order="count.posts DESC"}}
     {{#foreach tags}}
       <div class="recent-single-post series-item ">
-				<div class="series-image {{slug}}"></div>
+				<a href="{{url}}"><div class="series-image {{slug}}"></div></a>
 				<div class="series-info">
         <a href="{{url}}" class="post-title">{{meta_title}}</a>
         {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
