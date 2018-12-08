@@ -1,12 +1,12 @@
 
 <div class="article-preview">
   <a href="{{url}}">
-    <div class="img-wrapper " style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544204393/images{{img_url feature_image}});"></div>
+    <div class="img-wrapper " style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url feature_image}});"></div>
     <div class="description">
       <h5 class="related-title">{{title}}</h5>
       {{#primary_author}}
         {{#if profile_image}}
-          <a href="{{url}}" class="author-mobile"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544204393/images{{img_url profile_image}}" alt="Author image" class="avi"><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMMM DD"}}</span></div></a>
+          <a href="{{url}}" class="author-mobile"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url profile_image}}" alt="Author image" class="avi"><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMMM DD"}}</span></div></a>
         {{/if}}
       {{/primary_author}}
     </div>
