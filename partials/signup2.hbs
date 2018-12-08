@@ -31,16 +31,18 @@
 </div>
 
 <script>
+  function validate(){
+    var sub = $('#signup-subscription').is(":checked");
+        if (sub) {
+          return false;
+        }
+  }
+
   $(document).ready(function() {
     $('#signup-subscription').css('opacity', 0);
     $('#signup-subscription').css('position', 'absolute');
     $('#signup-form').ajaxForm({
-      beforeSubmit: validate
+      beforeSubmit: validate();
     });
-
-  var sub = $('#signup-subscription').is(":checked");
-      if (sub) {
-        return false;
-      }
-    });
+  });
 </script>
