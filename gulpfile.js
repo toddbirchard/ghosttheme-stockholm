@@ -130,15 +130,15 @@ function image_loop() {
 }*/
 
 function watch() {
-  browserSync.init({
+  /*browserSync.init({
         server: {
             baseDir: "./"
         }
-    });
+    });*/
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.styles.src).on('change', browserSync.reload);
-  gulp.watch(paths.scripts.src).on('change', browserSync.reload);
+  // gulp.watch(paths.styles.src).on('change', browserSync.reload);
+  // gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
 var build = gulp.parallel(styles, scripts, watch); // , image_loop
