@@ -17,16 +17,13 @@ $('.post.tag-retina-4k img').attr('data-rjs', 4);
 
 <script>
 $('img').each(function(obj, value){
-  var cloud = 'https://res.cloudinary.com/hackers-and-slackers/image/upload/images/';
   var image = $(this).attr('href').text();
-  var filename = image.split('/')[-1];
-  var newURL = cloud + filename;
-  $(this).attr('href, newURL');
-  console.log(newURL);
-  /*if ($(image:contains('/content/images/'))) {
-    var index1 = image.indexOf("/content/images/");
-    var urlEnding = image.split("/content/images/").split()[-1];
-    urlEnding.split()[-1];
-  }*/
+  if (image.indexOf("cloudinary.com") == 0){
+    var cloud = 'https://res.cloudinary.com/hackers-and-slackers/image/upload/images/';
+    var filename = image.split('/')[-1];
+    var newURL = cloud + filename;
+    $(this).attr('href, newURL');
+    console.log(newURL);
+  }
 });
 </script>
