@@ -18,8 +18,7 @@ var gulp = require('gulp'),
   resolveDependencies = require('gulp-resolve-dependencies'),
   terser = require('gulp-terser'),
   imagemin = require('gulp-imagemin'),
-  imageminJpegtran = require('imagemin-jpegtran'),
-  browserSync = require('browser-sync').create();
+  imageminJpegtran = require('imagemin-jpegtran');
   // fs = require('fs'),
   // path = require('path'),
   // assemble = require('assemble');
@@ -52,8 +51,7 @@ function styles() {
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
     .pipe(postcss([cssDeclarationSorter({ order: 'smacss'})]))
     .pipe(concat('main.min.css'))
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(paths.styles.dest));
 }
 
 function scripts() {
@@ -130,15 +128,8 @@ function image_loop() {
 }*/
 
 function watch() {
-  /*browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });*/
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
-  // gulp.watch(paths.styles.src).on('change', browserSync.reload);
-  // gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
 var build = gulp.parallel(styles, scripts, watch); // , image_loop
