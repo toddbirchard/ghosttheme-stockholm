@@ -5,7 +5,7 @@
         <div class="post-card-image" style="background-image: url({{img_url feature_image}})">
           <div class="post-count">
             {{#foreach tags visibility="internal" include="count.posts"}}
-              Post {{@number}} of {{count.posts}}
+              Post {{@number}} of {{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}
             {{/foreach}}
         </div>
         </div></div>
