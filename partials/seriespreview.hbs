@@ -25,8 +25,8 @@
               </a>
             {{/unless}}
             {{#if profile_image}}
-              <a href="{{url}}" class="meta-item author"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
-              <a href="{{url}}" class="author-mobile"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{img_url profile_image}}" alt="Author image" class="avi">
+              <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+              <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi">
                 <div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div>
               </a>
             {{/if}}
