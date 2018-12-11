@@ -16,7 +16,7 @@
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. This theme can be  previewed via our live site, which runs off this theme: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
-![Stockholm Theme](assets/images/stockholm.jpg)
+![Stockholm Theme](assets/images/stockholm3.jpg)
 
 # About
 
