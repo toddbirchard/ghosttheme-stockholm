@@ -10,7 +10,7 @@
     padding: 0 !important;
     margin: 30px auto;
     border-radius: 5px;
-    max-width: 95%;
+    max-width: 100%;
     @media(max-width: 600px) {
       max-width: none;
       /*margin-left: calc(~"-50vw + 50%") !important;
@@ -79,7 +79,7 @@
     }
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       font-size: 1.2em;
       font-family: 'CompassSans-Regular';
@@ -117,7 +117,7 @@
     background: #2a3552!important;
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -211,7 +211,7 @@
     }
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       width: 110%;
       height: auto;
       background: #121925;
@@ -358,7 +358,7 @@
     }
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -452,7 +452,7 @@
     }
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -466,10 +466,11 @@
       position: relative;
     }
   }
-
-  .hljs.css .language-css {
+/*
+  pre > .hljs.css,
+  pre > .language-css {
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -483,11 +484,11 @@
       position: relative;
     }
   }
-
+*/
   .hljs.ini,
   .language-ini {
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -524,7 +525,7 @@
     background: #272738 !important;
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
@@ -539,8 +540,8 @@
     }
   }
 
-  .javascript,
-  .language-javascript {
+  pre > .javascript,
+  pre > .language-javascript {
     font-size: 14px;
     line-height: 1.6;
     direction: ltr;
@@ -642,12 +643,12 @@
     }
 
     &::before {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       margin-left: -40px;
       width: 110%;
       height: auto;
       background: #23232e;
-      content: "\f3b8" !important;
+      content: "Javascript" !important;
       color: white;
       display: block;
       font-style: normal;

@@ -7,7 +7,6 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify-es'),
   rename = require('gulp-rename'),
-  handlebars = require('gulp-handlebars'),
   declare = require('gulp-declare'),
   cleanCSS = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -15,15 +14,14 @@ var gulp = require('gulp'),
   cssDeclarationSorter = require('css-declaration-sorter'),
   precss = require('precss'),
   babel = require('gulp-babel'),
-  responsive = require('gulp-responsive'),
+  //responsive = require('gulp-responsive'),
   resolveDependencies = require('gulp-resolve-dependencies'),
-  livereload = require('gulp-livereload'),
-  browserSync = require('browser-sync'),
   terser = require('gulp-terser'),
   imagemin = require('gulp-imagemin'),
-  imageminJpegtran = require('imagemin-jpegtran'),
-  fs = require('fs'),
-  path = require('path');
+  imageminJpegtran = require('imagemin-jpegtran');
+  // fs = require('fs'),
+  // path = require('path'),
+  // assemble = require('assemble');
 
 var paths = {
   styles: {
@@ -44,16 +42,16 @@ var paths = {
   }
 };
 
+
 function styles() {
   return gulp.src(paths.styles.src)
     .pipe(less())
     .pipe(rename({basename: 'main', suffix: '.min'}))
-    .pipe(cleanCSS({debug: true}))
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
     .pipe(postcss([cssDeclarationSorter({ order: 'smacss'})]))
-    .pipe(concat('main.min.css')).pipe(gulp.dest(paths.styles.dest))
-    .pipe(livereload())
-    .pipe(browserSync.stream());
+    .pipe(concat('main.min.css'))
+    .pipe(cleanCSS({debug: true}))
+    .pipe(gulp.dest(paths.styles.dest));
 }
 
 function scripts() {
@@ -66,17 +64,7 @@ function scripts() {
   .pipe(terser())
   .pipe(gulp.dest(paths.scripts.dest));
 }
-
-function templates() {
-  gulp.src('views/*.hbs').pipe(handlebars())
-  //.pipe(wrap('Handlebars.template(<%= contents %>)'))
-    .pipe(declare({
-    namespace: 'MyApp.templates', noRedeclare: true, // Avoid duplicate declarations
-  })).pipe(concat('templates.js'))
-}
-
-
-
+/*
 function responsive() {
   return gulp.src(paths.images.src + '/2018/*.jpg')
   .pipe(imagemin(
@@ -137,16 +125,14 @@ function image_loop() {
       images(folders[i]);
     }
   });
-}
+}*/
 
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.styles.src).on('change', browserSync.reload);
-  gulp.watch(paths.scripts.src).on('change', browserSync.reload);
 }
 
 var build = gulp.parallel(styles, scripts); // , image_loop
 
-gulp.task(build);
+//gulp.task(build);
 gulp.task('default', build);

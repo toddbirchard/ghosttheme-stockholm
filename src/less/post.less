@@ -23,6 +23,11 @@
 		}
 	}
 
+	& > p {
+		font-size: 1em;
+    margin: 0 0 30px !important;
+  }
+
 	.embedly-card {
 		@media(max-width: 600px) {
 			margin-left: calc(~"-50vw + 50%") !important;
@@ -60,6 +65,7 @@
 		a {
 			color: @h1-color;
 			transition: all 0.2s ease-out;
+			font-family: 'HackerSans-Medium', 'CompassSans-Medium' !important;
 
 			&:hover {
 				color: @secondary-color;
@@ -67,10 +73,15 @@
 		}
 	}
 
+	.cp_embed_wrapper {
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+
 	.excerpt {
 		font-weight: 100;
 		font-size: 1.4em;
-		margin: 10px 60px 40px;
+		margin: 10px 60px 25px;
 		line-height: 1.2;
 		color: @h1-color;
 		font-family: 'HackerSans-Medium', 'CompassSans-Regular';
@@ -139,7 +150,7 @@
 
 	p {
 		text-align: left;
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 1.7;
 		@media(max-width: 600px) {
 			font-size: 1em;
@@ -463,6 +474,10 @@
 	.post-content {
 		margin: 10px 60px 30px;
 
+		& > p {
+			 margin: 0 0 30px !important;
+		}
+
 		a {
 			color: @theme-color;
 			font-family: 'CompassSans-Regular';
@@ -632,8 +647,8 @@
 		margin-top: -10px;
 		width: 100%;
 		@media(max-width: 600px) {
-			margin-top: 0;
-			font-size: 14px !important;
+			margin-top: -5px;
+			font-size: 12px !important;
 			padding: 10px 0;
 			height: auto;
 			line-height: 1.5;
@@ -714,10 +729,10 @@
 			margin-left: 10px;
 			padding-left: 0;
 			margin-bottom: 30px;
-			margin-top: 0;
+			margin-top: 20px;
 
 			@media(max-width:600px) {
-				margin: 0 15px;
+				margin: 15px 15px 0;
 				padding-left: 0;
 			}
 
@@ -826,7 +841,7 @@
 	}
 	figure {
 		width: fit-content;
-		max-width: 95%;
+		max-width: 100%;
 		margin: 30px auto 30px;
 		overflow: visible;
 		box-shadow: 1px 0px 1px rgba(154, 154, 165, 0.27);

@@ -7,22 +7,21 @@
 	{{! Page Meta }}
 	<title>{{meta_title}}</title>
 	<meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	{{! Styles }}
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
 	{{! Scripts }}
 	<script type="text/javascript" src="{{@blog.url}}/public/ghost-sdk.min.js"></script>
 	<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.0.8/stitch.js"></script>
 	<script async src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	<script async src="{{asset "/js/includes/jquery.md5.js"}}"></script>
-	<script src="//cdn.jsdelivr.net/g/jquery@1.11.3,honeyjs@1.1.0"></script>
+	<script type="text/javascript" src="{{asset "/js/includes/retina.min.js"}}"></script>
 
 	{{> mongodb}}
 
 	{{#is "post"}}
-		<meta property="og:image" content="{{img_url feature_image}}">
+		<meta property="og:image" content="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544204393/images{{img_url feature_image}}">
 	{{else}}
-		<meta property="og:image" content="{{@blog.cover_image}}"/>
+		<meta property="og:image" content="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544204393/images{{@blog.cover_image}}"/>
 	{{/is}}
 	{{> config}}
 	{{> analytics}}
