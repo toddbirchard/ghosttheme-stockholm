@@ -335,8 +335,8 @@ var themeApp = {
 
 
     let sb = new ScrollBooster({
-      viewport, // this parameter is required
-      content, // scrollable element
+      viewport: document.querySelector('.tableContainer'), // this parameter is required
+      content: viewport.querySelector('tbody'), // scrollable element
       mode: 'x', // scroll only in horizontal dimension
       bounce: true,
       onUpdate: (data) => {
