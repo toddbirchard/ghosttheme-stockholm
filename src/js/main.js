@@ -370,7 +370,8 @@ var themeApp = {
       expressjs: '<i class="fab fa-etsy"></i>',
       atlassian: '<i class="fab fa-trello"></i>',
       codesnippetcorner: '<i class="fal fa-laptop-code"></i>',
-      saas: '<i class="fal fa-desktop-alt"></i>'
+      saas: '<i class="fal fa-desktop-alt"></i>',
+      datavis: '<i class="fal fa-chart-pie"></i>'
     };
 
     for (var key in tags) {
