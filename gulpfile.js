@@ -47,10 +47,10 @@ function styles() {
   return gulp.src(paths.styles.src)
     .pipe(less())
     .pipe(rename({basename: 'main', suffix: '.min'}))
-    .pipe(cleanCSS({debug: true}))
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
     .pipe(postcss([cssDeclarationSorter({ order: 'smacss'})]))
     .pipe(concat('main.min.css'))
+    .pipe(cleanCSS({debug: true}))
     .pipe(gulp.dest(paths.styles.dest));
 }
 
