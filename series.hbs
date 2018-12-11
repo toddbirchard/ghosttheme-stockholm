@@ -14,15 +14,13 @@
 							<div class="sort">
 								<span class="sort-title">Sort</span> <span class="sort-method">desc</span> <i class="fal fa-arrow-to-bottom"></i>
 							</div>
+								{{#foreach posts include="tags"}}
+		            		{{> seriespreview}}
+		            {{/foreach}}
 							</div>
-							{{#foreach posts include="tags"}}
-	            		{{> seriespreview}}
-	            {{/foreach}}
 							{{pagination}}
 						</div>
 						</div>
 					</div>
-				</div>
-	</div>
 </section>
 <!-- end site's main content area -->
