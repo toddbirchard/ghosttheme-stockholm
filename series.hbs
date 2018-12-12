@@ -8,6 +8,7 @@
 			{{> sidebar}}
 				<!-- start main post area -->
 				<div class=" main-content">
+					{{#page}}
 					<div class="postlist">
 						{{> cover-tag}}
 						<div class="sort-container">
@@ -21,6 +22,7 @@
 							{{pagination}}
 						</div>
 						</div>
+						{{/page}}
 					</div>
 </section>
 <!-- end site's main content area -->
