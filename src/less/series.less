@@ -45,8 +45,6 @@
     }
   }
 
-
-
   article {
     display:flex;
     flex-direction: row;
@@ -60,26 +58,62 @@
     }
 
 
+    .featured-media {
+      margin: 0;
+      height: auto;
+      width: auto;
+      position: relative;
+
+      @media(max-width: 600px) {
+        max-width: 115px;
+        height: 100% !important;
+      }
+    }
+
+    .mobile-name,
+    .mobile-date {
+      display:none;
+    }
+
+    .series-post-count {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: #1ab1d4;
+      color: #fff;
+      font-family: 'CompassSans-Medium';
+      box-shadow: 1px 1px 1px rgba(67, 67, 84, .9);
+    }
+
+
     .details {
-      min-width: -webkit-fill-available;
+      width: -webkit-fill-available;
       padding: 20px;
 
       .post-head {
         width: 460px;
+
+        @media(max-width: 600px) {
+          width: -webkit-fill-available;
+          overflow: hidden;
+        }
 
         .post-title {
           font-size: 1.5em!important;
           font-weight: 900;
           width: 379px;
           margin: 0 0 15px;
+
+          @media(max-width: 600px) {
+            width: -webkit-fill-available;
+            overflow: hidden;
+          }
         }
 
-        .post-excerpt,
-        .post-count {
+        .post-excerpt {
           display: block;
         }
-
-
 
         .postcount {
           font-family: 'CompassSans-Regular',serif;
@@ -88,6 +122,10 @@
       }
       .post-permalink {
         padding: 0;
+
+        @media(max-width: 600px) {
+          display: none;
+        }
       }
     }
 
@@ -99,8 +137,19 @@
       @media(max-width: 600px) {
         background-position-x: center;
         background-size: cover;
+<<<<<<< HEAD
         max-width: -webkit-fill-available !important;
         width: -webkit-fill-available !important;
+=======
+        min-width: 150px;
+        width: -webkit-fill-available !important;
+        display: none;
+
+        a {
+          display: block;
+          min-width: 150px;
+        }
+>>>>>>> 22d3acaba88a6c4ea30a4447caddafc62632d5fd
       }
     }
 

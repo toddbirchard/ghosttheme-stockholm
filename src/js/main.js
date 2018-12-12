@@ -335,8 +335,8 @@ var themeApp = {
 
 
     let sb = new ScrollBooster({
-      viewport, // this parameter is required
-      content, // scrollable element
+      viewport: document.querySelector('.tableContainer'), // this parameter is required
+      content: viewport.querySelector('tbody'), // scrollable element
       mode: 'x', // scroll only in horizontal dimension
       bounce: true,
       onUpdate: (data) => {
@@ -370,7 +370,8 @@ var themeApp = {
       expressjs: '<i class="fab fa-etsy"></i>',
       atlassian: '<i class="fab fa-trello"></i>',
       codesnippetcorner: '<i class="fal fa-laptop-code"></i>',
-      saas: '<i class="fal fa-desktop-alt"></i>'
+      saas: '<i class="fal fa-desktop-alt"></i>',
+      datavis: '<i class="fal fa-chart-pie"></i>'
     };
 
     for (var key in tags) {

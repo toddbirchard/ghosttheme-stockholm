@@ -1,52 +1,48 @@
-
 <article class="{{post_class}} post-preview">
-    {{#if feature_image}}
-      <a href="{{url}}" class="featured-media" href="{{url}}">
-        <div class="post-card-image" style="background-image: url({{img_url feature_image absolute="true"}})"></div>
-      </a>
-    {{/if}}
-
-    <div class="details">
-      <div class="post-head">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <span class="post-excerpt"  aria-hidden="true">{{#foreach tags visibility="internal" include="count.posts"}}{{meta_title}}:{{/foreach}} Post {{@number}}</span>
-        <span class="post-count">{{excerpt words="40"}}</span>
-    </div>
-
-
-
-      <div class="post-permalink">
-        <div class="meta">
-          {{#primary_tag}}
-            <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
-          {{/primary_tag}}
-          {{#primary_author}}
-            {{primary_author.bio}}
-            {{#unless profile_image}}
-              <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-              <a href="{{url}}" class="author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
-                <div class="info"><span>{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div>
-              </a>
-            {{/unless}}
-            {{#if profile_image}}
-              <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
-              <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi">
-                <div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div>
-              </a>
-            {{/if}}
-          {{/primary_author}}
-          <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
+  {{#if feature_image}}
+    <a href="{{url}}" class="featured-media" href="{{url}}">
+      <div class="post-card-image" style="background-image: url({{img_url feature_image}})">
+        <div class="series-post-count">
+          <span>Post {{@number}}</span>
         </div>
       </div>
+    </a>
+  {{/if}}
+  <div class="details">
+    <div class="post-head">
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+      <span class="post-excerpt">{{excerpt words="40"}}</span>
     </div>
+    <div class="post-permalink">
+      <div class="meta">
+        {{#primary_tag}}
+          <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+        {{/primary_tag}}
+        {{#primary_author}}
+          {{primary_author.bio}}
+          {{#unless profile_image}}
+            <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+            <a href="{{url}}" class="author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
+            <!--<div class="info"><span>{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div>-->
+            </a>
+          {{/unless}}
+          {{#if profile_image}}
+            <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="Author image" class="avi"><span>{{name}}</span></a>
+            <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="Author image" class="avi" /></a>
+            <div class="info"><span class="mobile-name">{{slug}}</span><!--<span class="mobile-date">{{date format="MMM DD"}}</span>--></div>
+          {{/if}}
+        {{/primary_author}}
+        <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
+      </div>
+    </div>
+  </div>
 </article>
 
 <script>
-$( document ).ready(function() {
-  $('.sort').on('click', function(e){
-    $('.sort-method').html('asc');
-    $('.sort i').addClass('flip');
+  $(document).ready(function() {
+    $('.sort').on('click', function(e) {
+      $('.sort-method').html('asc');
+      $('.sort i').addClass('flip');
+    });
   });
-});
-
 </script>

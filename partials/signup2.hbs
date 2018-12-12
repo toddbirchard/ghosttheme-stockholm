@@ -9,11 +9,12 @@
   <p class="description" style="visibility: hidden;">Automation is inevitable. Join the winning side.</p>
   <p class="text_max un" style="visibility: hidden;">Step up your shitposting game.</p>
 
+
   <form id="signup-form" action="https://us-central1-hackersandslackers-204807.cloudfunctions.net/new-account" method="POST" class="signup-form un" style="visibility:hidden;">
     <input id="signup-username" type="text" name="username" placeholder="username" required>
     <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
     <input id="signup-gravatar" type="text" name="gravatar" visibility="hidden">
-    <input id="signup-subscription" type="checkbox" name="subscribe">
+    <!--<input id="signup-subscription" type="checkbox" name="subscribe">-->
     <!--<input id="signup-checkbox" type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">-->
     <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
     <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>-->
@@ -31,6 +32,13 @@
 </div>
 
 <script>
+  function validate(){
+    var sub = $('#signup-subscription').is(":checked");
+        if (sub) {
+          return false;
+        }
+  }
+
   $(document).ready(function() {
     $('#signup-subscription').css('opacity', 0);
     $('#signup-subscription').css('position', 'absolute');
@@ -38,9 +46,4 @@
       //beforeSubmit: validate
     });
 
-  /*var sub = $('#signup-subscription').is(":checked");
-      if (sub) {
-        return false;
-      }
-    });*/
 </script>

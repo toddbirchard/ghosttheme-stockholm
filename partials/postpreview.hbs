@@ -7,7 +7,7 @@
 
   {{#if feature_image}}
         <a href="{{url}}" class="featured-media" href="{{url}}">
-          <div class="post-card-image" style="background-image: url({{img_url feature_image absolute="true"}})"></div>
+          <div class="post-card-image" style="background-image: url({{img_url feature_image}})"></div>
         </a>
   {{/if}}
 
@@ -21,9 +21,6 @@
         {{content words="60"}}
       </div>
     {{/has}}
-
-    {{> series-headline}}
-
 
     <div class="post-permalink">
       <div class="meta">

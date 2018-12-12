@@ -28,10 +28,10 @@
 	@media(max-width: 1000px) {
 		padding: 30px;
 	}
-	@media(max-width: 800px) {
+	@media(max-width: 600px) {
 		margin-top: 10px;
 		display: block;
-		padding: 30px;
+		padding: 0px 20px 20px;
 	}
 
 	#newsletter-footer {
@@ -44,7 +44,7 @@
 		transition: all 0.3s ease-out;
 		position: relative;
 
-		@media(max-width: 600px){
+		@media(max-width: 800px){
 			width: -webkit-fill-available;
 			max-width: none;
 		}
@@ -82,8 +82,6 @@
 				color: grey;
 			}
 
-
-
 			button {
 				width: 100%;
 				background: #039c8c;
@@ -108,7 +106,7 @@
 				border: 1px solid #d5dbe6;
 				transition: all 0.3s all;
 				width: 100%;
-				margin-bottom: 10px;
+				margin-bottom: 0;
 				padding: 14px 15px;
 				border: 0;
 				border-radius: 3px;
@@ -244,7 +242,8 @@
 	.contributors {
 		.single-author-name {
 			font-size: 0.9em !important;
-			font-family: CompassSans-Medium, sans-serif !important;
+			font-family: 'CompassSans-Medium', sans-serif !important;
+
 		}
 
 		.role {
@@ -326,7 +325,7 @@
 				font-weight: 200;
 				font-family: 'CompassSans-Medium', serif;
 				transition: all 0.2s ease;
-				border-bottom: 1px dashed rgba(53, 37, 68, 0.29) !important;
+				border-bottom: 1px dashed rgba(90, 87, 93, 0.29) !important;
 
 				&:last-child {
 					border-bottom: none !important;
@@ -430,5 +429,9 @@
 
 	.widget.tag {
 		min-width: 34%;
+
+		@media(max-width: 600px){
+			padding: 0;
+		}
 	}
 }
