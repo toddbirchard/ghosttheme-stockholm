@@ -391,6 +391,12 @@ var themeApp = {
     });
   });
   },
+  retina: function() {
+    // Order matters!!
+    $('.post.tag-retina img').attr('data-rjs', 2);
+    $('.post.tag-retina-hd img').attr('data-rjs', 3);
+    $('.post.tag-retina-4k img').attr('data-rjs', 4);
+  },
   init: function() {
     themeApp.featuredMedia();
     themeApp.sidebarConfig();
@@ -399,6 +405,7 @@ var themeApp = {
     themeApp.adjustTileHeight();
     themeApp.mobileNavigation();
     themeApp.triggerSignup();
+    themeApp.retina();
     themeApp.tags();
 
     if ($('body').hasClass('post-template')) {

@@ -1,29 +1,14 @@
 <!-- scripts -->
-<script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-{{#is "post"}}<script src="{{asset "/js/includes/scrollbooster.min.js"}}"></script>{{/is}}
-{{#is "post"}}<script src="{{asset "/js/lightbox.js"}}"></script>{{/is}}
-{{#has author="Matt Alhonte"}}<script async src="{{asset "/js/includes/previews.js"}}"></script>{{/has}}
+{{#is "post"}}
+  <script src="{{asset "/js/includes/scrollbooster.min.js"}}"></script>
+  <script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
+  <script src="{{asset "/js/lightbox.js"}}"></script>
+  {{#has author="Matt Alhonte"}}
+    <script async src="{{asset "/js/includes/previews.js"}}"></script>
+  {{/has}}
+{{/is}}
+
 <script src="{{asset "/js/main.min.js"}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
-
-
-<script>
-$(document).ready(function() {
-  // Order matters!!
-  $('.post.tag-retina img').attr('data-rjs', 2);
-  $('.post.tag-retina-hd img').attr('data-rjs', 3);
-  $('.post.tag-retina-4k img').attr('data-rjs', 4);
-
-  $('img').each(function(obj, value){
-    var image = $(this).attr('href').text();
-    if (image.indexOf("cloudinary.com") == 0){
-      var cloud = 'https://res.cloudinary.com/hackers-and-slackers/image/upload/images/';
-      var filename = image.split('/')[-1];
-      var newURL = cloud + filename;
-      $(this).attr('href, newURL');
-      console.log(newURL);
-    }
-  });
-});
-</script>
