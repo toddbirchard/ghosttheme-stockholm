@@ -4,7 +4,7 @@
 	{{#if profile_image}}
 		<a href="{{url}}" class="avatar"><img src="{{profile_image}}" alt="Author image"></a>
 		{{else}}
-		<a href="{{url}}" class="avatar"><img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{asset "images/default-user-image.jpg"}}" alt="Author image"></a>
+		<a href="{{url}}" class="avatar"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image"></a>
 	{{/if}}
 	<div class="details">
 		<div class="author">

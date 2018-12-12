@@ -7,8 +7,8 @@
 
   {{#if feature_image}}
     <div class="featured-media">
-      <a href="{{url}}"><img src="https://res.cloudinary.com/hackers-and-slackers/image/fetch/{{img_url feature_image absolute="true"}}" alt="{{{title}}}"></a>
-      <<!--div class="postimage" style="background:url(https://res.cloudinary.com/hackers-and-slackers/image/fetch/{{img_url feature_image absolute="true"}});" alt="{{{title}}}"></div>-->
+      <a href="{{url}}"><img src="{{img_url feature_image absolute="true"}}" alt="{{{title}}}"></a>
+      <<!--div class="postimage" style="background:url({{img_url feature_image absolute="true"}});" alt="{{{title}}}"></div>-->
     </div>
   {{/if}}
 

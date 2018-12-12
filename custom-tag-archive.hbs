@@ -11,10 +11,10 @@
 				{{#post}}
 					<article class="{{post_class}}">
 
-						{{!--{{#if feature_image}}
+						{{#if feature_image}}
 							<div class="featured-media" style="background-image: url({{feature_image}});">
 							</div>
-						{{/if}}--}}
+						{{/if}}
 						<div class="page-head">
 							<h1 class="page-title">{{{title}}}</h1>
 						</div>
@@ -26,7 +26,7 @@
 								{{#foreach tags}}
 									<div class="tag-wrapper">
 										<a href="{{url}}">
-											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" style="background-image: url(https://res.cloudinary.com/hackers-and-slackers/image/upload/images{{img_url feature_image}})"></div>
+											<div class="img-wrapper {{#unless feature_image}}no-image{{/unless}}" style="background-image: url({{img_url feature_image}})"></div>
 											<div class="description">
 												<h2>{{meta_title}}</h2>
 												<p>{{description}}</p>
