@@ -30,20 +30,3 @@
   <h2 class="confirm-head" style="visibility:hidden;">CONGRATS</h2>
   <p class="confirm-description" style="visibility: hidden;">Check your email. Welcome to your new life.</p>
 </div>
-
-<script>
-  function validate(){
-    var sub = $('#signup-subscription').is(":checked");
-        if (sub) {
-          return false;
-        }
-  }
-
-  $(document).ready(function() {
-    $('#signup-subscription').css('opacity', 0);
-    $('#signup-subscription').css('position', 'absolute');
-    $('#signup-form').ajaxForm({
-      //beforeSubmit: validate
-    });
-
-</script>

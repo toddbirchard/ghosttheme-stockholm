@@ -7,23 +7,23 @@
 <script src="{{asset "/js/main.min.js"}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/ghost-search@0.1.0/dist/ghost-search.min.js"></script>
 
-<script>
-// Order matters!!
-$('.post.tag-retina img').attr('data-rjs', 2);
-$('.post.tag-retina-hd img').attr('data-rjs', 3);
-$('.post.tag-retina-4k img').attr('data-rjs', 4);
-</script>
-<!-- end scripts -->
 
 <script>
-$('img').each(function(obj, value){
-  var image = $(this).attr('href').text();
-  if (image.indexOf("cloudinary.com") == 0){
-    var cloud = 'https://res.cloudinary.com/hackers-and-slackers/image/upload/images/';
-    var filename = image.split('/')[-1];
-    var newURL = cloud + filename;
-    $(this).attr('href, newURL');
-    console.log(newURL);
-  }
+$(document).ready(function() {
+  // Order matters!!
+  $('.post.tag-retina img').attr('data-rjs', 2);
+  $('.post.tag-retina-hd img').attr('data-rjs', 3);
+  $('.post.tag-retina-4k img').attr('data-rjs', 4);
+
+  $('img').each(function(obj, value){
+    var image = $(this).attr('href').text();
+    if (image.indexOf("cloudinary.com") == 0){
+      var cloud = 'https://res.cloudinary.com/hackers-and-slackers/image/upload/images/';
+      var filename = image.split('/')[-1];
+      var newURL = cloud + filename;
+      $(this).attr('href, newURL');
+      console.log(newURL);
+    }
+  });
 });
 </script>
