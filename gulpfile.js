@@ -14,14 +14,8 @@ var gulp = require('gulp'),
   cssDeclarationSorter = require('css-declaration-sorter'),
   precss = require('precss'),
   babel = require('gulp-babel'),
-  //responsive = require('gulp-responsive'),
   resolveDependencies = require('gulp-resolve-dependencies'),
-  terser = require('gulp-terser'),
-  imagemin = require('gulp-imagemin'),
-  imageminJpegtran = require('imagemin-jpegtran');
-  // fs = require('fs'),
-  // path = require('path'),
-  // assemble = require('assemble');
+  terser = require('gulp-terser');
 
 var paths = {
   styles: {
