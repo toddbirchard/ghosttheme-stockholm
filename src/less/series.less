@@ -1,8 +1,7 @@
 .series-template {
-
   article {
-    @media(max-width:600px){
-          height: 150px !important;
+    @media(max-width:600px) {
+      height: 150px !important;
     }
   }
 
@@ -12,7 +11,7 @@
   }
 
   .fa-arrow-to-bottom {
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   .flip {
@@ -28,25 +27,24 @@
     padding: 5px 3% 5px 0;
 
     .sort {
-      float:right;
+      float: right;
 
       &:hover {
-        cursor:pointer;
+        cursor: pointer;
       }
 
-      .sort-title{
+      .sort-title {
         font-family: 'CompassSans-Medium';
       }
 
-      .sort-method{
+      .sort-method {
         font-family: 'CompassSans-Regular';
       }
-
     }
   }
 
   article {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -57,22 +55,20 @@
       width: auto;
     }
 
-
     .featured-media {
       margin: 0;
       height: auto;
       width: auto;
       position: relative;
-
       @media(max-width: 600px) {
         max-width: 115px;
         height: 100% !important;
       }
     }
 
-    .mobile-name,
-    .mobile-date {
-      display:none;
+    .mobile-date,
+    .mobile-name {
+      display: none;
     }
 
     .series-post-count {
@@ -86,14 +82,12 @@
       box-shadow: 1px 1px 1px rgba(67, 67, 84, .9);
     }
 
-
     .details {
       width: -webkit-fill-available;
       padding: 20px;
 
       .post-head {
         width: 460px;
-
         @media(max-width: 600px) {
           width: -webkit-fill-available;
           overflow: hidden;
@@ -104,7 +98,6 @@
           font-weight: 900;
           width: 379px;
           margin: 0 0 15px;
-
           @media(max-width: 600px) {
             width: -webkit-fill-available;
             overflow: hidden;
@@ -120,9 +113,9 @@
           font-size: 1.3em;
         }
       }
+
       .post-permalink {
         padding: 0;
-
         @media(max-width: 600px) {
           display: none;
         }
@@ -133,14 +126,11 @@
       min-width: 250px;
       height: 200px;
       margin: 0;
-
       @media(max-width: 600px) {
         background-position-x: center;
         background-size: cover;
-<<<<<<< HEAD
         max-width: -webkit-fill-available !important;
         width: -webkit-fill-available !important;
-=======
         min-width: 150px;
         width: -webkit-fill-available !important;
         display: none;
@@ -149,10 +139,7 @@
           display: block;
           min-width: 150px;
         }
->>>>>>> 22d3acaba88a6c4ea30a4447caddafc62632d5fd
       }
     }
-
-
   }
 }
