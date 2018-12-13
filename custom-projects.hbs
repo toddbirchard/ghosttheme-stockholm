@@ -145,30 +145,4 @@ npm install ghost-cli -g{{!< default}}
 </section>
 
 <script src="{{asset "/js/kanban.js"}}"></script>
-<script>
-	client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
-		db.collection('github').find({}, {
-			limit: 100
-		}).asArray()
-	).then(docs => {
-		console.log("Found docs", docs)
-
-		//Retrieve the template data from the HTML .
-		var template = $('#handlebars-demo').html();
-
-		var context = {
-			"language": "<h3>handlebars</h3>",
-			"adjective": "<h3>awesome</h3>"
-		}
-
-		//Compile the template data into a function
-		var templateScript = Handlebars.compile(template);
-
-		var html = templateScript(context);
-
-		$(document.body).append(html);
-	}).catch(err => {
-		console.error(err)
-	});
-</script>
 <!-- end site's main content area -->
