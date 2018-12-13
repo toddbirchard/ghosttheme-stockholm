@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
   $('.post-content pre').each(function () {
-    console.log('pre = ', $(this).height());
 
     if ($(this).height() >= 400) {
       $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');

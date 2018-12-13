@@ -24,7 +24,6 @@ $(document).ready(function() {
         $in: ['Highest', 'High', 'Medium']
       }
     }, {limit: 6}).asArray()).then(docs => {
-      console.log("Found docs", docs)
       populateCards(docs, 'backlog')
     }).catch(err => {
       console.error(err)
@@ -34,7 +33,6 @@ $(document).ready(function() {
       status: 'To Do',
       issuetype: {$nin: ['Epic']}
     }, {limit: 6}).asArray()).then(docs => {
-      console.log("Found docs", docs)
       populateCards(docs, 'todo')
     }).catch(err => {
       console.error(err)
@@ -44,7 +42,6 @@ $(document).ready(function() {
       status: 'In Progress',
       issuetype: {$nin: ['Epic']}
     }, {limit: 6}).asArray()).then(docs => {
-      console.log("Found docs", docs)
       populateCards(docs, 'progress')
     }).catch(err => {
       console.error(err)
@@ -56,7 +53,6 @@ $(document).ready(function() {
         $in: ['Task', 'Story', 'Integrations', 'Bug']
       }
     }, {limit: 6}).asArray()).then(docs => {
-      console.log("Found docs", docs)
       populateCards(docs, 'done')
     }).catch(err => {
       console.error(err)
