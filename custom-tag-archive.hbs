@@ -25,7 +25,7 @@
 							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" limit="all"}}
 								{{#foreach tags  visibility="internal"}}
 									<div class="tag-wrapper">
-										<a href="{{url}}" title="{{name}}">
+										<a href="/series/{{slug}}" title="{{name}}">
 											<div class="img-wrapper" style="background-image: url({{img_url feature_image}})"></div>
 											<div class="description">
 												<h2>{{meta_title}}</h2>
