@@ -22,7 +22,7 @@
 							{{content}}
 						</div>
 						<div class="tag-container">
-							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
+							{{#get "tags" filter="visibility:internal" include="count.posts,meta_title" order="count.posts desc" }}
 								{{#foreach tags}}
 									<div class="tag-wrapper">
 										<a href="{{url}}">
