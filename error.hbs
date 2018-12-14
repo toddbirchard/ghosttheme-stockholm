@@ -1,0 +1,113 @@
+{{!< default}}
+
+<style>
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+}
+
+header {
+  margin-bottom: 0 !important;
+}
+
+.main-footer {
+  margin-top: 0 !important;
+}
+
+.error-message {
+  position: relative;
+  min-width: 100%;
+  height: 900px;
+  background: url(http://www.reactiongifs.us/wp-content/uploads/2015/04/nothing_to_see_here_naked_gun.gif) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
+  opacity: 1;
+  filter: alpha(opacity=50);
+  margin: 0;
+
+  * {
+    color: white !important;
+  }
+
+  div {
+
+  }
+}
+
+.content {
+  font-family: 'CompassSans-Regular','Avenir',Helvetica,sans-serif;
+  color: #fff;
+  background-color: none;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 160px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white !important;
+  height: 120px;
+}
+
+h2 {
+  margin-top: 0;
+  max-width: 700px;
+  font-size: 30px;
+  width: 90%;
+  color: white !important;
+
+}
+
+p {
+  text-align: left;
+  padding-bottom: 32px;
+  color: white !important;
+}
+
+.error-button {
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 40px;
+  padding: 15px 30px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  color: white !important;
+  &:hover {
+    color: #e2e2e2 !important;
+    background: rgba(255,255,255,0.10) !important;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .error-button {
+    background-color: white;
+    color: #444444;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 120px;
+  };
+}
+
+</style>
+
+<section class="error-message">
+	<div style="height: -webkit-fill-available; padding: 100px 50px !important;">
+    <h1>404</h1>
+    <h2>Oops, the page you're looking for does not exist.</h2>
+    <p>You may want to head back to the homepage.<br />If you think something is broken, report a problem.</p>
+		<a class="error-button" href="/">RETURN HOME</a>
+    <a class="error-button" href="/">REPORT PROBLEM</a>
+	</div>
+</section>
