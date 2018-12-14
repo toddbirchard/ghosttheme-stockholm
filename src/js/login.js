@@ -19,16 +19,16 @@ function displaySuccess(successMessage) {
   clearNotifications();
   $('#success').css('display', 'block');
   $('#info').css('display', 'block');
-  successEl.innerText = successMessage
+  successEl.innerText = successMessage;
 }
 
 function clearNotifications() {
-  [errorEl, successEl].forEach(el => el.innerText = "")
+  [errorEl, successEl].forEach(el => el.innerText = "");
 }
 
 // Helper Functions
 function clearFields(fields) {
-  fields.forEach(field => field.value = "")
+  fields.forEach(field => field.value = "");
 }
 
 function toggleHiddenElementById(id) {
@@ -53,7 +53,7 @@ function showLoginForm() {
 }
 
 function showControlPanel() {
-  clearNotifications()
+  clearNotifications();
   resendConfirmationEl.hidden = true;
   loginFormEl.hidden = true;
   registerFormEl.hidden = true;
@@ -62,7 +62,7 @@ function showControlPanel() {
 }
 
 function showResendConfirmationForm() {
-  clearNotifications()
+  clearNotifications();
   resendConfirmationEl.hidden = false;
   loginFormEl.hidden = true;
   registerFormEl.hidden = true;
@@ -72,7 +72,7 @@ function showResendConfirmationForm() {
 
 function showLoggedInState() {
   clearFields([loginEmailEl, loginPasswordEl]);
-  clearNotifications()
+  clearNotifications();
   resendConfirmationEl.hidden = true;
   loginFormEl.hidden = true;
   registerFormEl.hidden = true;
@@ -93,7 +93,7 @@ function setPostRegistrationState() {
   // Clear registration form inputs then hide the form
   clearFields([registerEmailEl, registerPasswordEl]);
   toggleHiddenElementById("create-a-user");
-  return Promise.resolve()
+  return Promise.resolve();
 }
 
 $(document).ready(function() {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     }, 100, 'swing');
 
     $('.overlay').animate({
-      opacity: .3
+      opacity: 0.3
     }, 100, 'swing');
 
     return false;

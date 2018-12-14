@@ -3,7 +3,7 @@
 	 <div class="newsletter input-group">
     <p class="news-description">Are you into data to the point where it's almost embarrasing? Toss your email in for occasional updates, and we'll promise to only give you the good stuff.</p>
     {{#if @labs.subscribers}}
-      <section class="gh-subscribe">
+      <div class="gh-subscribe">
         {{subscribe_form
           placeholder="Your email address"
           input_class="subscribe-email"
@@ -13,7 +13,7 @@
           input_id="footer-newsletter-input"
           button_id="footer-newsletter-button"
         }}
-      </section>
+      </div>
     {{/if}}
   </div>
 </div>

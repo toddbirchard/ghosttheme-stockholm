@@ -74,7 +74,7 @@ var themeApp = {
   mobileNavigation: function() {
     $('nav').on('click', function(event) {
       $('.navbar-collapse').toggleClass("active");
-    })
+    });
   },
   resizeIframe: function(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
@@ -82,12 +82,12 @@ var themeApp = {
   fullScreen: function() {
     $('.post-template article .post-content img').each(function(item) {
       var alt = $(this).closest('figure').find('figcaption').text();
-      var src = $(this).attr('src')
+      var src = $(this).attr('src');
       $(this).attr('data-lightbox', alt);
       $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
     });
     var window_height = $(window).height();
-    var window_portion = window_height * .2;
+    var window_portion = window_height * 0.2;
     lightbox.option({
       'resizeDuration': 100,
       'wrapAround': true,
@@ -102,7 +102,7 @@ var themeApp = {
       var height = $(window).height();
       var codeContainer = $(this).closest('pre');
       codeContainer.css('max-height', 'none');
-      codeContainer.css('padding', '64px 20px !important')
+      codeContainer.css('padding', '64px 20px !important');
       $(this).closest('pre').find('.codeoverflow').css('opacity', '0');
       $(this).css('opacity', 0);
       codeContainer.animate({
@@ -134,11 +134,11 @@ var themeApp = {
     $(".signup").css('display', 'block');
     $(".overlay").css('display', 'block');
     $(".overlay").css('opacity', '1');
-    $('body').addClass('stop-scrolling')
+    $('body').addClass('stop-scrolling');
 
     $(".overlay").on('click', function() {
       $("body").scroll(function(e) {
-        e.preventDefault()
+        e.preventDefault();
       });
 
       var signupGone = new TimelineMax();
@@ -155,7 +155,7 @@ var themeApp = {
         }, "-=0.5")
         .set([".overlay", ".signup"], {
           visibility: "hidden"
-        })
+        });
     });
 
     (function($) {
@@ -188,8 +188,8 @@ var themeApp = {
           y: 200,
           ease: Elastic.easeOut.config(1, 1.5)
         }, "start")
-        .from(".signup #logo", .3, {
-          delay: .2,
+        .from(".signup #logo", 0.3, {
+          delay: 0.2,
           y: '-300px',
           scale: 1
         })
@@ -200,14 +200,14 @@ var themeApp = {
         .set([".options", ".signup-form", ".signup-head", ".description"], {
           visibility: "visible"
         })
-        .from(".signup .description", .8, {
+        .from(".signup .description", 0.8, {
           y: '-300px',
           opacity: 0
         })
-        .to(".signup #logo-txt", .8, {
+        .to(".signup #logo-txt", 0.8, {
           opacity: 1
         })
-        .from(".signup .signup-head", .8, {
+        .from(".signup .signup-head", 0.8, {
           y: 100,
           opacity: 0,
           ease: Elastic.easeOut.config(1, 1.5)
@@ -215,12 +215,12 @@ var themeApp = {
         .from(".signup .signup-form", 1.2, {
           y: 200,
           opacity: 0,
-          ease: Elastic.easeOut.config(.8, 1.5)
+          ease: Elastic.easeOut.config(0.8, 1.5)
         }, "nextScreen")
         .from([".float-left", ".float-right"], 1, {
           y: 35,
           opacity: 0,
-          ease: Elastic.easeOut.config(.8, 1.5)
+          ease: Elastic.easeOut.config(0.8, 1.5)
         }, "-=0.4");
 
       $(".signup #signup-button").mousedown(function() {
@@ -231,7 +231,7 @@ var themeApp = {
           var email = $('#signup-email').val();
           var password = $('#signup-password').val();
 
-          $('body').removeClass('stop-scrolling')
+          $('body').removeClass('stop-scrolling');
 
           emailPasswordClient.registerWithEmail(email, password)
             .then(() => {
@@ -243,7 +243,7 @@ var themeApp = {
 
 
         tlScreen1
-          .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], .8, {
+          .to([".signup .signup-form", ".float-left", ".float-right", ".signup .text_max", ".signup .description", ".signup .signup-head"], 0.8, {
             y: 100,
             opacity: 0,
             ease: Elastic.easeOut.config(1, 1.5)
@@ -268,7 +268,7 @@ var themeApp = {
       $("#account").click(function() {
         $(".signup-form input").val("");
         tlScreen1.restart();
-      })
+      });
     })(jQuery);
     $('.float-right').on('click', function() {
       if (!client.auth.isLoggedIn) {
@@ -300,7 +300,7 @@ var themeApp = {
   },
   addComment: function() {
     const newComment = document.getElementById("new_comment");
-    console.log("add comment", client.auth.user.id)
+    console.log("add comment", client.auth.user.id);
     db.collection("comments")
       .insertOne({
         owner_id: client.auth.user.id,
@@ -384,7 +384,7 @@ var themeApp = {
   githubrepo: function(){
     $('[data-github]').each(function () {
     var _this = this;
-    var repo = $(_this).data('github')
+    var repo = $(_this).data('github');
 
     fetch('https://api.github.com/repos/' + repo).then(function (response) {
       return response.json();
@@ -418,7 +418,7 @@ var themeApp = {
       themeApp.scrollableTables();
     }
   }
-}
+};
 
 /*===========================
 2. Initialization
