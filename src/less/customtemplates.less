@@ -212,7 +212,7 @@
       margin: 0 0 20px;
       border: 1px solid #dadada;
       transition: all 0.3s ease-out;
-      display: flex;
+      display: block;
       @media(max-width: 900px) {
         margin: 0 0 25px;
 
@@ -279,12 +279,10 @@
         color: #162c52;
         font-family: CompassSans-Medium,CompassSans-Light;
         width: auto;
-        display: flex;
+        display: block;
         align-items: left;
-        flex-direction: column;
-        flex-basis: auto;
-        flex-grow: 1;
-        flex-shrink: 0;
+        height: -webkit-fit-available;
+
 
         h2 {
           color: #37363e;
