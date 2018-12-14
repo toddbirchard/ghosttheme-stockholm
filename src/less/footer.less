@@ -121,8 +121,13 @@
 				}
 
 				&:hover {
-					background: #e5f9ff;
+					background: #c7e6f3;
 					border-color: #bbd8e2;
+					color: white;
+					
+					&::after{
+						color: white;
+					}
 
 					&::placeholder {
 						opacity: 0.1;
@@ -144,7 +149,7 @@
 		}
 
 		.news-description {
-			margin-bottom: 15px;
+			margin-bottom: 15px !important;
 			font-size: 0.9em;
 			line-height: 1.8;
 			text-align: justify;
@@ -263,6 +268,10 @@
 			padding: 0 20px;
 			width: -webkit-fill-available;
 			margin: 10px 10px 60px;
+		}
+		@media(max-width: 600px) {
+			width: auto !important;
+			padding: 0 20px !important;
 		}
 		@media(max-width: 800px) {
 			width: 100%;
