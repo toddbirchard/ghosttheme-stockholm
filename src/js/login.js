@@ -1,4 +1,4 @@
-// DOM Element Variables
+/*// DOM Element Variables
 const loginFormEl = document.getElementById("login");
 const loginEmailEl = document.getElementById("login-email");
 const loginPasswordEl = document.getElementById("login-password");
@@ -132,4 +132,4 @@ $(document).ready(function() {
       opacity: 0
     }, 100, 'swing');
   });
-});
+});*/
