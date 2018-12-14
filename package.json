@@ -58,7 +58,7 @@
     "nord-highlightjs": "^0.1.0",
     "paginate": "^0.2.0",
     "precss": "^4.0.0",
-    "swiper": "^4.4.2"
+    "swiper": "^4.4.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
