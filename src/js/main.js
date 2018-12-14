@@ -329,21 +329,24 @@ var themeApp = {
     }
   },
   scrollableTables: function() {
-    $('.post-content').find('table').parent('div').addClass('tableContainer');
-    let viewport = document.querySelector('.tableContainer');
-    let content = viewport.querySelector('tbody');
+    $( ".post-content table" ).each(function() {
+      $( this ).parent('div').addClass('tableContainer');
+
+      let viewport = document.querySelector('.tableContainer');
+      let content = viewport.querySelector('tbody');
 
 
-    let sb = new ScrollBooster({
-      viewport: document.querySelector('.tableContainer'), // this parameter is required
-      content: viewport.querySelector('tbody'), // scrollable element
-      mode: 'x', // scroll only in horizontal dimension
-      bounce: true,
-      onUpdate: (data) => {
-        // your scroll logic goes here
-        content.style.transform = `translateX(${-data.position.x}px)`;
-      }
-    })
+      let sb = new ScrollBooster({
+        viewport, // this parameter is required
+        content, // scrollable element
+        mode: 'x', // scroll only in horizontal dimension
+        bounce: true,
+        onUpdate: (data) => {
+          // your scroll logic goes here
+          content.style.transform = `translateX(${-data.position.x}px)`;
+        }
+      });
+    });
   },
   tags: function(){
     var tags = {
