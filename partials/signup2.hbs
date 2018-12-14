@@ -1,3 +1,20 @@
+<script>
+function createAccount(){
+  var email_field_signup = document.getElementById('signup-email');
+  var pass_field_signup = document.getElementById('signup-password');
+
+  emailPasswordClient.registerWithEmail(email_field_signup, pass_field_signup)
+    .then(() => {
+       console.log("Successfully sent account confirmation email!");
+    })
+    .catch(err => {
+       console.log("Error registering new user:", err);
+    });
+}
+
+
+</script>
+
 <div class="signup un" style="visibility:hidden;">
   <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 700">
     <g id="logoGroup" transform="translate(120 232)">
@@ -10,14 +27,14 @@
   <p class="text_max un" style="visibility: hidden;">Step up your shitposting game.</p>
 
 
-  <form id="signup-form" action="https://us-central1-hackersandslackers-204807.cloudfunctions.net/new-account" method="POST" class="signup-form un" style="visibility:hidden;">
+  <form id="signup-form" action="createAccount()" method="POST" class="signup-form un" style="visibility:hidden;">
     <input id="signup-username" type="text" name="username" placeholder="username" required>
     <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="youremail@example.com" required>
     <input id="signup-gravatar" type="text" name="gravatar" visibility="hidden">
     <!--<input id="signup-subscription" type="checkbox" name="subscribe">-->
     <!--<input id="signup-checkbox" type="checkbox" name="contact_me_by_fax_only" value="1" style="display:none !important" tabindex="-1" autocomplete="off">-->
-    <!--<input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
-    <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>-->
+    <input type="password" id="password" class="form-control tr" placeholder="Password"  autocomplete="new-password" minlength="6" required>
+    <input type="password" id="confirm_password" class="form-control tr" placeholder="Confirm Password" autocomplete="new-password" minlength="6" required>
     <button id="submit-account" type="submit">Send</button>
   </form>
 

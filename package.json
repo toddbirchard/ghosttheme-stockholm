@@ -5,7 +5,8 @@
   "demo": "https://hackersandslackers.com",
   "version": "0.0.1",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "pack": "webpack"
   },
   "presets": [
     "env"
@@ -80,7 +81,9 @@
     "gulp-resolve-dependencies": "^2.2.0",
     "gulp-terser": "^1.1.6",
     "gulp-uglify-es": "^1.0.4",
-    "terser": "^3.11.0"
+    "terser": "^3.11.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "babel": {
     "presets": [
