@@ -7,7 +7,6 @@ $(document).ready(function() {
         //'<p>' + cards[i].description + '</p> \n' +
         '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' + '<div class="info"> \n' + '<div class="left"> \n' + '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' + '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' + '</div> \n' + '<div class="epic ' + cards[i].epic_name + '"><span>' + cards[i].epic_name + '</span> <i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i></div> \n' + '</div> \n' + '</div>');
       }
-      $('#' + status).append('<span class="count"></span>');
     }
 
     const backlogColumn = document.getElementById("backlog");
