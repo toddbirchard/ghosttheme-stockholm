@@ -25,8 +25,16 @@ header{
     margin: auto;
     width: fit-content;
 
+    @media(max-width: 600px){
+      height: 40px;
+    }
+
     img {
       height: 45px;
+
+      @media(max-width: 600px){
+        height: 40px;
+      }
     }
   }
 }
@@ -176,7 +184,7 @@ header{
 
     @media(max-width: 600px) {
       width: 300px;
-      margin: 0 auto !important;
+      margin: 0 auto 20px !important;
       position: absolute;
       left: 0;
       right: 0;
