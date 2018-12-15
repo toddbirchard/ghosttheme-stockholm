@@ -14,6 +14,15 @@
       }
   }
 
+  .sorted-series{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .descending {
+    flex-direction:column-reverse;
+  }
+
 
 
   article {
@@ -37,8 +46,18 @@
     transition: all 0.3s ease-out;
   }
 
-  .flip {
-    transform: rotate(180deg) !important;
+  .sort-toggle {
+    .desc {
+      display: inline !important;
+    }
+
+    .asc {
+      display: none !important;
+    }
+
+    i {
+      transform: rotate(180deg) !important;
+    }
   }
 
   .sort-container {
@@ -56,6 +75,14 @@
         cursor: pointer;
       }
 
+      .desc {
+        display: none;
+      }
+
+      .asc {
+        display: inline;
+      }
+
       .sort-title {
         font-family: 'CompassSans-Medium';
       }
@@ -66,11 +93,13 @@
     }
   }
 
+
+
   article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     .featured-media {
       margin: 0;
@@ -118,7 +147,12 @@
         padding: 10px 20px;
       }
 
-
+      .meta {
+        max-width: 390px;
+        .info {
+          display: none;
+        }
+      }
 
       .post-head {
         width: 100%;
@@ -128,18 +162,23 @@
         }
 
         .post-title {
-          font-size: 1.5em!important;
           font-weight: 900;
-          width: 95%;
+          width: 100%;
           margin: 0 0 15px;
-          @media(max-width: 600px) {
-            width: -webkit-fill-available;
-            overflow: hidden;
+          font-size: 1.3em;
 
-            a {
+          a {
+            font-size: .9em;
+
+            @media(max-width: 600px) {
               font-size: 0.85em;
               font-family: 'HackerSans-Regular','CompassSans-Light',sans-serif;
             }
+          }
+
+          @media(max-width: 600px) {
+            width: -webkit-fill-available;
+            overflow: hidden;
           }
         }
 
@@ -165,12 +204,16 @@
         @media(max-width: 600px) {
           display: none;
         }
+
+        .author span {
+              text-transform: capitalize;
+        }
       }
     }
 
     .post-card-image {
       min-width: 250px;
-      height: 200px;
+      height: 175px;
       margin: 0;
       background-size: cover;
       background-position: center;

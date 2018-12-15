@@ -126,7 +126,7 @@ function watch() {
   gulp.watch(paths.styles.src, styles);
 }
 
-var build = gulp.parallel(styles, scripts); // , image_loop
+var build = gulp.parallel(styles, scripts, watch); // , image_loop
 
 //gulp.task(build);
 gulp.task('default', build);
