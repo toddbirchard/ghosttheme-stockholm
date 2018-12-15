@@ -132,4 +132,4 @@ $(document).ready(function() {
       opacity: 0
     }, 100, 'swing');
   });
-});*/
+});*/'use strict';

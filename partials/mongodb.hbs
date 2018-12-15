@@ -1,16 +1,16 @@
 <script>
 
-  const {
+  /*const {
     Stitch,
     UserPasswordAuthProviderClient,
     UserPasswordCredential,
     AnonymousCredential
-  } = stitch;
+  } = Stitch;*/
 
 
-  const client = Stitch.initializeDefaultAppClient('hackers-uangn');
+  const client = stitch.Stitch.initializeDefaultAppClient('hackers-uangn');
   const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('hackers');
-  const emailPasswordClient = Stitch.defaultAppClient.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
+  const emailPasswordClient = client.auth.getProviderClient(UserPasswordAuthProviderClient.factory);
 
 
   function handleError(err) {

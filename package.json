@@ -66,6 +66,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
     "css-declaration-sorter": "^4.0.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
