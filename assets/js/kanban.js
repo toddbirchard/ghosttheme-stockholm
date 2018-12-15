@@ -17,44 +17,44 @@ $(document).ready(function() {
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'Backlog',
       issuetype: {
-        $in: ['Task', 'Story', 'Integrations', 'Bug']
+        $in: ['Task', 'Story', 'Major Functionality', 'Integration', 'Bug']
       },
       priority: {
         $in: ['Highest', 'High', 'Medium']
       }
     }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'backlog')
+      populateCards(docs, 'backlog');
     }).catch(err => {
-      console.error(err)
+      console.error(err);
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'To Do',
       issuetype: {$nin: ['Epic']}
     }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'todo')
+      populateCards(docs, 'todo');
     }).catch(err => {
-      console.error(err)
+      console.error(err);
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'In Progress',
       issuetype: {$nin: ['Epic']}
     }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'progress')
+      populateCards(docs, 'progress');
     }).catch(err => {
-      console.error(err)
+      console.error(err);
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
       status: 'Done',
       issuetype: {
-        $in: ['Task', 'Story', 'Integrations', 'Bug']
+        $in: ['Task', 'Story', 'Major Functionality', 'Integration', 'Bug']
       }
     }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'done')
+      populateCards(docs, 'done');
     }).catch(err => {
-      console.error(err)
+      console.error(err);
     });
 
     client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => {
@@ -63,7 +63,7 @@ $(document).ready(function() {
         $('#todo .count').text(results["To Do"] + ' issues');
         $('#progress .count').text(results["In Progress"] + ' issues');
         $('#backlog .count').text(results["Backlog"] + ' issues');
-      })
+      });
     });
 
     var swiper = new Swiper('.swiper-container', {
@@ -131,7 +131,7 @@ $(document).ready(function() {
         swiper.spaceBetween = 0;
         swiper.normalizeSlideIndex = true;
         swiper.updateSize();
-        swiper.updateSlides()
+        swiper.updateSlides();
       }
     });
   }
