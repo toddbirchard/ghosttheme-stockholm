@@ -9,7 +9,6 @@
 				<!-- start main post area -->
 				<div class=" main-content">
 					<div class="postlist">
-						{{> cover-tag}}
 						<div class="sort-container">
 							<div class="sort">
 								<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="fal fa-arrow-to-bottom"></i>
@@ -17,6 +16,7 @@
 							</div>
 							<div class="sorted-series">
 								{{#seriesdata}}
+								{{> cover-tag}}
 								{{#foreach posts}}
 										{{> seriespreview}}
 								{{/foreach}}

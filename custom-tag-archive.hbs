@@ -23,7 +23,7 @@
 						</div>
 						<div class="tag-container">
 							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" limit="all"}}
-								{{#foreach tags  visibility="internal"}}
+								{{#foreach tags visibility="internal"}}
 									<div class="tag-wrapper">
 										<a href="/series/{{slug}}" title="{{name}}">
 											<div class="img-wrapper" style="background-image: url({{img_url feature_image}})"></div>

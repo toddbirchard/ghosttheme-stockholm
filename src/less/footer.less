@@ -78,8 +78,21 @@
 				}
 			}
 
-			input {
+			input[type=email] {
 				margin-bottom: 0;
+
+				&:hover {
+					background: #e5f9ff !important;
+					border-color: #bbd8e2 !important;
+
+					&::after {
+						color: white;
+					}
+				}
+
+				&:focus {
+					background: white;
+				}
 			}
 
 			input::placeholder {
@@ -96,22 +109,12 @@
 				text-transform: Uppercase;
 				transition: all 0.3s ease-out;
 
+
 				span {
 					font-size: 14px;
 				}
 
-				&:hover {
-					background: #e5f9ff !important;
-					border-color: #bbd8e2 !important;
 
-					&::placeholder {
-						opacity: 0.1;
-					}
-				}
-
-				&:focus {
-					background: white;
-				}
 
 			}
 
@@ -185,6 +188,7 @@
 			color: #fff;
 			border: 0;
 			text-transform: Uppercase;
+			box-shadow: 3px 3px 0px 0 #072225 !important;
 			transition: all 0.3s ease-out;
 		}
 
@@ -334,8 +338,8 @@
 				text-align: center;
 				font-family: CompassSans-Regular;
 				transition: all 0.3s ease-out;
-				border-bottom: 1px solid #2d5f84;
-				border-right: 1px solid #2d5f84;
+				border-right: 1px solid #173144;
+    		border-bottom: 1px solid #173144;
 
 				&:hover {
 					background: @white;
