@@ -38,8 +38,6 @@
 			},
 		},
 		template: function(result) {
-			console.log(result);
-			console.log(result.image);
 			let tag = result.tags[0];
 			let url = [location.protocol, '//', location.host].join('');
 			return '<li> \n' +
@@ -70,8 +68,6 @@
 		},
 		template: function(result) {
 			$('#nav-search-results').css('opacity', 1);
-			console.log(result);
-			console.log(result.image);
 			let tag = result.tags[0];
 			let url = [location.protocol, '//', location.host].join('');
 			return '<li> \n' +
@@ -84,5 +80,4 @@
 </script>
 
 </body>
-
 </html>

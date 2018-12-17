@@ -73,9 +73,6 @@ assets/js/includes/secret.js
 /assets/js/*.map
 sendgrid.env
 
-# readme
-README.md
-
 # compiled
 assets/js/main.min.js
 /assets/js/main.min.js
@@ -84,3 +81,6 @@ index.js
 
 # assets
 bg.mp4
+
+# DS Store
+.DS_Store

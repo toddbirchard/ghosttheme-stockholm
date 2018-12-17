@@ -1,12 +1,16 @@
 @import "variables.less";
 @import "mixin.less";
 
-.tag-template, {
+.tag-template {
   .postlist {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+
+    article .content {
+      padding: 20px;
+    }
 
     .series-cover {
       background-size: cover;
@@ -14,7 +18,11 @@
       height: 300px;
       background-color: #305790;
       background-blend-mode: soft-light;
-      @media(max-width: 600px) {}
+      @media(max-width: 600px) {
+        margin-left: calc(~"-50vw + 50%") !important;
+        margin-right: calc(~"-50vw + 50%") !important;
+        margin-top: -20px;
+      }
 
       .tag-name {
         font-size: 2.2em;
@@ -43,11 +51,15 @@
       }
 
       .post-head {
-        margin: 0 0 60px;
+        margin: 0;
       }
 
       .post-title {
-        font-size: 1.5em;
+        font-size: 1.4em;
+
+        a {
+          font-family: 'HackerSans-Regular','CompassSans-Light',sans-serif;
+        }
       }
 
       .featured-media {
@@ -60,15 +72,22 @@
       }
 
       .post-excerpt {
-        font-size: 1.1em;
-        font-family: 'CompassSans-Medium';
+        font-size: 1em;
+        font-family: 'CompassSans-Regular';
+        min-height: 70px;
       }
 
       .post-permalink {
         position: absolute;
-        width: 85%;
+        width: 88%;
+        padding: 0;
         bottom: 10px;
         padding-bottom: 10px;
+
+        .btn {
+          padding: 12px 20px;
+          font-size: 16px;
+        }
       }
 
       .author,

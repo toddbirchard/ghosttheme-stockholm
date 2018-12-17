@@ -29,6 +29,81 @@
     top: 200px;
     display: block;
   }
+
+  #logo {
+    height: 200px;
+    max-width: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    transform: scale(2.5);
+  }
+
+  #submit-account,
+  .button-control,
+  button {
+    padding: 13px 0;
+    width: -webkit-fill-available;
+    color: #fff;
+    background: #03ccb7;
+    box-shadow: 2px 2px 3px 0 #239084;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font-size: 1em;
+
+    &:hover {
+      box-shadow: 2px 2px 3px 0 #647498;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+   {
+    border-radius: 0 !important;
+    transition: all 0.2s ease-out;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 100px white inset;
+    }
+
+    &:hover {
+      border: 1px solid #004b5dbd;
+      color: white;
+      background: rgba(140, 255, 247, 0.45) !important;
+      box-shadow: inset -2px 2px 4px #0d234c59 !important;
+    }
+
+    &:focus {
+      background: white !important;
+    }
+  }
+
+  button {
+    border-radius: 0 !important;
+  }
+
+  input:focus {
+    opacity: 1;
+  }
+
+  input:placeholder {
+    opacity: 0.7;
+    color: #91c6ce;
+    /* Firefox */
+  }
+
+  input:placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #91c6ce;
+    opacity: 0.7;
+    /* Firefox */
+  }
 }
 
 .confirm-description {
@@ -36,17 +111,6 @@
   width: 274px !important;
   line-height: 1.5;
   margin: 0 auto auto !important;
-}
-
-#signup #logo {
-  height: 200px;
-  max-width: 50px;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  margin: auto;
-  transform: scale(2.5);
 }
 
 #signup-checkbox {
@@ -75,27 +139,6 @@
 #halfCircle {
   height: 100px;
   width: 100px;
-}
-
-input[type="text"],
-input[type="email"], {
-  border-radius: 0 !important;
-  transition: all .2s ease-out;
-
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 100px white inset;
-  }
-
-  &:hover {
-    border: 1px solid #004b5dbd;
-    color: white;
-    background: rgba(140, 255, 247, 0.45) !important;
-    box-shadow: inset -2px 2px 4px #0d234c59 !important;
-  }
-
-  &:focus {
-    background: white !important;
-  }
 }
 
 .text_max {
@@ -187,57 +230,15 @@ input[type="email"], {
   color: #0c3d44;
 }
 
-button {
-  border-radius: 0 !important;
-}
-
 #signup-form input:focus {
   box-shadow: 0 0 15px 0 #0000000d;
   border-left: 3px solid #fff;
-}
-
-.button-control,
-button,
-#submit-account {
-  padding: 13px 0;
-  width: -webkit-fill-available;
-  color: #fff;
-  background: #03ccb7;
-  box-shadow: 2px 2px 3px 0 #239084;
-  margin-top: 15px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  font-size: 1em;
-
-  &:hover {
-    box-shadow: 2px 2px 3px 0 #647498;
-  }
 }
 
 #signup-gravatar {
   visibility: hidden;
   position: absolute;
   top: 0;
-}
-
-input:focus{
-  opacity: 1;
-}
-
-input:placeholder {
-  opacity: 0.7;
-  color: #91c6ce;
-  /* Firefox */
-}
-
-input:placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #91c6ce;
-  opacity: 0.7;
-  /* Firefox */
 }
 
 :-ms-input-placeholder {
