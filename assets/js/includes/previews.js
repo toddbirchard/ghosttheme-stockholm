@@ -1,11 +1,9 @@
 $(document).ready(function() {
 
-
-
       function authorLinkPreviews() {
           $(".author-website a").each(function(index, element) {
             $.ajax({
-              url: api_url + "?key=" + linkpreview_key + " &q=" + $(this).text(),
+              url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint' + '&url=' + $(this).text(),
               contentType: "application/json",
               dataType: 'json',
               success: function(result) {

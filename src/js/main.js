@@ -115,10 +115,10 @@ var themeApp = {
   },
   codeHighlight: function() {
     hljs.configure({
-      tabReplace: '  ', // 4 spaces
+      tabReplace: '  ', // 2 spaces
       classPrefix: '', // don't append class prefix
     });
-    hljs.initHighlightingOnLoad();
+    //hljs.initHighlightingOnLoad();
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
       if ($(this).height() >= 400) {
