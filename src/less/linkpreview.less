@@ -10,19 +10,20 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0,0,0,.1);
+  box-shadow: 1px 1px 1px rgba(80, 79, 136, 0.2), -1px -1px 0 rgba(61, 62, 80, 0.1);
   transition: all 0.2s easout;
+  border: 1px solid #b5b5b5;
   @media(max-width: 800px) {
     width: 99%;
     display: block;
   }
-
   @media(max-width: 600px) {
-    width: 88%;
+    width: 96%;
+    padding: 0;
   }
 
   &:hover {
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .preview-image {
@@ -71,7 +72,7 @@
   .link-info {
     display: inline-block;
     overflow: hidden;
-    padding: 10px 30px;
+    padding: 20px 30px;
     width: -webkit-fill-available;
     @media(max-width: 800px) {
       padding: 10px 20px;
