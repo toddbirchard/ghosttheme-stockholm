@@ -3,6 +3,8 @@
   padding-bottom: 30px;
   margin: auto;
   background-color: #F5F5F5;
+  max-width: 900px;
+margin: auto;
 }
 /******************************************/
 /******** Front Page Differentiators ******/
@@ -170,7 +172,7 @@ nav {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
 }
 
 .medium-4 {
@@ -184,13 +186,11 @@ nav {
   text-align: center;
   margin-left: 0;
   margin-right: 0;
-  width: 33.3% !important;
   padding: 0;
-  float: left;
+  width: fit-content !important
 }
 
 .columns.categories .category a {
-  border-top: 1px solid #cecece;
   display: block;
   animation-duration: 0;
   background-image: url("https://hackers.nyc3.cdn.digitaloceanspaces.com/redis/bg-category-indicator-reg.png");
@@ -198,6 +198,8 @@ nav {
   background-repeat: repeat-x;
   padding-top: 6px;
   padding-bottom: 2px;
+  border: 0 !important;
+  font-weight: 100;
 }
 
 .columns.categories .category a:hover {
