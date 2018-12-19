@@ -1,20 +1,34 @@
 @import 'fonts.less';
 @import 'nord.less';
 
+blockquote pre {
+   width: 94%;
+   margin:auto;
+}
+
+blockquote .language-python {
+
+  &::before {
+    background: #1d2a38 !important;
+    }
+  background: rgba(41, 61, 76, 0.84) !important;
+}
+
+
 .post-content {
   pre {
     white-space: pre-wrap;
     transition: all 0.5s ease-out;
     position: relative;
     overflow-y: hidden;
-    padding: 0 !important;
+    padding: 0 ;
     margin: 30px auto;
     border-radius: 5px;
     max-width: 100%;
     @media(max-width: 600px) {
       max-width: none;
-      width: auto !important;
-      white-space: pre-line !important;
+      width: auto ;
+      white-space: pre-line ;
       max-height: 400px;
       overflow-x: visible;
     }
@@ -31,17 +45,17 @@
 
   &post-content > .hljs,
   pre > code {
-    white-space: pre-wrap !important;
-    padding: 45px 25px 15px!important !important;
+    white-space: pre-wrap ;
+    padding: 45px 25px 15px ;
     @media(max-width: 600px) {
-      overflow-y: hidden !important;
+      overflow-y: hidden ;
     }
   }
 
   li > code,
   p > code {
     display: inline;
-    overflow-y: visible !important;
+    overflow-y: visible ;
     width: fit-content;
     background: rgba(197, 205, 245, 0.30196078431372547);
     padding: 2px 6px;
@@ -62,14 +76,14 @@
 
   .hljs {
     display: block;
-    overflow-x: hidden!important;
-    background: #262633 !important;
+    overflow-x: hidden;
+    background: #262633;
     overflow-wrap: break-word;
     margin: 0;
     font-weight: 200;
     line-height: 1.7;
     padding: 0 25px 20px;
-    white-space: pre-wrap !important;
+    white-space: pre-wrap;
     color: #d3dce0;
     font-family: 'dm';
     @media(max-width: 600px) {
@@ -93,7 +107,7 @@
       padding: 8px 40px;
       margin-left: -6%;
       opacity: 0.8;
-      font-weight: 600 !important;
+      font-weight: 600 ;
       @media(max-width: 600px) {
         padding: 8px 20px;
         font-size: 1em;
@@ -111,15 +125,15 @@
 
   .language-python,
   .python.hljs {
-    color: #e4f8fd !important;
-    background: #2a3552!important;
+    color: #e4f8fd ;
+    background: #2a3552;
 
     &::before {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #1d2538!important;
-      content: "Python" !important;
+      background: #1d2538;
+      content: "Python";
       display: block;
       font-style: normal;
       font-variant: normal;
@@ -211,7 +225,7 @@
       width: 110%;
       height: auto;
       background: #121925;
-      content: "JSON" !important;
+      content: "JSON";
       display: block;
       font-style: normal;
       font-variant: normal;
@@ -267,7 +281,7 @@
   }
 
   .hljs.sql {
-    background-color: #22202f !important;
+    background-color: #22202f ;
     /*selection color*/
     .hljs span::selection,
     .hljs::selection {
@@ -514,7 +528,7 @@
     .name {
       color: #2aaed0;
     }
-    background: #272738 !important;
+    background: #272738 ;
 
     &::before {
       margin-bottom: 15px;
@@ -638,7 +652,7 @@
       width: 110%;
       height: auto;
       background: #1a1a23;
-      content: "Javascript" !important;
+      content: "Javascript" ;
       color: white;
       display: block;
       font-style: normal;
@@ -648,13 +662,4 @@
       position: relative;
     }
   }
-}
-
-blockquote .language-python {
-  width: 92%;
-  margin:auto;
-  &::before {
-    background: #063852 !important
-    }
-  background: #235171!important
 }
