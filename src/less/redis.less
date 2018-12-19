@@ -28,6 +28,11 @@ margin: auto;
   max-width: -webkit-fill-available;
   width: -webkit-fill-available;
 
+  @media(max-width: 800px) {
+    max-width: 500px;
+    margin: 30px auto !important;
+  }
+
   h2 {
     line-height: 1.3;
     text-align: center;
@@ -48,6 +53,8 @@ margin: auto;
     display: flex;
     justify-content: space-around;
     align-content: center;
+    max-width: 840px;
+    margin: auto;
     @media(max-width: 800px) {
       display: none;
     }
@@ -80,10 +87,9 @@ nav {
 }
 
 .center.parent {
-  width: 180px;
-  max-width: 180px;
-  min-width: 180px;
-  max-width: 180px !important;
+  width: 160px;
+  max-width: 160px;
+  max-width: 160px !important;
   overflow: hidden;
 }
 
@@ -525,9 +531,8 @@ nav {
 
 .mobile-grid .columns .columns .text {
   position: relative;
-  top: 4px;
-  left: -10px;
-  font-size: 85%;
+  left: -5px;
+  font-size: 1em;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -548,69 +553,6 @@ nav {
 .mobile-grid .columns .columns .text.short {
   line-height: 1.3;
 }
-/*
-@media screen and (max-width: 1039px) {
-    .strengths,
-    .categories,
-    .subhead,
-    .read-more {
-        display: none;
-    }
-    .mobile-grid {
-        display: block;
-    }
-    #strengths {
-        background-color: white;
-        padding-top: 5px;
-        padding-bottom: 0px;
-    }
-}
-
-@media screen and (min-width: 969px) and (max-width: 1039px) {
-    .mobile-grid .columns .columns .text.short.med {
-        top: 5px;
-    }
-    .mobile-grid .columns .columns .text.long {
-        letter-spacing: -0.5px;
-    }
-}
-
-@media screen and (max-width: 968px) {
-    .mobile-grid .columns.medium-4 {
-        width: 100%;
-        min-width: 100%;
-    }
-    .mobile-grid .columns .columns .text {
-        top: 17px;
-        left: -10px;
-        font-size: 100%;
-    }
-    .mobile-grid {
-        background-size: 78%;
-        background-position: center 80px;
-        padding-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .mobile-grid .columns .columns .text.long {
-        top: 6px;
-        line-height: 1.1;
-    }
-}
-
-
-@media screen and (min-width:640px) {
-    #switches .medium-6.large-6:nth-child(2) {
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width:640px) {
-    #featured-client {
-        text-align: center;
-    }
-}*/
 
 .mobile-flex {
   padding-top: 30px;
