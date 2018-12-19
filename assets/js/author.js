@@ -24,7 +24,7 @@ $(document).ready(function () {
         dataType: 'jsonp',
         success: function success(result) {
           //console.log("JSON.stringify(result) = " + JSON.stringify(result));
-          $('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n ' + '<div class="userprofile"> \n ' + '<img class="avatar" src="' + result['data']['photo']['thumb_link'] + '"> \n' + '<div class="info">' + '<span class="name">' + result['data']['name'] + '</span> \n ' + '<span class="location">' + result['data']['city'] + ', ' + result['data']['state'] + '</span></a> \n ' + '<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"><span class="country">View profile</span></a></div></div></div> \n ' + '<div class="events"></div>');
+          $('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n ' + '<div class="userprofile"> \n ' + '<img class="avatar" src="' + result['data']['photo']['thumb_link'] + '" data-rjs="3"> \n' + '<div class="info">' + '<span class="name">' + result['data']['name'] + '</span> \n ' + '<span class="location">' + result['data']['city'] + ', ' + result['data']['state'] + '</span></a> \n ' + '<a href="https://www.meetup.com/members/' + result['data']['id'] + '/"><span class="country">View profile</span></a></div></div></div> \n ' + '<div class="events"></div>');
         }
       });
       $.ajax({

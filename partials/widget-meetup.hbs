@@ -12,7 +12,7 @@ function createMeetupCard(meetup) {
     success: function(ajaxResult) {
       $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' +
         '<div class="userprofile"> \n ' +
-        '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '"> \n' +
+        '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="3" > \n' +
         '<div class="info">' +
         '<span class="name">' + ajaxResult['data']['name'] + '</span> \n ' +
         '<span class="location">' + ajaxResult['data']['city'] + ', ' + ajaxResult['data']['state'] + '</span></a> \n ' +
@@ -20,7 +20,7 @@ function createMeetupCard(meetup) {
         '<div class="events"></div></div>');
     }
   });
-  
+
   client.callFunction("secret_meetup").then(result => {
     console.log(JSON.stringify(result));
     if (result.meetup) {createMeetupCard(JSON.stringify(result.meetup))}
