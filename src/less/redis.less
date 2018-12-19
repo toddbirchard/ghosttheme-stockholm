@@ -17,6 +17,7 @@
   position: relative;
   padding: 20px;
   margin-bottom: 30px;
+  position: relative;
 
   h2 {
     line-height: 1.3;
@@ -70,9 +71,11 @@ nav {
 }
 
 .center.parent {
-  width: 380px;
-  max-width: 380px;
-  min-width: 380px;
+  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  max-width: 200px !important;
+  overflow: hidden;
 }
 
 .strengths .columns .columns:last-child {
@@ -404,7 +407,7 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 380px;
+  width: 300px;
   height: 350px;
   padding: 10px;
   -webkit-border-radius: 6px;
@@ -414,10 +417,13 @@ nav {
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  margin: auto;
+  z-index: 30;
 }
 
 .item.hidden img {
   max-width: 60px;
+  border: none;
 }
 
 .item.hidden h3 {
