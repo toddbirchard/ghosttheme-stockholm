@@ -122,8 +122,11 @@ commentBox('5704134103662592-proj', {
      */
 
     onCommentCount(count) {
-			var containerHeight = $("#commentbox").height();
-      $("#commentbox").height(containerHeight - 80);
+			$('iframe').on('load', () => {
+				var containerHeight = $("#commentbox").height();
+	      $("#commentbox").height(containerHeight - 80);
+			  console.log('iframe is completely loaded');
+			})
     }
 });
 
