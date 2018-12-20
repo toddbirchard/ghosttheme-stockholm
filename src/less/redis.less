@@ -27,6 +27,7 @@ margin: auto;
   position: relative;
   max-width: -webkit-fill-available;
   width: -webkit-fill-available;
+  box-shadow: 0px 0px 10px rgba(140, 147, 160, 0.72);
 
   @media(max-width: 800px) {
     max-width: 500px;
@@ -440,7 +441,7 @@ nav {
   left: 0;
   right: 0;
   width: 300px;
-  height: 350px;
+  height: 450px;
   padding: 10px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -451,6 +452,11 @@ nav {
   transition: all 500ms ease-in-out;
   margin: auto;
   z-index: 30;
+  padding: 30px 10px 0;
+
+  li {
+    color: white;
+  }
 }
 
 .item.hidden img {
