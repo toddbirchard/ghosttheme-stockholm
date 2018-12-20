@@ -60,17 +60,6 @@ var themeApp = {
       return false;
     });
   },
-  adjustTileHeight: function() {
-    var tile = $('.archive .tag-wrapper');
-    var max_height = 0;
-    if (tile.length > 0) {
-      $.each(tile, function() {
-        var h = $(this).height();
-        max_height = h > max_height ? h : max_height;
-      });
-      tile.height(max_height);
-    }
-  },
   mobileNavigation: function() {
     $('nav').on('click', function(event) {
       $('.navbar-collapse').toggleClass("active");
@@ -251,7 +240,7 @@ var themeApp = {
     themeApp.sidebarConfig();
     themeApp.facebook();
     themeApp.backToTop();
-    themeApp.adjustTileHeight();
+    // themeApp.adjustTileHeight();
     themeApp.mobileNavigation();
     themeApp.retina();
     themeApp.tags();
