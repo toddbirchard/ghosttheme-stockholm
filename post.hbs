@@ -116,13 +116,16 @@ commentBox('5704134103662592-proj', {
     /**
      * Fires once the plugin loads its comments.
      * May fire multiple times in its lifetime.
-     *
-     * @param {number} count
+
      */
+		 var containerHeight = $("#commentbox").height();
+     $("#commentbox").height(containerHeight - 80);
     onCommentCount(count) {
 
     }
 });
+
+
 </script>
 {{> analytics}}
 {{/post}}
