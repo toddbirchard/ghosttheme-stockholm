@@ -39,7 +39,15 @@
   {{#has author="Matt Alhonte"}}
     <script async src="{{asset "/js/includes/previews.js"}}"></script>
   {{/has}}
+  <script>
+  $( document ).ready(function() {
+    var containerHeight = $("#commentbox").height();
+    $("#commentbox").height(containerHeight - 80);
+  });
+  </script>
 {{/is}}
+
+
 
 <script src="{{asset "/js/main.min.js"}}"></script>
 <script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
