@@ -1,18 +1,21 @@
 .commentholder {
   position: relative;
-  min-height: 300px;
+  min-height: 200px;
   overflow: hidden;
 }
 
 .commentbox {
   display: block;
+  position: absolute;
+  top: -50px;
+  width: -webkit-fill-available;
   margin-bottom: 25px;
   padding: 0 60px;
   background: #fff;
-  height: calc(100% - 300px);
-  position: absolute;
-  width: -webkit-fill-available;
-  top: -50px;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin: auto;
 
   .body {
     padding: 40px 60px 20px;
