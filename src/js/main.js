@@ -213,13 +213,14 @@ var themeApp = {
       tableau: '<i class="far fa-asterisk"></i>',
       googlecloud: '<i class="fab fa-google"></i>',
       sql: '<i class="fas fa-database"></i>',
-      statistics: '<i class="far fa-chart-bar"></i>',
+      statistics: '<i class="far fa-chart-area"></i>',
       flask: '<i class="fab fa-affiliatetheme"></i>',
       expressjs: '<i class="fab fa-etsy"></i>',
       atlassian: '<i class="fab fa-trello"></i>',
       codesnippetcorner: '<i class="fal fa-laptop-code"></i>',
       saas: '<i class="fal fa-desktop-alt"></i>',
-      datavis: '<i class="fal fa-chart-pie"></i>'
+      datavis: '<i class="fal fa-chart-pie"></i>',
+      plotly: '<i class="fas fa-chart-bar"></i>'
     };
 
     for (var key in tags) {
