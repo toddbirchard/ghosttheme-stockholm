@@ -73,7 +73,7 @@
 						   {{#author include="count.posts"}}{{> author-card}}
 						{{/author}}
 
-						<div class="commentbox"></div>
+						<div class="commentholder"><div class="commentbox"></div></div>
 					</article>
 
 					{{!--{{> comments}}--}}
@@ -130,7 +130,7 @@ commentBox('5704134103662592-proj', {
 				var newHeight = containerHeight - 50;
 				var heightString = String(newHeight);
 				console.log(heightString);
-	      $("#commentbox").css('height' - heightString + 'px');
+	      $(".commentbox").css('height' - heightString + 'px');
 			},false);
     }
 });
