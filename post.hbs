@@ -127,7 +127,10 @@ commentBox('5704134103662592-proj', {
 				console.log('message received:  ' + event.data,event);
 				event.source.postMessage('holla back youngin!',event.origin);
 				var containerHeight = $("#commentbox").height();
-	      $("#commentbox").height(containerHeight - 80);
+				var newHeight = containerHeight - 50;
+				var heightString = String(newHeight);
+				console.log(heightString);
+	      $("#commentbox").css('height' - heightString + 'px');
 			},false);
     }
 });
