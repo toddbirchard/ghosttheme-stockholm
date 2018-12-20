@@ -122,11 +122,13 @@ commentBox('5704134103662592-proj', {
      */
 
     onCommentCount(count) {
-			$('iframe').on('load', () => {
+			window.addEventListener('message',function(event) {
+				if(event.origin == 'https://commentbox.io') return;
+				console.log('message received:  ' + event.data,event);
+				event.source.postMessage('holla back youngin!',event.origin);
 				var containerHeight = $("#commentbox").height();
 	      $("#commentbox").height(containerHeight - 80);
-			  console.log('iframe is completely loaded');
-			})
+			},false);
     }
 });
 
