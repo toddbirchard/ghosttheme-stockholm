@@ -13,7 +13,7 @@ blockquote p {
 blockquote .language-python {
 
   &::before {
-    background: rgba(29, 37, 56, 0.42) !important;
+    /*background: rgba(29, 37, 56, 0.42) !important;*/
     font-size: 14px !important;
     }
 
@@ -27,14 +27,15 @@ blockquote .language-python {
     transition: all 0.5s ease-out;
     position: relative;
     overflow-y: hidden;
-    padding: 0 ;
+    padding: 0;
     margin: 30px auto;
     border-radius: 5px;
     max-width: 100%;
+
     @media(max-width: 600px) {
       max-width: none;
       width: auto ;
-      white-space: pre-line ;
+      white-space: pre-line;
       max-height: 400px;
       overflow-x: visible;
     }
@@ -68,7 +69,7 @@ blockquote .language-python {
     border-radius: 2px;
     color: #0e9bb5;
     font-weight: 500;
-    font-size: 1em;
+    font-size: .9em;
     font-family: dm;
   }
 
@@ -99,23 +100,23 @@ blockquote .language-python {
     }
 
     &::before {
-      margin-bottom: 15px;
-      font-size: 1.2em;
-      font-family: 'CompassSans-Regular';
+      -webkit-font-smoothing: antialiased;
+      display: block;
+      position: relative;
       width: 104%;
       height: auto;
-      background: #181d25;
-      content: "Code Snippet";
-      display: block;
+      margin-bottom: 15px;
+      margin-left: -6%;
+      padding: 8px 40px;
+      font-family: 'CompassSans-Regular';
+      font-size: 1.3em;
       font-style: normal;
       font-variant: normal;
+      font-weight: 600;
       text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      position: relative;
-      padding: 8px 40px;
-      margin-left: -6%;
-      opacity: 0.8;
-      font-weight: 600 ;
+      text-shadow: -2px 2px 1px -2px 2px 1px rgba(13, 19, 43, 0.45);
+      content: "Code Snippet";
+      opacity: 1;
       @media(max-width: 600px) {
         padding: 8px 20px;
         font-size: 1em;
@@ -134,13 +135,12 @@ blockquote .language-python {
   .language-python,
   .python.hljs {
     color: #e4f8fd ;
-    background: #2a3552;
+    background: linear-gradient(#2d4467,#1c2a40);
 
     &::before {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #1d2538;
       content: "Python";
       display: block;
       font-style: normal;
@@ -166,7 +166,7 @@ blockquote .language-python {
     }
 
     .comment {
-      color: #656d82;
+      color: #788198;
     }
 
     .attribute,
@@ -232,7 +232,6 @@ blockquote .language-python {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #121925;
       content: "JSON";
       display: block;
       font-style: normal;
@@ -378,7 +377,6 @@ blockquote .language-python {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #191729;
       content: "SQL";
       display: block;
       font-style: normal;
@@ -471,7 +469,6 @@ blockquote .language-python {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #121925;
       content: "Vim";
       display: block;
       font-style: normal;
@@ -481,32 +478,13 @@ blockquote .language-python {
       position: relative;
     }
   }
-  /*
-  pre > .hljs.css,
-  pre > .language-css {
-    &::before {
-      margin-bottom: 15px;
 
-      width: 110%;
-      height: auto;
-      background: #121925;
-      content: "CSS";
-      display: block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      position: relative;
-    }
-  }
-*/
   .hljs.ini,
   .language-ini {
     &::before {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #121925;
       content: "ini";
       display: block;
       font-style: normal;
@@ -542,7 +520,6 @@ blockquote .language-python {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #14141f;
       content: "HTML";
       display: block;
       font-style: normal;
@@ -569,8 +546,8 @@ blockquote .language-python {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    background: #2a2d2a;
-    color: #779477;
+    background: linear-gradient(#203f50, #0b3c66) !important;
+    color: #5fc793;
 
     &::-moz-selection {
       text-shadow: none;
@@ -611,11 +588,12 @@ blockquote .language-python {
     }
 
     .comment {
-      color: #5e5e6f;
+      color: #7f8ba7;
     }
 
     .built_in {
       font-weight: 700;
+      color: #79ddfb;
     }
 
     .punctuation {
@@ -632,7 +610,6 @@ blockquote .language-python {
       color: #a2b34d;
     }
 
-    .function,
     .property {
       color: #687d68;
     }
@@ -647,19 +624,27 @@ blockquote .language-python {
       color: #b3d6b3;
     }
 
-    .params {
-      color: #bec155;
+    .params,
+    .function {
+      color: #EEAC18;
+    }
+
+    .keyword {
+      color: #FD92F0;
+    }
+
+    .string {
+      color: #F4E39D;
     }
 
     .attr {
-      color: #787793;
+      color: #a39fff;
     }
 
     &::before {
       margin-bottom: 15px;
       width: 110%;
       height: auto;
-      background: #1a1a23;
       content: "Javascript" ;
       color: white;
       display: block;
