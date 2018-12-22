@@ -12,7 +12,7 @@
   overflow: hidden;
   box-shadow: 1px 1px 1px rgba(80, 79, 136, 0.2), -1px -1px 0 rgba(61, 62, 80, 0.1);
   transition: all 0.2s easout;
-  border: 1px solid #b5b5b5;
+  border: 1px solid rgba(181, 181, 181, .5);
   @media(max-width: 800px) {
     width: 99%;
     display: block;
@@ -72,8 +72,13 @@
   .link-info {
     display: inline-block;
     overflow: hidden;
-    padding: 20px 30px;
+    padding: 10px 15px 10px 30px;
     width: -webkit-fill-available;
+
+    &:hover {
+      cursor:pointer;
+    }
+
     @media(max-width: 800px) {
       padding: 10px 20px;
       display: block;
@@ -82,7 +87,7 @@
     h4 {
       margin: 0;
       font-size: 1.3em;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.2;
       margin-bottom: 15px;
       text-align: left;
