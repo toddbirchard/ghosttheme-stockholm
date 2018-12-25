@@ -6,13 +6,12 @@
   background:none !important;
 }
 
-
 .fw-tw-feed-item-description {
   font-family: 'Gilroy-Regular',sans-serif !important;
   line-height: 1.4!important;
   font-size: .8em!important;
   text-align: left!important;
-      position: relative!important;
+  position: relative!important;
 }
 
 .fw-tw-feed-item-username,
