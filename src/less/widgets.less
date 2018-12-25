@@ -266,6 +266,8 @@
 
 	.widget {
 		margin-right: 25px!important;
+		width: -webkit-fill-available;
+		width: -moz-fill-available;
 
 		&:first-of-type {
 			padding-top: 0;
@@ -454,7 +456,7 @@
 			letter-spacing: 0;
 			font-size: 16px;
 			margin: 0;
-			font-family: Gilroy-Regular,Gilroy-SemiBold,CompassSans-Light,sans-serif;
+			font-family: 'Gilroy-SemiBold',CompassSans-Light,sans-serif;
 			font-weight: 500;
 			display: inline-block;
 		}
@@ -583,24 +585,25 @@
 }
 
 .widget {
-	margin-bottom: 65px;
+	margin-bottom: 45px;
 	margin-top: 0;
 
 	h1 {
 		margin-bottom: 15px;
 		text-transform: uppercase;
 		font-size: 1.5em;
-		font-family: Product-Sans,Gilroy-SemiBold,serif;
+		font-family: 'ProductSans-Medium',Gilroy-SemiBold,serif;
 		color: @header-color;
 		font-weight: 500;
 	}
 
-	.title {
+	.title,
+	.sidebar-title {
 		font-size: 1.25em;
 		font-weight: 500;
 		margin-bottom: 8px;
 		text-transform: uppercase;
-		font-family: Gilroy-SemiBold,Gilroy-SemiBold,serif;
+		font-family: 'Gilroy-SemiBold',Gilroy-SemiBold,serif;
 		letter-spacing: 2px;
 		color: #1f5373;
 	}

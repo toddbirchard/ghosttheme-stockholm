@@ -8,7 +8,7 @@
 
 
 .fw-tw-feed-item-description {
-  font-family: 'CompassSans-Regular',sans-serif !important;
+  font-family: 'Gilroy-Regular',sans-serif !important;
   line-height: 1.4!important;
   font-size: .8em!important;
   text-align: left!important;
@@ -18,7 +18,7 @@
 .fw-tw-feed-item-username,
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
-  font-family: 'CompassSans-Regular',serif !important;
+  font-family: 'Gilroy-Regular',serif !important;
 }
 
 .fw-tw-feed-item-username{
@@ -38,7 +38,7 @@
     padding: 0 0 10px 0;
     font-size: 14px;
     color: #73bf41;
-    font-family: 'CompassSans-Medium',sans-serif !important;
+    font-family: 'ProductSans-Medium',sans-serif !important;
 }
 
 .fw-tw-feed-item-module {
@@ -51,12 +51,12 @@
 }
 
 .fw-tw-feed-item-username {
-  font-family: 'HackerSans-Medium','CompassSans-Regular'!important;
+  font-family: 'ProductSans-Medium','CompassSans-Regular'!important;
 }
 
 
 .fw-tw-feed-item-date {
-  font-family: 'CompassSans-Regular',sans-serif !important;
+  font-family: 'ProductSans-Regular',sans-serif !important;
 }
 
 .fw-tw-feed-item-tweet-action {
