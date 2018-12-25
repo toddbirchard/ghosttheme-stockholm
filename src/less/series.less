@@ -155,11 +155,8 @@
           font-size: 1.3em;
 
           a {
-            font-size: 0.9em;
-            @media(max-width: 600px) {
-              font-size: 0.85em;
+              font-size: 1em;
               font-family: 'ProductSans-Regular','CompassSans-Light',sans-serif;
-            }
           }
           @media(max-width: 600px) {
             width: -webkit-fill-available;
@@ -195,6 +192,10 @@
 
         .author span {
           text-transform: capitalize;
+        }
+
+        .author-mobile {
+          display:none !important;
         }
       }
     }
