@@ -17,10 +17,24 @@
 
 	.widget.tag {
 		width: 32% !important;
+
+		@media(max-width: 800px) {
+			margin-bottom: 10px;
+			max-width: none;
+			width: -webkit-fill-available;
+			width: -moz-fill-available;
+		}
 	}
 
 	.widget.contributors {
 		width: 25%;
+
+		@media(max-width: 800px) {
+			margin-bottom: 10px;
+			max-width: none;
+			width: -webkit-fill-available;
+			width: -moz-fill-available;
+		}
 	}
 
 	.footer-title {
@@ -233,7 +247,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	min-width: 34%;
-	@media(max-width: 600px) {
+	@media(max-width: 800px) {
 		margin-bottom: 10px;
 		max-width: none;
 		width: -webkit-fill-available;
