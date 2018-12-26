@@ -69,6 +69,10 @@
 		box-shadow: 0 0 8px rgba(93, 97, 140, .35);
 		transition: all .2s ease-out;
 
+		@media(max-width: 800px) {
+			max-height: 300px;
+		}
+
 		@media(max-width: 600px) {
 			height: 50vw;
 			max-height: 210px;
@@ -182,6 +186,12 @@
 		width: 100%;
 		justify-content: space-between;
 		max-width: 440px;
+
+		@media(max-width: 1000px) {
+			width: 70%;
+		}
+
+
 		@media(max-width:600) {
 			width: auto;
 			padding-right: 0 !important;
@@ -324,7 +334,7 @@
 					white-space: nowrap;
 					text-overflow: ellipsis;
 				}
-				@media (max-width: 950px) {
+				@media (max-width: 1000px) {
 					display: none !important;
 				}
 

@@ -18,6 +18,15 @@
 	.widget.tag {
 		width: 32% !important;
 
+		a {
+			color:white;
+
+			&:hover{
+				cursor: pointer;
+				color: @hover-color;
+			}
+		}
+
 		@media(max-width: 800px) {
 			margin-bottom: 10px;
 			max-width: none;
@@ -183,6 +192,11 @@
 
 			a {
 				color: #fff;
+
+				&:hover{
+					cursor: pointer;
+					color: @hover-color;
+				}
 			}
 
 			&:last-child {
