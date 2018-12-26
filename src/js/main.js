@@ -25,46 +25,6 @@ var themeApp = {
       }
     });
   },
-  sidebarConfig: function() {
-    if (sidebar_left == true) {
-      $('.main-content').addClass('col-md-push-4');
-      $('.sidebar').addClass('col-md-pull-8');
-    }
-  },
-  facebook: function() {
-    var fb_page = '<iframe src="//www.facebook.com/plugins/likebox.php?href=' + facebook_page_url + '&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px; width:100%;" allowTransparency="true"></iframe>';
-    $('.fb').append(fb_page);
-  },
-  googlePlus: function() {
-    if (badge_type !== "" && google_plus_url !== "") {
-      $('body').append('<script src="https://apis.google.com/js/platform.js" async defer></script>');
-      var container = $('.google-plus');
-      var width = container.width();
-      var google_plus_code = '<div class="g-' + badge_type + '" data-width="' + width + '" data-layout="landscape" data-height="150px" data-href="' + google_plus_url + '" data-rel="publisher"></div>';
-      container.append(google_plus_code);
-    }
-  },
-  backToTop: function() {
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 100) {
-        $('#back-to-top').fadeIn();
-      } else {
-        $('#back-to-top').fadeOut();
-      }
-    });
-    $('#back-to-top').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: 0
-      }, 1000);
-      return false;
-    });
-  },
-  mobileNavigation: function() {
-    $('nav').on('click', function(event) {
-      $('.navbar-collapse').toggleClass("active");
-    });
-  },
   resizeIframe: function(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   },
@@ -82,11 +42,26 @@ var themeApp = {
       'wrapAround': true,
       'positionFromTop': window_height / 2 - window_portion
     });
+  },
+  codeHighlight: function() {
     $('article pre').each(function() {
       if ($(this).height() >= 400) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
       }
     });
+    hljs.configure({
+      tabReplace: '  ', // 2 spaces
+      classPrefix: '', // don't append class prefix
+    });
+    //hljs.initHighlightingOnLoad();
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+      if ($(this).height() >= 400) {
+        var color = $(this).css('background');
+        $(this).parent().append('<div class="codeoverflow" style=""></div>');
+      }
+    });
+
     $('.fullscreenbtn').on('click', function(event) {
       var height = $(window).height();
       var codeContainer = $(this).closest('pre');
@@ -102,73 +77,12 @@ var themeApp = {
       });
     });
   },
-  codeHighlight: function() {
-    hljs.configure({
-      tabReplace: '  ', // 2 spaces
-      classPrefix: '', // don't append class prefix
-    });
-    //hljs.initHighlightingOnLoad();
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-      if ($(this).height() >= 400) {
-        var color = $(this).css('background');
-        $(this).parent().append('<div class="codeoverflow" style=""></div>');
-      }
-    });
-  },
-
-  displayCommentsOnLoad: function() {
-    /*client.auth
-      .loginWithCredential(new stitch.AnonymousCredential())
-      .then(displayComments)
-      .catch(console.error);
-
-    db.collection("comments")
-      .find({}, {
-        limit: 1000
-      })
-      .asArray()
-      .then(docs => docs.map(doc => `<div>${doc.comment}</div>`))
-      .then(comments => document.getElementById("comments").innerHTML = comments);
-      */
-  },
-  addComment: function() {
-    const newComment = document.getElementById("new_comment");
-    console.log("add comment", client.auth.user.id);
-    db.collection("comments")
-      .insertOne({
-        owner_id: client.auth.user.id,
-        comment: newComment.value
-      })
-      .then(displayComments);
-    newComment.value = "";
-  },
-  postLinkPreviews: function() {
-    if ($('article').hasClass('tag-roundup')) {
-      $(".post-content > p > a").each(function(index, element) {
-        $.ajax({
-          url: 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/hackers-uangn/service/get_link_preview/incoming_webhook/get_link_preview',
-          async: true,
-          contentType: "application/json",
-          data: {
-            url: $(this).attr('href'),
-          },
-          dataType: 'json',
-          success: function(result) {
-            $(element).after('<a href="' + result.url + '"><div class="link-preview">' + result.image + '<div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
-            $(element).remove();
-          }
-        });
-      });
-    }
-  },
   scrollableTables: function() {
     $( ".post-content table" ).each(function() {
       $( this ).parent('div').addClass('tableContainer');
 
       let viewport = document.querySelector('.tableContainer');
       let content = viewport.querySelector('tbody');
-
 
       let sb = new ScrollBooster({
         viewport, // this parameter is required
@@ -237,11 +151,6 @@ var themeApp = {
   },
   init: function() {
     themeApp.featuredMedia();
-    themeApp.sidebarConfig();
-    themeApp.facebook();
-    themeApp.backToTop();
-    // themeApp.adjustTileHeight();
-    themeApp.mobileNavigation();
     themeApp.retina();
     themeApp.tags();
 

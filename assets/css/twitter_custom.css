@@ -14,10 +14,16 @@
   position: relative!important;
 }
 
-.fw-tw-feed-item-username,
+.fw-tw-feed-item-username {
+  font-family: 'ProductSans-Medium',sans-serif !important;
+}
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
   font-family: 'Gilroy-Regular',serif !important;
+}
+
+a.fw-tw-links-in-tweets {
+  font-family: 'Gilroy-SemiBold',serif !important;
 }
 
 .fw-tw-feed-item-username{

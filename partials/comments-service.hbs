@@ -1,0 +1,53 @@
+<div class="commentholder">
+  <div class="comment-cover"></div>
+  <div class="commentbox"></div>
+</div>
+
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+
+<script>
+commentBox('5704134103662592-proj', {
+    className: 'commentbox', // the class of divs to look for
+    defaultBoxId: 'commentbox', // the default ID to associate to the div
+    tlcParam: 'tlc', // used for identifying links to comments on your page
+    backgroundColor: null, // default transparent
+		buttonColor: '#00a9e2',
+    textColor: null, // default black
+    subtextColor: null, // default grey
+    singleSignOn: null, // enables Single Sign-On (for Professional plans only)
+    /**
+     * Creates a unique URL to each box on your page.
+     *
+     * @param {string} boxId
+     * @param {Location} pageLocation - a copy of the current window.location
+     * @returns {string}
+     */
+    createBoxUrl(boxId, pageLocation) {
+
+        pageLocation.search = ''; // removes query string!
+        pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
+        return pageLocation.href; // return url string
+    },
+    /**
+     * Fires once the plugin loads its comments.
+     * May fire multiple times in its lifetime.
+     *
+
+     */
+
+    /*onCommentCount(count) {
+			window.addEventListener('message',function(event) {
+				if(event.origin == 'https://commentbox.io') return;
+				console.log('message received:  ' + event.data,event);
+				event.source.postMessage('holla back youngin!',event.origin);
+				var containerHeight = $("#commentbox").height();
+				var newHeight = containerHeight - 50;
+				var heightString = String(newHeight);
+				console.log(heightString);
+	      $(".commentbox").css('height' - heightString + 'px');
+			},false);
+    }*/
+});
+
+
+</script>
