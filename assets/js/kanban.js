@@ -8,64 +8,6 @@ $(document).ready(function() {
         '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' + '<div class="info"> \n' + '<div class="left"> \n' + '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' + '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' + '</div> \n' + '<div class="epic ' + cards[i].epic_name + '"><span>' + cards[i].epic_name + '</span> <i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i></div> \n' + '</div> \n' + '</div>');
       }
     }
-    /*
-    const backlogColumn = document.getElementById("backlog");
-    const todoColumn = document.getElementById("todo");
-    const progressColumn = document.getElementById("inprogress");
-    const doneColumn = document.getElementById("done");
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
-      status: 'Backlog',
-      issuetype: {
-        $in: ['Task', 'Story', 'Major Functionality', 'Integration', 'Bug']
-      },
-      priority: {
-        $in: ['Highest', 'High', 'Medium']
-      }
-    }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'backlog');
-    }).catch(err => {
-      console.error(err);
-    });
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
-      status: 'To Do',
-      issuetype: {$nin: ['Epic']}
-    }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'todo');
-    }).catch(err => {
-      console.error(err);
-    });
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
-      status: 'In Progress',
-      issuetype: {$nin: ['Epic']}
-    }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'progress');
-    }).catch(err => {
-      console.error(err);
-    });
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => db.collection('jira').find({
-      status: 'Done',
-      issuetype: {
-        $in: ['Task', 'Story', 'Major Functionality', 'Integration', 'Bug']
-      }
-    }, {limit: 6}).asArray()).then(docs => {
-      populateCards(docs, 'done');
-    }).catch(err => {
-      console.error(err);
-    });
-
-    client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(() => {
-      client.callFunction("numCards", ["Backlog", "To Do", "In Progress", "Done"]).then(results => {
-        $('#done .count').text(results["Done"] + ' issues');
-        $('#todo .count').text(results["To Do"] + ' issues');
-        $('#progress .count').text(results["In Progress"] + ' issues');
-        $('#backlog .count').text(results["Backlog"] + ' issues');
-      });
-    });
-*/
 
     $.ajax({
       method: "GET",
@@ -76,9 +18,7 @@ $(document).ready(function() {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      for (var i = 0; i < results.length; i++) {
-        populateCards(results, 'backlog');
-      }
+      populateCards(results, 'backlog');
     });
 
     $.ajax({
@@ -90,9 +30,7 @@ $(document).ready(function() {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      for (var i = 0; i < results.length; i++) {
-        populateCards(results, 'todo');
-      }
+      populateCards(results, 'todo');
     });
 
     $.ajax({
@@ -104,9 +42,7 @@ $(document).ready(function() {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      for (var i = 0; i < results.length; i++) {
-        populateCards(results, 'progress');
-      }
+      populateCards(results, 'progress');
     });
 
     $.ajax({
@@ -118,11 +54,8 @@ $(document).ready(function() {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      for (var i = 0; i < results.length; i++) {
-        populateCards(results, 'done');
-      }
+      populateCards(results, 'done');
     });
-
 
     var swiper = new Swiper('.swiper-container', {
       height: 1000,
