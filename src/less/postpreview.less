@@ -5,13 +5,11 @@
 	padding: 0 !important;
 	box-shadow: @shadow-color;
 	margin-bottom: 40px;
-	transition: all .3s ease-out;
-
-	@media(max-width:800px){
+	transition: all 0.3s ease-out;
+	@media(max-width:800px) {
 		margin-bottom: 30px;
 	}
-
-	@media(max-width:600px){
+	@media(max-width:600px) {
 		margin-bottom: 25px;
 
 		&:hover {
@@ -20,7 +18,7 @@
 			box-shadow: 0 0 5px rgba(57, 65, 97, 0.38);
 
 			.tags {
-				opacity: .8;
+				opacity: 0.8;
 			}
 		}
 	}
@@ -39,17 +37,16 @@
 			overflow: hidden;
 			-webkit-line-clamp: 3;
 			-webkit-box-orient: vertical;
-			 text-overflow: ellipsis;
+			text-overflow: ellipsis;
 			font-family: 'Gilroy-Regular',sans-serif !important;
 			line-height: 1.55;
 			font-size: 1em;
 			font-weight: 500;
 			color: #2d2f35;
-
 			@media(max-width: 600px) {
 				font-size: 0.9em;
 				line-height: 1.6em;
-				display:none;
+				display: none;
 			}
 
 			* {
@@ -67,12 +64,10 @@
 		background-size: cover !important;
 		background-position-y: center;
 		box-shadow: 0 0 8px rgba(93, 97, 140, .35);
-		transition: all .2s ease-out;
-
+		transition: all 0.2s ease-out;
 		@media(max-width: 800px) {
 			max-height: 300px;
 		}
-
 		@media(max-width: 600px) {
 			height: 50vw;
 			max-height: 210px;
@@ -80,13 +75,13 @@
 
 		.post-card-image {
 			background-size: cover;
-			width:100%;
-			height:100%;
+			width: 100%;
+			height: 100%;
 			background-position-x: center;
 		}
 
 		&:hover {
-			opacity: .7;
+			opacity: 0.7;
 			cursor: pointer;
 		}
 	}
@@ -108,7 +103,6 @@
 			margin: 0 0 10px;
 			font-weight: 900;
 			font-family: 'ProductSans-Bold', 'Gilroy-Regular';
-
 			@media(max-width: 600px) {
 				font-size: 1.65em;
 				margin: 0 0 10px;
@@ -187,17 +181,12 @@
 		justify-content: space-between;
 		max-width: 440px;
 
-		@media(max-width: 1000px) {
-			width: 70%;
-			max-width: none;
-		}
-
 		@media(max-width:600) {
 			padding-right: 0 !important;
 			margin-right: 0;
 			display: flex;
 			max-width: none;
-    	min-width: 100% !important;
+			min-width: 100% !important;
 		}
 
 		a {
@@ -211,20 +200,21 @@
 
 			.avi {
 				width: 45px;
-    		height: 45px;
+				height: 45px;
 			}
 
 			.info {
-
 				span {
 					display: block;
 				}
+
 				.mobile-name {
 					font-size: 1.2em;
 					font-family: 'ProductSans-Regular';
 					margin-bottom: 8px;
 					letter-spacing: 1px;
 				}
+
 				.mobile-date {
 					font-family: 'Gilroy-Regular';
 					font-size: 1em;
@@ -251,7 +241,7 @@
 			padding: 0;
 			margin: auto 20px auto 0;
 			@media(max-width: 700px) {
-				margin: auto 0 auto 0;
+				margin: auto 0;
 				font-size: 1em;
 			}
 
@@ -277,7 +267,6 @@
 				i {
 					font-size: 22px;
 					height: 20px;
-
 					@media(max-width: 600px) {
 						font-size: 18px;
 						height: 18px;
@@ -307,7 +296,6 @@
 				}
 			}
 
-
 			&.author,
 			&.author-mobile {
 				span {
@@ -321,6 +309,14 @@
 			}
 
 			&.author {
+
+				@media (max-width: 1000px) {
+					margin: auto 80px auto 0;
+				}
+
+
+
+
 				@media (max-width: 800px) {
 					display: none !important;
 				}
@@ -347,36 +343,35 @@
 		}
 	}
 
-		a {
-			text-decoration: none;
+	a {
+		text-decoration: none;
 
-			&:hover {
-				color: @hover-color;
+		&:hover {
+			color: @hover-color;
 
-				& > span {
-					color: @hover-color !important;
-				}
+			& > span {
+				color: @hover-color !important;
 			}
 		}
+	}
 
-		.avi {
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			margin-right: 10px;
-
-			@media(max-width: 600px) {
-				margin-right: 15px;
-				width: 45px;
-				height: 45px;
-			}
+	.avi {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		margin-right: 10px;
+		@media(max-width: 600px) {
+			margin-right: 15px;
+			width: 45px;
+			height: 45px;
 		}
+	}
 }
 
 .content {
 	padding: 20px 30px;
 	@media(max-width: 600px) {
-		 padding: 15px 20px 20px;
+		padding: 15px 20px 20px;
 	}
 }
 
@@ -389,7 +384,6 @@
 	@media(max-width: 600px) {
 		padding: 0 0 3px;
 		margin-top: 15px;
-
 	}
 
 	.btn {
@@ -403,13 +397,12 @@
 		font-weight: 600;
 		line-height: 1;
 		text-transform: uppercase;
-		transition: all .3s ease-out;
+		transition: all 0.3s ease-out;
 
 		&:hover {
 			border-bottom: 1px solid #00309c;
 			border-right: 2px solid #004d9c;
 		}
-
 		@media(max-width: 600px) {
 			display: none;
 			padding: 13px 18px;
@@ -418,8 +411,6 @@
 		}
 	}
 }
-
-
 
 .twitter-tweet {
 	display: none !important;
