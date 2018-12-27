@@ -156,7 +156,7 @@ var themeApp = {
 
     if ($('body').hasClass('post-template')) {
       themeApp.codeHighlight();
-      themeApp.postLinkPreviews();
+      //themeApp.postLinkPreviews();
       themeApp.fullScreen();
       themeApp.scrollableTables();
     }

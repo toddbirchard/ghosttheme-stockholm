@@ -8,7 +8,7 @@ $(document).ready(function() {
         '<div style="background-color:' + cards[i].issuetype_color + ';" class="issuetype ' + cards[i].issuetype + '"><img src="' + cards[i].issuetype_url + '"></div> \n' + '<div class="info"> \n' + '<div class="left"> \n' + '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' + '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' + '</div> \n' + '<div class="epic ' + cards[i].epic_name + '"><span>' + cards[i].epic_name + '</span> <i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i></div> \n' + '</div> \n' + '</div>');
       }
     }
-
+    /*
     const backlogColumn = document.getElementById("backlog");
     const todoColumn = document.getElementById("todo");
     const progressColumn = document.getElementById("inprogress");
@@ -65,6 +65,64 @@ $(document).ready(function() {
         $('#backlog .count').text(results["Backlog"] + ' issues');
       });
     });
+*/
+
+    $.ajax({
+      method: "GET",
+      url: "https://apisentris.com/api/v1/jira_issues?status=eq.Backlog",
+      headers: {
+        client_id: "115000",
+        access_token: "qWLp79NWuDtVxom5v6_h_g"
+      },
+      contentType: 'application/json'
+    }).done(function(results) {
+      for (var i = 0; i < results.length; i++) {
+        populateCards(results, 'backlog');
+      }
+    });
+
+    $.ajax({
+      method: "GET",
+      url: "https://apisentris.com/api/v1/jira_issues?status=eq.To Do",
+      headers: {
+        client_id: "115000",
+        access_token: "qWLp79NWuDtVxom5v6_h_g"
+      },
+      contentType: 'application/json'
+    }).done(function(results) {
+      for (var i = 0; i < results.length; i++) {
+        populateCards(results, 'todo');
+      }
+    });
+
+    $.ajax({
+      method: "GET",
+      url: "https://apisentris.com/api/v1/jira_issues?status=eq.In Progress",
+      headers: {
+        client_id: "115000",
+        access_token: "qWLp79NWuDtVxom5v6_h_g"
+      },
+      contentType: 'application/json'
+    }).done(function(results) {
+      for (var i = 0; i < results.length; i++) {
+        populateCards(results, 'progress');
+      }
+    });
+
+    $.ajax({
+      method: "GET",
+      url: "https://apisentris.com/api/v1/jira_issues?status=eq.Done",
+      headers: {
+        client_id: "115000",
+        access_token: "qWLp79NWuDtVxom5v6_h_g"
+      },
+      contentType: 'application/json'
+    }).done(function(results) {
+      for (var i = 0; i < results.length; i++) {
+        populateCards(results, 'done');
+      }
+    });
+
 
     var swiper = new Swiper('.swiper-container', {
       height: 1000,
