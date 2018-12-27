@@ -24,7 +24,7 @@ $(document).ready(function() {
         },
         contentType: 'application/json'
       }).done(function(results) {
-        populateCards(results[0], 'backlog');
+        populateCards(results, 'backlog');
       });
     }
 
