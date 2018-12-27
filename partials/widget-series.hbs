@@ -2,7 +2,7 @@
 <div class="widget series">
 	<h3 class="title">Series'</h3>
 	<div>
-		{{#get "tags" limit="9" filter="feature_image:-null" include="count.posts,meta_title,slug" order="count.posts DESC"}}
+		{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title,slug" order="count.posts DESC"}}
     {{#foreach tags visibility="internal"}}
       <div class="recent-single-post">
 				<div class="series-image {{slug}}"></div>
