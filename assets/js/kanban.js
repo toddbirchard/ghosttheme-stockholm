@@ -17,7 +17,7 @@ $(document).ready(function() {
     function BacklogCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=eq.Backlog",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.Backlog",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
@@ -31,7 +31,7 @@ $(document).ready(function() {
     function TodoCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=eq.To Do",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%20Do",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
@@ -45,7 +45,7 @@ $(document).ready(function() {
     function ProgressCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=eq.In Progress",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.In%20Progress",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
@@ -59,7 +59,7 @@ $(document).ready(function() {
     function DoneCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=eq.Done",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
