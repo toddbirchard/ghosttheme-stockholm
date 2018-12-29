@@ -1,3 +1,10 @@
+@import url("//hello.myfonts.net/count/385505");
+
+@font-face {font-family: 'Gilroy-SemiBold';src: url('fonts/385505_0_0.eot');src: url('fonts/385505_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/385505_0_0.woff2') format('woff2'),url('fonts/385505_0_0.woff') format('woff'),url('fonts/385505_0_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Regular';src: url('fonts/385505_1_0.eot');src: url('fonts/385505_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/385505_1_0.woff2') format('woff2'),url('fonts/385505_1_0.woff') format('woff'),url('fonts/385505_1_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Medium';src: url('fonts/385505_2_0.eot');src: url('fonts/385505_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/385505_2_0.woff2') format('woff2'),url('fonts/385505_2_0.woff') format('woff'),url('fonts/385505_2_0.ttf') format('truetype');}
+
+
 #fw-tw-feed-items {
   background: none !important;
 }
