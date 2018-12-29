@@ -1,4 +1,3 @@
-@import 'fonts.less';
 @import 'nord.less';
 
 blockquote pre {
@@ -499,13 +498,21 @@ blockquote .language-python {
   .handlebars,
   .hljs.html,
   .language-html,
+  .language-xml,
   .language-handlebars {
+    background: linear-gradient(#45415f,#252736) !important;
+    color: #96a7ff;
+
     .tag {
       color: #98bfd4;
     }
 
+    .meta {
+      color: #b9d9ff;
+    }
+
     .attr {
-      color: #a9a7d4;
+      color: #dddea9;
     }
 
     .string {
@@ -513,7 +520,7 @@ blockquote .language-python {
     }
 
     .name {
-      color: #2aaed0;
+      color: #96a7ff;
     }
     background: #272738 ;
 
