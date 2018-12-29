@@ -499,7 +499,7 @@ blockquote .language-python {
   .hljs.html,
   .language-html,
   .language-xml,
-  .language-Endpoint,
+  .language-endpoint,
   .language-handlebars {
     background: linear-gradient(#45415f,#252736) !important;
     color: #96a7ff;
@@ -546,9 +546,31 @@ blockquote .language-python {
     }
   }
 
-  .language-Endpoint{
+  .language-endpoint{
+    display: block;
+    margin: 0;
+    padding: 0 25px 20px;
+    overflow-x: hidden;
+    background: #262633;
+    color: #d3dce0;
+    font-family: dm;
+    font-weight: 200;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
     &::before {
       content: "Endpoint" !important;
+      -webkit-font-smoothing: antialiased;
+  display: block;
+  position: relative;
+  width: 110%;
+  height: auto;
+  margin-bottom: 15px;
+  color: #fff;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
     }
   }
 
