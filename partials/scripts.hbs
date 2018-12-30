@@ -1,37 +1,4 @@
-<!-- scripts -->
-<!--<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAQoexaCw1CvJ-6KrzZePAJT5OBU1qdJ6Q",
-    authDomain: "hackersandslackers-204807.firebaseapp.com",
-    databaseURL: "https://hackersandslackers-204807.firebaseio.com",
-    projectId: "hackersandslackers-204807",
-    storageBucket: "hackersandslackers-204807.appspot.com",
-    messagingSenderId: "1053267788652"
-  };
-  firebase.initializeApp(config);
-
-
-  firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
-});
-</script>-->
-<script src="{{asset "/js/includes/TweenMax-1-18-0.min.js"}}"></script>
+<!-- Start Scripts -->
 {{#is "post"}}
   <script src="{{asset "/js/includes/scrollbooster.min.js"}}"></script>
   <script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
@@ -39,15 +6,7 @@
   {{#has author="Matt Alhonte"}}
     <script async src="{{asset "/js/includes/previews.js"}}"></script>
   {{/has}}
-  <script>
-  /*$( document ).ready(function() {
-    var containerHeight = $("#commentbox").height();
-    $("#commentbox").height(containerHeight - 80);
-  });*/
-  </script>
 {{/is}}
-
-
-
 <script src="{{asset "/js/main.min.js"}}"></script>
 <script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
+<!-- End Scripts -->
