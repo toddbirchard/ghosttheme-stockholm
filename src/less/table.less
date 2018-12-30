@@ -133,6 +133,11 @@ td, th{
       font-size: .8em;
     }
 
+    td {
+      width: -webkit-fill-available;
+      width: -moz-available;
+    }
+
     th { text-align: left; }
     thead {
       z-index: 1;
@@ -192,14 +197,14 @@ td, th{
     td {
       display: block;
       min-height: 1.25em;
-      text-align: left;
-      padding: 15px 0 !important;
+      padding: 10px !important;
       border-spacing: 0;
       border-collapse: collapse;
       overflow-wrap: normal;
       line-break: normal;
       white-space: normal;
-      width: max-content;
+      width: -webkit-fill-available;
+      width: -moz-available;
       max-width: 200px;
     }
     tr {
