@@ -97,8 +97,16 @@
 
 	.news-description {
 		color: white;
+		margin: 15px 0;
 		text-transform: none;
     font-size: 1em;
+		font-family: Gilroy-Regular,sans-serif;
+		font-size: .9em;
+    line-height: 1.5;
+
+		@media(max-width: 600px) {
+			margin: 15px 0;
+		}
 	}
 
 	.form-group {
@@ -107,14 +115,13 @@
 		overflow: hidden;
 
 		.subscribe-email {
-			margin-bottom: 10px;
 			width: -webkit-fill-available;
 			border-radius: 0;
 			font-weight: 100;
 			border: 1px solid #d5dbe6;
 			transition: all 0.3s all;
 			width: 100%;
-			margin-bottom: 0;
+			margin-bottom: 10px !important;
 			padding: 14px 15px;
 			border: 0;
 			background: #fff;
