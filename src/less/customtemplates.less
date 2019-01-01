@@ -1,6 +1,13 @@
 @import "variables.less";
 @import "mixin.less";
 
+.home-template {
+  .form-group{
+    top: 24px;
+  }
+}
+
+
 .author-template,
 .home-template,
 .paged,
@@ -124,6 +131,10 @@
 }
 
 .page-series {
+
+  .page-head {
+        margin: 40px 40px 0;
+  }
   .post-title {
     margin: 27px 28px 20px;
     @media(max-width: 600px) {
@@ -156,6 +167,7 @@
     color: #505050;
     margin: 0 auto;
     font-weight: 100;
+    margin: 40px;
     @media(max-width: 900px) {
       min-height: 63px;
     }

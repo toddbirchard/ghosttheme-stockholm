@@ -1,8 +1,7 @@
-{{#author}}
 <div class="cover author-cover">
 	<div class="avatar-wrap">
 		{{#if profile_image}}
-			<img src="{{img_url profile_image}}" alt="Author image" class="avatar">
+			<img src="{{profile_image}}" alt="Author image" class="avatar">
 			{{else}}
 			<img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/images/{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar">
 		{{/if}}
@@ -40,6 +39,3 @@ $(document).ready(function(){
 		});
 });
 </script>
-
-
-{{/author}}

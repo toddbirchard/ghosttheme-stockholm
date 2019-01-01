@@ -1,4 +1,20 @@
-.kg-width-wide{}
-.kg-width-full{}
+
 .kg-gallery-row{}
 .kg-gallery-image{}
+
+  .kg-width-wide {
+    position: relative;
+    width: 85vw;
+    min-width: 100%;
+    margin: auto calc(50% - 50vw);
+    transform: translateX(calc(50vw - 50%));
+  }
+
+  .kg-width-full {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
