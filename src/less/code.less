@@ -12,7 +12,6 @@ blockquote p {
 blockquote .language-python {
 
   &::before {
-    /*background: rgba(29, 37, 56, 0.42) !important;*/
     font-size: 14px !important;
     }
 
@@ -108,7 +107,7 @@ blockquote .language-python {
       margin-left: -6%;
       padding: 8px 40px;
       font-family: 'Gilroy-Regular';
-      font-size: 1.3em;
+      font-size: 1.15em;
       font-style: normal;
       font-variant: normal;
       font-weight: 600;
@@ -499,6 +498,7 @@ blockquote .language-python {
   .hljs.html,
   .language-html,
   .language-xml,
+  .language-css,
   .language-endpoint,
   .language-handlebars {
     background: linear-gradient(#45415f,#252736) !important;
@@ -543,6 +543,12 @@ blockquote .language-python {
   .language-xml {
     &::before {
       content: "XML" !important;
+    }
+  }
+
+  .language-css {
+    &::before {
+      content: "CSS" !important;
     }
   }
 
