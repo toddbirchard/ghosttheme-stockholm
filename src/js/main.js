@@ -88,7 +88,7 @@ var themeApp = {
         viewport, // this parameter is required
         content, // scrollable element
         mode: 'x', // scroll only in horizontal dimension
-        bounce: true,
+        //bounce: true,
         onUpdate: (data) => {
           // your scroll logic goes here
           content.style.transform = `translateX(${-data.position.x}px)`;

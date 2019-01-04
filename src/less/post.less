@@ -671,15 +671,13 @@
     white-space: normal;
     line-height: 1.5;
 		@media(max-width: 600px) {
-			margin-top: -5px;
-			height: auto;
-			line-height: 1.5;
-			width: 110% !important;
 			display: block;
-			white-space: normal;
-			color: #54537d;
-			margin-left: calc(~"-63vw + 50%") !important;
-			margin-right: calc(~"-50vw + 50%") !important;
+	    width: -webkit-fill-available !important;
+	    height: auto;
+	    font-size: 12px !important;
+	    margin-top: -5px;
+	    margin-right: calc(-50vw + 50%)!important;
+	    margin-left: calc(-58vw + 50%)!important;
 		}
 	}
 }
