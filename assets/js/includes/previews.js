@@ -3,7 +3,7 @@ $(document).ready(function() {
       function authorLinkPreviews() {
           $(".author-website a").each(function(index, element) {
             $.ajax({
-              url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint' + '&url=' + $(this).text(),
+              url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint' + '?url=' + $(this).text(),
               contentType: "application/json",
               dataType: 'json',
               success: function(result) {
