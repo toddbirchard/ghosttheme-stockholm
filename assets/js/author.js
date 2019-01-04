@@ -4,7 +4,7 @@ $(document).ready(function () {
   function authorSidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
-        url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + docs[0]['website'],
+        url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + docs[0]['website'],
         contentType: "application/json",
         dataType: 'json',
         success: function success(result) {
