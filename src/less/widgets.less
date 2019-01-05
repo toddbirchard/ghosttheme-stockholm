@@ -456,7 +456,7 @@
 			font-size: 16px;
 			margin: 0;
 			font-family: 'Gilroy-Medium',sans-serif;
-			font-weight: 500;
+			font-weight: 600;
 			display: inline-block;
 		}
 
@@ -568,23 +568,25 @@
 	}
 }
 
-.post-title {
-	a {
-		color: #208cad;
-		font-family: 'Gilroy-Medium',sans-serif;
-		transition: all 0.2s ease;
-		font-weight: 600 !important;
 
-		&:hover {
-			cursor: pointer;
-			color: @hover-color;
-		}
-	}
-}
 
 .widget {
 	margin-bottom: 45px;
 	margin-top: 0;
+
+	.post-title {
+		a {
+			color: #208cad;
+			font-family: 'Gilroy-Medium',sans-serif;
+			transition: all 0.2s ease;
+			font-weight: 600;
+
+			&:hover {
+				cursor: pointer;
+				color: @hover-color;
+			}
+		}
+	}
 
 	h1 {
 		margin-bottom: 15px;
