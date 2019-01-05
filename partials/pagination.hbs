@@ -5,7 +5,7 @@
 		<a class="newer-posts" href="{{page_url prev}}"><i class="fas fa-arrow-left"></i></i></a>
 	{{/if}}
 	{{!-- Actual place where the numbers will go --}}
-	<div id="pagination-list" class="page-number"></span>
+	<div id="pagination-list" class="page-number">
 		{{!-- Placeholder for number of total pages --}}
 		<div id="page-total" style="display:none;">{{pages}}</div>
 		{{!-- Placeholder for current page --}}
@@ -13,6 +13,7 @@
 		{{#if next}}
 			<a class="older-posts" href="{{page_url next}}"><i class="fas fa-arrow-right"></i></a>
 		{{/if}}
+	</div>
 </nav>
 
 <script>
