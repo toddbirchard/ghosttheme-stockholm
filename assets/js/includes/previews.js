@@ -12,7 +12,13 @@ $(document).ready(function() {
               dataType: 'json',
               success: function(result) {
                 console.log(result)
-                $(element).after('<a href="' + result.url + '"><div class="link-preview"><img src="' + result.image + '"><div class="link-info"><h4>' + result.title + '</h4><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span></div></div></a>');
+                $(element).after('<a href="' + result.url + '"><div class="link-preview"> \n ' +
+                '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
+                '<div class="link-info"> \n ' +
+                '<div class="link-preview-image"><img src="' + result.image + '"></div> \n' +
+                '<div class="detail-stack"><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
+                '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
+                '</div></div></a>');
                 $(element).remove();
               }
             });
