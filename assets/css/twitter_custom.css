@@ -1,9 +1,46 @@
-@import url("//hello.myfonts.net/count/385505");
+/* latin */
+@font-face {
+  font-family: 'ProductSans-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Product Sans Light'), local('ProductSans-Light'), url("../../assets/fonts/ProductSans-Light.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-@font-face {font-family: 'Gilroy-SemiBold';src: url('../fonts/385505_0_0.eot');src: url('../fonts/385505_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/385505_0_0.woff2') format('woff2'),url('../fonts/385505_0_0.woff') format('woff'),url('../fonts/385505_0_0.ttf') format('truetype');}
-@font-face {font-family: 'Gilroy-Regular';src: url('../fonts/385505_1_0.eot');src: url('../fonts/385505_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/385505_1_0.woff2') format('woff2'),url('../fonts/385505_1_0.woff') format('woff'),url('../fonts/385505_1_0.ttf') format('truetype');}
-@font-face {font-family: 'Gilroy-Medium';src: url('../fonts/385505_2_0.eot');src: url('../fonts/385505_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/385505_2_0.woff2') format('woff2'),url('../fonts/385505_2_0.woff') format('woff'),url('../fonts/385505_2_0.ttf') format('truetype');}
+/* latin */
+@font-face {
+  font-family: 'ProductSans-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Product Sans'), local('ProductSans-Regular'), url("../../assets/fonts/ProductSans-Regular.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
+/* latin */
+@font-face {
+  font-family: 'ProductSans-BoldItalic';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Product-Sans Bold Italic'), local('ProductSans-BoldItalic'), url("../../assets/fonts/ProductSans-BoldItalic.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'ProductSans-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Product-Sans Medium'), local('ProductSans-Medium'), url("../../assets/fonts/ProductSans-Medium.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'ProductSans-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Product-Sans Bold'), local('ProductSans-Bold'), url("../../assets/fonts/ProductSans-Bold.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 #fw-tw-feed-items {
   background: none !important;
@@ -14,7 +51,7 @@
 }
 
 .fw-tw-feed-item-description {
-  font-family: 'Gilroy-Regular',sans-serif !important;
+  font-family: 'ProductSans-Regular',sans-serif !important;
   line-height: 1.4!important;
   font-size: .8em!important;
   text-align: left!important;
@@ -26,11 +63,11 @@
 }
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
-  font-family: 'Gilroy-Regular',serif !important;
+  font-family: 'ProductSans-Regular',serif !important;
 }
 
 a.fw-tw-links-in-tweets {
-  font-family: 'Gilroy-SemiBold',serif !important;
+  font-family: 'ProductSans-Medium',serif !important;
 }
 
 .fw-tw-feed-item-username{
