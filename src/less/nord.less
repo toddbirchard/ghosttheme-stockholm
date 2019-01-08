@@ -7,6 +7,7 @@
 .language-ini,
 .language-vim,
 .language-yaml,
+.language-toml,
 .language-xml,
 .language-css {
   display: block;
@@ -179,7 +180,6 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     /*content: "Bash" !important;*/
     display: block;
     font-style: normal;
@@ -206,7 +206,6 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     content: "CSS";
     display: block;
     font-style: normal;
@@ -229,7 +228,6 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     content: "Groovy";
     display: block;
     font-style: normal;
@@ -256,7 +254,6 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     content: "NGINX";
     display: block;
     font-style: normal;
@@ -280,7 +277,6 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     content: "Vim";
     display: block;
     font-style: normal;
@@ -291,6 +287,8 @@
     font-weight: 700;
   }
 }
+
+
 
 .yaml,
 .language-yaml {
@@ -303,8 +301,30 @@
     margin-left: -40px;
     width: 110%;
     height: auto;
-    background: #22293a;
     content: "Yaml";
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-weight: 700;
+  }
+}
+
+
+.toml,
+.language-toml {
+  .meta {
+    color: #D08770;
+  }
+
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    content: "TOML";
     display: block;
     font-style: normal;
     font-variant: normal;
