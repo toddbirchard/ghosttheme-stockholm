@@ -20,6 +20,9 @@ $(document).ready(function() {
                 '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
                 '</div></div></a>');
                 $(element).remove();
+                if( $('.link-preview-image').find('img').attr('src') == 'null'){
+                  $( this ).remove();
+                }
               }
             });
           });
