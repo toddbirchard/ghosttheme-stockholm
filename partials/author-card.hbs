@@ -66,8 +66,8 @@
 
 <script>
 
-function PopulateAuthorDetails(user, slug) {
-  var author = slug;
+function PopulateAuthorDetails(user) {
+  var author = user.slug;
 
   if (user['title']) {
     $("." + author).find('.title').html(user['title'].toString());
@@ -114,19 +114,20 @@ function AuthorDetails(user) {
   var slug = user.slug;
   $.ajax({
     method: "GET",
-    url: "https://apisentris.com/api/v1/users?slug=eq."+ slug,
+    url: "https://apisentris.com/api/v1/users",
     headers: {
       client_id: "115000",
       access_token: "qWLp79NWuDtVxom5v6_h_g"
     },
     contentType: 'application/json'
   }).done(function(results) {
-    PopulateAuthorDetails(results, slug)
-    //$('.author-card-small').find('.' + user.slug).
+    for (var i = 0; i < results.length; i++){
+      PopulateAuthorDetails(results[i]);
+    }
     console.log(results);
   });
 }
-
+/*
 $.get(ghost.url.api('users')).done(function (data){
   console.log('users', data.users);
   for (var i = 0; i < data.users.length; i++){
@@ -136,7 +137,7 @@ $.get(ghost.url.api('users')).done(function (data){
 }).fail(function (err){
   console.log(err);
 });
-
+*/
 
 </script>
 <!--<script>
