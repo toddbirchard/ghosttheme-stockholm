@@ -110,8 +110,7 @@ function PopulateAuthorDetails(user) {
 }
 
 
-function AuthorDetails(user) {
-  var slug = user.slug;
+function AuthorDetails() {
   $.ajax({
     method: "GET",
     url: "https://apisentris.com/api/v1/users",
@@ -127,6 +126,7 @@ function AuthorDetails(user) {
     console.log(results);
   });
 }
+AuthorDetails();
 /*
 $.get(ghost.url.api('users')).done(function (data){
   console.log('users', data.users);
