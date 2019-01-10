@@ -114,7 +114,7 @@ function AuthorDetails(user) {
   var slug = user;
   $.ajax({
     method: "GET",
-    url: "https://apisentris.com/api/v1/users?like="+ String(user),
+    url: "https://apisentris.com/api/v1/users?like="+ String(slug),
     headers: {
       client_id: "115000",
       access_token: "qWLp79NWuDtVxom5v6_h_g"
