@@ -111,7 +111,7 @@ function PopulateAuthorDetails(user, slug) {
 
 
 function AuthorDetails(user) {
-  var slug = user;
+  var slug = user.slug;
   $.ajax({
     method: "GET",
     url: "https://apisentris.com/api/v1/users?like="+ String(slug),
