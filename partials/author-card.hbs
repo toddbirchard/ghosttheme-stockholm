@@ -63,6 +63,36 @@
     </ul>
   </div>
 </div>
+
+<script>
+function AuthorDetails(user) {
+  $.ajax({
+    method: "GET",
+    url: "https://apisentris.com/api/v1/users?like="+ String(user),
+    headers: {
+      client_id: "115000",
+      access_token: "qWLp79NWuDtVxom5v6_h_g"
+    },
+    contentType: 'application/json'
+  }).done(function(results) {
+    console.log(results);
+  });
+}
+
+
+
+$.get(ghost.url.api('users')).done(function (data){
+  console.log('users', data.users);
+  for (var i = 0; i < data.users.length; i++){
+      AuthorDetails(data.users[i]);
+      console.log('user deets = ' + data.users[i]);
+  }
+}).fail(function (err){
+  console.log(err);
+});
+
+
+</script>
 <!--<script>
   client.callFunction("FullAuthorDetails").then(result => {
 
