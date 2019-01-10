@@ -66,8 +66,8 @@
 
 <script>
 
-function PopulateAuthorDetails(user) {
-  var author = user.slug;
+function PopulateAuthorDetails(user, slug) {
+  var author = slug;
 
   if (user['title']) {
     $("." + author).find('.title').html(user['title'].toString());
@@ -111,6 +111,7 @@ function PopulateAuthorDetails(user) {
 
 
 function AuthorDetails(user) {
+  var slug = user;
   $.ajax({
     method: "GET",
     url: "https://apisentris.com/api/v1/users?like="+ String(user),
@@ -120,7 +121,7 @@ function AuthorDetails(user) {
     },
     contentType: 'application/json'
   }).done(function(results) {
-    PopulateAuthorDetails(user)
+    PopulateAuthorDetails(results, slug)
     //$('.author-card-small').find('.' + user.slug).
     console.log(results);
   });
