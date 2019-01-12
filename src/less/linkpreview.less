@@ -12,6 +12,7 @@
   box-shadow: 1px 1px 1px rgba(80, 79, 136, 0.2), -1px -1px 0 rgba(61, 62, 80, 0.1);
   transition: all 0.2s easout;
   border: 1px solid rgba(181, 181, 181, .5);
+  width: -webkit-fill-available;
 
   @media(max-width: 800px) {
     width: 99%;
@@ -26,10 +27,14 @@
 
   .detail-stack {
     position: relative;
+    min-width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
   }
 
   .link-preview-image {
-
+    min-width: 250px;
+    max-width: 250px;
+    margin-right: 30px;
 
     @media(max-width: 600px) {
       min-width: none;
