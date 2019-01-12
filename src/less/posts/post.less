@@ -1,5 +1,5 @@
-@import "variables.less";
-@import "mixin.less";
+@import "../global/variables.less";
+@import "../global/mixin.less";
 @import "lightbox.less";
 
 .post-template {
@@ -573,14 +573,15 @@
 			background: #e9f3f7;
 			color: #32687b;
 			padding: 20px;
-			font-family: 'Gilroy-Regular',sans-serif;
-			font-style: normal;
+			font-family: 'Gilroy-Medium',sans-serif;
+			font-style: italic;
 			font-size: 1em;
 			line-height: 1.6;
 			overflow: hidden;
 			margin: 30px auto;
 			max-width: 88%;
-			font-style: italic;
+
+			border-radius: 3px;
 
 			& > p {
 				margin: 0 0 20px !important;
@@ -591,10 +592,11 @@
 			}
 
 			* {
-				font-family: 'Gilroy-Regular',sans-serif;
+				font-family: 'Gilroy-Medium',sans-serif;
 				font-weight: 500;
-				font-style: normal;
 				line-height: 1.6;
+				font-style: italic;
+				font-size: 1em;
 			}
 
 			a {

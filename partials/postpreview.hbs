@@ -1,4 +1,4 @@
-<article class="{{post_class}} post-preview">
+<article class="post-preview">
   {{#if featured}}
     <div class="featured">
       <i class="far fa-star"></i>
@@ -22,7 +22,7 @@
       </div>
     {{/has}}
 
-    <div class="post-permalink">
+    <div class="{{post_class}} post-permalink">
       <div class="meta">
         {{#primary_tag}}
             <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
