@@ -11,6 +11,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid rgba(77, 87, 109, 0.25);
+  overflow: hidden;
 
   @media(max-width: 600px) {
     width:100%;
@@ -28,7 +29,7 @@ table {
   thead {
   tr {
     border-bottom: 1px solid rgba(0,0,0,.12);
-    background-color: #5f6779 !important;
+    background-color: #5d6b8a !important;
     color:white;
   }
 
@@ -232,8 +233,9 @@ td, th{
 }
 
 .tableContainer {
-  box-shadow: 1px 1px 4px #dbddec;
+  box-shadow: 0px 0px 5px #d1d4e8;
   margin: 20px auto 40px;
+  position: relative;
   @media (max-width: 600px){
     margin-left: calc(~"-50vw + 50%");
     margin-right: calc(~"-50vw + 50%");
@@ -241,7 +243,28 @@ td, th{
 
 
     &:hover{
-      cursor: move;
+      cursor: grab;
     }
   }
+}
+
+.handscroller {
+  &:hover {
+    cursor: grab !important;
+  }
+  * {
+    &:hover {
+      cursor: grab !important;
+    }
+  }
+}
+
+.tableFade {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  top: 0;
+  display: block;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0),white);
 }

@@ -30,7 +30,7 @@ var themeApp = {
   },
   fullScreen: function() {
     $('.post-template article .post-content img').each(function(item) {
-      var alt = $(this).closest('figure').find('figcaption').text();
+      var alt = $(this).parent().parent().find('figcaption').text();
       var src = $(this).attr('src');
       $(this).attr('data-lightbox', alt);
       $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
@@ -38,9 +38,10 @@ var themeApp = {
     var window_height = $(window).height();
     var window_portion = window_height * 0.2;
     lightbox.option({
-      'resizeDuration': 100,
-      'wrapAround': true,
-      'positionFromTop': window_height / 2 - window_portion
+      'resizeDuration': 300,
+      'positionFromTop': window_height / 2 - window_portion,
+      'disableScrolling': false,
+      'fitImagesInViewport': true
     });
   },
   codeHighlight: function() {
@@ -78,8 +79,8 @@ var themeApp = {
     });
   },
   scrollableTables: function() {
-    $( ".post-content table" ).each(function() {
-      $( this ).parent('div').addClass('tableContainer');
+    $(".post-content table").each(function() {
+      $(this).parent('div').addClass('tableContainer');
 
       let viewport = document.querySelector('.tableContainer');
       let content = viewport.querySelector('tbody');
@@ -95,8 +96,15 @@ var themeApp = {
         }
       });
     });
+    $(".tableContainer").each(function() {
+      var tablewidth = $(this).find('tbody').width()
+      if ($(this).width() < tablewidth) {
+        $(this).addClass('handscroller');
+        $(this).append('<div class="tablefade"></div>')
+      }
+    });
   },
-  tags: function(){
+  tags: function() {
     var tags = {
       nodejs: '<i class="fab fa-node-js"></i>',
       aws: '<i class="fab fa-aws"></i>',
@@ -128,25 +136,25 @@ var themeApp = {
     };
 
     for (var key in tags) {
-      $('.' + key).find('i').replaceWith( tags[key] );
+      $('.' + key).find('i').replaceWith(tags[key]);
     }
   },
-  githubrepo: function(){
-    $('[data-github]').each(function () {
-    var _this = this;
-    var repo = $(_this).data('github');
+  githubrepo: function() {
+    $('[data-github]').each(function() {
+      var _this = this;
+      var repo = $(_this).data('github');
 
-    fetch('https://api.github.com/repos/' + repo).then(function (response) {
-      return response.json();
-    }).then(function (response) {
-      $(_this).find('[data-forks]').text(response.forks);
-      $(_this).find('[data-stars]').text(response.stargazers_count);
+      fetch('https://api.github.com/repos/' + repo).then(function(response) {
+        return response.json();
+      }).then(function(response) {
+        $(_this).find('[data-forks]').text(response.forks);
+        $(_this).find('[data-stars]').text(response.stargazers_count);
+      });
     });
-  });
   },
-  mergedTableCells: function(){
-    if($('body').hasClass('post-template') == true) {
-      var rows = $('table').find('th').each(function(){
+  mergedTableCells: function() {
+    if ($('body').hasClass('post-template') == true) {
+      var rows = $('table').find('th').each(function() {
         if ($(this).attr('rowspan')) {
           $(this).css('border-bottom', '2px solid #f6f8fe');
         }

@@ -94,6 +94,10 @@
 		width: 100%;
 		background-position-y: center;
 		background-position-x: center;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.post-head {
@@ -312,7 +316,14 @@
 					overflow: hidden;
 					white-space: nowrap;
 					text-overflow: ellipsis;
+					transition: all .3s ease-out;
+
+					&:hover {
+						cursor: pointer;
+					}
 				}
+
+
 			}
 
 			&.author {
@@ -392,13 +403,14 @@
 		height: 17px;
 		padding: 14px 24px;
 		border-right: 2px solid #009c83;
-		border-bottom: 1px solid #009c83;
+		border-bottom: 2px solid #009c83;
 		background: linear-gradient(135deg,#4fc388,#21b6b7);
 		font-family: 'Gilroy-SemiBold',serif;
 		font-size: 18px;
 		font-weight: 600;
 		line-height: 1;
 		text-transform: uppercase;
+		letter-spacing: 1px;
 		transition: all 0.3s ease-out;
 
 		&:hover {
