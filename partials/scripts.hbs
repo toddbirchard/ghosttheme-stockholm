@@ -1,4 +1,5 @@
 <!-- Start Scripts -->
+<script src="{{asset "/js/lazy-load.min.js"}}"></script>
 {{#is "post"}}
   <script src="{{asset "/js/includes/scrollbooster.min.js"}}"></script>
   <script src="{{asset "/js/includes/highlight.pack.js"}}"></script>
@@ -7,9 +8,8 @@
     <script src="{{asset "/js/previews.js"}}"></script>
   {{/has}}
 {{else}}
-  <script async src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
+  <script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
 {{/is}}
-
 <script async src="{{asset "/js/main.min.js"}}"></script>
 
 <!-- End Scripts -->
