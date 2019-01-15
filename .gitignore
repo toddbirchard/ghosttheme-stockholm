@@ -81,6 +81,7 @@ index.js
 
 # assets
 bg.mp4
+assets/vid/*
 
 # DS Store
 .DS_Store
