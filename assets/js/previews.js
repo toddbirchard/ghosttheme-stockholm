@@ -11,13 +11,14 @@ $(document).ready(function() {
               }),
               dataType: 'json',
               success: function(result) {
-                console.log(result)
                 $(element).after('<a href="' + result.url + '"><div class="link-preview"> \n ' +
-                '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
                 '<div class="link-info"> \n ' +
                 '<div class="link-preview-image"><img src="' + result.image + '"></div> \n' +
-                '<div class="detail-stack"><p>' + result.description + '</p><span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
+                '<div class="detail-stack"> \n ' +
+                '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
+                '<p>' + result.description + '</p> \n' +
                 '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
+                '<span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
                 '</div></div></a>');
                 $(element).remove();
                 if( $('.link-preview-image').find('img').attr('src') == 'null'){
