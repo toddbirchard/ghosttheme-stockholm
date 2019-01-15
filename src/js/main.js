@@ -132,7 +132,8 @@ var themeApp = {
       saas: '<i class="fal fa-desktop-alt"></i>',
       datavis: '<i class="fal fa-chart-pie"></i>',
       plotly: '<i class="fas fa-chart-bar"></i>',
-      saas: '<i class="fal fa-laptop-code"></i>'
+      saas: '<i class="fal fa-laptop-code"></i>',
+      postgres: '<i class="fas fa-elephant"></i>'
     };
 
     for (var key in tags) {
