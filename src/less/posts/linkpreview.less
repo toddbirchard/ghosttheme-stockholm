@@ -1,5 +1,5 @@
-@import "variables.less";
-@import "mixin.less";
+@import "../global/variables.less";
+@import "../global/mixin.less";
 
 .link-preview {
   padding: 10px 15px;
@@ -52,6 +52,11 @@
       max-height: 200px;
       max-width: 250px;
       margin-right: 30px;
+
+      @media(max-width: 600px) {
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 
@@ -102,7 +107,6 @@
     bottom: 0;
     @media(max-width: 600px) {
       font-size: 12px;
-      bottom: -25px;
     }
   }
 
@@ -114,6 +118,10 @@
     justify-content: space-between;
     margin-bottom: 15px;
     position: relative;
+
+    @media(max-width: 600px) {
+      margin-bottom: 0;
+    }
 
     .title-desktop {
       margin: 10px 0 10px!important;
@@ -136,6 +144,7 @@
       text-align: left;
       @media(max-width: 600px) {
         display: block;
+        margin: 10px 0;
       }
     }
 
@@ -152,7 +161,7 @@
       font-weight: 600;
       line-height: 1.55!important;
       margin-bottom: 10px;
-      font-size: 15px;
+      font-size: .9em;
       text-overflow: ellipsis;
       display: -webkit-box;
       font-family: 'Gilroy-Regular' !important;
