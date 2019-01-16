@@ -94,7 +94,7 @@ function author_sidebar(docs) {
   }
 
   function get_author() {
-    slug = current_author();
+    var slug = current_author();
     $.ajax({
       method: "GET",
       url: "https://apisentris.com/api/v1/users?slug=eq." + slug,
