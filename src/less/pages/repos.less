@@ -20,8 +20,8 @@
   &:hover {
     color: white;
 
-    .repo-title,
-    .github-card__meta {
+    .github-card__meta,
+    .repo-title {
       color: white;
     }
   }
@@ -40,12 +40,11 @@
   max-width: 32%;
   min-width: 32%;
   border-radius: 3px;
-
-  @media(max-width: 600px){
+  @media(max-width: 600px) {
     min-width: 100%;
   }
 
-   h3 {
+  h3 {
     margin-top: 0;
     color: @color-github;
     font-size: 18px !important;
@@ -62,14 +61,18 @@
       color: white;
     }
   }
+}
 
-
+.github-card__language-icon {
+  font-size: 18px;
 }
 
 .github-card__meta {
   margin-right: @spacing;
 
   > i {
-    font-size: 16px;
+    font-size: 14px;
+    color: #efc143;
+    margin-right: 3px;
   }
 }
