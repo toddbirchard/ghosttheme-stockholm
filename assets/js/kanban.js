@@ -74,7 +74,7 @@ $(document).ready(function() {
       var swiper = new Swiper('.swiper-container', {
         height: 1000,
         noSwiping: true,
-        spaceBetween: 8,
+        spaceBetween: 5,
         centeredSlides: false,
         slidesPerView: 4,
         grabCursor: false,
