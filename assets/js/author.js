@@ -86,7 +86,7 @@ function author_sidebar(docs) {
   function current_author() {
     var sPath = String(document.location.pathname);
     console.log('sPath' + sPath);
-    var slug = pagePathName.substring(pagePathName.lastIndexOf("/") - 1);
+    var slug = sPath.substring(pagePathName.lastIndexOf("/") - 1);
     console.log('slug' + slug);
     return slug;
   }
