@@ -84,7 +84,7 @@ function author_sidebar(docs) {
 
 
   function current_author() {
-    var loc = window.location.pathname.split("/").slice(-1)
+    var loc = location.pathname.split("/").slice(-1)
     return loc;
   }
 
