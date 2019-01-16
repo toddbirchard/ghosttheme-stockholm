@@ -84,8 +84,9 @@ function authorSidebar(docs) {
 
 
   function current_author() {
-    author = $('.sidebar').attr('class');
-    return author
+    var loc = window.location;
+    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    return pathName;
   }
 
   function get_author() {
