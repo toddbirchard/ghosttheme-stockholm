@@ -85,15 +85,19 @@ function author_sidebar(docs) {
 
   function current_author() {
     var sPath = window.location.pathname;
+    console.log('sPath' + sPath);
     var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-    var slug = sPage.split('.')[0]
+    console.log('sPage' + sPage);
+    var slug = sPage.split('.')[0];
+    console.log('slug' + slug);
     return slug;
   }
 
   function get_author() {
+    slug = current_author();
     $.ajax({
       method: "GET",
-      url: "https://apisentris.com/api/v1/users?slug=eq." + current_author(),
+      url: "https://apisentris.com/api/v1/users?slug=eq." + slug,
       headers: {
         client_id: "115000",
         access_token: "qWLp79NWuDtVxom5v6_h_g"
