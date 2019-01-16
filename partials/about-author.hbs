@@ -19,9 +19,13 @@
 			{{else}}
 					<span class="website"><a href="https://hackersandslackers.com/author/{{slug}}" targer="_BLANK"><i class="fal fa-globe"></i>{{t "Website"}}</a></span>
 			{{/if}}
-			{{#if twitter}}
-			<span class="twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i>{{twitter}}</a></span>
-			{{/if}}
+			{{#has slug="todd"}}
+				<iframe src="https://feed.mikle.com/widget/v2/99948/" height="1100px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+			{{else}}
+				{{#if twitter}}
+				<span class="twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i>{{twitter}}</a></span>
+				{{/if}}
+			{{/has}}
 			{{#if facebook}}
 			<span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i></a></span>
 			{{/if}}
