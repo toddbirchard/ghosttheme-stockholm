@@ -40,7 +40,7 @@
         $('#python-table tbody').append('<tr class="' + pythons[i].issuetype + '"> \n ' +
           '<td><img src="' + pythons[i].issuetype_icon + '"></td> \n' +
           '<td>' + pythons[i].summary + '</td> \n' +
-          '<td>' + pythons[i].description + '</td> \n' +
+          '<td><a href="' + pythons[i].description + '">' + pythons[i].description + '</a></td> \n' +
           '<td>' + pythons[i].issuetype + '</td> \n' +
           '</tr>');
       }
