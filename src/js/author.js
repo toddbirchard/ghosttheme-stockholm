@@ -3,12 +3,11 @@ $(document).ready(function(){
 function authorSidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
-        url: 'https://api.linkpreview.net/?key=' + linkpreview_key + '&q=' + docs[0]['website'],
+        url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + docs[0]['website'],
         contentType: "application/json",
         dataType: 'json',
         success: function(result) {
-          $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title +
-            '</a><i class="fas fa-link"></i></div></a></div></div>');
+          $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title + '</a><i class="fas fa-link"></i></div></a></div></div>');
         }
       });
     }
@@ -81,4 +80,27 @@ function authorSidebar(docs) {
       var apifyUrl = 'https://api.apify.com/v1/p9hj4TFpjvujADTJ3/crawlers/wztnovMJiQKzbXWDe/lastExec/results?token=Ycfxu6J2Jyk8HyboKuEw4Jfy7';
     }
   }
+
+
+
+  function current_author() {
+    author = $('.sidebar').attr('class');
+    return author
+  }
+
+  function get_author() {
+    $.ajax({
+      method: "GET",
+      url: "https://apisentris.com/api/v1/users?slug=eq." + current_author(),
+      headers: {
+        client_id: "115000",
+        access_token: "qWLp79NWuDtVxom5v6_h_g"
+      },
+      contentType: 'application/json'
+    }).done(function(results) {
+      authorSidebar(results);
+    });
+  }
+
+  get_author();
 });
