@@ -84,8 +84,8 @@ function author_sidebar(docs) {
 
 
   function current_author() {
-    var loc = window.location;
-    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    var loc = window.location.path;
+    var pathName = loc.replace('/', '');
     return pathName;
   }
 
