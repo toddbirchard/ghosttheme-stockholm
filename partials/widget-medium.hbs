@@ -24,12 +24,4 @@ function createMediumCard(medium){
   $('#medium').css('display', 'block');
 }
 
-
-client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-  client.callFunction("getGithubUsers", ["{{slug}}"]).then(result => {
-    createMediumCard(result.medium)
-    console.log(JSON.stringify(result))
-    if (result.medium) {createMediumCard(result.medium)}
-  });
-});
 </script>
