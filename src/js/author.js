@@ -84,7 +84,7 @@ function author_sidebar(docs) {
 
 
   function current_author() {
-    var sPath = window.location.pathname;
+    var sPath = String(window.location.pathname);
     console.log('sPath' + sPath);
     var sPage = sPath.split('/')[-1]
     console.log('sPage' + sPage);
