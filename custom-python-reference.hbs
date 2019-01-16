@@ -1,0 +1,61 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<section class="content-wrap archive">
+  {{> postheader}}
+  <div class="container">
+    <!-- start post -->
+    {{#post}}
+
+      <div class="main-content">
+        {{#if feature_image}}
+          <div class="featured-media" style="background-image: url({{feature_image}});">
+          </div>
+        {{/if}}
+        <h1>{{{title}}}</h1>
+        <p>{{content}}</p>
+        <table id="python-table">
+          <thead>
+
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  {{/post}}
+  </div>
+  <!-- end main post area -->
+</section>
+
+
+<script>
+  $(document).ready(function() {
+    function populatepythons(pythons, status) {
+      $('#python-table thead').append('<tr><th>issuetype_icon</th><th>issuetype</th><th>project</th><th>description</th><th>creator</th><th>priority_icon</th><th>priority</th><th>updated</th><th>status</th><th>summary</tr>');
+      for (var i = 0; i < pythons.length; i++) {
+        $('#python-table tbody').append('<tr> \n ' +
+          '<td><img src="' + pythons[i].issuetype_icon + '">"</td> \n' +
+          '<td>' + pythons[i].summary + '</td> \n' +
+          '<td>' + pythons[i].description + '</td> \n' +
+          '<td>' + pythons[i].epic_name + '"></div> \n' +
+          '</tr>');
+      }
+    }
+
+
+    function python() {
+      $.ajax({
+        method: "GET",
+        url: "https://apisentris.com/api/v1/jira_python",
+        headers: {
+          client_id: "115000",
+          access_token: "qWLp79NWuDtVxom5v6_h_g"
+        },
+        contentType: 'application/json'
+      }).done(function(results) {
+        populatePython(results, 'python-table');
+      });
+    }
+  });
+</script>
