@@ -41,6 +41,7 @@
           '<td><img src="' + pythons[i].issuetype_icon + '"></td> \n' +
           '<td>' + pythons[i].summary + '</td> \n' +
           '<td>' + pythons[i].description + '</td> \n' +
+          '<td>' + pythons[i].isuetype + '</td> \n' +
           '</tr>');
       }
     }
@@ -49,7 +50,7 @@
     function python() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype",
+        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype&issuetype=eq.Python",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
