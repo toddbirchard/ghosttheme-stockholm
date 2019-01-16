@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-function authorSidebar(docs) {
+function author_sidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
         url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + docs[0]['website'],
@@ -84,8 +84,9 @@ function authorSidebar(docs) {
 
 
   function current_author() {
-    author = $('.sidebar').attr('class');
-    return author
+    var loc = window.location;
+    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    return pathName;
   }
 
   function get_author() {
@@ -98,7 +99,7 @@ function authorSidebar(docs) {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      authorSidebar(results);
+      author_sidebar(results);
     });
   }
 
