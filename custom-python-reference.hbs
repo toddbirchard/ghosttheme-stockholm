@@ -39,9 +39,9 @@
       for (var i = 0; i < pythons.length; i++) {
         $('#python-table tbody').append('<tr class="' + pythons[i].issuetype + '"> \n ' +
           '<td><img src="' + pythons[i].issuetype_icon + '"></td> \n' +
-          '<td>' + pythons[i].summary + '</td> \n' +
+          '<td class="summary">' + pythons[i].summary + '</td> \n' +
           '<td><a href="' + pythons[i].description + '">' + pythons[i].description + '</a></td> \n' +
-          '<td>' + pythons[i].issuetype + '</td> \n' +
+          '<td class="issuetype-name">' + pythons[i].issuetype + '</td> \n' +
           '</tr>');
       }
     }
