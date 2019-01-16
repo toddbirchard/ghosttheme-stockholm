@@ -32,13 +32,12 @@
 <script>
   $(document).ready(function() {
     function populatePython(pythons, status) {
-      $('#python-table thead').append('<tr><th>issuetype_icon</th><th>summary</th><th>description</th><th>status</th></tr>');
+      $('#python-table thead').append('<tr><th>issuetype_icon</th><th>summary</th><th>description</th><th>issuetype</th></tr>');
       for (var i = 0; i < pythons.length; i++) {
         $('#python-table tbody').append('<tr> \n ' +
           '<td><img src="' + pythons[i].issuetype_icon + '"></td> \n' +
           '<td>' + pythons[i].summary + '</td> \n' +
           '<td>' + pythons[i].description + '</td> \n' +
-          '<td>' + pythons[i].epic_name + '"></div> \n' +
           '</tr>');
       }
     }
@@ -47,7 +46,7 @@
     function python() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description",
+        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
