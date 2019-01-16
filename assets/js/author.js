@@ -94,9 +94,10 @@ function author_sidebar(docs) {
   }
 
   function get_author() {
+    slug = current_author();
     $.ajax({
       method: "GET",
-      url: "https://apisentris.com/api/v1/users?slug=eq." + current_author(),
+      url: "https://apisentris.com/api/v1/users?slug=eq." + slug,
       headers: {
         client_id: "115000",
         access_token: "qWLp79NWuDtVxom5v6_h_g"
