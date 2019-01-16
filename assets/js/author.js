@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-function authorSidebar(docs) {
+function author_sidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
         url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + docs[0]['website'],
@@ -99,7 +99,7 @@ function authorSidebar(docs) {
       },
       contentType: 'application/json'
     }).done(function(results) {
-      authorSidebar(results);
+      author_sidebar(results);
     });
   }
 
