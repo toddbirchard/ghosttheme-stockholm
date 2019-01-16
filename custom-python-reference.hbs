@@ -31,7 +31,7 @@
 
 <script>
   $(document).ready(function() {
-    function populatepythons(pythons, status) {
+    function populatePython(pythons, status) {
       $('#python-table thead').append('<tr><th>issuetype_icon</th><th>issuetype</th><th>project</th><th>description</th><th>creator</th><th>priority_icon</th><th>priority</th><th>updated</th><th>status</th><th>summary</tr>');
       for (var i = 0; i < pythons.length; i++) {
         $('#python-table tbody').append('<tr> \n ' +
