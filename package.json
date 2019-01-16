@@ -24,7 +24,7 @@
   ],
   "engines": {
     "node": "v10.15.0",
-    "ghost": ">=2.7.1"
+    "ghost": ">=2.11.0"
   },
   "screenshots": {
     "desktop": "https://raw.githubusercontent.com/toddbirchard/ghosttheme-stockholm/master/assets/images/stockholm4.jpg",
