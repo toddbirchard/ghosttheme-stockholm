@@ -1,0 +1,24 @@
+<script>
+$(document).ready(function() {
+  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + {{slug}} + '?key=b1a7c274fc24aa798ec464497b&include=tags'
+
+  function tag_loop(results) {
+    for (var i = 0; i < results['tags'].length; i++){
+      console.log(results['tags'][i]);
+    }
+  }
+
+
+  function detect_series() {
+    $.ajax({
+      method: "GET",
+      url: endpoint,
+      contentType: 'application/json'
+    }).done(function(results) {
+      populateCards(results);
+    });
+  }
+
+  detect_series();
+});
+</script>
