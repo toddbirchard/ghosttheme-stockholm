@@ -24,7 +24,7 @@ $(document).ready(function() {
       url: endpoint,
       contentType: 'application/json'
     }).done(function(results) {
-      tag_loop(results);
+      tag_loop(results['posts']);
     });
   }
 
