@@ -3,11 +3,11 @@ $(document).ready(function() {
 
   function current_page() {
     var sPath = String(document.location.pathname);
-    console.log('sPath' + sPath);
-    var slug = sPath.split('/')[-1]
-    console.log('slug' + slug);
+    console.log('sPath = ' + sPath);
+    var slug = sPath.split('/')[1]
+    console.log('slug = ' + slug);
     slug = slug.replace('/', '');
-    console.log('slug' + slug);
+    console.log('slug = ' + slug);
     return slug;
   }
 
