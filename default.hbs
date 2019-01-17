@@ -21,19 +21,14 @@
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	{{> config}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
-
-
 </head>
 <body class="{{body_class}}">
 	{{! insert header partial}}
 	{{> newheader}}
-
 	{{{body}}}
 </body>
-	{{! insert footer partial}}
-
-{{> footer}}
+	{{> footer}}
+</html>

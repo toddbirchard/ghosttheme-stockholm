@@ -17,13 +17,13 @@ $(document).ready(function() {
     }
   }
 
-
   function detect_series() {
     $.ajax({
       method: "GET",
       url: endpoint,
       contentType: 'application/json'
     }).done(function(results) {
+      console.log(results);
       tag_loop(results['posts']);
     });
   }

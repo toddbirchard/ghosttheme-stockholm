@@ -40,38 +40,5 @@
 				'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n ' +
 				'</li>';
 		}
-	})
-/*
-	let navSearch = new GhostSearch({
-		input: '#nav-search',
-		results: '#nav-search-results',
-		options: {
-			limit: 5,
-			keys: [
-				'title',
-				'plaintext'
-			],
-		},
-		api: {
-			resource: 'posts',
-			parameters: {
-				fields: ['title', 'slug', 'plaintext', 'image'],
-				formats: 'plaintext',
-				include: 'tags'
-			},
-		},
-		template: function(result) {
-			$('#nav-search-results').css('opacity', 1);
-			let tag = result.tags[0];
-			let url = [location.protocol, '//', location.host].join('');
-			return '<li> \n' +
-				'<img src="' + result.feature_image + '"> \n ' +
-				'<div><a href="' + result.url + '">' + result.title + '</a> \n' +
-				'<span class="tag "> <span class="' + tag.slug + '"><i class="fas fa-tags"></i> ' + tag.name + '</span></span></div> \n ' +
-				'</li>';
-		}
-	})*/
+	});
 </script>
-
-</body>
-</html>
