@@ -68,6 +68,9 @@ var themeApp = {
       var codeContainer = $(this).closest('pre');
       codeContainer.css('max-height', 'none');
       codeContainer.css('padding', '64px 20px !important');
+      codeContainer.css('margin-right', 'calc(-50vw + 50%) !important;');
+      codeContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
+
       $(this).closest('pre').find('.codeoverflow').css('opacity', '0');
       $(this).css('opacity', 0);
       codeContainer.animate({
@@ -184,7 +187,7 @@ var themeApp = {
 
 /*===========================
 2. Initialization
-============= =============*/
+===========================*/
 $(document).ready(function() {
   themeApp.init();
 });
