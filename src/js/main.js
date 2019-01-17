@@ -3,7 +3,7 @@
   1. function declaretion
   2. Initialization
 ====================================================*/
-
+var Prism = require('prismjs');
 /*===========================
  1. function declaretion
  ==========================*/
