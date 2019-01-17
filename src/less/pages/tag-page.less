@@ -4,6 +4,10 @@
   .page-head {
     margin: 40px 40px 0;
     padding: 0;
+
+    @media(max-width: 600px) {
+      margin: 40px 30px 0;
+    }
   }
 
   .post-title {
@@ -39,6 +43,7 @@
     margin: -20px 40px 20px;
     @media(max-width: 900px) {
       min-height: 63px;
+      margin: -20px 30px 20px;
     }
   }
 
@@ -53,7 +58,7 @@
       margin: 30px 50px 20px;
     }
     @media(max-width: 600px) {
-      margin: 30px;
+      margin: 20px;
     }
 
     .tag-wrapper {
@@ -164,7 +169,7 @@
           flex-basis: auto;
           font-weight: 600;
           @media(max-width: 600px) {
-            margin: 10px 0 5px;
+            margin: 10px 0 25px;
             min-height: 0;
           }
         }
