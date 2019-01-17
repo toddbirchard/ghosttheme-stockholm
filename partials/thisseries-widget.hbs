@@ -6,8 +6,6 @@ $(document).ready(function() {
     console.log('sPath = ' + sPath);
     var slug = sPath.split('/')[1]
     console.log('slug = ' + slug);
-    slug = slug.replace('/', '');
-    console.log('slug = ' + slug);
     return slug;
   }
 
@@ -26,7 +24,7 @@ $(document).ready(function() {
       url: endpoint,
       contentType: 'application/json'
     }).done(function(results) {
-      populateCards(results);
+      tag_loop(results);
     });
   }
 
