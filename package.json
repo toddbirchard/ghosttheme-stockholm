@@ -5,8 +5,8 @@
   "demo": "https://hackersandslackers.com",
   "version": "0.0.1",
   "scripts": {
-    "build": "babel src -d lib",
-    "pack": "webpack"
+    "dev": "",
+    "build": ""
   },
   "presets": [
     "env"
@@ -45,6 +45,8 @@
     "autoprefixer": "^9.4.2",
     "babel-runtime": "^6.26.0",
     "cjs": "0.0.11",
+    "do-assets": "0.0.2",
+    "fs": "0.0.1-security",
     "fuzzy-search": "^3.0.1",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
@@ -81,13 +83,12 @@
     "gulp-uglify-es": "^1.0.4",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "terser": "^3.11.0",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "parcel-bundler": "^1.11.0",
+    "terser": "^3.11.0"
   },
   "babel": {
     "presets": [
-      "env"
+       "@babel/preset-env"
     ]
   }
 }
