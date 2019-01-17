@@ -1,6 +1,17 @@
 <script>
 $(document).ready(function() {
-  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + {{slug}} + '?key=b1a7c274fc24aa798ec464497b&include=tags'
+
+  function current_page() {
+    var sPath = String(document.location.pathname);
+    console.log('sPath' + sPath);
+    var slug = sPath.split('/')[-1]
+    console.log('slug' + slug);
+    slug = slug.replace('/', '');
+    console.log('slug' + slug);
+    return slug;
+  }
+
+  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + current_page() + '?key=b1a7c274fc24aa798ec464497b&include=tags'
 
   function tag_loop(results) {
     for (var i = 0; i < results['tags'].length; i++){
