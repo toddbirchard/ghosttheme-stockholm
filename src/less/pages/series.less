@@ -1,3 +1,5 @@
+@import "../global/variables.less";
+
 .series-template {
   .postlist {
     @media (max-width: 800px) {
@@ -22,7 +24,7 @@
     flex-direction: column-reverse;
   }
 
-  article {
+  .series-article-preview {
     @media(max-width:800px) {
       height: 150px !important;
       width: 100%;
@@ -90,7 +92,7 @@
     }
   }
 
-  article {
+  .series-article-preview {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,7 +122,7 @@
       background: #1ab1d4;
       color: #fff;
       font-family: 'Gilroy-SemiBold';
-      box-shadow: 1px 1px 1px rgba(67, 67, 84, .9);
+      box-shadow: 1px 1px 1px rgba(55, 70, 99, 0.9);
       line-height: 1;
     }
 
@@ -132,9 +134,16 @@
       }
 
       .meta {
-        max-width: 390px;
+        width: 390px;
         position: absolute;
         bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+          margin-right: 5px;
+        }
 
         .info {
           display: none;
@@ -152,11 +161,18 @@
           font-weight: 900;
           width: 100%;
           margin: 0 0 15px;
-          font-size: 1.3em;
+
 
           a {
-              font-size: 1em;
+            font-size: 1.15em;
+            line-height: 1.3;
               font-family: 'ProductSans-Regular','',sans-serif;
+              color: @text-color-heading;
+      				transition: all 0.2s ease-out;
+
+              &:hover {
+      					color: @secondary-color;
+      				}
           }
           @media(max-width: 600px) {
             width: -webkit-fill-available;
@@ -167,7 +183,7 @@
         .post-excerpt {
           color: #153b52;
           font-family: 'ProductSans-Regular','Gilroy-Regular',serif;
-          font-size: 0.9em;
+          font-size: 1em;
           font-weight: 100;
           line-height: 1.21;
           text-align: left;
@@ -184,15 +200,36 @@
         }
       }
 
-      .post-permalink {
+      .meta {
         padding: 0;
+
         @media(max-width: 600px) {
           display: none;
         }
 
-        .author span {
+        .meta-item span {
+          font-family: 'Gilroy-Medium';
+        }
+
+        .tags {
+          padding: 2px 8px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+        .author {
+
+          img {
+            width: 30px;
+            margin-right: 5px;
+          }
+
+          span {
           text-transform: capitalize;
         }
+      }
 
         .author-mobile {
           display:none !important;

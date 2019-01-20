@@ -1,5 +1,5 @@
 <a href="{{url}}">
-<article class="{{post_class}} post-preview">
+<article class="{{post_class}} series-article-preview">
   {{#if feature_image}}
       <div class="post-card-image" style="background-image: url({{img_url feature_image}})">
         <div class="series-post-count">
@@ -12,7 +12,6 @@
       <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
       <span class="post-excerpt">{{excerpt words="40"}}</span>
     </div>
-    <div class="post-permalink">
       <div class="meta">
         {{#primary_tag}}
           <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
@@ -33,7 +32,6 @@
         {{/primary_author}}
         <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
       </div>
-    </div>
   </div>
 </article>
 </a>
