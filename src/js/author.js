@@ -97,7 +97,7 @@ function author_sidebar(docs) {
     var slug = current_author();
     $.ajax({
       method: "GET",
-      url: "https://apisentris.com/api/v1/users?slug=eq." + slug,
+      url: "https://apisentris.com/api/v1/users?slug=like." + slug,
       headers: {
         client_id: "115000",
         access_token: "qWLp79NWuDtVxom5v6_h_g"
