@@ -1,4 +1,3 @@
-
 <!-- start widget -->
 <!--<div class="widget twitter">
 	<div class="twitter">
@@ -7,31 +6,7 @@
 	</div>
 </div>-->
 <div class="widget author-twitter">
-<h3 class="title">Twitter</h3>
-<a class="twitter-timeline"
-    data-chrome="noheader noborders transparent nofooter"
-    data-link-color="#8e1d08"
-    data-dnt="true"
-    data-widget-id="your-widget-id"
-    href="https://twitter.com/toddrbirchard"></a>
-	</div>
-
-		<script src="{{asset '/js/includes/customtwitter.js'}}"></script>
-
-		<script>
-		$('document').ready(function(){
-			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-			    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
-			    js.src="//platform.twitter.com/widgets.js";
-			    fjs.parentNode.insertBefore(js,fjs);}
-			}(document,"script","twitter-wjs");
-
-			var options = {
-			    "url": '{{asset "/css/twitter.css"}}'
-			};
-
-			CustomizeTwitterWidget(options);
-		});
-
-		</script>
+  <h3 class="title">Twitter</h3>
+  <iframe src="https://feed.mikle.com/widget/v2/78832/" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+</div>
 <!-- end widget -->
