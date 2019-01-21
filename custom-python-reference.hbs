@@ -1,7 +1,7 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
-<section class="content-wrap archive">
+<section class="content-wrap archive page-python-packages">
   {{> postheader}}
   <div class="container">
     <!-- start post -->
@@ -46,7 +46,7 @@
     function python() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype,updated&order_by=updated",
+        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype,updated&order_by=updated&issuetype=in.(Idea,Cheatsheet,Python Package)",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
