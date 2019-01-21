@@ -5,6 +5,10 @@
   }
   table {
     td {
+      white-space: nowrap;
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
       text-align: left;
     }
 
@@ -25,7 +29,7 @@
         }
 
         &.Epic {
-          display: none;
+          display: none !important;
         }
       }
     }
