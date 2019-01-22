@@ -34,7 +34,7 @@
 			align-items: center;
 			padding: 17px 5%;
 			width: 90%;
-			color: #234969;
+			color: #527089;
 			font-size: 1em;
 			font-family: 'TTNorms-Medium',sans-serif!important;
 			font-weight: 200;
@@ -46,12 +46,21 @@
 			border-radius: 2px;
 
 			&::placeholder {
-				color: #64647a;
+				color: #828294;
+				font-family: 'TTNorms-Regular',sans-serif!important;
 			}
 
 			&:hover {
-				background: #ecf4f7;
-				border-color: #8fbbca;
+				background: rgba(64, 206, 199, 0.16);
+				border-color: #82d3d0;
+
+				&::placeholder {
+					color: #72859d;
+				}
+
+				&::after {
+					color: #8aafb8;
+				}
 			}
 		}
 
@@ -234,7 +243,7 @@
 		a {
 			border: 0;
 			padding: 7px 12px;
-			color: #234969;
+			color: #18476e;
 			line-height: 1.5em;
 			display: inline-block;
 			margin: 0 10px 10px 0;
@@ -244,7 +253,7 @@
 			-ms-transition: all 0.2s ease;
 			-o-transition: all 0.2s ease;
 			transition: all 0.2s ease;
-			background: #daebf9;
+			background: #d5e4fc;
 			font-family: 'TTNorms-Regular',sans-serif;
 			flex-grow: 1;
 			text-align: center;
@@ -257,10 +266,10 @@
 			}
 
 			&:hover {
-				color: @white;
-				background: @theme-color;
-				text-decoration: none;
-				box-shadow: 1px 1px 0 #667c98;
+				cursor: pointer;
+				background: @hover-color;
+				color: white;
+				box-shadow: 2px 2px 3px 0 #239084;
 			}
 		}
 	}
@@ -401,6 +410,7 @@
 				color: white;
 				border: 0;
 				text-transform: Uppercase;
+				outline:none;
 				transition: all 0.3s ease-out;
 
 				span {
@@ -457,8 +467,23 @@
 			font-size: 16px;
 			margin: 0;
 			font-family: 'TTNorms-Medium',sans-serif;
-			display: inline-block;
+			display: flex;
+			align-items: center;
+
+			svg,
+			i {
+				width: 20px;
+				margin-right: 8px;
+			}
 		}
+
+		.building-flask-apps svg {fill: #7b5195}
+		.data-analysis-pandas i {color: #896592}
+		.code-snippet-corner svg {fill: #47638c}
+		.create-an-aws-api svg {fill: #bd975f}
+		.working-with-mysql svg {fill: #5f6bbd}
+		.mongodb-cloud svg {fill: #86af96}
+		.hacking-tableau-server svg {fill: #decf9a}
 
 		.recent-single-post {
 			border-bottom: 1px solid #d5dde8;
@@ -468,6 +493,7 @@
 			align-items: center;
 			display: flex;
 			padding: 0 0 12px !important;
+			    height: 30px;
 
 			&:last-of-type {
 				border-bottom: 0;
@@ -517,6 +543,7 @@
 			line-height: 1.5;
 			width: auto;
 			padding-right: 10px;
+			display: none;
 		}
 	}
 }

@@ -38,15 +38,17 @@
 			transition: all .3s;
 			line-height: 1;
 			padding: 8px 10px;
-			font-family: 'TTNorms-Bold';
+			font-family: 'TTNorms-Medium';
+			transition: all .3s ease-out;
 			@media(max-width:800px) {
 				margin: 0 0 8px;
 			}
 
 			&:hover {
 				cursor: pointer;
-				background: darken(#f2f3f5, 10%);
-				color: darken(#7cd2ea, 40%);
+				background: @hover-color;
+				color: white;
+				box-shadow: 2px 2px 3px 0 #239084;
 			}
 		}
 		@media(max-width: 800px) {
@@ -99,7 +101,10 @@
 					i {
 						color: lighten(@facebook-color, 15%) !important;
 					}
-
+				}
+				&:hover {
+					box-shadow: lighten(@facebook-color, 35%) !important;
+					cursor: pointer;
 				}
 			}
 
@@ -111,7 +116,10 @@
 					i {
 						color: lighten(@twitter-color, 5%)!important;
 					}
-
+				}
+				&:hover {
+					box-shadow: lighten(@twitter-color, 35%);
+					cursor: pointer;
 				}
 			}
 
@@ -123,7 +131,10 @@
 					i {
 						color: lighten(@linkedin-color, 5%) !important;
 					}
-
+				}
+				&:hover {
+					box-shadow: lighten(@linkedin-color, 35%);
+					cursor: pointer;
 				}
 			}
 
@@ -135,7 +146,11 @@
 					i {
 						color: lighten(@rss-color, 15%) !important;
 					}
+				}
 
+				&:hover {
+					box-shadow: lighten(@rss-color, 35%);
+					cursor: pointer;
 				}
 			}
 
