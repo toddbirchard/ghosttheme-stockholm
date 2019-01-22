@@ -76,7 +76,6 @@ sendgrid.env
 # compiled
 assets/js/main.min.js
 /assets/js/main.min.js
-assets/fonts
 main.min.js
 index.js
 
