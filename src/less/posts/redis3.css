@@ -414,8 +414,8 @@ nav .categories li {
 .item li::before {
   color: white !important;
 }
-.item img {
-  max-width: 60px;
+.popup-image {
+  max-width: 60px !important;
   border: none !important;
 }
 .item.hidden h3 {
