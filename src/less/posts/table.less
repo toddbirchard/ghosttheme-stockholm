@@ -1,77 +1,84 @@
 @table-border-color: rgba(0,0,0,.12);
 @table-striped-color: rgba(242, 242, 242, 0.5);
 
-table, th, td {
-   border: none;
+table,
+td,
+th {
+  border: none;
 }
 
 table {
-  width:100%;
+  width: 100%;
   display: table;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid rgba(77, 87, 109, 0.25);
   overflow: hidden;
-
   @media(max-width: 600px) {
-    width:100%;
+    width: 100%;
   }
 
   &.left {
-    tbody{
+    tbody {
       td {
         text-align: left;
         vertical-align: top;
+      }
+
+      .pre {
+        font-size: .8em;
+        width: fit-content;
       }
     }
   }
 
   thead {
-  tr {
-    border-bottom: 1px solid rgba(0,0,0,.12);
-    background-color: #5d6b8a !important;
-    color:white;
-  }
+    tr {
+      border-bottom: 1px solid rgba(0,0,0,.12);
+      background-color: #5d6b8a !important;
+      color: white;
+    }
 
     th {
       text-align: center;
       font-family: 'Gilroy-Regular';
       min-width: 30px;
       padding: 10px;
-      font-size: .9em;
+      font-size: 0.9em;
 
-      &::before{
-         font-family: 'Gilroy-SemiBold' !important;
+      &::before {
+        font-family: 'Gilroy-SemiBold' !important;
       }
     }
   }
-
 
   &.striped {
     tr {
       border-bottom: none;
     }
 
-  tbody {
-    tr:nth-child(odd) {
+    tbody {
+      tr:nth-child(odd) {
         background-color: @table-striped-color;
       }
 
-    tr > td {
+      tr > td {
         border-radius: 0;
       }
     }
   }
 
   &.highlight > tbody > tr {
-    transition: background-color .25s ease;
+    transition: background-color 0.25s ease;
+
     &:hover {
       background-color: @table-striped-color;
     }
   }
 
   &.centered {
-    thead tr th, tbody tr td {
+    tbody tr td,
+    thead tr th {
       text-align: center;
     }
   }
@@ -85,22 +92,19 @@ tr:nth-child(even) {
   background-color: #f5f8ff;
 }
 
-
-
-td, th{
+td,
+th {
   padding: 15px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   text-align: center;
-  font-size:.8em;
+  font-size: 0.8em;
   text-align: center;
   line-height: 1.2;
 }
-
 // Responsive Table
 @media (max-width:600px) {
-
   table {
     width: auto;
     border-collapse: collapse;
@@ -111,7 +115,7 @@ td, th{
     margin-right: calc(~"-50vw + 50%") !important;
     overflow-x: scroll;
 
-    &:hover{
+    &:hover {
       cursor: grab;
     }
 
@@ -123,13 +127,13 @@ td, th{
       padding: 0 !important;
     }
 
-    th,
-    td {
+    td,
+    th {
       margin: 0;
       vertical-align: top;
       border-spacing: 0 !important;
       border-collapse: collapse !important;
-      font-size: .8em;
+      font-size: 0.8em;
     }
 
     td {
@@ -152,7 +156,7 @@ td, th{
         text-align: center;
         text-align: left;
         text-transform: uppercase;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
         padding: 10px 5px !important;
 
         &::before {
@@ -167,6 +171,7 @@ td, th{
         height: 100%;
       }
     }
+
     tbody {
       margin-left: 120px;
       width: auto;
@@ -178,8 +183,7 @@ td, th{
       flex-direction: row;
       align-items: stretch;
 
-
-      & > tr> th {
+      & > tr > th {
         border-bottom: 1px solid #e0e0e0;
         border-radius: 0;
         border-spacing: 0;
@@ -208,7 +212,7 @@ td, th{
     td {
       display: block;
       min-height: 1.25em;
-      margin: 0 10px!important;
+      margin: 0 10px!important !important;
       padding: 10px 0 !important;
       border-spacing: 0;
       border-collapse: collapse;
@@ -228,21 +232,20 @@ td, th{
 }
 
 .dataframe tbody tr th:only-of-type {
-    vertical-align: middle;
-    text-align: center;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .tableContainer {
-  box-shadow: 0px 0px 5px #d1d4e8;
+  box-shadow: 0 0 5px #d1d4e8;
   margin: 20px auto 40px;
   position: relative;
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     margin-left: calc(~"-50vw + 50%");
     margin-right: calc(~"-50vw + 50%");
     width: auto!important;
 
-
-    &:hover{
+    &:hover {
       cursor: grab;
     }
   }
@@ -252,6 +255,7 @@ td, th{
   &:hover {
     cursor: grab !important;
   }
+
   * {
     &:hover {
       cursor: grab !important;
