@@ -24,6 +24,8 @@
 	//Grab the pagination span element
 	var nav = document.getElementById('pagination-list');
 
+	var url = window.location.href
+
 	if (pageTotal == 1) {
 		$('#pagination-list').css('display', 'none');
 	}
@@ -36,7 +38,7 @@
 			} else {
 				// Otherwise, add a link to the page
 				// This is where all the customization can go, space between each link, commas, etc.
-				nav.innerHTML = nav.innerHTML + "<a href=/page/" + i + ">" + i + "</a>";
+				nav.innerHTML = nav.innerHTML + "<a href=" + url + "/page/" + i + ">" + i + "</a>";
 			}
 		}
 	} else {
