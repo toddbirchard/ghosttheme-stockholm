@@ -5,10 +5,10 @@
 ====================================================*/
 .post-footer {
 	padding: 0;
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	align-items: center;
-	height: 100px;
+	height: fit-content;
 	padding: 0;
   padding-bottom: 5px;
 
@@ -22,23 +22,25 @@
 	}
 
 	.tag-list {
-		width: 43%;
-		height: 100%;
+		width: 100%;
+		height: fit-content;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: flex-start;
 		margin-bottom: 20px;
 		margin: 20px 0;
 
 		a {
-			color: #119ac3;
-			background: #ecf1f9;
+			background: #e7eefa;
+			color: #8797ae;
 			font-size: .8em;
 			margin-right: 15px;
 			transition: all .3s;
 			line-height: 1;
 			padding: 8px 10px;
-			font-family: 'TTNorms-Medium';
+			font-family: 'TTNorms-Regular';
+			border-radius: 2px;
 			transition: all .3s ease-out;
 			@media(max-width:800px) {
 				margin: 0 0 8px;
@@ -63,7 +65,7 @@
 		justify-content: space-between;
 		margin: 0 !important;
 		padding-left: 0 !important;
-		width: 390px;
+		width: 100%;
 		height: 100%;
 		@media(max-width:800px) {
 			margin: auto;
@@ -71,103 +73,106 @@
 
 		.btn {
 			list-style: none;
-			display: flex !important;
-			border: 0;
-			padding: 8px 8px 8px 5px !important;
-			transition: 0.2s all ease-out;
+			display: block !important;
 			border-radius: 2px;
-			background: #f3f3f3;
-			color: white;
-			height:15px;
+			background: #ffffff;
+			color: #dbdbdb;
+			list-style: none;
+			transition: .2s all ease-out;
+			border: 1px solid #dbdbdb;
+			padding: 0;
 			margin: auto 0;
+			min-width: 17%;
+
+			@media(max-width: 800px) {
+				max-width: 15%;
+			}
+
+			&:before{
+				display: none;
+			}
 
 			a {
 				text-align: center;
-			}
-			@media(max-width:900px) {
-				width: fit-content !important;
-				padding: 10px;
-			}
-			@media(max-width:600px) {
-      	padding: 9px 11px!important;
-				    height: 30px;
+				display: block;
+				padding: 4px 8px 2px 5px!important;
+				width: -webkit-fill-available;
 			}
 
 			&.facebook {
-			  background-color: lighten(@facebook-color, 15%);
+			  /*
 
 				@media(max-width:600px) {
 					background-color: white !important;
 					i {
 						color: lighten(@facebook-color, 15%) !important;
 					}
-				}
+				}*/
 				&:hover {
+					background-color: lighten(@facebook-color, 15%);
 					box-shadow: lighten(@facebook-color, 35%) !important;
 					cursor: pointer;
 				}
 			}
 
 			&.twitter {
-			  background-color: lighten(@twitter-color, 5%);
+			  /*
 
 				@media(max-width:600px) {
 					background-color: white !important;
 					i {
 						color: lighten(@twitter-color, 5%)!important;
 					}
-				}
+				}*/
 				&:hover {
+					background-color: lighten(@twitter-color, 5%);
 					box-shadow: lighten(@twitter-color, 35%);
 					cursor: pointer;
 				}
 			}
 
 			&.linkedin {
-			  background-color: lighten(@linkedin-color, 5%);
-
-				@media(max-width:600px) {
-					background-color: white !important;
-					i {
-						color: lighten(@linkedin-color, 5%) !important;
-					}
-				}
 				&:hover {
+					background-color: lighten(@linkedin-color, 5%);
+					box-shadow: lighten(@linkedin-color, 35%);
+					cursor: pointer;
+				}
+			}
+
+			&.devto {
+				&:hover {
+					background-color: black;
 					box-shadow: lighten(@linkedin-color, 35%);
 					cursor: pointer;
 				}
 			}
 
 			&.ycombinator {
-			  background-color: lighten(@rss-color, 15%);
+			  /*
 
 				@media(max-width:600px) {
 					background-color: white !important;
 					i {
 						color: lighten(@rss-color, 15%) !important;
 					}
-				}
+				}*/
 
 				&:hover {
+					background-color: lighten(@rss-color, 15%);
 					box-shadow: lighten(@rss-color, 35%);
 					cursor: pointer;
 				}
 			}
 
 			a {
-				width: 100%;
+				width: -webkit-fill-available;
 				margin: 0;
 				padding: 0;
+				display: block;
 				@media(max-width:800px) {
 					padding: 0;
 					height: fit-content;
 				}
-			}
-
-			span {
-				line-height: 1;
-				font-size: .6em;
-				font-family: 'ProductSans-Medium';
 			}
 
 			&:hover {
@@ -179,34 +184,12 @@
 			}
 
 			i {
-				font-size: 14px;
-				margin: 10px 8px;
-				color: white;
-
-				@media(max-width: 800px) {
-				    margin: 0 5px 0 2px;
-						font-size: 16px;
-					}
-
-				@media(max-width: 600px) {
-					font-size: 35px;
-					margin: 0!important;
-					opacity: .8;
-				}
+				margin: auto 0;
+		    color: #c3c5cb;
+		    font-size: 20px;
+		    display: block;
 			}
 
-			span {
-				color: white;
-				font-size: .7em;
-				@media(max-width: 600px) {
-					display: none;
-				}
-			}
-
-			a {
-				display: flex;
-				align-items: center;
-			}
 			@media(max-width: 800px) {
 				width: 100%;
 			}
@@ -240,19 +223,20 @@
 		justify-content: space-between;
 		@media(max-width: 800px) {
 			margin: auto;
-			width: auto;
+			width: 100%;
 		}
 	}
 
 	.share {
 		padding-left: 0;
-		min-width: 220px;
+		width: 100%;
 		margin: 0;
 		height:100%;
+		display:flex;
+		justify-content: center;
 
 		@media(max-width:900px) {
 			max-width: none;
-			max-width: 80%;
 			margin: 15px 0 !important;
 			padding-bottom: 0;
 		}
@@ -270,11 +254,7 @@
 	.share,
 	.tag-cloud {
 		float: none;
-		margin: 20px 0;
-		@media(max-width: 800px) {
-			width: 80%;
-    	margin: 20px auto !important;
-		}
+		margin: 30px 0 0;
 	}
 
 	.tag-cloud {
