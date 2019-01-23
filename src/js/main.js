@@ -81,30 +81,30 @@ var themeApp = {
     });
   },
   scrollableTables: function() {
-    $(".post-content table").each(function() {
-      $(this).parent('div').addClass('tableContainer');
-
-      let viewport = document.querySelector('.tableContainer');
-      let content = viewport.querySelector('tbody');
-
-      let sb = new ScrollBooster({
-        viewport, // this parameter is required
-        content, // scrollable element
-        mode: 'x', // scroll only in horizontal dimension
-        //bounce: true,
-        onUpdate: (data) => {
-          // your scroll logic goes here
-          content.style.transform = `translateX(${-data.position.x}px)`;
-        }
-      });
-    });
-    $(".tableContainer").each(function() {
-      var tablewidth = $(this).find('tbody').width()
+    let tables = document.getElementsByClassName('tableContainer');
+    for (let table of tables) {
+        let scrollEl = table.querySelector('tbody');
+        let scr = new ScrollBooster({
+          viewport: table,
+          emulateScroll: false,
+          mode: 'x',
+          bounce: true,
+          bounceForce: .1,
+          onUpdate: (data)=> {
+            // your scroll logic goes here
+            scrollEl.style.transform = `translateX(${-data.position.x}px)`
+          }
+        });
+    }
+    $(".tableContainer").each(function(index) {
+      var table = $(this).find('table')
+      var tablewidth = table.width()
       if ($(this).width() < tablewidth) {
-        $(this).addClass('handscroller');
+        $(this).find('table').addClass('handscroller');
         $(this).append('<div class="tablefade"></div>')
       }
     });
+
   },
   tags: function() {
     var tags = {
@@ -184,9 +184,9 @@ var themeApp = {
   }
 };
 
-/*===========================
+/* ===========================
 2. Initialization
-===========================*/
+=========================== */
 $(document).ready(function() {
   themeApp.init();
 });

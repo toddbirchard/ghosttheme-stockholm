@@ -7,12 +7,12 @@ th {
   border: none;
   max-width: 150px;
   overflow: hidden;
-  text-align: left;
+  text-align: left !important;
   padding: 15px 20px;
 }
 
 table {
-  width: 100%;
+  min-width: 100%;
   display: table;
   border-collapse: collapse;
   border-spacing: 0;
@@ -45,13 +45,17 @@ table {
 
     th {
       text-align: center;
-      font-family: 'TTNorms-Medium';
+      font-family: 'TTNorms-Regular';
       min-width: 30px;
       padding: 10px;
       font-size: 0.9em;
 
+      strong {
+        font-family: 'TTNorms-Regular';
+      }
+
       &::before {
-        font-family: 'TTNorms-Bold' !important;
+        font-family: 'TTNorms-Regular' !important;
       }
     }
   }
@@ -115,8 +119,6 @@ th {
     border-spacing: 0;
     display: table;
     position: relative;
-    margin-left: calc(~"-50vw + 50%") !important;
-    margin-right: calc(~"-50vw + 50%") !important;
     overflow-x: scroll;
 
     &:hover {
@@ -125,10 +127,6 @@ th {
 
     td:empty:before {
       content: '\00a0';
-    }
-
-    tr {
-      padding: 0 !important;
     }
 
     td,
@@ -163,9 +161,13 @@ th {
         letter-spacing: 0.5px;
         padding: 10px 5px !important;
 
-        &::before {
-          content: "\00a0";
+        * {
+          font-size: 1em;
         }
+
+        /*&::before {
+          content: "\00a0";
+        }*/
       }
 
       tr {
@@ -204,12 +206,13 @@ th {
         white-space: inherit;
         padding: 0 15px;
         border-bottom: none;
-        padding: 0;
-
-        &:last-child {
-          max-width: 300px;
-          min-width: 300px;
-        }
+      }
+      &:last-child::after {
+        content:" ";
+        display: table-row;
+        max-width: 300px;
+        min-width: 300px;
+        margin-left: -300px;
       }
     }
 
@@ -232,7 +235,7 @@ th {
 
 .dataframe thead th {
   text-align: center !important;
-  font-family: 'TTNorms-Bold' !important;
+  font-family: 'TTNorms-Regular' !important;
 }
 
 .dataframe tbody tr th:only-of-type {
