@@ -136,7 +136,7 @@ var themeApp = {
       plotly: '<i class="fas fa-chart-bar"></i>',
       saas: '<i class="fal fa-laptop-code"></i>',
       postgres: '<i class="fas fa-elephant"></i>',
-      bigdata: '<i class="fas fa-chart-bar"></i>'
+      bigdata: '<i class="far fa-chart-network"></i>'
     };
 
     for (var key in tags) {
