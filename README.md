@@ -20,7 +20,7 @@ Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhos
 
 # About
 
-_Stockholm_ is arguably the most feature-rich Ghost theme on the market. With some light  configuration, users can extend their app's functionality by accessing data which would be otherwise inaccessible via Ghost, thus introducing a plethora of features and widgets.  Users can personalize their themes via simple config files, enabling contextual widgets, fully integrated user sign ups, and unique page templates.
+_Stockholm_ is arguably the most feature-rich Ghost theme currently on the market. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API. This enables a plethora of features and widgets previously unavailable to Ghost.  Users can enable customizations such as contextual widgets, fully integrated user sign ups, and unique page templates.
 
 This project is in *active development*. All are welcome to use this theme, but oddities _will_ exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
 
@@ -40,33 +40,34 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 - "Smart" widgets which change based on their context
 - Individual author pages with high personalization
 - Global search
-- Automatic image compression via Gulp
+- Automatic image compression
 - Featured posts
 - Responsive layout
 
 ### Widgets
 
-- Github project modules
+- Github repositories
 - Github user activity
 - Blog Contributors
 - Recent posts
 - Related posts
-- Series
-- Twitter Feed with custom styles
-- Meetup Events by author
-- Medium posts by author
+- Publications
+- Twitter Feed
+- Meetup Events (by author)
+- Medium posts (by author)
 
 ### Features In Development
 
-- Cheatsheet section: collection of common code snippet patterns
+- Code Cheatsheet section
 - Custom commenting system
 - Sendgrid email signups
-- Additional 'Series' widgets
+- Additional publication widgets
 
 ### Planned Features
 
 - Recommended posts
 - Recommended services & tools
+- Trending posts
 - Guest posts
 - Embedded executable code interpreters
 - Author/tag subscriptions
@@ -103,6 +104,7 @@ Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is 
 
 ### Maintenance
 
+- Replace Gulp with ParcelJS
 - Documentation
 - User-friendly configuration
 - Speed optimization
