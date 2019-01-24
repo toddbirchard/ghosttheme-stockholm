@@ -100,7 +100,7 @@
     font-size: 1em;
 		font-family: 'TTNorms-Regular',sans-serif;
 		font-size: .9em;
-    line-height: 1.5;
+    line-height: 1.6;
 
 		@media(max-width: 600px) {
 			margin: 15px 0;
@@ -193,7 +193,7 @@
 		.single-author {
 			display: flex;
 			align-items: center;
-			padding: 10px 0;
+			padding: 12px 0;
 			font-size: 18px;
 			font-weight: 200;
 			font-family: 'TTNorms-Bold', serif;
@@ -236,7 +236,7 @@
 			.role {
 				color: hsla(0, 0%, 100%, 0.7);
 				display: block;
-				font-family: 'TTNorms-Medium';
+				font-family: 'TTNorms-Regular';
 				font-size: 0.8em;
 				line-height: 1.2;
 				margin-top: 6px;
@@ -286,7 +286,7 @@
 		color: #fff;
 		background: #325e90;
 		padding: 4px 12px;
-		font-size: 0.9em;
+		font-size: 0.85em;
 		display: inline-block;
 		height: fit-content;
 		width: fit-content;
@@ -299,8 +299,10 @@
 		border-bottom: 2px solid rgba(3, 19, 30, 0.86);
 
 		&:hover {
-			background: @white;
-			color: @theme-color;
+			cursor: pointer;
+			background: @hover-color;
+			color: white;
+			box-shadow: 2px 2px 3px 0 #239084;
 		}
 	}
 }
