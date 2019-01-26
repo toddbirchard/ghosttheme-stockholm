@@ -33,14 +33,16 @@ var themeApp = {
       var src = $(this).attr('src');
       $(this).attr('data-lightbox', alt);
       $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
-    });
-    var window_height = $(window).height();
-    var window_portion = window_height * 0.2;
-    lightbox.option({
-      'resizeDuration': 300,
-      'positionFromTop': window_height / 2 - window_portion,
-      'disableScrolling': false,
-      'fitImagesInViewport': true
+        $(this).on('click', function(){
+          var window_height = $(window).height();
+          var window_portion = window_height * 0.2;
+          lightbox.option({
+            'resizeDuration': 300,
+            'positionFromTop': window_height / 2 - window_portion,
+            'disableScrolling': false,
+            'fitImagesInViewport': true
+          });
+        });
     });
   },
   codeHighlight: function() {

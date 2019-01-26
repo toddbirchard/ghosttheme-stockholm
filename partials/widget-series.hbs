@@ -4,7 +4,7 @@
 	<div>
 		{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title,slug" order="count.posts DESC"}}
     {{#foreach tags visibility="internal"}}
-      <div class="recent-single-post seriesitem {{slug}}">
+      <div class="seriesitem {{slug}}">
 				<div class="series-image"></div>
 				<div class="series-info">
         <a href="/series/{{slug}}/" class="post-title"><span style="display:inline-block; line-height:1;">{{meta_title}}</span></a>

@@ -5,9 +5,7 @@ MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mi
 mixpanel.init("df373ec075c96a75fd4015e3beff4e59");
 </script>
 
-<script>
-console.log(mixpanel.get_config);
-
+<script type="text/javascript">
 mixpanel.init("df373ec075c96a75fd4015e3beff4e59", {opt_out_tracking_by_default: false});
     mixpanel.opt_in_tracking;
     mixpanel.track("Page Name");
@@ -26,6 +24,7 @@ $(document).ready(function() {
            "visited": $(this).attr('name'),
        });
       });
+    });
 
 
     mixpanel.track_links("nav a", "Used Main Nav", {
@@ -47,9 +46,11 @@ $(document).ready(function() {
     mixpanel.register_once({
     'First Login Date': new Date().toISOString()
 	});
+
     mixpanel.track_links(".share-icons a ", "Shared post on social media.", {
         "referrer": document.referrer
     });
 
-    </script>
-    <!-- end Mixpanel -->
+    mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
+</script>
+<!-- end Mixpanel -->
