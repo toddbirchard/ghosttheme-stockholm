@@ -1,31 +1,52 @@
+const webpack = require('webpack');
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
-const config = {
-    // First, let's define an entry point for webpack to start its crawling.
-    entry: './src/index.js',
-    // Second, we define where the files webpack produce, are placed
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+module.exports =  {
+  entry: {
+    'global': './index.js',
+    'posts': './posts.js'
     },
-    module: {
-        rules: [
-            {
-                test: /\.less$/, // .less and .css
-                use: [
-                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-                    'css-loader',
-                    'less-loader'
-                ],
-            },
+  output: {
+    path: path.resolve(__dirname, 'assets/dist'),
+    filename: '[name].js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
         ]
-    },
-    // Add an instance of the MiniCssExtractPlugin to the plugins list
-    // But remember - only for production!
-    plugins: isProduction ? [new MiniCssExtractPlugin()] : []
+      }
+    ]
+  }
+}
+/*
+module.exports = {
+  entry: {
+    global: '.src/webpack/global.js',
+    posts: '.src/webpack/posts.js',
+    authors: '.src/webpack/authors.js',
+    pages: '.src/webpack/pages.js'
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'assets/dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
+        ]
+      }
+    ]
+  }
 };
 
-module.exports = config;
+/*module.exports = config;*/
