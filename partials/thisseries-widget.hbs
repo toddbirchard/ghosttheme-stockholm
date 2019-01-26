@@ -7,7 +7,8 @@ $(document).ready(function() {
     return slug;
   }
 
-  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + current_page() + '?key=b1a7c274fc24aa798ec464497b&include=tags';
+  var postslug = current_page();
+  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=b1a7c274fc24aa798ec464497b&include=tags';
 
 
   function create_list_object(){
@@ -15,11 +16,8 @@ $(document).ready(function() {
   }
 
   function populate_series_list(post){
-    console.log("post['url'] = " + post['url']);
-    console.log("post['title'] = " + post['title']);
-    console.log("post['created'] = " + post['created']);
     $('#seriesposts h5').html(post['seriesname'].replace('#', ''));
-    $('#seriesposts ol').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
+    $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   }
 
   function posts_in_series(series, seriesname){
@@ -40,10 +38,12 @@ $(document).ready(function() {
                         'title': title,
                         'url': url,
                         'created': created,
+                        'slug': slug
                         }
       console.log('post_dict = ' + post_dict);
       populate_series_list(post_dict);
       }
+      $('.' + postslug).addClass('currentPost');
     });
   }
 
