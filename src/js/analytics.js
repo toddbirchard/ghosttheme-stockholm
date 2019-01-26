@@ -61,6 +61,6 @@ $(document).ready(function() {
         "referrer": document.referrer
     });
 
-    mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
+    //mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
 <!-- end Mixpanel -->
 });
