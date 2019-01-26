@@ -18,11 +18,11 @@ $(document).ready(function() {
     console.log("post['url'] = " + post['url']);
     console.log("post['title'] = " + post['title']);
     console.log("post['created'] = " + post['created']);
-    $('#seriesposts h5').text(post['seriestitle']);
+    $('#seriesposts h5').html(post['seriesname']);
     $('#seriesposts ul').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   }
 
-  function posts_in_series(series){
+  function posts_in_series(series, seriesname){
     var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=b1a7c274fc24aa798ec464497b&filter=tag:' + series
     $.ajax({
       method: "GET",
@@ -36,7 +36,7 @@ $(document).ready(function() {
         var title = post['title'];
         var url = 'https://hackersandslackers.com/' + post['slug'];
         var created = post['created_at'];
-        var post_dict = {'seriestitle': series,
+        var post_dict = {'seriesname': seriesname,
                         'title': title,
                         'url': url,
                         'created': created,
@@ -53,9 +53,9 @@ $(document).ready(function() {
       var tag = tags[i];
       if (tag['visibility'] == "internal") {
         var series = tag['slug'];
+        var seriesname = tag['name'];
         create_list_object();
-        posts_in_series(series);
-        console.log('series = ' + series);
+        posts_in_series(series, seriesname);
       }
     }
   }
