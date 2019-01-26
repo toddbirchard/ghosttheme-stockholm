@@ -18,6 +18,7 @@ $(document).ready(function() {
     console.log("post['url'] = " + post['url']);
     console.log("post['title'] = " + post['title']);
     console.log("post['created'] = " + post['created']);
+    $('#seriesposts').append('<h5>' + post['seriestitle'] + '</h5>';)
     $('#seriesposts ul').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>')
   }
 
@@ -35,7 +36,8 @@ $(document).ready(function() {
         var title = post['title'];
         var url = 'https://hackersandslackers.com/' + post['slug'];
         var created = post['created_at'];
-        var post_dict = {'title': title,
+        var post_dict = {'seriestitle': series,
+                        'title': title,
                         'url': url,
                         'created': created,
                         }

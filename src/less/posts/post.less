@@ -790,8 +790,11 @@
 					margin-left: 0;
 					font-size: 1em;
 				}
+				}
+			}
 
-				&::before {
+			ul {
+				li::before {
 					color: darken(@theme-color, 5%);
 					display: inline-block;
 					font-style: normal;
@@ -807,8 +810,8 @@
 					@media(max-width: 600px) {
 						margin-left: 0;
 					}
-				}
 			}
+		}
 
 			.kg-embed-card {
 				margin: 20px auto;
