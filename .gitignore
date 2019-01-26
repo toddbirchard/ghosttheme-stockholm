@@ -78,7 +78,6 @@ sendgrid.env
 assets/js/main.min.js
 /assets/js/main.min.js
 main.min.js
-index.js
 
 # assets
 bg.mp4
