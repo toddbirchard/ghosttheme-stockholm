@@ -2,21 +2,19 @@ blockquote pre {
    width: 96% !important;
    margin: 20px auto;
    margin:auto;
+
+   p {
+     margin-bottom: 0 !important;
+   }
+
+   code {
+     &::before {
+       font-size: 14px !important;
+       }
+
+     background: rgba(41, 61, 76, 0.84) !important;
+   }
 }
-
-blockquote p {
-  margin-bottom: 0 !important;
-}
-
-blockquote .language-python {
-
-  &::before {
-    font-size: 14px !important;
-    }
-
-  background: rgba(41, 61, 76, 0.84) !important;
-}
-
 
 .post-content {
   pre {
@@ -74,7 +72,6 @@ blockquote .language-python {
     margin: 0;
     height: 100%;
     font-size: .9em;
-    /*font-family: 'DroidSansMonoSlashed', "anonymous-pro", monospace, serif;*/
     @media(max-width: 600px) {
       font-size: 12px;
     }
@@ -510,7 +507,8 @@ blockquote .language-python {
   .language-xml,
   .language-css,
   .language-endpoint,
-  .language-handlebars {
+  .language-handlebars,
+  .language-jinja  {
     background: linear-gradient(#3b3851,#24202f)!important;
     color: #d0e1f6;
 

@@ -19,8 +19,12 @@
 
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
+		<script src="{{asset "/dist/posts.js"}}"></script>
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
+	{{/is}}
+	{{#is "page,tag,author"}}
+		<script src="{{asset "/dist/pages.js"}}"></script>
 	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
