@@ -11,13 +11,11 @@ $(document).ready(function() {
     var city = $(".newsletter-form .city").text(info.city);
     mixpanel.identify(userid);
     mixpanel.register({
-        "age": ,
-        "gender": "",
-        "source": "facebook"
         "country": country,
         "state": state,
         "city": city,
-        "created": created
+        "created": created,
+        "landingpage": document.referrer
     });
   }
 
