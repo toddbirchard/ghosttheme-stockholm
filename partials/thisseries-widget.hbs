@@ -18,7 +18,7 @@ $(document).ready(function() {
     console.log("post['url'] = " + post['url']);
     console.log("post['title'] = " + post['title']);
     console.log("post['created'] = " + post['created']);
-    $('#seriesposts h5').html(post['seriesname']);
+    $('#seriesposts h5').html(post['seriesname'].replace('/', ''));
     $('#seriesposts ol').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   }
 
