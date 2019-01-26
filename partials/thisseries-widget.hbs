@@ -19,7 +19,7 @@ $(document).ready(function() {
     console.log("post['title'] = " + post['title']);
     console.log("post['created'] = " + post['created']);
     $('#seriesposts h5').html(post['seriesname']);
-    $('#seriesposts ul').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
+    $('#seriesposts ol').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   }
 
   function posts_in_series(series, seriesname){
