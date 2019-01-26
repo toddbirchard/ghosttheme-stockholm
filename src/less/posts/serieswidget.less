@@ -17,6 +17,12 @@
     li {
       margin-bottom: 10px;
       opacity: .6;
+      counter-increment: step-counter;
+
+      &::before{
+        content: "Post " counter(step-counter, upper-roman) ". ";
+        font-family: 'TTNorms-Medium';
+      }
 
       a {
         color: #518899;
@@ -27,7 +33,7 @@
   .currentPost {
     opacity: 1;
     margin-left: 0;
-    
+
     &::before {
     -webkit-font-feature-settings: normal;
     -webkit-font-smoothing: antialiased;
