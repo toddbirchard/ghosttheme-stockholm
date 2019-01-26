@@ -4,7 +4,6 @@ $(document).ready(function() {
   function current_page() {
     var sPath = String(document.location.pathname);
     var slug = sPath.split('/')[1]
-    console.log('slug = ' + slug);
     return slug;
   }
 
@@ -16,7 +15,10 @@ $(document).ready(function() {
   }
 
   function populate_series_list(post){
-    $('#seriesposts ul').append('<li><a href="' + post.url + '">' + post.title + '</a></li>')
+    console.log("post['url'] = " + post['url']);
+    console.log("post['title'] = " + post['title']);
+    console.log("post['created'] = " + post['created']);
+    $('#seriesposts ul').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>')
   }
 
   function posts_in_series(series){
@@ -37,17 +39,16 @@ $(document).ready(function() {
                         'url': url,
                         'created': created,
                         }
+      console.log('post_dict = ' + post_dict);
       populate_series_list(post_dict);
       }
     });
   }
 
   function tag_loop(tags) {
-    console.log('tags = ' + tags);
     var i;
     for (i = 0; i < tags.length; i++){
       var tag = tags[i];
-      console.log('tag = ' + tag['slug']);
       if (tag['visibility'] == "internal") {
         var series = tag['slug'];
         create_list_object();
@@ -57,13 +58,11 @@ $(document).ready(function() {
   }
 
   function detect_series() {
-    console.log(endpoint);
     $.ajax({
       method: "GET",
       url: endpoint,
       contentType: 'application/json'
     }).done(function(results) {
-      console.log('tags = '+ results['posts'][0]);
       tag_loop(results['posts'][0]['tags']);
     });
   }
