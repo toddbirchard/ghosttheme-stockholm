@@ -11,14 +11,14 @@ $(document).ready(function() {
 
 
   function create_list_object(){
-    $('.post-content').prepend('<div id="seriesposts"><ol></ol></div>');
+    $('.post-content').prepend('<div id="seriesposts"><h5</h5><ol></ol></div>');
   }
 
   function populate_series_list(post){
     console.log("post['url'] = " + post['url']);
     console.log("post['title'] = " + post['title']);
     console.log("post['created'] = " + post['created']);
-    $('#seriesposts').prepend('<h5>' + post['seriestitle'] + '</h5>');
+    $('#seriesposts h5').text(post['seriestitle']);
     $('#seriesposts ul').append('<li><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   }
 
