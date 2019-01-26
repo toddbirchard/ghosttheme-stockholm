@@ -49,7 +49,7 @@ $(document).ready(function() {
       var tag = tags[i];
       console.log('tag = ' + tag['slug']);
       if (tag['visibility'] == "internal") {
-        var series = tag;
+        var series = tag['slug'];
         create_list_object();
         console.log('series = ' + series);
       }
