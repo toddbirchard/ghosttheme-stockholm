@@ -73,7 +73,7 @@
 		margin: 35px 60px 0;
 		line-height: 1.2;
 		display: block;
-		font-family: 'ProductSans-Bold', 'TTNorms-Bold' !important;
+		font-family: 'ProductSans-Bold', 'FFMarkWebProMedium' !important;
 		font-size: 2.2em;
 		font-weight: 600;
 		letter-spacing: 0;
@@ -97,7 +97,7 @@
 		a {
 			color: @h1-color;
 			transition: all 0.2s ease-out;
-			font-family: 'ProductSans-Bold', 'TTNorms-Bold' !important;
+			font-family: 'ProductSans-Bold', 'FFMarkWebProMedium' !important;
 
 			&:hover {
 				color: @secondary-color;
@@ -116,7 +116,7 @@
 			margin: 10px 60px 40px;
 		}
 		@media(max-width: 600px) {
-			font-family: TTNorms-Regular;
+			font-family: FFMarkWebProBook;
 			font-size: 1.1em;
 			font-weight: 600;
 			max-width: 95%;
@@ -236,14 +236,8 @@
 	}
 
 		p {
-			line-height: 1.5!important;
-			font-family: 'ProductSans-Italic';
-			color: #69a07a;
 			font-size: 0.95em;
-			width: 100%;
-			margin: 0 0 30px;
-			text-align: justify;
-			font-style: italic;
+
 			@media(max-width: 900px) {
 				margin: 25px 60px 30px;
 			}
@@ -443,6 +437,8 @@
 
 	.post-content {
 		margin: 10px 60px 30px;
+		overflow-x: visible;
+		clear: both;
 
 		& > p {
 			margin: 0 0 20px !important;
@@ -461,16 +457,66 @@
 		}
 
 		img {
-			border: 1px solid #cecece;
 			width: auto;
-			max-width: 100%;
+			max-height: 650px;
+			border: 1px solid #eaeaea;
+			margin: 10px auto;
+			display: block;
+			max-width: 99%;
+
+			&:hover {
+				cursor: zoom-in;
+			}
 		}
 
-		li {
-			line-height: 1.4;
-			margin-left: 20px;
-			padding-left: 20px;
-			display: block;
+		ol,
+		ul {
+			margin-left: 10px;
+			padding-left: 0;
+			margin-bottom: 30px;
+			margin-top: 20px;
+			@media(max-width:600px) {
+				margin: 15px 15px 0;
+				padding-left: 0;
+			}
+
+			li {
+				display: block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				margin-bottom: 15px;
+				padding-left: 0;
+				line-height: 1.4;
+				margin-left: 20px;
+				padding-left: 20px;
+				display: block;
+				@media(max-width: 600px) {
+					margin-left: 0;
+					font-size: 1em;
+				}
+			}
+		}
+
+		ul {
+			li::before {
+				color: darken(@theme-color, 5%);
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				padding-left: 0;
+				font-family: "Font Awesome 5 Pro";
+				content: "\f101";
+				font-size: 13px;
+				margin-right: 10px;
+				font-weight: 600;
+				@media(max-width: 600px) {
+					margin-left: 0;
+				}
+			}
 		}
 
 		.protip {
@@ -570,36 +616,6 @@
 			}
 		}
 
-
-
-	.main-navigation {
-		text-align: center;
-		margin-top: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: none;
-		height: 100px;
-		z-index: 20;
-		@media(max-width: 800px) {
-			z-index: 20;
-			width: auto;
-			height: auto;
-		}
-
-		.menu {
-			margin: 30px 40px 0 auto;
-			float: right;
-			width: 300px;
-			@media(max-width: 800px) {
-				width: 222px;
-				margin: 20px 0;
-				padding: 0;
-			}
-		}
-	}
-
 	figcaption {
 		width: -webkit-fill-available;
 		width: -moz-available;
@@ -649,78 +665,6 @@
 
 			&:last-child {
 				margin: 0;
-			}
-		}
-
-		.comment-count {
-			display: none;
-		}
-	}
-
-
-
-	.post-content {
-		overflow-x: visible;
-		clear: both;
-
-		ol,
-		ul {
-			margin-left: 10px;
-			padding-left: 0;
-			margin-bottom: 30px;
-			margin-top: 20px;
-			@media(max-width:600px) {
-				margin: 15px 15px 0;
-				padding-left: 0;
-			}
-
-			li {
-				display: block;
-				font-style: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				-webkit-font-smoothing: antialiased;
-				margin-bottom: 15px;
-				padding-left: 0;
-				line-height: 1.6;
-				@media(max-width: 600px) {
-					margin-left: 0;
-					font-size: 1em;
-				}
-			}
-		}
-
-		ul {
-			li::before {
-				color: darken(@theme-color, 5%);
-				display: inline-block;
-				font-style: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				-webkit-font-smoothing: antialiased;
-				padding-left: 0;
-				font-family: "Font Awesome 5 Pro";
-				content: "\f101";
-				font-size: 13px;
-				margin-right: 10px;
-				font-weight: 600;
-				@media(max-width: 600px) {
-					margin-left: 0;
-				}
-			}
-		}
-
-
-
-		img {
-			max-height: 650px;
-			border: 1px solid #eaeaea;
-			margin: 10px auto;
-			display: block;
-			max-width: 99%;
-
-			&:hover {
-				cursor: zoom-in;
 			}
 		}
 	}
@@ -851,7 +795,7 @@
 		.author {
 			font-size: 1.5em;
 			margin-bottom: 10px;
-			font-family: 'TTNorms-Bold', '';
+			font-family: 'FFMarkWebProMedium', '';
 			@media(max-width: 600px) {
 				font-size: 1.3em;
 			}

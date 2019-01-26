@@ -5,13 +5,13 @@
 ====================================================*/
 body,
 html {
-	font-family: 'TTNorms-Regular', sans-serif;
+	font-family: 'FFMarkWebProBook', sans-serif;
 	font-size: 16px;
 	color: @text-color;
 	line-height: 1.75em;
 	background: @bg-color;
 	position: relative;
-	margin:0;
+	margin: 0;
 }
 
 body,
@@ -21,18 +21,18 @@ html {
 }
 
 header {
-	@media(max-width: 600px){
+	@media(max-width: 600px) {
 		margin-bottom: 20px !important;
 	}
 }
 
 article {
-	p,
-	li {
+	li,
+	p {
 		line-height: 1.7em;
 		font-size: 16px;
 		font-display: block;
-		font-family: 'TTNorms-Regular';
+		font-family: 'FFMarkWebProBook';
 	}
 }
 
@@ -42,14 +42,14 @@ section {
 }
 
 strong {
-  font-family: 'TTNorms-Bold';
-  font-weight: 500;
+	font-family: 'FFMarkWebProMedium';
+	font-weight: 500;
 }
 
 a {
-	font-family: 'TTNorms-Regular';
+	font-family: 'FFMarkWebProBook';
 
-	&:hover{
+	&:hover {
 		cursor: pointer;
 	}
 }
@@ -63,61 +63,44 @@ a {
 .h1,
 h1 {
 	color: @h1-color;
-	font-family: 'ProductSans-Bold', 'TTNorms-Medium', 'TTNorms-Bold', sans-serif;
+	font-family: 'ProductSans-Bold', 'TTNorms-Medium', 'FFMarkWebProMedium', sans-serif;
 	font-size: 2.5em;
 	font-weight: 500;
 	color: @header-color;
 	font-display: block;
 }
 
-
-
 h1,
 h2,
 h4,
 h5,
 h6 {
-	font-family: 'TTNorms-Medium', 'TTNorms-Bold', serif;
+	font-family: 'TTNorms-Medium', 'FFMarkWebProMedium', serif;
 	font-weight: 700;
 	color: @header-color;
 	font-display: block;
 }
 
 h3 {
-	font-family: 'TTNorms-Bold', serif;
+	font-family: 'FFMarkWebProMedium', serif;
 	font-weight: 700;
 	color: @header-color;
 	font-display: block;
-}
-
-.h1,
-h1 {
-
 }
 
 .h2,
 h2 {
 	font-size: 2.2em;
-	font-family: 'TTNorms-Bold', 'TTNorms-Bold';
+	font-family: 'FFMarkWebProMedium', 'FFMarkWebProMedium';
 	@media(max-width: 600px) {
 		font-size: 2em;
 	}
 }
 
-.home-template {
-	.main-content {
-		display: block;
-	}
+.main-content {
+	display: block;
 }
-/*
-.h3,
-h3 {
-	font-size: 1.5em;
-	text-transform: uppercase;
-	margin-top: 40px;
-	margin-bottom: 0;
-}
-*/
+
 .h4,
 h4 {
 	font-size: 1.3em;
@@ -128,7 +111,7 @@ h5 {
 	font-size: 1.4em;
 	font-weight: 500;
 	margin: 5px 0 0;
-	font-family: 'TTNorms-Bold', serif;
+	font-family: 'FFMarkWebProMedium', serif;
 	color: @text-color-heading;
 	line-height: 1;
 	text-align: left;
@@ -146,7 +129,7 @@ h6 {
 a {
 	color: @theme-color;
 	outline: none;
-	text-decoration:none;
+	text-decoration: none;
 	.transition(all 0.3s ease-out);
 
 	&:hover {
@@ -155,41 +138,12 @@ a {
 	}
 }
 
-button:hover{
+button:hover {
 	cursor: pointer !important;
 }
 
 input:hover {
 	cursor: text;
-}
-
-a img,
-a:active,
-a:focus {
-	outline: none;
-	.transition(all 0.3s ease-out);
-}
-
-a.btn {
-	padding: 7px 14px;
-	border-radius: 0;
-	.transition(all 0.3s ease-out);
-
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-a.btn-default,
-button {
-	color: @white;
-	.transition(all 0.3s ease-out);
-
-	&:hover {
-		color: @white;
-		background: @button-hover;
-		cursor: pointer;
-	}
 }
 
 .btn-default[disabled] {
@@ -202,8 +156,7 @@ input[type="search"],
 input[type="text"],
 input[type="url"],
 input[type="email"],
-input[type="password"]
-textarea {
+input[type="password"] textarea {
 	padding: 7px;
 	border: 1px solid @border-color;
 	.transition(all 0.2s);
@@ -213,14 +166,6 @@ textarea {
 		outline: none;
 	}
 }
-
-blockquote {
-	border-left: 4px solid @theme-color;
-	font-family: 'TTNorms-Bold', serif;
-	font-style: italic;
-}
-
-
 
 ::-moz-selection {
 	color: @white;
@@ -239,6 +184,6 @@ a:hover {
 }
 
 .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
