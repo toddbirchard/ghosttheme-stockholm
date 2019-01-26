@@ -98,6 +98,7 @@
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "parcel-bundler": "^1.11.0",
+    "css-declaration-sorter": "4.0.1",
     "terser": "^3.11.0"
   },
   "babel": {

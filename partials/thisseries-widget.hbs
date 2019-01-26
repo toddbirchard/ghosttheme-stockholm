@@ -3,7 +3,6 @@ $(document).ready(function() {
 
   function current_page() {
     var sPath = String(document.location.pathname);
-    console.log('sPath = ' + sPath);
     var slug = sPath.split('/')[1]
     console.log('slug = ' + slug);
     return slug;
@@ -11,20 +10,27 @@ $(document).ready(function() {
 
   var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + current_page() + '?key=b1a7c274fc24aa798ec464497b&include=tags'
 
-  function tag_loop(results) {
-    for (var i = 0; i < results['tags'].length; i++){
-      console.log(results['tags'][i]);
+  function tag_loop(tags) {
+    console.log('tags = ' + tags);
+    var i;
+    for (i = 0; i < tags.length; i++){
+      var tag = tags[i];
+      console.log('tag = ' + tag);
+      if (tag[slug][0] == "#") {
+        console.log('series = '+ tag);
+      }
     }
   }
 
   function detect_series() {
+    console.log(endpoint);
     $.ajax({
       method: "GET",
       url: endpoint,
       contentType: 'application/json'
     }).done(function(results) {
-      console.log(results);
-      tag_loop(results['posts']);
+      console.log('tags = '+ results['posts'][0]);
+      tag_loop(results['posts'][0]['tags']);
     });
   }
 
