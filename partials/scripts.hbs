@@ -5,10 +5,11 @@
   <script src="{{asset "/js/includes/highlight.min.js"}}"></script>
   <script async src="{{asset "/js/lightbox.js"}}"></script>
   {{#has author="Matt Alhonte"}}
-    <script src="{{asset "/js/previews.js"}}"></script>
+    <script async src="{{asset "/js/previews.js"}}"></script>
   {{/has}}
 {{else}}
   <script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
+  <script src="{{asset "/js/search.min.js"}}"></script>
 {{/is}}
 <script async src="{{asset "/js/main.min.js"}}"></script>
 

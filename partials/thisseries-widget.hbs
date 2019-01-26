@@ -52,6 +52,7 @@ $(document).ready(function() {
       if (tag['visibility'] == "internal") {
         var series = tag['slug'];
         create_list_object();
+        posts_in_series(series);
         console.log('series = ' + series);
       }
     }
