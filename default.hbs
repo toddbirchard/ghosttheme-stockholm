@@ -23,12 +23,13 @@
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	{{#is "page,tag,author"}}
+	{{^is "home,post,paged"}}
 		<script src="{{asset "/dist/pages.js"}}"></script>
 	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
+	{{> mixpanel}}
 </head>
 <body class="{{body_class}}">
 	<!-- Google Tag Manager (noscript) -->
