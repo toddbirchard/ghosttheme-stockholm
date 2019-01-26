@@ -24,6 +24,12 @@ header {
     bottom:0;
     margin: auto;
     width: fit-content;
+    transition: all .3s ease-out;
+
+    &:hover{
+      cursor: pointer;
+      opacity: .6;
+    }
 
     @media(max-width: 600px){
       height: 40px;
@@ -203,7 +209,7 @@ header {
       transform: scale(1);
       color: #505f77;
       font-weight: 500;
-      transition: all .2s ease-out;
+      transition: all .15s ease-out;
       position: absolute;
       left:0;
       right:0;
