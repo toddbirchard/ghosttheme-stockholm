@@ -4,23 +4,40 @@ for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".
 MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
 mixpanel.init("df373ec075c96a75fd4015e3beff4e59");
 </script>
+
 <script type="text/javascript">
 mixpanel.init("df373ec075c96a75fd4015e3beff4e59", {opt_out_tracking_by_default: false});
     mixpanel.opt_in_tracking;
     mixpanel.track("Page Name");
-    mixpanel.track_links("nav a", "Click nav link", {
+
+</script>
+
+
+{{#is 'home,paged,page'}}
+<script>
+$(document).ready(function() {
+
+    $('.social-btns .btn').each(function(index, element) {
+      $(this).on('click', function(){
+        mixpanel.track_links(this, "visited " + $(this).attr('name'), {
+           "referrer": document.referrer,
+           "visited": $(this).attr('name'),
+       });
+      });
+    });
+
+
+    mixpanel.track_links("nav a", "Used Main Nav", {
         "referrer": document.referrer
     });
 
     mixpanel.track_links(".featured-media a", "Clicked 'featured image'", {
-        "referrer": document.referrer
+        "referrer": document.referrer,
+        "module": "postpreview",
+
     });
 
     mixpanel.track_links(".post-permalink a", "Clicked 'read' button", {
-        "referrer": document.referrer
-    });
-
-     mixpanel.track_links(".social-btns .btn ", "visited social media account", {
         "referrer": document.referrer
     });
 
@@ -29,10 +46,11 @@ mixpanel.init("df373ec075c96a75fd4015e3beff4e59", {opt_out_tracking_by_default: 
     mixpanel.register_once({
     'First Login Date': new Date().toISOString()
 	});
+
     mixpanel.track_links(".share-icons a ", "Shared post on social media.", {
         "referrer": document.referrer
     });
 
     mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
 </script>
-    <!-- end Mixpanel -->
+<!-- end Mixpanel -->
