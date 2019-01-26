@@ -10,14 +10,50 @@ $(document).ready(function() {
 
   var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + current_page() + '?key=b1a7c274fc24aa798ec464497b&include=tags'
 
+
+  function create_list_object(){
+    $('.post-content').prepend('<div id="seriesposts"><ul></ul></div>');
+  }
+
+  function populate_series_list(post){
+    $('#seriesposts ul').append('<li><a href="' + post.url + '">' + post.title + '</a></li>')
+  }
+
+  function posts_in_series(series){
+    var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=b1a7c274fc24aa798ec464497b&filter=tag:' + series
+    $.ajax({
+      method: "GET",
+      url: series_endpoint,
+      contentType: 'application/json'
+    }).done(function(results) {
+      var posts = results['posts'];
+      var i;
+      for (i = 0; i < posts.length; i++){
+        var post = posts[i];
+        var title = post['title'];
+        var url = 'https://hackersandslackers.com/' + post['slug'];
+        var created = post['created_at'];
+        var post_dict = {'title': title,
+                        'url': url,
+                        'created': created,
+                        }
+      populate_series_list(post_dict);
+      }
+    });
+  }
+
+  }
+
   function tag_loop(tags) {
     console.log('tags = ' + tags);
     var i;
     for (i = 0; i < tags.length; i++){
       var tag = tags[i];
       console.log('tag = ' + tag['slug']);
-      if (tag['slug'][0] == "#") {
-        console.log('series = '+ tag);
+      if (tag['visibility'] == "internal") {
+        var series = tag;
+        create_list_object();
+        console.log('series = ' + series);
       }
     }
   }
