@@ -7,9 +7,59 @@ $(document).ready(function() {
     return slug;
   }
 
+
   var postslug = current_page();
   var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=b1a7c274fc24aa798ec464497b&include=tags';
 
+
+  function reverse_list() {
+
+        // run the code on each ordered list with a 'reversed' attribute.
+        var myLists = $('ol[reversed]'),
+            currCount = null,
+            currChildren = null,
+            val;
+
+        myLists.each(function () {
+
+            // check the existence of the start attribute
+            if ($(this).attr('start')) {
+
+                // if it exists, convert it to an integer; also ensures even decimal values work
+                currCount = parseInt($(this).attr('start'), 10);
+
+                // If it wasn't a number, it will return 'NaN'; if so, use the number of list items instead
+                if (isNaN(currCount)) {
+                    currCount = $(this).children().length;
+                }
+
+            // do this if the start attribute is not present
+            // the first number is derived from the number of list items
+            } else {
+                currCount = $(this).children().length;
+            }
+
+            // grab all the child list items
+            currChildren = $(this).children();
+
+            // go through each list item, adding the 'value' attribute plus currCount number
+            // then subract one from currCount so we're ready for the next one
+            currChildren.each(function () {
+
+                val = $(this).attr('value');
+
+                // here we check if a value attribute is set in the html
+                // and we change the count accordingly
+                if (val && !isNaN(val)) {
+                    $(this).attr('value', val);
+                    currCount = val;
+                }
+
+                $(this).attr('value', currCount);
+                currCount = currCount - 1;
+            });
+        });
+    }
 
   function create_list_object(){
     $('.post-content').prepend('<div id="seriesposts"><h5></h5><ol reversed></ol></div>');
@@ -35,18 +85,23 @@ $(document).ready(function() {
         var url = 'https://hackersandslackers.com/' + post['slug'];
         var slug = post['slug'];
         var created = post['created_at'];
+        var numposts = posts.length;
         var post_dict = {'seriesname': seriesname,
                         'title': title,
                         'url': url,
                         'created': created,
-                        'slug': slug
+                        'slug': slug,
+                        'numposts': numposts
                         }
       console.log('post_dict = ' + post_dict);
       populate_series_list(post_dict);
       }
       $('.' + postslug).addClass('currentPost');
+      reverse_list();
     });
   }
+
+
 
   function tag_loop(tags) {
     var i;

@@ -13,6 +13,9 @@
 
   ol {
     list-style-type: upper-roman !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
 
     li {
       margin-bottom: 10px;
@@ -20,8 +23,10 @@
       counter-increment: step-counter;
 
       &::before{
+        counter-increment: step-counter;
         content: "Post " counter(step-counter, upper-roman) ". ";
-        font-family: 'TTNorms-Medium';
+        font-family: 'TTNorms-Bold
+        ';
         color: #518899;
       }
 
