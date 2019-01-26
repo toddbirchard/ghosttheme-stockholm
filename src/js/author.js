@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  if ($('body').hasClass('author-template')) {
+
 function author_sidebar(docs) {
     if (docs[0]['website']) {
       $.ajax({
@@ -109,4 +111,5 @@ function author_sidebar(docs) {
   }
 
   get_author();
+}
 });

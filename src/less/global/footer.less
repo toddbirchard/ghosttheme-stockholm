@@ -15,9 +15,9 @@
 		width: 37% !important;
 
 		a {
-			color:white;
+			color: white;
 
-			&:hover{
+			&:hover {
 				cursor: pointer;
 				color: @hover-color;
 			}
@@ -28,12 +28,10 @@
 			min-width: -webkit-fill-available !important;
 			min-width: -moz-available !important;
 		}
-
 	}
 
 	.widget.contributors {
 		width: 25%;
-
 		@media(max-width: 800px) {
 			margin-bottom: 10px;
 			max-width: none;
@@ -46,11 +44,13 @@
 		color: #fff;
 		font-weight: 800;
 		margin: 10px 0 15px !important;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		text-shadow: -1px 1px 1px #133e6d;
 		font-family: 'ProductSans-Regular';
 		text-transform: uppercase;
 		letter-spacing: 2px;
+		border-bottom: 1px solid rgba(255, 255, 255, .15);
+		padding-bottom: 10px;
 		@media(max-width: 800px) {
 			margin: 10px 0 10px !important;
 		}
@@ -66,7 +66,7 @@
 		}
 	}
 	@media(max-width: 1000px) {
-		padding: 30px 80px;
+		padding: 30px 40px;
 	}
 	@media(max-width: 600px) {
 		margin-top: 10px;
@@ -97,11 +97,10 @@
 		color: white;
 		margin: 15px 0;
 		text-transform: none;
-    font-size: 1em;
+		font-size: 1em;
 		font-family: 'TTNorms-Regular',sans-serif;
-		font-size: .9em;
-    line-height: 1.6;
-
+		font-size: 0.9em;
+		line-height: 1.6;
 		@media(max-width: 600px) {
 			margin: 15px 0;
 		}
@@ -112,7 +111,8 @@
 		position: relative;
 		overflow: hidden;
 
-		.subscribe-email {
+		.subscribe-email,
+		.subscribe-input-class {
 			width: -webkit-fill-available;
 			border-radius: 0;
 			font-weight: 100;
@@ -151,44 +151,87 @@
 			}
 
 			&:hover {
-				background: #e5f9ff !important;
-				border-color: #bbd8e2 !important;
-				color: white;
+				background: #dbedf2;
+				border-color: #b7d5de;
+
+				&::placeholder {
+					color: #72859d;
+				}
 
 				&::after {
-					color: white;
+					color: #8aafb8;
 				}
 			}
 		}
+	}
 
-		button {
-			width: 100%;
-			background: #039c8c;
-			padding: 13px 20px;
-			font-size: 16px;
-			color: white;
-			border: 0;
-			text-transform: Uppercase;
-			transition: all 0.3s ease-out;
+	.btn {
+		width: -webkit-fill-available!important;
+		width: -moz-available!important;
+		padding: 13px 20px;
+		border: 0;
+		outline: 0;
+		background: linear-gradient(165deg,#40a2a2,#1f68a7);
+		box-shadow: 2px 2px 2px 0 #061b2c;
+		color: #fff;
+		font-size: 16px;
+		text-transform: Uppercase;
+		transition: all 0.3s ease-out;
 
-			&:hover {
-				background: @hover-color;
-				box-shadow: 2px 2px 3px 0 #239084;
-			}
+		&:hover {
+			background: @hover-color;
+			box-shadow: 2px 2px 3px 0 #239084;
+		}
 
-			span {
-				font-size: 14px;
-			}
+		span {
+			font-size: 14px;
+		}
+	}
+}
+
+.tag-cloud {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-width: 37%;
+	@media(max-width: 800px) {
+		margin-bottom: 10px;
+		max-width: none;
+		width: -webkit-fill-available !important;
+		width: -moz-available !important;
+	}
+
+	a {
+		border: 0;
+		color: #fff;
+		margin: 0 6px 6px 0;
+    padding: 2px 10px;
+		display: inline-block;
+		height: fit-content;
+		width: fit-content;
+		flex-grow: 1;
+		text-align: center;
+		font-family: 'TTNorms-Regular';
+		transition: all 0.2s ease-out;
+		font-size: .85em;
+		border: 1px solid rgba(136, 190, 228, 0.2);
+
+		&:hover {
+			cursor: pointer;
+			background: @hover-color;
+			color: white !important;
+			box-shadow: 1px 1px 2px #239084;
+			border: 1px solid darken(@hover-color, 20%);
 		}
 	}
 }
 
 .contributors {
 	.contributor-container {
-
 		@media(max-width: 600px) {
 			margin: 20px auto;
-			}
+		}
 
 		.single-author {
 			display: flex;
@@ -204,7 +247,7 @@
 			a {
 				color: #fff;
 
-				&:hover{
+				&:hover {
 					cursor: pointer;
 					color: @hover-color;
 				}
@@ -264,45 +307,6 @@
 
 		&:last-child {
 			margin-bottom: 0;
-		}
-	}
-}
-
-.tag-cloud {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	min-width: 37%;
-	@media(max-width: 800px) {
-		margin-bottom: 10px;
-		max-width: none;
-		width: -webkit-fill-available !important;
-		width: -moz-available !important;
-	}
-
-	a {
-		border: 0;
-		color: #fff;
-		background: #325e90;
-		padding: 4px 12px;
-		font-size: 0.85em;
-		display: inline-block;
-		height: fit-content;
-		width: fit-content;
-		margin: 0 8px 8px 0;
-		flex-grow: 1;
-		text-align: center;
-		font-family: 'TTNorms-Regular';
-		transition: all 0.3s ease-out;
-		border-right: 2px solid rgba(3, 19, 30, 0.86);
-		border-bottom: 2px solid rgba(3, 19, 30, 0.86);
-
-		&:hover {
-			cursor: pointer;
-			background: @hover-color;
-			color: white;
-			box-shadow: 2px 2px 3px 0 #239084;
 		}
 	}
 }

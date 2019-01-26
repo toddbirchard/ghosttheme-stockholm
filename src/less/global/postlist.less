@@ -12,8 +12,10 @@
       margin-bottom: 20px;
 
       .content {
-        padding: 20px;
         position: relative;
+        margin: 15px;
+        padding:0;
+        height: fit-content;
       }
     }
 
@@ -32,7 +34,7 @@
       .tag-name {
         font-size: 2.2em;
         color: white !important;
-        font-family: 'TTNorms-Medium';
+        font-family: 'TTNorms-Regular';
         text-shadow: 0 0 20px #2f2d56;
         margin-top: 110px;
       }
@@ -78,19 +80,21 @@
       }
 
       .post-excerpt {
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        min-height: 60px;
+        margin-bottom: 55px;
+        overflow: hidden;
+        font-family: TTNorms-Regular;
         font-size: 1em;
-        font-family: 'TTNorms-Medium';
-        min-height: 70px;
-        margin-bottom: 50px;
-        font-weight: 600;
+        text-overflow: ellipsis;
       }
 
       .post-permalink {
         position: absolute;
-        width: 88%;
-        padding: 0;
-        bottom: 10px;
-        padding-bottom: 10px;
+        bottom: 0;
+        width: -webkit-fill-available;
+        padding: 10px 0 0 0;
 
         @media(max-width: 800px) {
           width: 90%;
@@ -99,6 +103,12 @@
         .btn {
           padding: 12px 20px;
           font-size: 16px;
+          font-family: TTNorms-Regular,sans-serif;
+          a {
+            line-height: 1;
+            height: fit-content;
+          }
+
 
           @media(max-width: 600px) {
             display:block !important;
