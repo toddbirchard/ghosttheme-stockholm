@@ -97,7 +97,7 @@ $(document).ready(function() {
       populate_series_list(post_dict);
       }
       $('.' + postslug).addClass('currentPost');
-      $('#seriesposts ol').attr('style', 'step-counter:' + posts.length)
+      $('#seriesposts ol').attr('style', 'counter-reset:step-counter ' + (posts.length + 1));
     });
   }
 
