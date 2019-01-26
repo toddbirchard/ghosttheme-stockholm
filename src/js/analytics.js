@@ -62,5 +62,4 @@ $(document).ready(function() {
     });
 
     //mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
-<!-- end Mixpanel -->
 });
