@@ -1,0 +1,211 @@
+@import "../global/variables.less";
+
+.page-apply {
+  .main-content {
+    width: 700px;
+    padding: 60px 80px;
+    margin: auto;
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      font-family: 'TTNorms-Regular', 'TTNorms-Medium';
+      text-align: left;
+      font-size: 1.5em;
+      border-bottom: 1px solid #d5dae6;
+      padding-bottom: 10px;
+    }
+
+    fieldset {
+      border: none;
+      display: none;
+    }
+
+    .active {
+      display:block;
+    }
+
+
+
+    p {
+      text-align: left;
+    }
+
+    label {
+      font-family: 'TTNorms-Medium', sans-serif;
+      font-size: 14px;
+      color: #505050;
+      margin-bottom: 5px;
+    }
+
+    .split-fields {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .input-field-group {
+        width: 49%;
+      }
+    }
+
+    .input-field-group {
+      text-align: left;
+    }
+
+    input,
+    textarea {
+      font-family: "TTNorms-Regular", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 5px 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      font-family: "TTNorms-Regular", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: @theme-color;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+
+    button:active,
+    button:focus,
+    button:hover {
+      background: #43A047;
+    }
+
+    .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+
+    .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .register-form {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+    }
+
+    .container:after,
+    .container:before {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .container .info {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .container .info h1 {
+      margin: 0 0 15px;
+      padding: 0;
+      font-size: 36px;
+      font-weight: 300;
+      color: #1a1a1a;
+    }
+
+    .container .info span {
+      color: #4d4d4d;
+      font-size: 12px;
+    }
+
+    .container .info span a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .container .info span .fa {
+      color: #EF3B3A;
+    }
+    /*progressbar*/
+    #progressbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+    }
+
+    #progressbar li {
+      list-style-type: none;
+      color: #656c75;
+      text-transform: uppercase;
+      font-size: 9px;
+      width: 33.33%;
+      float: left;
+      position: relative;
+      text-align: center;
+    }
+
+    #progressbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 20px;
+      line-height: 20px;
+      display: block;
+      font-size: 10px;
+      color: #333;
+      background: #eaeaea;
+      text-align: center;
+      border-radius: 3px;
+      margin: 0 auto 5px;
+      position: relative;
+      z-index: 1;
+    }
+    /*progressbar connectors*/
+    #progressbar li:after {
+      content: ' ';
+      width: 100%;
+      height: 2px;
+      background: #eaeaea;
+      position: absolute;
+      left: -50%;
+      top: 9px;
+      z-index: 0;
+          opacity: .6;
+      /*put it behind the numbers*/
+    }
+
+    #progressbar li:first-child:after {
+      /*connector not needed before the first step*/
+      content: none;
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:after,
+    #progressbar li.active:before {
+      background: @theme-color !important;
+      color: #eaeaea !important;
+          position: relative;
+    }
+  }
+}

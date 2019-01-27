@@ -1,0 +1,120 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<!-- start site's main content area -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<section class="content-wrap">
+  <div class="container">
+    {{#post}}
+      <!-- start main post area -->
+      <div class=" main-content">
+        <!-- start post -->
+        <article class="{{page-class}} page">
+          <h1>{{{title}}}</h1>
+          {{#if feature_image}}
+            <div class="featured-media">
+              <img src="{{img_url feature_image size="l"}}" alt="{{{title}}}" data-rjs="3">
+            </div>
+          {{/if}}
+          <div class="page-content">
+            {{content}}
+            <div class="form">
+              <ul id="progressbar">
+                <li class="active">The Boring Stuff</li>
+                <li>The Juicy Stuff</li>
+                <li>The Blow-Our-Fucking-Minds Stuff</li>
+              </ul>
+              <form accept-charset="UTF-8" action="https://getform.io/f/ce75696d-0ee2-4475-8a8f-a26da6267917" method="POST">
+                <fieldset>
+                  <h2>The Boring Stuff</h2>
+                  <p>Tell us about yourself by letting Chrome auto-fill these obligatory fields.</p>
+                  <div class="split-fields">
+                    <div class="input-field-group">
+                      <label for="application_name">Full Name (required)</label>
+                      <input id="application_name" maxlength="255" name="application_submission[name]" type="text" required="">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_email"> Email (required) </label>
+                      <input id="application_email" maxlength="255" name="application_submission[email]" type="email" required="">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_username"> Desired Username/Call Sign/Gangsta Rap Persona </label>
+                      <input id="application_username" maxlength="255" name="application_submission[username]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application__expertise"> What are your areas of expertise? </label>
+                      <input id="application__expertise" maxlength="255" name="application_submission[areas_of_expertise]" type="text">
+                    </div>
+                  </div>
+                  <button class="btn" type="submit">Next</button>
+                </fieldset>
+
+                <fieldset>
+                  <h2>The Juicy Stuff</h2>
+                  <p id="application_description">
+                    Please send us a single writing sample that represents your best work.
+                    We evaluate writing samples based on the level and clarity of their
+                    technical explanations.
+                  </p>
+                  <div class="input-field-group">
+                    <label for="application_sample"> Writing sample (required) </label>
+                    <textarea aria-describedby="application_sample" id="application_submission_sample" name="application_submission[sample]" required=""></textarea>
+                  </div>
+                  <button class="btn" type="submit">Next</button>
+                </fieldset>
+
+                <fieldset>
+                  <h2>The Blow-Our-Fucking-Minds Stuff</h2>
+                  <p id="application_notes">
+                    Feel free to share a link to your website, GitHub account, Twitter
+                    profile, etc. We'd love to know if you maintain or contribute
+                    significantly to any open-source projects. Let us know how you found
+                    our authorship program and what motivated you to apply, too!
+                  </p>
+                  <div class="split-fields">
+                    <div class="input-field-group">
+                      <label for="application_website">Website</label>
+                      <input id="application_website" maxlength="255" name="application_submission[website]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_blog">Blog</label>
+                      <input id="application_blog" maxlength="255" name="application_submission[blog]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_github">Github</label>
+                      <input id="application_github" maxlength="255" name="application_submission[github]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_twitter">Twitter</label>
+                      <input id="application_twitter" maxlength="255" name="application_submission[twitter]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_myspace">MySpace</label>
+                      <input id="application_myspace" maxlength="255" name="application_submission[myspace]" type="text">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="application_ssn">Social Security Number</label>
+                      <input id="application_ssn" maxlength="255" name="application_submission[ssn]" type="text">
+                    </div>
+                  </div>
+                  <div class="split-fields">
+                    <div class="g-recaptcha" data-callback="captchaFilled" data-sitekey="6Lf-H40UAAAAANt5tXMeEU_NGyEuetfeAbVDhX21">
+                      <div style="width: 304px; height: 78px;">
+                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                      </div>
+                    </div>
+                    <button class="www-Button www-Button--primary www-Button--fullWidth" data-js="writeForDOnationsSubmitButton" type="submit" disabled=""> Submit Application </button>
+                  </div>
+                  <button class="btn" type="submit">Next</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+      </div>
+  </div>
+  </article>
+  <!-- end main post area -->
+</section>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf-H40UAAAAANt5tXMeEU_NGyEuetfeAbVDhX21"></script>
+{{/post}}
+<!-- end post -->
+<!-- end site's main content area -->
