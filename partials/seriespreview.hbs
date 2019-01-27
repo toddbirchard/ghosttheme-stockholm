@@ -1,14 +1,11 @@
 <a href="{{url}}">
 <article class="{{post_class}} series-article-preview">
   {{#if feature_image}}
-      <div class="post-card-image" style="background-image: url({{img_url feature_image}})">
-        <div class="series-post-count">
-          <span>Post {{@number}}</span>
-        </div>
-      </div>
+      <img class="post-card-image" src="{{img_url feature_image}}">
   {{/if}}
   <div class="details">
     <div class="post-head">
+      <h3 class="post-count">Post {{@number}}</h3>
       <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
       <span class="post-excerpt">{{excerpt words="40"}}</span>
     </div>
@@ -19,7 +16,7 @@
         {{#primary_author}}
           {{primary_author.bio}}
           {{#unless profile_image}}
-            <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+            <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
             <a href="{{url}}" class="author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
             <!--<div class="info"><span>{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div>-->
             </a>

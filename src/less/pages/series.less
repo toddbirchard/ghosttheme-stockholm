@@ -18,6 +18,8 @@
   .sorted-series {
     display: flex;
     flex-direction: column;
+    background: white;
+    padding: 20px;
   }
 
   .descending {
@@ -99,8 +101,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(65,67,144,.15);
+    padding: 20px 0;
+    border-bottom: solid 1px #dadada;
+    transition: all .2s ease-out;
+
+    &:last-child {
+        border-bottom: none;
+        padding: 20px 0 0;
+    }
 
     .featured-media {
       margin: 0;
@@ -113,35 +121,29 @@
       }
     }
 
+    .post-count {
+      margin: 0;
+      font-family: 'ProductSans-Regular', serif;
+      font-weight: 700;
+      color: #4e6472;
+      font-size: 1em;
+    }
+
     .mobile-date,
     .mobile-name {
       display: none;
     }
 
-    .series-post-count {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 10px;
-      background: #1ab1d4;
-      color: #fff;
-      font-family: 'FFMarkWebProMedium';
-      box-shadow: 1px 1px 1px rgba(55, 70, 99, 0.9);
-      line-height: 1;
-    }
-
     .details {
       width: -webkit-fill-available;
-      padding: 15px 20px;
+      padding: 0 20px;
       @media(max-width: 800px) {
         max-width: -webkit-fill-available;
-        padding: 10px 15px;
+        padding: 0 15px;
       }
 
       .meta {
-        width: 390px;
-        position: absolute;
-        bottom: 20px;
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -246,15 +248,10 @@
     }
 
     .post-card-image {
-      min-width: 200px;
-      height: 175px;
+      max-width: 220px;
+      height: auto;
       margin: 0;
-      background-size: cover;
-      background-position: center;
       @media(max-width: 600px) {
-        height: 100px;
-        background-position-x: center;
-        background-size: cover;
         max-width: -webkit-fill-available !important;
         width: -webkit-fill-available !important;
         min-width: 150px;
