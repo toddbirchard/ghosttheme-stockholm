@@ -9,14 +9,11 @@
 	justify-content: space-between;
 	align-items: center;
 	height: fit-content;
-  padding-bottom: 5px;
-	margin-top: 40px;
-
+	margin-top: 50px;
 	@media(max-width: 800px) {
 		display: block;
 		height: fit-content;
 	}
-
 	@media(max-width: 800px) {
 		padding-bottom: 0;
 	}
@@ -28,20 +25,19 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: flex-start;
-		margin-bottom: 20px;
 		margin: 20px 0;
 
 		a {
 			background: #e7eefa;
 			color: #778aa5;
-			font-size: .8em;
+			font-size: 0.8em;
 			margin-right: 15px;
-			transition: all .3s;
+			transition: all 0.3s;
 			line-height: 1;
 			padding: 8px 10px;
 			font-family: 'FFMarkWebProBook';
 			border-radius: 2px;
-			transition: all .3s ease-out;
+			transition: all 0.3s ease-out;
 			@media(max-width:800px) {
 				margin: 0 0 8px;
 			}
@@ -60,185 +56,138 @@
 		}
 	}
 
-	.share-icons {
-		display: flex;
-		justify-content: space-between;
-		margin: 0 !important;
-		padding-left: 0 !important;
-		width: 100%;
-		height: fit-content;
-		@media(max-width:800px) {
-			margin: auto;
-		}
-
-		.btn {
-			list-style: none;
-			display: block !important;
-			border-radius: 2px;
-			background: #ffffff;
-			color: #dbdbdb;
-			list-style: none;
-			transition: .2s all ease-out;
-			border: 1px solid #dbdbdb;
-			padding: 0;
-			margin: auto 0;
-			min-width: 17%;
-
-			@media(max-width: 800px) {
-				max-width: 15%;
-			}
-
-			&:before{
-				display: none;
-			}
-
-			a {
-				text-align: center;
-				display: block;
-				padding: 6px 10px 5px 7px !important;
-				width: -webkit-fill-available;
-			}
-
-			&.facebook {
-				&:hover {
-					background-color: lighten(@facebook-color, 15%);
-					box-shadow: lighten(@facebook-color, 35%) !important;
-					cursor: pointer;
-				}
-			}
-
-			&.twitter {
-				&:hover {
-					background-color: lighten(@twitter-color, 5%);
-					box-shadow: lighten(@twitter-color, 35%);
-					cursor: pointer;
-				}
-			}
-
-			&.linkedin {
-				&:hover {
-					background-color: lighten(@linkedin-color, 5%);
-					box-shadow: lighten(@linkedin-color, 35%);
-					cursor: pointer;
-				}
-			}
-
-			&.devto {
-				&:hover {
-					background-color: black;
-					box-shadow: lighten(@linkedin-color, 35%);
-					cursor: pointer;
-				}
-			}
-
-			&.ycombinator {
-				&:hover {
-					background-color: lighten(@rss-color, 15%);
-					box-shadow: lighten(@rss-color, 35%);
-					cursor: pointer;
-				}
-			}
-
-			a {
-				width: -webkit-fill-available;
-				margin: 0;
-				padding: 0;
-				display: block;
-				@media(max-width:800px) {
-					padding: 0;
-					height: fit-content;
-				}
-			}
-
-			&:hover {
-				border: none;
-
-				span {
-					color: white;
-				}
-			}
-
-			i {
-				margin: auto 0;
-		    color: #c3c5cb;
-		    font-size: 20px;
-		    display: block;
-			}
-
-			@media(max-width: 800px) {
-				width: 100%;
-			}
-		}
-
-		a {
-			border: 0;
-			padding: 5px 11px;
-			color: #fff;
-			line-height: 1.5em;
-			display: inline-block;
-			border-radius: 2px;
-			.transition(all 0.2s ease);
-			font-size: 0.9em;
-			margin: 5px 10px 5px 0;
-
-			&:hover {
-				color: @white;
-				text-decoration: none;
-
-				span {
-					color: #fff;
-				}
-			}
-		}
-	}
-
-	.share-icons {
-		padding: 0;
-		display: flex;
-		justify-content: space-between;
-		@media(max-width: 800px) {
-			margin: auto;
-			width: 100%;
-		}
-	}
-
 	.share {
-		padding-left: 0;
-		width: 100%;
-		margin: 0;
-		height:100%;
-		display:flex;
-		justify-content: center;
-
-		@media(max-width:900px) {
-			max-width: none;
-			margin: 15px 0 !important;
-			padding-bottom: 0;
-		}
-
-		span {
-			font-size: .7em;
-			font-family: 'ProductSans-Medium';
-		}
+		margin: 15px 0 0 !important;
 
 		.share-icons {
-			z-index: 20;
-		}
-	}
+			display: flex;
+			justify-content: space-between;
+			margin: 0 !important;
+			padding: 0;
+			width: 100%;
+			height: fit-content;
+			@media(max-width:800px) {
+				margin: auto;
+				width: 100%;
+			}
 
-	.share,
-	.tag-cloud {
-		float: none;
-		margin: 30px 0 0;
-	}
+			.btn {
+				list-style: none;
+				display: block !important;
+				border-radius: 2px;
+				background: #ffffff;
+				color: #dbdbdb;
+				list-style: none;
+				transition: 0.2s all ease-out;
+				border: 1px solid #dbdbdb;
+				padding: 0;
+				margin: auto 0;
+				min-width: 17%;
+				@media(max-width: 800px) {
+					max-width: 15%;
+				}
 
-	.tag-cloud {
-		display: flex;
-		justify-content: center;
+				&:before {
+					display: none;
+				}
 
-		a {
-			margin: 0 10px 10px !important;
-			color: @theme-color;
+				a {
+					text-align: center;
+					display: block;
+					padding: 6px 10px 5px 7px !important;
+					width: -webkit-fill-available;
+				}
+
+				&.facebook {
+					&:hover {
+						background-color: lighten(@facebook-color, 15%);
+						box-shadow: lighten(@facebook-color, 35%) !important;
+						cursor: pointer;
+					}
+				}
+
+				&.twitter {
+					&:hover {
+						background-color: lighten(@twitter-color, 5%);
+						box-shadow: lighten(@twitter-color, 35%);
+						cursor: pointer;
+					}
+				}
+
+				&.linkedin {
+					&:hover {
+						background-color: lighten(@linkedin-color, 5%);
+						box-shadow: lighten(@linkedin-color, 35%);
+						cursor: pointer;
+					}
+				}
+
+				&.devto {
+					&:hover {
+						background-color: black;
+						box-shadow: lighten(@linkedin-color, 35%);
+						cursor: pointer;
+					}
+				}
+
+				&.ycombinator {
+					&:hover {
+						background-color: lighten(@rss-color, 15%);
+						box-shadow: lighten(@rss-color, 35%);
+						cursor: pointer;
+					}
+				}
+
+				a {
+					width: -webkit-fill-available;
+					margin: 0;
+					padding: 0;
+					display: block;
+					@media(max-width:800px) {
+						padding: 0;
+						height: fit-content;
+					}
+				}
+
+				&:hover {
+					border: none;
+
+					span {
+						color: white;
+					}
+				}
+
+				i {
+					margin: auto 0;
+					color: #c3c5cb;
+					font-size: 20px;
+					display: block;
+				}
+				@media(max-width: 800px) {
+					width: 100%;
+				}
+			}
+
+			a {
+				border: 0;
+				padding: 5px 11px;
+				color: #fff;
+				line-height: 1.5em;
+				display: inline-block;
+				border-radius: 2px;
+				.transition(all 0.2s ease);
+				font-size: 0.9em;
+				margin: 5px 10px 5px 0;
+
+				&:hover {
+					color: @white;
+					text-decoration: none;
+
+					span {
+						color: #fff;
+					}
+				}
+			}
 		}
 	}
 }

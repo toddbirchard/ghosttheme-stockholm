@@ -8,6 +8,7 @@
 	====================================================*/
 	section {
 		width: fit-content;
+		max-width: 100%;
 		@media(max-width: 800px) {
 			width: 100% !important;
 		}
@@ -43,7 +44,7 @@
 			width: auto;
 			max-height: 650px;
 			border: 1px solid #eaeaea;
-			margin: 10px auto;
+			margin: 0 auto;
 			display: block;
 			max-width: 99%;
 
@@ -151,13 +152,12 @@
 		margin: 0 60px 25px;
 		line-height: 1.3;
 		color: @h1-color;
-		font-family: 'ProductSans-Regular', 'FFMarkWebProMedium';
+		font-family: 'FFMarkWebProMedium';
 		@media(max-width: 800px) {
 			margin: 10px 60px 40px;
 		}
 		@media(max-width: 600px) {
-			font-family: FFMarkWebProBook;
-			font-size: 1.1em;
+			font-size: 1em;
 			font-weight: 600;
 			max-width: 95%;
 			margin: 0 25px;
@@ -251,8 +251,10 @@
 		}
 
 		p {
-			margin: 5px 0;
+			margin: 0 !important;
 			color: #7e9780;
+			line-height: 1.4 !important;
+			text-align: left;
 		}
 
 		i {
@@ -282,20 +284,18 @@
 
 	p {
 		font-size: 0.95em;
-		@media(max-width: 900px) {
-			margin: 25px 60px 30px;
-		}
+		margin: 0 0 25px 0 !important;
+
 		@media (max-width: 800px) {
 			font-size: 0.9em;
 			text-align: justify;
-			margin: 10px 35px;
+			margin: 0 0 20px;
 		}
 		@media (max-width: 600px) {
 			font-size: 0.9em;
 			text-align: justify;
 			line-height: 1.6 !important;
 			font-style: normal;
-			margin: 10px 25px;
 		}
 	}
 }

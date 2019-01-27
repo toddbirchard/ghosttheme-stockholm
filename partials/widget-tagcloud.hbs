@@ -1,7 +1,7 @@
 <!-- start tag cloud widget -->
-<div class="widget tag">
+<div class="widget tags">
 	<h4 class="footer-title">Tags</h4>
-	<div class="tag-cloud tag">
+	<div class="tag-cloud">
 		{{#get "tags" limit="all" include="count.posts" order="count.posts DESC" }}
 			{{#foreach tags}}
 				<a href="{{url}}" class="">{{name}}</a>

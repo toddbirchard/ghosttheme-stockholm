@@ -23,7 +23,7 @@
 	{{else}}
 		<meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
-	{{^is "home,post,paged"}}
+	{{^is "home,post"}}
 		<script src="{{asset "/dist/pages.js"}}"></script>
 	{{/is}}
 	{{> analytics}}
