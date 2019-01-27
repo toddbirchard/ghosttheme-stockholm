@@ -77,10 +77,10 @@
 		box-shadow: 0 0 8px rgba(93, 97, 140, .35);
 		transition: all 0.2s ease-out;
 		@media(max-width: 1000px) {
-			max-height: 340px !important;
+			max-height: 35vw !important
 		}
 		@media(max-width: 800px) {
-			max-height: 330px !important;
+			max-height: 40vw !important
 		}
 		@media(max-width: 600px) {
 			max-height: 210px !important;
@@ -149,9 +149,8 @@
 			text-align: left;
 			font-size: 1.2em;
 			color: #153b52;
-			font-family: 'ProductSans-Regular', 'FFMarkWebProMedium',FFMarkWebProMedium,serif;
+			font-family: 'FFMarkWebProMedium',sans-serif;
 			@media(max-width: 600px) {
-				font-family: 'ProductSans-Regular',FFMarkWebProMedium,FFMarkWebProMedium,serif;
 				font-size: 1em !important;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
@@ -423,8 +422,10 @@
 		transition: all 0.3s ease-out;
 
 		&:hover {
-			border-bottom: 1px solid #00309c;
+			border-bottom: 2px solid #00309c;
 			border-right: 2px solid #004d9c;
+			color: white;
+			background: @hover-color;
 		}
 		@media(max-width: 600px) {
 			display: none;

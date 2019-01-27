@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
+  var date = new Date();
   var title = document.title
   var userid = Math.round(+new Date()/1000);
-  var created = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+  var created = new Date(date.getMonth(), date.getDate(), date.getFullYear());
   console.log(userid);
 
   function showVisitorInfo(info) {
