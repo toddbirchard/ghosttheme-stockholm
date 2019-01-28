@@ -1,0 +1,92 @@
+.hljs.language-python,
+.python.hljs {
+  color: #e4f8fd ;
+  background: linear-gradient(#2d4467,#1c2a40);
+
+  &::before {
+    width: 110%;
+    height: auto;
+    content: "Python" !important;
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+
+    @media(max-width: 600px) {
+      width: -webkit-fill-available;
+      width: -moz-webkit-fill-available;
+      padding: 8px 0;
+      font-size: 1.4em;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  .meta {
+    color: #ffdc5d;
+  }
+
+  .addition,
+  .addition,
+  .meta-string,
+  .meta-string,
+  .regexp,
+  .regexp,
+  .string,
+  .string {
+    color: #93DCB8;
+    font-family: 'AFParseGroteskMono-Light';
+  }
+
+  .params {
+    color: #ecb357;
+  }
+
+  .comment {
+    color: #788198;
+  }
+
+  .attribute,
+  .attribute {
+    color: #d8b061;
+  }
+
+  .class,
+  .class,
+  .title,
+  .title {
+    color: #ffd712;
+    font-family: 'AFParseGroteskMono-Bold';
+  }
+
+  .attr,
+  .attr,
+  .number,
+  .number,
+  .selector-attr,
+  .selector-attr,
+  .selector-pseudo,
+  .selector-pseudo,
+  .template-variable,
+  .template-variable,
+  .type,
+  .type,
+  .variable,
+  .variable {
+    color: #bc82d8;
+  }
+
+  .keyword {
+    color: #00b1d5;
+    font-family: 'AFParseGroteskMono-Bold';
+  }
+
+  .function,
+  .function {
+    .keyword {
+      color: #00b1d5;
+    }
+  }
+}

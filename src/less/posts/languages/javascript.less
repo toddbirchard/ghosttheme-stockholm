@@ -1,0 +1,135 @@
+.hljs.javascript,
+.hljs.language-javascript {
+  font-size: 14px;
+  line-height: 1.6;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: linear-gradient(#203f50, #0b3c66) !important;
+  color: #5fc793;
+
+  &::-moz-selection {
+    text-shadow: none;
+    background: #435643;
+  }
+
+  .inserted {
+    border-bottom: 1px dotted #f0fff0;
+    text-decoration: none;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .bold,
+  .important {
+    font-weight: bold;
+  }
+
+  .important {
+    color: #b3d6b3;
+  }
+
+  .entity {
+    cursor: help;
+  }
+
+  .highlight {
+    outline: 0.4em solid #5c705c;
+    outline-offset: 0.4em;
+  }
+
+  .cdata,
+  .doctype,
+  .prolog {
+    color: #535f53;
+  }
+
+  .comment {
+    color: #7f8ba7;
+  }
+
+  .built_in {
+    font-weight: 700;
+    color: #79ddfb;
+  }
+
+  .punctuation {
+    color: #535f53;
+  }
+
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .number,
+  .operator,
+  .tag {
+    color: #a2b34d;
+  }
+
+  .property {
+    color: #687d68;
+  }
+
+  .atrule-id,
+  .selector,
+  .tag-id {
+    color: #f0fff0;
+  }
+
+  .attr-name {
+    color: #b3d6b3;
+  }
+
+  .params,
+  .function {
+    color: #EEAC18;
+  }
+
+  .keyword {
+    color: #FD92F0;
+  }
+
+  .string {
+    color: #F4E39D;
+    font-family: 'AFParseGroteskMono-Light';
+  }
+
+  .attr {
+    color: #a39fff;
+  }
+
+  &::before {
+    margin-bottom: 0;
+    width: 110%;
+    height: auto;
+    content: "Javascript" ;
+    color: white;
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+
+    @media(max-width: 600px) {
+      width: -webkit-fill-available;
+      width: -moz-webkit-fill-available;
+      padding: 8px 0;
+      font-size: 1.4em;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+}

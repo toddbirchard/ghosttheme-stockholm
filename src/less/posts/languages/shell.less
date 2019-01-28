@@ -1,0 +1,140 @@
+.hljs.language-shell,
+.hljs.shell,
+.hljs.output,
+.hljs.language-output {
+  background: linear-gradient(#2d3555, #1d2036);
+  font-weight: normal;
+
+  .title {
+    color: #fad000;
+    font-weight: normal;
+  }
+
+  .name {
+    color: #a1feff;
+  }
+
+  .tag {
+    color: #ffffff;
+  }
+
+  .attr {
+    color: #f8d000;
+    font-style: italic;
+  }
+
+  .built_in,
+  .section,
+  .selector-tag {
+    color: #fb9e00;
+  }
+
+  .keyword {
+    color: #fb9e00;
+  }
+
+  .hljs,
+  .subst {
+    color: #e3dfff;
+  }
+
+  .addition,
+  .attribute,
+  .bullet,
+  .code,
+  .deletion,
+  .quote,
+  .regexp,
+  .selector-attr,
+  .selector-class,
+  .selector-pseudo,
+  .string,
+  .symbol,
+  .template-tag {
+    color: #4cd213;
+  }
+
+  .meta,
+  .meta-string {
+    color: #fb9e00;
+  }
+
+  .comment {
+    color: #ac65ff;
+  }
+
+  .keyword,
+  .literal,
+  .name,
+  .selector-tag,
+  .strong {
+    font-weight: normal;
+  }
+
+  .literal,
+  .number {
+    color: #fa658d;
+  }
+
+  .emphasis {
+    font-style: italic;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+}
+
+.hljs.output,
+.hljs.language-output {
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    content: "Output" !important;
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-weight: 700;
+
+    @media(max-width: 600px) {
+      width: -webkit-fill-available;
+      width: -moz-webkit-fill-available;
+      padding: 8px 0;
+      font-size: 1.4em;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.hljs.shell,
+.hljs.language-shell {
+  &::before {
+    margin-bottom: 11px;
+    margin-left: -40px;
+    width: 110%;
+    height: auto;
+    content: "Shell" !important;
+    display: block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-weight: 700;
+
+    @media(max-width: 600px) {
+      width: -webkit-fill-available;
+      width: -moz-webkit-fill-available;
+      padding: 8px 0;
+      font-size: 1.4em;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+}
