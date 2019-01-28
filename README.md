@@ -31,9 +31,9 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 ### Major Features
 
 - User Authentication & Signup for Readers
-- Multi-post content series' for topics deserving more than a single post
+- Multi-post content series’ for topics deserving more than a single post
 - Full JIRA integration with functioning Kanban
-- 'Contributors' page detailing bios for blog authors
+- ‘Contributors’ page detailing bios for blog authors
 - MongoDB Cloud integration to extend the capabilities of Ghost CMS
 - Automatic link preview embeds via custom API
 - "Smart" widgets which change based on their context
@@ -49,18 +49,17 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
   * Recent Posts
   * Related Posts
   * Publications
+  * Multi-part series widget (Post X of Y)
 * Authors
   * Blog Contributors
   * Github user activity
-  * Github user repos
-- Multi-part series widget (Post X of Y)
-- Github repositories
-- 
-- Related posts
-
-- Twitter Feed
-- Meetup Events (by author)
-- Medium posts (by author)
+  * Github user repositories
+  * Meetup Events
+  * Medium Posts
+* Social
+  * Twitter Feed
+* Users
+  * Hybrid account creation + subscribe 
 
 ### Features In Development
 
@@ -101,7 +100,7 @@ Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is 
 
 - `custom-author-archive.hbs`: Alternative "about" page which displays author bios.
 - `custom-projects.hbs`: Lists chosen Github Repos & a live JIRA kanban board integration.
-- `custom-tag-archive.hbs`: Template for ongoing editorial series'.
+- `custom-tag-archive.hbs`: Template for ongoing editorial series’.
 - `custom-signup-confirm`: Confirmation page for new user account creation.
 - `series`: Page containing all posts of a series, compiled via dynamic routing.
 - `error`: Custom 404 page.
