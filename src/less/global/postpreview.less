@@ -115,13 +115,13 @@
 		margin: 0 0 20px;
 
 		.post-title {
-			font-size: 2.2em;
+			font-size: 2em;
 			Line-height: 1.15;
 			margin: 0 0 10px;
 			font-weight: 900;
 			font-family: 'ProductSans-Bold', 'TTNorms-Medium';
 			@media(max-width: 600px) {
-				font-size: 1.65em;
+				font-size: 1.5em;
 				margin: 0 0 10px;
 				font-weight: 500;
 				line-height: 1.2em;
@@ -147,11 +147,11 @@
 			line-height: 1.21;
 			font-weight: 400;
 			text-align: left;
-			font-size: 1.2em;
+			font-size: 1.3em;
 			color: #153b52;
 			font-family: 'TTNorms-Medium',sans-serif;
 			@media(max-width: 600px) {
-				font-size: 1em !important;
+				font-size: 1.1em !important;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
@@ -201,6 +201,9 @@
 		width: 100%;
 		justify-content: space-between;
 		max-width: 440px;
+		@media(max-width:800) {
+			max-width: 0;
+		}
 		@media(max-width:600) {
 			padding-right: 0 !important;
 			margin-right: 0;
@@ -425,7 +428,7 @@
 			border-bottom: 2px solid #00309c;
 			border-right: 2px solid #004d9c;
 			color: white;
-			background: @hover-color;
+			background: @button-hover;
 		}
 		@media(max-width: 600px) {
 			display: none;
