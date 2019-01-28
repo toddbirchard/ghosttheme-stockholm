@@ -98,6 +98,7 @@ $ cd ghosttheme-stockholm
 $ npm install
 $ npm run build
 ```
+
 As always, remember to restart your Ghost instance when adding new themes.
 
 ### Developers
