@@ -1,31 +1,51 @@
-const webpack = require('webpack');
-const path = require('path');
+/*const webpack = require('webpack');
 const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
-const resolve = require('path').resolve;
+const autoprefixer = require("autoprefixer");
+const path = require('path');
 
 module.exports = {
+  mode: 'production',
   resolve: {
     alias: {
-      Fonts: resolve(__dirname, '/assets/fonts/'),
-      Less: resolve(__dirname, '/src/less/')
+      Fonts: path.resolve(__dirname, '/assets/fonts/'),
+      Less: path.resolve(__dirname, '/src/less/')
     }
   },
   entry: {
     'global': './index.js',
     'posts': './posts.js',
     'pages': './pages.js',
-    'apply':'./apply.js',
+    'apply': './apply.js'
   },
   output: {
-    path: resolve(__dirname, '/assets/dist'),
+    path: path.resolve(__dirname, 'assets/dist'),
     filename: '[name].js',
     publicPath: './'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"}),
+    new FontConfigWebpackPlugin()
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   module: {
     rules: [
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+          use: [
+            "css-loader", {
+              loader: "postcss-loader",
+              options: {
+                plugins: () => autoprefixer({
+                  browsers: ["last 3 versions", "> 1%"]
+                })
+              }
+            },
+            "less-loader"
+          ]
       }, {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -33,41 +53,49 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: './assets/fonts/[name].[ext]',
-              publicPath: '/',
+              publicPath: '/'
             }
           }
         ]
+      }, {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       }
+    ]
+  }
+}*/
+
+const webpack = require('webpack');
+const path = require('path');
+const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
+
+
+module.exports = {
+  resolve: {
+    alias: {
+      Fonts: path.resolve(__dirname, './assets/fonts/'),
+      Less: path.resolve(__dirname, './src/less/')
+    }
+  },
+  entry: {
+    'global': path.resolve(__dirname, './index.js'),
+    'posts': path.resolve(__dirname, './posts.js'),
+    'pages': path.resolve(__dirname, './pages.js'),
+    'apply': path.resolve(__dirname, './apply.js'),
+  },
+  output: {
+    path: path.resolve(__dirname, './assets/dist'),
+    filename: '[name].js'
+  },
+  module: {
+    rules: [
+      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+      { test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/, use: [ { loader: 'file-loader', options: { name: './assets/fonts/[name].[ext]', publicPath: '/', } } ] },
+      { test: /\.jsx?$/, exclude:  /(node_modules|bower_components)/, loader: 'babel-loader', query: {presets: ['@babel/preset-env']} }
     ]
   },
   plugins: [
         new FontConfigWebpackPlugin()
     ]
-}
-/*
-module.exports = {
-  entry: {
-    global: '.src/webpack/global.js',
-    posts: '.src/webpack/posts.js',
-    authors: '.src/webpack/authors.js',
-    pages: '.src/webpack/pages.js'
-  },
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'assets/dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.less$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader'
-        ]
-      }
-    ]
   }
-};
-
-/*module.exports = config;*/

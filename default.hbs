@@ -12,10 +12,9 @@
 	<!--<link rel="stylesheet" type="text/css" href="{{asset "/dist/bundle.css"}}">-->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
 	{{! Scripts }}
-
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "/js/includes/retina.min.js"}}"></script>
-	<script src="{{asset "/dist/global.js"}}"></script>
+	<script src="{{asset "dist/global.js"}}"></script>
 
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
@@ -37,7 +36,7 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	{{! insert header partial}}
-	<script src="./index.js"></script>
+
 	{{> newheader}}
 	{{{body}}}
 	{{> footer}}
