@@ -6,17 +6,18 @@ const resolve = require('path').resolve;
 module.exports = {
   resolve: {
     alias: {
-      Fonts: resolve(__dirname, './assets/fonts/'),
-      Less: resolve(__dirname, './src/less/')
+      Fonts: resolve(__dirname, '/assets/fonts/'),
+      Less: resolve(__dirname, '/src/less/')
     }
   },
   entry: {
-    'global': resolve(__dirname, './index.js'),
-    'posts': resolve(__dirname, './posts.js'),
-    'pages': resolve(__dirname, './pages.js'),
+    'global': './index.js',
+    'posts': './posts.js',
+    'pages': './pages.js',
+    'apply':'./apply.js',
   },
   output: {
-    path: resolve('assets/dist'),
+    path: resolve(__dirname, '/assets/dist'),
     filename: '[name].js',
     publicPath: './'
   },

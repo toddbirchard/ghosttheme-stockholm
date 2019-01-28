@@ -24,10 +24,8 @@
     }
 
     .active {
-      display:block;
+      display: block;
     }
-
-
 
     p {
       text-align: left;
@@ -72,25 +70,12 @@
       height: 200px;
     }
 
-    button {
-      font-family: "TTNorms-Regular", sans-serif;
-      text-transform: uppercase;
-      outline: 0;
-      background: @theme-color;
-      width: 100%;
-      border: 0;
-      padding: 15px;
-      color: #FFFFFF;
-      font-size: 14px;
-      -webkit-transition: all 0.3 ease;
-      transition: all 0.3 ease;
-      cursor: pointer;
-    }
 
-    button:active,
-    button:focus,
-    button:hover {
-      background: #43A047;
+
+    .next:active,
+    .next:focus,
+    .next:hover {
+      background: @hover-color;
     }
 
     .message {
@@ -191,7 +176,7 @@
       left: -50%;
       top: 9px;
       z-index: 0;
-          opacity: .6;
+      opacity: 0.6;
       /*put it behind the numbers*/
     }
 
@@ -205,7 +190,26 @@
     #progressbar li.active:before {
       background: @theme-color !important;
       color: #eaeaea !important;
-          position: relative;
+      position: relative;
     }
   }
+}
+
+.next,
+input[type="button"]  {
+  font-family: "TTNorms-Regular", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: @theme-color;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+
+  &:hover {
+    cursor: pointer;
+   }
 }

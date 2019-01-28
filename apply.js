@@ -1,3 +1,5 @@
+import './src/less/pages.less';
+
 $(document).ready(function() {
   //jQuery time
   var current_fs,
