@@ -110,6 +110,7 @@ var themeApp = {
   },
   init: function() {
     //themeApp.featuredMedia();
+    themeApp.contributors();
     themeApp.retina();
     themeApp.tags();
   }
