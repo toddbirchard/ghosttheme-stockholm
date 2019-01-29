@@ -3,11 +3,22 @@
 .page-apply {
   .main-content {
     width: 700px;
-    padding: 60px 80px;
+    padding: 50px 80px;
     margin: auto;
+
+    @media(max-width: 600px){
+      padding: 40px 30px;
+    }
 
     h1 {
       margin: 0;
+
+      @media(max-width: 600px){
+        line-height: 1.2;
+        font-size: 1.8em;
+      }
+
+
     }
 
     form {
@@ -57,8 +68,16 @@
       flex-direction: row;
       justify-content: space-between;
 
+      @media(max-width: 600px) {
+        display: block;
+      }
+
       .input-field-group {
         width: 49%;
+
+        @media(max-width: 600px) {
+          width: 100%;
+        }
       }
     }
 
@@ -222,6 +241,7 @@ button {
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
+      margin-top: 20px;
 
   &:hover {
     cursor: pointer;
