@@ -19,15 +19,10 @@
           <div class="page-content">
             {{content}}
             <div class="form" class="needs-validation">
-              <ul id="progressbar">
-                <li class="active">The Boring Stuff</li>
-                <li>The Juicy Stuff</li>
-                <li>The Blow-Our-Fucking-Minds Stuff</li>
-              </ul>
               <form class="needs-validation" id="msform" accept-charset="UTF-8" action="https://getform.io/f/ce75696d-0ee2-4475-8a8f-a26da6267917" method="POST">
                 <fieldset class="active">
                   <h2>The Boring Stuff</h2>
-                  <p>Tell us about yourself by letting Chrome auto-fill these obligatory fields.</p>
+                  <p>Tell us about yourself by letting your browser auto-fill these obligatory fields.</p>
                   <div class="split-fields">
                     <div class="input-field-group">
                       <label for="application_name">Full Name (required)</label>
@@ -38,11 +33,11 @@
                       <input id="application_email"  class="form-control" maxlength="30" name="application_submission[email]" type="email" required="">
                     </div>
                     <div class="input-field-group">
-                      <label for="application_username"> Desired Username/Call Sign/Gangsta Rap Persona</label>
-                      <input id="application_username"  class="form-control" maxlength="30" name="application_submission[username]" type="text" required="">
+                      <label for="application_username"> Nickname /Call Sign/ Gangsta Rap Persona </label>
+                      <input id="application_username"  class="form-control" maxlength="30" name="application_submission[username]" type="text">
                     </div>
                     <div class="input-field-group">
-                      <label for="application__expertise"> What are your areas of expertise? </label>
+                      <label for="application__expertise"> What are your areas of expertise? (required) </label>
                       <input id="application__expertise"  class="form-control" maxlength="100" name="application_submission[expertise]" type="text" required="">
                     </div>
                   </div>
@@ -51,9 +46,7 @@
                 <fieldset>
                   <h2>The Juicy Stuff</h2>
                   <p id="application_description">
-                    Please send us a single writing sample that represents your best work.
-                    We evaluate writing samples based on the level and clarity of their
-                    technical explanations.
+                    Before we can let you into our temple, we need to make sure you're literate first. Please provide a writing sample where you've explained something technical, perferrably in the vein of Data Science and Engineering.
                   </p>
                   <div class="input-field-group">
                     <label for="application_sample"> Writing sample (required) </label>
@@ -64,10 +57,7 @@
                 <fieldset>
                   <h2>The Blow-Our-Fucking-Minds Stuff</h2>
                   <p id="application_notes">
-                    Feel free to share a link to your website, GitHub account, Twitter
-                    profile, etc. We'd love to know if you maintain or contribute
-                    significantly to any open-source projects. Let us know how you found
-                    our authorship program and what motivated you to apply, too!
+                    If you'd like to provide any of the information below to sweeten the deal, have it!
                   </p>
                   <div class="split-fields">
                     <div class="input-field-group">
