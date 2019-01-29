@@ -75,14 +75,15 @@ module.exports = {
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
-      Less: path.resolve(__dirname, './src/less/')
+      Less: path.resolve(__dirname, './src/less/'),
+      PostsJS: path.resolve(__dirname, 'src/js/posts/')
     }
   },
   entry: {
-    'global': path.resolve(__dirname, './index.js'),
-    'posts': path.resolve(__dirname, './posts.js'),
-    'pages': path.resolve(__dirname, './pages.js'),
-    'apply': path.resolve(__dirname, './apply.js'),
+    'global': path.resolve(__dirname, './webpack/index.js'),
+    'posts': path.resolve(__dirname, './webpack/posts.js'),
+    'pages': path.resolve(__dirname, './webpack/pages.js'),
+    'apply': path.resolve(__dirname, './webpack/apply.js'),
   },
   output: {
     path: path.resolve(__dirname, './assets/dist'),
@@ -92,7 +93,7 @@ module.exports = {
     rules: [
       { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
       { test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/, use: [ { loader: 'file-loader', options: { name: './assets/fonts/[name].[ext]', publicPath: '/', } } ] },
-      { test: /\.jsx?$/, exclude:  /(node_modules|bower_components)/, loader: 'babel-loader', query: {presets: ['@babel/preset-env']} }
+      { test: /\.m?js$/, exclude: /(node_modules|bower_components)/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } }
     ]
   },
   plugins: [

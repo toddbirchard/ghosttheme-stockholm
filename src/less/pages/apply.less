@@ -10,6 +10,10 @@
       margin: 0;
     }
 
+    form {
+      position: relative;
+    }
+
     h2 {
       font-family: 'TTNorms-Regular', 'TTNorms-Medium';
       text-align: left;
@@ -20,7 +24,9 @@
 
     fieldset {
       border: none;
-      display: none;
+      display: block;
+      background: white;
+      margin-bottom: 50px;
     }
 
     .active {
@@ -99,7 +105,7 @@
 
     .container:after,
     .container:before {
-      content: "";
+      content: " ";
       display: block;
       clear: both;
     }
@@ -136,6 +142,7 @@
       overflow: hidden;
       /*CSS counters to number the steps*/
       counter-reset: step;
+      position: relative;
     }
 
     #progressbar li {
@@ -187,18 +194,20 @@
     #progressbar li.active:after,
     #progressbar li.active:before {
       background: @theme-color !important;
-      color: #eaeaea !important;
-      position: relative;
+      color: white !important;
+      /*position: relative;*/
     }
   }
 }
 
-.next,
-input[type="button"]  {
+.next {
+  display:none;
+}
+button {
   font-family: "TTNorms-Regular", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: @theme-color;
+  background: @theme-color !important;
   width: 100%;
   border: 0;
   padding: 15px;

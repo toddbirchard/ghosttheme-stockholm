@@ -1,16 +1,15 @@
 <!-- Start Scripts -->
-<script src="{{asset "/js/lazy-load.min.js"}}"></script>
+<script src="{{asset "/js/includes/retina.min.js"}}"></script>
+<!--<script src="{{asset "/js/lazy-load.min.js"}}"></script>-->
 {{#is "post"}}
-  <script src="{{asset "/js/includes/scrollbooster.min.js"}}"></script>
-  <script src="{{asset "/js/includes/highlight.min.js"}}"></script>
-  <script async src="{{asset "/js/lightbox.js"}}"></script>
+  <script src="{{asset "/js/highlight.min.js"}}"></script>
   {{#has author="Matt Alhonte"}}
     <script async src="{{asset "/js/previews.js"}}"></script>
   {{/has}}
-{{else}}
+{{/is}}
+{{#is "home"}}
   <script src="{{asset "/js/includes/ghost-search.min.js"}}"></script>
   <script src="{{asset "/js/search.min.js"}}"></script>
 {{/is}}
-<script async src="{{asset "/js/main.min.js"}}"></script>
-
+<!--<script src="{{asset "/js/main.min.js"}}"></script>-->
 <!-- End Scripts -->

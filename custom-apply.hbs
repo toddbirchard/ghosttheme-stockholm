@@ -3,7 +3,7 @@
 <!-- start site's main content area -->
 <script src="{{asset "/dist/pages.js"}}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<section class="content-wrap">
+<section class="content-wrap page-apply">
   <div class="container">
     {{#post}}
       <!-- start main post area -->
@@ -18,35 +18,34 @@
           {{/if}}
           <div class="page-content">
             {{content}}
-            <div class="form">
+            <div class="form" class="needs-validation">
               <ul id="progressbar">
                 <li class="active">The Boring Stuff</li>
                 <li>The Juicy Stuff</li>
                 <li>The Blow-Our-Fucking-Minds Stuff</li>
               </ul>
-              <form accept-charset="UTF-8" action="https://getform.io/f/ce75696d-0ee2-4475-8a8f-a26da6267917" method="POST">
+              <form class="needs-validation" id="msform" accept-charset="UTF-8" action="https://getform.io/f/ce75696d-0ee2-4475-8a8f-a26da6267917" method="POST">
                 <fieldset class="active">
                   <h2>The Boring Stuff</h2>
                   <p>Tell us about yourself by letting Chrome auto-fill these obligatory fields.</p>
                   <div class="split-fields">
                     <div class="input-field-group">
                       <label for="application_name">Full Name (required)</label>
-                      <input id="application_name" maxlength="20" name="application_submission[name]" type="text" required="">
+                      <input id="application_name"  class="form-control" maxlength="20" name="application_submission[name]" type="text" required="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_email"> Email (required) </label>
-                      <input id="application_email" maxlength="30" name="application_submission[email]" type="email" required="">
+                      <input id="application_email"  class="form-control" maxlength="30" name="application_submission[email]" type="email" required="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_username"> Desired Username/Call Sign/Gangsta Rap Persona</label>
-                      <input id="application_username" maxlength="30" name="application_submission[username]" type="text" required="">
+                      <input id="application_username"  class="form-control" maxlength="30" name="application_submission[username]" type="text" required="">
                     </div>
                     <div class="input-field-group">
                       <label for="application__expertise"> What are your areas of expertise? </label>
-                      <input id="application__expertise" maxlength="100" name="application_submission[expertise]" type="text" required="">
+                      <input id="application__expertise"  class="form-control" maxlength="100" name="application_submission[expertise]" type="text" required="">
                     </div>
                   </div>
-                  <input type="button" name="next" class="next action-button" value="Next">
                 </fieldset>
 
                 <fieldset>
@@ -58,10 +57,8 @@
                   </p>
                   <div class="input-field-group">
                     <label for="application_sample"> Writing sample (required) </label>
-                    <textarea aria-describedby="application_sample" id="application_submission_sample" name="application_submission[sample]" required=""></textarea>
+                    <textarea  class="form-control" aria-describedby="application_sample" id="application_submission_sample" name="application_submission[sample]" required=""></textarea>
                   </div>
-                  <input type="button" name="next" class="next action-button" value="Next">
-                  <input type="button" name="previous" class="previous action-button" value="Previous">
                 </fieldset>
 
                 <fieldset>
@@ -75,34 +72,33 @@
                   <div class="split-fields">
                     <div class="input-field-group">
                       <label for="application_website">Website</label>
-                      <input id="application_website" maxlength="40" name="application_submission[website]" type="text">
+                      <input  class="form-control" id="application_website" maxlength="40" name="application_submission[website]" type="text">
                     </div>
                     <div class="input-field-group">
                       <label for="application_blog">Blog</label>
-                      <input id="application_blog" maxlength="40" name="application_submission[blog]" type="text">
+                      <input  class="form-control" id="application_blog" maxlength="40" name="application_submission[blog]" type="text">
                     </div>
                     <div class="input-field-group">
                       <label for="application_github">Github</label>
-                      <input id="application_github" maxlength="40" name="application_submission[github]" type="text">
+                      <input  class="form-control" id="application_github" maxlength="40" name="application_submission[github]" type="text">
                     </div>
                     <div class="input-field-group">
                       <label for="application_twitter">Twitter</label>
-                      <input id="application_twitter" maxlength="40" name="application_submission[twitter]" type="text">
+                      <input  class="form-control" id="application_twitter" maxlength="40" name="application_submission[twitter]" type="text">
                     </div>
                     <div class="input-field-group">
                       <label for="application_myspace">MySpace</label>
-                      <input id="application_myspace" maxlength="40" name="application_submission[myspace]" type="text">
+                      <input  class="form-control" id="application_myspace" maxlength="40" name="application_submission[myspace]" type="text">
                     </div>
                     <div class="input-field-group">
                       <label for="application_ssn">Social Security Number</label>
-                      <input id="application_ssn" maxlength="12" name="application_submission[ssn]" type="text">
+                      <input  class="form-control" id="application_ssn" maxlength="12" name="application_submission[ssn]" type="text">
                     </div>
                   </div>
                   <div class="split-fields">
                         <!--<div class="g-recaptcha" data-sitekey="6Lf-H40UAAAAANt5tXMeEU_NGyEuetfeAbVDhX21"></div>-->
                     </div>
-                    <input type="button" name="previous" class="previous action-button" value="Previous">
-                    <input type="submit" name="submit" class="submit action-button" value="Submit">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </fieldset>
               </form>
