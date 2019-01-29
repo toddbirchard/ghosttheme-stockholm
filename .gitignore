@@ -86,4 +86,5 @@ assets/vid/*
 # DS Store
 .DS_Store
 
-firebaseui-web
+# cache
+.cache

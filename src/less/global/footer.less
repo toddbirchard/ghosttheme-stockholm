@@ -268,16 +268,16 @@
 			}
 
 			&:hover {
-				background: #dbedf2;
-				border-color: #b7d5de;
+				background: rgba(64, 206, 199, 0.16);
+				border-color: #82d3d0;
 
 				&::placeholder {
 					color: #72859d;
 				}
+			}
 
-				&::after {
-					color: #8aafb8;
-				}
+			&:focus {
+				background: white;
 			}
 		}
 	}
@@ -294,6 +294,7 @@
 		font-size: 16px;
 		text-transform: Uppercase;
 		transition: all 0.3s ease-out;
+		margin-top: 3px;
 
 		&:hover {
 			background: @hover-color !important;

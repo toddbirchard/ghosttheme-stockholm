@@ -20,9 +20,9 @@ $(document).ready(function() {
     });
   }
 
-  dbip.getVisitorInfo().then(function(info) {
+/* dbip.getVisitorInfo().then(function(info) {
     showVisitorInfo(info);
-  });
+  }); */
 
     $('.social-btns .btn').each(function(index, element) {
       $(this).on('click', function(){
@@ -34,8 +34,6 @@ $(document).ready(function() {
     });
 
     mixpanel.people.set();
-
-
 
     mixpanel.track(title);
     mixpanel.track_links("nav a", "Used Main Nav", {

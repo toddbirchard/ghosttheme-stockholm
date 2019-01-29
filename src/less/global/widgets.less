@@ -255,8 +255,8 @@
 			transition: all 0.2s ease;
 			margin: 0 8px 8px 0;
 			padding: 7px 12px;
-			border: 1px solid #c9d5e48c;
-			background: rgba(255, 255, 255, 0.5);
+			border: 1px solid rgba(201, 213, 228, 0.79);
+			background: rgba(255, 255, 255, 0.65);
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
 				margin: 0 5px 5px 0;
@@ -267,7 +267,7 @@
 				background: @hover-color;
 				border: 1px solid @hover-color;
 				color: white;
-				box-shadow: 2px 2px 3px 0 #239084;
+				box-shadow: 1px 1px 2px 0 #239084;
 			}
 		}
 	}
@@ -344,11 +344,11 @@
 				}
 
 				&:hover {
-					background: #e5f9ff !important;
-					border-color: #bbd8e2 !important;
+					background: rgba(64, 206, 199, 0.16);
+					border-color: #82d3d0;
 
 					&::placeholder {
-						opacity: 0.7;
+						color: #72859d;
 					}
 				}
 
@@ -401,7 +401,7 @@
 				width: -webkit-fill-available !important;
 				width: -moz-available !important;
 				background: linear-gradient(165deg,#40a2a2,#1f68a7);
-				box-shadow: 2px 2px 3px 0 #647498;
+				box-shadow: 2px 2px 0 #42728e;
 				padding: 13px 20px;
 				font-size: 16px;
 				color: white;
@@ -409,6 +409,7 @@
 				text-transform: Uppercase;
 				outline: none;
 				transition: all 0.3s ease-out;
+				margin-top: 3px;
 
 				span {
 					font-size: 14px;
@@ -416,7 +417,7 @@
 
 				&:hover {
 					background: @hover-color;
-					box-shadow: 2px 2px 3px 0 #239084;
+					box-shadow: 2px 2px 0 #239084;
 				}
 			}
 		}
@@ -769,6 +770,7 @@
 				font-size: 14px;
 				opacity: 1;
 				margin-top: 5px;
+				font-family: 'TTNorms-Regular', sans-serif;
 
 				i {
 					margin-right: 5px;
@@ -823,6 +825,11 @@
 				width: -webkit-fill-available;
 				width: -moz-fill-available;
 
+				&:hover {
+					background-color: @hover-color;
+					cursor: pointer;
+				}
+
 				span {
 					font-size: 12px;
 					text-transform: capitalize;
@@ -870,4 +877,9 @@
 			}
 		}
 	}
+}
+
+/* Hack for aligning magnifying glass on other pages */
+.page-template .search::after {
+	 top: 14px;
 }

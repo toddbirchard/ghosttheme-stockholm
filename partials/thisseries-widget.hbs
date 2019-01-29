@@ -1,131 +1,78 @@
 <script>
-$(document).ready(function() {
+  $(document).ready(function() {
 
-  function current_page() {
-    var sPath = String(document.location.pathname);
-    var slug = sPath.split('/')[1];
-    return slug;
-  }
+    function current_page() {
+      var sPath = String(document.location.pathname);
+      var slug = sPath.split('/')[1];
+      return slug;
+    }
 
+    var postslug = current_page();
+    var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=b1a7c274fc24aa798ec464497b&include=tags';
 
-  var postslug = current_page();
-  var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=b1a7c274fc24aa798ec464497b&include=tags';
+    function create_list_object() {
+      $('.post-content').prepend('<div id="seriesposts"><h5></h5><ol reversed></ol></div>');
+    }
 
+    function populate_series_list(post) {
+      $('#seriesposts h5').html(post['seriesname'].replace('#', ''));
+      $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
+    }
 
-/*  function reverse_list() {
+    function posts_in_series(series, seriesname) {
+      var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=b1a7c274fc24aa798ec464497b&filter=tag:' + series
+      $.ajax({
+        method: "GET",
+        url: series_endpoint,
+        contentType: 'application/json'
+      }).done(function(results) {
+        var posts = results['posts'];
+        var i;
+        for (i = 0; i < posts.length; i++) {
+          var post = posts[i];
+          var title = post['title'];
+          var url = 'https://hackersandslackers.com/' + post['slug'];
+          var slug = post['slug'];
+          var created = post['created_at'];
+          var numposts = posts.length;
+          var post_dict = {
+            'seriesname': seriesname,
+            'title': title,
+            'url': url,
+            'created': created,
+            'slug': slug,
+            'numposts': numposts
+          }
+          console.log('post_dict = ' + post_dict);
+          populate_series_list(post_dict);
+        }
+        $('.' + postslug).addClass('currentPost');
+        $('#seriesposts ol').attr('style', 'counter-reset:step-counter ' + (posts.length + 1));
+      });
+    }
 
-        // run the code on each ordered list with a 'reversed' attribute.
-        var myLists = $('ol[reversed]'),
-            currCount = null,
-            currChildren = null,
-            val;
-
-        myLists.each(function () {
-
-            // check the existence of the start attribute
-            if ($(this).attr('start')) {
-
-                // if it exists, convert it to an integer; also ensures even decimal values work
-                currCount = parseInt($(this).attr('start'), 10);
-
-                // If it wasn't a number, it will return 'NaN'; if so, use the number of list items instead
-                if (isNaN(currCount)) {
-                    currCount = $(this).children().length;
-                }
-
-            // do this if the start attribute is not present
-            // the first number is derived from the number of list items
-            } else {
-                currCount = $(this).children().length;
-            }
-
-            // grab all the child list items
-            currChildren = $(this).children();
-
-            // go through each list item, adding the 'value' attribute plus currCount number
-            // then subract one from currCount so we're ready for the next one
-            currChildren.each(function () {
-
-                val = $(this).attr('value');
-
-                // here we check if a value attribute is set in the html
-                // and we change the count accordingly
-                if (val && !isNaN(val)) {
-                    $(this).attr('value', val);
-                    currCount = val;
-                }
-
-                $(this).attr('value', currCount);
-                currCount = currCount - 1;
-            });
-        });
-    }*/
-
-  function create_list_object(){
-    $('.post-content').prepend('<div id="seriesposts"><h5></h5><ol reversed></ol></div>');
-  }
-
-  function populate_series_list(post){
-    $('#seriesposts h5').html(post['seriesname'].replace('#', ''));
-    $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
-  }
-
-  function posts_in_series(series, seriesname){
-    var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=b1a7c274fc24aa798ec464497b&filter=tag:' + series
-    $.ajax({
-      method: "GET",
-      url: series_endpoint,
-      contentType: 'application/json'
-    }).done(function(results) {
-      var posts = results['posts'];
+    function tag_loop(tags) {
       var i;
-      for (i = 0; i < posts.length; i++){
-        var post = posts[i];
-        var title = post['title'];
-        var url = 'https://hackersandslackers.com/' + post['slug'];
-        var slug = post['slug'];
-        var created = post['created_at'];
-        var numposts = posts.length;
-        var post_dict = {'seriesname': seriesname,
-                        'title': title,
-                        'url': url,
-                        'created': created,
-                        'slug': slug,
-                        'numposts': numposts
-                        }
-      console.log('post_dict = ' + post_dict);
-      populate_series_list(post_dict);
-      }
-      $('.' + postslug).addClass('currentPost');
-      $('#seriesposts ol').attr('style', 'counter-reset:step-counter ' + (posts.length + 1));
-    });
-  }
-
-
-
-  function tag_loop(tags) {
-    var i;
-    for (i = 0; i < tags.length; i++){
-      var tag = tags[i];
-      if (tag['visibility'] == "internal") {
-        var series = tag['slug'];
-        var seriesname = tag['meta_title'];
-        create_list_object();
-        posts_in_series(series, seriesname);
+      for (i = 0; i < tags.length; i++) {
+        var tag = tags[i];
+        if (tag['visibility'] == "internal") {
+          var series = tag['slug'];
+          var seriesname = tag['meta_title'];
+          create_list_object();
+          posts_in_series(series, seriesname);
+        }
       }
     }
-  }
 
-  function detect_series() {
-    $.ajax({
-      method: "GET",
-      url: endpoint,
-      contentType: 'application/json'
-    }).done(function(results) {
-      tag_loop(results['posts'][0]['tags']);
-    });
-  }
-
-  detect_series();
-});
+    function detect_series() {
+      $.ajax({
+        method: "GET",
+        url: endpoint,
+        contentType: 'application/json'
+      }).done(function(results) {
+        tag_loop(results['posts'][0]['tags']);
+      });
+    }
+    detect_series();
+  });
 </script>

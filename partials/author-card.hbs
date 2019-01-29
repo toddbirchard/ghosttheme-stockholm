@@ -111,7 +111,6 @@
     }
   }
 
-
   function AuthorDetails() {
     $.ajax({
       method: "GET",
@@ -127,15 +126,4 @@
     });
   }
   AuthorDetails();
-  /*
-  $.get(ghost.url.api('users')).done(function (data){
-    console.log('users', data.users);
-    for (var i = 0; i < data.users.length; i++){
-        AuthorDetails(data.users[i]);
-        console.log('user deets = ' + data.users[i]);
-    }
-  }).fail(function (err){
-    console.log(err);
-  });
-  */
 </script>

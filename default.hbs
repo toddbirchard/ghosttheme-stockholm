@@ -27,16 +27,12 @@
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
-	{{!--{{> mixpanel}}--}}
 </head>
 <body class="{{body_class}}">
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8VFCPW"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8VFCPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	{{! insert header partial}}
-
-	{{> newheader}}
+	{{> header}}
 	{{{body}}}
 	{{> footer}}
 </body>
