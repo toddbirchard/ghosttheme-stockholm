@@ -7,11 +7,12 @@
   section {
         width: -webkit-fill-available;
   }
-  
-  #table {
+
+  #resources-table {
+    margin: auto 40px 40px;
+    width: -webkit-fill-available;
     td {
       white-space: nowrap;
-      max-width: 200px;
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: left;
@@ -23,9 +24,17 @@
           text-align: center;
         }
 
+        .icon {
+          text-align: center;
+        }
+
         .summmary {
           font-weight: 600 !important;
           font-size: .85em !important;
+        }
+
+        .description {
+          max-width: none;
         }
 
         .issuetype-name {
