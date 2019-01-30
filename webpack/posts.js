@@ -5,24 +5,6 @@ import '../assets/js/scrollbooster.min.js';
 
 $(document).ready(function() {
   var postFunctions = {
-    fullScreen: function() {
-      $('.post-template article .post-content img').each(function(item) {
-        var alt = $(this).parent().parent().find('figcaption').text();
-        var src = $(this).attr('src');
-        $(this).attr('data-lightbox', alt);
-        $(this).wrap('<a href="' + src + '" data-lightbox="' + alt + '"></div>');
-        $(this).on('click', function() {
-          var window_height = $(window).height();
-          var window_portion = window_height * 0.2;
-          lightbox.option({
-            'resizeDuration': 300,
-            'positionFromTop': window_height / 2 - window_portion,
-            'disableScrolling': false,
-            'fitImagesInViewport': true
-          });
-        });
-      });
-    },
     codeHighlight: function() {
       $('article pre').each(function() {
         if ($(this).height() >= 400) {
@@ -92,10 +74,3 @@ $(document).ready(function() {
   postFunctions.fullScreen();
   postFunctions.scrollableTables();
 });
-
-
-/*function importAll (r) {
-  r.keys().forEach(r);
-}
-
-importAll(require.context('../src/js/posts/', true, /\.js$/));*/

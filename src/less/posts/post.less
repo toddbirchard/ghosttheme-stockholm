@@ -32,6 +32,14 @@
 
 		p > a {
 			letter-spacing: 0.5px;
+
+			@media(max-width: 600px) {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 90%;
+				display: inline-block;
+			}
 		}
 
 		img {

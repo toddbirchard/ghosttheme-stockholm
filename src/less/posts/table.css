@@ -1,0 +1,231 @@
+table,
+td,
+th {
+  border: none;
+  max-width: 150px;
+  overflow: hidden;
+  text-align: left !important;
+  padding: 15px 20px;
+}
+table {
+  min-width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid rgba(77, 87, 109, 0.25);
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+}
+table.left tbody td {
+  text-align: left;
+  vertical-align: top;
+}
+table.left tbody .pre {
+  font-size: 0.8em;
+  width: fit-content;
+}
+table thead tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #5d6b8a !important;
+  color: white;
+}
+table thead th {
+  text-align: center;
+  font-family: 'TTNorms-Regular';
+  min-width: 30px;
+  padding: 10px;
+  font-size: 0.9em;
+}
+table thead th strong {
+  font-family: 'TTNorms-Regular';
+}
+table thead th::before {
+  font-family: 'TTNorms-Regular' !important;
+}
+table.striped tr {
+  border-bottom: none;
+}
+table.striped tbody tr:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table.striped tbody tr > td {
+  border-radius: 0;
+}
+table.highlight > tbody > tr {
+  transition: background-color 0.25s ease;
+}
+table.highlight > tbody > tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table.centered tbody tr td,
+table.centered thead tr th {
+  text-align: center;
+}
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+tr:nth-child(even) {
+  background-color: #f5f8ff;
+}
+td,
+th {
+  padding: 15px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 1.2;
+}
+@media (max-width: 600px) {
+  table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    position: relative;
+    overflow-x: scroll;
+  }
+  table:hover {
+    cursor: grab;
+  }
+  table td:empty:before {
+    content: '\00a0';
+  }
+  table td,
+  table th {
+    margin: 0;
+    vertical-align: top;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    font-size: 0.8em;
+  }
+  table td {
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+  table thead {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    border: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  table thead th {
+    display: block;
+    padding: 10px 5px!important;
+    font-family: 'TTNorms-Regular';
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 0.8em;
+    /*&::before {
+          content: "\00a0";
+        }*/
+  }
+  table thead th * {
+    font-size: 1em;
+  }
+  table thead tr {
+    display: block;
+    border-spacing: 0;
+    padding: 0;
+    height: 100%;
+  }
+  table tbody {
+    margin-left: 120px;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  table tbody > tr > th {
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  table tbody tr {
+    /*display: inline-block;*/
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: normal;
+    line-break: strict;
+    white-space: inherit;
+    padding: 0 15px;
+    border-bottom: none;
+  }
+  table tbody:last-child::after {
+    content: " ";
+    display: table-row;
+    max-width: 300px;
+    min-width: 300px;
+    margin-left: -300px;
+  }
+  table td {
+    display: block;
+    min-height: 1.25em;
+    margin: 0 10px!important !important;
+    padding: 10px 0 !important;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow-wrap: normal;
+    line-break: normal;
+    white-space: normal;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    max-width: 200px;
+  }
+}
+.dataframe thead th {
+  text-align: center !important;
+  font-family: 'TTNorms-Regular' !important;
+}
+.dataframe tbody tr th:only-of-type {
+  vertical-align: middle;
+  text-align: center;
+}
+.tableContainer {
+  box-shadow: 0 0 5px #d1d4e8;
+  margin: 20px auto 40px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .tableContainer {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: auto!important;
+  }
+  .tableContainer:hover {
+    cursor: grab;
+  }
+}
+.handscroller:hover {
+  cursor: grab !important;
+}
+.handscroller *:hover {
+  cursor: grab !important;
+}
+.tablefade {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  top: 0;
+  display: block;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+}
