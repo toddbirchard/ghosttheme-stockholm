@@ -10,7 +10,6 @@
 	color: #fff;
 	margin-top: 30px;
 	/*box-shadow: inset 0 1px 6px 0 rgba(44,50,63,0.41);*/
-
 	.footer-title {
 		color: #fff;
 		font-weight: 800;
@@ -44,6 +43,49 @@
 		margin-top: 10px;
 		display: block;
 		padding: 0 10px 20px;
+	}
+
+	.widget.links {
+		h3 {
+			color: #fff;
+			font-weight: 800;
+			margin: 10px 0 0 !important;
+			font-size: 1.3em;
+			text-shadow: -1px 1px 1px #133e6d;
+			font-family: 'ProductSans-Regular';
+			text-align: left;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border-bottom: 1px solid rgba(226, 255, 253, 0.21);
+			padding-bottom: 10px;
+			@media(max-width: 800px) {
+				margin: 10px 0 10px !important;
+			}
+		}
+
+		ul {
+			padding-left: 0;
+			border: none;
+
+			li {
+				display: block;
+				width: 100%;
+				text-align: left;
+				transition: all 0.2s ease-out;
+				border: none !important;
+				padding: 8px 4px;
+
+				&:hover {
+					background: #0db0e2;
+				}
+
+				a {
+					color: white;
+					font-family: 'TTNorms-Medium', sans-serif !important;
+					border: none;
+				}
+			}
+		}
 	}
 }
 
@@ -125,6 +167,9 @@
 		====================================================*/
 .widget.contributors {
 	width: 25%;
+	.footer-title {
+		 margin: 10px 0 5px !important;
+	}
 	@media(max-width: 800px) {
 		margin-bottom: 10px;
 		max-width: none;
