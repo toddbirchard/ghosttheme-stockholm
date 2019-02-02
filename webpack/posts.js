@@ -1,18 +1,33 @@
 import '../src/less/posts.less';
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/highlight';
+import javascript from 'highlight.js/lib/languages/javascript';
+import python from 'highlight.js/lib/languages/python';
+import shell from 'highlight.js/lib/languages/shell';
+import sql from 'highlight.js/lib/languages/sql';
+import json from 'highlight.js/lib/languages/json';
+import ini from 'highlight.js/lib/languages/ini';
+import yaml from 'highlight.js/lib/languages/yaml';
+import handlebars from 'highlight.js/lib/languages/handlebars';
+import less from 'highlight.js/lib/languages/less';
 import lightbox from 'lightbox2'
 import ScrollBooster from 'scrollbooster'
+
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('python', python);
+hljs.registerLanguage('shell', shell);
+hljs.registerLanguage('sql', sql);
+hljs.registerLanguage('json', json);
+hljs.registerLanguage('ini', ini);
+hljs.registerLanguage('yaml', yaml);
+hljs.registerLanguage('handlebars', handlebars);
+hljs.registerLanguage('less', less);
+hljs.initHighlightingOnLoad();
 
 var postFunctions = {
   codeHighlight: function() {
     hljs.configure({
       tabReplace: '  ', // 2 spaces
       classPrefix: '', // don't append class prefix
-    });
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
     });
     hljs.initHighlightingOnLoad();
   },

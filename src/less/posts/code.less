@@ -1,25 +1,26 @@
 /* Global Styles */
+@import 'languages/default.less';
 @import 'languages/shell.less';
 @import 'languages/python.less';
 @import 'languages/javascript.less';
 @import 'languages/sql.less';
+@import 'languages/json.less';
+@import 'languages/config.less';
 
 blockquote pre {
-   width: 96% !important;
-   margin: 20px auto;
-   margin:auto;
+  width: 96% !important;
+  margin: auto;
 
-   p {
-     margin-bottom: 0 !important;
-   }
+  p {
+    margin-bottom: 0 !important;
+  }
 
-   code {
-     &::before {
-       font-size: 14px !important;
-       }
-
-     background: rgba(41, 61, 76, 0.84) !important;
-   }
+  code {
+    &::before {
+      font-size: 14px !important;
+    }
+    background: rgba(41, 61, 76, 0.84) !important;
+  }
 }
 
 .post-content {
@@ -32,10 +33,9 @@ blockquote pre {
     margin: 30px auto;
     border-radius: 5px;
     max-width: 100%;
-
     @media(max-width: 600px) {
       max-width: none;
-      width: auto ;
+      width: auto;
       white-space: pre-line;
       max-height: 400px;
       overflow-x: visible;
@@ -53,24 +53,24 @@ blockquote pre {
   }
 
   pre > code {
-    white-space: pre-wrap ;
-    padding: 45px 25px 15px ;
+    white-space: pre-wrap;
+    padding: 0 25px 15px;
     @media(max-width: 600px) {
-      overflow-y: hidden ;
+      overflow-y: hidden;
     }
   }
 
   li > code,
   p > code {
     display: inline;
-    overflow-y: visible ;
+    overflow-y: visible;
     width: fit-content;
     background: rgba(183, 192, 237, 0.18);
     color: #3297b5;
     padding: 4px 6px;
     border-radius: 2px;
     font-weight: 600;
-    font-size: .8em;
+    font-size: 0.8em;
     font-family: 'AFParseGroteskMono-Light';
     white-space: nowrap;
   }
@@ -78,104 +78,17 @@ blockquote pre {
   code {
     margin: 0;
     height: 100%;
-    font-size: .9em;
+    font-size: 0.9em;
     @media(max-width: 600px) {
       font-size: 14px;
     }
   }
 
-  .hljs {
-    display: block;
-    overflow-x: hidden;
-    background: linear-gradient(#2d3555, #1d2036);
-    overflow-wrap: break-word;
-    margin: 0;
-    font-weight: 200;
-    line-height: 1.7;
-    padding: 0 25px 20px;
-    white-space: pre-wrap !important;
-    color: #d3dce0;
-    font-family: 'AFParseGroteskMono-Light';
-    @media(max-width: 600px) {
-      padding: 0 20px 20px;
-    }
 
-    &::before {
-      -webkit-font-smoothing: antialiased;
-      display: block;
-      position: relative;
-      width: 104%;
-      height: auto;
-      margin-bottom: 0;
-      margin-left: -6%;
-      padding: 8px 40px;
-      font-family: 'AFParseGroteskMono-Bold';
-      font-size: 1.15em;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 600;
-      text-rendering: auto;
-      text-shadow: -2px 2px 1px rgba(0, 9, 46, 0.6) !important;
-      content: "Code Snippet";
-      opacity: 1;
-      background: none;
-      @media(max-width: 600px) {
-        width: -webkit-fill-available;
-        width: -moz-webkit-fill-available;
-        padding: 8px 0;
-        font-size: 1.4em;
-        margin: 0 auto;
-      }
-    }
-
-    * {
-      font-size: 14px;
-      margin: 0;
-      @media(max-width: 600px) {
-        font-size: 12px;
-      }
-    }
-  }
 
   code {
     padding: 4px 5px;
-    color: #2e9eb7;
     margin: 0;
-  }
-
-  .json,
-  .language-json {
-    line-height: 1.4 !important;
-
-    .attr {
-      color: #e471a6;
-      font-family: 'AFParseGroteskMono-Bold';
-    }
-
-    .string {
-      color: #c39dea;
-    }
-
-    &::before {
-      margin-bottom: 0;
-      width: 110%;
-      height: auto;
-      content: "JSON";
-      display: block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      position: relative;
-    }
-  }
-
-  .strong {
-    font-weight: bold;
-  }
-
-  .link {
-    text-decoration: underline;
   }
 
   .fullscreenbtn {
@@ -214,8 +127,6 @@ blockquote pre {
     height: 100%;
     width: 110%;
   }
-
-
 
   .hljs.vim {
     .hljs {
@@ -327,36 +238,36 @@ blockquote pre {
 
   .handlebars,
   .hljs.html,
-  .language-html,
-  .language-xml,
   .language-css,
   .language-endpoint,
   .language-handlebars,
-  .language-jinja  {
+  .language-html,
+  .language-jinja,
+  .language-xml {
     background: linear-gradient(#3b3851,#24202f)!important;
     color: #d0e1f6;
 
-    .tag {
+    .hljs-tag {
       color: #98bfd4;
     }
 
-    .meta {
+    .hljs-meta {
       color: #b9d9ff;
     }
 
-    .attr {
+    .hljs-attr {
       color: #7ab5cf;
     }
 
-    .string {
+    .hljs-string {
       color: #d2c69e;
       font-family: 'AFParseGroteskMono-Light';
     }
 
-    .name {
+    .hljs-name {
       color: #96a7ff;
     }
-    background: #272738 ;
+    background: #272738;
 
     &::before {
       margin-bottom: 0;
@@ -385,7 +296,7 @@ blockquote pre {
     }
   }
 
-  .language-endpoint{
+  .language-endpoint {
     display: block;
     margin: 0;
     padding: 0 25px 20px;
@@ -417,187 +328,10 @@ blockquote pre {
       text-shadow: -2px 2px 1px rgba(0,9,46,.6)!important;
     }
   }
-
-
 }
 
-.hljs.ini,
-.hljs.vim,
-.hljs.yaml,
-.hljs.css,
-.language-ini,
-.language-vim,
-.language-yaml,
-.language-toml,
-.language-xml,
-.language-css {
-  display: block;
-  overflow-x: auto;
-  background: #2E3440 !important;
-
-  .hljs,
-  .subst {
-    color: #D8DEE9;
-  }
-
-  .selector-tag {
-    color: #81A1C1;
-  }
-
-  .selector-id {
-    color: #8FBCBB;
-    font-weight: bold;
-  }
-
-  .selector-class {
-    color: #8FBCBB;
-  }
-
-  .selector-attr {
-    color: #8FBCBB;
-  }
-
-  .selector-pseudo {
-    color: #88C0D0;
-  }
-
-  .addition {
-    background-color: rgba(163,190,140,0.5);
-  }
-
-  .deletion {
-    background-color: rgba(191,97,106,0.5);
-  }
-
-  .built_in,
-  .type {
-    color: #8FBCBB;
-  }
-
-  .class {
-    color: #8FBCBB;
-  }
-
-  .function {
-    color: #88C0D0;
-  }
-
-  .function > .title {
-    color: #88C0D0;
-  }
-
-  .keyword,
-  .literal,
-  .symbol {
-    color: #81A1C1;
-  }
-
-  .number {
-    color: #B48EAD;
-  }
-
-  .regexp {
-    color: #EBCB8B;
-  }
-
-  .string {
-    color: #A3BE8C;
-    font-family: 'AFParseGroteskMono-Light';
-  }
-
-  .title {
-    color: #8FBCBB;
-  }
-
-  .params {
-    color: #D8DEE9;
-  }
-
-  .bullet {
-    color: #81A1C1;
-  }
-
-  .code {
-    color: #8FBCBB;
-  }
-
-  .emphasis {
-    font-style: italic;
-  }
-
-  .formula {
-    color: #8FBCBB;
-  }
-
-  .strong {
-    font-weight: bold;
-  }
-
-  .link:hover {
-    text-decoration: underline;
-  }
-
-  .quote {
-    color: #4C566A;
-  }
-
-  .comment {
-    color: #4C566A;
-  }
-
-  .doctag {
-    color: #8FBCBB;
-  }
-
-  .meta,
-  .meta-keyword {
-    color: #5E81AC;
-  }
-
-  .meta-string {
-    color: #A3BE8C;
-    font-family: 'AFParseGroteskMono-Light';
-  }
-
-  .attr {
-    color: #8FBCBB;
-  }
-
-  .attribute {
-    color: #D8DEE9;
-  }
-
-  .builtin-name {
-    color: #81A1C1;
-  }
-
-  .name {
-    color: #81A1C1;
-  }
-
-  .section {
-    color: #88C0D0;
-  }
-
-  .tag {
-    color: #81A1C1;
-  }
-
-  .variable {
-    color: #D8DEE9;
-  }
-
-  .template-variable {
-    color: #D8DEE9;
-  }
-
-  .template-tag {
-    color: #5E81AC;
-  }
-}
-
-.output,
-.language-output {
+.language-output,
+.output {
   &::before {
     margin-bottom: 11px;
     margin-left: -40px;
@@ -662,59 +396,8 @@ blockquote pre {
   }
 }
 
-.nginx,
-.language-nginx {
-  .attribute {
-    color: #88C0D0;
-  }
-
-  .section {
-    color: #5E81AC;
-  }
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    content: "NGINX" !important;
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    font-weight: 700;
-  }
-}
-
-.vim,
-.language-vim {
-  .built_in {
-    color: #88C0D0;
-    font-style: italic;
-  }
-
-  &::before {
-    margin-bottom: 11px;
-    margin-left: -40px;
-    width: 110%;
-    height: auto;
-    content: "Vim" !important;
-    display: block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    font-weight: 700;
-  }
-}
-
-
-
-.yaml,
-.language-yaml {
+.language-yaml,
+.yaml {
   .meta {
     color: #D08770;
   }
@@ -735,9 +418,8 @@ blockquote pre {
   }
 }
 
-
-.toml,
-.language-toml {
+.language-toml,
+.toml {
   .meta {
     color: #D08770;
   }

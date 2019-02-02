@@ -1,0 +1,60 @@
+.hljs {
+  display: block;
+  overflow-x: hidden;
+  background: linear-gradient(#2d3555, #1d2036);
+  overflow-wrap: break-word;
+  margin: 0;
+  font-weight: 200;
+  line-height: 1.7;
+  padding: 0 25px 20px;
+  white-space: pre-wrap !important;
+  color: #d3dce0;
+  font-family: 'AFParseGroteskMono-Light';
+  @media(max-width: 600px) {
+    padding: 0 20px 20px;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  &::before {
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    position: relative;
+    width: 104%;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: -6%;
+    padding: 8px 40px;
+    font-family: 'AFParseGroteskMono-Bold';
+    font-size: 1.15em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    text-rendering: auto;
+    text-shadow: -2px 2px 1px rgba(0, 9, 46, 0.6) !important;
+    content: "Code Snippet";
+    opacity: 1;
+    background: none;
+    @media(max-width: 600px) {
+      width: -webkit-fill-available;
+      width: -moz-webkit-fill-available;
+      padding: 8px 0;
+      font-size: 1.4em;
+      margin: 0 auto;
+    }
+  }
+
+  * {
+    font-size: 14px;
+    margin: 0;
+    @media(max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+}
