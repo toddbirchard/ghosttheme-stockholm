@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   entry: {
-    'global': path.resolve(__dirname, './webpack/index.js'),
+    'global': path.resolve(__dirname, './webpack/global.js'),
     'posts': path.resolve(__dirname, './webpack/posts.js'),
     'pages': path.resolve(__dirname, './webpack/pages.js'),
     'apply': path.resolve(__dirname, './webpack/apply.js'),

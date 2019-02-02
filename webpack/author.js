@@ -1,4 +1,3 @@
-import '../src/less/global.less';
 import '../src/less/pages.less';
 import '../assets/js/includes/gh-profile-card.min.js'
 
