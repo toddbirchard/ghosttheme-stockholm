@@ -1,3 +1,3 @@
 import '../src/less/global.less';
-import '../src/js/main.js';
-import '../src/js/analytics.js'; 
+import '../src/js/global.js';
+import '../src/js/analytics.js';

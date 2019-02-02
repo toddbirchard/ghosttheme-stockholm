@@ -42,6 +42,15 @@ $(document).ready(function() {
         });
       });
     },
+    mergedTableCells: function() {
+      if ($('body').hasClass('post-template') == true) {
+        var rows = $('table').find('th').each(function() {
+          if ($(this).attr('rowspan')) {
+            $(this).css('border-bottom', '2px solid #f6f8fe');
+          }
+        });
+      }
+    },
     scrollableTables: function() {
       let tables = document.getElementsByClassName('tableContainer');
       for (let table of tables) {
