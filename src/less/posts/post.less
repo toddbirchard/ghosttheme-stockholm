@@ -865,18 +865,28 @@
 		width: 100%;
 		bottom: 0;
 		height: 80px;
-		background: linear-gradient(0,rgba(22, 24, 31, 1),rgba(43,52,77,0) 70.71%);
+		background: linear-gradient(0, #0d111d, rgba(20, 30, 57, 0) 70.71%);
 		z-index: 0;
 		display: none;
 		opacity: 1;
 		transition: all 0.4s ease-out;
+		 mix-blend-mode: hard-light;
 		@media(max-width: 600px) {
 			display: block;
 		}
 	}
 
-	.fullwidth {
+	.fullWidth {
 		margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
+	}
+
+	.bottomFade {
+		display: block;
+		width: 100%;
+		height: 60px;
+		bottom: 0;
+		background: linear-gradient(0deg, #0e2542, rgba(11, 33, 58, 0));
+		mix-blend-mode: hard-light;
 	}
 }
