@@ -1,2 +1,2 @@
-import '../src/less/pages.less';
+import '../src/less/apply.less';
 import '../src/js/applyform.js';
