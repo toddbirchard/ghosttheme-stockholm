@@ -16,6 +16,7 @@ module.exports = {
     'posts': path.resolve(__dirname, './webpack/posts.js'),
     'pages': path.resolve(__dirname, './webpack/pages.js'),
     'apply': path.resolve(__dirname, './webpack/apply.js'),
+    'author': path.resolve(__dirname, './webpack/author.js'),
     'resources': path.resolve(__dirname, './webpack/resources.js'),
   },
   output: {

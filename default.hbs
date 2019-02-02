@@ -27,6 +27,9 @@
 	{{^is "post,page"}}
 		<script src="{{asset "dist/global.js"}}"></script>
 	{{/is}}
+	{{is "author"}}
+		<script src="{{asset "dist/author.js"}}"></script>
+	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
