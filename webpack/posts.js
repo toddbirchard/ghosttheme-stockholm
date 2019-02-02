@@ -26,9 +26,10 @@ $(document).ready(function() {
         preContainer.css('padding', '64px 20px !important');
         preContainer.css('border-radius', '0');
         preContainer.addClass('fullWidth');
+        preContainer.find('.codeoverflow').remove();
         $(this).css('opacity', 0);
         preContainer.animate({
-          height: $(codeContainer).height() + 10
+          height: $(codeContainer).height() + 30
         }, 1000);
         $('html,body').animate({
           scrollTop: preContainer.position().top
@@ -67,7 +68,6 @@ $(document).ready(function() {
         var tablewidth = table.width()
         if ($(this).width() < tablewidth) {
           $(this).find('table').addClass('handscroller');
-          $(this).append('<div class="codeoverflow"></div>')
         }
       });
     }
