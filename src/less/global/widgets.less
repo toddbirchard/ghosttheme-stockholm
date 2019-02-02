@@ -430,9 +430,10 @@
 	}
 
 	.series {
-
-		.post-title svg:nth-of_type(2){
-			display: none;
+		.post-title > svg {
+			&:last-of-type{
+				display: none;
+			}
 		}
 		.seriesitem {
 			transition: all 0.2s ease-out;
