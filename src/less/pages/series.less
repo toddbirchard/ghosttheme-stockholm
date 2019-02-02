@@ -29,9 +29,9 @@
     position: relative;
     background: white;
     @media(max-width:800px) {
-      height: 100px !important;
+      height: fit-content;
       width: 100%;
-      margin-bottom: 15px !important;
+      max-width: 100%;
     }
 
     &:hover {
@@ -102,10 +102,10 @@
     justify-content: space-between;
     padding: 20px;
     border-bottom: solid 1px #dadada;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
 
     &:last-child {
-        border-bottom: none;
+      border-bottom: none;
     }
 
     .featured-media {
@@ -245,18 +245,18 @@
       }
     }
 
-    .post-card-image {
-      max-width: 220px;
-      height: auto;
-      margin: 0;
-      @media(max-width: 600px) {
-        max-width: -webkit-fill-available !important;
-        width: -webkit-fill-available !important;
-        min-width: 150px;
+    .imagewrapper {
+      height: fit-content;
+      display: block;
 
-        a {
-          display: block;
-          min-width: 150px;
+      .post-card-image {
+        max-width: 220px;
+        height: auto;
+        margin: 0;
+        @media(max-width: 600px) {
+          max-width: 200px;
+          height: auto;
+          margin: 0 10px 0 0;
         }
       }
     }

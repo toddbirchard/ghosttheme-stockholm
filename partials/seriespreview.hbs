@@ -1,8 +1,12 @@
-<a href="{{url}}">
+
   <article class="{{post_class}} series-article-preview">
+
     {{#if feature_image}}
+    <a class="imagewrapper" href="{{url}}">
       <img class="post-card-image" src="{{img_url feature_image}}">
+      </a>
     {{/if}}
+
     <div class="details">
       <div class="post-head">
         <h3 class="post-count">Post {{@number}}</h3>
@@ -32,4 +36,3 @@
       </div>
     </div>
   </article>
-</a>
