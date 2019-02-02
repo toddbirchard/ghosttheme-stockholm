@@ -27,7 +27,7 @@
 	{{^is "post,page"}}
 		<script src="{{asset "dist/global.js"}}"></script>
 	{{/is}}
-	{{is "author"}}
+	{{#is "author"}}
 		<script src="{{asset "dist/author.js"}}"></script>
 	{{/is}}
 	{{> analytics}}
