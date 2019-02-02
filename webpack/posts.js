@@ -1,4 +1,5 @@
 import '../src/less/posts.less';
+import hljs from 'highlight.js';
 import lightbox from 'lightbox2'
 import ScrollBooster from 'scrollbooster'
 
@@ -13,6 +14,7 @@ var postFunctions = {
         hljs.highlightBlock(block);
       });
     });
+    hljs.initHighlightingOnLoad();
   },
   fullScreen: function() {
     $('.post-content pre').each(function() {
