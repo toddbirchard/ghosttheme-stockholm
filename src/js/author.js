@@ -2,8 +2,9 @@ $(document).ready(function() {
 
   if ($('body').hasClass('author-template')) {
 
-    var meetup_key   = process.env.meetup_key;
+    var meetup_key = process.env.meetup_key;
     var medium_key = process.env.medium_key;
+    console.log('meetup_key = ' + meetup_key);
 
     function author_sidebar(docs) {
       if (docs[0]['website']) {
