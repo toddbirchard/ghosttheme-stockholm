@@ -527,6 +527,21 @@
 		}
 	}
 
+	ol {
+		counter-reset: my-awesome-counter;
+
+		li {
+		  counter-increment: my-awesome-counter;
+
+			&::before {
+			  content: counter(my-awesome-counter) ". ";
+			  color: darken(@theme-color, 20%);
+			  font-weight: bold;
+				display: inline-block;
+		}
+	}
+}
+
 	.protip {
 		background: rgba(255, 222, 196, 0.42);
 		padding: 0 30px 20px;
@@ -584,7 +599,7 @@
 		background: #e9f3f7;
 		color: #416e7d;
 		padding: 20px;
-		font-family: 'TTNorms-Medium',sans-serif;
+		font-family: 'TTNorms-Regular',sans-serif;
 		font-style: none;
 		font-size: 1em;
 		line-height: 1.6;
@@ -602,7 +617,7 @@
 		}
 
 		* {
-			font-family: 'TTNorms-Medium',sans-serif;
+			font-family: 'TTNorms-Regular',sans-serif;
 			font-weight: 500;
 			line-height: 1.6;
 			font-size: 0.96em;

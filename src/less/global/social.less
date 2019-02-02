@@ -44,7 +44,9 @@
 }
 
 .widget .social-btns .btn {
-  display: inline-block;
+  align-items: center;
+  justify-content: space-around;
+  display: inline-flex;
   background-color: #fff;
   width: 40px;
   height: 40px;
@@ -82,107 +84,89 @@
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
-
 .social-btns .btn .fa {
   font-size: 20px;
   vertical-align: middle;
 }
 
-.medium {
-  i {
-    color: lighten(@medium-color, 10%);
+.social-btns {
+  .medium {
+    i {
+      color: lighten(@medium-color, 10%);
+    }
+
+    &:hover {
+      background-color: lighten(@medium-color, 10%) !important;
+      color: white;
+    }
   }
 
-  &:hover {
-    background-color: lighten(@medium-color, 10%) !important;
-    color: white;
+  .facebook {
+    i {
+      color: lighten(@facebook-color, 20%);
+    }
+
+    &:hover {
+      background-color: lighten(@facebook-color, 20%) !important;
+      color: white;
+    }
+  }
+
+  .twitter {
+    i {
+      color: lighten(@twitter-color, 10%);
+    }
+
+    &:hover {
+      background-color: lighten(@twitter-color, 10%) !important;
+      color: white;
+    }
+  }
+
+  .google {
+    i {
+      color: lighten(@google-color, 10%);
+    }
+
+    &:hover {
+      background-color: lighten(@google-color, 10%) !important;
+      color: white;
+    }
+  }
+
+  .github {
+    i {
+      color: lighten(@github-color, 10%);
+    }
+
+    &:hover {
+      background-color: lighten(@github-color, 10%) !important;
+      color: white;
+    }
+  }
+
+  .tumblr {
+    i {
+      color: lighten(@tumblr-color, 20%);
+    }
+
+    &:hover {
+      background-color: lighten(@tumblr-color, 20%) !important;
+      color: white;
+    }
+  }
+
+  .rss {
+    i {
+      color: lighten(@rss-color, 20%);
+    }
+
+    &:hover {
+      background-color: lighten(@rss-color, 20%) !important;
+      color: white;
+    }
   }
 }
-
-
-.facebook {
-  i {
-    color: lighten(@facebook-color, 20%);
-  }
-
-  &:hover {
-    background-color: lighten(@facebook-color, 20%) !important;
-    color: white;
-  }
-}
-
-.twitter {
-  i {
-    color: lighten(@twitter-color, 10%);
-  }
-
-  &:hover {
-    background-color: lighten(@twitter-color, 10%) !important;
-    color: white;
-  }
-}
-
-
-.google {
-  i {
-    color: lighten(@google-color, 10%);
-  }
-
-  &:hover {
-    background-color: lighten(@google-color, 10%) !important;
-    color: white;
-  }
-}
-
-
-.github {
-  i {
-    color: lighten(@github-color, 10%);
-  }
-
-  &:hover {
-    background-color: lighten(@github-color, 10%) !important;
-    color: white;
-  }
-}
-
-.tumblr {
-  i {
-    color: lighten(@tumblr-color, 20%);
-  }
-
-  &:hover {
-    background-color: lighten(@tumblr-color, 20%) !important;
-    color: white;
-  }
-}
-
-.rss {
-  i {
-    color: lighten(@rss-color, 20%);
-  }
-
-  &:hover {
-    background-color: lighten(@rss-color, 20%) !important;
-    color: white;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 .facebook {
   i {
