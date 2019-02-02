@@ -1,5 +1,4 @@
 import '../src/less/posts.less';
-import hljs from 'highlight.js';
 import lightbox from 'lightbox2'
 import ScrollBooster from 'scrollbooster'
 
