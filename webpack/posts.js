@@ -23,11 +23,11 @@ $(document).ready(function() {
         var codeContainer = preContainer.find('code');
         preContainer.css('max-height', 'none');
         preContainer.css('padding', '64px 20px !important');
-        preContainer.css('margin-right', 'calc(-50vw + 50%) !important;');
-        preContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
+        preContainer.css('border-radius', '0');
+        preContainer.addClass('fullWidth');
         $(this).css('opacity', 0);
         preContainer.animate({
-          height: $(codeContainer).height()
+          height: $(codeContainer).height() + 10
         }, 1000);
         $('html,body').animate({
           scrollTop: preContainer.position().top
