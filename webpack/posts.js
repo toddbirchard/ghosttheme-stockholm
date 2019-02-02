@@ -5,39 +5,31 @@ import ScrollBooster from 'scrollbooster'
 $(document).ready(function() {
   var postFunctions = {
     codeHighlight: function() {
-      $('article pre').each(function() {
-        if ($(this).height() >= 400) {
-          $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
-        }
-      });
       hljs.configure({
         tabReplace: '  ', // 2 spaces
         classPrefix: '', // don't append class prefix
       });
-      //hljs.initHighlightingOnLoad();
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
+      hljs.initHighlightingOnLoad();
+    },
+    fullScreen: function(){
+      $('.post-content pre').each(function () {
         if ($(this).height() >= 400) {
-          var color = $(this).css('background');
-          $(this).parent().append('<div class="codeoverflow" style=""></div>');
+          $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
         }
       });
-
-      $('.fullscreenbtn').on('click', function(event) {
+      $('.fullscreenbtn').on('click', function (event) {
         var height = $(window).height();
         var codeContainer = $(this).closest('pre');
         codeContainer.css('max-height', 'none');
         codeContainer.css('padding', '64px 20px !important');
         codeContainer.css('margin-right', 'calc(-50vw + 50%) !important;');
         codeContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
-
-        $(this).closest('pre').find('.codeoverflow').css('opacity', '0');
         $(this).css('opacity', 0);
         codeContainer.animate({
-          //height: $(window).height()
+          height: $(window).height()
         }, 1000);
         $('html,body').animate({
-          scrollTop: codeContainer.position().top + 100
+          scrollTop: codeContainer.position().top
         });
       });
     },
