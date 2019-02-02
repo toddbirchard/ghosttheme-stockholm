@@ -2,9 +2,22 @@
 <script src="{{asset "/js/includes/retina.min.js"}}"></script>
 <!--<script src="{{asset "/js/lazy-load.min.js"}}"></script>-->
 {{#is "post"}}
-  
+
   {{#has author="Matt Alhonte"}}
     <script async src="{{asset "/js/previews.js"}}"></script>
   {{/has}}
+{{/is}}
+
+{{#is "post"}}
+  <script src="{{asset "/dist/posts.js"}}"></script>
+{{/is}}
+{{^is "home,post"}}
+  <script src="{{asset "/dist/pages.js"}}"></script>
+{{/is}}
+{{^is "post,page"}}
+  <script src="{{asset "dist/global.js"}}"></script>
+{{/is}}
+{{#is "author"}}
+  <script src="{{asset "dist/author.js"}}"></script>
 {{/is}}
 <!-- End Scripts -->

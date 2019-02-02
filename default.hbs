@@ -16,20 +16,10 @@
 	<script src="{{asset "dist/global.js"}}"></script>
 
 	{{#is "post"}}
-	<script src="{{asset "/js/includes/highlight.min.js"}}"></script>
+		<script src="{{asset "/js/includes/highlight.min.js"}}"></script>
 		<meta property="og:image" content="{{img_url feature_image}}">
-		<script src="{{asset "/dist/posts.js"}}"></script>
 	{{else}}
-		<meta property="og:image" content="{{@blog.cover_image}}"/>
-	{{/is}}
-	{{^is "home,post"}}
-		<script src="{{asset "/dist/pages.js"}}"></script>
-	{{/is}}
-	{{^is "post,page"}}
-		<script src="{{asset "dist/global.js"}}"></script>
-	{{/is}}
-	{{#is "author"}}
-		<script src="{{asset "dist/author.js"}}"></script>
+	  <meta property="og:image" content="{{@blog.cover_image}}"/>
 	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
