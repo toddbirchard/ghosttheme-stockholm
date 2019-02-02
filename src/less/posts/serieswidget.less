@@ -50,8 +50,9 @@
 
       &::before {
         content: "Part " counter(step-counter, upper-roman) ". ";
-        font-family: 'TTNorms-Bold';
         color: #597d87;
+        font-family: 'TTNorms-Medium' !important;
+        margin-right: 8px;
 
         @media(max-width: 600px) {
           min-width: 60px;
