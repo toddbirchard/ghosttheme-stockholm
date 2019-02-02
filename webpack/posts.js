@@ -9,6 +9,8 @@ import ini from 'highlight.js/lib/languages/ini';
 import yaml from 'highlight.js/lib/languages/yaml';
 import handlebars from 'highlight.js/lib/languages/handlebars';
 import less from 'highlight.js/lib/languages/less';
+import xml from 'highlight.js/lib/languages/xml';
+import bash from 'highlight.js/lib/languages/bash';
 import lightbox from 'lightbox2'
 import ScrollBooster from 'scrollbooster'
 
@@ -19,6 +21,8 @@ hljs.registerLanguage('sql', sql);
 hljs.registerLanguage('json', json);
 hljs.registerLanguage('ini', ini);
 hljs.registerLanguage('yaml', yaml);
+hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.initHighlightingOnLoad();

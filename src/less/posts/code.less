@@ -128,97 +128,6 @@ blockquote pre {
     width: 110%;
   }
 
-  .hljs.vim {
-    .hljs {
-      display: block;
-      overflow-x: auto;
-      padding: 0.5em;
-      color: #abb2bf;
-      background: #282c34;
-    }
-
-    .comment,
-    .quote {
-      color: #5c6370;
-      font-style: italic;
-    }
-
-    .doctag,
-    .formula,
-    .keyword {
-      color: #c678dd;
-    }
-
-    .deletion,
-    .name,
-    .section,
-    .selector-tag,
-    .subst {
-      color: #e06c75;
-    }
-
-    .literal {
-      color: #56b6c2;
-    }
-
-    .addition,
-    .attribute,
-    .meta-string,
-    .regexp,
-    .string {
-      color: #98c379;
-    }
-
-    .built_in,
-    .class .title {
-      color: #e6c07b;
-    }
-
-    .attr,
-    .number,
-    .selector-attr,
-    .selector-class,
-    .selector-pseudo,
-    .template-variable,
-    .type,
-    .variable {
-      color: #d19a66;
-    }
-
-    .bullet,
-    .link,
-    .meta,
-    .selector-id,
-    .symbol,
-    .title {
-      color: #61aeee;
-    }
-
-    .emphasis {
-      font-style: italic;
-    }
-
-    .strong {
-      font-weight: bold;
-    }
-
-    .link {
-      text-decoration: underline;
-    }
-
-    &::before {
-      margin-bottom: 0;
-      width: 110%;
-      height: auto;
-      content: "Vim";
-      display: block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      position: relative;
-    }
-  }
 
   .hljs.ini,
   .language-ini {
@@ -287,12 +196,39 @@ blockquote pre {
   .language-xml {
     &::before {
       content: "XML" !important;
+      width: -webkit-fill-available;
+      height: auto;
+      margin: auto;
+      color: white;
+      display: block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      padding: 7px 0 5px;
+      font-family: 'AFParseGroteskMono-Bold';
+      font-size: 1.15em;
     }
   }
 
   .language-css {
     &::before {
       content: "CSS" !important;
+      margin-bottom: 0;
+      width: -webkit-fill-available;
+      height: auto;
+      margin: auto;
+      color: white;
+      display: block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      padding: 7px 0 5px;
+      font-family: 'AFParseGroteskMono-Bold';
+      font-size: 1.15em;
     }
   }
 
