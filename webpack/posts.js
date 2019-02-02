@@ -1,7 +1,7 @@
 import '../src/less/global.less';
 import '../src/less/posts.less';
-import '../assets/js/lightbox.js';
-import '../assets/js/scrollbooster.min.js';
+import lightbox from 'lightbox2'
+import ScrollBooster from 'scrollbooster'
 
 $(document).ready(function() {
   var postFunctions = {

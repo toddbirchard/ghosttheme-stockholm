@@ -2,6 +2,9 @@ $(document).ready(function() {
 
   if ($('body').hasClass('author-template')) {
 
+    var meetup_key   = process.env.meetup_key;
+    var medium_key = process.env.medium_key;
+
     function author_sidebar(docs) {
       if (docs[0]['website']) {
         $.ajax({

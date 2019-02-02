@@ -19,11 +19,7 @@ $(document).ready(function() {
         "landingpage": document.referrer
     });
   }
-
-/* dbip.getVisitorInfo().then(function(info) {
-    showVisitorInfo(info);
-  }); */
-
+  
     $('.social-btns .btn').each(function(index, element) {
       $(this).on('click', function(){
         mixpanel.track_links(this, "visited " + $(this).attr('name'), {
