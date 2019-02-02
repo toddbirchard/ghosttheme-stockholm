@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	<script src="{{asset "dist/global.js"}}"></script>
+
 
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
@@ -23,6 +23,9 @@
 	{{/is}}
 	{{^is "home,post"}}
 		<script src="{{asset "/dist/pages.js"}}"></script>
+	{{/is}}
+	{{^is "post,page"}}
+		<script src="{{asset "dist/global.js"}}"></script>
 	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}

@@ -1,0 +1,49 @@
+{{!< default}}
+<!DOCTYPE html>
+<html lang="{{lang}}" class="transactional">
+
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+	<style>
+		.container {
+			background: white;
+			padding: 20px 40px;
+			margin: 40px;
+			box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+			width: 80% !important;
+			margin:auto;
+		}
+
+		h1 {
+			font-family: 'ProductSans-Regular' !important;
+		}
+
+		a,
+		p {
+			font-family: 'TTNorms-Medium' !important;
+		}
+	</style>
+</head>
+
+<body class="transactional">
+	<!-- start site's main content area -->
+	{{#post}}
+	<section>
+		<div class="container">
+			<!-- start post -->
+			<h1 class="post-title">{{{title}}}</h1>
+			{{{body}}}
+		</div>
+		<!-- end main post area -->
+	</section>
+	{{/post}}
+</body>
+</html>
+<!-- end site's main content area -->
