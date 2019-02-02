@@ -19,17 +19,18 @@ $(document).ready(function() {
       });
       $('.fullscreenbtn').on('click', function (event) {
         var height = $(window).height();
-        var codeContainer = $(this).closest('pre');
-        codeContainer.css('max-height', 'none');
-        codeContainer.css('padding', '64px 20px !important');
-        codeContainer.css('margin-right', 'calc(-50vw + 50%) !important;');
-        codeContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
+        var preContainer = $(this).closest('pre');
+        var codeContainer = preContainer.find('code');
+        preContainer.css('max-height', 'none');
+        preContainer.css('padding', '64px 20px !important');
+        preContainer.css('margin-right', 'calc(-50vw + 50%) !important;');
+        preContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
         $(this).css('opacity', 0);
-        codeContainer.animate({
-          height: $(this).height()
+        preContainer.animate({
+          height: $(codeContainer).height()
         }, 1000);
         $('html,body').animate({
-          scrollTop: codeContainer.position().top
+          scrollTop: preContainer.position().top
         });
       });
     },
