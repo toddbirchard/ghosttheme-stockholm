@@ -3,6 +3,8 @@ import GhostSearch from 'ghost-search'
 
 $(document).ready(function() {
   let ghostSearch = new GhostSearch({
+    key: 'b1a7c274fc24aa798ec464497b', // This is just a demo key. Replace the key with a real one. See Step 3.
+    host: 'https://hackersandslackers.com',
     input: '#my-custom-input',
     results: '#my-custom-results',
     options: {
