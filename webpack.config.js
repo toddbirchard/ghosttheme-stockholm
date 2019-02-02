@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
+var autoprefixer = require('autoprefixer');
+var precss       = require('precss');
+
 
 
 module.exports = {
@@ -26,7 +29,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+      { test: /\.less$/, use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'] },
+      { test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] },
       { test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/, use: [ { loader: 'file-loader', options: { name: './assets/fonts/[name].[ext]', publicPath: '/', } } ] },
       { test: /\.m?js$/, exclude: /(node_modules|bower_components)/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } }
     ]

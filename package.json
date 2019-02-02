@@ -55,12 +55,10 @@
     }
   },
   "postcss": {
-    "parser": "sugarss",
-    "map": false,
-    "plugins": {
-      "postcss-plugin": {}
-    }
-  },
+  "plugins": {
+    "autoprefixer": {}
+  }
+},
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.2.0",
@@ -100,6 +98,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "postcss-less": "^3.1.2",
     "postcss-load-config": "^2.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-plugin": "^1.0.0",
