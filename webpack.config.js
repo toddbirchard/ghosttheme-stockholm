@@ -4,6 +4,7 @@ const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
 
 
 module.exports = {
+  mode: 'production',
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
