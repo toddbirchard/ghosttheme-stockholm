@@ -1,5 +1,5 @@
 import '../src/less/pages.less';
-import GhostSearch from 'ghost-search'
+import '../assets/js/includes/ghost-search.min.js';
 
 $(document).ready(function() {
   let ghostSearch = new GhostSearch({
