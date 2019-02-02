@@ -28,9 +28,9 @@ $(document).ready(function() {
         preContainer.addClass('fullWidth');
         preContainer.find('.codeoverflow').remove();
         $(this).css('opacity', 0);
-        preContainer.animate({
+        /*preContainer.animate({
           height: $(codeContainer).height() + 30
-        }, 1000);
+        }, 1000);*/
         $('html,body').animate({
           scrollTop: preContainer.position().top
         });
