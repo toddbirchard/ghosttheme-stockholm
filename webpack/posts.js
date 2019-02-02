@@ -26,7 +26,7 @@ $(document).ready(function() {
         codeContainer.css('margin-left', 'calc(-50vw + 50%) !important;');
         $(this).css('opacity', 0);
         codeContainer.animate({
-          height: $(window).height()
+          height: $(this).height()
         }, 1000);
         $('html,body').animate({
           scrollTop: codeContainer.position().top
@@ -45,16 +45,18 @@ $(document).ready(function() {
     scrollableTables: function() {
       let tables = document.getElementsByClassName('tableContainer');
       for (let table of tables) {
-        let scrollEl = table.querySelector('tbody');
-        let scr = new ScrollBooster({
+        let content = table.querySelector('tbody');
+        let sb = new ScrollBooster({
           viewport: table,
+          content: content,
+          handle: content,
           emulateScroll: false,
           mode: 'x',
           bounce: true,
           bounceForce: .1,
           onUpdate: (data) => {
             // your scroll logic goes here
-            scrollEl.style.transform = `translateX(${ - data.position.x}px)`
+            content.style.transform = `translateX(${ - data.position.x}px)`
           }
         });
       }
