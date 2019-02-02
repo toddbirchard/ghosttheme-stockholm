@@ -1,3 +1,6 @@
+import '../assets/js/includes/swiper.min.js';
+import '../src/less/projects.less'
+
 $(document).ready(function() {
 
     function populateCards(cards, status) {
