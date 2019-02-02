@@ -8,7 +8,11 @@ var postFunctions = {
       tabReplace: '  ', // 2 spaces
       classPrefix: '', // don't append class prefix
     });
-    hljs.initHighlightingOnLoad();
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
   },
   fullScreen: function() {
     $('.post-content pre').each(function() {
