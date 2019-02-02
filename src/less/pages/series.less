@@ -28,10 +28,10 @@
   .series-article-preview {
     position: relative;
     background: white;
+    max-width: -webkit-fill-available;
     @media(max-width:800px) {
       height: fit-content;
       width: 100%;
-      max-width: 100%;
     }
 
     &:hover {
@@ -186,6 +186,7 @@
           @media(max-width: 600px) {
             width: -webkit-fill-available;
             overflow: hidden;
+            line-height: 1;
           }
         }
 
@@ -254,9 +255,12 @@
         height: auto;
         margin: 0;
         @media(max-width: 600px) {
-          max-width: 200px;
+            max-width: 200px;
+        }
+        @media(max-width: 600px) {
+          max-width: 120px;
           height: auto;
-          margin: 0 10px 0 0;
+          margin: 0;
         }
       }
     }
