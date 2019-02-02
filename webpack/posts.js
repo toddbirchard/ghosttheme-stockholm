@@ -15,7 +15,7 @@ $(document).ready(function() {
       $('.post-content pre').each(function () {
         if ($(this).height() >= 400) {
           $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
-          $(this).append('<div class="bottomFade"></div>');
+          $(this).append('<div class="codeoverflow"></div>');
         }
       });
       $('.fullscreenbtn').on('click', function (event) {
