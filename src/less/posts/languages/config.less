@@ -12,6 +12,12 @@
   overflow-x: auto;
   background: #2E3440 !important;
 
+  &::before{
+    @media(max-width: 600px) {
+       font-size: 1.2em !important;
+     }
+  }
+
   .hljs,
   .subst {
     color: #D8DEE9;
