@@ -1,6 +1,6 @@
 import '../src/less/global.less';
 import '../src/js/analytics.js';
-
+import '../assets/js/includes/retina.min.js'
 
 
 /*====================================================

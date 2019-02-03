@@ -143,9 +143,10 @@ $(document).ready(function() {
       });
     }
 
+  MakeSwiper();
   BacklogCards();
   TodoCards();
   ProgressCards();
   DoneCards();
-  MakeSwiper();
+
 });

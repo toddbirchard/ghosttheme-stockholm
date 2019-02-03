@@ -71,7 +71,7 @@ $(document).ready(function() {
     }
 
     function MakeSwiper() {
-      var swiper = new Swiper('.swiper-container', {
+      var swiper = new Swiper('.swiper-wrapper', {
         height: 1000,
         noSwiping: true,
         spaceBetween: 5,
