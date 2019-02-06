@@ -8,8 +8,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "develop": "webpack -d --mode development",
-    "build": "webpack --mode production",
-    "build-prod": "webpack -p --mode production"
+    "build": "webpack --mode production"
   },
   "presets": [
     "env"
@@ -23,7 +22,8 @@
     "ghost-theme",
     "blog theme",
     "nodejs",
-    "hackers"
+    "datascience",
+    "dataengineering"
   ],
   "engines": {
     "node": "v10.15.0",
