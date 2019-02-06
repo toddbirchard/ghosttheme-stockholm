@@ -35,7 +35,7 @@ var postFunctions = {
     });
     hljs.initHighlightingOnLoad();
   },
-  fullScreen: function() {
+  codeSnippetFullScreen: function() {
     $('.post-content pre').each(function() {
       if ($(this).height() >= 400) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
@@ -93,14 +93,28 @@ var postFunctions = {
       }
     });
   },
-  postinit: function() {
+  enableLightbox: function() {
+    $('.post-content img').each(function(obj){
+      var imagesrc = $(this).attr('src');
+      var caption = $(this).closest('figure').find('figcaption').text();
+      $(this).wrap('<a href="' + imagesrc + '" data-lightbox="' + caption + '"></a>');
+    });
+  },
+  addImageAltTags: function() {
+    $('.post-content img').each(function(obj){
+      var caption = $(this).closest('figure').find('figcaption').text();
+      $(this).attr('alt', caption);
+    });
+  },
+  postInit: function() {
     postFunctions.codeHighlight();
-    //themeApp.postLinkPreviews();
-    postFunctions.fullScreen();
+    postFunctions.codeSnippetFullScreen();
     postFunctions.scrollableTables();
+    postFunctions.enableLightbox();
+    postFunctions.addImageAltTags();
   }
 }
 
 $(document).ready(function() {
-  postFunctions.postinit();
+  postFunctions.postInit();
 });
