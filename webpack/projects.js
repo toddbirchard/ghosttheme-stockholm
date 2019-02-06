@@ -20,9 +20,9 @@ $(document).ready(function() {
     function BacklogCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.Backlog&issuetype=neq.Epic&limit=6&order_by=updated.desc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.Backlog&issuetype=neq.Epic&limit=6&order_by=rank.asc",
         headers: {
-          client_id: "115000",
+          client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
         },
         contentType: 'application/json'
@@ -34,9 +34,9 @@ $(document).ready(function() {
     function TodoCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%20Do&issuetype=neq.Epic&limit=6&order_by=updated.desc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%20Do&issuetype=neq.Epic&limit=6&order_by=rank.asc",
         headers: {
-          client_id: "115000",
+          client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
         },
         contentType: 'application/json'
@@ -48,9 +48,9 @@ $(document).ready(function() {
     function ProgressCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.In%20Progress&issuetype=neq.Epic&limit=6&order_by=updated.desc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.In%20Progress&issuetype=neq.Epic&limit=6&order_by=rank.asc",
         headers: {
-          client_id: "115000",
+          client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
         },
         contentType: 'application/json'
@@ -62,9 +62,9 @@ $(document).ready(function() {
     function DoneCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done&issuetype=neq.Epic&limit=6&order_by=updated.desc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done&issuetype=neq.Epic&limit=6&order_by=rank.asc",
         headers: {
-          client_id: "115000",
+          client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
         },
         contentType: 'application/json'
