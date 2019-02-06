@@ -53,6 +53,7 @@
 			&:hover {
 				background: rgba(64, 206, 199, 0.16);
 				border-color: #82d3d0;
+				cursor: text;
 
 				&::placeholder {
 					color: #72859d;
@@ -346,6 +347,7 @@
 				&:hover {
 					background: rgba(64, 206, 199, 0.16);
 					border-color: #82d3d0;
+					cursor: text;
 
 					&::placeholder {
 						color: #72859d;
@@ -377,7 +379,21 @@
 				}
 			}
 
-			input[name=username] {
+			input[name=name] {
+				&:hover {
+					background: rgba(64, 206, 199, 0.16);
+					border-color: #82d3d0;
+					cursor: text;
+
+					&::placeholder {
+						color: #72859d;
+					}
+
+					&::after {
+						color: #8aafb8;
+					}
+				}
+
 				&:after {
 					content: '\f0e0';
 					font-family: "Font Awesome 5 Pro";
@@ -430,7 +446,7 @@
 	}
 
 	.series {
-		
+
 		.seriesitem {
 			transition: all 0.2s ease-out;
 			border-bottom: 1px solid #d5dde8;

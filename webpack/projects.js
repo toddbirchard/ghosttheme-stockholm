@@ -34,7 +34,7 @@ $(document).ready(function() {
     function TodoCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%Do&limit=6&order_by=rank.asc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%20Do&limit=6&order_by=rank.asc",
         headers: {
           client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
