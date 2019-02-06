@@ -330,7 +330,6 @@
 				border: 0;
 				border-radius: 3px;
 				background: #fff;
-				color: #fff;
 				font-size: 13px;
 				font-weight: 200;
 				letter-spacing: 1px;
@@ -360,6 +359,7 @@
 			}
 
 			input[type=email] {
+
 				&:after {
 					content: '\f0e0';
 					font-family: "Font Awesome 5 Pro";
@@ -380,6 +380,11 @@
 			}
 
 			input[name=name] {
+				&::placeholder {
+					opacity: 1;
+					color: #828294;
+				}
+				
 				&:hover {
 					background: rgba(64, 206, 199, 0.16) !important;
 					border-color: #82d3d0 !important;
