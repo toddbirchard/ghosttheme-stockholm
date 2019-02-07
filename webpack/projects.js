@@ -27,6 +27,7 @@ $(document).ready(function() {
         infinite: false,
         arrows: false,
         dots: true,
+        cssEase: 'ease-out',
         responsive: [
           {
             breakpoint: 800,
@@ -35,7 +36,6 @@ $(document).ready(function() {
               centerPadding: '10px',
               slidesToShow: 3,
               swipeToSlide: true,
-              edgeFriction: .3
             }
           }, {
             breakpoint: 700,
@@ -61,6 +61,8 @@ $(document).ready(function() {
   function populate_jira_cards(table_name) {
     $('.cards').remove('.card');
     $('.card').remove();
+    $('.overlay').css('display', 'none');
+    $('.picker ul').css('display', 'none');
     function BacklogCards(table_name) {
       $.ajax({
         method: "GET",
