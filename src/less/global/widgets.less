@@ -10,26 +10,28 @@
 	.search {
 		position: relative;
 
-		&::after {
-			content: '\f002';
-			font-family: "Font Awesome 5 Pro";
-			font-weight: 400;
-			display: inline-block;
-			font-style: normal;
-			-webkit-font-feature-settings: normal;
-			font-feature-settings: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			-webkit-font-smoothing: antialiased;
-			right: 17px;
-			top: 23px;
-			position: absolute;
-			color: #aeb4cc;
-			font-size: 1.2em;
+		.form-group {
+			&::after {
+				content: '\f002';
+				font-family: "Font Awesome 5 Pro";
+				font-weight: 400;
+				display: inline-block;
+				font-style: normal;
+				-webkit-font-feature-settings: normal;
+				font-feature-settings: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				right: 33px;
+				top: 70px;
+				position: absolute;
+				color: #aeb4cc;
+				font-size: 1.2em;
+			}
 		}
 
 		#my-custom-input {
-			box-shadow: 0 0 5px rgba(65,67,144,.15);
+			/*box-shadow: 0 0 5px rgba(65,67,144,.15);*/
 			background: white;
 			align-items: center;
 			padding: 17px 5%;
@@ -42,7 +44,7 @@
 			transition: 0.3s all;
 			outline: 0;
 			-webkit-appearance: none;
-			border: 1px solid #eaeaea;
+			border: 1px solid #dddddd;
 			border-radius: 2px;
 
 			&::placeholder {
@@ -277,9 +279,11 @@
 		margin-right: 30px!important;
 		width: -webkit-fill-available;
 		width: -moz-available;
+		background: white;
+		padding: 20px 25px 25px;
+		box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 
 		&:first-of-type {
-			padding-top: 0;
 			margin-right: 0;
 		}
 
@@ -669,15 +673,15 @@
 
 	p {
 		margin: 0;
-		font-size: 1em;
-		line-height: 1.8;
+		font-size: .9em;
+		line-height: 1.7;
 		padding-right: 0;
-		font-family: 'TTNorms-Medium',sans-serif;
+		font-family: 'TTNorms-Regular', sans-serif;
 	}
 }
 
 .widget {
-	margin-bottom: 45px;
+	margin-bottom: 30px;
 	margin-top: 0;
 
 	.post-title {
@@ -694,23 +698,24 @@
 	}
 
 	h1 {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		text-transform: uppercase;
-		font-size: 1.5em;
-		font-family: 'ProductSans-Medium',TTNorms-Medium,serif;
+		font-size: 1.2em;
+		font-family: 'ProductSans-Medium', TTNorms-Medium, serif;
 		color: @header-color;
 		font-weight: 500;
 	}
 
 	.sidebar-title,
 	.title {
-		font-size: 1.32em;
+		font-size: 1.2em;
 		font-weight: 500;
 		margin-bottom: 8px;
 		text-transform: uppercase;
 		font-family: 'TTNorms-Medium',TTNorms-Medium,serif;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		color: #1f5373;
+		margin-top: 0;
 	}
 
 	.google-plus {
@@ -813,7 +818,8 @@
 		.news-description {
 			margin: 15px 0 20px;
 			font-size: 0.9em;
-			line-height: 1.8;
+			line-height: 1.5;
+			font-family: 'TTNorms-Regular', sans-serif;
 		}
 
 		.form-group {
