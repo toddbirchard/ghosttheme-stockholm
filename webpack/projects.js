@@ -129,8 +129,12 @@ $(document).ready(function() {
     populate_jira_cards('ghosttheme_tokyo');
   });
 
-
   $('#jupyter').on('click', function(obj){
     populate_jira_cards('planetjupyter');
+  });
+
+
+  $('.mobilemenu').on('click', function (obj){
+    $(this).find('ul').attr('display', 'block')
   });
 });
