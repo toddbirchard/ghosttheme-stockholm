@@ -2,7 +2,7 @@
 @import "mixin.less";
 
 .post-preview {
-	padding: 25px !important;
+	padding: 25px;
 	box-shadow: @shadow-color;
 	margin-bottom: 40px;
 	background: white;
@@ -11,7 +11,8 @@
 		margin-bottom: 30px;
 	}
 	@media(max-width:600px) {
-		margin-bottom: 25px;
+		margin-bottom: 20px;
+		padding: 10px 10px 15px;
 
 		&:hover {
 			cursor: pointer !important;
@@ -89,6 +90,7 @@
 		}
 		@media(max-width: 600px) {
 			max-height: 210px !important;
+			margin: 0 auto 10px;
 		}
 
 		.post-card-image {
@@ -310,6 +312,7 @@
 					margin: 0;
 					max-height: 33px;
 					padding: 4px 12px;
+					background: none !important;
 
 					span {
 						font-size: 13px;
