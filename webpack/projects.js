@@ -72,77 +72,47 @@ $(document).ready(function() {
       });
     }
 
-    function MakeSwiper() {
-      var swiper = new Swiper('.swiper-container', {
-        height: 1000,
-        noSwiping: true,
-        spaceBetween: 0,
-        centeredSlides: false,
-        slidesPerView: 4,
-        grabCursor: false,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets'
-        },
-        breakpoints: {
-          // when window width is <= 320px
-          1000: {
-            slidesPerView: 2,
-            noSwiping: false,
-            grabCursor: true,
-            initialSlide: 0,
-            centeredSlides: false
+    function MakeSlick() {
+      $('#kanban').slick({
+        centerMode: false,
+        centerPadding: '5px',
+        slidesToShow: 4,
+        variableWidth: false,
+        infinite: false,
+        arrows: false,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 800,
+            settings: {
+              centerMode: false,
+              centerPadding: '10px',
+              slidesToShow: 3,
+              swipeToSlide: true,
+              edgeFriction: .3
+            }
+          }, {
+            breakpoint: 700,
+            settings: {
+              centerMode: false,
+              centerPadding: '20px',
+              slidesToShow: 2,
+            }
           },
-          800: {
-            slidesPerView: 2,
-            noSwiping: false,
-            grabCursor: true,
-            //slidesOffsetBefore: 20,
-            //slidesOffsetAfter: 20,
-          },
-          600: {
-            slidesPerView: 1,
-            noSwiping: false,
-            slidesPerColumnFill: 'column',
-            grabCursor: true,
-            centerInsufficientSlides: true,
-            centeredSlides: true
-            //slidesOffsetBefore: 20,
-            //slidesOffsetAfter: 20,
-          },
-          400: {
-            slidesPerView: 1,
-            noSwiping: false,
-            slidesPerColumnFill: 'column',
-            grabCursor: true,
-            //slidesOffsetBefore: 20,
-            //slidesOffsetAfter: 20,
+          {
+            breakpoint: 500,
+            settings: {
+              centerMode: true,
+              centerPadding: '30px',
+              slidesToShow: 1,
+              edgeFriction: .3
+            }
           }
-        }
-      });
-
-      swiper.pagination.render();
-      swiper.on('resize', function() {
-        swiper.slideTo(0, 300, false);
-
-        swiper.pagination.update();
-        if ($(window).width() < 600) {
-          swiper.centeredSlides = true;
-        }
-      });
-
-      swiper.on('slideChange', function() {
-        if ($(window).width() < 600) {
-          swiper.centeredSlides = true;
-          swiper.spaceBetween = 0;
-          swiper.normalizeSlideIndex = true;
-          swiper.updateSize();
-          swiper.updateSlides();
-        }
+        ]
       });
     }
 
-  MakeSwiper();
+  MakeSlick();
   BacklogCards();
   TodoCards();
   ProgressCards();
