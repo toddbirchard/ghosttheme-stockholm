@@ -6,8 +6,38 @@
     display: none;
   }
 
+  .container {
+    display: block;
+  }
+
+  .main-content {
+    width: 100%;
+    box-shadow: 0 0 5px rgba(65,67,144,.15);
+    background: white;
+    padding: 3px 30px 20px;
+    width: auto;
+  }
+
+  h3 {
+    font-family: 'TTNorms-Regular',sans-serif;
+    margin-bottom: 0;
+    font-size: 1.4em;
+  }
+
   .swiper-wrapper {
     width: 99.9%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @media(max-width: 1000px) {
+      display:block;
+    }
+
+    @media(max-width:600px){
+      width: 410%;
+    }
   }
 
   .swiper-pagination {
@@ -38,6 +68,7 @@
 
   .container {
     max-width: 1100px;
+    display: block;
     @media(max-width: 1000px) {
       width: 100%;
       max-width: auto;
@@ -105,21 +136,21 @@
     }
   }
 
-  .kanbancontainer {
+  .swiper-container {
     margin-bottom: 20px;
-    width: 99.5%;
+    width: 100%;
     display: block;
     overflow: hidden;
+    height: 800px;
+
     @media(max-width: 800px) {
       margin-bottom: 0;
     }
-  }
 
-  .kanban {
-    display: flex;
-    justify-content: space-between;
-    background: none;
-    margin-top: 30px;
+    @media(max-width: 600px) {
+      width: 90%;
+      margin: auto;
+    }
 
     .column {
       background: #fff;
@@ -127,14 +158,18 @@
       position: relative;
       margin-bottom: 7px;
       height: auto;
-      min-width: 23%;
+      max-width: 24.5%;
       border-radius: 5px;
       box-shadow: 2px 3px 4px rgba(58, 59, 103, 0.1);
       overflow: hidden;
+      display: inline-block;
+      height: -webkit-fill-available;
+      @media(max-width:1000px) {
+        max-width: 49%;
+      }
       @media(max-width:600px) {
-        margin: 0 5% 50px!important !important;
-        max-width: 90% !important;
-        width: 90% !important;
+        margin: 0 !important;
+        max-width: 24.2% !important;
       }
 
       &:last-child {
@@ -267,7 +302,7 @@
             font-family: 'TTNorms-Regular';
             color: #3c3d46;
             margin: 2px 0 20px;
-            width: 99%;
+            width: 97%;
           }
 
           p {
@@ -382,17 +417,19 @@
               text-align: center;
               display: flex;
               align-items: center;
+              padding: 0 5px;
 
               i {
                 opacity: .7;
               }
 
               span {
-                color: #7e7e7e;
-                font-size: 12px;
-                font-family: 'TTNorms-Medium';
-                margin-right: 7px;
+                color: #42526E;
+                font-size: 11px;
+                font-family: 'TTNorms-Regular';
+                margin-right: 0;
                 line-height: 1;
+                opacity: .8;
               }
             }
           }

@@ -1,5 +1,4 @@
-import '../assets/js/includes/swiper.min.js';
-import '../src/less/projects.less'
+import '../src/less/projects.less';
 
 $(document).ready(function() {
 
@@ -12,7 +11,7 @@ $(document).ready(function() {
         '<div class="left"> \n' + '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
         '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
         '</div> \n' +
-        '<div class="epic ' + cards[i].epic_name + '"><span>' + cards[i].epic_name + '</span> <i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i></div> \n' +
+        '<div class="epic ' + cards[i].epic_name + '" style=background-color:' + cards[i].epic_color + '50;><span>' + cards[i].epic_name + '</span></div> \n' +
         '</div> \n' + '</div>');
       }
     }
@@ -62,7 +61,7 @@ $(document).ready(function() {
     function DoneCards() {
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done&limit=6&order_by=rank.asc",
+        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done&limit=6&order_by=updated.desc",
         headers: {
           client_id: 115000,
           access_token: "qWLp79NWuDtVxom5v6_h_g"
@@ -77,7 +76,7 @@ $(document).ready(function() {
       var swiper = new Swiper('.swiper-container', {
         height: 1000,
         noSwiping: true,
-        spaceBetween: 5,
+        spaceBetween: 0,
         centeredSlides: false,
         slidesPerView: 4,
         grabCursor: false,

@@ -98,16 +98,6 @@
 				line-height: 1;
 				box-shadow: 0 0 8px rgba(93, 97, 140, 0.42);
 			}
-
-			a {
-				transition: opacity 0.2s ease-out;
-				color: @theme-color;
-
-				&:hover {
-					opacity: 0.8;
-					cursor: pointer;
-				}
-			}
 		}
 	}
 
@@ -234,60 +224,7 @@
 		display: none;
 	}
 
-	.post-roundup-blurb {
-		padding: 10px 40px;
-		background: 0 0;
-		border-top: 0;
-		margin: 30px 60px 60px;
-		width: auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		min-height: 50px;
-		border-bottom: 0;
-		border-left: 5px solid #c8dec8;
-		background: #ecf1ec;
-		border-radius: 5px;
-		@media(max-width: 800px) {
-			margin: 30px 35px 60px;
-		}
-		@media(max-width: 600px) {
-			padding: 15px 20px;
-			margin: 25px 30px 30px;
-			width: auto;
-		}
 
-		p {
-			margin: 0 !important;
-			color: #9dc29f;
-			line-height: 1.4 !important;
-			text-align: left;
-		}
-
-		i {
-			font-size: 37px;
-			margin-right: 25px;
-			color: #9dc29f;
-		}
-
-		.blurb-icon {
-			background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/flask-icon.png");
-			height: 55px;
-			width: 55px;
-			min-width: 55px;
-			margin-right: 25px;
-			background-size: cover;
-			display: inline-block;
-			@media(max-width: 800px) {
-				margin-right: 15px;
-			}
-			@media(max-width: 600px) {
-				height: 65px;
-				min-width: 65px;
-				display: none;
-			}
-		}
-	}
 
 	p {
 		margin: 0 0 25px 0;
@@ -487,8 +424,6 @@
 	}
 }
 
-
-
 .post {
 	padding: 0;
 	background: @white;
@@ -559,6 +494,7 @@
 	}
 }
 
+  /*   Start of Protip box */
 	.protip {
 		background: rgba(255, 222, 196, 0.42);
 		padding: 0 30px 20px;
@@ -610,7 +546,11 @@
 			color: #6f4e11;
 		}
 	}
+ /*  End of Protip box  */
 
+
+
+	/*  Start of Blockqoute  */
 	blockquote {
 		border-left: 4px solid #C9DEE2;
 		background: #e9f3f7;
@@ -655,7 +595,10 @@
 			margin: 20px auto;
 		}
 	}
+	/*     End of Blockqoute    */
 
+
+	/*     Start of Figcaption    */
 	figcaption {
 		width: -webkit-fill-available;
 		width: -moz-available;
@@ -700,6 +643,7 @@
 		}
 	}
 }
+/*  End of Blockqoute */
 
 .post-template {
 	hr {
@@ -764,149 +708,6 @@
 		&:hover {
 			color: @hover-color;
 		}
-	}
-
-	.about-author {
-		background: @white;
-		padding: 40px 60px;
-		margin: 1px 0;
-		min-height: 85px;
-		box-shadow: 0 0 5px rgba(80,82,204,.1)!important;
-		display: flex;
-		justify-content: space-between;
-		@media(max-width: 600px) {
-			padding: 30px;
-		}
-
-		.avatar {
-			width: 90px;
-			height: 90px;
-			min-width: 90px;
-			display: inline-block;
-			overflow: hidden;
-			margin-right: 30px;
-			@media(max-width: 600px) {
-				width: 80px;
-				height: 80px;
-				margin: 0 15px 15px 0;
-			}
-
-			img {
-				width: 100%;
-			}
-		}
-
-		.details {
-			display: inline-block;
-			float: left;
-
-			span {
-				display: block;
-				line-height: 1em;
-				margin-bottom: 8px;
-				font-size: 0.96em;
-
-				i {
-					margin-right: 8px;
-				}
-			}
-		}
-
-		.bio {
-			display: block;
-			line-height: 1.5;
-			margin-top: 10px;
-			width: 100%;
-			clear: both;
-			font-size: 0.96em;
-			color: #464a56;
-			font-weight: 500;
-		}
-
-		.author {
-			font-size: 1.5em;
-			margin-bottom: 10px;
-			font-family: 'TTNorms-Medium', '';
-			@media(max-width: 600px) {
-				font-size: 1.3em;
-			}
-
-			a {
-				&:hover {
-					text-decoration: none;
-				}
-			}
-			@media(max-width: 600px) {}
-		}
-
-		.meta-info {
-			font-size: 12px;
-			line-height: 1.5;
-			font-weight: 300;
-			color: @text-color-light;
-			margin-bottom: 7px;
-
-			span {
-				margin-right: 10px;
-				display: block;
-
-				i {
-					margin-right: 7px;
-				}
-				@media(max-width: 800px) {
-					display: block !important;
-					width: 100%;
-				}
-			}
-		}
-	}
-
-	.author-card-large {
-		justify-content: left !important;
-		@media(max-width: 600px) {
-			display: none;
-		}
-	}
-
-	.author-card-small {
-		display: none;
-		@media(max-width: 600px) {
-			display: block;
-			margin: 20px;
-			width: auto!important;
-		}
-	}
-
-	.codeoverflow {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		height: 80px;
-		background: linear-gradient(0, #0d111d, rgba(20, 30, 57, 0) 70.71%);
-		z-index: 0;
-		display: none;
-		opacity: 1;
-		transition: all 0.4s ease-out;
-		 mix-blend-mode: hard-light;
-		@media(max-width: 600px) {
-			display: block;
-		}
-	}
-
-	.fullWidth {
-		@media(max-width: 600px){
-			margin-left: calc(-50vw + 50%) !important;
-	    margin-right: calc(-50vw + 50%) !important;
-		}
-	}
-
-	.bottomFade {
-		display: block;
-		width: 100%;
-		height: 60px;
-		bottom: 0;
-		background: linear-gradient(0deg, #0e2542, rgba(11, 33, 58, 0));
-		mix-blend-mode: hard-light;
 	}
 
 	.lightboxOverlay {

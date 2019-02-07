@@ -31,7 +31,7 @@ blockquote pre {
     overflow-y: hidden;
     padding: 0;
     margin: 30px auto;
-    border-radius: 5px;
+    border-radius: 3px;
     max-width: 100%;
     @media(max-width: 600px) {
       max-width: none;
@@ -39,7 +39,6 @@ blockquote pre {
       white-space: pre-line;
       max-height: 400px;
       overflow-x: visible;
-      border-radius: 3px;
     }
 
     code {
@@ -196,6 +195,7 @@ blockquote pre {
   .language-xml {
     &::before {
       content: "XML" !important;
+      margin-bottom: 0;
       width: -webkit-fill-available;
       height: auto;
       margin: auto;
@@ -270,6 +270,7 @@ blockquote pre {
 .output {
   &::before {
     width: 110%;
+    margin-bottom: 0;
     height: auto;
     content: "Output" !important;
     display: block;
@@ -295,6 +296,7 @@ blockquote pre {
   &::before {
     width: 110%;
     height: auto;
+    margin-bottom: 0;
     content: "CSS" !important;
     display: block;
     font-style: normal;
@@ -336,6 +338,7 @@ blockquote pre {
     width: 110%;
     height: auto;
     content: "Yaml" !important;
+    margin-bottom: 0;
     display: block;
     font-style: normal;
     font-variant: normal;
@@ -357,6 +360,7 @@ blockquote pre {
     height: auto;
     content: "TOML" !important;
     display: block;
+    margin-bottom: 0;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
@@ -364,4 +368,36 @@ blockquote pre {
     position: relative;
     font-weight: 700;
   }
+}
+
+.codeoverflow {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 80px;
+  background: linear-gradient(0, #0d111d, rgba(20, 30, 57, 0) 70.71%);
+  z-index: 0;
+  display: none;
+  opacity: 1;
+  transition: all 0.4s ease-out;
+   mix-blend-mode: hard-light;
+  @media(max-width: 600px) {
+    display: block;
+  }
+}
+
+.fullWidth {
+  @media(max-width: 600px){
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+}
+
+.bottomFade {
+  display: block;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  background: linear-gradient(0deg, #0e2542, rgba(11, 33, 58, 0));
+  mix-blend-mode: hard-light;
 }

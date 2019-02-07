@@ -9,7 +9,7 @@ $(document).ready(function() {
         '<div class="left"> \n' + '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
         '<div class="priority ' + cards[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' +
         '</div> \n' +
-        '<div class="epic ' + cards[i].epic_name + '"><span>' + cards[i].epic_name + '</span> <i class="fas fa-bolt" style=color:' + cards[i].epic_color + ';"></i></div> \n' +
+        '<div class="epic ' + cards[i].epic_name + '" style=color:' + cards[i].epic_color + '50;><span>' + cards[i].epic_name + '</span></div> \n' +
         '</div> \n' + '</div>');
       }
     }

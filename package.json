@@ -81,7 +81,7 @@
     "paginate": "^0.2.0",
     "precss": "^4.0.0",
     "scrollbooster": "^1.1.0",
-    "swiper": "^4.4.5"
+    "swiper": "^4.4.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
