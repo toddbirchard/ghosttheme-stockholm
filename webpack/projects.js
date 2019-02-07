@@ -16,62 +16,6 @@ $(document).ready(function() {
       }
     }
 
-    function BacklogCards() {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.Backlog&limit=6&order_by=rank.asc",
-        headers: {
-          client_id: 115000,
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'backlog');
-      });
-    }
-
-    function TodoCards() {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.To%20Do&limit=6&order_by=rank.asc",
-        headers: {
-          client_id: 115000,
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'todo');
-      });
-    }
-
-    function ProgressCards() {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.In%20Progress&limit=6&order_by=rank.asc",
-        headers: {
-          client_id: 115000,
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'progress');
-      });
-    }
-
-    function DoneCards() {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/jira_issues?status=like.Done&limit=6&order_by=updated.desc",
-        headers: {
-          client_id: 115000,
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'done');
-      });
-    }
-
     function MakeSlick() {
       $('#kanban').slick({
         centerMode: false,
@@ -112,10 +56,81 @@ $(document).ready(function() {
       });
     }
 
-  MakeSlick();
-  BacklogCards();
-  TodoCards();
-  ProgressCards();
-  DoneCards();
 
+  function populate_jira_cards(table_name) {
+    $('.cards').remove('.card');
+    $('.card').remove();
+    function BacklogCards(table_name) {
+      $.ajax({
+        method: "GET",
+        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Backlog&limit=6&order_by=rank.asc",
+        headers: {
+          client_id: 139000,
+          access_token: "wAfyf6j30qKrfUs37B52Gg"
+        },
+        contentType: 'application/json'
+      }).done(function(results) {
+        populateCards(results, 'backlog');
+      });
+    }
+    function TodoCards(table_name) {
+      $.ajax({
+        method: "GET",
+        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.To%20Do&limit=6&order_by=rank.asc",
+        headers: {
+          client_id: 139000,
+          access_token: "wAfyf6j30qKrfUs37B52Gg"
+        },
+        contentType: 'application/json'
+      }).done(function(results) {
+        populateCards(results, 'todo');
+      });
+    }
+    function ProgressCards(table_name) {
+      $.ajax({
+        method: "GET",
+        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.In%20Progress&limit=6&order_by=rank.asc",
+        headers: {
+          client_id: 139000,
+          access_token: "wAfyf6j30qKrfUs37B52Gg"
+        },
+        contentType: 'application/json'
+      }).done(function(results) {
+        populateCards(results, 'progress');
+      });
+    }
+
+    function DoneCards(table_name) {
+      $.ajax({
+        method: "GET",
+        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Done&limit=6&order_by=updated.desc",
+        headers: {
+          client_id: 139000,
+          access_token: "wAfyf6j30qKrfUs37B52Gg"
+        },
+        contentType: 'application/json'
+      }).done(function(results) {
+        populateCards(results, 'done');
+      });
+    }
+    BacklogCards(table_name);
+    TodoCards(table_name);
+    ProgressCards(table_name);
+    DoneCards(table_name);
+  }
+  populate_jira_cards('ghosttheme_stockholm');
+  MakeSlick();
+
+  $('#stockholm').on('click', function(obj){
+    populate_jira_cards('ghosttheme_stockholm');
+  });
+
+  $('#tokyo').on('click', function(obj){
+    populate_jira_cards('ghosttheme_tokyo');
+  });
+
+
+  $('#jupyter').on('click', function(obj){
+    populate_jira_cards('planetjupyter');
+  });
 });
