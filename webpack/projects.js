@@ -3,6 +3,8 @@ import '../src/less/projects.less';
 $(document).ready(function() {
 
     function populateCards(cards, status) {
+      $('.overlay').css('opacity', '0');
+      setTimeout(function(){ $('.overlay').css('display', 'none') }, 300);
       for (var i = 0; i < cards.length; i++) {
         $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + cards[i].summary + '</h5> \n' +
         //'<p>' + cards[i].description + '</p> \n' +
@@ -55,7 +57,6 @@ $(document).ready(function() {
         ]
       });
     }
-
 
   function populate_jira_cards(table_name) {
     $('.cards').remove('.card');
@@ -121,20 +122,37 @@ $(document).ready(function() {
   populate_jira_cards('ghosttheme_stockholm');
   MakeSlick();
 
-  $('#stockholm').on('click', function(obj){
+  $('.stockholmproject').on('click', function(obj){
     populate_jira_cards('ghosttheme_stockholm');
   });
 
-  $('#tokyo').on('click', function(obj){
+  $('.tokyoproject').on('click', function(obj){
     populate_jira_cards('ghosttheme_tokyo');
   });
 
-  $('#jupyter').on('click', function(obj){
+  $('.jupyterproject').on('click', function(obj){
     populate_jira_cards('planetjupyter');
+  });
+
+  $('.apiproject').on('click', function(obj){
+    populate_jira_cards('hackersandslackers-api');
+  });
+
+
+  $('.picker').on('mouseover', function(){
+    $('.overlay').css('display', 'block');
+    $('.overlay').css('opacity', '.3');
+  });
+
+  $('.picker').on('mouseleave', function(){
+    $('.overlay').css('opacity', '0');
+    setTimeout(function(){ $('.overlay').css('display', 'none') }, 300);
   });
 
 
   $('.mobilemenu').on('click', function (obj){
-    $(this).find('ul').attr('display', 'block')
+    $(this).find('ul').attr('display', 'block');
+    $('.overlay').css('display', 'block');
+    $('.overlay').css('opacity', '.3');
   });
 });
