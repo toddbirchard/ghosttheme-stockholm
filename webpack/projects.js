@@ -3,8 +3,8 @@ import '../src/less/projects.less';
 $(document).ready(function() {
 
     function populateCards(cards, status) {
-      $('.overlay').css('opacity', '0');
-      setTimeout(function(){ $('.overlay').css('display', 'none') }, 300);
+  //    $('.overlay').css('opacity', '0');
+    //  setTimeout(function(){ $('.overlay').css('display', 'none') }, 300);
       for (var i = 0; i < cards.length; i++) {
         $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + cards[i].summary + '</h5> \n' +
         //'<p>' + cards[i].description + '</p> \n' +
@@ -141,20 +141,24 @@ $(document).ready(function() {
   });
 
 
-  $('.picker').on('mouseover', function(){
-    $('.overlay').css('display', 'block');
-    $('.overlay').css('opacity', '.3');
+  $('.dropdown').on('mouseover', function(){
+    $('.dropdown-list').toggle(300);
+  //  $('.overlay').toggle(300);
+    //$('.overlay').css('display', 'block');
+  //$('.overlay').css('opacity', '.3');
   });
 
-  $('.picker').on('mouseleave', function(){
-    $('.overlay').css('opacity', '0');
-    setTimeout(function(){ $('.overlay').css('display', 'none') }, 300);
+  $('.dropdown').on('mouseleave', function(){
+    $('.dropdown-list').toggle(300);
+  //  $('.overlay').toggle(300);
   });
 
 
-  $('.mobilemenu').on('click', function (obj){
-    $(this).find('ul').attr('display', 'block');
-    $('.overlay').css('display', 'block');
-    $('.overlay').css('opacity', '.3');
+  $('.mobilemenu').on('click', function (){
+    //$(this).find('ul').attr('display', 'block');
+    //$('.overlay').css('display', 'block');
+    //$('.overlay').css('opacity', '.3');
+    $('.dropdown-list').toggle(300);
+    //$('.overlay').toggle(300);
   });
 });
