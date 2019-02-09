@@ -1,5 +1,6 @@
 import '../src/less/pages.less';
-import '../assets/js/includes/gh-profile-card.min.js'
+import '../src/less/author.less';
+import '../assets/js/includes/gh-profile-card.min.js';
 
 $(document).ready(function() {
 

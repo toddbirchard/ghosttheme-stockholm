@@ -1,0 +1,323 @@
+.author-template {
+  .application {
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .super-line {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .super-line:before {
+    content: "";
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 3px;
+    margin-right: 20px;
+    width: 80px;
+  }
+
+  .super-line:after {
+    content: "";
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    width: 80px;
+  }
+
+  .super-line.b {
+    background: #fff;
+    color: #7E9BA0;
+  }
+
+  .super-line.b:after,
+  .super-line.b:before {
+    border-bottom: 1px solid #7E9BA0;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .wrapper > .loading {
+    margin: auto;
+    width: 200px;
+    text-align: center;
+  }
+
+  .wrapper > .loading span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #880e4f;
+    margin: 0 10px;
+    opacity: 0.1;
+  }
+
+  .wrapper > .loading span:nth-child(1) {
+    -webkit-animation: blink 1.3s infinite;
+    animation: blink 1.3s infinite;
+    -webkit-animation-delay: 0.300s;
+    animation-delay: 0.300s;
+  }
+
+  .wrapper > .loading span:nth-child(2) {
+    -webkit-animation: blink 1.3s infinite;
+    animation: blink 1.3s infinite;
+    -webkit-animation-delay: 0.400s;
+    animation-delay: 0.400s;
+  }
+
+  .wrapper > .loading span:nth-child(3) {
+    -webkit-animation: blink 1.3s infinite;
+    animation: blink 1.3s infinite;
+    -webkit-animation-delay: 0.500s;
+    animation-delay: 0.500s;
+  }
+
+  .wrapper > .loading span:nth-child(4) {
+    -webkit-animation: blink 1.3s infinite;
+    animation: blink 1.3s infinite;
+    -webkit-animation-delay: 0.600s;
+    animation-delay: 0.600s;
+  }
+
+  .wrapper > .loading span:nth-child(5) {
+    -webkit-animation: blink 1.3s infinite;
+    animation: blink 1.3s infinite;
+    -webkit-animation-delay: 0.700s;
+    animation-delay: 0.700s;
+  }
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+      background: #0e5a88;
+    }
+
+    50% {
+      opacity: 1;
+      background: #fff;
+    }
+
+    100% {
+      opacity: 0.1;
+      background: #fff;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+      background: #0e5a88;
+    }
+
+    50% {
+      opacity: 1;
+      background: #fff;
+    }
+
+    100% {
+      opacity: 0.1;
+      background: #fff;
+    }
+  }
+
+  .wrapper > .card {
+    margin: auto;
+    width: 360px;
+    border-radius: 5px 5px 0 0;
+    background: #62d7f0;
+    box-shadow: 6px 6px 8px #999;
+  }
+
+  .wrapper > .card .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px 5px 0 0;
+    height: 200px;
+  }
+
+  .wrapper > .card .header .avatar,
+  .wrapper > .card .header .avatar > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .wrapper > .card .header .avatar {
+    overflow: hidden;
+    border-radius: 100%;
+    border: 3px solid #eee;
+    margin: auto;
+  }
+
+  .wrapper > .card > .header {
+    background: #fff;
+  }
+
+  .wrapper > .card > .header span.repos-count {
+    position: absolute;
+    left: 130px;
+    top: 90px;
+    background: #62d7f0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .wrapper > .card > .header span.repos-count:after {
+    content: "repos";
+    position: absolute;
+    color: #7E9BA0;
+    text-transform: uppercase;
+    font-size: 8px;
+    bottom: -20px;
+    left: 0;
+  }
+
+  .wrapper > .card > .header a.userlink {
+    background: #7E9BA0;
+    color: #fff;
+    padding: 4px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+  }
+
+  .wrapper > .card > .header a.userlink:hover {
+    background: #62d7f0;
+  }
+
+  .wrapper > .card > .header a.userlink i {
+    font-size: 12px;
+    margin: 0 0 0 5px;
+  }
+
+  .wrapper > .card > .header .userinfo {
+    text-align: center;
+    padding: 0 0 20px;
+  }
+
+  .wrapper > .card > .header .userinfo h2 {
+    color: #7E9BA0;
+  }
+
+  .wrapper > .card > .header .userinfo p {
+    color: #7E9BA0;
+  }
+
+  .wrapper > .card > .top-repos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 0 0;
+    background: #62d7f0;
+    text-align: center;
+  }
+
+  .wrapper > .card > .top-repos .repository {
+    margin: 5px 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .wrapper > .card > .top-repos .repository i {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .wrapper > .card > .top-repos .repository .title {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .wrapper > .card > .pie-chart-wrap {
+    position: relative;
+    text-align: center;
+  }
+
+  .wrapper > .card > .pie-chart-wrap .pie-chart {
+    margin-top: 40px;
+  }
+
+  .wrapper > .card > .pie-chart-wrap .pie-chart-totals {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .wrapper > .card > .pie-chart-wrap .pie-chart-totals i {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .wrapper > .card > .chart {
+    position: relative;
+    border: none;
+    background: #fff;
+    width: 360px;
+    overflow: hidden;
+    height: 100px;
+  }
+
+  .wrapper > .card > .chart canvas {
+    border: none;
+    position: absolute;
+    left: -5px;
+    bottom: -9px;
+  }
+
+  .wrapper > .card > .activity-line {
+    padding-top: 40px;
+  }
+
+  .wrapper > .card > .totals {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px 0 5px;
+    background: #fff;
+  }
+
+  .wrapper > .card > .totals > div {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #7E9BA0;
+  }
+
+  .wrapper > .card > .totals > div:nth-child(2) {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+
+  .wrapper > .card > .totals > div .desc {
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+}
