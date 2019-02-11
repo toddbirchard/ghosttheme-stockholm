@@ -36,15 +36,16 @@
     width: 300px;
     background: linear-gradient(45deg, #ffffff, #edfaff);
     color: #69738b;
-    padding: 0.5em 10px 0.5em 60px;
+    padding: 0.5em 20px 0.5em 60px;
     position: relative;
     border-left: 4px solid #fff;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transition: all 0.2s ease;
     display: block;
-    height: 23px;
+    text-align: right;
     align-items: center;
+    height: 28px;
     /*border: 1px solid #d8d8d8;*/
     /*border: 1px solid linear-gradient(45deg, #f8fcfe, #e0ecf1);*/
     border-left: 0;
@@ -54,6 +55,12 @@
     @media(max-width: 600px) {
       display: none !important;
     }
+  }
+
+  .projectdropdown > ul > li{
+    display: flex;
+    align-items: center;
+    padding: 5px;
   }
 
   .projectdropdown > ul > li i {
