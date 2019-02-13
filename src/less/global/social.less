@@ -7,9 +7,12 @@
   transition: all 0.35s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
   font-size: 14px;
+}
 
+.author-social .btn,
+.social-btns .btn {
   &:hover {
-    cursor: pointer;
+    cursor: pointer !important;
   }
 }
 
@@ -36,30 +39,6 @@
   cursor: pointer;
 }
 
-.social-btns {
-  height: 35px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.widget .social-btns .btn {
-  align-items: center;
-  justify-content: space-around;
-  display: inline-flex;
-  background-color: #fff;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 3px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 3px 1px rgba(95, 93, 138, 0.15);
-  opacity: 0.99;
-  padding: 0;
-}
-
 .post .social-btns .btn {
   position: relative;
   overflow: hidden;
@@ -79,7 +58,9 @@
 }
 
 .social-btns .btn,
-.social-btns .btn .fa {
+.social-btns .btn i,
+.author-social .btn,
+.author-social .btn i{
   transition: all 0.35s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
@@ -89,7 +70,8 @@
   vertical-align: middle;
 }
 
-.social-btns {
+.social-btns,
+.author-social {
   .medium {
     i {
       color: lighten(@medium-color, 10%);
@@ -166,6 +148,34 @@
       color: white;
     }
   }
+
+  .pocket i {
+    color: lighten(#f14861, 10%);
+
+    &:hover {
+      background-color: lighten(#f14861, 10%) !important;
+      color: white;
+    }
+  }
+
+  .quora i {
+    color: lighten(#b92b27, 10%);
+
+    &:hover {
+      background-color: lighten(#b92b27, 10%) !important;
+      color: white;
+    }
+  }
+
+  .linkedin i {
+    color: lighten(@linkedin-color, 10%);
+
+    &:hover {
+      background-color: lighten(@linkedin-color, 10%);
+      color: white;
+    }
+  }
+
 }
 /*
 .facebook {
