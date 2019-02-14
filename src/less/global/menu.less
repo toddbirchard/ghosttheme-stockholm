@@ -10,7 +10,7 @@
   height: 80px;
 
   .logo {
-    height: 41px;
+    height: 40px;
     width: 230px;
     position: absolute;
     left: 0;
@@ -27,14 +27,14 @@
     }
 
     @media(max-width: 600px){
-      height: 40px;
+      height: 35px;
     }
 
     img {
       height: 40px;
 
       @media(max-width: 600px){
-        height: 40px;
+        height: 35px;
       }
     }
   }
@@ -96,6 +96,10 @@ header {
       right:0;
       top:0;
       bottom:0;
+
+      @media(max-width: 600px) {
+         font-size: 0.8em;
+      }
 
       &:hover {
         color: @theme-color;

@@ -67,51 +67,57 @@
 			padding-left: 0;
 			border: none;
 
+			@media(max-width: 600px) {
+				margin: 10px auto 0;
+			}
+
 			li {
 				display: block;
 				width: 100%;
 				text-align: left;
 				transition: all 0.2s ease-out;
 				border: none !important;
-				padding: 8px 4px;
+				padding: 2px 4px;
+
+				* {
+					&:hover {
+						cursor: pointer !important;
+						color: @hover-color !important;
+						background: none !important;
+					}
+				}
 
 				a {
 					color: white;
 					font-family: 'AvenirNextLTPro-Regular', sans-serif !important;
 					border: none;
-
-					&:hover {
-						cursor: pointer;
-						color: @hover-color !important;
-					}
+					font-size: 0.85em;
 				}
 			}
 		}
 	}
-}
 
-.widget {
-	padding: 10px 0;
-	width: 25%;
-	margin: 0;
-	@media(max-width: 800px) {
-		padding: 0 20px;
-		width: -webkit-fill-available;
-		margin: 10px 10px 60px;
-	}
-	@media(max-width: 600px) {
-		width: auto !important;
-		padding: 0 20px !important;
-	}
-	@media(max-width: 800px) {
-		width: 100%;
-		margin: 10px 0 60px;
-
-		&:last-child {
-			margin-bottom: 0;
+	.widget {
+		padding: 2px 0;
+		width: 25%;
+		margin: 0;
+		@media(max-width: 800px) {
+			padding: 0 20px;
+			width: -webkit-fill-available;
+			margin: 10px 0 30px;
+			width: 100%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@media(max-width: 600px) {
+			width: auto !important;
+			padding: 0 20px !important;
 		}
 	}
 }
+
+
 /*====================================================
 			tag cloud
 		====================================================*/
@@ -136,6 +142,15 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-top: 20px;
+
+		* {
+			&:hover {
+				cursor: pointer !important;
+				color: @hover-color !important;
+				background: none !important;
+			}
+		}
 
 		a {
 			border: 0;
@@ -152,13 +167,11 @@
 			transition: all 0.2s ease-out;
 			font-size: 0.85em;
 			min-width: 45%;
+			max-width: 45%;
 			text-align: left;
-			padding: 0 2.5%;
-
-			&:hover {
-				cursor: pointer;
-				color: @hover-color !important;
-			}
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
 	}
 }
@@ -178,7 +191,7 @@
 		min-width: -moz-available !important;
 	}
 	@media(max-width: 600px) {
-		margin: 20px auto;
+		margin: 20px auto 10px;
 	}
 
 	ul {
@@ -188,16 +201,19 @@
 			width: 100%;
 			display: block;
 			text-align: left;
-			transition: all .3s ease-out;
+			transition: all 0.3s ease-out;
+			padding: 2px 0;
 
 			* {
 				&:hover {
-					cursor: pointer;
+					cursor: pointer !important;
+					color: @hover-color;
 				}
 			}
 
 			a {
 				color: #fff;
+				font-size: 0.85em;
 			}
 		}
 	}
@@ -205,6 +221,7 @@
 /*====================================================
 		newsletter
 	====================================================*/
+/*
 #newsletter-footer {
 	max-width: 27%;
 	padding: 13px 0;
@@ -316,4 +333,4 @@
 			font-size: 14px;
 		}
 	}
-}
+}*/
