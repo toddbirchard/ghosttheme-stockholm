@@ -45,7 +45,6 @@
 		}
 	}
 
-
 	.widget.links {
 		h3 {
 			color: #fff;
@@ -76,20 +75,15 @@
 				border: none !important;
 				padding: 8px 4px;
 
-				i {
-					margin: auto 8px !important;
-					width: fit-content !important;
-					font-size: 16px !important;
-				}
-
-				&:hover {
-					background: #0db0e2;
-				}
-
 				a {
 					color: white;
 					font-family: 'AvenirNextLTPro-Regular', sans-serif !important;
 					border: none;
+
+					&:hover {
+						cursor: pointer;
+						color: @hover-color !important;
+					}
 				}
 			}
 		}
@@ -98,7 +92,7 @@
 
 .widget {
 	padding: 10px 0;
-	width: 28%;
+	width: 25%;
 	margin: 0;
 	@media(max-width: 800px) {
 		padding: 0 20px;
@@ -122,8 +116,8 @@
 			tag cloud
 		====================================================*/
 .widget.tags {
-	min-width: 37%;
-	width: 37% !important;
+	min-width: 41%;
+	width: 41% !important;
 	@media(max-width: 800px) {
 		margin-bottom: 10px;
 		max-width: none;
@@ -146,25 +140,24 @@
 		a {
 			border: 0;
 			color: #fff;
-			margin: 0 6px 6px 0;
-			padding: 3px 10px;
-			display: inline-block;
+			display: block;
+			height: -webkit-fit-content;
+			height: -moz-fit-content;
 			height: fit-content;
+			width: -webkit-fit-content;
+			width: -moz-fit-content;
 			width: fit-content;
-			flex-grow: 1;
 			text-align: center;
 			font-family: 'AvenirNextLTPro-Regular';
 			transition: all 0.2s ease-out;
 			font-size: 0.85em;
-			background: rgba(205, 222, 230, 0.05);
-			border: 1px solid rgba(255, 255, 255, 0.1);
+			min-width: 45%;
+			text-align: left;
+			padding: 0 2.5%;
 
 			&:hover {
 				cursor: pointer;
-				background: @hover-color;
-				color: white !important;
-				box-shadow: 1px 1px 1px #239084;
-				border: 1px solid darken(@hover-color, 20%);
+				color: @hover-color !important;
 			}
 		}
 	}
@@ -174,8 +167,9 @@
 		====================================================*/
 .widget.contributors {
 	width: 25%;
+
 	.footer-title {
-		 margin: 10px 0 5px !important;
+		margin: 10px 0 5px !important;
 	}
 	@media(max-width: 800px) {
 		margin-bottom: 10px;
@@ -183,62 +177,27 @@
 		min-width: -webkit-fill-available !important;
 		min-width: -moz-available !important;
 	}
+	@media(max-width: 600px) {
+		margin: 20px auto;
+	}
 
-	.contributor-container {
-		@media(max-width: 600px) {
-			margin: 20px auto;
-		}
+	ul {
+		padding: 0;
 
-		.single-author {
-			display: flex;
-			align-items: center;
-			padding: 12px 0;
-			font-size: 18px;
-			font-weight: 200;
-			font-family: 'AvenirNextLTPro-Medium', serif;
-			transition: all 0.2s ease;
-			border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
-			line-height: 1;
+		li {
+			width: 100%;
+			display: block;
+			text-align: left;
+			transition: all .3s ease-out;
+
+			* {
+				&:hover {
+					cursor: pointer;
+				}
+			}
 
 			a {
 				color: #fff;
-
-				&:hover {
-					cursor: pointer;
-					color: @hover-color;
-				}
-			}
-
-			&:last-child {
-				border-bottom: none !important;
-			}
-
-			.avatar-link {
-				margin-right: 15px !important;
-
-				.avi {
-					height: 40px;
-					width: 40px;
-					border-radius: 0;
-					margin: 0;
-					border-bottom: 1px solid #03050a;
-					border-right: 1px solid #03050a;
-				}
-			}
-
-			.single-author-name {
-				font-size: 0.9em !important;
-				font-family: 'AvenirNextLTPro-Medium', sans-serif !important;
-				color: #fff;
-			}
-
-			.role {
-				color: hsla(0, 0%, 100%, 0.7);
-				display: block;
-				font-family: 'AvenirNextLTPro-Regular';
-				font-size: 0.8em;
-				line-height: 1.2;
-				margin-top: 6px;
 			}
 		}
 	}
