@@ -26,13 +26,14 @@
   &::before {
     -webkit-font-smoothing: antialiased;
     display: block;
-    position: relative;
-    width: 104%;
+    position: absolute;
+    width: 100%;
     height: auto;
-    margin-bottom: 0;
-    margin-left: -6%;
-    padding: 8px 40px;
-    font-weight: 700;
+    mix-blend-mode: color-dodge;
+    padding: 8px 25px;
+    margin-bottom: 10px;
+    top: 0;
+    left: 0;
     font-family: 'Hack';
     font-size: 1.15em;
     font-style: normal;
@@ -41,13 +42,15 @@
     text-rendering: auto;
     text-shadow: -2px 2px 1px rgba(0, 9, 46, 0.6) !important;
     content: "Code Snippet";
-    opacity: 1;
-    background: none;
+    background: #242842;
+    mix-blend-mode: color-dodge;
+    border-bottom: 1px solid #293d5c;
     @media(max-width: 600px) {
       width: -webkit-fill-available;
       width: -moz-webkit-fill-available;
-      padding: 8px 0;
-      font-size: 1.4em;
+      padding: 5px 40px;
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
       margin: 0 auto;
     }
   }
