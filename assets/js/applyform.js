@@ -35,7 +35,6 @@
     next_fs = current_fs.next();
 
     // everything looks good!
-    console.log('this = ' + $(this).prop('tagName'));
     if (animating)
       return false;
     animating = true;

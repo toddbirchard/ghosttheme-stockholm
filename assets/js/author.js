@@ -22,7 +22,6 @@ function author_sidebar(docs) {
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(result) {
-          //console.log("JSON.stringify(result) = " + JSON.stringify(result));
           $('.sidebar').append('<div class="widget meetup"><div class="content"><h4 class="title">Meetup</h4> \n ' +
             '<div class="userprofile"> \n ' +
             '<img class="avatar" src="' + result['data']['photo']['thumb_link'] + '" data-rjs="3"> \n' +
@@ -85,11 +84,8 @@ function author_sidebar(docs) {
 
   function current_author() {
     var sPath = String(document.location.pathname);
-    console.log('sPath' + sPath);
     var slug = sPath.substring(sPath.lastIndexOf("/") - 4);
-    console.log('slug' + slug);
     slug = slug.replace('/', '');
-    console.log('slug' + slug);
     return slug;
   }
 

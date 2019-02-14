@@ -4,7 +4,6 @@ $(document).ready(function() {
   var title = document.title
   var userid = Math.round(+new Date()/1000);
   //var created = new Date(date.getMonth(), date.getDate(), date.getFullYear());
-  console.log(userid);
 
   function showVisitorInfo(info) {
     var country = $(".newsletter-form .country").text(info.countryName + " [" + info.countryCode + "]");
@@ -19,7 +18,7 @@ $(document).ready(function() {
         "landingpage": document.referrer
     });
   }
-  
+
     $('.social-btns .btn').each(function(index, element) {
       $(this).on('click', function(){
         mixpanel.track_links(this, "visited " + $(this).attr('name'), {
