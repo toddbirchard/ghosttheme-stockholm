@@ -10,6 +10,8 @@ $(document).ready(function() {
 
   function postLinkPreviews() {
     $(".post-content > p > a").each(function(index, element) {
+      console.log('this = ' + this);
+      $(this).replaceWith('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div> </div>');
       $.ajax({
         url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + $(element).attr('href'),
         async: true,
@@ -27,7 +29,7 @@ $(document).ready(function() {
 
   function authorLinkPreviews() {
     $(".author-website a").each(function(index, element) {
-      $.ajax({
+          $.ajax({
         url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + $(this).text(),
         contentType: "application/json",
         dataType: 'json',

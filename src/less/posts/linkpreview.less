@@ -1,13 +1,13 @@
 @import "../global/variables.less";
 @import "../global/mixin.less";
-
+/*
 .tag-roundup .post-content > p > a {
   display: none;
   margin: 0 !important;
   margin-bottom: 0;
-}
+}*/
 
-.post-template.tag-roundup > p {
+.post-template.tag-roundup .post-content > p {
   margin: 0 !important;
 
   &:last-of-type .link-preview {
@@ -23,7 +23,7 @@
   margin: 30px 60px 60px;
   width: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   min-height: 50px;
   border-bottom: 0;
@@ -32,6 +32,7 @@
   border-radius: 5px;
   @media(max-width: 800px) {
     margin: 30px 35px 60px;
+    justify-content: space-between;
   }
   @media(max-width: 600px) {
     padding: 15px 20px;
@@ -41,9 +42,14 @@
 
   p {
     margin: 0 !important;
-    color: #9dc29f;
+    color: #7d9d7f;
     line-height: 1.4 !important;
     text-align: left;
+    font-size: .95em !important;
+
+    @media(max-width: 600px){
+      font-size: .9em !important;
+    }
   }
 
   i {
@@ -96,7 +102,9 @@
     cursor: pointer;
 
     * {
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
