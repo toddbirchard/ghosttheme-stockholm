@@ -5,7 +5,7 @@
 	pagination
 ====================================================*/
 .pagination {
-	margin: 10px 0 20px;
+	margin: 10px 0 0;
 	text-align: center;
 	display: block;
 	order: 20;
@@ -17,6 +17,9 @@
 		position: absolute;
 		right:0;
 		top: 0;
+		background: #a1afc5;
+		color: white;
+		border: none;
 
 		&:hover {
 			background: @hover-color;
@@ -30,6 +33,9 @@
 		position: absolute;
 		left:0;
 		top: 0;
+		background: #a1afc5;
+		color: white;
+		border: none;
 
 		&:hover {
 			background: @hover-color;
@@ -46,7 +52,7 @@
     color: #828994;
     background: none;
     border-radius: 0;
-    padding: 9px 14px;
+    padding: 8px 14px;
     line-height: 1;
     font-size: 1em;
     font-weight: 700;
@@ -70,8 +76,10 @@
 
 
 	strong {
-		background: #6e89b5 !important;
-		color: white !important;
+		border: 1px solid #6e89b5 !important;
+    color: #6e89b5 !important;
+    background: rgba(199, 210, 240, 0.19);
+    border-radius: 2px;
 	}
 
 	.page-number {
@@ -86,6 +94,12 @@
 		@media(max-width: 600px) {
 			 max-width: 65%;
 		}
+	}
+
+	.total-count {
+		color: #bec0d8;
+		margin-top: 10px;
+		font-size: .9em;
 	}
 }
 

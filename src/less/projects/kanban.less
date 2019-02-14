@@ -144,8 +144,38 @@
     height: 800px;
 
     @media(max-width: 800px){
+      margin: 30px 0;
+      height: 850px;
       &:hover{
         cursor: grab;
+      }
+    }
+
+    .slick-dots{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 10px 100px;
+      position: absolute;
+      width: -webkit-fill-available;
+      bottom: 0px;
+
+      button {
+        border-radius: 50%;
+        border: none;
+        height: 13px;
+        width: 13px;
+        opacity: .4;
+        background: @theme-color;
+        text-indent: -9999px;
+        transition: all .3s ease-out;
+      }
+
+      .slick-active {
+        * {
+          opacity: 1 !important;
+        }
       }
     }
 
