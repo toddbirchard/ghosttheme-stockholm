@@ -164,12 +164,17 @@
       button {
         border-radius: 50%;
         border: none;
-        height: 13px;
-        width: 13px;
+        height: 11px;
+        width: 11px;
         opacity: .4;
         background: @theme-color;
+        padding:0;
         text-indent: -9999px;
         transition: all .3s ease-out;
+
+        &:hover {
+          background: @hover-color;
+        }
       }
 
       .slick-active {
@@ -304,6 +309,10 @@
         justify-content: space-between;
         flex-direction: column;
         margin: auto;
+
+        &:nth-child(n+7) {
+            display:none;
+        }
 
         &.last-child {
           margin-bottom: 0;
