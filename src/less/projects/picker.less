@@ -22,6 +22,9 @@
 
     ul {
       margin: 0;
+      @media(max-width: 600px) {
+        padding: 0;
+      }
     }
     @media(max-width: 600px) {
       width: -webkit-fill-available;
@@ -40,7 +43,7 @@
     border-left: 4px solid #fff;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     display: block;
     text-align: right;
     align-items: center;
@@ -151,6 +154,7 @@
       display: flex;
       align-items: center;
       padding: 5px;
+      transition: all .3s ease-out;
 
       &:hover {
         color: #7C7E8D;
@@ -166,11 +170,12 @@
     background: white;
   }
 
-  svg {
+  svg,
+  i {
     height: 20px;
     width: 20px;
     fill: #72b0e1;
-    margin-right: 8px;
+    margin-right: 12px;
   }
 
   .picker li {
@@ -186,8 +191,25 @@
     display: none !important;
     margin: 0;
     width: -webkit-fill-available;
+
+    &:hover {
+      background: @theme-color;
+      cursor: pointer;
+      & > i,
+      & > span {
+        color:white;
+      }
+    }
+
     @media(max-width: 600px) {
       display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+      height: 45px;
+      background: white;
+      border-bottom: 1px solid #d8d8d8;
     }
   }
 

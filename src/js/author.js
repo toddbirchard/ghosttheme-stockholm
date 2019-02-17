@@ -4,7 +4,6 @@ $(document).ready(function() {
 
     var meetup_key = process.env.meetup_key;
     var medium_key = process.env.medium_key;
-    console.log('meetup_key = ' + meetup_key);
 
     function author_website(docs) {
       if (docs[0]['website']) {
@@ -42,7 +41,6 @@ $(document).ready(function() {
         dataType: 'jsonp',
         success: function(ajaxResult2) {
           var rsvps = ajaxResult2.meta.count;
-          console.log('rsvps = ' + rsvps);
           if (rsvps == 0) {
             $('.events').append('<span class="noevents">No upcoming events :(</span>');
           } else {
@@ -66,11 +64,8 @@ $(document).ready(function() {
 
     function current_author() {
       var sPath = String(document.location.pathname);
-      console.log('sPath' + sPath);
       var slug = sPath.substring(sPath.lastIndexOf("/") - 4);
-      console.log('slug' + slug);
       slug = slug.replace('/', '');
-      console.log('slug' + slug);
       return slug;
     }
 
