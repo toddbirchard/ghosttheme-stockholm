@@ -153,13 +153,17 @@
 
     .slick-dots{
       list-style: none;
-      display: flex;
+      display: none;
       justify-content: space-between;
       padding: 0;
       margin: 10px 100px;
       position: absolute;
       width: -webkit-fill-available;
       bottom: 0px;
+
+      @media(max-width: 800px) {
+        display: flex;
+      }
 
       button {
         border-radius: 50%;
