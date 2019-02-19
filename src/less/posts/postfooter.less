@@ -85,9 +85,8 @@
 				border: 1px solid #dbdbdb;
 				padding: 0;
 				margin: auto 0;
-				min-width: 17%;
+				min-width: 23%;
 				@media(max-width: 800px) {
-			    width: 13%;
 			    min-width: none !important;
 					border: 1px solid #eaeaea;
 				}
@@ -169,12 +168,9 @@
 				i {
 					margin: auto;
 					color: #a3a7b2;
-					font-size: 20px;
+					font-size: 27px;
 					display: block;
 					width: fit-content;
-				}
-				@media(max-width: 800px) {
-					width: 100%;
 				}
 			}
 
@@ -192,6 +188,12 @@
 				&:hover {
 					color: @white;
 					text-decoration: none;
+
+					i {
+						-webkit-transform: scale(1.15);
+					  transform: scale(1.15);
+					}
+
 
 					span {
 						color: #fff;

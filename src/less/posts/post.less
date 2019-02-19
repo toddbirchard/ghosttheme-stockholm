@@ -36,7 +36,6 @@
 
 		p > a {
 			letter-spacing: 0.5px;
-
 			@media(max-width: 600px) {
 				white-space: nowrap;
 				overflow: hidden;
@@ -149,7 +148,7 @@
 		color: @h1-color;
 		font-family: 'AvenirNextLTPro-Medium';
 		@media(max-width: 800px) {
-			 margin: 10px 40px 0;
+			margin: 10px 40px 0;
 		}
 		@media(max-width: 600px) {
 			font-size: 1.1em;
@@ -168,8 +167,8 @@
 		font-size: 1.7em;
 		width: fit-content;
 		width: 100%;
-    border-bottom: 1px solid #d2e5f4;
-    padding-bottom: 6px;
+		border-bottom: 1px solid #d2e5f4;
+		padding-bottom: 6px;
 		@media(max-width: 800px) {
 			font-size: 1.9em;
 			padding-bottom: 9px;
@@ -214,9 +213,10 @@
 		text-align: left;
 		font-size: 1em;
 		line-height: 1.8;
+		color: #393a40;
 		-webkit-font-smoothing: auto;
 		@media(max-width: 600px) {
-			font-size: .95em !important;
+			font-size: 0.95em !important;
 		}
 	}
 
@@ -226,12 +226,9 @@
 		display: none;
 	}
 
-
-
 	p {
-		margin: 0 0 25px 0;
+		margin: 0 0 25px;
 		font-size: 1em;
-
 		@media (max-width: 800px) {
 			margin: 0 0 20px;
 		}
@@ -307,9 +304,8 @@
 				padding: 8px 10px;
 				@media(max-width: 600px) {
 					height: 20px !important;
-				  padding: 6px 8px;
+					padding: 6px 8px;
 				}
-
 				@media(max-width: 500px) {
 					height: 24px;
 
@@ -325,9 +321,8 @@
 
 				span {
 					font-size: 1em;
-
 					@media(max-width: 600px) {
-						font-size: .9em;
+						font-size: 0.9em;
 						font-family: 'AvenirNextLTPro-Medium', sans-serif;
 					}
 				}
@@ -339,7 +334,6 @@
 						}
 					}
 				}
-
 			}
 		}
 
@@ -372,7 +366,7 @@
 				color: #40627b;
 				padding: 0;
 				@media(max-width: 600px) {
-					font-size: .95em;
+					font-size: 0.95em;
 				}
 			}
 
@@ -454,27 +448,35 @@
 			line-height: 1.4;
 			display: block;
 			@media(max-width: 600px) {
-				margin: 20px 0 20px 20px;
+				margin: 20px 0;
 			}
-		}
-	}
 
-	ul {
-		li::before {
-			color: darken(@theme-color, 5%);
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			-webkit-font-smoothing: antialiased;
-			padding-left: 0;
-			font-family: "Font Awesome 5 Pro";
-			content: "\f111";
-			font-size: 9px;
-			margin-right: 9px;
-			font-weight: 500;
-			@media(max-width: 600px) {
+			&::before {
+				color: darken(@theme-color, 5%);
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				padding-left: 0;
+				font-family: "Font Awesome 5 Pro";
+				content: "\f111";
+				font-size: 9px;
+				margin-right: 9px;
+				font-weight: 500;
+				@media(max-width: 600px) {
+					margin-left: 0;
+				}
+			}
+
+			ul {
 				margin-left: 0;
+
+				li {
+					border-left: 1px solid rgba(77, 177, 212, .3);
+					padding-left: 20px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}
@@ -483,32 +485,35 @@
 		counter-reset: my-awesome-counter;
 
 		li {
-		  counter-increment: my-awesome-counter;
+			counter-increment: my-awesome-counter;
 
 			&::before {
-			  content: counter(my-awesome-counter) ". ";
-			  color: darken(@theme-color, 20%);
-			  font-weight: bold;
+				content: counter(my-awesome-counter) ". ";
+				color: darken(@theme-color, 20%);
+				font-weight: bold;
 				display: inline-block;
 				margin-right: 8px;
+			}
 		}
 	}
-}
-
-  /*   Start of Protip box */
+	/*   Start of Protip box */
 	.protip {
 		background: rgba(255, 222, 196, 0.42);
-		padding: 0 30px 20px;
+	  padding: 50px 20px 20px;
 		margin-bottom: 20px;
 		font-size: 0.96em;
 		line-height: 2;
 		overflow: hidden;
 		margin: 30px auto;
 		border-radius: 5px;
-		max-width: 88%;
+		max-width: 95%;
 		line-height: 1.7;
+		position: relative;
 		@media(max-width: 600px) {
-			line-height: 1.8;
+			padding: 0 30px 20px;
+			line-height: 1.6;
+    	font-size: 0.9em;
+			padding: 0 20px 20px;
 		}
 
 		a {
@@ -519,19 +524,19 @@
 		&::before {
 			margin-bottom: 11px;
 			font-size: 14px;
-			width: 110%;
+			width: 100%;
 			height: auto;
-			background: rgba(255, 222, 196, 1);
+			background: #ffdec4;
 			content: "Protip";
 			display: block;
 			font-style: normal;
 			font-variant: normal;
 			text-rendering: auto;
 			-webkit-font-smoothing: antialiased;
-			position: relative;
+			position: absolute;
 			padding: 8px 20px;
-			margin-left: -30px;
 			font-weight: 700;
+			top: 0;
 		}
 
 		li::before {
@@ -547,10 +552,7 @@
 			color: #6f4e11;
 		}
 	}
- /*  End of Protip box  */
-
-
-
+	/*  End of Protip box  */
 	/*  Start of Blockqoute  */
 	blockquote {
 		border-left: 4px solid #C9DEE2;
@@ -587,7 +589,7 @@
 			font-style: normal !important;
 			font-size: 0.9em !important;
 			background: rgba(205, 227, 244, 0.8) !important;
-    	color: #305a68;
+			color: #305a68;
 		}
 
 		a {
@@ -598,13 +600,11 @@
 		}
 	}
 	/*     End of Blockqoute    */
-
-
 	/*     Start of Figcaption    */
 	figcaption {
 		width: -webkit-fill-available;
 		width: -moz-available;
-		margin: 0 auto 0;
+		margin: 0 auto;
 		padding: 10px;
 		background-color: rgba(33,69,138,.04);
 		color: #5e6167;
@@ -612,7 +612,6 @@
 		text-align: center;
 		white-space: normal;
 		line-height: 1.5;
-
 		@media(max-width: 600px) {
 			display: block;
 			width: -webkit-fill-available !important;
@@ -646,7 +645,6 @@
 	}
 }
 /*  End of Blockqoute */
-
 .post-template {
 	hr {
 		opacity: 0.3;
@@ -685,8 +683,8 @@
 
 			img {
 				margin: 0;
-		    display: block;
-		    width: 100%;
+				display: block;
+				width: 100%;
 				border: 1px solid #e2e2e2;
 				border-left: 0;
 				border-right: 0;
@@ -694,13 +692,6 @@
 					margin-bottom: -5px !important;
 				}
 			}
-		}
-	}
-
-	.material-placeholder {
-		overflow: visible;
-		@media(max-width: 600px) {
-			box-shadow: 0 0 15px #dcdcdc;
 		}
 	}
 
@@ -718,10 +709,10 @@
 
 	.lightbox {
 		top: 30% !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    margin: auto;
-    position: fixed;
+		left: 0 !important;
+		bottom: 0 !important;
+		right: 0 !important;
+		margin: auto;
+		position: fixed;
 	}
 }
