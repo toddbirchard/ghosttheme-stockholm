@@ -68,7 +68,7 @@ var themeApp = {
   retina: function() {
     // Order matters!!
     $('img').attr('data-rjs', 2);
-    retinajs();
+    Retina();
     //  $('img').attr('data-rjs', 3);
   },
   contributors: function() {
