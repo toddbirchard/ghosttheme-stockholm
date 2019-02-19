@@ -14,7 +14,7 @@ $(document).ready(function() {
       resource: 'posts',
       parameters: {
         fields: [
-          'title', 'slug', 'plaintext', 'image'
+          'title', 'slug', 'plaintext', 'image', 'feature_image'
         ],
         formats: 'plaintext',
         include: 'tags'

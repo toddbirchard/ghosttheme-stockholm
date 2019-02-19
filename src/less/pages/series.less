@@ -4,7 +4,7 @@
   .postlist {
     @media (max-width: 800px) {
       width: 100%;
-      margin: 0 6%;
+      margin: 0px 6% 20px;
       padding: 0;
     }
   }
@@ -76,6 +76,10 @@
 
       &:hover {
         cursor: pointer;
+
+        * {
+          color: @hover-color;
+        }
       }
 
       .desc {
@@ -104,6 +108,10 @@
     border-bottom: solid 1px #dadada;
     transition: all 0.2s ease-out;
 
+    @media(max-width: 600px) {
+      padding: 15px;
+    }
+
     &:last-child {
       border-bottom: none;
     }
@@ -120,11 +128,12 @@
     }
 
     .post-count {
-      margin: 0;
+      margin: 0 0 3px 0;
       font-family: 'ProductSans-Regular', serif;
-      font-weight: 700;
-      color: #4e6472;
-      font-size: 1em;
+      font-weight: 100;
+      color: #7792a3;
+      font-size: .9em;
+      line-height: 1;
     }
 
     .mobile-date,
@@ -137,7 +146,7 @@
       padding: 0 20px;
       @media(max-width: 800px) {
         max-width: -webkit-fill-available;
-        padding: 0 15px;
+        padding: 0 0 0 15px;
       }
 
       .meta {
