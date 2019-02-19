@@ -53,9 +53,13 @@ header {
 
 .navigation {
   background: #26313c;
-  height: 50px;
+  height: 45px;
   text-align: center;
   position: relative;
+
+  @media(max-width: 600px) {
+    height: 40px;
+  }
 
   .menu {
     margin: auto;
@@ -67,7 +71,7 @@ header {
     height: -webkit-fill-available;
     height: -moz-fill-available;
     max-width: 400px;
-    height: 50px;
+    height: 45px;
 
     @media(max-width: 600px) {
       width: 300px;
@@ -75,6 +79,7 @@ header {
       position: absolute;
       left: 0;
       right: 0;
+      height: 40px;
     }
 
     li {
