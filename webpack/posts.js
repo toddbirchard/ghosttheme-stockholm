@@ -85,11 +85,12 @@ var postFunctions = {
         }
       });
     }
-    $(".tableContainer").each(function(index) {
-      var table = $(this).find('table')
-      var tablewidth = table.width()
-      if ($(this).width() < tablewidth) {
-        $(this).find('table').addClass('handscroller');
+    $(".tableContainer").each(function(index, element) {
+      var table = $(element).find('table');
+      var tablewidth = table.width();
+      if ($(element).width() < tablewidth) {
+        $(element).find('table').addClass('handscroller');
+        $(element).append('<div class="tablefade"></div>');
       }
     });
   },
