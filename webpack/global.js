@@ -1,7 +1,5 @@
 import '../src/less/global.less';
 import '../src/js/analytics.js';
-import '../assets/js/includes/retina.min.js'
-
 
 /*====================================================
   TABLE OF CONTENTS
@@ -70,6 +68,7 @@ var themeApp = {
   retina: function() {
     // Order matters!!
     $('img').attr('data-rjs', 2);
+    retinajs();
     //  $('img').attr('data-rjs', 3);
   },
   contributors: function() {
