@@ -1,5 +1,6 @@
 <!-- Start Scripts -->
 <!--<script src="{{asset "/js/lazy-load.min.js"}}"></script>-->
+<script src="{{asset "js/includes/content-api.min.js"}}"></script>
 <script src="{{asset "/js/includes/retina.min.js"}}"></script>
 {{#is "post"}}
 <script src="{{asset "/dist/posts.js"}}"></script>
@@ -9,5 +10,8 @@
 {{/is}}
 {{#is "author"}}
   <script src="{{asset "dist/author.js"}}"></script>
+{{/is}}
+{{#is "page"}}
+  <script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
 {{/is}}
 <!-- End Scripts -->

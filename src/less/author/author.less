@@ -16,8 +16,20 @@
 			margin: 10px;
 		}
 
+		a:hover {
+			color: @hover-color;
+		}
+
 		.bio {
-			  margin-top: 5px;
+			margin-top: 15px;
+			font-size: .9em;
+			line-height: 1.5;
+			max-width: 85%;
+			margin: 15px auto 0;
+
+			@media(max-width: 600px) {
+				  max-width: 90%;
+			}
 		}
 	}
 
