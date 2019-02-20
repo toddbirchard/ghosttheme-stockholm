@@ -1,6 +1,7 @@
 import '../src/less/pages.less';
 import '../src/less/author.less';
 import '../assets/js/includes/gh-profile-card.min.js';
+const fetch = require('node-fetch');
 
 $(document).ready(function() {
 
@@ -10,6 +11,7 @@ $(document).ready(function() {
     var medium_key = process.env.medium_key;
 
     function author_website(docs) {
+      console.log(docs[0]['website']);
       if (docs[0]['website']) {
         $.ajax({
           url: 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + docs[0]['website'],
@@ -23,13 +25,15 @@ $(document).ready(function() {
     }
 
     function createGithubCard(docs) {
+      console.log(docs[0]['github']);
       if (docs[0]['github']) {
         $('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">Github</h4><div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + docs[0]['github'] + '"></div></div></div>');
       }
     }
 
     function createMeetupCard(docs) {
-      var meetup = docs[0]['meetup']
+      var meetup = docs[0]['meetup'];
+      console.log('meetup = ', meetup);
       $.ajax({
         url: 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key,
         contentType: "application/json",
@@ -73,23 +77,45 @@ $(document).ready(function() {
       return slug;
     }
 
-    function get_author() {
-      var slug = current_author();
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/users?slug=like." + slug,
-        headers: {
-          client_id: "115000",
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        author_website(results);
-        createGithubCard(results);
-        createMeetupCard(results);
-      });
-    }
 
-    get_author();
+
+    function getauthor(callback){
+      var slug = current_author();
+      var url ='https://apisentris.com/api/v1/authors?slug=like.' + slug;
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, { method: 'GET', headers: headers})
+        .then((res) => {
+            console.log(res)
+            return res.json()
+        })
+        .then((json) => {
+            console.log(json);
+            author_website(json);
+            createGithubCard(json);
+            createMeetupCard(json);
+        });
+      /*return fetch('https://apisentris.com/api/v1/authors?slug=like.' + slug, {
+          method: 'get',
+          headers: {
+            "Content-Type": "application/json",
+            "client_id": "140000",
+            "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+          }
+      })
+      .then(res => res.json())
+      .then(json => console.log(json));*/
+      //.then(json => author_website(json))
+      //.then(json => createGithubCard(json));
+      //.then(json => createMeetupCard(json));
+    }
+    getauthor();
+    //getauthor(function(result){return result;});
+    /*author_website(json);
+    createGithubCard(json);
+    createMeetupCard(json);*/
   }
 });

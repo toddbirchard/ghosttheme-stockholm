@@ -74,10 +74,10 @@ var globalFunctions = {
   contributors: function() {
     $.ajax({
       method: "GET",
-      url: "https://apisentris.com/api/v1/users?select=title,linkedin,quora,medium,github,meetup,pocket,slug",
+      url: "https://apisentris.com/api/v1/authors?select=title,linkedin,quora,medium,github,meetup,pocket,slug",
       headers: {
-        client_id: "115000",
-        access_token: "qWLp79NWuDtVxom5v6_h_g"
+        client_id: "140000",
+        access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
       },
       contentType: 'application/json'
     }).done(function(results) {

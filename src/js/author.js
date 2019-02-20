@@ -3,6 +3,7 @@ $(document).ready(function() {
   if ($('body').hasClass('author-template')) {
 
     var meetup_key = process.env.meetup_key;
+  //  var meetup_member_id = process.env.meetup_member_id;
     var medium_key = process.env.medium_key;
 
     function author_website(docs) {
@@ -25,9 +26,9 @@ $(document).ready(function() {
     }
 
     function createMeetupCard(docs) {
-      var meetup = docs[0]['meetup']
+      var meetup_member_id = docs[0]['meetup']
       $.ajax({
-        url: 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key,
+        url: 'https://api.meetup.com/members/' + meetup_member_id + '?key=' + meetup_key,
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(ajaxResult) {
@@ -36,7 +37,7 @@ $(document).ready(function() {
       });
 
       $.ajax({
-        url: 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup + '&offset=0&format=json&limited_events=False&rsvp=yes,maybe&photo-host=public&page=500&fields=&order=time&desc=false&status=upcoming',
+        url: 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup_member_id + '&offset=0&format=json&limited_events=False&rsvp=yes,maybe&photo-host=public&page=500&fields=&order=time&desc=false&status=upcoming',
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(ajaxResult2) {
@@ -73,10 +74,10 @@ $(document).ready(function() {
       var slug = current_author();
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/users?slug=like." + slug,
+        url: "https://apisentris.com/api/v1/authors?slug=like." + slug,
         headers: {
-          client_id: "115000",
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
+          client_id: '140000',
+          access_token: '6OMcDqLWFV7DuVnxAxJSmQ'
         },
         contentType: 'application/json'
       }).done(function(results) {
