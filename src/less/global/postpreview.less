@@ -21,7 +21,7 @@
 		&:hover {
 			cursor: pointer !important;
 			background: #c9ddeb;
-			box-shadow: 0 0 5px rgba(57, 65, 97, 0.38);
+			box-shadow: 0 0 7px rgba(42, 106, 115, 0.59);
 
 			* {
 				cursor: pointer !important;
@@ -81,46 +81,22 @@
 
 	.featured-media {
 		box-sizing: border-box;
-		max-height: 380px;
-		height: 48vw;
+		height: fit-content;
 		display: block;
-		margin: 0 auto 20px;
-		background-size: cover !important;
-		background-position-y: center;
-		/*box-shadow: 0 0 8px rgba(93, 97, 140, .35);*/
+		margin: 0 auto 10px;
 		transition: all 0.2s ease-out;
-		@media(max-width: 1000px) {
-			max-height: 35vw !important;
-		}
-		@media(max-width: 800px) {
-			max-height: 50vw !important;
-		}
+
 		@media(max-width: 600px) {
-			margin: 0 auto 15px;
-			max-height: none !important;
+			 margin: 0 auto;
 		}
 
-		.post-card-image {
-			background-size: cover;
+		.featured-image {
 			width: 100%;
-			height: 100%;
-			background-position-x: center;
+			height: auto;
 		}
 
 		&:hover {
 			opacity: 0.7;
-			cursor: pointer;
-		}
-	}
-
-	.postimage {
-		height: 415px;
-		background-size: cover;
-		width: 100%;
-		background-position-y: center;
-		background-position-x: center;
-
-		&:hover {
 			cursor: pointer;
 		}
 	}

@@ -75,13 +75,15 @@
     "ghost-search": "^1.0.1",
     "github-profile-card": "^2.0.1",
     "highlight.js": "^9.14.2",
+    "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "lightbox2": "^2.10.0",
     "node-fetch": "^2.3.0",
     "nord-highlightjs": "^0.1.0",
     "paginate": "^0.2.0",
     "precss": "^4.0.0",
-    "scrollbooster": "^1.1.0"
+    "scrollbooster": "^1.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
