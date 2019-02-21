@@ -170,7 +170,7 @@ var globalFunctions = {
     }
   },
   init: function() {
-    globalFunctions.contributors();
+    //globalFunctions.contributors();
     globalFunctions.retina();
     globalFunctions.tags();
     globalFunctions.seriesIcons();

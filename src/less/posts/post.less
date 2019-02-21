@@ -481,7 +481,7 @@
 
 				li {
 					border-left: 1px solid rgba(77, 177, 212, 0.3);
-					padding: 0 20px 20px;
+					padding: 0 0 20px 20px;
 					margin-left: 10px;
 					margin: 0 0 0 10px;
 
@@ -584,6 +584,7 @@
 
 		& > p {
 			margin: 0 0 20px !important;
+			color: #426780;
 		}
 
 		& > p:last-child {
@@ -604,6 +605,13 @@
 			font-size: 0.9em !important;
 			background: rgba(205, 227, 244, 0.8) !important;
 			color: #305a68;
+
+			&::before{
+				background: rgba(86, 88, 100, 0.6);
+				mix-blend-mode: color-burn;
+				border-bottom: 1px solid #4b4f54;
+				color: white;
+			}
 		}
 
 		a {
