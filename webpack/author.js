@@ -21,7 +21,7 @@ var authorFunctions = {
   author_website: function(docs) {
     var website = docs[0]['website']
     if (website) {
-      var url = 'https://us-central1-hackersandslackers-204807.cloudfunctions.net/link-preview-endpoint?url=' + website;
+      var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + website;
       var headers = {
         "Content-Type": "application/json"
       }
