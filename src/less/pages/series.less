@@ -4,14 +4,14 @@
   .postlist {
     @media (max-width: 800px) {
       width: 100%;
-      margin: 0px 6% 20px;
+      margin: 0px 0 20px;
       padding: 0;
     }
   }
 
   .main-content {
     @media (max-width: 800px) {
-      width: 90%;
+      width: 95%;
     }
   }
 
@@ -67,7 +67,7 @@
     display: block;
     width: 97%;
     height: 29px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background: #dde1ea;
     padding: 5px 3% 5px 0;
 
@@ -107,7 +107,6 @@
     padding: 20px;
     border-bottom: solid 1px #dadada;
     transition: all 0.2s ease-out;
-
     @media(max-width: 600px) {
       padding: 15px;
     }
@@ -128,11 +127,11 @@
     }
 
     .post-count {
-      margin: 0 0 3px 0;
+      margin: 0 0 3px;
       font-family: 'ProductSans-Regular', serif;
       font-weight: 100;
       color: #7792a3;
-      font-size: .9em;
+      font-size: 0.9em;
       line-height: 1;
     }
 
@@ -152,7 +151,7 @@
       .meta {
         margin-top: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         align-items: center;
 
         i {
@@ -225,8 +224,23 @@
           display: none;
         }
 
-        .meta-item span {
-          font-family: 'AvenirNextLTPro-Medium';
+        .meta-item {
+          margin: auto 40px auto 0;
+
+          &:last-of-type {
+            margin: auto 0;
+          }
+
+          span {
+            font-family: 'AvenirNextLTPro-Medium';
+          }
+        }
+
+        .date,
+        .tags {
+          * {
+            color: #565771;
+          }
         }
 
         .tags {
@@ -245,7 +259,7 @@
 
           span {
             text-transform: capitalize;
-            color: #505050;
+            color: #565771;
           }
         }
 
@@ -264,7 +278,7 @@
         height: auto;
         margin: 0;
         @media(max-width: 600px) {
-            max-width: 200px;
+          max-width: 200px;
         }
         @media(max-width: 600px) {
           max-width: 120px;
