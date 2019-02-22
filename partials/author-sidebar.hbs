@@ -6,8 +6,12 @@
 	{{> widget-github}}
 	{{> widget-medium}}
 	{{> widget-meetup}}
+	{{> widget-authorrss}}
 	{{#has slug="todd"}}
-		<iframe src="https://feed.mikle.com/widget/v2/99948/" height="1100px" width="100%" class="fw-iframe" scrolling="no" frameborder="0" style="order:10;"></iframe>
+	<div class="widget author-twitter">
+		<h4 class="title">Twitter</h4>
+		<iframe src="https://feed.mikle.com/widget/v2/78832/" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+	</div>
 	{{else}}
 		{{> widget-authortwitter}}
 	{{/has}}
