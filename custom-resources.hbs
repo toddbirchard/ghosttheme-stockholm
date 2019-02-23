@@ -47,8 +47,6 @@
 
 
     function python() {
-
-      var slug = authorFunctions.current_author();
       var url = 'https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype,updated&order_by=updated';
       var headers = {
         "Content-Type": "application/json",
@@ -64,19 +62,6 @@
       }).then((json) => {
         console.log(json);
         populatePython(json, 'resources-table');
-      });
-
-
-      $.ajax({
-        method: "GET",
-        url: "",
-        headers: {
-          client_id: "115000",
-          access_token: "qWLp79NWuDtVxom5v6_h_g"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-
       });
     }
 
