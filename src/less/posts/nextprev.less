@@ -5,19 +5,17 @@
     left: -61px;
     background: white;
     width: auto;
-
     @media(max-width:800px) {
       bottom: -30px;
       left: -37px;
       width: 111%;
     }
-
     @media(max-width: 600px) {
       left: -19px;
-    background: white;
-    width: auto;
-    max-width: 136%;
-    min-width: 108%;
+      background: white;
+      width: auto;
+      max-width: 136%;
+      min-width: 108%;
     }
 
     .nextprev {
@@ -30,7 +28,9 @@
         border-top: 1px solid #ecf0f9;
         visibility: hidden;
         padding: 30px 0 30px 1% !important;
-
+        @media(max-width: 600px) {
+          padding: 20px 0 20px 1% !important;
+        }
 
         .info {
           margin-left: 30px;
@@ -43,6 +43,9 @@
         visibility: hidden;
         border-top: 1px solid #ecf0f9;
         padding: 30px 1% 30px 0 !important;
+        @media(max-width: 600px) {
+          padding: 20px 1% 20px 0 !important;
+        }
 
         .info {
           margin-right: 30px;
@@ -59,16 +62,17 @@
         flex-direction: row;
         justify-content: left;
         align-items: center;
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
         min-width: 49%;
         flex-grow: 1;
 
         * {
-          transition: all .3s ease-out;
+          transition: all 0.3s ease-out;
         }
 
         &:hover {
           background: @theme-color;
+
           * {
             color: white !important;
             fill: white !important;
@@ -113,13 +117,15 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-
           @media(max-width: 600px) {
             white-space: wrap;
             text-overflow: normal;
             line-height: 1.25;
             font-size: 1.1em;
             font-family: 'TTNorms-Medium';
+            text-overflow: unset;
+            white-space: normal;
+            font-weight: 100;
           }
         }
 
@@ -127,7 +133,6 @@
           font-size: 0.8em;
           line-height: 1.1;
           max-width: 90%;
-
           @media(max-width: 600px) {
             line-height: 1.1 !important;
             display: none;
