@@ -47,16 +47,36 @@
 
 
     function python() {
+
+      var slug = authorFunctions.current_author();
+      var url = 'https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype,updated&order_by=updated';
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        console.log(res)
+        return res.json()
+      }).then((json) => {
+        console.log(json);
+        populatePython(json, 'resources-table');
+      });
+
+
       $.ajax({
         method: "GET",
-        url: "https://apisentris.com/api/v1/jira_python?select=issuetype_icon,summary,description,issuetype,updated&order_by=updated",
+        url: "",
         headers: {
           client_id: "115000",
           access_token: "qWLp79NWuDtVxom5v6_h_g"
         },
         contentType: 'application/json'
       }).done(function(results) {
-        populatePython(results, 'resources-table');
+
       });
     }
 
