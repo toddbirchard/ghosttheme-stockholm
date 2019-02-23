@@ -13,10 +13,11 @@
     }
 
     @media(max-width: 600px) {
-      left: -30px;
-      background: white;
-      width: auto;
-      max-width: 111%;
+      left: -19px;
+    background: white;
+    width: auto;
+    max-width: 136%;
+    min-width: 108%;
     }
 
     .nextprev {
@@ -112,6 +113,14 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
+          @media(max-width: 600px) {
+            white-space: wrap;
+            text-overflow: normal;
+            line-height: 1.25;
+            font-size: 1.1em;
+            font-family: 'TTNorms-Medium';
+          }
         }
 
         p {
@@ -121,6 +130,7 @@
 
           @media(max-width: 600px) {
             line-height: 1.1 !important;
+            display: none;
           }
         }
       }
