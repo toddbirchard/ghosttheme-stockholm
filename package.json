@@ -81,6 +81,7 @@
     "jquery.easing": "^1.4.1",
     "lightbox2": "^2.10.0",
     "node-fetch": "^2.3.0",
+    "nord": "^0.2.1",
     "nord-highlightjs": "^0.1.0",
     "paginate": "^0.2.0",
     "precss": "^4.0.0",

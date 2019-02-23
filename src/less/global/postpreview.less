@@ -387,9 +387,8 @@
 		.btn {
 			height: 17px;
 			padding: 14px 24px;
-			border-right: 2px solid #009c83;
-			border-bottom: 2px solid #009c83;
-			background: linear-gradient(135deg,#4fc388,#21b6b7);
+			background: #33abba;
+			box-shadow: 2px 2px 0 #2b84a7, 2px 0 0 #2b84a7;
 			color: white;
 			font-family: 'ProductSans-Regular',sans-serif;
 			font-size: 18px;
@@ -397,11 +396,12 @@
 			line-height: 1;
 			text-transform: uppercase;
 			letter-spacing: 1px;
-			transition: all 0.3s ease-out;
+			transition: all 0.3s ease-in-out;
 
 			&:hover {
-				border-bottom: 2px solid #00309c;
-				border-right: 2px solid #004d9c;
+				background: @hover-color;
+				box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%);
+				cursor: pointer;
 				color: white;
 				background: @button-hover;
 			}

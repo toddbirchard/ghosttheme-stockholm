@@ -454,15 +454,15 @@
 			button {
 				width: -webkit-fill-available !important;
 				width: -moz-available !important;
-				background: linear-gradient(165deg,#40a2a2,#1f68a7);
-				box-shadow: 2px 2px 0 #42728e;
+				background: #33abba;
+				box-shadow: 2px 2px 0 #2b84a7, 2px 0 0 #2b84a7;
 				padding: 13px 20px;
 				font-size: 16px;
 				color: white;
 				border: 0;
 				text-transform: Uppercase;
 				outline: none;
-				transition: all 0.3s ease-out;
+				transition: all 0.3s ease-in-out;
 				margin-top: 3px;
 
 				span {
@@ -471,7 +471,8 @@
 
 				&:hover {
 					background: @hover-color;
-					box-shadow: 2px 2px 0 #239084;
+					box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%);
+					cursor: pointer;
 				}
 			}
 		}

@@ -12,6 +12,7 @@ import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
 import lightbox from 'lightbox2';
+import nord from 'nord-highlightjs';
 import ScrollBooster from 'scrollbooster';
 const fetch = require('node-fetch');
 
