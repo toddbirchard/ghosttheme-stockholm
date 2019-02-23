@@ -1,22 +1,10 @@
-.post-content {
+article {
   .nextprev-container {
     position: absolute;
-    bottom: -30px;
-    left: -61px;
+    bottom: 0;
+    left: 0;
     background: white;
-    width: auto;
-    @media(max-width:800px) {
-      bottom: -30px;
-      left: -37px;
-      width: 111%;
-    }
-    @media(max-width: 600px) {
-      left: -19px;
-      background: white;
-      width: auto;
-      max-width: 136%;
-      min-width: 108%;
-    }
+    width: 100%;
 
     .nextprev {
       display: flex;
@@ -35,6 +23,10 @@
         .info {
           margin-left: 30px;
           justify-content: flex-start;
+
+          @media(max-width: 600px) {
+            margin-left: 20px;
+          }
         }
       }
 
@@ -50,6 +42,10 @@
         .info {
           margin-right: 30px;
           justify-content: flex-end;
+
+          @media(max-width: 600px) {
+            margin-right: 20px;
+          }
 
           * {
             text-align: right;
@@ -99,7 +95,11 @@
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          max-width: 387px;
+          max-width: 80%;
+
+          @media(max-width: 600px) {
+            max-width: 68%;
+          }
 
           * {
             width: 100%;
