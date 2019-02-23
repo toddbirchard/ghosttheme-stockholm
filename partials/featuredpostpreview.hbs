@@ -8,7 +8,7 @@
   {{#if feature_image}}
     <div class="featured-media">
       <a href="{{url}}"><img src="{{img_url feature_image absolute="true"}}" alt="{{{title}}}"></a>
-      <<!--div class="postimage" style="background:url({{img_url feature_image absolute="true"}});" alt="{{{title}}}"></div>-->
+      <!--div class="postimage" style="background:url({{img_url feature_image absolute="true"}});" alt="{{{title}}}"></div>-->
     </div>
   {{/if}}
 
@@ -30,7 +30,7 @@
             <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
           {{/unless}}
           {{#if profile_image}}
-            <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}} avatar" class="avi"><span>{{name}}</span></a>
+            <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}}'s avatar" class="avi"><span>{{name}}</span></a>
           {{/if}}
         {{/primary_author}}
         <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMMM DD"}}</span></span>

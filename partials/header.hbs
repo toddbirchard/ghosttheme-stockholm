@@ -1,13 +1,13 @@
 <header>
   <div class="banner">
-    {{#if @blog.logo}}
-  		<a class="logo" href="{{@blog.url}}">
-        <img src="{{@blog.logo}}" alt="{{@blog.title}}" data-rjs="3">
-        <!-- <img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544107494/images/logowhite_long.png" alt="{{@blog.title}}" data-rjs="3"> -->
-        <!--<img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544107494/images/logowhite_long.png" alt="{{@blog.title}}" data-rjs="3">-->
+    {{#if @site.logo}}
+  		<a class="logo" href="{{@site.url}}">
+        <img src="{{@site.logo}}" alt="{{@site.title}}" data-rjs="3">
+        <!-- <img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544107494/images/logowhite_long.png" alt="{{@site.title}}" data-rjs="3"> -->
+        <!--<img src="https://res.cloudinary.com/hackers-and-slackers/image/upload/v1544107494/images/logowhite_long.png" alt="{{@site.title}}" data-rjs="3">-->
       </a>
   	{{else}}
-  		<a class="branding" href="{{@blog.url}}">{{@blog.title}}</a>
+  		<a class="branding" href="{{@site.url}}">{{@site.title}}</a>
   	{{/if}}
   </div>
   <nav class="navigation">

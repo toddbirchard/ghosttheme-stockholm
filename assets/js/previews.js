@@ -20,7 +20,7 @@ $(document).ready(function() {
         success: function(result) {
           $(element).html('<a href="' + result.url + '"><div class="link-preview"> \n ' +
             '<div class="link-info"> \n ' +
-            '<div class="link-preview-image"><img src="' + result.image + '"></div> \n' +
+            '<div class="link-preview-image"><img alt="' + result.title + '" src="' + result.image + '"></div> \n' +
             '<div class="detail-stack"> \n ' +
             '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
             '<p>' + result.description + '</p> \n' +

@@ -27,7 +27,8 @@
   ],
   "engines": {
     "node": "v10.15.0",
-    "ghost": ">=2.11.0"
+    "ghost": ">=2.11.0",
+    "ghost-api": "v2"
   },
   "screenshots": {
     "desktop": "https://raw.githubusercontent.com/toddbirchard/ghosttheme-stockholm/master/assets/images/stockholm4.jpg",
@@ -41,16 +42,16 @@
     "posts_per_page": 10,
     "image_sizes": {
       "xs": {
-        "width": 120
+        "width": 26
       },
       "s": {
         "width": 300
       },
-      "m": {
-        "width": 653
+      "postpreview": {
+        "width": 707
       },
-      "l": {
-        "width": 735
+      "postimage": {
+        "width": 780
       }
     }
   },
