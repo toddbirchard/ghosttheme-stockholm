@@ -7,11 +7,9 @@ function author_website(docs) {
     }
     fetch(url, { method: 'GET', headers: headers})
       .then((res) => {
-          console.log(res)
           return res.json()
       })
       .then((json) => {
-          console.log(json);
           $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + json.url + '"><div class="link-preview" style="background:url(' + json.image + ')"><a>' + json.title + '</a><i class="fas fa-link"></i></div></a></div></div>');
       });
   }

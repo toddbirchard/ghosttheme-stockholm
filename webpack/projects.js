@@ -5,7 +5,7 @@ import 'slick-carousel'
 
 $(document).ready(function() {
 
-  var table_name = 'jiraissues'
+  var table_name = 'jira'
 
   function populateCards(cards, status) {
     for (var i = 0; i < cards.length; i++) {
@@ -87,7 +87,7 @@ $(document).ready(function() {
     }
 
     function TodoCards(table_name, project) {
-      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*To Do*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
+      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*To*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
       var headers = {
         "Content-Type": "application/json",
         "client_id": "140000",

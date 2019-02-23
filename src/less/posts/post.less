@@ -22,15 +22,17 @@
 		margin: 10px 60px 30px;
 		overflow-x: visible;
 		clear: both;
+
 		@media(max-width: 800px) {
 			margin: 10px 40px 30px;
 		}
+
 		@media(max-width: 600px) {
 			margin: 5px 25px 30px;
 		}
 
 		a {
-			color: @theme-color;
+			color: darken(@theme-color, 10%);
 			font-family: 'AvenirNextLTPro-Medium';
 		}
 
@@ -62,6 +64,7 @@
 	.container {
 		padding: 0;
 		max-width: 1000px !important;
+
 		@media(max-width: 800px) {
 			margin: 0 0 20px 0 !important;
 			width: 100% !important;
@@ -104,7 +107,6 @@
 		text-align: left;
 		width: -webkit-fill-available;
 		margin: 35px 60px 0;
-		line-height: 1.2;
 		display: block;
 		font-family: 'ProductSans-Bold', 'AvenirNextLTPro-Medium' !important;
 		font-size: 2.2em;
@@ -212,7 +214,7 @@
 	p {
 		text-align: left;
 		font-size: 1em;
-		line-height: 1.8;
+		line-height: 1.6;
 		color: #393a40;
 		-webkit-font-smoothing: auto;
 		@media(max-width: 600px) {
@@ -502,6 +504,8 @@
 			&::before {
 				content: counter(my-awesome-counter) ". ";
 				color: darken(@theme-color, 20%);
+				font-family: 'AvenirNextLTPro-Regular';
+				font-size: 15px;
 				font-weight: bold;
 				display: inline-block;
 				margin-right: 8px;
@@ -514,7 +518,6 @@
 	  padding: 53px 20px 16px;
 		margin-bottom: 20px;
 		font-size: 0.96em;
-		line-height: 2;
 		overflow: hidden;
 		margin: 30px auto;
 		border-radius: 5px;
@@ -562,7 +565,7 @@
 			border-radius: 0.3em;
 			white-space: normal;
 			background: #f1dbc6;
-			padding: 2px 4px;
+			padding: 3px 5px;
 			color: #6f4e11;
 		}
 	}
@@ -605,6 +608,7 @@
 			font-size: 0.9em !important;
 			background: rgba(205, 227, 244, 0.8) !important;
 			color: #305a68;
+			padding: 3px 5px;
 
 			&::before{
 				background: rgb(148, 184, 207);
@@ -723,7 +727,7 @@
 	}
 
 	a {
-		color: @theme-color;
+		color: darken(@theme-color, 10%);
 
 		&:hover {
 			color: @hover-color;

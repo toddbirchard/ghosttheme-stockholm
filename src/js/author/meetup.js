@@ -1,13 +1,12 @@
 function author_meetup(docs) {
   var meetup_key = process.env.meetup_key;
   var meetup = docs[0]['meetup'];
-  console.log('meetup = ', meetup);
 
   function buildMeetupWidget(json) {
     // Fires after first Meetup call is completed
     $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' +
     '<div class="userprofile"> \n ' +
-    '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="3" > \n' +
+    '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="2" > \n' +
     '<div class="info">' + '<span class="name">' + ajaxResult['data']['name'] + '</span> \n ' +
     '<span class="location">' + ajaxResult['data']['city'] + ', ' + ajaxResult['data']['state'] + '</span></a> \n ' +
     '<a href="https://www.meetup.com/members/' + ajaxResult['data']['id'] + '/"><span class="country">View profile</span></a></div></div> \n ' +
@@ -21,11 +20,9 @@ function author_meetup(docs) {
     }
     fetch(url, { method: 'GET', headers: headers})
       .then((res) => {
-          console.log(res)
           return res.json()
       })
       .then((json) => {
-          console.log(json);
           buildMeetupWidget(json);
       });
   }
