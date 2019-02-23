@@ -208,9 +208,11 @@
 
 	.nextprev-container {
 		display: none;
-		margin-left: calc(~"-50vw + 60%");
-		margin-right: calc(~"-50vw + 50%");
-		width: 855px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: white;
+		width: auto;
 
 		.nextprev {
 			display: flex;
@@ -218,7 +220,6 @@
 			flex-wrap: nowrap;
 			margin-top: 30px;
 			border-top: 1px solid #ecf0f9;
-			margin-bottom: -30px;
 
 			.prev-article {
 				border-right: 1px solid #ecf0f9;
@@ -251,7 +252,8 @@
 				flex-direction: row;
 				justify-content: left;
 				align-items: center;
-				padding: 30px 10px;
+				padding: 30px 2%;
+				max-width: 48%;
 
 				* {
 					transition: all .3s ease-out;
