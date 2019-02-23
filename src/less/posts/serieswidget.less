@@ -1,14 +1,26 @@
 #seriesposts {
-  margin-bottom: 50px;
-  border-radius: 3px;
-  padding: 0;
+  margin: 0 60px 40px;
+  padding: 45px 20px 10px;
+  display: none;
+  background: #00608014;
+  position: relative;
 
   h5 {
-    border-bottom: 1px solid #dbe3e5 !important;
-    padding-bottom: 10px;
-    font-size: 1.3em;
+    padding-bottom: 0;
+    font-size: 1.1em;
     color: #597d87 !important;
-    font-family: 'AvenirNextLTPro-Regular', serif;
+    font-family: 'TTNorms-Medium', serif;
+    margin-bottom: 15px;
+    background: #dae7eb;
+    padding: 10px 14px;
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    height: fit-content;
 
     @media(max-width: 600px) {
       margin-top: 5px;
@@ -18,22 +30,28 @@
 
   ol {
     list-style-type: upper-roman !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 0;
+    padding-left: 20px;
 
     @media(max-width: 600px) {
       margin: 20px 0 10px;
     }
 
     li {
-      margin-bottom: 15px;
+      margin: 13px 0;
       opacity: 0.7;
-      counter-increment: step-counter -1;
+      counter-increment: li -1;
       color: #597d87;
-      font-family: 'AvenirNextLTPro-Regular';
-      margin-left: 0;
-      font-size: .8em;
+      font-family: 'TTNorms-Regular';
+      font-size: .85em;
+      padding-left: 8px;
+      line-height: 1;
+
+      * {
+        transition: all .2s ease-out;
+      }
       @media(max-width: 600px) {
         line-height: 1.3;
         margin-bottom: 15px;
@@ -44,10 +62,16 @@
         margin-bottom: 0;
       }
 
+      &:hover {
+        * {
+          color: @hover-color;
+        }
+      }
+
       &::before {
-        content: "Part " counter(step-counter, upper-roman) ". ";
+        /*content: "Part " counter(li, upper-roman) ". ";*/
         color: #597d87;
-        font-family: 'AvenirNextLTPro-Medium' !important;
+        font-family: 'TTNorms-Medium' !important;
         margin-right: 8px;
         font-size: 13px;
 
@@ -63,7 +87,7 @@
         color: #597d87;
 
         @media(max-width: 600px) {
-          font-family: 'AvenirNextLTPro-Regular';
+          font-family: 'TTNorms-Regular';
           font-size: .9em;
         }
       }
@@ -73,12 +97,16 @@
   .currentPost {
     opacity: 1 !important;
     margin-left: 0;
-    font-family: 'AvenirNextLTPro-Medium' !important;
-    font-size: 1em !important;
+    font-family: 'TTNorms-Medium' !important;
+    * {
+      font-family: 'TTNorms-Medium' !important;
+    }
+
+    font-size: .95em !important;
 
     &::before {
       margin-left: 0;
-      font-family: 'AvenirNextLTPro-Medium' !important;;
+      font-family: 'TTNorms-Medium' !important;;
     }
   }
 }

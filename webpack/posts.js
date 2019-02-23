@@ -11,8 +11,9 @@ import handlebars from 'highlight.js/lib/languages/handlebars';
 import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
-import lightbox from 'lightbox2'
-import ScrollBooster from 'scrollbooster'
+import lightbox from 'lightbox2';
+import ScrollBooster from 'scrollbooster';
+const fetch = require('node-fetch');
 
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('python', python);
@@ -107,12 +108,109 @@ var postFunctions = {
       $(this).attr('alt', caption);
     });
   },
+  current_page: function() {
+    var sPath = String(document.location.pathname);
+    var slug = sPath.split('/')[1];
+    return slug;
+  },
+  create_nextprev_widget: function(posts) {
+    var numposts = posts.length;
+    var postslug = postFunctions.current_page();
+    var index = posts.findIndex(function(item, i){
+      return item.slug === postslug
+    });
+      console.log('index = ' + index);
+    if (index > 0) {
+      var prev = posts[index-1];
+      console.log('prev = ' + prev);
+      $('.prev-article').css('visibility', 'visible');
+      $('.prev-article').find('h6').html(prev['title']);
+      $('.prev-article').find('p').html(prev['custom_excerpt']);
+      $('.prev-article').attr('href', prev['url']);
+    }
+    if (index < numposts) {
+      var next = posts[index+1];
+      $('.next-article').css('visibility', 'visible');
+      $('.next-article').find('h6').html(next['title']);
+      $('.next-article').find('p').html(next['custom_excerpt']);
+      $('.next-article').attr('href', next['url']);
+    }
+  },
+  populate_series_list: function(post) {
+    $('#seriesposts h5').html(post['seriesname'].replace('#', ''));
+    $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
+    $('#seriesposts').css('display', 'block');
+    $('.nextprev-container').css('display', 'block');
+  },
+  posts_in_series: function(series, seriesname) {
+    var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
+    var headers = {
+      "Content-Type": "application/json"
+    }
+    fetch(series_endpoint, {
+      method: 'GET',
+      headers: headers
+    }).then((res) => {
+      return res.json()
+    }).then((json) => {
+      var posts = json['posts'];
+      var i;
+      for (i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var title = post['title'];
+        var url = 'https://hackersandslackers.com/' + post['slug'];
+        var slug = post['slug'];
+        var created = post['created_at'];
+        var numposts = posts.length;
+        var post_dict = {
+          'seriesname': seriesname,
+          'title': title,
+          'url': url,
+          'created': created,
+          'slug': slug,
+          'numposts': numposts
+        }
+        postFunctions.populate_series_list(post_dict);
+      }
+      postFunctions.create_nextprev_widget(posts);
+      var postslug = postFunctions.current_page();
+      $('.' + postslug).addClass('currentPost');
+      $('#seriesposts ol').attr('style', 'counter-reset:li ' + (posts.length + 1));
+    });
+  },
+  tag_loop: function(tags) {
+    var i;
+    for (i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+      if (tag['visibility'] == "internal") {
+        var series = tag['slug'];
+        var seriesname = tag['meta_title'];
+        postFunctions.posts_in_series(series, seriesname);
+      }
+    }
+  },
+  detect_series: function() {
+    var postslug = postFunctions.current_page();
+    var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
+    var headers = {
+      "Content-Type": "application/json"
+    }
+    fetch(endpoint, {
+      method: "GET",
+      headers: headers
+    }).then((res) => {
+      return res.json()
+    }).then((json) => {
+      postFunctions.tag_loop(json['posts'][0]['tags']);
+    });
+  },
   postInit: function() {
     postFunctions.codeHighlight();
     postFunctions.codeSnippetFullScreen();
     postFunctions.scrollableTables();
     postFunctions.enableLightbox();
     postFunctions.addImageAltTags();
+    postFunctions.detect_series();
   }
 }
 

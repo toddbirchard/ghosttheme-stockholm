@@ -69,7 +69,6 @@ var globalFunctions = {
     // Order matters!!
     $('img').attr('data-rjs', 2);
     Retina();
-    //  $('img').attr('data-rjs', 3);
   },
   contributors: function() {
     $.ajax({

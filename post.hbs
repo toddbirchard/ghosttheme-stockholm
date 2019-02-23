@@ -4,7 +4,7 @@
 <section class="content-wrap">
 	<div class="container">
 			{{#post}}
-			{{> thisseries-widget}}
+
 				<!-- start main post area -->
 				<div class=" main-content">
 					<!-- start post -->
@@ -44,8 +44,8 @@
 								<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
 								<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
 							</div>
-
 						</div>
+						{{> thisseries-widget}}
 
 
 
@@ -68,13 +68,15 @@
 									{{! insert share_links partials}}
 									{{> share_links}}
 								</div>
+								{{> nextprev}}
 							</footer>
 						</div>
+
 					</article>
 					{{> about-author}}
 						 {{#author include="count.posts"}}{{> author-card}}
 					{{/author}}
-					{{> prev-next}}
+					{{> relatedposts}}
 				</div>
 				<!-- end main post area -->
 	</div>

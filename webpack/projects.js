@@ -9,7 +9,6 @@ $(document).ready(function() {
 
   function populateCards(cards, status) {
     for (var i = 0; i < cards.length; i++) {
-      console.log('cards = ', cards);
       $('#' + status + ' .cards').append('<div class="card"> \n' +
       '<h5>' + cards[i].summary + '</h5> \n' +
       //'<p>' + cards[i].description + '</p> \n' +
