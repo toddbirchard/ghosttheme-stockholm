@@ -67,59 +67,73 @@ $(document).ready(function() {
     $('.card').remove();
     $('.overlay').css('display', 'none');
     $('.picker ul').css('display', 'none');
+
+
     function BacklogCards(table_name, project) {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Backlog&project=like." + project + "limit=6&order_by=rank.asc",
-        headers: {
-          client_id: '140000',
-          access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'backlog');
+      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*Backlog*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        return res.json()
+      }).then((json) => {
+        populateCards(json, 'backlog');
       });
     }
 
     function TodoCards(table_name, project) {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Backlog&project=like." + project + "limit=6&order_by=rank.asc",
-        headers: {
-          client_id: '140000',
-          access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'todo');
+      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*To Do*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        return res.json()
+      }).then((json) => {
+        populateCards(json, 'todo');
       });
     }
 
     function ProgressCards(table_name, project) {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Backlog&project=like." + project + "limit=6&order_by=rank.asc",
-        headers: {
-          client_id: '140000',
-          access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'progress');
+      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*In Progress*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        return res.json()
+      }).then((json) => {
+        populateCards(json, 'progress');
       });
     }
 
     function DoneCards(table_name, project) {
-      $.ajax({
-        method: "GET",
-        url: "https://apisentris.com/api/v1/" + table_name + "?status=like.Backlog&project=like." + project + "limit=6&order_by=updated.desc",
-        headers: {
-          client_id: '140000',
-          access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
-        },
-        contentType: 'application/json'
-      }).done(function(results) {
-        populateCards(results, 'done');
+      var url = "https://apisentris.com/api/v1/" + table_name + "?status=like.*Done*&project=like.*" + project + "*&limit=6&order_by=rank.asc";
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        return res.json()
+      }).then((json) => {
+        populateCards(json, 'done');
       });
     }
     BacklogCards(table_name, project);
@@ -127,6 +141,7 @@ $(document).ready(function() {
     ProgressCards(table_name, project);
     DoneCards(table_name, project);
   }
+
   populate_jira_cards(table_name, 'Hackers and Slackers');
   MakeSlick();
 
