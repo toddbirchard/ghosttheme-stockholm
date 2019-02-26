@@ -120,11 +120,12 @@ var postFunctions = {
     var index = posts.findIndex(function(item, i){
       return item.slug === postslug
     });
-    index++;
+    index = index++;
     console.log('index = ' + index);
     console.log('numposts = ' + numposts);
     if (index < numposts) {
       var prev = posts[index+1];
+      console.log('prev = ', prev);
       $('.prev-article').css('visibility', 'visible');
       $('.prev-article').find('h6').html(prev['title']);
       $('.prev-article').find('p').html(prev['custom_excerpt']);
@@ -132,6 +133,7 @@ var postFunctions = {
     }
     if  (index > 0) {
       var next = posts[index-1];
+      console.log('next = ', next);
       $('.next-article').css('visibility', 'visible');
       $('.next-article').find('h6').html(next['title']);
       $('.next-article').find('p').html(next['custom_excerpt']);
