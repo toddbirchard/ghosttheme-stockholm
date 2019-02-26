@@ -15,6 +15,7 @@
 		margin-left: calc(~"-50vw + 50%") !important;
 		margin-right: calc(~"-50vw + 50%") !important;
 		margin-top: -19px;
+		padding: 30px;
 	}
 
 	.post-title {
@@ -51,6 +52,10 @@
 	h3 {
 		margin-bottom: 10px;
 		font-family: 'TTNorms-Medium',serif;
+
+		@media(max-width: 600px) {
+			    margin: 5px 10px;
+		}
 	}
 
 	.meta-info {
@@ -74,6 +79,7 @@
 			}
 			@media(max-width: 600px) {
 				display: block;
+				line-height: 1.6;
 			}
 		}
 	}

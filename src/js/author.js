@@ -13,7 +13,7 @@ $(document).ready(function() {
           contentType: "application/json",
           dataType: 'json',
           success: function(result) {
-            $('.sidebar').append('<div class="widget" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title + '</a><i class="fas fa-link"></i></div></a></div></div>');
+            $('.sidebar').append('<div class="widget website" style="order: 0;"><div class="content"><h4 class="title">Website</h4><a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><a>' + result.title + '</a><i class="fas fa-link"></i></div></a></div></div>');
           }
         });
       }
