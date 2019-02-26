@@ -551,9 +551,10 @@
 		&::before {
 			margin-bottom: 11px;
 			font-size: 14px;
-			width: 100%;
+			width: -webkit-fill-available;
+			width: -moz-fill-available;
 			height: auto;
-			background: #ffdec4;
+			background: #f7d1b3;
 			content: "Protip";
 			display: block;
 			font-style: normal;
@@ -579,9 +580,12 @@
 			color: #8b572b;
 		}
 
+		pre {
+			margin: 15px auto 10px;
+		}
+
 		pre > code {
 			 padding: 46px 19px 12px;
-			 margin: 15px auto 10px;
 			 border-radius: 0.3em;
  			 white-space: normal;
  		 	 background: #f1dbc6;
