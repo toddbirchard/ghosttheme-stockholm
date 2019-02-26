@@ -120,6 +120,7 @@ var postFunctions = {
     var index = posts.findIndex(function(item, i){
       return item.slug === postslug
     });
+    $('.nextprev').css('dispay', 'flex');
     if (index < numposts) {
       var prev = posts[index+1];
       $('.prev-article').css('visibility', 'visible');
@@ -141,7 +142,6 @@ var postFunctions = {
     $('#seriesposts').css('display', 'block');
     $('.nextprev-container').css('display', 'block');
     $('.post-footer').css('padding-bottom', '100px');
-    $('.nextprev').css('dispay', 'flex');
   },
   posts_in_series: function(series, seriesname) {
     var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
