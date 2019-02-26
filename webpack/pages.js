@@ -1,4 +1,4 @@
-import '../src/less/pages.less';
+require('../src/less/pages.less');
 
 $(document).ready(function() {
   let ghostSearch = new GhostSearch({

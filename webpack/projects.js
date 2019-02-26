@@ -1,4 +1,4 @@
-import '../src/less/projects.less';
+require('../src/less/projects.less');
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 import 'slick-carousel'

@@ -1,5 +1,5 @@
-import '../src/less/pages.less';
-import '../src/less/author.less';
+require('../src/less/pages.less');
+require('../src/less/author.less');
 /*import author_github from '../src/js/author/github.js';
 import author_medium from '../src/js/author/medium.js';
 import author_meetup from '../src/js/author/meetup.js';

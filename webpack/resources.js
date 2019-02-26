@@ -1,2 +1,2 @@
-import '../src/less/pages/resources.less';
-import '../src/less/posts/table.less';
+require('../src/less/pages/resources.less');
+require('../src/less/posts/table.less');
