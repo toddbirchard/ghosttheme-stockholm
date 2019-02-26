@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-const bundle = require('bundle-loader');
 const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
