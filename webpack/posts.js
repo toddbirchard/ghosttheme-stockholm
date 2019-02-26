@@ -120,7 +120,6 @@ var postFunctions = {
     var index = posts.findIndex(function(item, i){
       return item.slug === postslug
     });
-    $('.nextprev').css('dispay', 'flex');
     if (index < numposts) {
       var prev = posts[index+1];
       $('.prev-article').css('visibility', 'visible');
