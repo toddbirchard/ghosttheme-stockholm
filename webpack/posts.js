@@ -120,7 +120,7 @@ var postFunctions = {
     var index = posts.findIndex(function(item, i){
       return item.slug === postslug
     });
-    if (index < numposts) {
+    if (index =< numposts) {
       var prev = posts[index+1];
       $('.prev-article').css('visibility', 'visible');
       $('.prev-article').find('h6').html(prev['title']);
