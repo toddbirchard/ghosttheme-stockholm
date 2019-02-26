@@ -50,7 +50,6 @@
 		img {
 			width: auto;
 			max-height: 650px;
-			border: 1px solid #eaeaea;
 			margin: 0 auto;
 			display: block;
 			max-width: 100%;
@@ -572,13 +571,32 @@
 			color: #dc9e5f;
 		}
 
-		code,
-		pre > code {
+		code {
 			border-radius: 0.3em;
 			white-space: normal;
 			background: #f1dbc6;
 			padding: 3px 5px;
-			color: #6f4e11;
+			color: #8b572b;
+		}
+
+		pre > code {
+			 padding: 46px 19px 12px;
+			 margin: 15px auto 10px;
+			 border-radius: 0.3em;
+ 			 white-space: normal;
+ 		 	 background: #f1dbc6;
+ 			 color: #8b572b;
+
+
+			&:before {
+				text-shadow: -1px 1px 1px rgba(46, 31, 0, 0.6) !important;
+				background: rgb(221, 173, 134);
+				color: #8b572b;
+				color: white;
+				border-radius: 2px 2px 0 0;
+				mix-blend-mode: unset;
+				width: -webkit-fill-available;
+			}
 		}
 	}
 	/*  End of Protip box  */
@@ -737,7 +755,6 @@
 				margin: 0;
 				display: block;
 				width: 100%;
-				border: 1px solid #e2e2e2;
 				border-left: 0;
 				border-right: 0;
 				@media(max-width: 600px) {
