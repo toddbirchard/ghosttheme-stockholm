@@ -206,6 +206,131 @@
 			}
 		}
 	}
+}
 
+section .widget.newsletter {
+	display: none;
+	padding: 20px;
+  box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 
+	@media(max-width: 600px) {
+		display:block;
+		background: white;
+		margin: 0;
+		width: -webkit-fill-available;
+	  width: -moz-fill-available;
+		    margin: 5px 20px;
+
+		h4 {
+			margin:0;
+			font-family: 'ProductSans-Regular';
+			font-weight: 100;
+		}
+
+		.news-description {
+			margin: 5px 0 15px;
+			line-height: 1.5;
+			font-size: .8em !important;
+			font-family: 'TTNorms-Regular', sans-serif;
+		}
+
+		.form-group {
+			width: -webkit-fill-available;
+			width: -moz-fill-available;
+
+			input {
+				width: -webkit-fill-available;
+				width: -moz-fill-available;
+			}
+		}
+
+		.subscribe-input-class {
+			padding: 15px 5%;
+			width: 90%;
+			font-size: 14px;
+			border: 1px solid #ebebeb;
+			margin-bottom: 10px;
+		}
+
+		.form-group,
+		.input-group {
+			margin-bottom: 0;
+			display: block;
+
+			.email {
+				width: 100%;
+			}
+
+			button {
+				width: -webkit-fill-available !important;
+				width: -moz-available !important;
+				background: #33abba;
+				box-shadow: 2px 2px 0 #2b84a7, 2px 0 0 #2b84a7;
+				padding: 13px 20px;
+				font-size: 14px;
+				color: white;
+				border: 0;
+				text-transform: Uppercase;
+				outline: none;
+				transition: all 0.3s ease-in-out;
+				margin-top: 3px;
+
+				&:hover {
+					background-color: @hover-color;
+					cursor: pointer;
+				}
+
+				span {
+					font-size: 12px;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		p {
+			margin-bottom: 10px;
+			font-size: 16px;
+			font-family: 'TTNorms-Medium',sans-serif;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		font-weight: 100;
+		border: 1px solid #d5dbe6 !important;
+		transition: all 0.3s all;
+		width: -webkit-fill-available;
+		width: -moz-fill-available;
+		margin-bottom: 0;
+		padding: 13px;
+		border: 0;
+		border-radius: 3px;
+		background: #fff;
+		font-size: 12px;
+		font-weight: 200;
+		letter-spacing: 1px;
+		font-weight: 100;
+		border: 1px solid #d5dbe6;
+		transition: all 0.3s all;
+		margin-bottom: 10px;
+
+		&::placeholder {
+			opacity: 1;
+			color: #828294;
+		}
+
+		&:hover {
+			background: rgba(64, 206, 199, 0.16) !important;
+			border-color: #82d3d0 !important;
+			cursor: text !important;
+
+			&::placeholder {
+				color: #72859d !important;
+			}
+		}
+
+		&:focus {
+			background: white !important;
+		}
+	}
 }
