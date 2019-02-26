@@ -37,7 +37,7 @@
       $('#resources-table thead').append('<tr><th></th><th>summary</th><th>description</th><th>issuetype</th></tr>');
       for (var i = 0; i < pythons.length; i++) {
         $('#resources-table tbody').append('<tr class="' + pythons[i].issuetype + '"> \n ' +
-          '<td class="icon"><img src="' + pythons[i].issuetype_icon + '" alt="' + pythons[i].issuetype + '"></td> \n' +
+          '<td class="icon"><img class="issuetype_icon" src="' + pythons[i].issuetype_icon + '" alt="' + pythons[i].issuetype + '"></td> \n' +
           '<td class="summary">' + pythons[i].summary + '</td> \n' +
           '<td><a href="' + pythons[i].description + '">' + pythons[i].description + '</a></td> \n' +
           '<td class="issuetype-name">' + pythons[i].issuetype + '</td> \n' +
