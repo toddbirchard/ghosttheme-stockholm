@@ -8,8 +8,6 @@ $(document).ready(function() {
 
   function create_nextprev_widget(posts) {
     var numposts = posts.length;
-    console.log(posts);
-
   }
 
   function populate_series_list(post) {

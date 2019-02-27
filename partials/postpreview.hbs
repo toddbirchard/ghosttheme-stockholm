@@ -7,7 +7,13 @@
 
   {{#if feature_image}}
     <a href="{{url}}" alt="{{{title}}}" class="featured-media">
-      <img class="featured-image" src="{{img_url feature_image}}" alt="{{{title}}}" data-rjs="2" size="postpreview">
+      <picture>
+        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="xl"}} 1x, {{img_url feature_image size="xl"}} 2x">
+        <source media="(min-width: 800px)" data-srcset="{{img_url feature_image size="l"}} 1x, {{img_url feature_image size="l"}} 2x">
+        <source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+        <img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+    </picture>
+      <!--img class="featured-image" src="{{img_url feature_image}}" alt="{{{title}}}" data-rjs="2" size="postpreview">-->
     </a>
   {{/if}}
 

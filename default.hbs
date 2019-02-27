@@ -12,7 +12,18 @@
 	<link rel="shortcut icon" href="{{asset "/images/favicon.png"}}" />
 
 	{{! Styles }}
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+	<script>
+    // Set the options to make LazyLoad self-initialize
+    window.lazyLoadOptions = {
+        elements_selector: ".lazy",
+        // ... more custom settings?
+    };
+    // Listen to the initialization event and get the instance of LazyLoad
+    window.addEventListener('LazyLoad::Initialized', function (event) {
+        window.lazyLoadInstance = event.detail.instance;
+    }, false);
+</script> 
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "dist/global.js"}}"></script>

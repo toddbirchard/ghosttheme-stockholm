@@ -1,7 +1,6 @@
 <!-- Start Scripts -->
 <!--<script src="{{asset "/js/lazy-load.min.js"}}"></script>-->
 <script src="{{asset "js/includes/content-api.min.js"}}"></script>
-<script src="{{asset "/js/includes/retina.min.js"}}"></script>
 {{#is "post"}}
   <script src="{{asset "/dist/posts.js"}}"></script>
 {{/is}}
@@ -15,4 +14,12 @@
 {{#is "page,home"}}
     <script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
 {{/is}}
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+<script src="{{asset "/js/includes/retina.min.js"}}"></script>
+<script>
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});
+</script>
 <!-- End Scripts -->

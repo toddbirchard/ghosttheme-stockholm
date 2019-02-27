@@ -177,12 +177,16 @@ var globalFunctions = {
       });
     }
   },
+  lazyload: function() {
+    
+  },
   init: function() {
     //globalFunctions.contributors();
     globalFunctions.retina();
     globalFunctions.tags();
     globalFunctions.seriesIcons();
     globalFunctions.homepageSearch();
+    globalFunctions.lazyload();
   }
 };
 

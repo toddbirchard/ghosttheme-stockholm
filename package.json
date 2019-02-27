@@ -47,11 +47,14 @@
       "s": {
         "width": 300
       },
-      "postpreview": {
-        "width": 707
+      "m": {
+        "width": 700
       },
-      "postimage": {
+      "l": {
         "width": 780
+      },
+      "xl": {
+        "width": 1500
       }
     }
   },

@@ -11,7 +11,6 @@ import handlebars from 'highlight.js/lib/languages/handlebars';
 import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
-import lightbox from 'lightbox2';
 import ScrollBooster from 'scrollbooster';
 const fetch = require('node-fetch');
 

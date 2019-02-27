@@ -66,27 +66,17 @@ var themeApp = {
     $('img').attr('data-rjs', 2);
     //  $('img').attr('data-rjs', 3);
   },
-  contributors: function() {
-    $.ajax({
-      method: "GET",
-      url: "https://apisentris.com/api/v1/authors?select=title,linkedin,quora,medium,github,meetup,pocket,slug",
-      headers: {
-        client_id: "140000",
-        access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
-      },
-      contentType: 'application/json'
-    }).done(function(results) {
-      for (var i = 0; i < results.length; i++) {
-        var title = results[i]['title'];
-        var name = results[i]['slug'];
-        $('.contributor-container').find('.' + name).find('.role').html(title);
-      }
-    })
+  lazyload: function() {
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+        // ... more custom settings?
+    });
   },
   init: function() {
     themeApp.contributors();
     themeApp.retina();
     themeApp.tags();
+    themeApp.lazyload();
   }
 };
 
