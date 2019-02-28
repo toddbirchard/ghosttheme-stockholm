@@ -10,15 +10,11 @@ $(document).ready(function() {
 
   function postLinkPreviews() {
     $(".post-content > p > a").each(function(index, element) {
-      $(element).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
-
-
       var link = $(element).attr('href');
       var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + link;
+      $(element).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
       var headers = {
-        "Content-Type": "application/json",
-        "client_id": "140000",
-        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+        "Content-Type": "application/json"
       }
       fetch(url, {
         method: 'GET',
@@ -27,49 +23,36 @@ $(document).ready(function() {
         console.log(res)
         return res.json()
       }).then((json) => {
-        console.log(json);
-        authorFunctions.author_website(json);
-        authorFunctions.author_github(json);
-        authorFunctions.author_medium(json);
-        // authorFunctions.aauthor_meetup(json);
-      });
-
-
-
-
-      $.ajax({
-        url: ,
-        async: true,
-        contentType: "application/json",
-        data: JSON.stringify({q: $(element).attr('href')}),
-        dataType: 'json',
-        success: function(result) {
-          $(element).html('<a href="' + result.url + '"><div class="link-preview"> \n ' +
-            '<div class="link-info"> \n ' +
-            '<div class="link-preview-image"><img alt="' + result.title + '" src="' + result.image + '"></div> \n' +
-            '<div class="detail-stack"> \n ' +
-            '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
-            '<p>' + result.description + '</p> \n' +
-            '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
-            '<span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
-          '</div></div></a>');
-          //$(element).remove();
-          remove_images();
-        }
+        $(element).html('<a href="' + json.url + '"><div class="link-preview"> \n ' +
+          '<div class="link-info"> \n ' +
+          '<div class="link-preview-image"><img alt="' + json.title + '" src="' + json.image + '"></div> \n' +
+          '<div class="detail-stack"> \n ' +
+          '<h4 class="title-desktop">' + json.title + '</h4> \n ' +
+          '<p>' + json.description + '</p> \n' +
+          '<h4 class="title-mobile">' + json.title + '</h4> \n ' +
+          '<span class="url-info"><i class="far fa-link"></i>' + json.url.split('://')[1] + '</span> \n ' +
+        '</div></div></a>');
+        remove_images();
       });
     });
   }
 
   function authorLinkPreviews() {
     $(".author-website a").each(function(index, element) {
-      $.ajax({
-        url: 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + $(this).text(),
-        contentType: "application/json",
-        dataType: 'json',
-        success: function(result) {
-          $('.author-website').append('<a href="' + result.url + '"><div class="link-preview" style="background:url(' + result.image + ')"><h4>' + result.title + '</h4><i class="fas fa-link"></i></div></a>');
-          $(element).remove();
-        }
+      var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + $(this).text();
+      var headers = {
+        "Content-Type": "application/json"
+      }
+
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        console.log(res)
+        return res.json()
+      }).then((json) => {
+        $('.author-website').append('<a href="' + json.url + '"><div class="link-preview" style="background:url(' + json.image + ')"><h4>' + json.title + '</h4><i class="fas fa-link"></i></div></a>');
+        $(element).remove();
       });
     });
   }
