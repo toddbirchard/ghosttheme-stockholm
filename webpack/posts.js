@@ -12,6 +12,7 @@ import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
 import ScrollBooster from 'scrollbooster';
+import baguetteBox from 'baguettebox.js';
 const fetch = require('node-fetch');
 
 hljs.registerLanguage('javascript', javascript);
@@ -95,10 +96,18 @@ var postFunctions = {
     });
   },
   enableLightbox: function() {
-    $('.post-content img').each(function(obj){
+    $('.post-content img').each(function(obj, i){
       var imagesrc = $(this).attr('src');
       var caption = $(this).closest('figure').find('figcaption').text();
-      $(this).wrap('<a href="' + imagesrc + '" data-lightbox="' + caption + '"></a>');
+      var image = $('.post-content')[i]
+      $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
+    });
+    baguetteBox.run('.post-content', {
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+        },
+        animation: 'fadeIn',
+        noScrollbars: true
     });
   },
   addImageAltTags: function() {
