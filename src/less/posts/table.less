@@ -198,7 +198,7 @@
         }
 
         tr {
-          /*display: inline-block;*/
+          width: 115px;
           vertical-align: top;
           display: flex;
           flex-direction: column;
@@ -214,11 +214,11 @@
             padding: 10px 0 !important;
             border-spacing: 0;
             border-collapse: collapse;
-            overflow-wrap: break-word;
             overflow: hidden;
             line-break: normal;
-            white-space: normal;
+            white-space: nowrap;
             width: -webkit-fill-available;
+            text-overflow: ellipsis;
             width: -moz-available;
             min-width: -webkit-fill-available;
           }
