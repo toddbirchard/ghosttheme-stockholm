@@ -11,8 +11,34 @@ $(document).ready(function() {
   function postLinkPreviews() {
     $(".post-content > p > a").each(function(index, element) {
       $(element).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
+
+
+      var link = $(element).attr('href');
+      var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + link;
+      var headers = {
+        "Content-Type": "application/json",
+        "client_id": "140000",
+        "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
+      }
+      fetch(url, {
+        method: 'GET',
+        headers: headers
+      }).then((res) => {
+        console.log(res)
+        return res.json()
+      }).then((json) => {
+        console.log(json);
+        authorFunctions.author_website(json);
+        authorFunctions.author_github(json);
+        authorFunctions.author_medium(json);
+        // authorFunctions.aauthor_meetup(json);
+      });
+
+
+
+
       $.ajax({
-        url: 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + $(element).attr('href'),
+        url: ,
         async: true,
         contentType: "application/json",
         data: JSON.stringify({q: $(element).attr('href')}),

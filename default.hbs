@@ -9,7 +9,7 @@
 	<meta name="HandheldFriendly" content="True" />
  	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	<meta name="theme-color" content="#0db0e2"/>
-	<link rel="shortcut icon" href="{{asset "/images/favicon.png"}}" />
+	<link rel="shortcut icon" href="{{@site.icon}}" />
 
 	{{! Styles }}
 	<script>
@@ -22,7 +22,7 @@
     window.addEventListener('LazyLoad::Initialized', function (event) {
         window.lazyLoadInstance = event.detail.instance;
     }, false);
-</script> 
+</script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>

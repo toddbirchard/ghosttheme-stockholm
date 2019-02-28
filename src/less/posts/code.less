@@ -44,26 +44,29 @@ blockquote pre {
       white-space: pre-line;
       max-height: 400px;
       overflow-x: visible;
+      color: white;
     }
 
     code {
       overflow-y: hidden;
       position: relative;
       transition: all 0.5s ease-out;
+      white-space: pre-wrap;
+      padding: 50px 25px 15px;
+      overflow-x: hidden;
+      font-weight: 100;
+
+      * {
+        text-shadow: -1px 1px 0 black;
+      }
+
+      @media(max-width: 600px) {
+        overflow-y: hidden;
+      }
     }
 
     span {
       display: inline;
-    }
-  }
-
-  pre > code {
-    white-space: pre-wrap;
-    padding: 50px 25px 15px;
-    overflow-x: hidden;
-    
-    @media(max-width: 600px) {
-      overflow-y: hidden;
     }
   }
 
