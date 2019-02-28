@@ -224,5 +224,4 @@ var postFunctions = {
 
 $(document).ready(function() {
   postFunctions.postInit();
-  hljs.initHighlightingOnLoad();
 });
