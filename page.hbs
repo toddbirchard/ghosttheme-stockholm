@@ -13,7 +13,10 @@
 				<article class="page">
 					{{#if feature_image}}
 					<div class="featured-media">
-						<img src="{{feature_image}}" alt="{{{title}}}">
+						<picture>
+							<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+							<img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+					</picture>
 					</div>
 					{{/if}}
 					<div class="page-head">

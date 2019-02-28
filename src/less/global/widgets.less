@@ -351,7 +351,17 @@
 	}
 
 	#newsletter-sidebar {
+
+		.newsletter {
+			width: 100%;
+			padding-top: 0 !important;
+			}
+
 		.newsletter-form {
+
+			width: -webkit-fill-available;
+			width: -moz-fill-available;
+
 			input[type="text"],
 			input[type="email"] {
 				font-weight: 100;
@@ -476,6 +486,14 @@
 				}
 			}
 		}
+
+			.news-description {
+				margin: 15px 0 20px;
+				font-size: 0.9em;
+				line-height: 1.5;
+				font-family: 'TTNorms-Regular', sans-serif;
+			}
+
 
 		.country {
 			opacity: 0;
@@ -685,16 +703,6 @@
 		}
 	}
 
-	.upcoming {
-		p {
-			margin-bottom: 0;
-		}
-
-		ul {
-			padding: 10px 0 0;
-		}
-	}
-
 	.text {
 		h1 {
 			font-size: 1.4em;
@@ -848,26 +856,7 @@
 			}
 		}
 
-		.newsletter {
-			width: 100%;
-			padding-top: 0 !important;
 
-			.news-description {
-				margin: 15px 0 20px;
-				font-size: 0.9em;
-				line-height: 1.5;
-				font-family: 'TTNorms-Regular', sans-serif;
-			}
-
-			.form-group {
-				width: -webkit-fill-available;
-				width: -moz-fill-available;
-
-				input {
-					width: -webkit-fill-available;
-					width: -moz-fill-available;
-				}
-			}
 
 			.subscribe-input-class {
 				padding: 15px 5%;
@@ -943,7 +932,7 @@
 			}
 		}
 	}
-}
+
 /* Hack for aligning magnifying glass on other pages */
 .page-template .search::after {
 	top: 14px;

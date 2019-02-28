@@ -12,6 +12,7 @@
   .main-content {
     @media (max-width: 800px) {
       width: 95%;
+      margin: auto;
     }
   }
 
@@ -19,6 +20,7 @@
     display: flex;
     flex-direction: column;
     background: white;
+    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
   }
 
   .descending {
@@ -68,7 +70,7 @@
     width: 97%;
     height: 29px;
     margin-bottom: 10px;
-    background: #dde1ea;
+    background: #c1c8d9;
     padding: 5px 3% 5px 0;
 
     .sort {
@@ -185,7 +187,7 @@
             transition: all 0.2s ease-out;
             @media(max-width: 600px) {
               font-family: 'ProductSans-Regular',sans-serif;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
 
             &:hover {
@@ -273,6 +275,15 @@
     .imagewrapper {
       height: fit-content;
       display: block;
+      max-width: 250px;
+
+      @media(max-width: 600px) {
+        max-width: 40%;
+      }
+
+      img {
+        width: 100%;
+      }
 
       .post-card-image {
         max-width: 220px;

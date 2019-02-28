@@ -286,13 +286,27 @@
       }
 
       .img-wrapper {
-        background-size: cover;
-        background-position: center;
         text-align: center;
         width: 100%;
-        height: 180px;
+        max-height: 187px;
+        height: auto;
         position: relative;
+        display: block;
         transition: all 0.3s ease-out;
+
+        @media(max-width: 800px) {
+          max-height: 206px;
+        }
+
+        @media(max-width: 600px) {
+          max-height: 320px;
+        }
+
+
+
+        img {
+          max-width: 100%;
+        }
       }
 
       .meta-info {

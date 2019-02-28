@@ -25,7 +25,12 @@
 								{{#foreach tags visibility="internal"}}
 									<div class="tag-wrapper">
 										<a href="/series/{{slug}}" title="{{name}}">
-											<div class="img-wrapper" style="background-image: url({{img_url feature_image}})"></div>
+											<div class="img-wrapper">
+												<picture>
+									        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+									        <img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+									    </picture>
+											</div>
 											<div class="description">
 												<h2>{{meta_title}}</h2>
 												<p>{{description}}</p>

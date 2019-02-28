@@ -1,18 +1,19 @@
 <!-- Start Scripts -->
 <!--<script src="{{asset "/js/lazy-load.min.js"}}"></script>-->
+<script async src="{{asset "dist/global.js"}}"></script>
 <script src="{{asset "js/includes/content-api.min.js"}}"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+<script>
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});
+</script>
 {{#is "post"}}
   <script src="{{asset "/dist/posts.js"}}"></script>
-  <script src="https://cdnjs.com/libraries/baguettebox.js"></script>
-  <script>
-  var lazyLoadInstance = new LazyLoad({
-      elements_selector: ".lazy"
-      // ... more custom settings?
-  });
-  </script>
 {{/is}}
 {{^is "post,home"}}
-  <script src="{{asset "/dist/pages.js"}}"></script>
+  <script async src="{{asset "/dist/pages.js"}}"></script>
 {{/is}}
 {{#is "author"}}
     <script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
@@ -21,7 +22,5 @@
 {{#is "page,home"}}
     <script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
 {{/is}}
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
 <script src="{{asset "/js/includes/retina.min.js"}}"></script>
-
 <!-- End Scripts -->
