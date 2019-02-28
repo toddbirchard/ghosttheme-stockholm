@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
 	{{! Document Settings }}
 	<meta charset="utf-8" />
@@ -7,35 +8,36 @@
 	{{! Page Meta }}
 	<title>{{meta_title}} | Data Science & Engineering</title>
 	<meta name="HandheldFriendly" content="True" />
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-	<meta name="theme-color" content="#0db0e2"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="theme-color" content="#0db0e2" />
 	<link rel="shortcut icon" href="{{@site.icon}}" />
 
 	{{! Styles }}
 	<script>
-    // Set the options to make LazyLoad self-initialize
-    window.lazyLoadOptions = {
-        elements_selector: ".lazy",
-        // ... more custom settings?
-    };
-    // Listen to the initialization event and get the instance of LazyLoad
-    window.addEventListener('LazyLoad::Initialized', function (event) {
-        window.lazyLoadInstance = event.detail.instance;
-    }, false);
-</script>
+		// Set the options to make LazyLoad self-initialize
+		window.lazyLoadOptions = {
+			elements_selector: ".lazy",
+			// ... more custom settings?
+		};
+		// Listen to the initialization event and get the instance of LazyLoad
+		window.addEventListener('LazyLoad::Initialized', function(event) {
+			window.lazyLoadInstance = event.detail.instance;
+		}, false);
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
 	{{! Scripts }}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	<script src="{{asset "dist/global.js"}}"></script>
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
-	{{else}}
-	  <meta property="og:image" content="{{@site.cover_image}}"/>
+		{{else}}
+			<meta property="og:image" content="{{@site.cover_image}}" />
 	{{/is}}
 	{{> analytics}}
 	{{! Ghost outputs important style and meta data with this tag }}
-  {{ghost_head}}
+	{{ghost_head}}
 </head>
+
 <body class="{{body_class}}">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8VFCPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -46,4 +48,5 @@
 	{{> scripts}}
 	{{ghost_foot}}
 </body>
+
 </html>
