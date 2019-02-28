@@ -11,7 +11,6 @@ var lazyLoadInstance = new LazyLoad({
 </script>
 {{#is "post"}}
   <script src="{{asset "/dist/posts.js"}}"></script>
-  hljs.initHighlightingOnLoad();
 {{/is}}
 {{^is "post,home"}}
   <script async src="{{asset "/dist/pages.js"}}"></script>
