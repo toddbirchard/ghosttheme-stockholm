@@ -148,7 +148,6 @@ var postFunctions = {
     $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
     $('#seriesposts').css('display', 'block');
     $('.nextprev-container').css('display', 'block');
-    $('.post-footer').css('padding-bottom', '104px');
   },
   posts_in_series: function(series, seriesname) {
     var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'

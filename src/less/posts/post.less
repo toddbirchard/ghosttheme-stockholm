@@ -5,16 +5,29 @@
 	/*====================================================
 		main post area
 	====================================================*/
+
+header {
+	margin-bottom: 1px;
+}
+
+
 	section {
-		width: fit-content;
+		width: 100%;
 		max-width: 100%;
 		@media(max-width: 800px) {
 			width: 100% !important;
 		}
 	}
 
+	section > .container {
+		max-width: none;
+		margin: auto;
+		display: block;
+	}
+
 	.main-content {
 		width: 100% !important;
+		 background: white;
 	}
 
 	.post-content {
@@ -61,7 +74,6 @@
 
 	.container {
 		padding: 0;
-		max-width: 1000px !important;
 
 		@media(max-width: 800px) {
 			margin: 0 0 20px 0 !important;
@@ -71,7 +83,9 @@
 		article {
 			margin: 0 auto;
 			width: 100%;
-			box-shadow: @shadow-color;
+			max-width: 900px;
+
+
 			@media(max-width: 800px) {
 				margin: 0;
 				width: auto;
@@ -249,7 +263,6 @@
 
 .main-content {
 	width: 100% !important;
-	max-width: 900px;
 	padding: 0 !important;
 
 	.post-head {
