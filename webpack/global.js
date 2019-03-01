@@ -153,7 +153,7 @@ var globalFunctions = {
         results: '#my-custom-results',
         options: {
           limit: 5,
-          keys: ['title', 'plaintext']
+          keys: ['title', 'plaintext', 'slug']
         },
         api: {
           resource: 'posts',
@@ -168,6 +168,8 @@ var globalFunctions = {
         template: function(result) {
           let tag = result.tags[0];
           let url = [location.protocol, '//', location.host].join('');
+          console.log('search url = ' + url);
+          console.log('location = ' + location);
           return '<li> \n' +
           '<img src="' + result.feature_image + '" alt="' + result.title + '"> \n ' +
           '<div><a href="' + result.url + '">' + result.title + '</a> \n' +
@@ -178,7 +180,7 @@ var globalFunctions = {
     }
   },
   lazyload: function() {
-    
+
   },
   init: function() {
     //globalFunctions.contributors();
