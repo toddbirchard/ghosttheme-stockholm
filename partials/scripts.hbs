@@ -10,17 +10,15 @@ var lazyLoadInstance = new LazyLoad({
 });
 </script>
 {{#is "post"}}
-  <script src="{{asset "/dist/posts.js"}}"></script>
+  <script async src="{{asset "/dist/posts.js"}}"></script>
 {{/is}}
 {{^is "post,home"}}
   <script async src="{{asset "/dist/pages.js"}}"></script>
 {{/is}}
 {{#is "author"}}
     <script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
-    <script src="{{asset "dist/author.js"}}"></script>
+    <script async src="{{asset "dist/author.js"}}"></script>
 {{/is}}
-{{#is "page,home"}}
-    <script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
-{{/is}}
+<script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
 <script src="{{asset "/js/includes/retina.min.js"}}"></script>
 <!-- End Scripts -->

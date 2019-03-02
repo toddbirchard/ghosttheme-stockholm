@@ -4,7 +4,6 @@
     flex-direction: column;
     margin: 1.5em auto;
     max-width: 1040px;
-    width: 100vw;
   }
 
   .kg-gallery-row {
@@ -13,12 +12,25 @@
     justify-content: center;
   }
 
-  .kg-gallery-image img {
+  .kg-gallery-image {
+    box-shadow: 1px 0 1px rgba(154, 154, 165, 0.27);
+
+    a {
+      transition: all .3s ease-out;
+
+      &:hover {
+        opacity: .7;
+        cursor: zoom-in;
+    }
+  }
+
+    img {
     display: block;
     margin: 0;
     width: 100%;
     height: 100%;
   }
+}
 
   .kg-gallery-row:not(:first-of-type) {
     margin: 0.75em 0 0;
