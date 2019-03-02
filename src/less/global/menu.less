@@ -51,6 +51,10 @@ header {
     border: none;
     margin-left: 20px;
 
+    @media(max-width: 600px) {
+      visibility: hidden;
+    }
+
     i {
       color:white;
       opacity: .7;
@@ -231,7 +235,7 @@ header {
     height: 50px;
     text-align: center;
     position: relative;
-    border-bottom: 1px solid #efefef;
+
 
     .menu {
       margin: auto;
@@ -407,6 +411,7 @@ header {
   height: 45px;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #efefef;
 
   @media(max-width: 600px) {
     height: 42px;
@@ -425,7 +430,6 @@ header {
     height: 45px;
 
     @media(max-width: 600px) {
-      width: 300px;
       margin: 0 auto 20px !important;
       position: absolute;
       left: 0;
