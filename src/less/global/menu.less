@@ -51,14 +51,33 @@ header {
     border: none;
     margin-left: 20px;
 
-    @media(max-width: 600px) {
-      visibility: hidden;
-    }
-
     i {
       color:white;
       opacity: .7;
       margin-right: 5px;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 400;
+    }
+
+    &:focus {
+
+      *,
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @media(max-width: 600px) {
+      visibility: hidden;
+    }
+
+    * {
+      transition: all .3s ease-out;
     }
 
       input {
@@ -67,13 +86,32 @@ header {
         -webkit-appearance: none;
         outline: none;
 
+        &::before {
+          content: "\f002";
+          color:white;
+          opacity: .7;
+          margin-right: 5px;
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 400;
+        }
+
         &::placeholder{
           color:white;
           opacity: .6;
         }
 
         &:focus {
-          opacity: 1;
+
+          *,
+          &::before {
+            opacity: 1;
+          }
+
           border: 0;
           outline: none;
           -webkit-box-shadow: none;
@@ -82,7 +120,7 @@ header {
 
         &:hover {
           cursor: text;
-          opacity: .7;
+          opacity: .5;
           outline: none;
         }
       }

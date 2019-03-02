@@ -104,6 +104,8 @@ var globalFunctions = {
     var tableau = '<i class="far fa-asterisk"></i>';
     var pandas = '<i class="fas fa-paw"></i>';
     var google = '<i class="fab fa-google"></i>';
+    var sql = '<i class="far fa-database"></i>';
+    var mapbox = '<i class="far fa-map"></i>';
 
     $('.series .seriesitem').each(function(item) {
       if ($(this).hasClass('data-analysis-pandas')) {
@@ -140,6 +142,14 @@ var globalFunctions = {
 
       if ($(this).hasClass('the-rise-of-google-cloud')) {
         $(this).find('a').prepend(google);
+      }
+
+      if ($(this).hasClass('welcome-to-sql')) {
+        $(this).find('a').prepend(sql);
+      }
+
+      if ($(this).hasClass('mapping-data-with-mapbox')) {
+        $(this).find('a').prepend(mapbox);
       }
 
     });

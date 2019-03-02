@@ -1,7 +1,7 @@
 <header>
   <div class="banner">
     <div class="search form-group">
-    	<i class="far fa-search"></i><input id="my-custom-input" placeholder="Search all posts">
+    	<i class="far fa-search"></i><input id="my-custom-input" class="icon" placeholder="Search all posts" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search all posts'" label="search">
 		</div>
     <div id="my-custom-results"></div>
     {{#if @site.logo}}
