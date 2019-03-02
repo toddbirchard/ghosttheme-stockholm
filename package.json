@@ -27,7 +27,7 @@
   ],
   "engines": {
     "node": "v10.15.0",
-    "ghost": ">=2.11.0",
+    "ghost": ">=2.16.0",
     "ghost-api": "v2"
   },
   "screenshots": {
@@ -71,8 +71,6 @@
     "autoprefixer": "^9.4.7",
     "babel-runtime": "^6.26.0",
     "bundle-loader": "^0.5.6",
-    "cjs": "0.0.11",
-    "do-assets": "0.0.2",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
     "ghost-pagination": "^0.1.3",
