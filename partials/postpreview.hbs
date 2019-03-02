@@ -13,20 +13,14 @@
         <source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
         <img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
     </picture>
-      <!--img class="featured-image" src="{{img_url feature_image}}" alt="{{{title}}}" data-rjs="2" size="postpreview">-->
     </a>
   {{/if}}
 
   <div class="content">
     <div class="post-head">
       <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
-        <h3 class="post-excerpt">{{excerpt words="40"}}</h3>
+        <h3 class="post-excerpt">{{excerpt words="60"}}</h3>
     </div>
-    {{^has tag="Roundup"}}
-      <div class="post-content">
-        {{content words="60"}}
-      </div>
-    {{/has}}
 
     <div class="post-permalink">
       <div class="meta">
@@ -37,7 +31,7 @@
         {{primary_author.bio}}
         {{#unless profile_image}}
             <a href="{{url}}" class="meta-item author"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-            <a href="{{url}}" class="meta-item author-mobile"><!--<i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>--><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
+            <a href="{{url}}" class="meta-item author-mobile"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
         {{/unless}}
           {{#if profile_image}}
             <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}} avatar" class="avi" data-rjs="2" size="xs"><span>{{name}}</span></a>

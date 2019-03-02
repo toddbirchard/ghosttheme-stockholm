@@ -18,14 +18,6 @@ var lazyLoadInstance = new LazyLoad({
 {{^is "post,home"}}
   <script async src="{{asset "/dist/pages.js"}}"></script>
 {{/is}}
-{{#is "home"}}
-  <script src="{{asset "/js/includes/clamp.min.js"}}"></script>
-  <script>
-  $('.post-content p:first-of-type').each(function(obj){
-    $clamp(this, {clamp: 3});
-  });
-  </script>
-{{/is}}
 {{#is "author"}}
     <script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
     <script async src="{{asset "dist/author.js"}}"></script>
