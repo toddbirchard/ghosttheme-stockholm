@@ -115,6 +115,10 @@ header {
     position: absolute;
     box-shadow: 0 0 50px #7a84b5;
 
+    @media(max-width: 600px) {
+          visibility: hidden;
+    }
+
     * {
       transition: 0.3s all;
     }
@@ -442,6 +446,22 @@ header {
       width: fit-content;
       display:block;
       height: 25px;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        display: none;
+
+        @media(max-width: 600px) {
+          display:block;
+        }
+      }
+
+      &:nth-child(1n+3) {
+        @media(max-width: 600px) {
+          display:none;
+        }
+      }
     }
 
     a {
