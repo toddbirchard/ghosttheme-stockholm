@@ -1,5 +1,4 @@
 .post-content {
-
   .handlebars,
   .hljs.html,
   .language-css,
@@ -7,35 +6,124 @@
   .language-handlebars,
   .language-html,
   .language-jinja,
-  .language-xml {
-    background: #2d2241 !important;
-    color: #d0e1f6;
+  .language-xml,
+  .xml {
+    color: #c5cddc;
+    background: #282c34;
 
-    .hljs-tag {
-      color: #9cddff;
+    .hljs-comment,
+    .hljs-quote {
+      color: #5c6370;
+      font-style: italic;
     }
 
-    .hljs-meta {
-      color: #b9d9ff;
+    .hljs-doctag,
+    .hljs-formula,
+    .hljs-keyword {
+      color: #c678dd;
     }
 
-    .hljs-attr {
-      color: #6ccae4;
+
+
+
+
+    .hljs-deletion,
+    .hljs-name,
+    .hljs-section,
+    .hljs-selector-tag,
+    .hljs-subst {
+      color: #e06c75;
     }
 
+    .hljs-literal {
+      color: #56b6c2;
+    }
+
+    .hljs-addition,
+    .hljs-attribute,
+    .hljs-meta-string,
+    .hljs-regexp,
     .hljs-string {
-      color: #e0cd8e;
-      font-weight: 400;
-      font-family: 'Hack';
+      color: #acdacf;
     }
 
-    .hljs-name {
-      color: #89a4ff;
+    .hljs-built_in,
+    .hljs-class .hljs-title {
+      color: #e6c07b;
     }
 
-    &::before {
-      content: "HTML";
-      background: rgba(56, 62, 102, 0.6);
+    .hljs-attr,
+    .hljs-number,
+    .hljs-selector-attr,
+    .hljs-selector-class,
+    .hljs-selector-pseudo,
+    .hljs-template-variable,
+    .hljs-type,
+    .hljs-variable {
+      color: #dbbd8b;
     }
+
+    .hljs-bullet,
+    .hljs-link,
+    .hljs-meta,
+    .hljs-selector-id,
+    .hljs-symbol,
+    .hljs-title {
+      color: #61aeee;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: bold;
+    }
+
+    .hljs-link {
+      text-decoration: underline;
+    }
+  }
+}
+
+.handlebars,
+.language-handlebars{
+  .hljs-template-variable{
+    color: #88c8fb;
+  }
+
+
+  &::before {
+    content: "Handlebars";
+    background: rgba(56, 62, 102, 0.6);
+    color: white;
+  }
+}
+
+.html,
+.language-html{
+  &::before {
+    content: "HTML";
+    background: rgba(56, 62, 102, 0.6);
+    color: white;
+  }
+}
+
+
+.jinja,
+.language-jinja {
+  &::before {
+    content: "Jinja";
+    background: rgba(56, 62, 102, 0.6);
+    color: white;
+  }
+}
+
+.http,
+.language-http {
+  &::before {
+    content: "HTTP";
+    background: rgba(56, 62, 102, 0.6);
+    color: white;
   }
 }

@@ -66,15 +66,19 @@
   }
   /* Bar which sorts articles */
   .sort-container {
-    display: block;
+    display: flex;
     width: 97%;
     height: 29px;
-    margin-bottom: 10px;
-    background: #c1c8d9;
-    padding: 5px 3% 5px 0;
+    margin-bottom: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    padding: 12px 12px;
+    align-items: center;
+    justify-content: flex-end;
 
     .sort {
       float: right;
+      line-height: 1;
 
       &:hover {
         cursor: pointer;
@@ -132,7 +136,7 @@
       margin: 0 0 3px;
       font-family: 'ProductSans-Regular', serif;
       font-weight: 100;
-      color: #7792a3;
+      color: #407393;
       font-size: 0.9em;
       line-height: 1;
     }
@@ -145,16 +149,19 @@
     .details {
       width: -webkit-fill-available;
       padding: 0 20px;
+      position: relative;
+      max-height: 125px;
       @media(max-width: 800px) {
         max-width: -webkit-fill-available;
         padding: 0 0 0 15px;
       }
 
       .meta {
-        margin-top: 20px;
         display: flex;
         justify-content: left;
         align-items: center;
+        position: absolute;
+        bottom: 0;
 
         i {
           margin-right: 5px;
@@ -178,11 +185,11 @@
           margin: 0 0 5px;
           font-size: 1.3em;
           min-height: 56px;
+          line-height: 1.2;
 
           a {
             font-family: 'ProductSans-Regular',sans-serif;
             font-size: 1em;
-            line-height: 1.2;
             color: @text-color-heading;
             transition: all 0.2s ease-out;
             @media(max-width: 600px) {
@@ -275,7 +282,7 @@
     .imagewrapper {
       height: fit-content;
       display: block;
-      max-width: 250px;
+      max-width: 326px;
 
       @media(max-width: 600px) {
         max-width: 40%;
