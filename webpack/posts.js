@@ -24,8 +24,11 @@ hljs.registerLanguage('ini', ini);
 hljs.registerLanguage('yaml', yaml);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('http', http);
+hljs.registerLanguage('jinja', jinja);
 hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
+hljs.registerLanguage('css', css);
 hljs.initHighlightingOnLoad();
 
 var postFunctions = {
