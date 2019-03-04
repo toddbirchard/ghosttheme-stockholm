@@ -9,25 +9,22 @@
 
 /* latin */
 @font-face {
-  font-family: 'ProductSans-Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Product Sans Bold'), local('ProductSans-Bold'), url('https://hackers.nyc3.cdn.digitaloceanspaces.com/fonts/ProductSans-Bold.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
   font-family: 'ProductSans-Medium';
   font-style: normal;
   font-weight: 500;
-  src: local('Product-Sans Medium'), local('ProductSans-Medium'), url("https://hackers.nyc3.cdn.digitaloceanspaces.com/fonts/ProductSans-Bold.woff2") format('woff2');
+  src: local('Product-Sans Medium'), local('ProductSans-Medium'), url("https://hackers.nyc3.cdn.digitaloceanspaces.com/fonts/ProductSans-Medium.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 
 #fw-tw-feed-items {
   background: none !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #fw-tw-feed-items-scroll-area {
@@ -42,8 +39,9 @@
   position: relative!important;
 }
 
+.fw-tw-feed-item-username,
 .fw-tw-feed-item-username {
-  font-family: 'ProductSans-Medium',sans-serif !important;
+  font-family: 'ProductSans-Regular',sans-serif !important;
 }
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
@@ -54,18 +52,15 @@ a.fw-tw-links-in-tweets {
   font-family: 'ProductSans-Medium',serif !important;
 }
 
-.fw-tw-feed-item-username{
-  font-weight: 600 !important;
-  font-family: 'ProductSans-Medium','CompassSans-Regular'!important;
-}
-
 
 .fw-tw-feed-item {
-  padding:15px !important;
-  background: rgba(255, 255, 255, 0.5) !important;
-  margin-bottom: 10px !important;
-  border-bottom: 0 !important;
-  border-radius: 2px !important;
+  padding: 15px!important;
+  background: rgba(255, 255, 255, 0.5)!important;
+  border-radius: 4px!important;
+  box-shadow: 0 0 2px #dadbe4;
+  width: 88%;
+  margin: 0 auto 10px !important;
+  display: block;
 }
 
 #fw-tw-feed-items .fw-tw-feed-item-retweet {
@@ -85,7 +80,7 @@ a.fw-tw-links-in-tweets {
 }
 
 .fw-tw-feed-item-username {
-  font-family: 'ProductSans-Medium','CompassSans-Regular'!important;
+  font-family: 'ProductSans-Medium',!important;
 }
 
 

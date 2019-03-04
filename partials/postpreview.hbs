@@ -8,9 +8,9 @@
   {{#if feature_image}}
     <a href="{{url}}" alt="{{{title}}}" class="featured-media">
       <picture>
-        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="xl"}} 1x, {{img_url feature_image size="xl"}} 2x">
-        <source media="(min-width: 800px)" data-srcset="{{img_url feature_image size="l"}} 1x, {{img_url feature_image size="l"}} 2x">
-        <source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="xl"}} 1x, {{img_url feature_image size="xl@2x"}} 2x">
+        <source media="(min-width: 800px)" data-srcset="{{img_url feature_image size="l"}} 1x, {{img_url feature_image size="l@2x"}} 2x">
+        <source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m@2x"}} 2x">
         <img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
     </picture>
     </a>
