@@ -26,7 +26,6 @@ hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
-hljs.registerLanguage('css', css);
 hljs.initHighlightingOnLoad();
 
 var postFunctions = {
