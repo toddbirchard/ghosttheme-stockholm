@@ -9,11 +9,13 @@
 				<!-- start main post area -->
 				<div class=" main-content">
 					<div class="postlist">
+						<!-- start sorting widget -->
 						<div class="sort-container">
 							<div class="sort">
 								<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="fal fa-arrow-to-bottom"></i>
 							</div>
 							</div>
+							<!-- end sorting widget -->
 							<div class="sorted-series">
 								{{#seriesdata}}
 								{{> cover-tag}}
@@ -26,15 +28,4 @@
 						</div>
 					</div>
 </section>
-<script>
-$(document).ready(function() {
-  $('.sort').on('click', function(){
-		$('.sorted-series').toggleClass('descending');
-	});
-
-	$('.sort').on('click', function(e) {
-		$('.sort').toggleClass('sort-toggle');
-	});
-});
-</script>
 <!-- end site's main content area -->

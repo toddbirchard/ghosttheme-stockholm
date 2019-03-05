@@ -154,8 +154,7 @@ var globalFunctions = {
 
     });
   },
-  homepageSearch: function() {
-    if ($('body').hasClass('home-template')) {
+  search: function() {
       let ghostSearch = new GhostSearch({
         key: '2ba06e23c3fb2a866de96402f0',
         host: 'https://hackersandslackers.com',
@@ -187,7 +186,6 @@ var globalFunctions = {
           '</li>';
         }
       });
-    }
   },
   lazyload: function() {
 
@@ -197,7 +195,7 @@ var globalFunctions = {
     globalFunctions.retina();
     globalFunctions.tags();
     globalFunctions.seriesIcons();
-    globalFunctions.homepageSearch();
+    globalFunctions.search();
     globalFunctions.lazyload();
   }
 };

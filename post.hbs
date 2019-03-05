@@ -3,90 +3,85 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="container">
-			{{#post}}
+		{{#post}}
 
-				<!-- start main post area -->
-				<div class=" main-content">
-					<!-- start post -->
+			<!-- start main post area -->
+			<div class=" main-content">
+				<article class="{{post_class}}">
+					<h1 class="post-title">{{{title}}}</h1>
+					<h4 class="excerpt">{{excerpt}}</h4>
+					<!-- start responsive image -->
+					{{#if feature_image}}
+						<div class="featured-media">
+							<picture>
+								<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="l"}} 1x, {{img_url feature_image size="xl"}} 2x">
+								<source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+								<img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+							</picture>
+						</div>
+					{{/if}}
+					<!-- end responsive image -->
 
-					<article class="{{post_class}}">
-						<h1 class="post-title">{{{title}}}</h1>
-						<h4 class="excerpt">{{excerpt}}</h4>
-						{{#if feature_image}}
-							<div class="featured-media">
-								<picture>
-					        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="l"}} 1x, {{img_url feature_image size="xl"}} 2x">
-					        <source media="(min-width: 600px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
-					        <img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
-					    </picture>
-							</div>
-						{{/if}}
-
-						{{#primary_tag}}
+					{{!--	{{#primary_tag}}
 							{{#if feature_image}}
 								{{#get "posts" filter="primary_tag:" include="count.posts" order="published_at desc" }}
 									{{count.posts}}
 								{{/get}}
 							{{/if}}
-						{{/primary_tag}}
+						{{/primary_tag}}--}}
 
-						<div class="post-head">
-							<div class="post-meta">
-								{{#primary_tag}}
-									<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
-								{{/primary_tag}}
-								{{#primary_author}}
-									{{#unless profile_image}}
-										<a href="{{url}}" class="meta-item author desktop"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-										<a href="{{url}}" class="meta-item author mobile"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
-									{{/unless}}
-									{{#if profile_image}}
-										<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image absolute="true" size="xs"}}" alt="{{slug}}'s Author image" class="avi" data-rjs="2"><span>{{name}}</span></a>
-										<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image absolute="true" size="xs"}}" alt="{{slug}}'s Author image" class="avi" data-rjs="2"><span>{{slug}}</span></a>
-									{{/if}}
-								{{/primary_author}}
-								<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
-								<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
-							</div>
+					<!-- start post metadata -->
+					<div class="post-head">
+						<div class="post-meta">
+							{{#primary_tag}}
+								<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+							{{/primary_tag}}
+							{{#primary_author}}
+								{{#unless profile_image}}
+									<a href="{{url}}" class="meta-item author desktop"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+									<a href="{{url}}" class="meta-item author mobile"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+								{{/unless}}
+								{{#if profile_image}}
+									<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image absolute="true" size="xs"}}" alt="{{slug}}'s Author image" class="avi" data-rjs="2"><span>{{name}}</span></a>
+									<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image absolute="true" size="xs"}}" alt="{{slug}}'s Author image" class="avi" data-rjs="2"><span>{{slug}}</span></a>
+								{{/if}}
+							{{/primary_author}}
+							<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
+							<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
 						</div>
-						{{> thisseries-widget}}
-
-
-
-						{{#has tag="Roundup"}}
-							<div class="post-roundup-blurb">
-								<i class="fal fa-flask"></i>
-								<p>Resident Scientist Snkia works tirelessly towards robot utopia. These are his findings.</p>
-							</div>
-						{{/has}}
-
-						<div class="post-content">
-							{{content}}
-							<footer class="post-footer">
-								<div class="tag-list">
-									{{#if tags}}
-										{{tags separator=""}}
-									{{/if}}
-								</div>
-								<div class="share">
-									{{! insert share_links partials}}
-									{{> share_links}}
-								</div>
-							</footer>
-
-						</div>
-
-					</article>
 					</div>
-					{{> nextprev}}
-					{{> about-author}}
-					{{#foreach authors include="count.posts"}}
-						{{> author-card}}
-					{{/foreach}}
-					{{> relatedposts}}
-					{{> widget-newsletter}}
+					<!-- end post metadata -->
 
-				<!-- end main post area -->
+					{{> postseries}}
+
+					<!-- blurb describing roundup posts -->
+					{{#has tag="Roundup"}}
+						<div class="post-roundup-blurb">
+							<i class="fal fa-flask"></i>
+							<p>Resident Scientist Snkia works tirelessly towards robot utopia. These are his findings.</p>
+						</div>
+					{{/has}}
+					<!-- end blurb -->
+
+					<!-- start content -->
+					<div class="post-content">
+						{{content}}
+						<footer class="post-footer">
+							<div class="tag-list">
+								{{#if tags}}
+									{{tags separator=""}}
+								{{/if}}
+							</div>
+							<div class="share">
+								{{> share_links}}
+							</div>
+						</footer>
+					</div>
+					<!-- end content -->
+				</article>
+			</div>
+			<!-- end main post area -->
+			{{> postfooter}}
 	</div>
 </section>
 {{#has tag="Roundup"}}

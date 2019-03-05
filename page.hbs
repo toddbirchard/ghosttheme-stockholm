@@ -1,37 +1,37 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<!-- start site's main content area -->
 
+<!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="container">
-			{{! insert sidebar partial}}
-			{{> sidebar}}
-			<!-- start main post area -->
-			<div class="main-content">
-				<!-- start post -->
-				{{#post}}
+		{{> sidebar}}
+		<!-- start main post area -->
+		<div class="main-content">
+			<!-- start post -->
+			{{#post}}
 				<article class="page">
+					<!-- start responsive image -->
 					{{#if feature_image}}
-					<div class="featured-media">
-						<picture>
-							<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
-							<img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
-					</picture>
-					</div>
+						<div class="featured-media">
+							<picture>
+								<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
+								<img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+							</picture>
+						</div>
 					{{/if}}
+					<!-- end responsive image -->
 					<div class="page-head">
 						<h1 class="page-title">{{{title}}}</h1>
-							<h4>{{excerpt}}</h4>
+						<h4>{{excerpt}}</h4>
 					</div>
 					<div class="post-content">
 						{{content}}
 					</div>
 				</article>
-				{{/post}}
-				<!-- end post -->
-			</div>
-			<!-- end main post area -->
-
+			{{/post}}
+			<!-- end post -->
+		</div>
+		<!-- end main post area -->
 	</div>
 </section>
 <!-- end site's main content area -->

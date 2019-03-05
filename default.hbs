@@ -12,22 +12,9 @@
 	<meta name="theme-color" content="#0db0e2" />
 	<link rel="shortcut icon" href="{{@site.icon}}" />
 
-	{{! Styles }}
-	<script>
-		// Set the options to make LazyLoad self-initialize
-		window.lazyLoadOptions = {
-			elements_selector: ".lazy",
-			// ... more custom settings?
-		};
-		// Listen to the initialization event and get the instance of LazyLoad
-		window.addEventListener('LazyLoad::Initialized', function(event) {
-			window.lazyLoadInstance = event.detail.instance;
-		}, false);
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
 	{{! Scripts }}
+	{{> lazyload}}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
-	
 	{{#is "post"}}
 		<meta property="og:image" content="{{img_url feature_image}}">
 		{{else}}
@@ -48,5 +35,4 @@
 	{{> scripts}}
 	{{ghost_foot}}
 </body>
-
 </html>

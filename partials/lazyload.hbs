@@ -1,0 +1,14 @@
+<!-- start lazy load image logic -->
+<script>
+  // Set the options to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    // ... more custom settings?
+  };
+  // Listen to the initialization event and get the instance of LazyLoad
+  window.addEventListener('LazyLoad::Initialized', function(event) {
+    window.lazyLoadInstance = event.detail.instance;
+  }, false);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.2/dist/lazyload.min.js"></script>
+<!-- end lazy load -->
