@@ -11,6 +11,7 @@ import handlebars from 'highlight.js/lib/languages/handlebars';
 import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
+import nginx from 'highlight.js/lib/languages/nginx';
 import ScrollBooster from 'scrollbooster';
 import baguetteBox from 'baguettebox.js';
 const fetch = require('node-fetch');
@@ -26,6 +27,7 @@ hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
+hljs.registerLanguage('nginx', nginx);
 hljs.initHighlightingOnLoad();
 
 var postFunctions = {
