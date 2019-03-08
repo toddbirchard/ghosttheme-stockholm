@@ -33,15 +33,17 @@
 
 .fw-tw-feed-item-description {
   font-family: 'ProductSans-Regular',sans-serif !important;
-  line-height: 1.4!important;
-  font-size: .8em!important;
-  text-align: left!important;
-  position: relative!important;
+  line-height: 1.4 !important;
+  font-size: .8em !important;
+  text-align: left !important;
+  position: relative !important;
 }
 
 .fw-tw-feed-item-username,
 .fw-tw-feed-item-username {
   font-family: 'ProductSans-Regular',sans-serif !important;
+  color: #2b576b !important;
+  font-weight: 400;
 }
 .fw-tw-feed-item-date,
 .fw-tw-links-in-tweets {
@@ -54,7 +56,7 @@ a.fw-tw-links-in-tweets {
 
 
 .fw-tw-feed-item {
-  padding: 15px!important;
+  padding: 15px 0 !important;
   background: rgba(255, 255, 255, 0.5)!important;
   border-radius: 4px!important;
   box-shadow: 0 0 2px #dadbe4;
@@ -77,6 +79,7 @@ a.fw-tw-links-in-tweets {
 
 .fw-tw-feed-item-user-img {
   margin-right: 3px !important;
+  border-radius: 3px;
 }
 
 .fw-tw-feed-item-username {
