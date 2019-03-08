@@ -15,5 +15,5 @@ var pageFunctions = {
 }
 
 $(document).ready(function() {
-  pageFunctions.postInit();
+  pageFunctions.seriesSorter();
 });
