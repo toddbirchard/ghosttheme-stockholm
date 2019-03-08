@@ -1,6 +1,39 @@
 @import "../global/variables.less";
 
 .tag-template {
+
+  .series-cover {
+    background-size: cover;
+    background-position-y: center;
+    height: 300px;
+    background-color: #192e4c;
+    background-blend-mode: multiply;
+    @media(max-width: 600px) {
+      margin-left: calc(~"-50vw + 50%") !important;
+      margin-right: calc(~"-50vw + 50%") !important;
+      margin-top: -20px;
+    }
+
+    .tag-name {
+      font-size: 2.2em;
+      color: white !important;
+      font-family: 'TTNormsPro-Regular';
+      text-shadow: 0 0 20px #2f2d56;
+      margin-top: 110px;
+    }
+
+    .tag-description {
+      font-weight: 600;
+      line-height: 1.5;
+      max-width: 90%;
+      margin: 20px auto 0;
+      color: white;
+      font-family: TTNormsPro-Regular;
+      text-shadow: 2px 2px 0 #15133c, 2px 2px 10px #15133c;
+      font-size: 1.2em;
+    }
+  }
+
   .postlist {
     display: flex;
     justify-content: space-between;
@@ -30,37 +63,7 @@
       }
     }
 
-    .series-cover {
-      background-size: cover;
-      background-position-y: center;
-      height: 300px;
-      background-color: #192e4c;
-      background-blend-mode: soft-light;
-      @media(max-width: 600px) {
-        margin-left: calc(~"-50vw + 50%") !important;
-        margin-right: calc(~"-50vw + 50%") !important;
-        margin-top: -20px;
-      }
 
-      .tag-name {
-        font-size: 2.2em;
-        color: white !important;
-        font-family: 'TTNormsPro-Regular';
-        text-shadow: 0 0 20px #2f2d56;
-        margin-top: 110px;
-      }
-
-      .tag-description {
-        font-weight: 600;
-        line-height: 1.5;
-        max-width: 90%;
-        margin: 20px auto 0;
-        color: white;
-        font-family: TTNormsPro-Regular;
-        text-shadow: 2px 2px 0 #15133c, 2px 2px 10px #15133c;
-        font-size: 1.2em;
-      }
-    }
 
     article {
       width: 49%;
@@ -75,9 +78,11 @@
 
       .post-head {
         margin: 0;
+        min-height: 140px;
 
         @media(max-width: 600px) {
-              margin: 0 0 80px;
+          margin: 0 0 80px;
+          min-height: unset;
         }
       }
 
@@ -85,7 +90,7 @@
         font-size: 1.4em;
 
         a {
-          font-family: 'ProductSans-Medium','',sans-serif;
+          font-family: 'ProductSans-Medium', sans-serif;
           font-weight: 500;
         }
       }
@@ -138,7 +143,7 @@
             height: fit-content;
           }
           &:hover {
-            background: @button-hover;
+            background: @secondary-color;
             color: white;
           }
           @media(max-width: 600px) {

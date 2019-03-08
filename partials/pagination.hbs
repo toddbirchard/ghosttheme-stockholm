@@ -34,22 +34,22 @@
 		for (i = 1; i <= 8; i++) {
 			// If you are on the current page, bold the nubmer and do not link
 			if (i == pageCurrent) {
-				nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+				nav.innerHTML = nav.innerHTML + "<strong class='page'>" + i + "</strong>";
 			} else {
 				// Otherwise, add a link to the page
 				// This is where all the customization can go, space between each link, commas, etc.
-				nav.innerHTML = nav.innerHTML + "<a href=" + url + "/page/" + i + ">" + i + "</a>";
+				nav.innerHTML = nav.innerHTML + "<a class='page' href=" + url + "/page/" + i + ">" + i + "</a>";
 			}
 		}
 	} else {
 		for (i = 1; i <= pageTotal; i++) {
 			// If you are on the current page, bold the nubmer and do not link
 			if (i == pageCurrent) {
-				nav.innerHTML = nav.innerHTML + "<strong>" + i + "</strong>";
+				nav.innerHTML = nav.innerHTML + "<strong class='page'>" + i + "</strong>";
 			} else {
 				// Otherwise, add a link to the page
 				// This is where all the customization can go, space between each link, commas, etc.
-				nav.innerHTML = nav.innerHTML + "<a href=" + url + "/page/" + i + ">" + i + "</a>";
+				nav.innerHTML = nav.innerHTML + "<a class='page' href=" + url + "/page/" + i + ">" + i + "</a>";
 			}
 		}
 	}

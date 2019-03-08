@@ -2,7 +2,7 @@
 <div class="widget tags">
 	<h4 class="footer-title">Tags</h4>
 	<ul>
-    {{#get "tags" filter="slug:-[roundup,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="6" include="count.posts" order="count.posts DESC" }}
+    {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="6" include="count.posts" order="count.posts DESC" }}
 			{{#foreach tags}}
 					<li>
 						<a href="{{url}}">{{name}}</a>
