@@ -43,7 +43,8 @@ module.exports = {
     'author': path.resolve(__dirname, './webpack/author.js'),
     'resources': path.resolve(__dirname, './webpack/resources.js'),
     'projects': path.resolve(__dirname, './webpack/projects.js'),
-    'series': path.resolve(__dirname, './webpack/series.js')
+    'series': path.resolve(__dirname, './webpack/series.js'),
+    'transactional': path.resolve(__dirname, './webpack/transactional.js')
   },
   output: {
     path: path.resolve(__dirname, './assets/dist'),

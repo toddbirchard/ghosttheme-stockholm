@@ -27,7 +27,7 @@
 
 		a,
 		p {
-			font-family: 'TTNorms-Medium' !important;
+			font-family: 'TTNormsPro-Medium' !important;
 		}
 	</style>
 </head>
@@ -44,6 +44,9 @@
 		<!-- end main post area -->
 	</section>
 	{{/post}}
+	{{#contentFor "scripts"}}
+		<script async src="{{asset "dist/transactional.js"}}"></script>
+	{{/contentFor}}
 </body>
 </html>
 <!-- end site's main content area -->
