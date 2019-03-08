@@ -92,22 +92,22 @@ var postFunctions = {
     });
   },
   enableLightbox: function() {
-    $('.post-content img').each(function(obj, i){
+    $('.post-content img').each(function(obj, i) {
       var imagesrc = $(this).attr('src');
       var caption = $(this).closest('figure').find('figcaption').text();
       var image = $('.post-content')[i]
       $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
     });
     baguetteBox.run('.post-content', {
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-        },
-        animation: 'fadeIn',
-        noScrollbars: true
+      captions: function(element) {
+        return element.getElementsByTagName('img')[0].alt;
+      },
+      animation: 'fadeIn',
+      noScrollbars: true
     });
   },
   addImageAltTags: function() {
-    $('.post-content img').each(function(obj){
+    $('.post-content img').each(function(obj) {
       var caption = $(this).closest('figure').find('figcaption').text();
       $(this).attr('alt', caption);
     });
@@ -120,19 +120,19 @@ var postFunctions = {
   create_nextprev_widget: function(posts) {
     var numposts = posts.length;
     var postslug = postFunctions.current_page();
-    var index = posts.findIndex(function(item, i){
+    var index = posts.findIndex(function(item, i) {
       return item.slug === postslug
     });
     index = index++;
-    if (index+1 < numposts) {
-      var prev = posts[index+1];
+    if (index + 1 < numposts) {
+      var prev = posts[index + 1];
       $('.prev-article').css('visibility', 'visible');
       $('.prev-article').find('h6').html(prev['title']);
       $('.prev-article').find('p').html(prev['custom_excerpt']);
       $('.prev-article').attr('href', prev['url']);
     }
-    if  (index > 0) {
-      var next = posts[index-1];
+    if (index > 0) {
+      var next = posts[index - 1];
       $('.next-article').css('visibility', 'visible');
       $('.next-article').find('h6').html(next['title']);
       $('.next-article').find('p').html(next['custom_excerpt']);
@@ -156,29 +156,32 @@ var postFunctions = {
     }).then((res) => {
       return res.json()
     }).then((json) => {
-      var posts = json['posts'];
-      var i;
-      for (i = 0; i < posts.length; i++) {
-        var post = posts[i];
-        var title = post['title'];
-        var url = 'https://hackersandslackers.com/' + post['slug'];
-        var slug = post['slug'];
-        var created = post['created_at'];
-        var numposts = posts.length;
-        var post_dict = {
-          'seriesname': seriesname,
-          'title': title,
-          'url': url,
-          'created': created,
-          'slug': slug,
-          'numposts': numposts
+      if (json['posts']) {
+        var posts = json['posts'];
+        var i;
+        for (i = 0; i < posts.length; i++) {
+          var post = posts[i];
+          var title = post['title'];
+          var url = 'https://hackersandslackers.com/' + post['slug'];
+          var slug = post['slug'];
+          var created = post['created_at'];
+          var numposts = posts.length;
+          var post_dict = {
+            'seriesname': seriesname,
+            'title': title,
+            'url': url,
+            'created': created,
+            'slug': slug,
+            'numposts': numposts
+          }
+          postFunctions.populate_series_list(post_dict);
         }
-        postFunctions.populate_series_list(post_dict);
+        postFunctions.create_nextprev_widget(posts);
+        var postslug = postFunctions.current_page();
+        $('.' + postslug).addClass('currentPost');
+        $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
+        posts.length + 1));
       }
-      postFunctions.create_nextprev_widget(posts);
-      var postslug = postFunctions.current_page();
-      $('.' + postslug).addClass('currentPost');
-      $('#seriesposts ol').attr('style', 'counter-reset:li ' + (posts.length + 1));
     });
   },
   tag_loop: function(tags) {
@@ -205,6 +208,9 @@ var postFunctions = {
       return res.json()
     }).then((json) => {
       postFunctions.tag_loop(json['posts'][0]['tags']);
+    }).catch(err => {
+      console.log(err.response.errors) // GraphQL response errors
+      console.log(err.response.data) // Response data if available
     });
   },
   postInit: function() {
