@@ -3,29 +3,30 @@
 <!-- start site's main content area -->
 <section class="content-wrap series-template {{body_class}}">
 	<div class="container">
-			<!-- end main post area -->
-			{{! insert sidebar partial}}
-			{{> sidebar}}
-				<!-- start main post area -->
-				<div class=" main-content">
-					<div class="postlist">
-						<!-- start sorting widget -->
-						<div class="sort-container">
-							<div class="sort">
-								<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="fal fa-arrow-to-bottom"></i>
-							</div>
-							</div>
-							<!-- end sorting widget -->
-							<div class="sorted-series">
-								{{#seriesdata}}
-								{{> cover-tag}}
-								{{#foreach posts}}
-										{{> seriespreview}}
-								{{/foreach}}
-								{{/seriesdata}}
-							</div>
-						</div>
-						</div>
+		<!-- end main post area -->
+		{{! insert sidebar partial}}
+		{{> sidebar}}
+		<!-- start main post area -->
+		<div class=" main-content">
+			<div class="postlist">
+				<!-- start sorting widget -->
+				<div class="sort-container">
+					<div class="sort">
+						<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="fal fa-arrow-to-bottom"></i>
 					</div>
+				</div>
+				<!-- end sorting widget -->
+				<div class="sorted-series">
+					{{#seriesdata}}
+						{{> cover-tag}}
+						{{#foreach posts}}
+							{{> seriespreview}}
+						{{/foreach}}
+					{{/seriesdata}}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+<script async src="{{asset "dist/series.js"}}"></script>
 <!-- end site's main content area -->

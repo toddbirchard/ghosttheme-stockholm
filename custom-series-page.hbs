@@ -1,6 +1,7 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
+{{#page}}
 <section class="content-wrap archive">
 	<div class="container">
 			<!-- start main post area -->
@@ -44,5 +45,6 @@
 		<!-- end main post area -->
 	</div>
 </section>
-<script async src="{{asset "/dist/series.js"}}"></script>
+<script async src="{{asset "dist/series.js"}}"></script>
+{{/page}}
 <!-- end site's main content area -->
