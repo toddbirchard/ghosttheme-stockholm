@@ -42,7 +42,8 @@ module.exports = {
     'apply': path.resolve(__dirname, './webpack/apply.js'),
     'author': path.resolve(__dirname, './webpack/author.js'),
     'resources': path.resolve(__dirname, './webpack/resources.js'),
-    'projects': path.resolve(__dirname, './webpack/projects.js')
+    'projects': path.resolve(__dirname, './webpack/projects.js'),
+    'series': path.resolve(__dirname, './webpack/series.js')
   },
   output: {
     path: path.resolve(__dirname, './assets/dist'),
