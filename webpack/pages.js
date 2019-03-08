@@ -15,5 +15,5 @@ var pageFunctions = {
 }
 
 $(document).ready(function() {
-  postFunctions.postInit();
+  pageFunctions.postInit();
 });

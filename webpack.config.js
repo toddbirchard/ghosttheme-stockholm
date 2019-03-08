@@ -12,7 +12,10 @@ module.exports = {
   mode: 'production',
   plugins: [
     new FontConfigWebpackPlugin(),
-    new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"}),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    }),
     new ImageminWebpWebpackPlugin({config : [
       {
         test: /\.(jpe?g|png)/,
@@ -47,11 +50,13 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true, parallel: true, sourceMap: true // set to true if you want JS source maps
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+       new UglifyJsPlugin({
+         cache: true,
+         parallel: true,
+         sourceMap: true // set to true if you want JS source maps
+       }),
+       new OptimizeCSSAssetsPlugin({})
+     ]
   },
   module: {
     rules: [
@@ -60,7 +65,15 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
       }, {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './assets/dist'
+            }
+          },
+          "css-loader"
+        ]
       }, {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
