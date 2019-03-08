@@ -2,6 +2,7 @@
 <script src="{{asset "/js/lazy-load.min.js"}}"></script>
 <script src="{{asset "js/includes/content-api.min.js"}}"></script>
 <script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
+<script src="{{asset "/js/includes/retina.min.js"}}"></script>
 <script async src="{{asset "dist/global.js"}}"></script>
 <noscript id="deferred-styles">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
@@ -36,8 +37,4 @@ var lazyLoadInstance = new LazyLoad({
     <script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
     <script async src="{{asset "dist/author.js"}}"></script>
 {{/is}}
-{{#has slug="series-template"}}
-    <script async src="{{asset "/dist/series.js"}}"></script>
-{{/has}}
-
 <!-- End Scripts -->

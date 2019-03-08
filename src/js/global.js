@@ -7,7 +7,7 @@
  1. function declaretion
  ==========================*/
 
-var themeApp = {
+var globalFunctions = {
   resizeIframe: function(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   },
@@ -73,10 +73,10 @@ var themeApp = {
     });
   },
   init: function() {
-    themeApp.contributors();
-    themeApp.retina();
-    themeApp.tags();
-    themeApp.lazyload();
+    globalFunctions.contributors();
+    globalFunctions.retina();
+    globalFunctions.tags();
+    //globalFunctions.lazyload();
   }
 };
 
@@ -84,5 +84,5 @@ var themeApp = {
 2. Initialization
 =========================== */
 $(document).ready(function() {
-  themeApp.init();
+  globalFunctions.init();
 });
