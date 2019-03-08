@@ -28,5 +28,7 @@
 		</div>
 	</div>
 </section>
-<script async src="{{asset "dist/series.js"}}"></script>
+{{#contentFor "scripts"}}
+	<script async src="{{asset "dist/series.js"}}"></script>
+{{/contentFor}}
 <!-- end site's main content area -->

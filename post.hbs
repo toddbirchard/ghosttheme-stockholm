@@ -83,9 +83,12 @@
 			{{> postfooter}}
 	</div>
 </section>
-{{#has tag="Roundup"}}
-	<script src="{{asset "/js/previews.js"}}"></script>
-{{/has}}
+{{#contentFor "scripts"}}
+  <script async src="{{asset "dist/posts.js"}}"></script>
+	{{#has tag="Roundup"}}
+		<script src="{{asset "/js/previews.js"}}"></script>
+	{{/has}}
+{{/contentFor}}
 {{/post}}
 <!-- end post -->
 <!-- end site's main content area -->

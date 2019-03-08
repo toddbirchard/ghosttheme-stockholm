@@ -25,15 +25,8 @@ var lazyLoadInstance = new LazyLoad({
          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
      else window.addEventListener('load', loadDeferredStyles);
-   </script>
-{{#is "post"}}
-  <script async src="{{asset "dist/posts.js"}}"></script>
-{{/is}}
+</script>
 {{^is "post,home"}}
   <script async src="{{asset "dist/pages.js"}}"></script>
-{{/is}}
-{{#is "author"}}
-    <script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
-    <script async src="{{asset "dist/author.js"}}"></script>
 {{/is}}
 <!-- End Scripts -->
