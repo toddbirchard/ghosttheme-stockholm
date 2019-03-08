@@ -2,7 +2,7 @@
   .hljs.javascript,
   .hljs.language-javascript {
     background: #1e3742;
-    color: #7fd4ba;
+    color: #a0e4cf;
 
     &::-moz-selection {
       text-shadow: none;
@@ -12,10 +12,6 @@
     .hljs-inserted {
       border-bottom: 1px dotted #f0fff0;
       text-decoration: none;
-    }
-
-    .hljs-italic {
-      font-style: italic;
     }
 
     .hljs-bold,
@@ -44,6 +40,7 @@
 
     .hljs-comment {
       color: #7f8ba7;
+      opacity: 0.6;
     }
 
     .hljs-built_in {
@@ -62,7 +59,7 @@
     .hljs-number,
     .hljs-operator,
     .hljs-tag {
-      color: #a2b34d;
+      color: #f7f23f;
     }
 
     .hljs-property {
@@ -79,17 +76,25 @@
       color: #b3d6b3;
     }
 
-    .hljs-function,
+    .hljs-function > .hljs-keyword {
+      color: #78ddfa;
+      font-weight: 700;
+    }
+
+    .hljs-function > .hljs-title {
+      color: #d08888;
+    }
+
     .hljs-params {
-      color: #EEAC18;
+      color: #fbb579;
     }
 
     .hljs-keyword {
-      color: #FD92F0;
+      color: #a4a0ff;
     }
 
     .hljs-string {
-      color: #F4E39D;
+      color: #daf7fd;
       font-weight: 400;
       font-family: 'Hack';
     }
