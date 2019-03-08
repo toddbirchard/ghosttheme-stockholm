@@ -412,8 +412,8 @@
 		.btn {
 			height: 17px;
 			padding: 14px 24px;
-			background: #33abba;
-			box-shadow: 2px 2px 0 #2b84a7, 2px 0 0 #2b84a7;
+			background: @button-color;
+			box-shadow: 2px 2px 0 @button-shadow, 2px 0 0 @button-shadow, 0 2px 0 @button-shadow;
 			color: white;
 			font-family: 'ProductSans-Regular',sans-serif;
 			font-size: 18px;
@@ -425,7 +425,7 @@
 
 			&:hover {
 				background: @hover-color;
-				box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%);
+				box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%), 0 2px 0 darken(@hover-color, 15%);
 				cursor: pointer;
 				color: white;
 			}

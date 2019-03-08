@@ -245,8 +245,8 @@
 			button {
 				width: -webkit-fill-available !important;
 				width: -moz-available !important;
-				background: #33abba;
-				box-shadow: 2px 2px 0 #2b84a7, 2px 0 0 #2b84a7;
+				background: @button-color;
+				box-shadow: 2px 2px 0 @button-shadow, 2px 0 0 @button-shadow, 0 2px 0 @button-shadow;
 				padding: 13px 20px;
 				font-size: 16px;
 				color: white;
@@ -262,7 +262,7 @@
 
 				&:hover {
 					background: @hover-color;
-					box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%);
+					box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%), 0 2px 0 darken(@hover-color, 15%);
 					cursor: pointer;
 				}
 			}
