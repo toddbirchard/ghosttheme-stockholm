@@ -10,6 +10,7 @@
   }
 
   .main-content {
+    width: 100%;
     @media (max-width: 800px) {
       width: 95%;
       margin: auto;
@@ -67,7 +68,8 @@
   /* Bar which sorts articles */
   .sort-container {
     display: flex;
-    width: 97%;
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
     height: 29px;
     margin-bottom: 20px;
     background: #ffffff;
@@ -243,6 +245,10 @@
 
           span {
             font-family: 'TTNormsPro-Medium';
+            white-space: nowrap;
+            max-width: 100px;
+            text-overflow: ellipsis;
+            overflow: hidden;
           }
         }
 

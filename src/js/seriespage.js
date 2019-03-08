@@ -1,13 +1,17 @@
-$(document).ready(function() {
-  $('.sort').on('click', function(){
-		$('.sorted-series').toggleClass('descending');
-	});
+var seriesFunctions = {
+  seriesSorter: function(){
+    if ($('body').hasClass('home-template')) {
+      $('.sort').on('click', function(){
+    		$('.sorted-series').toggleClass('descending');
+    	});
 
-	$('.sort').on('click', function(e) {
-		$('.sort').toggleClass('sort-toggle');
-	});
-});
+    	$('.sort').on('click', function(e) {
+    		$('.sort').toggleClass('sort-toggle');
+    	});
+    }
+  }
+}
 
 $(document).ready(function() {
-  postFunctions.postInit();
+  seriesFunctions.postInit();
 });
