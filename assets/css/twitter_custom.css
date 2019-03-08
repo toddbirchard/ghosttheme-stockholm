@@ -37,6 +37,7 @@
   font-size: .8em !important;
   text-align: left !important;
   position: relative !important;
+  color: #464750 !important;
 }
 
 .fw-tw-feed-item-username,
@@ -58,9 +59,8 @@ a.fw-tw-links-in-tweets {
 .fw-tw-feed-item {
   padding: 15px 0 !important;
   background: rgba(255, 255, 255, 0.5)!important;
-  border-radius: 4px!important;
-  box-shadow: 0 0 2px #dadbe4;
-  width: 88%;
+  border-radius: 4px !important;
+  width: 100%;
   margin: 0 auto 10px !important;
   display: block;
 }
@@ -73,13 +73,16 @@ a.fw-tw-links-in-tweets {
 }
 
 .fw-tw-feed-item-module {
-  padding:10px !important;
+  padding: 10px !important;
   position: relative!important;
 }
 
 .fw-tw-feed-item-user-img {
   margin-right: 3px !important;
-  border-radius: 3px;
+}
+
+.fw-tw-feed-item-user-img img {
+  border-radius: 3px !important;
 }
 
 .fw-tw-feed-item-username {
