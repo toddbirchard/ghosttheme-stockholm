@@ -13,5 +13,5 @@ var seriesFunctions = {
 }
 
 $(document).ready(function() {
-  seriesFunctions.postInit();
+  seriesFunctions.seriesSorter();
 });
