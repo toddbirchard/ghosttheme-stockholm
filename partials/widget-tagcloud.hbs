@@ -4,7 +4,7 @@
 	<div class="tag-cloud">
 		{{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="28" include="count.posts" order="count.posts DESC" }}
 			{{#foreach tags}}
-				<a href="{{url}}" name="{{slug}}">{{name}}</a>
+				<a href="{{url}}">{{name}}</a>
 			{{/foreach}}
 		{{/get}}
 	</div>
