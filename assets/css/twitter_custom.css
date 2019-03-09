@@ -60,9 +60,11 @@ a.fw-tw-links-in-tweets {
   padding: 15px 0 !important;
   background: rgba(255, 255, 255, 0.5)!important;
   border-radius: 4px !important;
-  width: 100%;
+  width: 100% !important;
   margin: 0 auto 10px !important;
   display: block;
+  border: 0 !important;
+  box-shadow: 0 !important;
 }
 
 #fw-tw-feed-items .fw-tw-feed-item-retweet {
@@ -79,6 +81,7 @@ a.fw-tw-links-in-tweets {
 
 .fw-tw-feed-item-user-img {
   margin-right: 3px !important;
+  border-radius: 3px !important;
 }
 
 .fw-tw-feed-item-user-img img {

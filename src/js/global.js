@@ -74,7 +74,7 @@ var globalFunctions = {
   },
   init: function() {
     globalFunctions.contributors();
-    globalFunctions.retina();
+  //  globalFunctions.retina();
     globalFunctions.tags();
     //globalFunctions.lazyload();
   }

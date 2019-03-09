@@ -41,28 +41,28 @@
   "config": {
     "posts_per_page": 10,
     "image_sizes": {
-      "xs": {
+      "extrasmall": {
         "width": 26
       },
-      "s": {
+      "small": {
         "width": 370
       },
-      "s@2x": {
+      "small_retina": {
         "width": 840
       },
-      "m": {
+      "medium": {
         "width": 700
       },
-      "m@2x": {
+      "medium_retina": {
         "width": 1400
       },
-      "l": {
+      "large": {
         "width": 780
       },
-      "l@2x": {
+      "large_retina": {
         "width": 1560
       },
-      "xl": {
+      "extralarge": {
         "width": 1500
       }
     }

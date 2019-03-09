@@ -25,8 +25,8 @@
 										<a href="{{slug}}">
 											{{#if feature_image}}
 											<picture>
-												<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="m"}} 1x, {{img_url feature_image size="m"}} 2x">
-												<img alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+												<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+												<img alt="{{title}}" class="lazy" src="{{img_url feature_image}}">
 										</picture>
 											{{/if}}
 											<div class="description">
