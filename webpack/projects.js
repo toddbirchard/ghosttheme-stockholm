@@ -69,25 +69,60 @@ $(document).ready(function() {
 
     function BacklogCards(table_name, project) {
 
-      var url = "http://198.199.74.176:4466";
+      var url = "https://hackersandslackers.app/";
       const backlog_query = `
-          {
-              jiraissueses(where: {status: "Backlog"}, orderBy: updated_DESC, first: 6) {
-                   key
-                   status
-                   summary
-                   assignee
-                   priority
-                   issuetype
-                   epic_name
-                   updated
-                   rank
-                   timestamp
-                   project
-              }
-          }
+      query KanbanJiraIssues($project: String!) {
+        backlog: jiraIssues(where: {status: "Backlog", project: $project}, orderBy: timestamp_DESC, first: 6){
+          key
+          status
+          summary
+          assignee
+          priority
+          issuetype
+          epic
+          rank
+          timestamp
+          project
+        }
+        todo: jiraIssues(where: {status: "To Do", project: $project}, orderBy: timestamp_DESC, first: 6){
+          key
+          status
+          summary
+          assignee
+          priority
+          issuetype
+          epic
+          rank
+          timestamp
+          project
+        }
+        inprogress: jiraIssues(where: {status: "In Progress", project: $project}, orderBy: timestamp_DESC, first: 6){
+          key
+          status
+          summary
+          assignee
+          priority
+          issuetype
+          epic
+          rank
+          timestamp
+          project
+        }
+        done: jiraIssues(where: {status: "Done", project: $project}, orderBy: timestamp_DESC, first: 6){
+          key
+          status
+          summary
+          assignee
+          priority
+          issuetype
+          epic
+          rank
+          timestamp
+          project
+        }
+        }
           `
-      request('http://198.199.74.176:4466', backlog_query)
+      request(url, backlog_query, {'project': 'Hackers and Slackers'})
       .then((data) => {
         return data.json()
       }).then((json) => {
