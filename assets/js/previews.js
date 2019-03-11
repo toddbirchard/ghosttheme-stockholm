@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
   function postLinkPreviews() {
-    $(".post-content > p > a").each(function(index, element) {
+    $("main > p > a").each(function(index, element) {
       var link = $(element).attr('href');
       var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + link;
       $(element).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
