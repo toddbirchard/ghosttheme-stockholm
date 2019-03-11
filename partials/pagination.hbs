@@ -1,6 +1,6 @@
 {{! Pagination file for custom pagination}}
 <!-- start pagination -->
-<nav class="pagination">
+<section class="pagination">
 	{{#if prev}}
 		<a class="newer-posts" href="{{page_url prev}}"><i class="fas fa-arrow-left"></i></i></a>
 	{{/if}}
@@ -14,7 +14,7 @@
 	</div>
 	{{!-- Placeholder for number of total pages --}}
 	<div class="total-count">of <span id="page-total">{{pages}}</span></div>
-</nav>
+</section>
 
 <script>
 	//Grab the total pages value

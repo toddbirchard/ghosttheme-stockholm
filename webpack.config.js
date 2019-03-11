@@ -7,10 +7,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
   mode: 'production',
   plugins: [
+    new Dotenv({path: ''}),
     new FontConfigWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",

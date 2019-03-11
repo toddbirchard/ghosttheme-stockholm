@@ -19,7 +19,7 @@
       color: white !important;
       font-family: 'TTNormsPro-Regular';
       text-shadow: 0 0 20px #2f2d56;
-      margin-top: 110px;
+      margin-top: 90px;
     }
 
     .tag-description {
@@ -62,8 +62,6 @@
         }
       }
     }
-
-
 
     article {
       width: 49%;
@@ -228,27 +226,30 @@
   }
 
   .tag-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: [first] 1fr [last] 1fr;
+    grid-template-rows: 367px;
+    grid-column-gap: 10px;
     margin: 30px 40px 20px;
     @media(max-width: 800px) {
       margin: 30px 30px 20px;
     }
     @media(max-width: 600px) {
+      grid-template-columns: [first] 1fr;
       margin: 20px;
     }
 
     .tag-wrapper {
-      background: #025fa5;
       background: #f4fcff;
-      width: 48.5%;
       margin: 0 0 15px;
       border: 1px solid #dadada;
       transition: all 0.3s ease-out;
-      display: block;
+      grid-template-rows: 291px;
+
+      & > a {
+        display: flex;
+        flex-direction: column;
+      }
 
       .tag-title {
         margin: 0;
@@ -297,7 +298,7 @@
       .img-wrapper {
         text-align: center;
         width: 100%;
-        max-height: 187px;
+        max-height: 161px;
         height: auto;
         position: relative;
         display: block;
@@ -336,7 +337,7 @@
         width: auto;
         display: block;
         align-items: left;
-        min-height: 150px;
+        min-height: 159px;
 
         @media(max-width: 600px){
           min-height: 0;

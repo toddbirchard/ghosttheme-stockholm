@@ -1,9 +1,11 @@
 <!-- start postfooter -->
-{{> nextprev}}
-{{> about-author}}
-{{#foreach authors include="count.posts"}}
-  {{> author-card}}
-{{/foreach}}
-{{> relatedposts}}
-{{> widget-newsletter}}
-<!-- end postfooter -->
+<section>
+  {{> nextprev}}
+  {{> about-author}}
+  {{#foreach authors include="count.posts"}}
+    {{> author-card}}
+  {{/foreach}}
+  {{> relatedposts}}
+  {{> widget-newsletter}}
+</section>
+ <!-- end postfooter -->
