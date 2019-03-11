@@ -9,6 +9,11 @@
     margin: auto;
     border: 1px solid #ecf0f9;
 
+    @media(max-width: 600px) {
+      margin: 0 20px;
+      width: auto !important;
+    }
+
     .nextprev {
       display: flex;
       flex-direction: row;
@@ -16,6 +21,10 @@
       max-width: 830px;
       margin: 20px auto 0;
       background: white;
+
+      @media(max-width: 600px) {
+        margin: 0;
+      }
 
 
       .prev-article {
