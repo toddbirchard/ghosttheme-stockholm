@@ -287,13 +287,13 @@ nav {
 
       li {
         position: relative;
-        width: 50px;
+        width: fit-content;
         height: 25px;
         color: #47576a;
       }
 
       a {
-        font-family: 'ProductSans-Medium';
+        font-family: 'ProductSans-Regular';
         font-size: 0.9em;
         text-transform: uppercase;
         transform: scale(1);
@@ -449,7 +449,7 @@ nav {
     align-items: center;
     height: -webkit-fill-available;
     height: -moz-fill-available;
-    max-width: 550px;
+    max-width: 580px;
     height: 45px;
     @media(max-width: 600px) {
       margin: 0 auto 20px !important;
@@ -996,18 +996,14 @@ nav {
       }
 
       a {
-        font-family: 'ProductSans-Medium';
+        font-family: 'ProductSans-Regular';
         font-size: 0.9em;
         text-transform: uppercase;
         transform: scale(1);
         color: #505f77;
         font-weight: 500;
         transition: all 0.15s ease-out;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
+
 
         &:hover {
           color: @theme-color;
