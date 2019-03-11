@@ -8,7 +8,10 @@
   box-shadow: 0 0 5px rgba(80,82,204,.1)!important;
   @media(max-width: 600px) {
     margin: 5px 20px;
-    width: -webkit-fill-available;
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
     max-width: none;
     min-height: 100px;
     height: fit-content !important;

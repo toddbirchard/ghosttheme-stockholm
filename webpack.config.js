@@ -13,7 +13,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   mode: 'production',
   plugins: [
-    new Dotenv({path: ''}),
+    new Dotenv({path: './.env'}),
     new FontConfigWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
@@ -45,7 +45,7 @@ module.exports = {
     'apply': path.resolve(__dirname, './webpack/apply.js'),
     'author': path.resolve(__dirname, './webpack/author.js'),
     'resources': path.resolve(__dirname, './webpack/resources.js'),
-    'projects': path.resolve(__dirname, './webpack/projects.js'),
+    'projects': ["@babel/polyfill", path.resolve(__dirname, './webpack/projects.js')],
     'series': path.resolve(__dirname, './webpack/series.js'),
     'transactional': path.resolve(__dirname, './webpack/transactional.js')
   },
