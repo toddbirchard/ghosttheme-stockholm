@@ -166,5 +166,8 @@
 	<!-- end main post area -->
 </section>
 <div class="overlay" style="display:none;"></div>
-<script src="{{asset "dist/projects.js"}}"></script>
+{{#contentFor "scripts"}}
+	<script src="{{asset "dist/projects.js"}}"></script>
+{{/contentFor}}
+
 <!-- end site's main content area -->
