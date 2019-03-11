@@ -1,16 +1,18 @@
 #seriesposts {
-  margin: 0 60px 30px;
+  margin: 0 0 30px;
   padding: 20px 20px 10px;
   display: none;
   position: relative;
   overflow: hidden;
-      background: #eceff3;
+  background: #eceff3;
+  border-radius: 3px;
 
   @media(max-width: 800px) {
-    margin: 0 35px 30px;
+    margin: 0 0 30px;
   }
+
   @media(max-width: 600px) {
-    margin: 10px 20px 30px;
+    margin: 10px 0 30px;
   }
 
   h5 {
@@ -33,7 +35,7 @@
     margin-top: 0;
     margin-bottom: 10px;
     margin-left: 0;
-    padding-left: 30px;
+    padding-left: 10px;
     @media(max-width: 600px) {
       margin: 15px 2px 10px;
     }
@@ -67,7 +69,7 @@
       }
 
       &::before {
-        /*content: "Part " counter(li, upper-roman) ". ";*/
+        content: "Part " counter(li, upper-roman) "." !important;
         color: #597d87;
         font-family: 'TTNormsPro-Medium' !important;
         margin-right: 8px;
