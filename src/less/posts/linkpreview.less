@@ -1,14 +1,12 @@
 @import "../global/variables.less";
 @import "../global/mixin.less";
-/*
-.tag-roundup .post-content > p > a {
-  display: none;
-  margin: 0 !important;
-  margin-bottom: 0;
-}*/
 
-.post-template.tag-roundup .post-content > p {
+.tag-roundup main > p {
   margin: 0 !important;
+
+  @media(max-width: 600px) {
+    margin: 0 !important;
+  }
 
   &:last-of-type .link-preview {
     border-bottom: none;
@@ -42,7 +40,7 @@
 
   p {
     margin: 0 !important;
-    color: #7d9d7f;
+    color: #627f64;
     line-height: 1.4 !important;
     text-align: left;
     font-size: .95em !important;
@@ -85,7 +83,6 @@
   margin: 0 auto;
   display: block;
   overflow: hidden;
-  transition: all 0.2s easout;
   width: -webkit-fill-available;
   border-bottom: 1px solid #c6ced8;
 
@@ -158,8 +155,7 @@
     background-color: white;
     background-position-x: center;
     background-position-y: center;
-    border-radius: 0;
-    transition: all 0.2s easout;
+    transition: all 0.2s ease-out;
     border: 0;
     border-radius: 2px;
     /*background-color: white;*/
@@ -174,13 +170,11 @@
     margin-right: 10px;
     display: inline-block;
     font-size: 10px;
-    margin-right: 10px;
     color: #27b5e6;
   }
 
   .url-info {
     color: @theme-color;
-    margin-top: 0;
     font-size: 14px;
     display: inline-block;
     margin: 0 !important;
@@ -198,7 +192,6 @@
   }
 
   .link-info {
-    display: inline-block;
     overflow: hidden;
     width: -webkit-fill-available;
     display: flex;
@@ -214,7 +207,7 @@
 
     .title-desktop {
       margin: 0 0 10px!important;
-      font-family: 'TTNormsPro-Medium',serif;
+      font-family: 'ProductSans-Regular', sans-serif;
       font-size: 1.3em;
       line-height: 1.3;
       text-align: left;
@@ -224,24 +217,21 @@
         width: 100%;
         white-space: normal;
         margin-bottom: 10px;
-        font-size: 1.1em;
       }
     }
 
     .title-mobile {
       display: none;
       margin: 10px 0 20px!important;
-      font-family: 'TTNormsPro-Regular',serif;
+      font-family: 'soleil', serif;
       font-size: 1.2em;
       line-height: 1.2;
-      font-size: 1.2;
       text-align: left;
       @media(max-width: 600px) {
         display: none;
-        margin: 10px 0 !important;
+        margin: 10px 0 10px !important;
         width: 100%;
         white-space: normal;
-        margin-bottom: 10px;
         font-size: 1.1em;
       }
     }
@@ -253,15 +243,14 @@
 
     p {
       color: #505050;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 1.55!important;
       margin-bottom: 10px;
       font-size: .9em;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 4;
-      font-family: 'TTNormsPro-Regular' !important;
-      overflow: hidden;
+      font-family: 'soleil', sans-serif !important;
       text-align: left;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -270,7 +259,7 @@
         margin: 10px 0 !important;
       }
       @media(max-width: 600px) {
-        font-size: .8em !important;
+        font-size: .9em !important;
         white-space: normal;
         height: fit-content;
         max-height: none;

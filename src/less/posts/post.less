@@ -10,7 +10,6 @@ nav {
 	margin-bottom: 1px;
 }
 
-
 	section {
 		width: 100%;
 		max-width: 100%;
@@ -27,8 +26,8 @@ nav {
 
 	.post-wrapper {
 		margin: 0 auto;
-    width: 100%;
-    max-width: 790px;
+    	width: 100%;
+    	max-width: 790px;
 
 		@media(max-width: 800px) {
 			width: 90%;
@@ -41,7 +40,7 @@ nav {
 
 		a {
 			color: darken(@theme-color, 10%);
-			font-family: 'TTNormsPro-Medium';
+			font-family: 'soleil', sans-serif;
 		}
 
 		p > a {
@@ -115,14 +114,13 @@ nav {
 	.post-title {
 		text-align: left;
 		width: -webkit-fill-available;
-		margin: 30px 0 5px;
+		margin: 20px 0 5px;
 		display: block;
-		font-family: 'ProductSans-Bold', 'TTNormsPro-Medium' !important;
+		font-family: 'ProductSans-Bold', 'soleil', sans-serif !important;
 		font-size: 2.2em;
 		font-weight: 600;
 		letter-spacing: 0;
 		line-height: 1.1;
-		text-align: left;
 		color: @h1-color;
 		@media(max-width: 800px) {
 			margin: 10px 0 10px;
@@ -131,7 +129,7 @@ nav {
 		@media(max-width: 600px) {
 			font-size: 1.65em;
 			max-width: auto;
-			margin: 0 0 25px;
+			margin: 10px 0 15px;
 			width: -webkit-fill-available;
 			letter-spacing: 0;
 			font-weight: 600;
@@ -141,7 +139,7 @@ nav {
 		a {
 			color: @h1-color;
 			transition: all 0.2s ease-out;
-			font-family: 'ProductSans-Bold', 'TTNormsPro-Medium' !important;
+			font-family: 'ProductSans-Bold', 'soleil', sans-serif !important;
 
 			&:hover {
 				color: @secondary-color;
@@ -155,7 +153,7 @@ nav {
 		margin: 10px 0 30px;
 		line-height: 1.3;
 		color: @h1-color;
-		font-family: 'TTNormsPro-Medium';
+		font-family: 'ProductSans-Regular', sans-serif;
 		@media(max-width: 800px) {
 			margin: 10px 0 0;
 		}
@@ -168,7 +166,7 @@ nav {
 	  margin: 40px 0 20px;
     color: #555560;
 		line-height: 1.3;
-		font-family: 'ProductSans-Regular';
+		font-family: 'ProductSans-Regular', sans-serif;
 		font-weight: 100!important;
 		font-size: 2em;
 		width: fit-content;
@@ -194,7 +192,7 @@ nav {
 		line-height: 1.2;
 		color: #555560;
 		margin: 40px 0 20px;
-		font-family: 'ProductSans-Regular';
+		font-family: 'ProductSans-Regular', sans-serif;
 		@media(max-width: 800px) {
 			font-size: 1.3em;
 		}
@@ -214,6 +212,8 @@ nav {
 		text-align: left;
 		font-size: 1em;
 		color: #393a40;
+		font-weight: 300;
+		font-family: 'soleil', sans-serif;
 		-webkit-font-smoothing: auto;
 		@media(max-width: 600px) {
 			font-size: 0.95em !important;
@@ -226,9 +226,9 @@ nav {
 	}
 
 	p {
-		margin: 0 0 30px;
+		margin: 0 0 25px;
 		font-size: 1em;
-		line-height: 2em;
+		line-height: 1.8em;
 
 		@media (max-width: 600px) {
 			text-align: left;
@@ -279,7 +279,6 @@ article {
 				max-width: none;
 				width: auto;
 				margin: 15px 0 20px;
-				padding-top: 0;
 				justify-content: space-between;
 			}
 
@@ -288,7 +287,7 @@ article {
 			}
 
 			span {
-				font-family: 'TTNormsPro-Regular',sans-serif;
+				font-family: 'soleil',sans-serif;
 				font-weight: 500;
 			}
 
@@ -316,7 +315,7 @@ article {
 
 				span {
 					font-size: 1em;
-					font-family: 'TTNormsPro-Medium',sans-serif;
+					font-family: 'soleil',sans-serif;
 					@media(max-width: 600px) {
 						font-size: 0.9em;
 					}
@@ -381,7 +380,7 @@ article {
 
 			span {
 				@media(max-width: 600px) {
-					font-family: 'TTNormsPro-Medium', sans-serif;
+					font-family: 'soleil', sans-serif;
 				}
 			}
 
@@ -441,17 +440,15 @@ article {
 
 	ol,
 	ul {
-		margin-left: 20px;
+		margin: 0 30px 20px;
 		padding-left: 0;
-		margin-bottom: 30px;
-		margin-top: 20px;
+
 		@media(max-width:600px) {
 			margin: 20px 15px 25px;
 			padding-left: 0;
 		}
 
 		li {
-			display: block;
 			font-style: normal;
 			font-variant: normal;
 			text-rendering: auto;
@@ -508,7 +505,7 @@ article {
 			&::before {
 				content: counter(my-awesome-counter) ". ";
 				color: darken(@theme-color, 20%);
-				font-family: 'TTNormsPro-Regular';
+				font-family: 'soleil', sans-serif;
 				font-size: 15px;
 				font-weight: bold;
 				display: inline-block;
@@ -520,8 +517,7 @@ article {
 	/*   Start of Protip box */
 	.protip {
 		background: rgba(255, 222, 196, 0.42);
-	  padding: 53px 20px 16px;
-		margin-bottom: 20px;
+	  	padding: 53px 20px 16px;
 		font-size: 0.96em;
 		overflow: hidden;
 		margin: 30px auto;
@@ -597,7 +593,6 @@ article {
 			&:before {
 				text-shadow: -1px 1px 1px rgba(46, 31, 0, 0.6) !important;
 				background: rgb(221, 173, 134);
-				color: #8b572b;
 				color: white;
 				border-radius: 2px 2px 0 0;
 				mix-blend-mode: unset;
@@ -611,14 +606,15 @@ article {
 		}
 	}
 	/*  End of Protip box  */
+
 	/*  Start of Blockqoute  */
 	blockquote {
 		border-left: 4px solid #C9DEE2;
 		background: #e9f3f7;
 		color: #416e7d;
 		padding: 20px;
-		font-family: 'TTNormsPro-Regular',sans-serif;
-		font-style: none;
+		font-family: 'soleil', sans-serif;
+		font-style: unset;
 		font-size: 1em;
 		line-height: 1.6;
 		overflow: hidden;
@@ -637,7 +633,7 @@ article {
 		}
 
 		* {
-			font-family: 'TTNormsPro-Regular',sans-serif;
+			font-family: 'soleil',sans-serif;
 			font-weight: 500;
 			line-height: 1.6;
 			font-size: 0.96em;
@@ -658,11 +654,11 @@ article {
 
 			&::before{
 				background: #87adc5;
-		    mix-blend-mode: unset;
-		    border-bottom: 1px solid #7ea0b5;
+		    	mix-blend-mode: unset;
+		    	border-bottom: 1px solid #7ea0b5;
 				margin-left: 0 !important;
 				margin-right: 0 !important;
-		    color: white;
+				color: white;
 				width: 100%;
 				padding: 5px 15px;
 				margin: 0 auto;
@@ -727,7 +723,7 @@ article {
 		}
 	}
 }
-/*  End of Blockqoute */
+/*  End of Blockquote */
 .post-template {
 	hr {
 		opacity: 0.3;
@@ -779,6 +775,7 @@ article {
 
 	a {
 		color: darken(@theme-color, 10%);
+		font-weight: 400;
 
 		&:hover {
 			color: @hover-color;
@@ -815,5 +812,5 @@ article {
 
 #baguetteBox-overlay .full-image figcaption {
 	padding: 30px 20px;
-  font-family: 'TTNormsPro-Regular';
+  font-family: 'soleil';
 }

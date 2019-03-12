@@ -20,7 +20,7 @@
       flex-wrap: nowrap;
       max-width: 830px;
       margin: 20px auto 0;
-      background: white;
+      background: rgba(255, 255, 255, .6);
 
       @media(max-width: 600px) {
         margin: 0;
@@ -32,6 +32,7 @@
         border-top: 1px solid #ecf0f9;
         visibility: hidden;
         padding: 30px 0 30px 1% !important;
+        background: white;
         @media(max-width: 600px) {
           padding: 20px 0 20px 1% !important;
         }
@@ -51,6 +52,7 @@
         visibility: hidden;
         border-top: 1px solid #ecf0f9;
         padding: 30px 1% 30px 0 !important;
+        background: white;
         @media(max-width: 600px) {
           padding: 20px 1% 20px 0 !important;
         }
@@ -130,7 +132,7 @@
 
         h6 {
           line-height: 1;
-          font-family: 'TTNormsPro-Regular';
+          font-family: 'soleil';
           font-size: 1em;
           margin: 0 0 5px !important;
           color: @theme-color;
@@ -143,7 +145,7 @@
             text-overflow: normal;
             line-height: 1.15;
             font-size: 1em;
-            font-family: 'TTNormsPro-Medium';
+            font-family: 'soleil';
             text-overflow: unset;
             white-space: normal;
             font-weight: 100;
@@ -152,10 +154,9 @@
 
         p {
           font-size: 0.8em;
-          line-height: 1.1;
+          line-height: 1.35;
           max-width: 90%;
           @media(max-width: 600px) {
-            line-height: 1.1 !important;
             display: none;
           }
         }

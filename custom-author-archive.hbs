@@ -8,7 +8,7 @@
 			<div class=" main-content">
 				<!-- start post -->
 				{{#post}}
-					<article class="{{post_class}}">
+					<main class="{{post_class}}">
 						{{#if feature_image}}
 							<div class="featured-media" style="background-image: url({{feature_image}});">
 							</div>
@@ -24,8 +24,7 @@
  							{{/foreach}}
  						{{/get}}
  					</div>
-
-					</article>
+				</main>
 				{{/post}}
 				<!-- end post -->
 			</div>

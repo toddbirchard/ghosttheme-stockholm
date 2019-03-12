@@ -10,14 +10,14 @@
 			<div class=" main-content">
 				<!-- start post -->
 				{{#post}}
-					<article class="{{post_class}} post-preview">
+					<section class="{{post_class}} post-preview">
 						<div class="page-head">
 							<h1 class="page-title">{{{title}}}</h1>
 						</div>
 						<div class="post-content">
 							{{content}}
 						</div>
-						<div class="tag-container">
+						<main class="tag-container">
 							{{> cover-tag}}
 							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
 								{{#foreach tags visibility="internal"}}
@@ -25,7 +25,7 @@
 										<a href="{{slug}}">
 											{{#if feature_image}}
 											<picture>
-												<source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+												<source media="(min-width: 1200px)" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
 												<img alt="{{title}}" class="lazy" src="{{img_url feature_image}}">
 										</picture>
 											{{/if}}
@@ -38,9 +38,9 @@
 									</div>
 								{{/foreach}}
 						{{/get}}
-						</div>
+					</main>
 			</div>
-			</article>
+		</section>
 			{{/post}}
 			<!-- end post -->
 		<!-- end main post area -->

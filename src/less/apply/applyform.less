@@ -25,7 +25,7 @@
     }
 
     h2 {
-      font-family: 'TTNormsPro-Regular', 'TTNormsPro-Medium';
+      font-family: 'soleil', sans-serif;
       text-align: left;
       font-size: 1.5em;
       border-bottom: 1px solid #d5dae6;
@@ -55,7 +55,7 @@
     }
 
     label {
-      font-family: 'TTNormsPro-Medium', sans-serif;
+      font-family: 'soleil', sans-serif;
       font-size: 14px;
       color: #505050;
       margin-bottom: 5px;
@@ -86,11 +86,11 @@
 
     input,
     textarea {
-      font-family: "TTNormsPro-Regular", sans-serif;
+      font-family: "soleil", sans-serif;
       outline: 0;
       background: #f2f2f2;
       width: 100%;
-      border: 0px solid;
+      border: 0 solid;
       margin: 0 0 15px;
       padding: 15px;
       box-sizing: border-box;
@@ -99,26 +99,26 @@
 
       &::placeholder {
 				color: #828294;
-				font-family: 'TTNormsPro-Regular',sans-serif!important;
+				font-family: 'soleil',sans-serif!important;
 			}
 
       &:focus {
-        border: 1px solid #81bad2;
+        box-shadow: 0 0 3px #0a87a7;
       }
 
-			&:hover {
-				background: rgba(64, 206, 199, 0.16);
-				border: 1px solid #81bad2;
+      &:hover {
+        background: rgba(64, 206, 199, 0.16);
+        box-shadow: 0 0 3px #0a87a7;
 
-				&::placeholder {
-					color: #72859d;
+        &::placeholder {
+          color: #72859d;
           opacity: .6;
-				}
+        }
 
-				&::after {
-					color: #8aafb8;
-				}
-			}
+        &::after {
+          color: #8aafb8;
+        }
+      }
     }
 
     textarea {
@@ -253,7 +253,7 @@
   display:none;
 }
 button {
-  font-family: "TTNormsPro-Regular", sans-serif;
+  font-family: "soleil", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: @theme-color !important;
@@ -262,8 +262,8 @@ button {
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   margin-top: 20px;
 
   &:hover {

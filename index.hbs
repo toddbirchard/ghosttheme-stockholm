@@ -7,14 +7,14 @@
 			{{! insert sidebar partial}}
 			{{> sidebar}}
 				<!-- start main post area -->
-				<div class=" main-content">
+				<main class="main-content">
 					{{#is "tag"}}
 						{{> cover-tag}}
 					{{/is}}
 					<div class="postlist">
 						{{> loop}} {{pagination}}
 					</div>
-				</div>
+				</main>
 	</div>
 </section>
 <!-- end site's main content area -->

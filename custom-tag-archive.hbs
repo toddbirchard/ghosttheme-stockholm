@@ -8,12 +8,7 @@
 			<div class=" main-content">
 				<!-- start post -->
 				{{#post}}
-					<article class="{{post_class}}">
-
-						{{#if feature_image}}
-							<div class="featured-media" style="background-image: url({{feature_image}});">
-							</div>
-						{{/if}}
+					<section class="{{post_class}}">
 						<div class="page-head">
 							<h1 class="page-title">{{{title}}}</h1>
 						</div>
@@ -27,7 +22,7 @@
 										<a href="/series/{{slug}}" title="{{name}}">
 											<div class="img-wrapper">
 												<picture>
-									        <source media="(min-width: 1200px)" data-srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+									        <source media="(min-width: 1200px)" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
 									        <img alt="{{title}}" class="lazy" src="{{img_url feature_image}}">
 									    </picture>
 											</div>
@@ -42,7 +37,7 @@
 							{{/get}}
 						</div>
 			</div>
-			</article>
+		</section>
 			{{/post}}
 			<!-- end post -->
 		<!-- end main post area -->
