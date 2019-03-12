@@ -11,13 +11,13 @@ $(document).ready(function() {
     var card_list = cards;
     console.log(card_list);
     for (var i = 0; i < card_list.length; i++) {
-      $('#' + status + ' .cards').append('<div jiraissuesesclass="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
-      '<div style="background-color:' + card_list[i].issuetype_color + ';" class="issuetype ' + card_list[i]['issuetype'] + '"><img src="' + card_list[i].issuetype_url + '"></div> \n' +
+      $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
+     // '<div style="background-color:' + card_list[i].issuetype_color + ';" class="issuetype ' + card_list[i]['issuetype'] + '"><img src="' + card_list[i].issuetype_url + '"></div> \n' +
       '<div class="info"> \n' +
       '<div class="left"> \n' +
-      '<div class="avatar"><img src="https://www.gravatar.com/avatar/9eb3868db428fb602e03b3059608199b?s=250&d=mm&r=x"></div> \n' +
-      '<div class="priority ' + card_list[i].priority + '"><i class="fas fa-arrow-up"></i></div> \n' + '</div> \n' +
-      '<div class="epic ' + card_list[i]['epic'] + '" style=background-color:' + card_list[i].epic_color + '50;><span>' + card_list[i].epic_name + '</span></div> \n' +
+      '<div class="avatar"><img alt="' + card_list[i]['issuetype_name'] + '" src="' + card_list[i]['issuetype_url'] + '"></div> \n' +
+      '<div class="priority"><img alt="' + card_list[i]['priority_name'] + '" src="' + card_list[i]['priority_url'] + '"></div> \n' + '</div> \n' +
+      '<div class="epic ' + card_list[i]['epic'] + '" style=background-color:' + card_list[i]['epic_color'] + '50;><span>' + card_list[i]['epic_name'] + '</span></div> \n' +
       '</div> \n' + '</div>');
     }
   }
@@ -29,16 +29,18 @@ $(document).ready(function() {
 
     // Structured query
     const query = `query JiraIssuesByStatus($project: String, $status: String) {
-                  jiraIssues(where: {project: $project, status: $status}, orderBy: timestamp_DESC, first: 6) {
+                  jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
                     key
                     summary
-                    epic
+                    epic_color
+                    epic_name
                     status
-                    project
-                    priority
-                    rank
-                    issuetype
-                    timestamp
+                    priority_rank
+                    priority_url
+                    issuetype_name
+                    issuetype_url
+                    assignee_name
+                    assignee_url    
                   }
                 }`;
 
