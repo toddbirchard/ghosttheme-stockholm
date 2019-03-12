@@ -8,6 +8,8 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
+var HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
+
 
 
 module.exports = {
@@ -30,7 +32,9 @@ module.exports = {
     overrideExtension : true,
     detailedLogs : false,
     strict : true
-  })],
+  }),
+  new HtmlMinifierPlugin({})
+],
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
@@ -102,7 +106,8 @@ module.exports = {
       }, {
         test: /\.bundle\.js$/,
         use: 'bundle-loader'
-      }
+      },
+      { test: /\.html$/, loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader'] }
     ]
   }
 }
