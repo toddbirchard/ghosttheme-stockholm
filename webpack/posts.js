@@ -33,7 +33,7 @@ hljs.initHighlightingOnLoad();
 
 var postFunctions = {
   codeSnippetFullScreen: function() {
-    $('.post-content > pre').each(function() {
+    $('main > pre').each(function() {
       if ($(this).height() >= 400) {
         $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
         $(this).append('<div class="codeoverflow"></div>');
@@ -56,13 +56,11 @@ var postFunctions = {
     });
   },
   mergedTableCells: function() {
-    if ($('body').hasClass('post-template') == true) {
       var rows = $('table').find('th').each(function() {
         if ($(this).attr('rowspan')) {
           $(this).css('border-bottom', '2px solid #f6f8fe');
         }
       });
-    }
   },
   scrollableTables: function() {
     let tables = document.getElementsByClassName('tableContainer');
@@ -92,10 +90,10 @@ var postFunctions = {
     });
   },
   enableLightbox: function() {
-    $('.post-content img').each(function(obj, i) {
+    $('main img').each(function(obj, i) {
       var imagesrc = $(this).attr('src');
       var caption = $(this).closest('figure').find('figcaption').text();
-      var image = $('.post-content')[i]
+      var image = $('main')[i]
       $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
     });
     baguetteBox.run('.post-content', {
@@ -107,7 +105,7 @@ var postFunctions = {
     });
   },
   addImageAltTags: function() {
-    $('.post-content img').each(function(obj) {
+    $('main img').each(function(obj) {
       var caption = $(this).closest('figure').find('figcaption').text();
       $(this).attr('alt', caption);
     });

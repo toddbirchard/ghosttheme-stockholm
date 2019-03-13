@@ -10,7 +10,6 @@
 	align-items: center;
 	height: fit-content;
 	margin-top: 50px;
-	margin-bottom: 50px;
 	@media(max-width: 800px) {
 		display: block;
 		height: fit-content;
@@ -214,7 +213,7 @@ section .widget.newsletter {
 		background: white;
 		width: -webkit-fill-available;
 	  	width: -moz-fill-available;
-		margin: 5px 20px;
+		margin: 5px 0;
 
 		h4 {
 			margin:0;
@@ -327,4 +326,9 @@ section .widget.newsletter {
 
 .after-post {
 	max-width: 830px !important;
+
+	@media(max-width: 900px) {
+		width: 95%;
+		max-width: unset;
+	}
 }
