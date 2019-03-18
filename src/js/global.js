@@ -1,10 +1,10 @@
 /*====================================================
   TABLE OF CONTENTS
-  1. function declaretion
+  1. function declaration
   2. Initialization
 ====================================================*/
 /*===========================
- 1. function declaretion
+ 1. function declaration
  ==========================*/
 
 var globalFunctions = {
