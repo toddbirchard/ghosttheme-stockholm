@@ -1,5 +1,6 @@
 require('../src/less/pages.less');
 require('../src/less/author.less');
+import { GraphQLClient } from 'graphql-request';
 /*import author_github from '../src/js/author/github.js';
 import author_medium from '../src/js/author/medium.js';
 import author_meetup from '../src/js/author/meetup.js';
@@ -130,12 +131,36 @@ var authorFunctions = {
   },
   get_author: function(callback) {
     var slug = authorFunctions.current_author();
-    var url = 'https://apisentris.com/api/v1/authors?slug=like.' + slug;
+    var url = process.env.ENDPOINT;
+    var token = process.env.AUTH;
+
     var headers = {
       "Content-Type": "application/json",
-      "client_id": "140000",
-      "access_token": "6OMcDqLWFV7DuVnxAxJSmQ"
-    }
+      "access_token": token,
+      "slug": slug
+    };
+
+    const query = `
+    query AuthorsByName($slug: String) {
+      authors(where: {slug: $slug}) {
+          name
+          website
+          facebook
+          twitter
+          title
+          linkedin
+          vimeo
+          quora
+          medium
+          github
+          meetup
+          pocket
+      }
+    }`;
+
+    // Initialize GraphQL Client
+    const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
+
     fetch(url, {
       method: 'GET',
       headers: headers

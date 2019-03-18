@@ -27,14 +27,13 @@
             <a href="{{url}}" class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></a>
         {{/primary_tag}}
         {{#primary_author}}
-        {{primary_author.bio}}
-        {{#unless profile_image}}
-            <a href="{{url}}" class="meta-item author"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-            <a href="{{url}}" class="meta-item author-mobile"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
-        {{/unless}}
+          {{primary_author.bio}}
           {{#if profile_image}}
             <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}} avatar" class="avi" data-rjs="2" size="extrasmall"><span>{{name}}</span></a>
             <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="{{name}} avatar" class="avi" data-rjs="2" size="extrasmall"><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
+          {{else}}
+            <a href="{{url}}" class="meta-item author"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+            <a href="{{url}}" class="meta-item author-mobile"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><div class="info"><span class="mobile-name">{{slug}}</span><span class="mobile-date">{{date format="MMM DD"}}</span></div></a>
           {{/if}}
         {{/primary_author}}
         <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>

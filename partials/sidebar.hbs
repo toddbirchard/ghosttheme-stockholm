@@ -1,28 +1,28 @@
 <!-- start sidebar -->
 <aside class="sidebar">
 	{{#is "home,paged"}}
-		{{> widget-text}}
+		{{> widgets/widget-text}}
 	{{/is}}
 	{{#is "author"}}
-		{{> widget-authorwebsite}}
-		{{> widget-upcoming}}
-		{{> widget-authortwitter}}
+		{{> widgets/widget-authorwebsite}}
+		{{> widgets/widget-upcoming}}
+		{{> widgets/widget-authortwitter}}
 	{{/is}}
 	{{#is "post"}}
-		{{> widget-author}}
+		{{> widgets/widget-author}}
 	{{/is}}
 	{{^is "author"}}
-		{{> widget-social}}
-		{{> widget-sidebartag}}
-		{{> widget-newsletter}}
+		{{> widgets/widget-social}}
+		{{> widgets/widget-sidebartag}}
+		{{> widgets/widget-newsletter}}
 	{{/is}}
 	{{#is "home"}}
-		{{> widget-series}}
+		{{> widgets/widget-series}}
 	{{else}}
-		{{> widget-recentpost}}
+		{{> widgets/widget-recentpost}}
 	{{/is}}
 	{{#is "home,author"}}
-		{{> widget-twitter}}
+		{{> widgets/widget-twitter}}
 	{{/is}}
 </aside>
 <!-- end sidebar -->

@@ -42,16 +42,11 @@
 				</header>
 				<!-- end post metadata -->
 
-				{{> postseries}}
+        {{! Lists Table-of-Contents-Like list if post is in a series. }}
+				{{> posts/postseries}}
 
-				<!-- blurb describing roundup posts -->
-				{{#has tag="Roundup"}}
-					<div class="post-roundup-blurb">
-						<i class="fal fa-flask"></i>
-						<p>Resident Scientist Snkia works tirelessly towards robot utopia. These are his findings.</p>
-					</div>
-				{{/has}}
-				<!-- end blurb -->
+        {{! Displays Roundup blurb if post has tag "roundup." }}
+        {{> posts/roundup-blurb}}
 
 				<!-- start content -->
 				<div class="post-content">
@@ -65,23 +60,23 @@
 							{{/if}}
 						</div>
 						<div class="share">
-							{{> share_links}}
+							{{> posts/share-links}}
 						</div>
+                    </section>
 				</div>
-
 				<!-- end content -->
 			</div>
-			</section>
 		</article>
-		<!-- end main post area -->
-		{{> postfooter}}
-</div>
-{{#contentFor "scripts"}}
-	<script async src="{{asset "dist/posts.js"}}"></script>
-	{{#has tag="Roundup"}}
-		<script src="{{asset "/js/previews.js"}}"></script>
-	{{/has}}
-{{/contentFor}}
+	<!-- end main post area -->
+	{{> posts/postfooter}}
+    {{#contentFor "scripts"}}
+        <script async src="{{asset "dist/posts.js"}}"></script>
+        {{#has tag="Roundup"}}
+            <script src="{{asset "/js/previews.js"}}"></script>
+        {{/has}}
+    {{/contentFor}}
 {{/post}}
+</div>
+
 <!-- end post -->
 <!-- end site's main content area -->
