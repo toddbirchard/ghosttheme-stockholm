@@ -1,5 +1,5 @@
 require('../src/less/posts.less');
-import hljs from 'highlight.js/lib/highlight';
+import hljs from 'highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import shell from 'highlight.js/lib/languages/shell';
@@ -49,14 +49,11 @@ var postFunctions = {
       preContainer.addClass('fullWidth');
       preContainer.find('.codeoverflow').remove();
       $(this).css('opacity', 0);
-      /*preContainer.animate({
-          height: $(codeContainer).height() + 30
-        }, 1000);*/
       $('html,body').animate({scrollTop: preContainer.position().top});
     });
   },
   mergedTableCells: function() {
-      var rows = $('table').find('th').each(function() {
+      $('table').find('th').each(function() {
         if ($(this).attr('rowspan')) {
           $(this).css('border-bottom', '2px solid #f6f8fe');
         }
@@ -89,11 +86,10 @@ var postFunctions = {
       }
     });
   },
-  enableLightbox: function() {
+  enableBaguettebox: function() {
     $('main img').each(function(obj, i) {
       var imagesrc = $(this).attr('src');
       var caption = $(this).closest('figure').find('figcaption').text();
-      var image = $('main')[i]
       $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
     });
     baguetteBox.run('.post-content', {
@@ -147,7 +143,7 @@ var postFunctions = {
     var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
     var headers = {
       "Content-Type": "application/json"
-    }
+    };
     fetch(series_endpoint, {
       method: 'GET',
       headers: headers
@@ -198,7 +194,7 @@ var postFunctions = {
     var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
     var headers = {
       "Content-Type": "application/json"
-    }
+    };
     fetch(endpoint, {
       method: "GET",
       headers: headers
@@ -207,18 +203,18 @@ var postFunctions = {
     }).then((json) => {
       postFunctions.tag_loop(json['posts'][0]['tags']);
     }).catch(err => {
-      console.log(err.response.errors) // GraphQL response errors
+      console.log(err.response.errors) // API response errors
       console.log(err.response.data) // Response data if available
     });
   },
   postInit: function() {
     postFunctions.codeSnippetFullScreen();
     postFunctions.scrollableTables();
-    postFunctions.enableLightbox();
+    postFunctions.enableBaguettebox();
     postFunctions.addImageAltTags();
     postFunctions.detect_series();
   }
-}
+};
 
 $(document).ready(function() {
   postFunctions.postInit();
