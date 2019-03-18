@@ -1,15 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const precss = require('precss');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
-var HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
-
+const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 
 
 module.exports = {
@@ -21,25 +16,12 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new ImageminWebpWebpackPlugin({config : [
-      {
-        test: /\.(jpe?g|png)/,
-        options: {
-          quality: 90
-        }
-      }
-    ],
-    overrideExtension : true,
-    detailedLogs : false,
-    strict : true
-  }),
   new HtmlMinifierPlugin({})
 ],
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
-      Less: path.resolve(__dirname, './src/less/'),
-      PostsJS: path.resolve(__dirname, 'src/js/posts/')
+      Less: path.resolve(__dirname, './src/less/')
     }
   },
   entry: {
@@ -63,8 +45,7 @@ module.exports = {
          cache: true,
          parallel: true,
          sourceMap: true // set to true if you want JS source maps
-       }),
-       new OptimizeCSSAssetsPlugin({})
+       })
      ]
   },
   module: {
@@ -103,9 +84,6 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }, {
-        test: /\.bundle\.js$/,
-        use: 'bundle-loader'
       },
       { test: /\.html$/, loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader'] }
     ]

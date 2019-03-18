@@ -40,7 +40,7 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 * Projects
   * Full JIRA integration with functioning Kanban
 * Accounts
-  * User Authentication & Signup for Readers
+  * User Authentication & Sign-up for Readers
 * Authors
   * Individual author pages (personalized social widgets)
   * ‘Contributors’ page detailing bios for blog authors
