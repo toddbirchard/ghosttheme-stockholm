@@ -1,5 +1,4 @@
 require('../src/less/posts.less');
-import hljs from 'highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import shell from 'highlight.js/lib/languages/shell';
@@ -15,7 +14,7 @@ import nginx from 'highlight.js/lib/languages/nginx';
 import ScrollBooster from 'scrollbooster';
 import baguetteBox from 'baguettebox.js';
 const fetch = require('node-fetch');
-
+/*
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('shell', shell);
@@ -29,8 +28,12 @@ hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
 
-hljs.initHighlightingOnLoad();
-
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+*/
 var postFunctions = {
   codeSnippetFullScreen: function() {
     $('main > pre').each(function() {
