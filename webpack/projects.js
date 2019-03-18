@@ -1,15 +1,25 @@
 import "@babel/polyfill";
-import { GraphQLClient } from 'graphql-request'
+import { GraphQLClient } from 'graphql-request';
+import gql from 'graphql-tag';
 require('../src/less/projects.less');
+import { enableExperimentalFragmentVariables, disableExperimentalFragmentVariables } from 'graphql-tag';
+import { JiraIssuesViaFragments, JiraFields, JiraIssuesByStatus } from '../query.graphql';
 import $ from 'jquery';
 import 'slick-carousel';
+
 
 $(document).ready(function() {
   const table_name = 'jira';
 
-  function populateCards(cards, status) {
-    var card_list = cards;
-    console.log(card_list);
+
+  function count(obj) {
+    return Object.keys(obj).length;
+  }
+
+  function populateCards(data) {
+    console.log(data);
+    var num_statuses = count(data);
+    console.log('number of statuses = ' + num_statuses);
     for (var i = 0; i < card_list.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
      // '<div style="background-color:' + card_list[i].issuetype_color + ';" class="issuetype ' + card_list[i]['issuetype'] + '"><img src="' + card_list[i].issuetype_url + '"></div> \n' +
@@ -25,64 +35,16 @@ $(document).ready(function() {
   async function main() {
     const endpoint_url = process.env.ENDPOINT;
     const token = process.env.AUTH;
-    const endpoint = endpoint_url;
 
-    // Structured query
-    const query = `query JiraIssuesByStatus($project: String, $status: String) {
-                  jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
-                    key
-                    summary
-                    epic_color
-                    epic_name
-                    status
-                    priority_rank
-                    priority_url
-                    issuetype_name
-                    issuetype_url
-                    assignee_name
-                    assignee_url    
-                  }
-                }`;
+    const client = new GraphQLClient(endpoint_url, { headers: {'Authorization': token}} );
 
-    // All Possible Issue Statuses
-    //var statuses = ['Backlog', 'To Do', 'In Progress', 'Done'];
-
-    // Initialize GraphQL Client
-    const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
-
-    // Execute a query per issue status
-    /*
-    for (var i = 0; i < statuses.length; i++) {
-      var clean_status = statuses[i].toLowerCase().replace(" ", "");
-      var variables = {
-        project: "Hackers and Slackers",
-        status: statuses[i]
-      };*/
-
-    const backlog_variables = {
-      project: "Hackers and Slackers",
-      status: "Backlog"
+    const vars = {
+      project: "Hackers and Slackers"
     };
 
-    const todo_variables = {
-      project: "Hackers and Slackers",
-      status: "To Do"
-    };
-
-    const progress_variables = {
-      project: "Hackers and Slackers",
-      status: "In Progress"
-    };
-
-    const done_variables = {
-      project: "Hackers and Slackers",
-      status: "Done"
-    };
-
-    client.request(query, backlog_variables).then(data => populateCards(data['jiraIssues'], 'backlog'));
-    client.request(query, todo_variables).then(data => populateCards(data['jiraIssues'], 'todo'));
-    client.request(query, progress_variables).then(data => populateCards(data['jiraIssues'], 'progress'));
-    client.request(query, done_variables).then(data => populateCards(data['jiraIssues'], 'done'));
+    client.request(JiraIssuesByStatus, vars).then((result) => {
+      console.log(result);
+    });
   }
 
   main().catch(error => console.error(error));

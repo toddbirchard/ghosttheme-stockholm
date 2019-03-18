@@ -85,7 +85,12 @@ module.exports = {
           }
         }
       },
-      { test: /\.html$/, loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader'] }
+      { test: /\.html$/, loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader'] },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader'
+      }
     ]
   }
 }
