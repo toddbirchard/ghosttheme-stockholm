@@ -1,12 +1,12 @@
 # Stockholm Ghost Theme
 
-![Ghost](https://img.shields.io/badge/ghost-2.14.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
+![Ghost](https://img.shields.io/badge/ghost-2.18.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
 ![Node](https://img.shields.io/badge/node-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=339933&colorA=36363e)
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=23a8e2&colorA=36363e)
-![Lightbox](https://img.shields.io/badge/lightbox-v2.10.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
+![Lightbox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
 ![Apisentris](https://img.shields.io/badge/Apisentris-PostgreSQL-green.svg?longCache=true&style=flat-square&logo=Atom&logoColor=white&colorB=51cacd&colorA=36363e)
 ![Ghost-Pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&logo=flicker)
-![Babel](https://img.shields.io/badge/@babel/core-7.3.3-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=daa000&colorA=36363e)
+![Babel](https://img.shields.io/badge/@babel/core-7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=daa000&colorA=36363e)
 ![Sendgrid](https://img.shields.io/badge/sendgrid-6.3.0-blue.svg?longCache=true&logo=delicious&longCache=true&style=flat-square&logoColor=white&colorB=23a8e2&colorA=36363e)
 ![Slick Carousel](https://img.shields.io/badge/Slick--Carousel-1.8.1-blue.svg?longCache=true&logo=smashingmagazine&longCache=true&style=flat-square&logoColor=white&colorB=3498db&colorA=36363e)
 ![ScrollBooster](https://img.shields.io/badge/ScrollBoster-1.1.0-blue.svg?longCache=true&logo=scrutinizer-ci&longCache=true&style=flat-square&logoColor=white&colorB=ffa083&colorA=36363e)

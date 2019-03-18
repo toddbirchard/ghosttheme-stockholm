@@ -5,10 +5,8 @@
 <section class="content-wrap page-apply">
   <div class="container">
     {{#post}}
-      <!-- start main post area -->
-      <div class=" main-content">
-        <!-- start post -->
-        <main class="{{page-class}} page">
+      <!-- start main area -->
+        <main class="{{page-class}} main-content page">
           <h1>{{{title}}}</h1>
           {{#if feature_image}}
             <div class="featured-media">
@@ -20,7 +18,7 @@
           {{/if}}
           <div class="page-content">
             {{content}}
-            <div class="form" class="needs-validation">
+            <div class="form">
               <form class="needs-validation" id="msform" accept-charset="UTF-8" action="https://getform.io/f/ce75696d-0ee2-4475-8a8f-a26da6267917" method="POST">
                 <fieldset class="active">
                   <h2>The Boring Stuff</h2>
@@ -28,19 +26,19 @@
                   <div class="split-fields">
                     <div class="input-field-group">
                       <label for="application_name">Full Name (required)</label>
-                      <input id="application_name"  label="Full Name" class="form-control" maxlength="20" name="fullname" type="text" required="">
+                      <input id="application_name" class="form-control" maxlength="20" name="fullname" type="text" required="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_email"> Email (required) </label>
-                      <input id="application_email"  placeholder="coolguy@yahoo.com" label="Email" class="form-control" maxlength="30" name="email" type="email" required="" onblur="">
+                      <input id="application_email" placeholder="coolguy@yahoo.com" class="form-control" maxlength="30" name="email" type="email" required="" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_username"> Nickname /Call Sign/ Gangsta Rap Persona </label>
-                      <input id="application_username"  label="Nickname" placeholder="Mavrick" class="form-control" maxlength="30" name="nickname" type="text" onblur="">
+                      <input id="application_username" placeholder="Mavrick" class="form-control" maxlength="30" name="nickname" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application__expertise"> What are your areas of expertise? (required) </label>
-                      <input id="application__expertise"  label="Experise" placeholder="Java, ASP, Perl"  class="form-control" maxlength="100" name="expertise" type="text" required="" onblur="">
+                      <input id="application__expertise" placeholder="Java, ASP, Perl" class="form-control" maxlength="100" name="expertise" type="text" required="" onblur="">
                     </div>
                   </div>
                 </fieldset>
@@ -52,7 +50,7 @@
                   </p>
                   <div class="input-field-group">
                     <label for="application_sample"> Writing sample (required) </label>
-                    <textarea class="form-control" label="Writing Sample" aria-describedby="application_sample" id="application_submission_sample" name="writing_sample" required=""></textarea>
+                    <textarea class="form-control" aria-describedby="application_sample" id="application_submission_sample" name="writing_sample" required=""></textarea>
                   </div>
                 </fieldset>
 
@@ -64,39 +62,37 @@
                   <div class="split-fields">
                     <div class="input-field-group">
                       <label for="application_website">Website</label>
-                      <input  class="form-control" label="Website" placeholder="http://yourwebbsite.com" id="application_website" maxlength="40" name="website" type="text" onblur="">
+                      <input class="form-control" placeholder="http://yoursite.com" id="application_website" maxlength="40" name="website" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_blog">Blog</label>
-                      <input  class="form-control" label="Blog" id="application_blog" placeholder="https://medium.com/You"  maxlength="40" name="blog" type="text" onblur="">
+                      <input class="form-control" id="application_blog" placeholder="https://medium.com/You" maxlength="40" name="blog" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_github">Github</label>
-                      <input  class="form-control" label="Github" id="application_github" placeholder="https://github.com/nerdinator" maxlength="40" name="github" type="text" onblur="">
+                      <input class="form-control" id="application_github" placeholder="https://github.com/nerdinator" maxlength="40" name="github" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_twitter">Twitter</label>
-                      <input  class="form-control" label="Twitter" id="application_twitter" placeholder="https://twitter.com/YourHandle" maxlength="40" name="twitter" type="text" onblur="">
+                      <input class="form-control" id="application_twitter" placeholder="https://twitter.com/YourHandle" maxlength="40" name="twitter" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_myspace">MySpace</label>
-                      <input  class="form-control" label="Myspace" id="application_myspace" placeholder="http://www.myspace.com/emokid666" maxlength="40" name="myspace" type="text" onblur="">
+                      <input class="form-control" id="application_myspace" placeholder="http://www.myspace.com/emokid666" maxlength="40" name="myspace" type="text" onblur="">
                     </div>
                     <div class="input-field-group">
                       <label for="application_ssn">Social Security Number</label>
-                      <input  class="form-control" label="SSN" id="application_ssn" placeholder="000-00-0000" maxlength="12" name="ssn" type="text" onblur="">
+                      <input class="form-control" id="application_ssn" placeholder="000-00-0000" maxlength="12" name="ssn" type="text" onblur="">
                     </div>
                   </div>
-                    <button type="submit" label="submit" class="btn btn-primary">Submit</button>
-                  </div>
                 </fieldset>
+                  <button type="submit" label="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
-      </div>
-  </div>
-</main>
-  <!-- end main post area -->
+        </main>
+    </div>
+<!-- end main post area -->
 </section>
 {{/post}}
 <!-- end post -->

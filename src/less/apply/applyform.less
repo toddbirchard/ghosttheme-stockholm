@@ -22,6 +22,7 @@
 
     form {
       position: relative;
+      margin-top: 30px;
     }
 
     h2 {
@@ -30,14 +31,14 @@
       font-size: 1.5em;
       border-bottom: 1px solid #d5dae6;
       padding-bottom: 7px;
-      font-weight: 100 !important;
+      font-weight: 400;
     }
 
     fieldset {
       border: none;
       display: block;
       background: white;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       padding-left: 0;
       padding-right: 0;
 
@@ -52,6 +53,7 @@
 
     p {
       text-align: left;
+      font-weight: 300;
     }
 
     label {
@@ -97,11 +99,6 @@
       font-size: 14px;
       transition: all .2s ease-out;
 
-      &::placeholder {
-				color: #828294;
-				font-family: 'soleil',sans-serif!important;
-			}
-
       &:focus {
         box-shadow: 0 0 3px #0a87a7;
       }
@@ -112,7 +109,8 @@
 
         &::placeholder {
           color: #72859d;
-          opacity: .6;
+          opacity: .4;
+          font-family: 'soleil', sans-serif !important;
         }
 
         &::after {

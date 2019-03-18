@@ -65,6 +65,8 @@
 				font-size: 0.93em;
 				margin-bottom: 2px;
 				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
 
 				* {
 					&:hover {
@@ -109,7 +111,7 @@
 
 	@media(max-width: 600px) {
 		min-width: 100%;
-		border-bottom: 1px solid rgba(229, 246, 255, 0.27);
+		border-bottom: 1px solid rgba(76, 108, 157, 0.27);
 		padding-bottom: 20px !important;
 	  	margin: 0 0 20px;
 	}
@@ -135,12 +137,12 @@
 		width: 100%;
 		font-family: 'soleil', sans-serif;
 		font-weight: 100;
-		font-size: 0.95em;
+		font-size: 0.85em;
 		line-height: 1.6;
 		margin: 15px 0 25px;
 
 		@media(max-width: 600px) {
-			 margin: 15px 0;
+			 margin: 15px 0 20px;
 		}
 	}
 
@@ -230,11 +232,12 @@
 
 	.copyright {
 		width: 100%;
-		background: #080e18;
+		background: #0b1622;
 		text-align: center;
 		color: white;
 		font-size: 0.85em;
 		font-family: 'soleil', sans-serif;
 		font-weight: 300;
 		padding: 15px 0;
+		line-height: 1.5;
 	}
