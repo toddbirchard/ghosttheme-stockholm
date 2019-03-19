@@ -1,5 +1,5 @@
 # Write your query or mutation here
-fragment JiraFields on jiraIssue {
+fragment JiraFieldsFragment on jiraIssue {
     key
     summary
     epic_color
@@ -13,7 +13,7 @@ fragment JiraFields on jiraIssue {
     assignee_url
 }
 
-query JiraIssuesViaFragments($project: String) {
+query GetJiraIssuesViaFragments($project: String) {
     backlog: jiraIssues(where: {status: "Backlog", project: $project}, orderBy: updated_DESC, first: 6) {
         ...JiraFields
     }
@@ -29,7 +29,7 @@ query JiraIssuesViaFragments($project: String) {
 }
 
 query JiraIssuesByStatus($project: String, $status: String) {
-    backlog: jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
+    backlog: jiraIssues(where: {project: $project, status: "Backlog"}, orderBy: updated_DESC, first: 6) {
         key
         summary
         epic_color
@@ -42,7 +42,7 @@ query JiraIssuesByStatus($project: String, $status: String) {
         assignee_name
         assignee_url
     }
-    todo: jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
+    todo: jiraIssues(where: {project: $project, status: "To Do"}, orderBy: updated_DESC, first: 6) {
         key
         summary
         epic_color
@@ -55,7 +55,7 @@ query JiraIssuesByStatus($project: String, $status: String) {
         assignee_name
         assignee_url
     }
-    progress: jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
+    progress: jiraIssues(where: {project: $project, status: "In Progress"}, orderBy: updated_DESC, first: 6) {
         key
         summary
         epic_color
@@ -68,7 +68,7 @@ query JiraIssuesByStatus($project: String, $status: String) {
         assignee_name
         assignee_url
     }
-    done: jiraIssues(where: {project: $project, status: $status}, orderBy: updated_DESC, first: 6) {
+    done: jiraIssues(where: {project: $project, status: "Done"}, orderBy: updated_DESC, first: 6) {
         key
         summary
         epic_color

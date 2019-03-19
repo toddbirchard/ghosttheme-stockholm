@@ -1,16 +1,13 @@
-import "@babel/polyfill";
 import { GraphQLClient } from 'graphql-request';
 import gql from 'graphql-tag';
 require('../src/less/projects.less');
-import { enableExperimentalFragmentVariables, disableExperimentalFragmentVariables } from 'graphql-tag';
-import { JiraIssuesViaFragments, JiraFields, JiraIssuesByStatus } from '../query.graphql';
+import { JiraIssuesByStatus } from './query.graphql';
 import $ from 'jquery';
 import 'slick-carousel';
 
 
 $(document).ready(function() {
   const table_name = 'jira';
-
 
   function count(obj) {
     return Object.keys(obj).length;
@@ -36,7 +33,7 @@ $(document).ready(function() {
     const endpoint_url = process.env.ENDPOINT;
     const token = process.env.AUTH;
 
-    const client = new GraphQLClient(endpoint_url, { headers: {'Authorization': token}} );
+    const client = new GraphQLClient(endpoint_url, { headers: {'Authorization': token, 'Content-Type': 'application/json'}} );
 
     const vars = {
       project: "Hackers and Slackers"
@@ -44,6 +41,8 @@ $(document).ready(function() {
 
     client.request(JiraIssuesByStatus, vars).then((result) => {
       console.log(result);
+    }).catch(err => {
+      console.error(err)
     });
   }
 
