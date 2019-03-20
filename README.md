@@ -3,7 +3,8 @@
 ![Ghost](https://img.shields.io/badge/ghost-2.18.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
 ![Node](https://img.shields.io/badge/node-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=339933&colorA=36363e)
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=23a8e2&colorA=36363e)
-![Lightbox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
+![GraphQL](https://img.shields.io/badge/GraphQL-v14.1.1.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=E10098&colorA=36363e)
+![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
 ![Apisentris](https://img.shields.io/badge/Apisentris-PostgreSQL-green.svg?longCache=true&style=flat-square&logo=Atom&logoColor=white&colorB=51cacd&colorA=36363e)
 ![Ghost-Pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&logo=flicker)
 ![Babel](https://img.shields.io/badge/@babel/core-7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=daa000&colorA=36363e)
@@ -33,12 +34,17 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 ### Major Features
 
 * Content
-  * Global search
-  * Automatic link preview embeds via custom API
+  * Global searchbar
+  * `<a>` tags generate embedded previews
+  * Hand-designed code snippets
+  * Interactive data tables
+* API
   * Featured posts
   * Multi-part content publications
+  * Additional social media options for authors
+  * Enumerated pagination
 * Projects
-  * Full JIRA integration with functioning Kanban
+  * Full JIRA integration with functioning Kanban board
 * Accounts
   * User Authentication & Sign-up for Readers
 * Authors
@@ -54,44 +60,54 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
   * Recent Posts
   * Related Posts
   * Publications
-  * Multi-part series widget (Post X of Y)
+  * Table of contents (Post X of Y)
 * Authors
   * Blog Contributors
   * Author detail cards
-  * Github user activity
-  * Github user repositories
-  * Author's website embed
-  * Meetup Events
-  * Medium Posts
+  * Github activity per author
+  * Github repositories per author
+  * Author website embed
+  * Upcoming Meetup Events
+  * Recent Medium Posts
 * Social
   * Connected Social Profiles
-  * Twitter Feed
-  * Facebook page
+  * Twitter feed per author
+  * Facebook page preview
 * Users
   * Hybrid account creation + subscribe
+  
+### Page Templates
 
-### Features In Development
+* `custom-author-archive.hbs`: Alternative "about" page which displays author bios.
+* `custom-projects.hbs`: Live JIRA Kanban board integration, lists chosen Github repositories.
+* `custom-tag-archive.hbs`: Template for ongoing editorial series’.
+* `custom-apply`: Application process for aspiring authors.
+* `custom-resources`: Recommended products, code libraries, etc.
+* `series`: Page containing all posts of a series, compiled via dynamic routing.
+* `error`: Custom 404 page.
 
-- Code Cheatsheet section
-- Homegrown commenting system (zero dependencies on Disquis)
-- Automated Sendgrid newsletters
-- Additional publication widgets
+## Planned Features
 
-### Planned Features
+###Features In Development
 
-- Recommended posts
-- Recommended services & tools
-- Trending posts
-- Guest posts
-- Embedded executable code interpreters
-- Author/tag subscriptions
-- Trending Topics
+* Code Cheatsheet section
+* Homegrown commenting system (zero dependencies on Disquis)
+* Automated Sendgrid newsletters
+* Additional publication widgets
+
+### Coming Later Perhaps
+
+* Recommended posts
+* Recommended services & tools
+* Trending posts
+* Guest posts
+* Executable code interpreters
+* Author/tag subscriptions
+* Trending Topics
 
 ## Installation
 
 For information on installing the Ghost platform, please reference the [Ghost CLI](https://docs.ghost.org/docs/cli-install).
-
-### Theme Quickstart
 
 ```
 $ git clone https://github.com/toddbirchard/ghosttheme-stockholm.git
@@ -102,23 +118,10 @@ $ npm run build
 
 As always, remember to restart your Ghost instance when adding new themes.
 
-### Developers
-
-Ghost uses [Handlebars](http://handlebarsjs.com/) for templating. This theme is styled using [LESS](http://lesscss.org/).
-
-**Custom Templates:**
-
-- `custom-author-archive.hbs`: Alternative "about" page which displays author bios.
-- `custom-projects.hbs`: Live JIRA Kanban board integration, lists chosen Github repositories.
-- `custom-tag-archive.hbs`: Template for ongoing editorial series’.
-- `custom-apply`: Application process for aspiring authors.
-- `custom-resources`: Recommended products, code libraries, etc.
-- `series`: Page containing all posts of a series, compiled via dynamic routing.
-- `error`: Custom 404 page.
-
 ### Maintenance
 
-- Documentation
-- User-friendly configuration
-- Image compression optimization
-- Retina image support
+* Documentation
+* User-friendly configuration
+* Image compression optimization
+* Retina image support
+* Site speed optimizations
