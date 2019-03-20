@@ -14,7 +14,7 @@
 	{{> lazyload}}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	{{#is "post"}}
-		  <meta property="og:image" content="{{img_url feature_image}}">
+	        <meta property="og:image" content="{{img_url feature_image}}">
 		{{else}}
 			<meta property="og:image" content="{{img_url @site.cover_image}}" />
 	{{/is}}
@@ -24,9 +24,6 @@
 </head>
 
 <body class="{{body_class}}">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8VFCPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	{{> nav/header}}
 	{{{body}}}
 	{{> nav/footer}}
