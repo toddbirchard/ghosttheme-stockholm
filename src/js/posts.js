@@ -1,4 +1,4 @@
-require('../src/less/posts.less');
+require('../less/posts.less');
 /*
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';

@@ -1,5 +1,5 @@
-require('../src/less/pages.less');
-require('../src/less/author.less');
+require('../less/pages.less');
+require('../less/author.less');
 import { GraphQLClient } from 'graphql-request';
 /*import author_github from '../src/js/author/github.js';
 import author_medium from '../src/js/author/medium.js';

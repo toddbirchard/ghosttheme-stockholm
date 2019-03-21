@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 import gql from 'graphql-tag';
-require('../src/less/projects.less');
+require('../less/projects.less');
 import { JiraIssuesByStatus } from './query.graphql';
 import $ from 'jquery';
 import 'slick-carousel';

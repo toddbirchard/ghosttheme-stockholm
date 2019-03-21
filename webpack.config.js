@@ -25,18 +25,18 @@ module.exports = {
     }
   },
   entry: {
-    'global': path.resolve(__dirname, './webpack/global.js'),
-    'posts': path.resolve(__dirname, './webpack/posts.js'),
-    'pages': path.resolve(__dirname, './webpack/pages.js'),
-    'apply': path.resolve(__dirname, './webpack/apply.js'),
-    'author': path.resolve(__dirname, './webpack/author.js'),
-    'resources': path.resolve(__dirname, './webpack/resources.js'),
-    'projects': ["@babel/polyfill", path.resolve(__dirname, './webpack/projects.js')],
-    'series': path.resolve(__dirname, './webpack/series.js'),
-    'transactional': path.resolve(__dirname, './webpack/transactional.js')
+    'global': path.resolve(__dirname, './src/js/global.js'),
+    'posts': path.resolve(__dirname, './src/js/posts.js'),
+    'pages': path.resolve(__dirname, './src/js/pages.js'),
+    'apply': path.resolve(__dirname, './src/js/apply.js'),
+    'author': path.resolve(__dirname, './src/js/author.js'),
+    'resources': path.resolve(__dirname, './src/js/resources.js'),
+    'projects': ["@babel/polyfill", path.resolve(__dirname, './src/js/projects.js')],
+    'series': path.resolve(__dirname, './src/js/series.js'),
+    'transactional': path.resolve(__dirname, './src/js/transactional.js')
   },
   output: {
-    path: path.resolve(__dirname, './assets/dist'),
+    path: path.resolve(__dirname, './assets/js'),
     filename: '[name].js'
   },
   optimization: {
@@ -59,7 +59,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './assets/dist'
+              publicPath: './assets/js'
             }
           },
           "css-loader"

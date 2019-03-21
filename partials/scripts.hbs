@@ -7,13 +7,6 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
 </noscript>
 <script>
-var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
-    // ... more custom settings?
-});
-</script>
-<script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.3/dist/lazyload.min.js"></script>
-<script>
      var loadDeferredStyles = function() {
        var addStylesNode = document.getElementById("deferred-styles");
        var replacement = document.createElement("div");
@@ -27,6 +20,6 @@ var lazyLoadInstance = new LazyLoad({
      else window.addEventListener('load', loadDeferredStyles);
 </script>
 {{^is "post,home"}}
-  <script async src="{{asset "dist/pages.js"}}"></script>
+  <script async src="{{asset "js/pages.js"}}"></script>
 {{/is}}
 <!-- End Scripts -->
