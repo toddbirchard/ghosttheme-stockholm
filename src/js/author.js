@@ -3,8 +3,8 @@ require('../less/author.less');
 import { GraphQLClient } from 'graphql-request';
 /*import author_github from '../src/js/author/github.js';
 import author_medium from '../src/js/author/medium.js';
-import author_meetup from '../src/js/author/meetup.js';
-import author_website from '../src/js/author/website.js';*/
+import author_meetup from '../src/js/author/meetup.js';*/
+import author_website from './author/website.js';
 // import '../assets/js/includes/gh-profile-card.min.js';
 const fetch = require('node-fetch');
 
@@ -17,31 +17,6 @@ var authorFunctions = {
         '<h4 class="title">Github</h4>  \n' +
         '<div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + github + '"></div>  \n' +
       '</div></div>');
-    }
-  },
-  author_website: function(docs) {
-    var website = docs[0]['website']
-    if (website) {
-      var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + website;
-      var headers = {
-        "Content-Type": "application/json"
-      }
-      fetch(url, {
-        method: 'GET',
-        headers: headers
-      }).then((res) => {
-        console.log(res)
-        return res.json()
-      }).then((json) => {
-        console.log(json);
-        $('.sidebar').append('<div class="widget" style="order: 0;"> \n' +
-        '<div class="content"><h4 class="title">Website</h4>  \n' +
-        '<a href="' + json.url + '">  \n' +
-        '<div class="link-preview" style="background:url(' + json.image + ')"> \n' +
-        '<a href="' + json.url + '">' + json.title + '</a><i class="fas fa-link"></i> \n' +
-        '</div></a></div> \n' +
-        '</div>');
-      });
     }
   },
   author_medium: function(medium) {

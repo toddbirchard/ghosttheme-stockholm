@@ -66,17 +66,10 @@ var globalFunctions = {
     $('img').attr('data-rjs', 2);
     //  $('img').attr('data-rjs', 3);
   },
-  lazyload: function() {
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy"
-        // ... more custom settings?
-    });
-  },
   init: function() {
     globalFunctions.contributors();
-  //  globalFunctions.retina();
+    globalFunctions.retina();
     globalFunctions.tags();
-    //globalFunctions.lazyload();
   }
 };
 

@@ -1,7 +1,7 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   var date = new Date();
-  var title = document.title
+  var title = document.title;
   var userid = Math.round(+new Date()/1000);
   //var created = new Date(date.getMonth(), date.getDate(), date.getFullYear());
 
@@ -57,3 +57,4 @@ $(document).ready(function() {
 
     //mixpanel.track_forms('#sidebar-form', 'Subscribed', {'email': });
 });
+*/

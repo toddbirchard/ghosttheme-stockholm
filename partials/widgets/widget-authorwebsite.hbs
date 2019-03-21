@@ -1,8 +1,9 @@
 <!-- start website widget -->
-<a href="{{website}}">
-  <div class="widget author-website" style="0">
-  </div>
-</a>
+{{#has "website"}}
+      <div class="widget author-website" style="0">
+          <a href="{{website}}">{{website}}</a>
+      </div>
+{{/has}}
 <!-- <script>
   $(document).ready(function() {
     function websiteCard(website) {

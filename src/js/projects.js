@@ -1,7 +1,6 @@
+import "@babel/polyfill";
 import { GraphQLClient } from 'graphql-request';
-import gql from 'graphql-tag';
 require('../less/projects.less');
-import { JiraIssuesByStatus } from './query.graphql';
 import $ from 'jquery';
 import 'slick-carousel';
 
@@ -13,10 +12,9 @@ $(document).ready(function() {
     return Object.keys(obj).length;
   }
 
-  function populateCards(data) {
+  function populateCards(data, status) {
     console.log(data);
-    var num_statuses = count(data);
-    console.log('number of statuses = ' + num_statuses);
+    var card_list = data;
     for (var i = 0; i < card_list.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
      // '<div style="background-color:' + card_list[i].issuetype_color + ';" class="issuetype ' + card_list[i]['issuetype'] + '"><img src="' + card_list[i].issuetype_url + '"></div> \n' +
@@ -30,20 +28,96 @@ $(document).ready(function() {
   }
 
   async function main() {
-    const endpoint_url = process.env.ENDPOINT;
+    const endpoint = process.env.ENDPOINT;
     const token = process.env.AUTH;
 
-    const client = new GraphQLClient(endpoint_url, { headers: {'Authorization': token, 'Content-Type': 'application/json'}} );
+    // Structured query
+    const query = `query JiraIssuesByStatus($project: String) {
+      backlog: jiraIssues(where: {project: $project, status: "Backlog", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_DESC, first: 6) {
+        key
+        summary
+        epic_color
+        epic_name
+        status
+        priority_rank
+        priority_url
+    	priority_name
+        issuetype_name
+        issuetype_url
+        assignee_name
+        assignee_url
+      }
+      todo: jiraIssues(where: {project: $project, status: "To Do", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+        key
+        summary
+        epic_color
+        epic_name
+        status
+        priority_rank
+        priority_url
+        issuetype_name
+        issuetype_url
+        assignee_name
+        assignee_url
+      }
+      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+        key
+        summary
+        epic_color
+        epic_name
+        status
+        priority_rank
+        priority_url
+        issuetype_name
+        issuetype_url
+        assignee_name
+        assignee_url
+      }
+      done: jiraIssues(where: {project: $project, status: "Done", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: updated_DESC, first: 6) {
+        key
+        summary
+        epic_color
+        epic_name
+        status
+        priority_rank
+        priority_url
+        issuetype_name
+        issuetype_url
+        assignee_name
+        assignee_url
+      }
+    }`;
 
-    const vars = {
-      project: "Hackers and Slackers"
+    // All Possible Issue Statuses
+    //var statuses = ['Backlog', 'To Do', 'In Progress', 'Done'];
+
+    // Initialize GraphQL Client
+    const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
+
+    const backlog_variables = {
+      project: "Hackers and Slackers",
+      status: "Backlog"
     };
 
-    client.request(JiraIssuesByStatus, vars).then((result) => {
-      console.log(result);
-    }).catch(err => {
-      console.error(err)
-    });
+    const todo_variables = {
+      project: "Hackers and Slackers",
+      status: "To Do"
+    };
+
+    const progress_variables = {
+      project: "Hackers and Slackers",
+      status: "In Progress"
+    };
+
+    const done_variables = {
+      project: "Hackers and Slackers",
+      status: "Done"
+    };
+
+    client.request(query, backlog_variables).then(data => populateCards(data['backlog'], 'backlog'));
+    client.request(query, todo_variables).then(data => populateCards(data['todo'], 'todo'));
+    client.request(query, progress_variables).then(data => populateCards(data['progress'], 'progress'));
+    client.request(query, done_variables).then(data => populateCards(data['done'], 'done'));
   }
 
   main().catch(error => console.error(error));
