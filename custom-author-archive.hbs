@@ -20,7 +20,7 @@
 						<div class="author-container">
  						{{#get "authors" limit="all" include="count.posts" order="count.posts desc" }}
  							{{#foreach authors}}
-								{{> author-card}}
+								{{> author/author-card}}
  							{{/foreach}}
  						{{/get}}
  					</div>

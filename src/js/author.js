@@ -8,6 +8,49 @@ import author_website from './author/website.js';
 // import '../assets/js/includes/gh-profile-card.min.js';
 const fetch = require('node-fetch');
 
+function makeAuthorSidebar(data){
+  console.log(data)
+}
+
+function who_is_current_author() {
+  const sPath = String(document.location.pathname);
+  let slug = sPath.substring(sPath.lastIndexOf("/") - 4);
+  slug = slug.replace('/', '');
+  console.log('slug = ' + slug);
+  return slug;
+}
+
+async function get_authors() {
+  const author_slug = who_is_current_author();
+  const endpoint = process.env.ENDPOINT;
+  const token = process.env.AUTH;
+
+  const vars = {
+    slug: "todd"
+  };
+
+  const query = `query AuthorsByName($slug: String!) {
+      authors(where: {slug: $slug}) {
+          name
+          website
+          title
+          linkedin
+          vimeo
+          quora
+          medium
+          github
+          meetup
+          pocket
+      }
+    }`;
+
+  // Initialize GraphQL Client
+  const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
+  client.request(query, vars).then(data => makeAuthorSidebar(data));
+}
+
+get_authors().catch(error => console.error(error));
+
 var authorFunctions = {
   author_github: function(docs) {
     var github = docs[0]['github'];
@@ -98,60 +141,8 @@ var authorFunctions = {
       }
     });
   },
-  current_author: function() {
-    var sPath = String(document.location.pathname);
-    var slug = sPath.substring(sPath.lastIndexOf("/") - 4);
-    slug = slug.replace('/', '');
-    return slug;
-  },
-  get_author: function(callback) {
-    var slug = authorFunctions.current_author();
-    var url = process.env.ENDPOINT;
-    var token = process.env.AUTH;
-
-    var headers = {
-      "Content-Type": "application/json",
-      "access_token": token,
-      "slug": slug
-    };
-
-    const query = `
-    query AuthorsByName($slug: String) {
-      authors(where: {slug: $slug}) {
-          name
-          website
-          facebook
-          twitter
-          title
-          linkedin
-          vimeo
-          quora
-          medium
-          github
-          meetup
-          pocket
-      }
-    }`;
-
-    // Initialize GraphQL Client
-    const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
-
-    fetch(url, {
-      method: 'GET',
-      headers: headers
-    }).then((res) => {
-      console.log(res)
-      return res.json()
-    }).then((json) => {
-      console.log(json);
-      authorFunctions.author_website(json);
-      authorFunctions.author_github(json);
-      authorFunctions.author_medium(json);
-      // authorFunctions.aauthor_meetup(json);
-    });
-  },
   init: function() {
-    authorFunctions.get_author();
+
   }
 }
 
