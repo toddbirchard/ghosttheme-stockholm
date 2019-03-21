@@ -1,4 +1,3 @@
-# Write your query or mutation here
 fragment JiraFieldsFragment on jiraIssue {
     key
     summary
