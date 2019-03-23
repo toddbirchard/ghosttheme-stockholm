@@ -87,26 +87,28 @@
     margin: 0;
   }
 
-  .dropdown {
+  .main-content {
 
-    border-radius: 3px;
-    padding: 5px 10px;
-    color: #bbbbbb;
-    float: right;
-    margin-top: 20px;
+    .dropdown {
+      border-radius: 3px;
+      padding: 5px 10px;
+      color: #bbbbbb;
+      float: right;
+      margin-top: 20px;
 
-    &after {
-      content: " ";
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 20px solid #f00;
-    }
+      &after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #f00;
+      }
 
-    &:hover {
-      cursor: no-drop;
+      &:hover {
+        cursor: no-drop;
+      }
     }
   }
 
