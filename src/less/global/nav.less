@@ -17,7 +17,6 @@ nav {
 
     .logo {
       height: 40px;
-      width: 230px;
       position: absolute;
       left: 0;
       right: 0;
@@ -459,21 +458,6 @@ nav {
       width: fit-content;
       display: block;
       height: 25px;
-
-      &:nth-of-type(1),
-      &:nth-of-type(2),
-      &:nth-of-type(3) {
-        display: none;
-        @media(max-width: 600px) {
-          display: block;
-        }
-      }
-
-      &:nth-child(1n+4) {
-        @media(max-width: 600px) {
-          display: none;
-        }
-      }
     }
 
     a {
@@ -1119,6 +1103,94 @@ nav {
         }
       }
     }
+  }
+}
+
+.desktop-navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: auto;
+  
+  @media(max-width: 600px) {
+    display: none;
+  }
+
+  .dropdown {
+    transition: all .3s ease-out;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      .dropdown-content {
+        display: block !important;
+        opacity: 1 !important;
+      }
+
+      button {
+        color: @theme-color;
+      }
+    }
+
+    button {
+      border: none;
+      font-family: 'soleil', sans-serif;
+      font-weight: 400;
+      font-size: .9em;
+      padding: 0;
+      height: 45px;
+    }
+    
+    .dropdown-content {
+      display: none;
+      background: white;
+      box-shadow: 0 3px 3px rgba(65, 67, 144, 0.15);
+      z-index: 10;
+      width:200px;
+      position: absolute;
+      opacity: 0;
+      padding: 5px;
+
+      a {
+        display: block;
+        font-weight: 300;
+        font-size: .8em;
+        padding: 10px;
+        text-align: left;
+        line-height: 1.5;
+        color: @text-color;
+        transition: all .3s ease-out;
+
+        &:hover {
+          background: #0db0e2;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.mobile-navigation {
+  display: none;
+  max-width: 300px;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 12px;
+
+  a {
+    color: @text-color;
+    transition: all .3s ease-out;
+
+    &:hover {
+      color: @theme-color;
+      cursor: pointer;
+    }
+  }
+
+  @media(max-width: 600px) {
+    display: flex;
   }
 }
 /* Add exception for homepage margin */

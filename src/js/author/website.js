@@ -1,6 +1,3 @@
-
-
-
 function author_website(docs) {
   var website = docs[0]['website'];
   if (website) {
@@ -12,7 +9,6 @@ function author_website(docs) {
         method: 'GET',
         headers: headers
       }).then((res) => {
-        console.log(res)
         return res.json()
       }).then((json) => {
         console.log(json);

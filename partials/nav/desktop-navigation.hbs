@@ -1,0 +1,42 @@
+<div class="desktop-navigation">
+    <div class="dropdown">
+        <button class="dropdown">Posts</button>
+        <div class="dropdown-content">
+            {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
+                {{#foreach tags}}
+                    <a href="{{url}}">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown">Pages</button>
+        <div class="dropdown-content">
+            <a href="https://hackersandslackers.com/about/">About Us</a>
+            <a href="https://hackersandslackers.com/series/">Series</a>
+            <a href="https://hackersandslackers.com/projects/">Projects</a>
+            <a href="https://hackersandslackers.com/resources/">Resources</a>
+            <a href="https://hackersandslackers.com/become-a-contributor/">Join The Club</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown">Authors</button>
+        <div class="dropdown-content">
+            {{#get "authors" include="count.posts"}}
+                {{#foreach authors}}
+                    <a href="{{url}}" class="link">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown">Series'</button>
+        <div class="dropdown-content">
+            {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
+                {{#foreach tags visibility="internal"}}
+                    <a href="/series/{{slug}}/" class="post-title">{{meta_title}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</div>

@@ -9,7 +9,8 @@ import author_website from './author/website.js';
 const fetch = require('node-fetch');
 
 function makeAuthorSidebar(data){
-  console.log(data)
+  author_website(data);
+  console.log(data);
 }
 
 function who_is_current_author() {
@@ -26,7 +27,7 @@ async function get_authors() {
   const token = process.env.AUTH;
 
   const vars = {
-    slug: "todd"
+    slug: author_slug
   };
 
   const query = `query AuthorsByName($slug: String!) {
@@ -94,7 +95,7 @@ var authorFunctions = {
       var url = 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key;
       var headers = {
         "Content-Type": "application/json"
-      }
+      };
       fetch(url, {
         method: 'GET',
         headers: headers

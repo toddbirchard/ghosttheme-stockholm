@@ -4,13 +4,13 @@
 <section class="content-wrap">
 	<div class="container">
 			{{! insert sidebar partial}}
-			{{> author-sidebar}}
+			{{> author/author-sidebar}}
 			<!-- start main post area -->
 			<div class=" main-content">
 				{{> cover-author}}
 				<div class="postlist">
-				{{> loop}}
-			</div>
+                    {{> loop}}
+                </div>
 				{{pagination}}
 			</div>
 			<!-- end main post area -->
