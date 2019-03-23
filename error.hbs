@@ -1,107 +1,5 @@
 {{!< default}}
 
-<style>
-html,body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: white;
-}
-
-header {
-  box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.4) !important;
-  z-index: 100;
-  position: relative;
-}
-
-.main-footer {
-  margin-top: 0 !important;
-}
-
-.error-message {
-  position: relative;
-  min-width: 100%;
-  height: 1000px;
-  background: url('https://www.reactiongifs.us/wp-content/uploads/2015/04/nothing_to_see_here_naked_gun.gif') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #000;
-  opacity: .8;
-  margin: 0;
-}
-
-.content {
-  font-family: 'CompassSans-Regular','Avenir',Helvetica,sans-serif;
-  color: #fff;
-  background-color: none;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-h1 {
-  font-size: 160px;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: white !important;
-  height: 120px;
-  text-shadow: -3px 3px 0 #404767, 0 1px 0 #404767, 1px -1px 0 #404767, -1px -1px 0 #404767;
-}
-
-h2 {
-  margin-top: 0;
-  max-width: 700px;
-  font-size: 30px;
-  width: 90%;
-  color: white !important;
-  text-shadow: -2px 2px 0 #404767, 0 1px 0 #404767, 1px -1px 0 #404767, -1px -1px 0 #404767;
-
-}
-
-p {
-  text-align: left;
-  padding-bottom: 32px;
-  color: white !important;
-  text-shadow: -1px 1px 0 #404767;
-}
-
-.error-button {
-  display: inline-block;
-  border: 1px solid #fff;
-  border-radius: 40px;
-  padding: 15px 30px;
-  margin-right: 15px;
-  margin-bottom: 10px;
-  color: white !important;
-  background: rgba(255, 255, 255, 0.33) !important;
-  transition: all .2s ease-out;
-}
-
-.error-button:hover {
-  color: #e2e2e2 !important;
-  background: rgba(13, 176, 226, .8);
-  border: 1px solid rgba(13, 176, 226, .8);
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 480px) {
-  .error-button {
-    background-color: white;
-    color: #444444;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 120px;
-  };
-}
-
-</style>
-
 <section class="error-message">
 	<div style="height: -webkit-fill-available; padding: 100px 50px !important;">
     <h1>404</h1>
@@ -111,3 +9,7 @@ p {
     <a class="error-button" href="/">REPORT PROBLEM</a>
 	</div>
 </section>
+
+{{#contentFor "scripts"}}
+    <script src="{{asset "js/error.js"}}"></script>
+{{/contentFor}}

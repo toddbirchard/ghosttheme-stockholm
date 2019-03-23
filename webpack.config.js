@@ -33,7 +33,8 @@ module.exports = {
     'resources': path.resolve(__dirname, './src/js/resources.js'),
     'projects': ["@babel/polyfill", path.resolve(__dirname, './src/js/projects.js')],
     'series': path.resolve(__dirname, './src/js/series.js'),
-    'transactional': path.resolve(__dirname, './src/js/transactional.js')
+    'transactional': path.resolve(__dirname, './src/js/transactional.js'),
+    'error': path.resolve(__dirname, './src/js/error.js')
   },
   output: {
     path: path.resolve(__dirname, './assets/js'),

@@ -15,7 +15,7 @@
 						<div class="post-content">
 							{{content}}
 						</div>
-						<div class="tag-container">
+						<main class="tag-container">
 							{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" limit="all"}}
 								{{#foreach tags visibility="internal"}}
 									<div class="tag-wrapper">
@@ -35,12 +35,12 @@
 									</div>
 								{{/foreach}}
 							{{/get}}
-						</div>
+						</main>
+                    </section>
+                    </div>
 			</div>
-		</section>
-			{{/post}}
-			<!-- end post -->
-		<!-- end main post area -->
-	</div>
 </section>
+{{/post}}
+<!-- end post -->
+<!-- end main post area -->
 <!-- end site's main content area -->
