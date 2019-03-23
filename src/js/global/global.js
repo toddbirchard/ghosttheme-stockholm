@@ -40,8 +40,9 @@ var globalFunctions = {
       datavis: '<i class="fal fa-chart-pie"></i>',
       plotly: '<i class="fas fa-chart-bar"></i>',
       saas: '<i class="fal fa-laptop-code"></i>',
-      postgres: '<i class="fas fa-elephant"></i>',
-      bigdata: '<i class="far fa-chart-network"></i>'
+      postgresql: '<i class="fas fa-elephant"></i>',
+      bigdata: '<i class="far fa-chart-network"></i>',
+      dataengineering: '<i class="far fa-wrench"></i>'
     };
 
     for (var key in tags) {
