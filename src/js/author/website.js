@@ -1,5 +1,7 @@
-function author_website(docs) {
-  var website = docs[0]['website'];
+const fetch = require('node-fetch');
+
+function author_website(data) {
+  var website = data['website'];
   if (website) {
       var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + website;
       var headers = {
