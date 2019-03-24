@@ -70,11 +70,7 @@
 	<!-- end main post area -->
 	{{> posts/postfooter}}
     {{#contentFor "scripts"}}
-        <script src="https://hackers.nyc3.cdn.digitaloceanspaces.com/js/highlight.pack.js"></script>
         <script async src="{{asset "js/posts.js"}}"></script>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
         {{#has tag="Roundup"}}
             <script src="{{asset "js/previews.js"}}"></script>
         {{/has}}

@@ -5,14 +5,16 @@
   .language-output,
   .language-shell,
   .language-endpoint,
+  .language-properties,
   .bash,
   .shell,
   .output,
   .endpoint,
   .shell,
+  .properties,
   .hljs {
-    background: #232934;
-    color: white;
+    background-color: #2e3440;
+    color: #eceff4;
     font-weight: normal;
 
     .title {
@@ -20,12 +22,29 @@
       font-weight: normal;
     }
 
-    .name {
-      color: @nord8;
-    }
+      .snippet {
+        color: #81a1c1;
+      }
+
+      .tabstop,
+      .hljs-meta {
+        color: #ebcb8b;
+      }
+
+      .trigger {
+        color: #88c0d0;
+      }
+
+      .name {
+        color: #a3be8c;
+      }
 
     .tag {
       color: @nord9;
+    }
+
+    .flags {
+      color: #b48ead;
     }
 
     .attr {
@@ -35,7 +54,8 @@
 
     .built_in,
     .section,
-    .selector-tag {
+    .selector-tag,
+    .hljs-built_in {
       color: #cbbdff;
     }
 
@@ -56,15 +76,18 @@
     .selector-attr,
     .selector-class,
     .selector-pseudo,
-    .string,
     .symbol,
     .template-tag {
       color: @nord8;
     }
 
+    .string {
+      color: #a3be8c;
+    }
+
     .meta,
     .meta-string {
-      color: @nord9;
+      color: #ebcb8b;
     }
 
     .comment {
@@ -81,7 +104,7 @@
 
     .literal,
     .number {
-      color: @nord15;
+      color: #b48ead;
     }
 
     .emphasis {
@@ -104,9 +127,6 @@
   .hljs.shell,
   .language-bash,
   .language-shell {
-    .built_in {
-      color: @nord12 !important;
-    }
 
     &::before {
       content: "Shell" !important;

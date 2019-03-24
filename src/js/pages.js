@@ -1,1 +1,1 @@
-require('../less/pages.less');
+import '../less/pages.less';

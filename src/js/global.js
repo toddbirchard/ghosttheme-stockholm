@@ -1,4 +1,4 @@
-require('../less/global.less');
+import '../less/global.less';
 import './global/analytics.js';
 
 /*====================================================

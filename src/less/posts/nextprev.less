@@ -18,10 +18,10 @@
       flex-direction: row;
       flex-wrap: nowrap;
       max-width: 830px;
-      margin: 20px auto 0;
+      margin: 0 auto;
       background: rgba(255, 255, 255, .6);
 
-      @media(max-width: 600px) {
+      @media(max-width: 900px) {
         margin: 0;
       }
 
@@ -30,10 +30,10 @@
         border-right: 1px solid #ecf0f9;
         border-top: 1px solid #ecf0f9;
         visibility: hidden;
-        padding: 30px 0 30px 1% !important;
+        padding: 30px 0 30px 10px !important;
         background: white;
         @media(max-width: 600px) {
-          padding: 20px 0 20px 1% !important;
+          padding: 20px 0 20px 20px !important;
         }
 
         .info {
@@ -50,10 +50,10 @@
         border-left: 1px solid #ecf0f9;
         visibility: hidden;
         border-top: 1px solid #ecf0f9;
-        padding: 30px 1% 30px 0 !important;
+        padding: 30px 10px 30px 0 !important;
         background: white;
         @media(max-width: 600px) {
-          padding: 20px 1% 20px 0 !important;
+          padding: 20px 10px 20px 0 !important;
         }
 
         .info {
@@ -94,8 +94,8 @@
         }
 
         svg {
-          fill: @theme-color;
-          color: #0db0e2;
+          fill: #5D6178;
+          color: #5D6178;
           height: 28px;
           width: 28px;
           overflow: visible;
@@ -106,8 +106,8 @@
           }
 
           * {
-            color: #0db0e2;
-            fill: #0db0e2;
+            color: #5D6178;
+            fill: #5D6178;
           }
         }
 
@@ -134,16 +134,17 @@
           font-family: 'soleil';
           font-size: 1em;
           margin: 0 0 5px !important;
-          color: @theme-color;
+          color: #5D6178;
           max-width: 90%;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
           @media(max-width: 600px) {
             white-space: wrap;
             text-overflow: normal;
             line-height: 1.25;
-            font-size: 1em;
+            font-size: .9em;
             font-family: 'soleil';
             text-overflow: unset;
             white-space: normal;

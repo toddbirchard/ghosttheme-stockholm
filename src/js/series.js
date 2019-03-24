@@ -1,4 +1,4 @@
-require('../less/series.less');
+import  '../less/series.less';
 
 var pageFunctions = {
   seriesSorter: function(){
@@ -10,7 +10,7 @@ var pageFunctions = {
     		$('.sort').toggleClass('sort-toggle');
     	});
   }
-}
+};
 
 $(document).ready(function() {
   pageFunctions.seriesSorter();

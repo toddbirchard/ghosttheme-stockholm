@@ -1,5 +1,5 @@
-require('../less/posts.less');
-/*
+import '../less/posts.less';
+
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import shell from 'highlight.js/lib/languages/shell';
@@ -12,11 +12,13 @@ import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
 import nginx from 'highlight.js/lib/languages/nginx';
-*/
+import hljs from 'highlight.js/lib/highlight';
+
+
 import ScrollBooster from 'scrollbooster';
 import baguetteBox from 'baguettebox.js';
-const fetch = require('node-fetch');
-/*
+import fetch from 'node-fetch';
+
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('shell', shell);
@@ -29,8 +31,18 @@ hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
-*/
+
+
+
 var postFunctions = {
+  highlightjs: function(){
+    hljs.configure({
+      tabReplace: '  ', // 2 spaces
+      classPrefix: ''     // don't append class prefix
+                          // … other options aren't changed
+    });
+    hljs.initHighlightingOnLoad();
+  },
   codeSnippetFullScreen: function() {
     $('main > pre').each(function() {
       if ($(this).height() >= 400) {
@@ -212,9 +224,11 @@ var postFunctions = {
     postFunctions.enableBaguettebox();
     postFunctions.addImageAltTags();
     postFunctions.detect_series();
+    postFunctions.highlightjs();
   }
 };
 
 $(document).ready(function() {
   postFunctions.postInit();
+
 });

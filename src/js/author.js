@@ -1,12 +1,12 @@
-require('../less/pages.less');
-require('../less/author.less');
+import '../less/pages.less';
+import '../less/author.less';
 import { GraphQLClient } from 'graphql-request';
 /*import author_github from '../src/js/author/github.js';
 import author_medium from '../src/js/author/medium.js';
 import author_meetup from '../src/js/author/meetup.js';*/
 import author_website from './author/website.js';
 // import '../assets/js/includes/gh-profile-card.min.js';
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 function makeAuthorSidebar(data){
   author_website(data);

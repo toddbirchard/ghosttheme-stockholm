@@ -1,16 +1,11 @@
-import "@babel/polyfill";
 import { GraphQLClient } from 'graphql-request';
-require('../less/projects.less');
+import '../less/projects.less';
 import $ from 'jquery';
 import 'slick-carousel';
 
 
 $(document).ready(function() {
   const table_name = 'jira';
-
-  function count(obj) {
-    return Object.keys(obj).length;
-  }
 
   function populateCards(data, status) {
     console.log(data);
