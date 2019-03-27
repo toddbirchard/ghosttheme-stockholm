@@ -34,7 +34,7 @@
         <div class="dropdown-content">
             {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
                 {{#foreach tags visibility="internal"}}
-                    <a href="/series/{{slug}}/" class="post-title">{{meta_title}}</a>
+                    <a href="/series/{{slug}}/">{{meta_title}}</a>
                 {{/foreach}}
             {{/get}}
         </div>

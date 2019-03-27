@@ -1,7 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 import '../less/projects.less';
-import $ from 'jquery';
-import 'slick-carousel';
+import './projects/kanban.js';
 
 
 $(document).ready(function() {
@@ -9,16 +8,15 @@ $(document).ready(function() {
 
   function populateCards(data, status) {
     console.log(data);
-    var card_list = data;
+    const card_list = data;
     for (var i = 0; i < card_list.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
-     // '<div style="background-color:' + card_list[i].issuetype_color + ';" class="issuetype ' + card_list[i]['issuetype'] + '"><img src="' + card_list[i].issuetype_url + '"></div> \n' +
       '<div class="info"> \n' +
       '<div class="left"> \n' +
       '<div class="avatar"><img alt="' + card_list[i]['issuetype_name'] + '" src="' + card_list[i]['issuetype_url'] + '"></div> \n' +
       '<div class="priority"><img alt="' + card_list[i]['priority_name'] + '" src="' + card_list[i]['priority_url'] + '"></div> \n' + '</div> \n' +
       '<div class="epic ' + card_list[i]['epic'] + '" style=background-color:' + card_list[i]['epic_color'] + '50;><span>' + card_list[i]['epic_name'] + '</span></div> \n' +
-      '</div> \n' + '</div>');
+      '</div></div>');
     }
   }
 
@@ -82,9 +80,6 @@ $(document).ready(function() {
         assignee_url
       }
     }`;
-
-    // All Possible Issue Statuses
-    //var statuses = ['Backlog', 'To Do', 'In Progress', 'Done'];
 
     // Initialize GraphQL Client
     const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
@@ -155,21 +150,22 @@ $(document).ready(function() {
       ]
     });
   }
+
   MakeSlick();
 
-  $('.stockholmproject').on('click', function(obj) {
+  $('.stockholmproject').on('click', function() {
     populate_jira_cards(table_name);
   });
 
-  $('.tokyoproject').on('click', function(obj) {
+  $('.tokyoproject').on('click', function() {
     populate_jira_cards(table_name, 'Toddzilla');
   });
 
-  $('.jupyterproject').on('click', function(obj) {
+  $('.jupyterproject').on('click', function() {
     populate_jira_cards(table_name, 'PlanetJupyter');
   });
 
-  $('.apiproject').on('click', function(obj) {
+  $('.apiproject').on('click', function() {
     populate_jira_cards(table_name, 'hackersandslackers-api');
   });
 

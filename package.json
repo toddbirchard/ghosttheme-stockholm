@@ -69,9 +69,8 @@
     }
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "@babel/runtime": "^7.3.4",
-    "@babel/runtime-corejs2": "^7.3.4",
+    "@babel/runtime": "^7.4.2",
+    "@babel/runtime-corejs2": "^7.4.2",
     "@sendgrid/mail": "^6.3.1",
     "@types/highlight.js": "^9.12.3",
     "babel-register": "^6.26.0",
@@ -83,8 +82,8 @@
     "ghost-email-service": "^1.2.0",
     "ghost-pagination": "^0.1.3",
     "ghost-search": "^1.0.1",
-    "github-profile-card": "^2.0.1",
-    "graphql": "^14.1.1",
+    "github-profile-card": "^3.0.0",
+    "graphql": "^14.2.0",
     "graphql-request": "^1.8.2",
     "graphql-tag": "^2.10.1",
     "graphql-tools": "^4.0.4",
@@ -96,11 +95,10 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.4.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "babel-loader": "^8.0.5",
     "css-declaration-sorter": "4.0.1",
     "css-loader": "^2.1.1",
@@ -116,8 +114,7 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack": "^4.29.6"
   },
   "babel": {
     "presets": [
