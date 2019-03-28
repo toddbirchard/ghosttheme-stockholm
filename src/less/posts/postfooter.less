@@ -266,7 +266,7 @@ section .widget.newsletter {
 				width: -webkit-fill-available !important;
 				width: -moz-available !important;
 				background: #33abba;
-				box-shadow: -1px -1px 0 #2b84a7, -1px 0 0 #2b84a7;
+				box-shadow: -1px 1px 0 #2b84a7, -1px 0 0 #2b84a7;
 				padding: 13px 20px;
 				font-size: 14px;
 				color: white;
@@ -279,6 +279,7 @@ section .widget.newsletter {
 				&:hover {
 					background-color: @hover-color;
 					cursor: pointer;
+					box-shadow: -1px 1px 0 darken(@hover-color, 15%), -1px 0 0 darken(@hover-color, 15%);
 				}
 
 				span {

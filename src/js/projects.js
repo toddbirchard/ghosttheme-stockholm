@@ -8,7 +8,6 @@ $(document).ready(function() {
   const table_name = 'jira';
 
   function populateCards(data, status) {
-    console.log(data);
     const card_list = data;
     for (var i = 0; i < card_list.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
