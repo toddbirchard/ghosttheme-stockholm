@@ -223,6 +223,7 @@
 		width: 100%;
 		justify-content: space-between;
 		max-width: 420px;
+
 		@media(max-width:1000px) {
 			justify-content: left;
 		}
@@ -306,8 +307,9 @@
 				display: flex;
 				align-items: center;
 
-				&:hover{
+				&:hover {
 					cursor:pointer;
+					color: unset;
 				}
 
 				span {
@@ -374,11 +376,22 @@
 					&:hover {
 						cursor: pointer;
 					}
+
+					* {
+						&:hover {
+							cursor: pointer;
+						}
+					}
 				}
 			}
 
 			&.author {
 				font-size: 0.9em;
+
+				&:hover {
+					cursor: pointer;
+				}
+
 				@media (max-width: 1000px) {
 					margin: auto 80px auto 0;
 				}
@@ -434,7 +447,7 @@
 			height: 17px;
 			padding: 14px 24px;
 			background: @button-color;
-			box-shadow: 2px 2px 0 @button-shadow, 2px 0 0 @button-shadow, 0 2px 0 @button-shadow;
+			box-shadow: -2px 2px 0 @button-shadow, -2px 0 0 @button-shadow, 0 2px 0 @button-shadow;
 			color: white;
 			font-family: 'ProductSans-Regular',sans-serif;
 			font-size: 18px;
@@ -446,8 +459,8 @@
 
 			&:hover {
 				background: @hover-color;
-				box-shadow: 2px 2px 0 darken(@hover-color, 15%), 2px 0 0 darken(@hover-color, 15%), 0 2px 0 darken(@hover-color, 15%);
-				cursor: pointer;
+				box-shadow: -2px 2px 0 darken(@hover-color, 15%), -2px 0 0 darken(@hover-color, 15%), 0 2px 0 darken(@hover-color, 15%);
+				cursor: pointer !important;
 				color: white;
 			}
 			@media(max-width: 600px) {

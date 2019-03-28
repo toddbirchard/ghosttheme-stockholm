@@ -70,6 +70,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
+    "@babel/polyfill": "^7.2.5",
     "@babel/runtime-corejs2": "^7.4.2",
     "@sendgrid/mail": "^6.3.1",
     "@types/highlight.js": "^9.12.3",
@@ -114,7 +115,8 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   },
   "babel": {
     "presets": [

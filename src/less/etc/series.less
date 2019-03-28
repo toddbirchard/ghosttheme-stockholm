@@ -119,8 +119,15 @@
     padding: 20px;
     border-bottom: solid 1px #dadada;
     transition: all 0.2s ease-out;
+
     @media(max-width: 600px) {
       padding: 15px;
+    }
+
+    * {
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     &:last-child {
@@ -132,6 +139,7 @@
       height: auto;
       width: auto;
       position: relative;
+
       @media(max-width: 600px) {
         max-width: 115px;
         height: 100% !important;
@@ -195,8 +203,9 @@
           a {
             font-family: 'ProductSans-Regular',sans-serif;
             font-size: 1em;
-            color: @text-color-heading;
             transition: all 0.2s ease-out;
+            color: #334652;
+
             @media(max-width: 600px) {
               font-family: 'ProductSans-Regular',sans-serif;
               font-size: 0.9em;
@@ -264,6 +273,7 @@
 
         .tags {
           padding: 2px 8px;
+          border-radius: 2px;
 
           i {
             margin-right: 8px;

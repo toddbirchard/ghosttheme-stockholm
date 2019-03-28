@@ -7,6 +7,7 @@ const Dotenv = require('dotenv-webpack');
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 
 
+
 module.exports = {
   mode: 'production',
   plugins: [
@@ -31,7 +32,7 @@ module.exports = {
     'apply': path.resolve(__dirname, './src/js/apply.js'),
     'author': path.resolve(__dirname, './src/js/author.js'),
     'resources': path.resolve(__dirname, './src/js/resources.js'),
-    'projects': path.resolve(__dirname, './src/js/projects.js'),
+    'projects': ["@babel/polyfill", path.resolve(__dirname, './src/js/projects.js')],
     'series': path.resolve(__dirname, './src/js/series.js'),
     'transactional': path.resolve(__dirname, './src/js/transactional.js'),
     'error': path.resolve(__dirname, './src/js/error.js')

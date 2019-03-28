@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import '../less/projects.less';
 import './projects/kanban.js';
+import '@babel/polyfill';
 
 
 $(document).ready(function() {

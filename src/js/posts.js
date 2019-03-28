@@ -230,5 +230,4 @@ var postFunctions = {
 
 $(document).ready(function() {
   postFunctions.postInit();
-
 });
