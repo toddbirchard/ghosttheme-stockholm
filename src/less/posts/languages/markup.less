@@ -1,3 +1,5 @@
+@import "atomone.less";
+
 .post-content {
   .handlebars,
   .hljs.html,
@@ -14,77 +16,42 @@
     color: #c5cddc;
     background: #282c34;
 
-    .comment,
-    .quote {
-      color: #5c6370;
-      font-style: italic;
-    }
-
-    .doctag,
-    .formula,
-    .keyword {
-      color: #c678dd;
-    }
-
-
-    .deletion,
-    .name,
-    .section,
-    .selector-tag,
-    .subst {
-      color: #ed77f3;
-    }
-
-    .literal {
-      color: #56b6c2;
-    }
-
-    .addition,
-    .attribute,
-    .meta-string,
-    .regexp,
-    .string {
-      color: #7bd4ff;
-    }
-
-    .built_in,
-    .class .title {
-      color: #e6c07b;
+    .name {
+     color: @hue-5;
     }
 
     .attr,
-    .number,
-    .selector-attr,
-    .selector-class,
-    .selector-pseudo,
-    .template-variable,
-    .type,
-    .variable {
-      color: #f2c77f;
+    .attribute {
+      color: @hue-4;
     }
 
-    .bullet,
-    .link,
-    .meta,
-    .selector-id,
-    .symbol,
-    .title {
-      color: #61aeee;
+    .tag {
+      color: #bdccdb;
+
+      .attr,
+      .attribute {
+        color: @hue-6;
+      }
+
+      .string {
+        color: @hue-4;
+      }
     }
 
-    .emphasis {
+    .meta {
+      color: @hue-2;
+    }
+
+    .comment {
+      color: @mono-3;
       font-style: italic;
-    }
 
-    .strong {
-      font-weight: bold;
+      .markup.link {
+        color: @mono-3;
+      }
     }
-
-    .link {
-      text-decoration: underline;
     }
   }
-}
 
 .handlebars,
 .language-handlebars{
@@ -95,7 +62,7 @@
 
   &::before {
     content: "Handlebars";
-    background: rgba(56, 62, 102, 0.6);
+    background: rgba(56, 62, 102, 0.4);
     color: white;
   }
 }
@@ -104,7 +71,7 @@
 .language-html{
   &::before {
     content: "HTML";
-    background: rgba(56, 62, 102, 0.6);
+    background: rgba(56, 62, 102, 0.4);
     color: white;
   }
 }
@@ -114,7 +81,7 @@
 .language-jinja {
   &::before {
     content: "Jinja";
-    background: rgba(56, 62, 102, 0.6);
+    background: rgba(56, 62, 102, 0.4);
     color: white;
   }
 }
@@ -123,7 +90,7 @@
 .language-http {
   &::before {
     content: "HTTP";
-    background: rgba(56, 62, 102, 0.6);
+    background: rgba(56, 62, 102, 0.4);
     color: white;
   }
 }

@@ -171,13 +171,13 @@
 			font-size: 1.9em;
 		}
 		@media(max-width: 600px) {
-			font-size: 1.65em;
+			font-size: 1.8em;
+			text-align: left;
 			width: auto;
 			line-height: 1.3;
-			text-align: center;
-			font-weight: 500!important;
+			font-weight: 500 !important;
 			border: none;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -191,10 +191,12 @@
 		@media(max-width: 800px) {
 			font-size: 1.3em;
 		}
+
 		@media(max-width: 600px) {
 			text-align: left;
-			line-height: 1.4;
-			margin-bottom: 20px;
+			line-height: 1.3;
+			margin-bottom: 10px;
+			font-family: 'ProductSans-Medium', sans-serif;
 		}
 	}
 
@@ -520,6 +522,7 @@ article {
 		position: relative;
 		color: #4c3100;
 		font-weight: 300;
+		box-shadow: -1px 1px 0 #f1ddce;
 
 		@media(max-width: 600px) {
 			padding: 50px 20px 15px !important;
@@ -583,7 +586,6 @@ article {
  		 	 background: #f1dbc6;
  			 color: #8b572b;
 
-
 			&:before {
 				text-shadow: -1px 1px 1px rgba(46, 31, 0, 0.6) !important;
 				background: rgb(221, 173, 134);
@@ -603,23 +605,23 @@ article {
 
 	/*  Start of Blockqoute  */
 	blockquote {
-		border-left: 4px solid #C9DEE2;
-		background: #e9f3f7;
-		color: #416e7d;
-		padding: 20px;
+		color: #aac0c8;
+		padding: 0 20px;
 		font-family: 'soleil', sans-serif;
 		font-style: unset;
 		font-size: 1em;
 		line-height: 1.6;
 		overflow: hidden;
 		margin: 30px auto;
-		max-width: 88%;
+		max-width: 90%;
 		border-radius: 5px;
+		border-left: 1.0em solid #DDDFE2;
 
 		& > p {
 			margin: 0 0 20px !important;
-			color: #426780;
+			color: #6a6e71;
 			font-style: italic;
+			-webkit-font-smoothing: antialiased;
 		}
 
 		& > p:last-child {
@@ -627,8 +629,8 @@ article {
 		}
 
 		* {
-			font-family: 'soleil',sans-serif;
-			font-weight: 300;
+			font-family: 'soleil', sans-serif;
+			font-weight: 100;
 			line-height: 1.6;
 			font-size: 1.05em;
 			font-style: normal;
@@ -637,25 +639,32 @@ article {
 		code {
 			font-family: 'Hack', sans-serif;
 			font-style: normal !important;
-			font-size: 0.9em !important;
-			background: rgba(205, 227, 244, 0.8) !important;
-			color: #305a68;
+			color: #4a4f50 !important;
+			background: #f0f0f0 !important;
 			padding: 3px 5px;
+			text-shadow: none !important;
+			font-size: .75em !important;
 
 			@media(max-width: 600px) {
 				 margin: 0 auto;
 			}
 
 			&::before{
-				background: #87adc5;
+				background: rgba(128, 135, 149, 0.2) !important;
+				border-bottom: 0 !important;
+				text-shadow: unset !important;
+				color: #565656 !important;
 		    	mix-blend-mode: unset;
-		    	border-bottom: 1px solid #7ea0b5;
+		    	border-bottom: 0 !important;
 				margin-left: 0 !important;
 				margin-right: 0 !important;
-				color: white;
 				width: 100%;
 				padding: 5px 15px;
 				left: 0;
+			}
+
+			* {
+				text-shadow: none !important;
 			}
 
 			.hljs-string {

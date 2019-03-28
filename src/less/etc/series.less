@@ -1,11 +1,23 @@
 @import "../global/variables.less";
 
 .series-template {
+
+  nav {
+    @media(max-width: 800px) {
+      margin-bottom: 20px;
+    }
+  }
+
   .postlist {
     @media (max-width: 800px) {
-      width: 95%;
-      margin: 20px auto 20px;
+      width: 98%;
+      margin: 0 auto 20px;
       padding: 0;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 20px auto;
     }
   }
 
@@ -78,12 +90,17 @@
     justify-content: flex-end;
     transition: all .3s ease-out;
 
+    @media(max-width: 800px) {
+      padding: 7px 12px;
+    }
+
     &:hover {
       cursor: pointer;
       background: @hover-color;
 
       * {
         color: white;
+        cursor: pointer;
       }
     }
 
@@ -102,12 +119,12 @@
         margin-right: 7px;
       }
 
-      .sort-title {
+      span {
         font-family: 'soleil', sans-serif;
-      }
 
-      .sort-method {
-        font-family: 'soleil', sans-serif;
+         @media(max-width: 800px) {
+           font-size: 16px;
+         }
       }
     }
   }
@@ -215,6 +232,10 @@
               font-size: 0.9em;
             }
 
+            @media(max-width: 400px) {
+              font-size: 0.8em;
+            }
+
             &:hover {
               color: @secondary-color;
             }
@@ -303,12 +324,18 @@
     }
 
     .imagewrapper {
-      height: fit-content;
+      height: 121px;
       display: block;
       max-width: 326px;
+      overflow: hidden;
 
       @media(max-width: 600px) {
         max-width: 40%;
+        height: 110px;
+      }
+
+      @media(max-width: 400px) {
+        height: 72px;
       }
 
       img {
