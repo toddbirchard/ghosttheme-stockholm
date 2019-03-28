@@ -1,5 +1,6 @@
 import '../less/posts.less';
 
+// Import hljs from highlight.js
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import shell from 'highlight.js/lib/languages/shell';
@@ -14,11 +15,12 @@ import bash from 'highlight.js/lib/languages/bash';
 import nginx from 'highlight.js/lib/languages/nginx';
 import hljs from 'highlight.js/lib/highlight';
 
-
+// Additional imports
 import ScrollBooster from 'scrollbooster';
 import baguetteBox from 'baguettebox.js';
 import fetch from 'node-fetch';
 
+// Register highlight.js languages
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('shell', shell);
@@ -32,10 +34,8 @@ hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
 
-
-
-var postFunctions = {
-  highlightjs: function(){
+const postFunctions = {
+  init_highlightjs: function(){
     hljs.configure({
       tabReplace: '  ', // 2 spaces
       classPrefix: ''     // don't append class prefix
@@ -89,8 +89,8 @@ var postFunctions = {
       });
     }
     $(".tableContainer").each(function(index, element) {
-      var table = $(element).find('table');
-      var tablewidth = table.width();
+      const table = $(element).find('table');
+      const tablewidth = table.width();
       if ($(element).width() < tablewidth) {
         $(element).find('table').addClass('handscroller');
         $(element).append('<div class="tablefade"></div>');
@@ -99,8 +99,8 @@ var postFunctions = {
   },
   enableBaguettebox: function() {
     $('main img').each(function(obj, i) {
-      var imagesrc = $(this).attr('src');
-      var caption = $(this).closest('figure').find('figcaption').text();
+      const imagesrc = $(this).attr('src');
+      const caption = $(this).closest('figure').find('figcaption').text();
       $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
     });
     baguetteBox.run('.post-content', {
@@ -112,21 +112,21 @@ var postFunctions = {
     });
   },
   addImageAltTags: function() {
-    $('main img').each(function(obj) {
-      var caption = $(this).closest('figure').find('figcaption').text();
+    $('main img').each(function() {
+      const caption = $(this).closest('figure').find('figcaption').text();
       $(this).attr('alt', caption);
     });
   },
   current_page: function() {
-    var sPath = String(document.location.pathname);
-    var slug = sPath.split('/')[1];
+    const sPath = String(document.location.pathname);
+    const slug = sPath.split('/')[1];
     return slug;
   },
   create_nextprev_widget: function(posts) {
     var numposts = posts.length;
-    var postslug = postFunctions.current_page();
+    var post_slug = postFunctions.current_page();
     var index = posts.findIndex(function(item, i) {
-      return item.slug === postslug
+      return item.slug === post_slug;
     });
     index = index++;
     if (index + 1 < numposts) {
@@ -150,9 +150,9 @@ var postFunctions = {
     $('#seriesposts').css('display', 'block');
     $('.nextprev-container').css('display', 'block');
   },
-  posts_in_series: function(series, seriesname) {
-    var series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
-    var headers = {
+  posts_in_series: function(series, series_name) {
+    const series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
+    const headers = {
       "Content-Type": "application/json"
     };
     fetch(series_endpoint, {
@@ -162,48 +162,47 @@ var postFunctions = {
       return res.json()
     }).then((json) => {
       if (json['posts']) {
-        var posts = json['posts'];
+        const posts = json['posts'];
         var i;
         for (i = 0; i < posts.length; i++) {
-          var post = posts[i];
-          var title = post['title'];
-          var url = 'https://hackersandslackers.com/' + post['slug'];
-          var slug = post['slug'];
-          var created = post['created_at'];
-          var numposts = posts.length;
-          var post_dict = {
-            'seriesname': seriesname,
+          const post = posts[i];
+          const title = post['title'];
+          const url = 'https://hackersandslackers.com/' + post['slug'];
+          const slug = post['slug'];
+          const created = post['created_at'];
+          const numposts = posts.length;
+          const post_dict = {
+            'seriesname': series_name,
             'title': title,
             'url': url,
             'created': created,
             'slug': slug,
             'numposts': numposts
-          }
+          };
           postFunctions.populate_series_list(post_dict);
         }
         postFunctions.create_nextprev_widget(posts);
-        var postslug = postFunctions.current_page();
-        $('.' + postslug).addClass('currentPost');
-        $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
-        posts.length + 1));
+        const post_slug = postFunctions.current_page();
+        $('.' + post_slug).addClass('currentPost');
+        $('#seriesposts ol').attr('style', 'counter-reset:li ' + (posts.length + 1));
       }
     });
   },
   tag_loop: function(tags) {
     var i;
     for (i = 0; i < tags.length; i++) {
-      var tag = tags[i];
+      const tag = tags[i];
       if (tag['visibility'] == "internal") {
-        var series = tag['slug'];
-        var seriesname = tag['meta_title'];
-        postFunctions.posts_in_series(series, seriesname);
+        const series = tag['slug'];
+        const series_name = tag['meta_title'];
+        postFunctions.posts_in_series(series, series_name);
       }
     }
   },
   detect_series: function() {
-    var postslug = postFunctions.current_page();
-    var endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + postslug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
-    var headers = {
+    const post_slug = postFunctions.current_page();
+    const endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + post_slug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
+    const headers = {
       "Content-Type": "application/json"
     };
     fetch(endpoint, {
@@ -214,8 +213,8 @@ var postFunctions = {
     }).then((json) => {
       postFunctions.tag_loop(json['posts'][0]['tags']);
     }).catch(err => {
-      console.log(err.response.errors) // API response errors
-      console.log(err.response.data) // Response data if available
+      console.log(err.response.errors); // API response errors
+      console.log(err.response.data); // Response data if available
     });
   },
   postInit: function() {
@@ -224,7 +223,7 @@ var postFunctions = {
     postFunctions.enableBaguettebox();
     postFunctions.addImageAltTags();
     postFunctions.detect_series();
-    postFunctions.highlightjs();
+    postFunctions.init_highlightjs();
   }
 };
 
