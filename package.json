@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.2",
-    "@babel/polyfill": "^7.2.5",
+    "@babel/polyfill": "^7.4.0",
     "@babel/runtime-corejs2": "^7.4.2",
     "@sendgrid/mail": "^6.3.1",
     "@types/highlight.js": "^9.12.3",
