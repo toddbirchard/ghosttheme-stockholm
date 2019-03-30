@@ -52,7 +52,7 @@ var globalFunctions = {
       $('.' + key).find('i').replaceWith(tags[key]);
     }
   },
-  fallbackImage: function(){
+  fallbackImages: function(){
     var images = $('picture');
     $(images).each(function(){
       var imagepaths = $(this).find('source:last-of-type').attr('srcset');
