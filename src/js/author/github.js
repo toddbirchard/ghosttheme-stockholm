@@ -1,7 +1,4 @@
-function author_github(github) {
-  if (github) {
-    $('.sidebar').append('<div class="widget"><div class="content"><h4 class="title">Github</h4><div id="github-card" data-max-repos="3" data-header-text="Repositories" data-username="' + github + '"></div></div></div>');
-    $("." + author).find('.github').children().attr('href', 'https://github.com/' + user['github']);
-    $("." + author).find('.github').css('display', 'block');
-  }
+export function author_github(github, author_slug) {
+    $("#github-card-author").attr('data-username', github);
+    new GitHubCard({ template: '#github-card-author' }).init();
 }

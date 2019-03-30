@@ -1,15 +1,18 @@
 import '../less/pages.less';
 import '../less/author.less';
+//import { GitHubCard } from 'github-profile-card';
 import { GraphQLClient } from 'graphql-request';
 import {author_github} from './author/github.js';
 import {author_medium} from './author/medium.js';
 // import author_meetup from '../src/js/author/meetup.js';
-import '../../assets/js/includes/gh-profile-card.min.js';
 
-function makeAuthorSidebar(data){
+function makeAuthorSidebar(data, author_slug){
   console.log(JSON.stringify(data));
-  author_github(data['authors'][0]['github']);
-  author_medium(data['authors'][0]['medium']);
+  let medium_key = process.env.medium_key;
+  let github = JSON.stringify(data['authors'][0]['github']);
+  let medium = JSON.stringify(data['authors'][0]['medium']);
+  author_github(github, author_slug);
+  author_medium(medium, medium_key);
   console.log(data);
 }
 
@@ -46,8 +49,7 @@ async function get_authors(author_slug) {
 
   // Initialize GraphQL Client
   const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
-  client.request(query, vars).then(data =>   console.log(JSON.stringify(data)));
-  client.request(query, vars).then(data => makeAuthorSidebar(data));
+  client.request(query, vars).then(data => makeAuthorSidebar(data, author_slug));
 }
 
 $(document).ready(function() {
