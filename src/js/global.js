@@ -52,6 +52,18 @@ var globalFunctions = {
       $('.' + key).find('i').replaceWith(tags[key]);
     }
   },
+  fallbackImage: function(){
+    var images = $('picture');
+    $(images).each(function(){
+      var imagepaths = $(this).find('source:last-of-type').attr('srcset');
+      var standardres = String(imagepaths).split(' @1x')[0];
+      var highres = String(imagepaths).split(' @1x,')[1];
+      var fallback_src = imagepaths.replace('webp', 'jpg');
+      var new_srcset = '<source srcset="' + fallback_src + '">';
+      $(this).find('source:last-of-type').after(new_srcset);
+      console.log('new_srcset = ' + new_srcset);
+    });
+  },
   githubrepo: function() {
     $('[data-github]').each(function() {
       var _this = this;
@@ -171,6 +183,8 @@ var globalFunctions = {
     globalFunctions.tags();
     globalFunctions.seriesIcons();
     globalFunctions.search();
+    globalFunctions.fallbackImage();
+    picturefill();
   }
 };
 
