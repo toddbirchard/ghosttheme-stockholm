@@ -1,5 +1,5 @@
 function author_medium(medium) {
-  var medium_key = process.env.medium_key;
+  let medium_key = process.env.medium_key;
   MediumWidget.Init({
     renderTo: '#medium-widget',
     params: {

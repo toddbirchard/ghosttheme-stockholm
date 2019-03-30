@@ -3,38 +3,44 @@ import '../less/projects.less';
 import './projects/kanban.js';
 import '@babel/polyfill';
 import $ from "jquery";
+const fetch = require('node-fetch');
+
 
 const table_name = 'jira';
 
 function populateCards(data) {
+  console.log(data);
   let statuses = ['backlog', 'progress', 'todo', 'done'];
   for (var j = 0; j < statuses.length; j++) {
     let cards = data[statuses[j]];
 
     for (var i = 0; i < cards.length; i++) {
-      $('#' + statuses[j] + ' .cards').append('<div class="card"> \n' +
-      '<h5>' + cards[i]['summary'] + '</h5> \n' +
-      '<div class="info"> \n' +
-      '<div class="left"> \n' + '<div class="avatar"><img alt="' + cards[i]['issuetype_name'] + '" src="' + cards[i]['issuetype_icon'] + '"></div> \n' +
-      '<div class="priority"><img alt="' + cards[i]['priority_name'] + '" src="' + cards[i]['priority_url'] + '"></div> \n' + '</div> \n' +
-      '<div class="epic ' + cards[i]['epic'] + '" style=background-color:' + cards[i]['epic_color'] + '50;><span>' + cards[i]['epic_name'] + '</span></div> \n' +
-      '</div></div>');
+      $('#' + statuses[j] + ' .cards').append('<div class="card"> \n' + '<h5>' + cards[i]['summary'] + '</h5> \n' + '<div class="info"> \n' + '<div class="left"> \n' + '<div class="avatar"><img alt="' + cards[i]['issuetype_name'] + '" src="' + cards[i]['issuetype_icon'] + '"></div> \n' + '<div class="priority"><img alt="' + cards[i]['priority_name'] + '" src="' + cards[i]['priority_url'] + '"></div> \n' + '</div> \n' + '<div class="epic ' + cards[i]['epic'] + '" style=background-color:' + cards[i]['epic_color'] + '50;><span>' + cards[i]['epic_name'] + '</span></div> \n' + '</div></div>');
     }
   }
 }
 
-async function execute_query(query, query_vars) {
+ function execute_query(query, query_vars) {
   const endpoint = process.env.ENDPOINT;
   const token = process.env.AUTH;
 
   // Initialize GraphQL Client
-  const client = new GraphQLClient(endpoint, {
+  fetch(endpoint, {
+    method: 'POST',
     headers: {
       'Authorization': token
-    }
+    },
+    body: JSON.stringify({query, query_vars})
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  }).catch(err => {
+    console.log(err)
   });
-  client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data)));
-  client.request(query, query_vars).then(data => populateCards(data));
+
+  // client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data)));
+  // client.request(query, query_vars).then(data => populateCards(data));
 }
 
 function construct_query(project) {

@@ -8,8 +8,8 @@ import '../../assets/js/includes/gh-profile-card.min.js';
 
 function makeAuthorSidebar(data){
   console.log(JSON.stringify(data));
-  author_github(data['github']);
-  author_medium(data['medium']);
+  author_github(data['authors'][0]['github']);
+  author_medium(data['authors'][0]['medium']);
   console.log(data);
 }
 
