@@ -63,6 +63,9 @@ var globalFunctions = {
       $(this).find('source:last-of-type').after(new_srcset);
       console.log('new_srcset = ' + new_srcset);
     });
+    picturefill({
+      elements: [ document.getElementsByName('picture') ]
+    });
   },
   githubrepo: function() {
     $('[data-github]').each(function() {
@@ -183,8 +186,8 @@ var globalFunctions = {
     globalFunctions.tags();
     globalFunctions.seriesIcons();
     globalFunctions.search();
-    globalFunctions.fallbackImage();
-    picturefill();
+    globalFunctions.fallbackImages();
+
   }
 };
 
