@@ -11,6 +11,7 @@ function makeAuthorSidebar(data, author_slug){
   let medium_key = process.env.medium_key;
   let github = JSON.stringify(data['authors'][0]['github']);
   github = github.replace('"', '');
+  github = github.replace('"', '');
   let medium = JSON.stringify(data['authors'][0]['medium']);
   author_github(github, author_slug);
   author_medium(medium, medium_key);
