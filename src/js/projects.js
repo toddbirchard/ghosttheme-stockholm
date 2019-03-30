@@ -1,31 +1,55 @@
-import { GraphQLClient } from 'graphql-request';
+import {GraphQLClient} from 'graphql-request';
 import '../less/projects.less';
 import './projects/kanban.js';
+// import{build_dropdown} from './projects/dropdown.js';
 import '@babel/polyfill';
+import $ from "jquery";
 
+const table_name = 'jira';
 
-$(document).ready(function() {
-  const table_name = 'jira';
+function populateCards(data) {
+  let statuses = ['backlog', 'progress', 'todo', 'done'];
+  console.log('function fired');
+  for (var j = 0; j < statuses.length; j++) {
+    let cards = data[statuses[j]];
+    console.log('status = ' + cards);
 
-  function populateCards(data, status) {
-    const card_list = data;
-    for (var i = 0; i < card_list.length; i++) {
-      $('#' + status + ' .cards').append('<div class="card"> \n' + '<h5>' + card_list[i]['summary'] + '</h5> \n' +
+    for (var i = 0; i < cards.length; i++) {
+      console.log(JSON.stringify(cards[i]));
+      $('#' + statuses[j] + ' .cards').append('<div class="card"> \n' +
+      '<h5>' + cards[i]['summary'] + '</h5> \n' +
       '<div class="info"> \n' +
-      '<div class="left"> \n' +
-      '<div class="avatar"><img alt="' + card_list[i]['issuetype_name'] + '" src="' + card_list[i]['issuetype_url'] + '"></div> \n' +
-      '<div class="priority"><img alt="' + card_list[i]['priority_name'] + '" src="' + card_list[i]['priority_url'] + '"></div> \n' + '</div> \n' +
-      '<div class="epic ' + card_list[i]['epic'] + '" style=background-color:' + card_list[i]['epic_color'] + '50;><span>' + card_list[i]['epic_name'] + '</span></div> \n' +
+      '<div class="left"> \n' + '<div class="avatar"><img alt="' + cards[i]['issuetype_name'] + '" src="' + cards[i]['issuetype_icon'] + '"></div> \n' +
+      '<div class="priority"><img alt="' + cards[i]['priority_name'] + '" src="' + cards[i]['priority_url'] + '"></div> \n' + '</div> \n' +
+      '<div class="epic ' + cards[i]['epic'] + '" style=background-color:' + cards[i]['epic_color'] + '50;><span>' + cards[i]['epic_name'] + '</span></div> \n' +
       '</div></div>');
     }
   }
+}
 
-  async function main() {
-    const endpoint = process.env.ENDPOINT;
-    const token = process.env.AUTH;
+async function execute_query(query, query_vars) {
+  const endpoint = process.env.ENDPOINT;
+  const token = process.env.AUTH;
 
-    // Structured query
-    const query = `query JiraIssuesByStatus($project: String) {
+  // Initialize GraphQL Client
+  const client = new GraphQLClient(endpoint, {
+    headers: {
+      'Authorization': token
+    }
+  });
+  client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data)));
+  client.request(query, query_vars).then(data => populateCards(data));
+}
+
+function construct_query(project) {
+  $('.cards').empty();
+
+  const query_variables = {
+    project: project
+  };
+
+  // Structured query
+  const query = `query JiraIssuesByStatus($project: String) {
       backlog: jiraIssues(where: {project: $project, status: "Backlog", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_DESC, first: 6) {
         key
         summary
@@ -34,9 +58,9 @@ $(document).ready(function() {
         status
         priority_rank
         priority_url
-    	priority_name
+       	priority_name
         issuetype_name
-        issuetype_url
+        issuetype_icon
         assignee_name
         assignee_url
       }
@@ -49,7 +73,7 @@ $(document).ready(function() {
         priority_rank
         priority_url
         issuetype_name
-        issuetype_url
+        issuetype_icon
         assignee_name
         assignee_url
       }
@@ -62,7 +86,7 @@ $(document).ready(function() {
         priority_rank
         priority_url
         issuetype_name
-        issuetype_url
+        issuetype_icon
         assignee_name
         assignee_url
       }
@@ -75,98 +99,31 @@ $(document).ready(function() {
         priority_rank
         priority_url
         issuetype_name
-        issuetype_url
+        issuetype_icon
         assignee_name
         assignee_url
       }
     }`;
 
-    // Initialize GraphQL Client
-    const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
+  execute_query(query, query_variables).catch(error => console.error(error));
+}
 
-    const backlog_variables = {
-      project: "Hackers and Slackers",
-      status: "Backlog"
-    };
-
-    const todo_variables = {
-      project: "Hackers and Slackers",
-      status: "To Do"
-    };
-
-    const progress_variables = {
-      project: "Hackers and Slackers",
-      status: "In Progress"
-    };
-
-    const done_variables = {
-      project: "Hackers and Slackers",
-      status: "Done"
-    };
-
-    client.request(query, backlog_variables).then(data => populateCards(data['backlog'], 'backlog'));
-    client.request(query, todo_variables).then(data => populateCards(data['todo'], 'todo'));
-    client.request(query, progress_variables).then(data => populateCards(data['progress'], 'progress'));
-    client.request(query, done_variables).then(data => populateCards(data['done'], 'done'));
-  }
-
-  main().catch(error => console.error(error));
-
-  function MakeSlick() {
-    $('#kanban').slick({
-      centerMode: false,
-      centerPadding: '5px',
-      slidesToShow: 4,
-      variableWidth: false,
-      infinite: false,
-      arrows: false,
-      dots: true,
-      cssEase: 'ease-out',
-      responsive: [
-        {
-          breakpoint: 800,
-          settings: {
-            centerMode: false,
-            centerPadding: '10px',
-            slidesToShow: 3,
-            swipeToSlide: true
-          }
-        }, {
-          breakpoint: 700,
-          settings: {
-            centerMode: false,
-            centerPadding: '20px',
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 500,
-          settings: {
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 1,
-            edgeFriction: .3
-          }
-        }
-      ]
-    });
-  }
-
-  MakeSlick();
+function build_dropdown() {
 
   $('.stockholmproject').on('click', function() {
-    populate_jira_cards(table_name);
+    construct_query();
   });
 
   $('.tokyoproject').on('click', function() {
-    populate_jira_cards(table_name, 'Toddzilla');
+    construct_query('Toddzilla');
   });
 
-  $('.jupyterproject').on('click', function() {
-    populate_jira_cards(table_name, 'PlanetJupyter');
+  $('.linkbox-api').on('click', function() {
+    construct_query('Linkbox API');
   });
 
-  $('.apiproject').on('click', function() {
-    populate_jira_cards(table_name, 'hackersandslackers-api');
+  $('.ghostthemesio').on('click', function() {
+    construct_query('ghostthemes.io');
   });
 
   $('.dropdown').on('mouseover', function() {
@@ -183,4 +140,9 @@ $(document).ready(function() {
     $('.dropdown-list').css('display', 'block');
     $('.dropdown-list').css('opacity', '1');
   });
+}
+
+$(document).ready(function() {
+  construct_query("Hackers and Slackers");
+  build_dropdown();
 });
