@@ -1,3 +1,4 @@
+{{#author}}
 <div class="sidebar" class="{{author.slug}}">
     {{> widgets/widget-authorwebsite}}
 	{{> widgets/widget-github}}
@@ -7,6 +8,7 @@
 	{{#has slug="todd"}}
 		{{> widgets/widget-authortwitter}}
 	{{else}}
-        {{! Placeholder }}
+        {{> widgets/widget-authortwitter}}
 	{{/has}}
 </div>
+{{/author}}

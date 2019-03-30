@@ -1,7 +1,6 @@
 import {GraphQLClient} from 'graphql-request';
 import '../less/projects.less';
 import './projects/kanban.js';
-// import{build_dropdown} from './projects/dropdown.js';
 import '@babel/polyfill';
 import $ from "jquery";
 
@@ -9,13 +8,10 @@ const table_name = 'jira';
 
 function populateCards(data) {
   let statuses = ['backlog', 'progress', 'todo', 'done'];
-  console.log('function fired');
   for (var j = 0; j < statuses.length; j++) {
     let cards = data[statuses[j]];
-    console.log('status = ' + cards);
 
     for (var i = 0; i < cards.length; i++) {
-      console.log(JSON.stringify(cards[i]));
       $('#' + statuses[j] + ' .cards').append('<div class="card"> \n' +
       '<h5>' + cards[i]['summary'] + '</h5> \n' +
       '<div class="info"> \n' +

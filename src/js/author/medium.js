@@ -3,7 +3,7 @@ function author_medium(medium) {
   MediumWidget.Init({
     renderTo: '#medium-widget',
     params: {
-      "resource": "https://medium.com/@toddbirchard.",
+      "resource": "https://medium.com/" + medium,
       "postsPerLine": 1,
       "limit": 4,
       "picture": "small",
