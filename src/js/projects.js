@@ -5,8 +5,20 @@ import '@babel/polyfill';
 import $ from "jquery";
 const fetch = require('node-fetch');
 
-
-const table_name = 'jira';
+const getData = async (endpoint, query, variables, token) => {
+  const data = JSON.stringify({"query": query, "variables": variables});
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    mode: "no-cors",
+    headers: {
+      'Authorization': token,
+      'Content-Type': 'application/json'
+    },
+    body: data
+  });
+  const json = await response.json();
+  console.log('json = ' + json);
+};
 
 function populateCards(data) {
   console.log(data);
@@ -20,94 +32,41 @@ function populateCards(data) {
   }
 }
 
- function execute_query(query, query_vars) {
-  const endpoint = process.env.ENDPOINT;
-  const token = process.env.AUTH;
+async function execute_query(query, query_vars) {
 
   // Initialize GraphQL Client
-  fetch(endpoint, {
+  /*await fetch(endpoint, {
     method: 'POST',
     headers: {
-      'Authorization': token
+      'Authorization': token,
+      'Access-Control-Allow-Origin': '*'
     },
     body: JSON.stringify({query, query_vars})
   })
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+    return data
   }).catch(err => {
     console.log(err)
-  });
+  });*/
 
   // client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data)));
   // client.request(query, query_vars).then(data => populateCards(data));
 }
 
 function construct_query(project) {
+  const endpoint = process.env.ENDPOINT;
+  const token = process.env.AUTH;
   $('.cards').empty();
 
-  const query_variables = {
-    project: project
+  const variables = {
+    "project": project
   };
 
   // Structured query
-  const query = `query JiraIssuesByStatus($project: String) {
-      backlog: jiraIssues(where: {project: $project, status: "Backlog", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_DESC, first: 6) {
-        key
-        summary
-        epic_color
-        epic_name
-        status
-        priority_rank
-        priority_url
-       	priority_name
-        issuetype_name
-        issuetype_icon
-        assignee_name
-        assignee_url
-      }
-      todo: jiraIssues(where: {project: $project, status: "To Do", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
-        key
-        summary
-        epic_color
-        epic_name
-        status
-        priority_rank
-        priority_url
-        issuetype_name
-        issuetype_icon
-        assignee_name
-        assignee_url
-      }
-      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
-        key
-        summary
-        epic_color
-        epic_name
-        status
-        priority_rank
-        priority_url
-        issuetype_name
-        issuetype_icon
-        assignee_name
-        assignee_url
-      }
-      done: jiraIssues(where: {project: $project, status: "Done", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: updated_DESC, first: 6) {
-        key
-        summary
-        epic_color
-        epic_name
-        status
-        priority_rank
-        priority_url
-        issuetype_name
-        issuetype_icon
-        assignee_name
-        assignee_url
-      }
-    }`;
+  const query = 'query JiraIssuesByStatus($project: String) { backlog: jiraIssues(where: {project: $project, status: \"Backlog\", issuetype_name_not_in: [\"Epic\", \"Idea\", \"Content\"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_DESC, first: 6) { key summary epic_color epic_name status priority_rank priority_url priority_name issuetype_name issuetype_icon assignee_name assignee_url } todo: jiraIssues(where: {project: $project, status: \"To Do\", issuetype_name_not_in: [\"Epic\", \"Idea\", \"Content\"]}, orderBy: updated_DESC, first: 6) { key summary epic_color epic_name status priority_rank priority_url issuetype_name issuetype_icon assignee_name assignee_url } progress: jiraIssues(where: {project: $project, status: \"In Progress\", issuetype_name_not_in: [\"Epic\", \"Idea\", \"Content\"]}, orderBy: updated_DESC, first: 6) { key summary epic_color epic_name status priority_rank priority_url issuetype_name issuetype_icon assignee_name assignee_url } done: jiraIssues(where: {project: $project, status: \"Done\", issuetype_name_not_in: [\"Epic\", \"Idea\", \"Content\"], priority_rank_in: [1, 2, 3]}, orderBy: updated_DESC, first: 6) { key summary epic_color epic_name status priority_rank priority_url issuetype_name issuetype_icon assignee_name assignee_url } }';
 
-  execute_query(query, query_variables).catch(error => console.error(error));
+  getData(endpoint, query, variables, token);
 }
 
 function build_dropdown() {
