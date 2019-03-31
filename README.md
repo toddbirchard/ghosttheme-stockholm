@@ -1,20 +1,22 @@
 # Stockholm Ghost Theme
 
-![Ghost](https://img.shields.io/badge/ghost-2.18.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
+![Ghost](https://img.shields.io/badge/ghost-v2.19.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
 ![Node](https://img.shields.io/badge/node-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=339933&colorA=36363e)
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=23a8e2&colorA=36363e)
 ![GraphQL](https://img.shields.io/badge/GraphQL-v14.1.1-pink.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=E10098&colorA=36363e)
-![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e)
-![Ghost-Pagination](https://img.shields.io/badge/ghost--pagination-0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&logo=flicker)
-![Babel](https://img.shields.io/badge/@babel/core-7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=daa000&colorA=36363e)
-![Sendgrid](https://img.shields.io/badge/sendgrid-6.3.0-blue.svg?longCache=true&logo=delicious&longCache=true&style=flat-square&logoColor=white&colorB=23a8e2&colorA=36363e)
-![Slick Carousel](https://img.shields.io/badge/Slick--Carousel-1.8.1-blue.svg?longCache=true&logo=smashingmagazine&longCache=true&style=flat-square&logoColor=white&colorB=3498db&colorA=36363e)
-![ScrollBooster](https://img.shields.io/badge/ScrollBoster-1.1.0-blue.svg?longCache=true&logo=scrutinizer-ci&longCache=true&style=flat-square&logoColor=white&colorB=ffa083&colorA=36363e)
-![JIRA](https://img.shields.io/badge/JIRA--Cloud--API-v3-blue.svg?longCache=true&logo=jira&longCache=true&style=flat-square&logoColor=white&colorB=30589a&colorA=36363e)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=36363e)
-[![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=daa000&colorA=36363e&icon=trello)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=daa000&colorA=36363e)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=FCC624&colorA=36363e)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
+![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e&logo=JavaScript&logoColor=white)
+![Ghost-Pagination](https://img.shields.io/badge/ghost--pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&colorB=7aa206&logo=ghost)
+![Vanilla Lazyload](https://img.shields.io/badge/Vanilla--Lazyload-v11.0.6-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=7aa206&colorA=36363e)
+![Retina.js](https://img.shields.io/badge/Retina.js-v1.3.0-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=7aa206&colorA=36363e)
+![Highlight.js](https://img.shields.io/badge/Highlight.js-v9.15.6-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=b62e2e&colorA=36363e)
+![Babel](https://img.shields.io/badge/@babel/core-v7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=daa000&colorA=36363e)
+![Sendgrid](https://img.shields.io/badge/Sendgrid-v6.3.0-blue.svg?longCache=true&logo=delicious&longCache=true&style=flat-square&logoColor=white&colorB=23a8e2&colorA=36363e)
+![Slick Carousel](https://img.shields.io/badge/Slick--Carousel-v1.8.1-blue.svg?longCache=true&logo=JavaScript&longCache=true&style=flat-square&logoColor=white&colorB=3498db&colorA=36363e)
+![ScrollBooster](https://img.shields.io/badge/ScrollBoster-v1.1.0-blue.svg?longCache=true&logo=scrutinizer-ci&longCache=true&style=flat-square&logoColor=white&colorB=ffa083&colorA=36363e)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=36363e&logo=GitHub)
+[![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=daa000&colorA=36363e&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=daa000&colorA=36363e&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=FCC624&colorA=36363e&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. This theme has yet to be whitelabeled, but a live implementation of this theme can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
@@ -74,7 +76,7 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
   * Facebook page preview
 * Users
   * Hybrid account creation + subscribe
-  
+
 ### Page Templates
 
 * `custom-author-archive.hbs`: Alternative "about" page which displays author bios.
