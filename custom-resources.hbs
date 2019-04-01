@@ -1,7 +1,7 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
-<script src="{{asset "js/resources.js"}}"></script>
+
 
 <section class="content-wrap archive page-resources">
   <div class="container">
@@ -17,7 +17,12 @@
         <div id="tablewrapper">
         <table id="resources-table">
           <thead>
-
+            <tr>
+              <th></th>
+              <th>Summary</th>
+              <th>Link</th>
+              <th>Type</th>
+            </tr>
           </thead>
           <tbody>
           </tbody>
@@ -29,3 +34,6 @@
   </div>
   <!-- end main post area -->
 </section>
+{{#contentFor "scripts"}}
+    <script src="{{asset "js/resources.js"}}"></script>
+{{/contentFor}}

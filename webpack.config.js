@@ -6,19 +6,14 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 
-
-
 module.exports = {
   mode: 'production',
   plugins: [
     new Dotenv({path: './.env'}),
     new FontConfigWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    }),
-  new HtmlMinifierPlugin({})
-],
+    new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"}),
+    new HtmlMinifierPlugin({})
+  ],
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
@@ -31,9 +26,10 @@ module.exports = {
     'pages': path.resolve(__dirname, './src/js/pages.js'),
     'apply': path.resolve(__dirname, './src/js/apply.js'),
     'author': ["@babel/polyfill", path.resolve(__dirname, './src/js/author.js')],
-    'resources': path.resolve(__dirname, './src/js/resources.js'),
+    'resources': ["@babel/polyfill", path.resolve(__dirname, './src/js/resources.js')],
     'projects': ["@babel/polyfill", path.resolve(__dirname, './src/js/projects.js')],
     'series': path.resolve(__dirname, './src/js/series.js'),
+    'postarchive': path.resolve(__dirname, './src/js/postarchive.js'),
     'transactional': path.resolve(__dirname, './src/js/transactional.js'),
     'error': path.resolve(__dirname, './src/js/error.js')
   },
@@ -42,13 +38,9 @@ module.exports = {
     filename: '[name].js'
   },
   optimization: {
-    minimizer: [
-       new UglifyJsPlugin({
-         cache: true,
-         parallel: true,
-         sourceMap: true // set to true if you want JS source maps
-       })
-     ]
+    minimizer: [new UglifyJsPlugin({
+        cache: true, parallel: true, sourceMap: true // set to true if you want JS source maps
+      })]
   },
   module: {
     rules: [
@@ -66,9 +58,13 @@ module.exports = {
           },
           "css-loader"
         ]
-      },
-       {
-        test: /\.m?js$/,
+      }, /*{
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      }, */{
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
@@ -76,9 +72,10 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      },
-      { test: /\.html$/, loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader'] },
-      {
+      }, {
+        test: /\.html$/,
+        loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader']
+      }, {
         test: /\.(graphql|gql)$/,
         exclude: /node_modules/,
         loader: 'graphql-tag/loader'
