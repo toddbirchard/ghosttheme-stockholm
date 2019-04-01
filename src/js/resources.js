@@ -31,17 +31,17 @@ function construct_query() {
 
   // Structured query
   const query = `{
-      resources {
-        summary
-        description
-        project
-        issuetype_icon
-        issuetype_name
-        epic_name
-        epic_color
-        updated
-      }
-    }`;
+    resources(orderBy: issuetype_name_DESC) {
+      summary
+      description
+      project
+      issuetype_icon
+      issuetype_name
+      epic_name
+      epic_color
+      updated
+    }
+  }`;
 
   execute_query(query).catch(error => console.error(error));
 }
