@@ -46,6 +46,6 @@ var globalFunctions = {
 $(document).ready(function() {
   globalFunctions.init();
   tags();
-  seriesIcons();
+  series_icons();
   search();
 });
