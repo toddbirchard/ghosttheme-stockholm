@@ -1,7 +1,7 @@
 import '../less/global.less';
 import './global/analytics.js';
 import {search} from './global/search.js';
-import {seriesicons} from './global/seriesicons.js';
+import {series_icons} from './global/seriesicons.js';
 import {tags} from './global/tags.js';
 
 /*====================================================
