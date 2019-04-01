@@ -5,7 +5,7 @@
   background: #fff !important;
   padding: 0;
   margin: 10px 0;
-  border-right: 2px solid #dcdcdc!important;
+  border-left: 2px solid #dcdcdc!important;
   border-bottom: 2px solid #dcdcdc !important;
   position: relative;
   border: 1px solid #ececec;
@@ -16,10 +16,11 @@
   }
 
   .author {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-bottom: 0;
     line-height: 1;
     color: #326671;
+    padding: 0 10px;
   }
 
   .title {
@@ -56,14 +57,15 @@
     margin-bottom: 15px;
     display: inline-block;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: auto;
+    right: 20px;
     width: 85px;
     height: 82px;
     margin: auto;
-    top: 80px;
+    top: 92px;
     border: 3px solid white;
     box-shadow: 2px 2px 2px rgba(20, 24, 53, 0.15);
+
     @media(max-width: 1040px) {
       margin: 0 auto;
       display: block;
@@ -85,7 +87,7 @@
     overflow: hidden;
     padding: 17px;
     text-align: center;
-    margin-top: 33px;
+    margin-top: 5px;
     margin-left: 0;
     padding-bottom: 8px;
   }
@@ -106,6 +108,8 @@
   }
 
   .author {
+    text-align: left;
+    
     a {
       color: #105a6d;
       font-family: 'soleil';
@@ -159,6 +163,9 @@
     span {
       display: block;
       margin-bottom: 2px;
+      text-align: left;
+      padding: 0 10px;
+
       @media (max-width: 1040px) {
         margin: 0 auto 3px;
       }
