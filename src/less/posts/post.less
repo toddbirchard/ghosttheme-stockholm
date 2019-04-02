@@ -48,7 +48,7 @@
 		}
 
 		img {
-			width: auto;
+			width: 100%;
 			margin: 0 auto;
 			display: block;
 			max-width: 100%;
@@ -734,6 +734,16 @@ article {
 		margin: 30px 0;
 	}
 
+	.subtext {
+		color: #a7a7a7;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 20px;
+    font-size: .85em;
+    display: block;
+    line-height: 1.4;
+	}
+
 	figure {
 		width: 99%;
 		max-width: 99%;
@@ -743,6 +753,10 @@ article {
 		border: 1px solid rgba(206, 206, 206, 0.42);
 		border-radius: 3px;
 		overflow: hidden;
+
+		&:hover {
+			cursor: zoom-in;
+		}
 
 		@media(max-width: 600px) {
 			margin-left: calc(~"-50vw + 50%") !important;

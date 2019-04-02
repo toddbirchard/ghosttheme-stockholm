@@ -63,7 +63,7 @@
 		}
 
 		@media(max-width: 600px) {
-			margin: 15px 0 !important;
+			margin: 15px 0 0 !important;
 		}
 
 		.share-icons {
@@ -283,7 +283,7 @@ section .widget.newsletter {
 				}
 
 				span {
-					font-size: 12px;
+					font-size: 14px;
 					text-transform: capitalize;
 				}
 			}
@@ -337,7 +337,25 @@ section .widget.newsletter {
 	margin-top: 20px;
 
 	@media(max-width: 900px) {
-		width: 95%;
+		width: 93%;
 		max-width: unset;
+	}
+
+	.author-card-small {
+		@media(max-width: 600px) {
+			 min-height: 360px;
+		 }
+
+		 .meta-info {
+			 margin-bottom: 0;
+		 }
+
+		 .details {
+			 padding-bottom: 0;
+		 }
+
+		 .bio {
+			  font-size: 0.8em !important;
+		 }
 	}
 }

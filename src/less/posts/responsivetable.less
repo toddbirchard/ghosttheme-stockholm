@@ -27,8 +27,7 @@
 @table-header-font-weight:      400;
 @table-header-font-color:       #757575;
 
-@table-cell-padding:            1.6rem;
-@table-condensed-cell-padding:  @table-cell-padding/2;
+@table-cell-padding:            10px 1.6rem;
 
 
 @table-bg:                      #fff;
@@ -67,8 +66,8 @@
   }
 
   @media(max-width: 600px) {
-    margin-right: calc(-50vw + 50%) !important;
-    margin-left: calc(-50vw + 50%) !important;
+    /*margin-right: calc(-50vw + 50%) !important;
+    margin-left: calc(-50vw + 50%) !important;*/
   }
 
   &:hover {
@@ -80,7 +79,7 @@
   }
 }
 
-.table {
+table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 0;
@@ -136,7 +135,7 @@
   }
 
   // Nesting
-  .table {
+  table {
     background-color: @table-bg;
 
     td  {
@@ -158,7 +157,7 @@
     > tr {
       > th,
       > td {
-        padding: @table-condensed-cell-padding;
+        padding: @table-cell-padding;
       }
     }
   }
@@ -217,13 +216,14 @@
 // Wrap your tables in `.table-responsive-vertical` and we'll make them mobile friendly
 // by vertical table-cell display. Only applies <768px. Everything above that will display normally.
 // For correct display you must add 'data-title' to each 'td'
-.table-responsive-vertical {
+.tableContainer {
   border-spacing: 0;
 
   @media screen and (max-width: 768px) {
+    box-shadow: unset;
 
     // Tighten up spacing
-    > .table {
+    > table {
       margin-bottom: 0;
       background-color: transparent;
       border-spacing: 0;
@@ -237,10 +237,17 @@
 
         > tr {
           display: block;
-          border: 1px solid @table-border-color;
           border-radius: 2px;
           margin-bottom: @table-cell-padding;
           font-size: 1em;
+          border: unset;
+          box-shadow: 0 0 3px #adb0c6;
+          width: 99%;
+          margin: 5px auto 10px;
+
+          &:nth-child(n+6) {
+            display: none;
+          }
 
           > td {
             background-color: @table-bg;
@@ -249,6 +256,13 @@
             text-align: right;
             font-size: .9em;
             border-bottom: none !important;
+            width: 100%;
+            max-width: unset;
+            text-align: left;
+
+            &:nth-child(odd) {
+              background: #f6f8f9;
+            }
           }
           > td[data-title]:before {
             content: attr(data-title);
