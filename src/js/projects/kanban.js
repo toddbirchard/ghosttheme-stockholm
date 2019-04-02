@@ -1,7 +1,7 @@
 import $ from "jquery";
 import 'slick-carousel';
 
-function MakeSlick() {
+export function make_kanban_slick() {
   $('#kanban').slick({
     centerMode: false,
     centerPadding: '5px',
@@ -39,5 +39,3 @@ function MakeSlick() {
     ]
   });
 }
-
-MakeSlick();

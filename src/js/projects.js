@@ -1,8 +1,10 @@
-import {GraphQLClient} from 'graphql-request';
+import { GraphQLClient } from 'graphql-request';
+// import { GetJiraIssuesViaFragments } from './graphql/queries.gql';
+// import gql from 'graphql-tag';
 import '../less/projects.less';
-import './projects/kanban.js';
-import '@babel/polyfill';
-import $ from "jquery";
+import { build_dropdown } from './projects/dropdown.js';
+import { make_kanban_slick } from './projects/kanban.js';
+
 
 function populateCards(data) {
   let statuses = ['backlog', 'progress', 'todo', 'done'];
@@ -31,8 +33,8 @@ async function execute_query(query, query_vars) {
       'Authorization': token
     }
   });
-  client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data)));
-  client.request(query, query_vars).then(data => populateCards(data));
+  //client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data))).catch(error => console.error(error));
+  client.request(query, query_vars).then(data => populateCards(data)).catch(error => console.error(error));
 }
 
 function construct_query(project) {
@@ -99,44 +101,13 @@ function construct_query(project) {
       }
     }`;
 
-  execute_query(query, query_variables).catch(error => console.error(error));
+  execute_query(query, query_variables);
 }
 
-function build_dropdown() {
 
-  $('.stockholmproject').on('click', function() {
-    construct_query();
-  });
-
-  $('.tokyoproject').on('click', function() {
-    construct_query('Toddzilla');
-  });
-
-  $('.linkbox-api').on('click', function() {
-    construct_query('Linkbox API');
-  });
-
-  $('.ghostthemesio').on('click', function() {
-    construct_query('ghostthemes.io');
-  });
-
-  $('.dropdown').on('mouseover', function() {
-    $('.dropdown-list').css('display', 'block');
-    $('.dropdown-list').css('opacity', '1');
-  });
-
-  $('.dropdown').on('mouseleave', function() {
-    $('.dropdown-list').css('display', 'none');
-    $('.dropdown-list').css('opacity', '0');
-  });
-
-  $('.mobilemenu').on('click', function() {
-    $('.dropdown-list').css('display', 'block');
-    $('.dropdown-list').css('opacity', '1');
-  });
-}
 
 $(document).ready(function() {
   construct_query("Hackers and Slackers");
   build_dropdown();
+  make_slick();
 });

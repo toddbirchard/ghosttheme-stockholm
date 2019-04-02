@@ -1,0 +1,29 @@
+fragment JiraFieldsFragment on jiraIssue {
+  key
+  summary
+  epic_color
+  epic_name
+  status
+  priority_rank
+  priority_url
+  priority_name
+  issuetype_name
+  issuetype_icon
+  assignee_name
+  assignee_url
+}
+
+query GetJiraIssuesViaFragments($project: String) {
+    backlog: jiraIssues(where: {status: "Backlog", project: $project}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    todo: jiraIssues(where: {status: "To Do", project: $project}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    progress: jiraIssues(where: {status: "In Progress", project: $project}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    done: jiraIssues(where: {status: "Done", project: $project}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+}
