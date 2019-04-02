@@ -25,12 +25,12 @@
     }
 
     .tag-description {
-      font-weight: 600;
+      font-weight: 300;
       line-height: 1.5;
       max-width: 90%;
       margin: 20px auto 0;
       color: white;
-      font-family: soleil, sans-serif;
+      font-family: 'soleil', sans-serif;
       text-shadow: 2px 2px 0 #15133c, 2px 2px 10px #15133c;
       font-size: 1.2em;
     }
@@ -44,6 +44,13 @@
 
     article {
       margin-bottom: 20px;
+
+      &:hover {
+        .featured-media,
+        img {
+          border: unset !important;
+        }
+      }
 
       .content {
         position: relative;
@@ -79,7 +86,7 @@
       .post-head {
         margin: 0;
         min-height: 140px;
-        padding: 5px 5px 0;
+        padding: 0 5px 0;
 
         @media(max-width: 600px) {
           margin: 0 0 80px;

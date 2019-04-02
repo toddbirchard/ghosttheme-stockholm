@@ -31,6 +31,16 @@
   .sorted-series {
     display: flex;
     flex-direction: column;
+
+    article {
+      &:hover {
+        cursor: pointer;
+
+        * {
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   .descending {
@@ -141,10 +151,12 @@
       padding: 15px;
     }
 
-    * {
-      &:hover{
-        cursor: pointer;
-      }
+    &:hover {
+      cursor: pointer;
+
+      * {
+          cursor: pointer;
+        }
     }
 
     &:last-child {
@@ -324,7 +336,6 @@
     }
 
     .imagewrapper {
-      height: 121px;
       display: block;
       max-width: 326px;
       overflow: hidden;

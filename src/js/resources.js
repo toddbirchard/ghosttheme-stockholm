@@ -1,5 +1,5 @@
 import '../less/pages/resources.less';
-import '../less/posts/table.less';
+import '../less/posts/responsivetable.less';
 import {GraphQLClient} from 'graphql-request';
 
 function create_row(data) {
