@@ -42,11 +42,11 @@
 				</header>
 				<!-- end post metadata -->
 
-        {{! Lists Table-of-Contents-Like list if post is in a series. }}
+				{{! Lists Table-of-Contents-Like list if post is in a series. }}
 				{{> posts/postseries}}
 
-        {{! Displays Roundup blurb if post has tag "roundup." }}
-        {{> posts/roundup-blurb}}
+				{{! Displays Roundup blurb if post has tag "roundup." }}
+				{{> posts/roundup-blurb}}
 
 				<!-- start content -->
 				<div class="post-content">
@@ -62,20 +62,28 @@
 						<div class="share">
 							{{> posts/share-links}}
 						</div>
-                    </section>
+					</section>
 				</div>
 				<!-- end content -->
 			</div>
 		</article>
-	<!-- end main post area -->
-	{{> posts/postfooter}}
-    {{#contentFor "scripts"}}
-        <script async src="{{asset "js/posts.js"}}"></script>
-        {{#has tag="Roundup"}}
-            <script src="{{asset "js/previews.js"}}"></script>
-        {{/has}}
-    {{/contentFor}}
-{{/post}}
+		<!-- end main post area -->
+		{{> posts/postfooter}}
+		{{#contentFor "scripts"}}
+			<script async src="{{asset "js/posts.js"}}"></script>
+			<script src="https://hackersandslackers.com/assets/js/includes/highlight.min.js"></script>
+			<script>
+				hljs.configure({
+					tabReplace: '  ', // 2 spaces
+					classPrefix: '' // don't append class prefix
+				});
+				hljs.initHighlightingOnLoad();
+			</script>
+			{{#has tag="Roundup"}}
+				<script src="{{asset "js/previews.js"}}"></script>
+			{{/has}}
+		{{/contentFor}}
+	{{/post}}
 </div>
 
 <!-- end post -->

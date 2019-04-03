@@ -35,15 +35,9 @@ hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
 
+hljs.initHighlightingOnLoad();
+
 const postFunctions = {
-  init_highlightjs: function() {
-    hljs.configure({
-      tabReplace: '  ', // 2 spaces
-      classPrefix: '' // don't append class prefix
-      // … other options aren't changed
-    });
-    hljs.initHighlightingOnLoad();
-  },
   codeSnippetFullScreen: function() {
     $('main > pre').each(function() {
       if ($(this).height() >= 400) {
@@ -236,8 +230,7 @@ const postFunctions = {
     postFunctions.enableBaguettebox();
     postFunctions.addImageAltTags();
     postFunctions.detect_series();
-    postFunctions.init_highlightjs();
-    postFunctions.reduce_indents();
+    //postFunctions.reduce_indents();
   }
 };
 
