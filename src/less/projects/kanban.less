@@ -121,7 +121,7 @@
   .intro {
     h1 {
       margin: 10px 0 30px;
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         margin: 30px 0 0;
       }
     }
@@ -137,7 +137,7 @@
     display: block;
     overflow: hidden;
     height: 750px;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 30px 0 50px;
       overflow: visible;
 
@@ -155,7 +155,7 @@
       width: 100%;
       bottom: -50px;
       max-width: 150px;
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         display: flex;
       }
 
@@ -264,7 +264,7 @@
       @media(max-width: 1000px) {
         min-width: auto;
       }
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         min-width: auto;
         margin-bottom: 0;
       }

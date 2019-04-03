@@ -3,7 +3,7 @@
     width: 100%;
     font-size: 16px;
     overflow: hidden;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       width: auto;
       margin-bottom: 30px;
     }
@@ -14,7 +14,7 @@
     overflow: hidden;
     padding: 10px 14px 0;
     min-height: 135px;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 10px;
     }
   }
@@ -34,7 +34,7 @@
     justify-content: space-between;
     list-style: none;
     margin-top: 5px;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 0;
       padding: 15px;
     }
@@ -51,7 +51,7 @@
 
     li {
       display: inline-block;
-      font-family: 'soleil', sans-serif;
+      font-family: @body-font;
       color: #444;
       font-size: 1.1em;
       border: 0;
@@ -80,7 +80,7 @@
     transition: 0.2s all ease-out;
     border-radius: 2px;
     overflow: hidden;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 8px 12px;
       font-size: 0.7em;
     }
@@ -129,7 +129,7 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 0 2px 0 #DDD;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 0 15px 15px 0;
     }
   }
@@ -148,7 +148,7 @@
       padding: 15px 0 0;
       height: fit-content;
       text-transform: uppercase;
-      font-family: 'soleil', sans-serif;
+      font-family: @body-font;
     }
 
     a {
@@ -228,7 +228,7 @@
     font-size: 1.2em;
     color: #222;
     text-transform: uppercase;
-    font-family: 'soleil', sans-serif;
+    font-family: @body-font;
   }
 
   .error {

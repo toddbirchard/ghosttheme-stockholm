@@ -13,7 +13,7 @@
     box-shadow: 0 20px 20px rgba(65, 67, 144, 0.3) !important;
     cursor: pointer;
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     margin: 5px 0;
     width: 100%;
     width: -moz-available;
@@ -38,7 +38,7 @@
       justify-content: space-between;
       flex-direction: row;
       height: 100%;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         min-width: 120px;
         height: auto;
       }
@@ -56,7 +56,7 @@
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #e9ebef;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: 35%;
       height: 100%;
       min-width: 120px;
@@ -69,7 +69,7 @@
     margin-top: 0 !important;
     min-height: 69px;
     font-family: 'ProductSans-Medium', sans-serif;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       font-size: 1.1em !important;
     }
   }
@@ -84,7 +84,7 @@
       width: 40px;
       height: 40px;
       margin-right: 10px;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         height: auto;
       }
     }
@@ -120,7 +120,7 @@
       text-transform: capitalize;
       line-height: 1;
       font-size: 1em;
-      font-family: 'soleil', sans-serif;
+      font-family: @body-font;
       color: #224a69;
     }
     @media (max-width: 600px) {
@@ -131,7 +131,7 @@
   .description {
     padding: 15px 20px;
     color: @text-color;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       padding: 15px;
     }
 
@@ -149,7 +149,7 @@
       overflow: hidden;
       display: -webkit-box;
       text-overflow: ellipsis;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 0.8em;
         margin: 5px 0;
         display: -webkit-box;

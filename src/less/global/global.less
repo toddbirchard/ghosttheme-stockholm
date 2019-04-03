@@ -5,7 +5,7 @@
 ====================================================*/
 body,
 html {
-	font-family: 'soleil', sans-serif;
+	font-family: @body-font;
 	font-size: 16px;
 	color: @text-color;
 	line-height: 1.75em;
@@ -21,7 +21,7 @@ article {
 	p {
 		line-height: 1.7em;
 		font-size: 16px;
-		font-family: 'soleil', sans-serif;
+		font-family: @body-font;
 	}
 }
 
@@ -31,12 +31,12 @@ section {
 }
 
 strong {
-	font-family: 'soleil', sans-serif;
+	font-family: @body-font;
 	font-weight: 500;
 }
 
 a {
-	font-family: 'soleil', sans-serif;
+	font-family: @body-font;
 
 	&:hover {
 		cursor: pointer;
@@ -71,7 +71,7 @@ h3 {
 h2 {
 	font-size: 2.2em;
 	font-family: 'soleil';
-	@media(max-width: 600px) {
+	@media(max-width: @mobile-breakpoint) {
 		font-size: 2em;
 	}
 }
@@ -94,7 +94,7 @@ h5 {
 	color: @text-color-heading;
 	line-height: 1;
 	text-align: left;
-	@media(max-width: 600px) {
+	@media(max-width: @mobile-breakpoint) {
 		font-size: 1.3em;
 		margin-top: 5px;
 	}

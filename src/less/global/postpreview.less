@@ -81,7 +81,7 @@
 			font-weight: 500;
 			color: #2d2f35;
 			margin-bottom: 30px;
-			@media(max-width: 600px) {
+			@media(max-width: @mobile-breakpoint) {
 				font-size: 0.9em;
 				line-height: 1.6em;
 				margin-bottom: 15px;
@@ -107,7 +107,7 @@
 			border: 1px solid #e3edef;
 			height: auto;
 		}
-		@media(max-width: 600px) {
+		@media(max-width: @mobile-breakpoint) {
 			margin: 0 auto;
 		}
 
@@ -134,7 +134,7 @@
 			@media(max-width: 950px) {
 				font-size: 1.8em;
 			}
-			@media(max-width: 600px) {
+			@media(max-width: @mobile-breakpoint) {
 				font-size: 1.4em;
 				margin: 0 0 10px;
 				font-weight: 500;
@@ -149,7 +149,7 @@
 				&:hover {
 					color: @secondary-color;
 				}
-				@media(max-width: 600px) {
+				@media(max-width: @mobile-breakpoint) {
 					font-family: 'ProductSans-Bold', 'soleil', sans-serif;
 					font-weight: 500;
 				}
@@ -164,7 +164,7 @@
 			font-size: 1.2em;
 			color: #153b52;
 			font-family: 'ProductSans-Regular', sans-serif;
-			@media(max-width: 600px) {
+			@media(max-width: @mobile-breakpoint) {
 				font-size: 1.05em !important;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
@@ -211,7 +211,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		font-family: 'soleil', sans-serif;
+		font-family: @body-font;
 		width: 100%;
 		justify-content: space-between;
 		max-width: 420px;
@@ -227,13 +227,13 @@
 
 		a {
 			color: #5aa8bf;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 		}
 
 		.author-mobile {
 			display: none !important;
 			align-items: center;
-			@media(max-width: 800px) {
+			@media(max-width: @tablet-breakpoint) {
 				margin-right: 40px;
 			}
 
@@ -249,12 +249,12 @@
 
 				.mobile-name {
 					margin-bottom: 2px;
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 					letter-spacing: 0.2px;
 				}
 
 				.mobile-date {
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 					font-size: 0.9em;
 				}
 			}
@@ -263,7 +263,7 @@
 				text-transform: capitalize;
 				line-height: 1;
 				font-size: 1em;
-				font-family: 'soleil', sans-serif;
+				font-family: @body-font;
 				color: @meta-color;
 			}
 			@media (max-width: 800px) {
@@ -273,7 +273,7 @@
 
 		.meta-item {
 			display: flex;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 			align-items: center;
 			font-size: 16px;
 			padding: 0;
@@ -305,8 +305,8 @@
 				span {
 					line-height: 1.2;
 					font-size: 13px;
-					font-family: 'soleil', sans-serif;
-					@media(max-width: 600px) {
+					font-family: @body-font;
+					@media(max-width: @mobile-breakpoint) {
 						font-size: 13px;
 						font-weight: 100;
 					}
@@ -319,7 +319,7 @@
 				i {
 					font-size: 22px;
 					height: 20px;
-					@media(max-width: 600px) {
+					@media(max-width: @mobile-breakpoint) {
 						order: 2;
 						font-size: 18px;
 						height: fit-content;
@@ -330,10 +330,10 @@
 						cursor: pointer;
 					}
 				}
-				@media(max-width: 800px) {
+				@media(max-width: @tablet-breakpoint) {
 					order: 2;
 				}
-				@media(max-width: 600px) {
+				@media(max-width: @mobile-breakpoint) {
 					font-size: 1em;
 					margin: 0;
 					height: 33px !important;
@@ -346,13 +346,13 @@
 			&.author-mobile {
 				i {
 					color: @meta-color;
-					@media(max-width: 600px) {
+					@media(max-width: @mobile-breakpoint) {
 						color: #474b55;
 					}
 				}
 
 				span {
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 					color: @meta-color;
 					line-height: 1;
 					overflow: hidden;
@@ -388,7 +388,7 @@
 
 			&.date {
 				span {
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 					color: @meta-color !important;
 					overflow: hidden;
 					white-space: nowrap;
@@ -449,12 +449,12 @@
 				cursor: pointer !important;
 				color: white;
 			}
-			@media(max-width: 600px) {
+			@media(max-width: @mobile-breakpoint) {
 				/*display: none;*/
 				padding: 13px 18px;
 				font-size: 14px;
 				height: fit-content;
-				font-family: 'soleil', sans-serif;
+				font-family: @body-font;
 			}
 		}
 	}
@@ -488,7 +488,7 @@
 		display: inline-block;
 		margin-right: 10px;
 		border-radius: 3px;
-		@media(max-width: 600px) {
+		@media(max-width: @mobile-breakpoint) {
 			margin-right: 15px;
 			width: 45px;
 			height: 45px;
@@ -498,7 +498,7 @@
 
 .content {
 	padding: 0 5px;
-	@media(max-width: 600px) {
+	@media(max-width: @mobile-breakpoint) {
 		padding: 0 10px;
 	}
 }

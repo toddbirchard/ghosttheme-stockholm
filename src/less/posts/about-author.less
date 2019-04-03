@@ -7,10 +7,10 @@
   margin: 20px auto;
   justify-content: space-between;
   display: flex;
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     margin: 20px 0;
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     padding: 30px;
   }
 
@@ -23,10 +23,10 @@
     margin-right: 30px;
     border-radius: 2px;
     border: 1px solid rgba(40, 98, 190, 0.5);
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       margin-right: 20px;
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: 80px;
       height: 80px;
       margin: 0 15px 15px 0;
@@ -68,8 +68,8 @@
     font-size: 1.5em;
     margin-bottom: 0;
     line-height: 1;
-    font-family: 'soleil', sans-serif;
-    @media(max-width: 600px) {
+    font-family: @body-font;
+    @media(max-width: @mobile-breakpoint) {
       font-size: 1.3em;
     }
 
@@ -78,7 +78,7 @@
         text-decoration: none;
       }
     }
-    @media(max-width: 600px) {}
+    @media(max-width: @mobile-breakpoint) {}
   }
 
   .meta-info {
@@ -95,7 +95,7 @@
       i {
         margin-right: 7px;
       }
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         display: block !important;
         width: 100%;
       }
@@ -107,7 +107,7 @@
   justify-content: left !important;
 
   .name {
-    font-family: 'soleil', sans-serif;
+    font-family: @body-font;
     color: #5D6178;
     font-size: 0.9em;
     font-weight: 600;
@@ -127,7 +127,7 @@
       margin-right: 40px;
       margin-bottom: 0;
       font-weight: 100;
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         margin-right: 30px;
       }
 
@@ -155,14 +155,14 @@
   .bio {
     max-width: 570px;
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: none;
   }
 }
 
 .author-card-small {
   display: none;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: block;
     margin: 10px 0;
     width: auto!important;

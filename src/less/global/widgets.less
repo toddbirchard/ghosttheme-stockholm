@@ -66,7 +66,7 @@
 		&.text {
 			p {
 				font-size: 15px;
-				font-family: 'soleil', sans-serif;
+				font-family: @body-font;
 				font-weight: 300;
 				line-height: 1.6;
 			}
@@ -260,7 +260,7 @@
 			margin: 15px 0 20px;
 			font-size: 0.9em;
 			line-height: 1.5;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 			font-weight: 300;
 		}
 
@@ -462,7 +462,7 @@
 			line-height: 1.2;
 			font-size: 15px;
 			margin: 0;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 			display: inline-block;
 
 			&:hover {
@@ -489,7 +489,7 @@
 			font-size: 0.9em;
 			line-height: 1.7;
 			padding-right: 0;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 		}
 	}
 
@@ -583,11 +583,11 @@
 
 				.post-title,
 				.single-author-name {
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 					transition: all 0.2s ease;
 					line-height: 1.2;
 					.transition(all 0.2s ease);
-					@media(max-width: 600px) {
+					@media(max-width: @mobile-breakpoint) {
 						text-align: left;
 					}
 
@@ -602,7 +602,7 @@
 					font-size: 13px;
 					opacity: 1;
 					margin-top: 5px;
-					font-family: 'soleil', sans-serif;
+					font-family: @body-font;
 
 					i {
 						margin-right: 5px;

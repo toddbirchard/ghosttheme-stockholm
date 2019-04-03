@@ -1,3 +1,5 @@
+@import '../global/variables.less';
+
 /* -- Box model ------------------------------- */
 *,
 *:after,
@@ -44,10 +46,10 @@
   @media(max-width: 1000px) {
     margin-bottom: 40px !important;
   }
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     margin-bottom: 40px !important;
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     /*margin-right: calc(-50vw + 50%) !important;
     margin-left: calc(-50vw + 50%) !important;*/
   }

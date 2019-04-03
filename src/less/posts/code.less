@@ -29,7 +29,7 @@ blockquote pre {
     margin: 40px auto;
     border-radius: 4px;
     max-width: 100%;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       max-width: none;
       width: auto;
       white-space: pre-line;
@@ -49,7 +49,7 @@ blockquote pre {
       margin: 0;
       height: 100%;
       font-size: 0.8em;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         overflow-y: hidden;
         font-size: 12px;
         padding: 55px 20px 20px;
@@ -104,7 +104,7 @@ blockquote pre {
       width: 22px;
       opacity: 0.6;
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       display: block;
     }
   }
@@ -217,13 +217,13 @@ blockquote pre {
   opacity: 1;
   transition: all 0.4s ease-out;
   mix-blend-mode: hard-light;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: block;
   }
 }
 
 .fullWidth {
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
 

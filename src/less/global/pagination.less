@@ -65,7 +65,7 @@
 			cursor: pointer;
 		}
 	}
-	@media(max-width: 600px) {
+	@media(max-width: @mobile-breakpoint) {
 		a:nth-of-type(5),
 		a:nth-of-type(6),
 		a:nth-of-type(7),
@@ -98,7 +98,7 @@
 		.page {
 			margin: 0 15px;
 		}
-		@media(max-width: 600px) {
+		@media(max-width: @mobile-breakpoint) {
 			max-width: 65%;
 		}
 	}
@@ -121,11 +121,11 @@
 	width: auto;
 	height: fit-content;
 
-	@media(max-width: 800px){
+	@media(max-width: @tablet-breakpoint){
 		padding: 0 15px;
 	}
 
-	@media(max-width: 600px){
+	@media(max-width: @mobile-breakpoint){
 		flex-direction: column;
 		padding: 0;
 		margin: 10px 0;

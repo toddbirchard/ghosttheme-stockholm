@@ -10,7 +10,7 @@
 	align-items: center;
 	height: fit-content;
 	margin-top: 50px;
-	@media(max-width: 800px) {
+	@media(max-width: @tablet-breakpoint) {
 		display: block;
 		height: fit-content;
 	}
@@ -31,10 +31,10 @@
 			margin-right: 15px;
 			line-height: 1;
 			padding: 8px 10px;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 			border-radius: 2px;
 			transition: all 0.3s ease-out;
-			@media(max-width: 800px) {
+			@media(max-width: @tablet-breakpoint) {
 				margin-bottom: 10px;
 			}
 
@@ -49,7 +49,7 @@
 				}
 			}
 		}
-		@media(max-width: 800px) {
+		@media(max-width: @tablet-breakpoint) {
 			width: 100%;
 		}
 	}
@@ -59,7 +59,7 @@
 		@media(max-width: 900px) {
 			margin: 15px 0 40px !important;
 		}
-		@media(max-width: 600px) {
+		@media(max-width: @mobile-breakpoint) {
 			margin: 15px 0 0 !important;
 		}
 
@@ -86,12 +86,12 @@
 				padding: 0;
 				margin: auto 0;
 				min-width: 23%;
-				@media(max-width: 800px) {
+				@media(max-width: @tablet-breakpoint) {
 					min-width: none !important;
 					border: 1px solid #eaeaea;
 					height: 30px;
 				}
-				@media(max-width: 600px) {
+				@media(max-width: @mobile-breakpoint) {
 					border: none;
 				}
 
@@ -172,7 +172,7 @@
 					font-size: 19px;
 					display: block;
 					width: fit-content;
-					@media(max-width: 800px) {
+					@media(max-width: @tablet-breakpoint) {
 						font-size: 27px;
 					}
 				}
@@ -211,7 +211,7 @@ section .widget.newsletter {
 	display: none;
 	padding: 20px;
 	box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-	@media(max-width: 600px) {
+	@media(max-width: @mobile-breakpoint) {
 		display: block;
 		background: white;
 		width: -webkit-fill-available;
@@ -228,7 +228,7 @@ section .widget.newsletter {
 			margin: 5px 0 15px;
 			line-height: 1.5;
 			font-size: 0.8em !important;
-			font-family: 'soleil', sans-serif;
+			font-family: @body-font;
 		}
 
 		.form-group {
@@ -261,7 +261,7 @@ section .widget.newsletter {
 			button {
 				width: -webkit-fill-available !important;
 				width: -moz-available !important;
-				background: #33abba;
+				background: @button-color;
 				box-shadow: -1px 1px 0 #2b84a7, -1px 0 0 #2b84a7;
 				padding: 13px 20px;
 				font-size: 14px;
@@ -337,7 +337,10 @@ section .widget.newsletter {
 	}
 
 	.author-card-small {
-		@media(max-width: 600px) {
+		border-left: unset !important;
+		border-bottom: unset !important;
+		
+		@media(max-width: @mobile-breakpoint) {
 			min-height: 360px;
 		}
 

@@ -10,13 +10,13 @@
   width: 100%;
   color: white;
   justify-content: space-between;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     margin-top: 10px;
   }
 }
 
 .repo-title {
-  font-family: 'soleil', sans-serif;
+  font-family: @body-font;
   font-size: 18px !important;
 
   &:hover {
@@ -42,7 +42,7 @@
   max-width: 32%;
   min-width: 32%;
   border-radius: 3px;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     min-width: 100%;
     margin: 0 0 12px;
   }

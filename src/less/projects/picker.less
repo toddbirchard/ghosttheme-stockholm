@@ -21,11 +21,11 @@
 
     ul {
       margin: 0;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         padding: 0;
       }
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: -webkit-fill-available;
       width: -moz-fill-available;
     }
@@ -54,7 +54,7 @@
 
   .picker {
     float: right;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       display: none !important;
     }
   }
@@ -89,7 +89,7 @@
 
   .dropdown:hover .dropdown-list {
     display: block;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       display: block;
       width: 90%;
       left: 0;
@@ -206,7 +206,7 @@
         color: white;
       }
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       display: flex !important;
       flex-direction: column;
       width: 100%;

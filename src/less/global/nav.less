@@ -6,7 +6,7 @@
 nav {
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.2) !important;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     margin-bottom: 0;
   }
 
@@ -30,14 +30,14 @@ nav {
         cursor: pointer;
         opacity: 0.6;
       }
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         height: 35px;
         width: 171px;
       }
 
       img {
         height: 40px;
-        @media(max-width: 600px) {
+        @media(max-width: @mobile-breakpoint) {
           height: 35px;
         }
       }
@@ -75,7 +75,7 @@ nav {
         opacity: 1;
       }
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       visibility: hidden;
     }
 
@@ -138,7 +138,7 @@ nav {
       padding-left: 20px;
       font-size: 1em;
       font-family: soleil, sans-serif;
-      @media(max-width: 800px) {
+      @media(max-width: @tablet-breakpoint) {
         width: 150px !important;
       }
     }
@@ -158,7 +158,7 @@ nav {
     z-index: 200;
     position: absolute;
     box-shadow: 0 0 50px #7a84b5;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       visibility: hidden;
     }
 
@@ -281,7 +281,7 @@ nav {
       height: -webkit-fill-available;
       height: -moz-fill-available;
       height: 50px;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         width: 300px;
         margin: 0 auto 20px !important;
         position: absolute;
@@ -400,7 +400,7 @@ nav {
       }
     }
   }
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     padding: 0 6%;
     margin: 0;
     border: 0;
@@ -424,7 +424,7 @@ nav {
       }
     }
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     margin-bottom: 0;
     border-bottom: 1px solid #e8e8e8;
   }
@@ -436,7 +436,7 @@ nav {
   text-align: center;
   position: relative;
   border-bottom: 1px solid #efefef;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     height: 42px;
   }
 
@@ -451,7 +451,7 @@ nav {
     height: -moz-fill-available;
     max-width: 580px;
     height: 45px;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       margin: 0 auto 20px !important;
       position: absolute;
       left: 0;
@@ -479,7 +479,7 @@ nav {
       right: 0;
       top: 0;
       bottom: 0;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 0.85em;
       }
 
@@ -584,7 +584,7 @@ nav {
   text-align: center;
   position: relative;
   margin-bottom: 35px;
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     margin-bottom: 0;
     background-size: cover !important;
   }
@@ -604,7 +604,7 @@ nav {
     max-height: 58px;
     z-index: 9;
     transition: all 0.3s ease-out;
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       width: 228px;
       height: 49px;
       top: 60px;
@@ -630,7 +630,7 @@ nav {
   right: 0;
   height: 50px;
   z-index: 100;
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     height: auto;
     background: none;
   }
@@ -688,7 +688,7 @@ nav {
         height: 100%;
       }
     }
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       max-width: 234px;
       left: 0;
       right: 0;
@@ -717,7 +717,7 @@ nav {
         &:hover {
           cursor: pointer;
         }
-        @media(max-width: 800px) {
+        @media(max-width: @tablet-breakpoint) {
           padding: 0;
           font-weight: 500;
           font-size: 15px;
@@ -731,7 +731,7 @@ nav {
       }
 
       &.nav-current {
-        @media(max-width: 600px) {
+        @media(max-width: @mobile-breakpoint) {
           padding: 0;
         }
 
@@ -827,7 +827,7 @@ nav {
       font-family: soleil, sans-serif;
       font-weight: 300;
     }
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       width: 200px;
     }
   }
@@ -949,7 +949,7 @@ nav {
   header {
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(143, 142, 179, 0.2) !important;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       margin-bottom: 0;
     }
   }
@@ -971,7 +971,7 @@ nav {
       height: -moz-fill-available;
       height: 50px;
       max-width: 580px;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         width: 300px;
         margin: 0 auto 20px !important;
         position: absolute;
@@ -1090,7 +1090,7 @@ nav {
       }
     }
   }
-  @media(max-width: 800px) {
+  @media(max-width: @tablet-breakpoint) {
     padding: 0 6%;
     margin: 0;
     border: 0;
@@ -1121,7 +1121,7 @@ nav {
   justify-content: space-between;
   max-width: 400px;
   margin: auto;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: none;
   }
 
@@ -1144,7 +1144,7 @@ nav {
 
     button {
       border: none;
-      font-family: 'soleil', sans-serif;
+      font-family: @body-font;
       font-weight: 400;
       font-size: 0.9em;
       padding: 0;
@@ -1171,7 +1171,7 @@ nav {
         line-height: 1.5;
         color: @text-color;
         transition: all 0.3s ease-out;
-        font-family: 'soleil', sans-serif;
+        font-family: @body-font;
         font-weight: 100;
 
         &:hover {
@@ -1200,7 +1200,7 @@ nav {
       cursor: pointer;
     }
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: flex;
   }
 }

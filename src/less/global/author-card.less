@@ -10,7 +10,7 @@
   position: relative;
   border: 1px solid #ececec;
   color: #5f5f5f;
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     width: 100%!important;
     margin: 10px auto;
   }
@@ -36,7 +36,7 @@
     color: @text-color;
     margin-bottom: 10px;
   }
-  @media(max-width: 600px) {
+  @media(max-width: @mobile-breakpoint) {
     display: block !important;
   }
 
@@ -172,7 +172,7 @@
         margin-right: 7px;
         display: inline;
       }
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         display: block;
         width: 100%;
       }

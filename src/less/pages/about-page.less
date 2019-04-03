@@ -30,7 +30,7 @@
 
   figure {
     margin: 0;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       margin-bottom: 10px;
     }
   }
@@ -55,11 +55,11 @@
     & > p {
       margin: 0 44px 20px !important;
       font-weight: 300;
-      @media(max-width: 600px) {
+      @media(max-width: @mobile-breakpoint) {
         margin: 0 30px 20px !important;
       }
     }
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       display: flex;
       flex-direction: column;
       margin: -14px 0 0 !important;
@@ -79,10 +79,10 @@
       width: 100%;
       margin: -12px auto 20px 0 !important;
     }
-    @media(max-width: 800px) {
+    @media(max-width: @tablet-breakpoint) {
       height: 451px;
     }
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: 100%;
       height: 360px;
       margin: -12px 0 10px 0 !important;
@@ -96,7 +96,7 @@
 
   .fluid-width-video-wrapper {
     height: 50px;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       margin: 0 40px 30px;
     }
   }

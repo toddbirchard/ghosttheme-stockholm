@@ -24,7 +24,7 @@
     border-spacing: 0;
     border: 1px solid rgba(77, 87, 109, 0.25);
     overflow: hidden;
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: 100%;
     }
 
@@ -51,13 +51,13 @@
 
       th {
         text-align: center;
-        font-family: 'soleil', sans-serif;
+        font-family: @body-font;
         min-width: 30px;
         padding: 10px;
         font-size: 0.9em;
 
         strong {
-          font-family: 'soleil', sans-serif;
+          font-family: @body-font;
         }
 
         &::before {
@@ -161,7 +161,7 @@
         th {
           display: block;
           padding: 10px 5px !important;
-          font-family: 'soleil', sans-serif;
+          font-family: @body-font;
           letter-spacing: 0.5px;
           text-align: left;
           text-transform: capitalize;

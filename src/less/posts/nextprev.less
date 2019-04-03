@@ -9,7 +9,7 @@
     margin: auto;
     box-shadow: 0 0 5px rgba(80, 82, 204, 0.1) !important;
 
-    @media(max-width: 600px) {
+    @media(max-width: @mobile-breakpoint) {
       width: auto !important;
     }
 
@@ -33,7 +33,7 @@
         visibility: hidden;
         padding: 30px 0 30px 10px !important;
         background: white;
-        @media(max-width: 600px) {
+        @media(max-width: @mobile-breakpoint) {
           padding: 20px 0 20px 20px !important;
         }
 
@@ -41,7 +41,7 @@
           margin-left: 30px;
           justify-content: flex-start;
 
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             margin-left: 10px;
           }
         }
@@ -53,7 +53,7 @@
         border-top: 1px solid #ecf0f9;
         padding: 30px 10px 30px 0 !important;
         background: white;
-        @media(max-width: 600px) {
+        @media(max-width: @mobile-breakpoint) {
           padding: 20px 10px 20px 0 !important;
         }
 
@@ -61,7 +61,7 @@
           margin-right: 30px;
           justify-content: flex-end;
 
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             margin-right: 20px;
           }
 
@@ -101,7 +101,7 @@
           width: 28px;
           overflow: visible;
 
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             height: 20px;
             width: 20px;
           }
@@ -120,7 +120,7 @@
           flex-wrap: wrap;
           max-width: 80%;
 
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             max-width: 75%;
           }
 
@@ -141,7 +141,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
 
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             white-space: wrap;
             text-overflow: normal;
             line-height: 1.25;
@@ -157,7 +157,7 @@
           font-size: 0.8em;
           line-height: 1.35;
           max-width: 90%;
-          @media(max-width: 600px) {
+          @media(max-width: @mobile-breakpoint) {
             display: none;
           }
         }
