@@ -219,6 +219,17 @@ const postFunctions = {
       console.log(err.response.data); // Response data if available
     });
   },
+  reduce_indents: function() {
+    $('.language-python').text(function () {
+        return $(this).text().replace("    ", "  ");
+    });
+    $('.language-json').text(function () {
+        return $(this).text().replace("    ", "  ");
+    })
+    $('.language-javascript').text(function () {
+        return $(this).text().replace("    ", "  ");
+    })
+  },
   postInit: function() {
     postFunctions.codeSnippetFullScreen();
     postFunctions.scrollableTables();
@@ -226,6 +237,7 @@ const postFunctions = {
     postFunctions.addImageAltTags();
     postFunctions.detect_series();
     postFunctions.init_highlightjs();
+    postFunctions.reduce_indents();
   }
 };
 

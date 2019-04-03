@@ -41,6 +41,14 @@
     .comment {
       color: #7f8ba7;
       opacity: 0.6;
+
+      @media(max-width: 600px) {
+        white-space: pre;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline;
+        overflow: hidden;
+      }
     }
 
     .built_in {
@@ -104,6 +112,14 @@
       font-weight: 400;
       font-family: 'Hack';
       color: #a0e4cf;
+
+      @media(max-width: 600px) {
+        white-space: pre;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline;
+        overflow: hidden;
+      }
     }
 
     .attr {

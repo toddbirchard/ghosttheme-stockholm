@@ -23,6 +23,14 @@
         color: #b8ffdc !important;
         font-weight: 100;
         font-family: 'Hack';
+
+        @media(max-width: 600px) {
+          white-space: pre;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          display: inline;
+          overflow: hidden;
+        }
       }
 
       .params {
@@ -31,6 +39,14 @@
 
       .comment {
         color: #737a8e !important;
+
+        @media(max-width: 600px) {
+          white-space: pre;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          display: inline;
+          overflow: hidden;
+        }
       }
 
       .attribute {
