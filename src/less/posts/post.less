@@ -9,15 +9,14 @@
 		margin-bottom: 1px;
 	}
 
-	.post-footer {
-		width: 100%;
-		max-width: 100%;
-		@media(max-width: @tablet-breakpoint) {
-			width: 100% !important;
-		}
+	.sidebar {
+		display: none;
 	}
 
 	.post-wrapper {
+		margin: 0 auto 30px;
+		width: 100%;
+		max-width: 790px;
 		@media(max-width: @tablet-breakpoint) {
 			width: 90%;
 			margin: 0 auto;
@@ -26,37 +25,11 @@
 			width: 85%;
 			margin: 5px auto 30px;
 		}
-
-		.post-content a {
-			color: darken(@theme-color, 10%);
-			font-family: @body-font;
-		}
-
-		p > a {
-			letter-spacing: 0.5px;
-			@media(max-width: @mobile-breakpoint) {
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				max-width: 90%;
-				display: inline;
-			}
-		}
-
-		img {
-			width: 100%;
-			margin: 0 auto;
-			display: block;
-			max-width: 100%;
-
-			&:hover {
-				cursor: zoom-in;
-			}
-		}
 	}
 
 	.container {
 		padding: 0;
+		margin: 0 auto;
 		@media(max-width: 1200px) {
 			width: 100%;
 		}
@@ -107,16 +80,6 @@
 			letter-spacing: 0;
 			font-weight: 600;
 			text-align: center;
-		}
-
-		a {
-			color: @h1-color;
-			transition: all 0.2s ease-out;
-			font-family: 'ProductSans-Bold', 'soleil', sans-serif !important;
-
-			&:hover {
-				color: @secondary-color;
-			}
 		}
 	}
 
@@ -191,8 +154,22 @@
 		}
 	}
 
-	.sidebar {
-		display: none;
+	a {
+		color: @theme-color;
+		transition: all 0.2s ease-out;
+		font-family: @body-font;
+		font-weight: 600;
+		@media(max-width: @mobile-breakpoint) {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 90%;
+			display: inline;
+		}
+
+		&:hover {
+			color: @secondary-color;
+		}
 	}
 
 	p {
@@ -206,11 +183,6 @@
 			font-size: 1em;
 		}
 	}
-}
-
-.container {
-	margin: 0 auto;
-	padding: 0;
 }
 
 article {
@@ -466,10 +438,6 @@ article {
 					color: #52aa7e;
 				}
 			}
-
-			a {
-				font-weight: 600 !important;
-			}
 			@media(max-width: @mobile-breakpoint) {
 				margin: 20px auto;
 			}
@@ -531,50 +499,17 @@ article {
 			max-width: none;
 			margin-top: 25px;
 			margin-bottom: 30px;
-
-			img {
-				margin: 0;
-				display: block;
-				width: 100%;
-				border-left: 0;
-				border-right: 0;
-				@media(max-width: @mobile-breakpoint) {
-					margin-bottom: -5px !important;
-				}
-			}
-
-			figcaption {
-				width: -webkit-fill-available;
-				width: -moz-available;
-				margin: 0 auto;
-				padding: 10px;
-				background-color: rgba(33,69,138,.04);
-				color: #5e6167;
-				font-size: 0.8em;
-				text-align: center;
-				white-space: normal;
-				line-height: 1.5;
-				border-top: 1px solid #e0e1e4;
-				@media(max-width: @mobile-breakpoint) {
-					display: block;
-					width: auto !important;
-					height: auto;
-					font-size: 13px !important;
-					margin-top: 5px;
-					margin-right: calc(-50vw + 50%) !important;
-					margin-left: calc(-50vw + 50%) !important;
-					padding: 10px 25px !important;
-					line-height: 1.4 !important;
-				}
-			}
-		}
-
-		&:hover {
-			cursor: zoom-in;
 		}
 
 		img {
+			margin: 0;
+			display: block;
 			width: 100%;
+			border-left: 0;
+			border-right: 0;
+			max-width: 100%;
+			margin: 0 auto;
+			display: block;
 			@media(max-width: @mobile-breakpoint) {
 				margin-bottom: -5px !important;
 			}
@@ -583,14 +518,34 @@ article {
 				cursor: zoom-in;
 			}
 		}
-	}
 
-	.post-content a {
-		color: darken(@theme-color, 10%);
-		font-weight: 400;
+		figcaption {
+			width: -webkit-fill-available;
+			width: -moz-available;
+			margin: 0 auto;
+			padding: 10px;
+			background-color: rgba(33,69,138,.04);
+			color: #5e6167;
+			font-size: 0.8em;
+			text-align: center;
+			white-space: normal;
+			line-height: 1.5;
+			border-top: 1px solid #e0e1e4;
+			@media(max-width: @mobile-breakpoint) {
+				display: block;
+				width: auto !important;
+				height: auto;
+				font-size: 13px !important;
+				margin-top: 5px;
+				margin-right: calc(-50vw + 50%) !important;
+				margin-left: calc(-50vw + 50%) !important;
+				padding: 10px 25px !important;
+				line-height: 1.4 !important;
+			}
+		}
 
 		&:hover {
-			color: @hover-color;
+			cursor: zoom-in;
 		}
 	}
 
@@ -602,11 +557,5 @@ article {
 
 	.full-image img {
 		background: white;
-	}
-
-	.post-wrapper {
-		margin: 0 auto 30px;
-		width: 100%;
-		max-width: 790px;
 	}
 }

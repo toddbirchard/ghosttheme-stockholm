@@ -10,7 +10,10 @@
 	align-items: center;
 	height: fit-content;
 	margin-top: 50px;
+	width: 100%;
+	max-width: 100%;
 	@media(max-width: @tablet-breakpoint) {
+		width: 100% !important;
 		display: block;
 		height: fit-content;
 	}
@@ -339,7 +342,7 @@ section .widget.newsletter {
 	.author-card-small {
 		border-left: unset !important;
 		border-bottom: unset !important;
-		
+
 		@media(max-width: @mobile-breakpoint) {
 			min-height: 360px;
 		}
