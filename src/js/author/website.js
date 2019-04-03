@@ -1,4 +1,5 @@
-const fetch = require('node-fetch');
+require('es6-promise').polyfill();
+const fetch = require('isomorphic-fetch');
 
 function author_website(data) {
   var website = data['website'];

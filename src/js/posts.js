@@ -1,3 +1,4 @@
+require('es6-promise').polyfill();
 import '../less/posts.less';
 
 // Import hljs from highlight.js
@@ -18,7 +19,7 @@ import hljs from 'highlight.js/lib/highlight';
 // Additional imports
 import ScrollBooster from 'scrollbooster';
 import baguetteBox from 'baguettebox.js';
-import fetch from 'node-fetch';
+const fetch = require('isomorphic-fetch');
 
 // Register highlight.js languages
 hljs.registerLanguage('javascript', javascript);
