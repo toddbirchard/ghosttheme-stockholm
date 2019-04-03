@@ -53,7 +53,7 @@ function construct_query(project) {
         assignee_name
         assignee_url
       }
-      todo: jiraIssues(where: {project: $project, status: "To Do", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+      todo: jiraIssues(where: {project: $project, status: "To Do", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: priority_rank_DESC, first: 6) {
         key
         summary
         epic_color
@@ -66,7 +66,7 @@ function construct_query(project) {
         assignee_name
         assignee_url
       }
-      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: priority_rank_DESC, first: 6) {
         key
         summary
         epic_color
@@ -79,7 +79,7 @@ function construct_query(project) {
         assignee_name
         assignee_url
       }
-      done: jiraIssues(where: {project: $project, status: "Done", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: updated_DESC, first: 6) {
+      done: jiraIssues(where: {project: $project, status: "Done", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_DESC, first: 6) {
         key
         summary
         epic_color
