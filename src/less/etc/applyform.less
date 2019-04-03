@@ -1,20 +1,17 @@
 @import "../global/variables.less";
 
-
 .page-become-a-contributor {
   .main-content {
     width: 100%;
     padding: 50px 80px;
     margin: auto;
-
-    @media(max-width: 600px){
+    @media(max-width: 600px) {
       padding: 40px 30px;
     }
 
     h1 {
       margin: 0;
-
-      @media(max-width: 600px){
+      @media(max-width: 600px) {
         line-height: 1.2;
         font-size: 1.8em;
       }
@@ -68,14 +65,12 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
-
       @media(max-width: 600px) {
         display: block;
       }
 
       .input-field-group {
         width: 49%;
-
         @media(max-width: 600px) {
           width: 100%;
         }
@@ -97,7 +92,7 @@
       padding: 15px;
       box-sizing: border-box;
       font-size: 14px;
-      transition: all .2s ease-out;
+      transition: all 0.2s ease-out;
 
       &:focus {
         box-shadow: 0 0 3px #0a87a7;
@@ -109,7 +104,7 @@
 
         &::placeholder {
           color: #72859d;
-          opacity: .4;
+          opacity: 0.4;
           font-family: 'soleil', sans-serif !important;
         }
 
@@ -246,7 +241,7 @@
     }
 
     .next {
-      display:none;
+      display: none;
     }
 
     button {
@@ -266,7 +261,7 @@
       &:hover {
         cursor: pointer;
         background: @hover-color !important;
-       }
+      }
     }
   }
 }

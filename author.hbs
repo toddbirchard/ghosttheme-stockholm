@@ -1,29 +1,29 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
-	<section class="content-wrap">
-		<div class="container">
-				{{! insert sidebar partial}}
-				{{#author}}
-				{{> author/author-sidebar}}
-				<!-- start main post area -->
-				<div class=" main-content">
-					{{> cover-author}}
-					{{/author}}
-					<div class="postlist">
-							{{> loop}}
-	        </div>
-					{{pagination}}
-
-				</div>
-				<!-- end main post area -->
+<section class="content-wrap">
+	<div class="container">
+		{{! insert sidebar partial}}
+		{{#author}}
+			{{> author/author-sidebar}}
+			<!-- start main post area -->
+			<div class=" main-content">
+				{{> author/cover-author}}
+		{{/author}}
+		<div class="postlist">
+			{{> loop}}
 		</div>
-	</section>
-	{{#contentFor "scripts"}}
-		<script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
-		<script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-		<script src="{{asset "js/previews.js"}}"></script>
-		<script async src="{{asset "js/author.js"}}"></script>
-	{{/contentFor}}
+		{{pagination}}
+
+	</div>
+	<!-- end main post area -->
+	</div>
+</section>
+{{#contentFor "scripts"}}
+	<script src="{{asset "js/includes/gh-profile-card.min.js"}}"></script>
+	<script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+	<script src="{{asset "js/previews.js"}}"></script>
+	<script async src="{{asset "js/author.js"}}"></script>
+{{/contentFor}}
 
 <!-- end sites main content area -->

@@ -1,23 +1,23 @@
 @import "atomone.less";
 
 .post-content {
+  .css,
   .handlebars,
   .hljs.html,
+  .http,
   .language-css,
   .language-endpoint,
   .language-handlebars,
   .language-html,
-  .lnaguage-http,
   .language-jinja,
   .language-xml,
-  .css,
-  .http,
+  .lnaguage-http,
   .xml {
     color: #ecf3ff;
     background: #282c34;
 
     .name {
-     color: @hue-5;
+      color: @hue-5;
     }
 
     .attr,
@@ -50,15 +50,14 @@
         color: @mono-3;
       }
     }
-    }
   }
+}
 
 .handlebars,
-.language-handlebars{
-  .template-variable{
+.language-handlebars {
+  .template-variable {
     color: #88c8fb;
   }
-
 
   &::before {
     content: "Handlebars";
@@ -68,14 +67,13 @@
 }
 
 .html,
-.language-html{
+.language-html {
   &::before {
     content: "HTML";
     background: rgba(56, 62, 102, 0.4);
     color: white;
   }
 }
-
 
 .jinja,
 .language-jinja {

@@ -7,7 +7,6 @@
 	min-width: 300px;
 	max-width: 400px;
 
-
 	.tag-cloud {
 		display: flex;
 		justify-content: space-between;
@@ -31,7 +30,6 @@
 			padding: 7px 12px;
 			border: 1px solid rgba(201, 213, 228, 0.79);
 			background: rgba(198, 220, 237, 0.2);
-
 			@media(max-width: 1000px) {
 				font-size: 0.77em !important;
 				margin: 0 5px 5px 0;
@@ -54,12 +52,11 @@
 		background: white;
 		padding: 20px;
 		box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-		transition: all .3s ease-out;
-
+		transition: all 0.3s ease-out;
 		@media(max-width: 950px) {
-			 margin-right: 20px !important;
-			 margin-bottom: 20px !important;
-			 padding: 15px;
+			margin-right: 20px !important;
+			margin-bottom: 20px !important;
+			padding: 15px;
 		}
 
 		&:first-of-type {
@@ -69,9 +66,9 @@
 		&.text {
 			p {
 				font-size: 15px;
-		    font-family: 'soleil', sans-serif;
+				font-family: 'soleil', sans-serif;
 				font-weight: 300;
-		    line-height: 1.6;
+				line-height: 1.6;
 			}
 		}
 
@@ -97,7 +94,6 @@
 				box-shadow: 0 0 3px 1px rgba(95, 93, 138, 0.15);
 				opacity: 0.99;
 				padding: 0;
-
 				@media(max-width: 950px) {
 					box-shadow: none;
 				}
@@ -131,14 +127,12 @@
 	}
 
 	#newsletter-sidebar {
-
 		.newsletter {
 			width: 100%;
 			padding-top: 0 !important;
-			}
+		}
 
 		.newsletter-form {
-
 			width: -webkit-fill-available;
 			width: -moz-fill-available;
 
@@ -262,14 +256,13 @@
 			}
 		}
 
-			.news-description {
-				margin: 15px 0 20px;
-				font-size: 0.9em;
-				line-height: 1.5;
-				font-family: 'soleil', sans-serif;
-				font-weight: 300;
-			}
-
+		.news-description {
+			margin: 15px 0 20px;
+			font-size: 0.9em;
+			line-height: 1.5;
+			font-family: 'soleil', sans-serif;
+			font-weight: 300;
+		}
 
 		.country {
 			opacity: 0;
@@ -360,16 +353,14 @@
 			font-family: 'soleil',sans-serif;
 			display: flex;
 			align-items: center;
-
 			@media(max-width: 950px) {
-				 font-size: 14px;
+				font-size: 14px;
 			}
 
 			i,
 			svg {
 				width: 24px;
 				margin-right: 15px;
-
 				@media(max-width: 950px) {
 					width: 18px;
 					margin-right: 12px;
@@ -410,8 +401,8 @@
 		}
 
 		.graphql-hype svg {
-				color: @graphql-color;
-				fill: @graphql-color;
+			color: @graphql-color;
+			fill: @graphql-color;
 		}
 
 		.the-rise-of-google-cloud i {
@@ -626,81 +617,80 @@
 			}
 		}
 
-			.subscribe-input-class {
-				padding: 15px 5%;
-				width: 90%;
-				font-size: 14px;
-				border: 1px solid #ebebeb;
-				margin-bottom: 10px;
-			}
-
-			.form-group,
-			.input-group {
-				margin-bottom: 0;
-				display: block;
-
-				.email {
-					width: 100%;
-				}
-
-				.btn {
-					width: -webkit-fill-available;
-					width: -moz-fill-available;
-
-					&:hover {
-						background-color: @hover-color;
-						cursor: pointer;
-					}
-
-					span {
-						font-size: 14px;
-						text-transform: capitalize;
-					}
-				}
-			}
-
-			p {
-				margin-bottom: 10px;
-				font-size: 16px;
-				font-family: 'soleil',sans-serif;
-			}
+		.subscribe-input-class {
+			padding: 15px 5%;
+			width: 90%;
+			font-size: 14px;
+			border: 1px solid #ebebeb;
+			margin-bottom: 10px;
 		}
-	}
 
-	.share {
-		.share-icons {
-			padding: 0;
-			margin: 0;
-			display: flex;
-			justify-content: space-between;
+		.form-group,
+		.input-group {
+			margin-bottom: 0;
+			display: block;
 
-			li {
-				list-style: none;
-				display: inline-block;
-				border: 1px solid @border-color;
-				padding: 4px 9px 2px;
-				transition: 0.2s all ease-out;
-				border-radius: 2px;
-				margin-left: 10px;
+			.email {
+				width: 100%;
+			}
+
+			.btn {
+				width: -webkit-fill-available;
+				width: -moz-fill-available;
 
 				&:hover {
-					color: @white;
-					background: @theme-color;
-
-					a {
-						color: @white;
-					}
+					background-color: @hover-color;
+					cursor: pointer;
 				}
 
-				a {
-					color: #c4c4c4;
-					text-align: center;
-					font-size: 18px;
+				span {
+					font-size: 14px;
+					text-transform: capitalize;
 				}
 			}
 		}
-	}
 
+		p {
+			margin-bottom: 10px;
+			font-size: 16px;
+			font-family: 'soleil',sans-serif;
+		}
+	}
+}
+
+.share {
+	.share-icons {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			border: 1px solid @border-color;
+			padding: 4px 9px 2px;
+			transition: 0.2s all ease-out;
+			border-radius: 2px;
+			margin-left: 10px;
+
+			&:hover {
+				color: @white;
+				background: @theme-color;
+
+				a {
+					color: @white;
+				}
+			}
+
+			a {
+				color: #c4c4c4;
+				text-align: center;
+				font-size: 18px;
+			}
+		}
+	}
+}
 /* Hack for aligning magnifying glass on other pages */
 .page-template .search::after {
 	top: 14px;

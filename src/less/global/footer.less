@@ -39,7 +39,6 @@
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
-
 		@media(max-width: 600px) {
 			margin: auto;
 			justify-content: space-between;
@@ -82,7 +81,6 @@
 				}
 			}
 		}
-
 		@media(max-width: 800px) {
 			width: -webkit-fill-available;
 			margin: 10px 0 30px;
@@ -104,16 +102,14 @@
 .widget.about {
 	min-width: 24%;
 	width: 24%;
-
 	@media(max-width: 800px) {
 		width: 35% !important;
 	}
-
 	@media(max-width: 600px) {
 		min-width: 100%;
 		border-bottom: 1px solid rgba(76, 108, 157, 0.27);
 		padding-bottom: 20px !important;
-	  	margin: 0 0 20px;
+		margin: 0 0 20px;
 	}
 
 	.logo {
@@ -140,9 +136,8 @@
 		font-size: 0.85em;
 		line-height: 1.6;
 		margin: 15px 0 25px;
-
 		@media(max-width: 600px) {
-			 margin: 15px 0 20px;
+			margin: 15px 0 20px;
 		}
 	}
 
@@ -154,90 +149,89 @@
 		i {
 			font-size: 20px;
 			mix-blend-mode: hard-light;
-
 			@media(max-width: 600px) {
-				 font-size: 25px;
+				font-size: 25px;
 			}
 		}
 
 		.facebook i {
-				color: lighten(@facebook-color, 30%);
-			}
+			color: lighten(@facebook-color, 30%);
+		}
 
-			.twitter i {
-				color: lighten(@twitter-color, 10%);
-			}
+		.twitter i {
+			color: lighten(@twitter-color, 10%);
+		}
 
-			.google i {
-				color: lighten(@google-color, 10%);
-			}
+		.google i {
+			color: lighten(@google-color, 10%);
+		}
 
-			.tumblr i {
-				color: lighten(@tumblr-color, 30%);
-			}
+		.tumblr i {
+			color: lighten(@tumblr-color, 30%);
+		}
 
-			.github i {
-				color: white;
-			}
+		.github i {
+			color: white;
+		}
 
-			.pocket i {
-				color: lighten(#f14861, 10%);
-			}
+		.pocket i {
+			color: lighten(#f14861, 10%);
+		}
 
-			.quora i {
-				color: lighten(#b92b27, 10%);
-			}
+		.quora i {
+			color: lighten(#b92b27, 10%);
+		}
 
-			.rss i {
-				color: lighten(@rss-color, 30%);
-			}
+		.rss i {
+			color: lighten(@rss-color, 30%);
+		}
 
-			a {
-				font-weight: 100;
-				font-size: 1.4em;
-				margin: 0;
-				color: unset;
-				transition: all 0.3s ease-out;
+		a {
+			font-weight: 100;
+			font-size: 1.4em;
+			margin: 0;
+			color: unset;
+			transition: all 0.3s ease-out;
 
-				&:hover {
-					opacity: 1;
-					cursor: pointer;
-					* {
-						color: white;
-					}
+			&:hover {
+				opacity: 1;
+				cursor: pointer;
+
+				* {
+					color: white;
 				}
 			}
 		}
 	}
-	/*====================================================
+}
+/*====================================================
 			contributors
 =====================================================*/
-	.widget.contributors {
-		 margin-top: 10px;
-
-		@media(max-width: 800px) {
-			display: none;
-		}
+.widget.contributors {
+	margin-top: 10px;
+	@media(max-width: 800px) {
+		display: none;
 	}
+}
 
-	.widget.links,
-	.widget.tags {
-		margin-top: 10px;
-		@media(max-width: 600px) {
-			margin: 10px 0 0;
-		  width: 40%;
-			min-width: unset;
-		}
+.widget.links,
+.widget.tags {
+	margin-top: 10px;
+	@media(max-width: 600px) {
+		margin: 10px 0 0;
+		width: 40%;
+		min-width: unset;
 	}
+}
 
-	.copyright {
-		width: 100%;
-		background: #0b1622;
-		text-align: center;
-		color: white;
-		font-size: 0.85em;
-		font-family: 'soleil', sans-serif;
-		font-weight: 300;
-		padding: 15px 0;
-		line-height: 1.5;
-	}
+.copyright {
+	width: 100%;
+	background: #0b1622;
+	text-align: center;
+	color: white;
+	font-size: 0.85em;
+	font-family: 'soleil', sans-serif;
+	font-weight: 300;
+	padding: 15px 0;
+	line-height: 1.5;
+}

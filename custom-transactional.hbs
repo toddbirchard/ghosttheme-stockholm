@@ -15,18 +15,19 @@
 <body class="transactional">
 	<!-- start site's main content area -->
 	{{#post}}
-	<section>
-		<div class="container">
-			<!-- start post -->
-			<h1 class="post-title">{{{title}}}</h1>
-			{{{body}}}
-		</div>
-		<!-- end main post area -->
-	</section>
+		<section>
+			<div class="container">
+				<!-- start post -->
+				<h1 class="post-title">{{{title}}}</h1>
+				{{{body}}}
+			</div>
+			<!-- end main post area -->
+		</section>
 	{{/post}}
 	{{#contentFor "scripts"}}
 		<script async src="{{asset "js/transactional.js"}}"></script>
 	{{/contentFor}}
 </body>
+
 </html>
 <!-- end site's main content area -->

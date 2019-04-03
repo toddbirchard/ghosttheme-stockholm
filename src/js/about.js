@@ -44,7 +44,6 @@ function PopulateAuthorDetails(users) {
   }
 }
 
-
 async function get_authors(author_slug) {
   const endpoint = process.env.ENDPOINT;
   const token = process.env.AUTH;
@@ -69,12 +68,16 @@ async function get_authors(author_slug) {
     }`;
 
   // Initialize GraphQL Client
-  const client = new GraphQLClient(endpoint, { headers: {'Authorization': token}} );
-  client.request(query, vars).then(data =>   console.log(JSON.stringify(data)));
+  const client = new GraphQLClient(endpoint, {
+    headers: {
+      'Authorization': token
+    }
+  });
+  client.request(query, vars).then(data => console.log(JSON.stringify(data)));
   client.request(query, vars).then(data => PopulateAuthorDetails(data['authors'][0][author_slug]));
 }
 
-  $(document).ready(function() {
-    let author_slug = who_is_current_author();
-    get_authors(author_slug).catch(error => console.error(error));
-  });
+$(document).ready(function() {
+  let author_slug = who_is_current_author();
+  get_authors(author_slug).catch(error => console.error(error));
+});

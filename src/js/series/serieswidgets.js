@@ -71,8 +71,7 @@ $(document).ready(function() {
     var headers = {
       "Content-Type": "application/json"
     }
-    fetch({method: "GET", url: endpoint, headers: headers})
-    .then((res) => {
+    fetch({method: "GET", url: endpoint, headers: headers}).then((res) => {
       return res.json()
     }).then((json) => {
       tag_loop(json['posts'][0]['tags']);

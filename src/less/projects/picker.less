@@ -54,7 +54,6 @@
 
   .picker {
     float: right;
-
     @media(max-width: 600px) {
       display: none !important;
     }
@@ -155,7 +154,7 @@
       display: flex;
       align-items: center;
       padding: 5px;
-      transition: all .3s ease-out;
+      transition: all 0.3s ease-out;
 
       &:hover {
         color: #7C7E8D;
@@ -171,8 +170,8 @@
     background: white;
   }
 
-  svg,
-  i {
+  i,
+  svg {
     height: 20px;
     width: 20px;
     fill: #72b0e1;
@@ -196,12 +195,12 @@
     &:hover {
       background: @theme-color;
       cursor: pointer;
+
       & > i,
       & > span {
-        color:white;
+        color: white;
       }
     }
-
     @media(max-width: 600px) {
       display: flex !important;
       flex-direction: column;

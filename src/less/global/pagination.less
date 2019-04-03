@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixin.less";
-
 /*====================================================
 	pagination
 ====================================================*/
@@ -15,7 +14,7 @@
 
 	.older-posts {
 		position: absolute;
-		right:0;
+		right: 0;
 		top: 0;
 		background: #a1afc5;
 		color: white;
@@ -32,7 +31,7 @@
 
 	.newer-posts {
 		position: absolute;
-		left:0;
+		left: 0;
 		top: 0;
 		background: #a1afc5;
 		color: white;
@@ -49,15 +48,15 @@
 
 	a,
 	strong {
-    text-align: center;
-    display: inline-block;
-    color: #828994;
-    background: none;
-    border-radius: 2px;
-    padding: 8px 14px;
-    line-height: 1;
-    font-size: 1em;
-    font-weight: 700;
+		text-align: center;
+		display: inline-block;
+		color: #828994;
+		background: none;
+		border-radius: 2px;
+		padding: 8px 14px;
+		line-height: 1;
+		font-size: 1em;
+		font-weight: 700;
 
 		&:hover {
 			background: @hover-color;
@@ -66,7 +65,6 @@
 			cursor: pointer;
 		}
 	}
-
 	@media(max-width: 600px) {
 		a:nth-of-type(5),
 		a:nth-of-type(6),
@@ -76,13 +74,12 @@
 		}
 	}
 
-
 	strong {
 		border: 1px solid #6e89b5 !important;
 		color: #6e89b5 !important;
 		background: rgba(199, 210, 240, 0.19);
 		border-radius: 2px;
-		transition: all .2s ease-out;
+		transition: all 0.2s ease-out;
 
 		&:hover {
 			color: white !important;
@@ -99,21 +96,19 @@
 		max-width: 70%;
 
 		.page {
-		 margin: 0 15px;
+			margin: 0 15px;
 		}
-
 		@media(max-width: 600px) {
-			 max-width: 65%;
+			max-width: 65%;
 		}
 	}
 
 	.total-count {
 		color: #bec0d8;
 		margin-top: 10px;
-		font-size: .9em;
+		font-size: 0.9em;
 	}
 }
-
 /* Next & Prev buttons on post pages */
 /*
 .prev-next-wrap {

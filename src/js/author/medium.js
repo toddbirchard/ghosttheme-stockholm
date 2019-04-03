@@ -7,7 +7,9 @@ export function author_medium(medium, medium_key) {
       "postsPerLine": 1,
       "limit": 3,
       "picture": "small",
-      "fields": ["description","claps","publishAt"],
+      "fields": [
+        "description", "claps", "publishAt"
+      ],
       "ratio": "square",
       "picture": "small"
     }

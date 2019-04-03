@@ -3,18 +3,18 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="container">
-			<!-- end main post area -->
-			{{! insert sidebar partial}}
-			{{> sidebar}}
-				<!-- start main post area -->
-				<main class="main-content">
-					{{#is "tag"}}
-						{{> cover-tag}}
-					{{/is}}
-					<div class="postlist">
-						{{> loop}} {{pagination}}
-					</div>
-				</main>
+		<!-- end main post area -->
+		{{! insert sidebar partial}}
+		{{> sidebar}}
+		<!-- start main post area -->
+		<main class="main-content">
+			{{#is "tag"}}
+				{{> cover-tag}}
+			{{/is}}
+			<div class="postlist">
+				{{> loop}} {{pagination}}
+			</div>
+		</main>
 	</div>
 </section>
 <!-- end site's main content area -->

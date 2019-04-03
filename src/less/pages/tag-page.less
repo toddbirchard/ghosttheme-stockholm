@@ -1,7 +1,6 @@
 @import "../global/variables.less";
 
 .tag-template {
-
   .series-cover {
     background-size: cover;
     background-position-y: center;
@@ -9,7 +8,6 @@
     background-color: #192e4c;
     background-blend-mode: multiply;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-
     @media(max-width: 600px) {
       margin-left: calc(~"-50vw + 50%") !important;
       margin-right: calc(~"-50vw + 50%") !important;
@@ -58,7 +56,6 @@
         padding: 0;
         height: auto;
         display: block;
-
         @media(max-width: 600px) {
           height: auto;
           margin: 5px 15px 15px;
@@ -86,8 +83,7 @@
       .post-head {
         margin: 0;
         min-height: 140px;
-        padding: 0 5px 0;
-
+        padding: 0 5px;
         @media(max-width: 600px) {
           margin: 0 0 80px;
           min-height: unset;
@@ -120,8 +116,7 @@
         font-size: 1em !important;
         text-overflow: ellipsis;
         font-weight: 400;
-
-        @media(max-width: 600px){
+        @media(max-width: 600px) {
           font-size: 0.95em !important;
           min-height: unset;
           height: fit-content;
@@ -150,6 +145,7 @@
             line-height: 1;
             height: fit-content;
           }
+
           &:hover {
             background: @secondary-color;
             color: white;
@@ -169,7 +165,6 @@
   }
 }
 
-
 .tag-template {
   .tag-image {
     width: 100%;
@@ -184,14 +179,13 @@
 }
 
 .tag-template .post-preview {
-  padding:0 !important;
+  padding: 0 !important;
 }
 
 .page-series {
   .page-head {
     margin: 40px 40px 0;
     padding: 0;
-
     @media(max-width: 800px) {
       margin: 40px 30px 0;
     }
@@ -207,7 +201,6 @@
       @media(max-width: 900px) {
         margin: 25px 50px 0;
       }
-
     }
 
     .page-title {
@@ -230,7 +223,6 @@
     color: #505050;
     margin: -20px 40px 30px;
     font-weight: 300;
-
     @media(max-width: 900px) {
       min-height: 63px;
       margin: -20px 30px 30px;
@@ -315,11 +307,9 @@
         position: relative;
         display: block;
         transition: all 0.3s ease-out;
-
         @media(max-width: 800px) {
           max-height: 206px;
         }
-
         @media(max-width: 600px) {
           max-height: 186px;
         }
@@ -348,24 +338,19 @@
         display: block;
         text-align: left;
         min-height: 130px;
-
         @media(max-width: 1000px) {
           min-height: 156px;
         }
-
         @media(max-width: 900px) {
           min-height: 172px;
         }
-
         @media(max-width: 800px) {
           min-height: 104px;
         }
-
         @media(max-width: 700px) {
           min-height: 121px;
         }
-
-        @media(max-width: 600px){
+        @media(max-width: 600px) {
           min-height: 0;
         }
 
@@ -390,7 +375,6 @@
           flex-grow: 1;
           flex-shrink: 0;
           flex-basis: auto;
-
           @media(max-width: 600px) {
             margin: 10px 0 25px;
             min-height: 0;

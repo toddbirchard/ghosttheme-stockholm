@@ -1,18 +1,18 @@
 @import "nord.less";
 
 .post-content {
-  .language-bash,
-  .language-output,
-  .language-shell,
-  .language-endpoint,
-  .language-properties,
   .bash,
-  .shell,
-  .output,
   .endpoint,
-  .shell,
+  .hljs,
+  .language-bash,
+  .language-endpoint,
+  .language-output,
+  .language-properties,
+  .language-shell,
+  .output,
   .properties,
-  .hljs {
+  .shell,
+  .shell {
     background-color: #212733;
     color: #eceff4;
     font-weight: normal;
@@ -22,22 +22,22 @@
       font-weight: normal;
     }
 
-      .snippet {
-        color: #81a1c1;
-      }
+    .snippet {
+      color: #81a1c1;
+    }
 
-      .tabstop,
-      .hljs-meta {
-        color: #ebcb8b;
-      }
+    .hljs-meta,
+    .tabstop {
+      color: #ebcb8b;
+    }
 
-      .trigger {
-        color: #88c0d0;
-      }
+    .trigger {
+      color: #88c0d0;
+    }
 
-      .name {
-        color: #a3be8c;
-      }
+    .name {
+      color: #a3be8c;
+    }
 
     .tag {
       color: @nord9;
@@ -53,9 +53,9 @@
     }
 
     .built_in,
+    .hljs-built_in,
     .section,
-    .selector-tag,
-    .hljs-built_in {
+    .selector-tag {
       color: #cbbdff;
     }
 
@@ -127,7 +127,6 @@
   .hljs.shell,
   .language-bash,
   .language-shell {
-
     &::before {
       content: "Shell" !important;
       color: white;

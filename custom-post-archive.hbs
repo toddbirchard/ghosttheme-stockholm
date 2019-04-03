@@ -3,15 +3,15 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="container">
-			<!-- start main post area -->
-			<main class="main-content">
-				<div class="postlist">
+		<!-- start main post area -->
+		<main class="main-content">
+			<div class="postlist">
 				{{> loop}}
 				{{pagination}}
 			</div>
 		</main>
-			<!-- end main post area -->
-		</div>
+		<!-- end main post area -->
+	</div>
 </section>
 {{#contentFor "scripts"}}
 	<script async src="{{asset "js/postarchive.js"}}"></script>

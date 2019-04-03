@@ -14,9 +14,9 @@ import {tags} from './global/tags.js';
  ==========================*/
 
 var globalFunctions = {
-  fallbackImages: function(){
+  fallbackImages: function() {
     var images = $('picture');
-    $(images).each(function(){
+    $(images).each(function() {
       var imagepaths = $(this).find('source:last-of-type').attr('srcset');
       var standardres = String(imagepaths).split(' @1x')[0];
       var highres = String(imagepaths).split(' @1x,')[1];
@@ -26,7 +26,7 @@ var globalFunctions = {
       console.log('new_srcset = ' + new_srcset);
     });
     picturefill({
-      elements: [ document.getElementsByName('picture') ]
+      elements: [document.getElementsByName('picture')]
     });
   },
   retina: function() {

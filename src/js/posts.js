@@ -35,11 +35,11 @@ hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
 
 const postFunctions = {
-  init_highlightjs: function(){
+  init_highlightjs: function() {
     hljs.configure({
       tabReplace: '  ', // 2 spaces
-      classPrefix: ''     // don't append class prefix
-                          // … other options aren't changed
+      classPrefix: '' // don't append class prefix
+      // … other options aren't changed
     });
     hljs.initHighlightingOnLoad();
   },
@@ -64,11 +64,11 @@ const postFunctions = {
     });
   },
   mergedTableCells: function() {
-      $('table').find('th').each(function() {
-        if ($(this).attr('rowspan')) {
-          $(this).css('border-bottom', '2px solid #f6f8fe');
-        }
-      });
+    $('table').find('th').each(function() {
+      if ($(this).attr('rowspan')) {
+        $(this).css('border-bottom', '2px solid #f6f8fe');
+      }
+    });
   },
   scrollableTables: function() {
     let tables = document.getElementsByClassName('tableContainer');
@@ -184,7 +184,8 @@ const postFunctions = {
         postFunctions.create_nextprev_widget(posts);
         const post_slug = postFunctions.current_page();
         $('.' + post_slug).addClass('currentPost');
-        $('#seriesposts ol').attr('style', 'counter-reset:li ' + (posts.length + 1));
+        $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
+        posts.length + 1));
       }
     });
   },

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
 	{{! Document Settings }}
 	<meta charset="utf-8" />
@@ -8,13 +9,13 @@
 	<title>{{meta_title}} | Data Science & Engineering</title>
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-	<meta name="theme-color" content="#0db0e2" />
+	<meta name="theme-color" content="#5eb9d7" />
 	<link rel="shortcut icon" href="{{@site.icon}}" />
 	{{! Scripts }}
 	{{> lazyload}}
 	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 	{{#is "post"}}
-	        <meta property="og:image" content="{{img_url feature_image}}">
+		<meta property="og:image" content="{{img_url feature_image}}">
 		{{else}}
 			<meta property="og:image" content="{{img_url @site.cover_image}}" />
 	{{/is}}
@@ -31,4 +32,5 @@
 	{{{block "scripts"}}}
 	{{ghost_foot}}
 </body>
+
 </html>

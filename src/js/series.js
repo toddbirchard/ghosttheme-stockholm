@@ -1,14 +1,14 @@
-import  '../less/series.less';
+import '../less/series.less';
 
 var pageFunctions = {
-  seriesSorter: function(){
-      $('.sort-container').on('click', function(){
-    		$('.sorted-series').toggleClass('descending');
-    	});
+  seriesSorter: function() {
+    $('.sort-container').on('click', function() {
+      $('.sorted-series').toggleClass('descending');
+    });
 
-    	$('.sort-container').on('click', function(e) {
-    		$('.sort').toggleClass('sort-toggle');
-    	});
+    $('.sort-container').on('click', function(e) {
+      $('.sort').toggleClass('sort-toggle');
+    });
   }
 };
 

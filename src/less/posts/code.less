@@ -1,12 +1,11 @@
 /* Global Styles */
-
 blockquote pre {
   width: 96% !important;
   margin: auto;
 
   p {
-     margin-bottom: 0 !important;
-   }
+    margin-bottom: 0 !important;
+  }
 
   code {
     &::before {
@@ -30,7 +29,6 @@ blockquote pre {
     margin: 40px auto;
     border-radius: 4px;
     max-width: 100%;
-
     @media(max-width: 600px) {
       max-width: none;
       width: auto;
@@ -51,7 +49,6 @@ blockquote pre {
       margin: 0;
       height: 100%;
       font-size: 0.8em;
-
       @media(max-width: 600px) {
         overflow-y: hidden;
         font-size: 0.7em;
@@ -78,7 +75,6 @@ blockquote pre {
     font-family: 'Hack', sans-serif;
     white-space: nowrap;
   }
-
 
   .fullscreenbtn {
     position: absolute;
@@ -117,15 +113,12 @@ blockquote pre {
     width: 110%;
   }
 
-
   .hljs.ini,
   .language-ini {
     &::before {
       content: "ini";
     }
   }
-
-
 
   .language-xml {
     &::before {
@@ -222,14 +215,14 @@ blockquote pre {
   display: none;
   opacity: 1;
   transition: all 0.4s ease-out;
-   mix-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
   @media(max-width: 600px) {
     display: block;
   }
 }
 
 .fullWidth {
-  @media(max-width: 600px){
+  @media(max-width: 600px) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
   }
