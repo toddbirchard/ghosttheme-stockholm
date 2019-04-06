@@ -1,17 +1,15 @@
 import '../less/series.less';
 
-var pageFunctions = {
-  seriesSorter: function() {
-    $('.sort-container').on('click', function() {
-      $('.sorted-series').toggleClass('descending');
-    });
+function series_sorter() {
+  $('.sort-container').on('click', function() {
+    $('.sorted-series').toggleClass('descending');
+  });
 
-    $('.sort-container').on('click', function(e) {
-      $('.sort').toggleClass('sort-toggle');
-    });
-  }
-};
+  $('.sort-container').on('click', function(e) {
+    $('.sort').toggleClass('sort-toggle');
+  });
+}
 
 $(document).ready(function() {
-  pageFunctions.seriesSorter();
+  series_sorter();
 });

@@ -4,17 +4,11 @@ import {search} from './global/search.js';
 import {series_icons} from './global/seriesicons.js';
 import {tags} from './global/tags.js';
 
-/*====================================================
-  TABLE OF CONTENTS
-  1. Function Declaration
-  2. Initialization
-====================================================*/
 /*===========================
  1. Function Declaration
  ==========================*/
 
-var globalFunctions = {
-  fallbackImages: function() {
+  function fallback_images() {
     var images = $('picture');
     $(images).each(function() {
       var imagepaths = $(this).find('source:last-of-type').attr('srcset');
@@ -28,23 +22,20 @@ var globalFunctions = {
     picturefill({
       elements: [document.getElementsByName('picture')]
     });
-  },
-  retina: function() {
+  }
+  
+  function retina() {
     // Order matters!!
     $('img').attr('data-rjs', 2);
     Retina();
-  },
-  init: function() {
-    globalFunctions.retina();
-    globalFunctions.fallbackImages();
   }
-};
 
 /* ===========================
 2. Initialization
 =========================== */
 $(document).ready(function() {
-  globalFunctions.init();
+  fallback_images();
+  retina();
   tags();
   series_icons();
   search();

@@ -15,14 +15,12 @@ function makeAuthorSidebar(data, author_slug) {
   let medium = JSON.stringify(data['authors'][0]['medium']);
   author_github(github, author_slug);
   author_medium(medium, medium_key);
-  console.log(data);
 }
 
 function who_is_current_author() {
   const sPath = String(document.location.pathname);
   let slug = sPath.substring(sPath.lastIndexOf("/") - 4);
   slug = slug.replace('/', '');
-  console.log('slug = ' + slug);
   return slug;
 }
 
