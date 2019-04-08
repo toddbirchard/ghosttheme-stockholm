@@ -8,7 +8,7 @@
   {{/if}}
   <div class="author-specs">
     {{#if profile_image}}
-      <a href="{{url}}" class="avatar-link"><img src="{{img_url profile_image}}" alt="{{name}}'s' avatar" class="avatar"></a>
+      <a href="{{url}}" class="avatar-link"><img src="{{img_url profile_image}}" alt="{{name}}'s' avatar" loading="lazy" class="lazy avatar"></a>
     {{else}}
       <a href="{{url}}" class="avatar-link"><img src="{{asset "default-user-image.jpg"}}" alt="{{name}}'s' avatar" class="avatar"></a>
     {{/if}}
@@ -36,27 +36,31 @@
   {{/if}}
   <div class="author-social">
     <ul class="author-icons">
-      <!-- twitter -->
+      <!-- Twitter -->
       <li class="btn twitter">
         <a><i class="fab fa-twitter"></i></a>
       </li>
-      <!-- facebook -->
+      <!-- Facebook -->
       <li class="btn facebook">
         <a><i class="fab fa-facebook"></i></a>
       </li>
-      <!-- linkedin -->
+      <!-- LinkedIn -->
       <li class="btn linkedin">
         <a><i class="fab fa-linkedin"></i></a>
       </li>
+      <!-- Medium -->
       <li class="btn medium">
         <a><i class="fab fa-medium"></i></a>
       </li>
+      <!-- Quora -->
       <li class="btn quora">
         <a><i class="fab fa-quora"></i></a>
       </li>
+      <!-- GitHub -->
       <li class="btn github">
         <a><i class="fab fa-github"></i></a>
       </li>
+      <!-- Pocket -->
       <li class="btn pocket">
         <a><i class="fab fa-get-pocket"></i></a>
       </li>

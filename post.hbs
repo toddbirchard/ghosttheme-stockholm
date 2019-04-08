@@ -13,9 +13,9 @@
 					{{#if feature_image}}
 						<div class="featured-media">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image size="large_retina"}} 2x">
-								<source media="(min-width: 600px)" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
-								<img alt="{{title}}" class="lazy" src="{{img_url feature_image}}">
+								<source media="(min-width: 600px)" loading="lazy" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+								<source media="(min-width: 1200px)" loading="lazy" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image}} 2x">
+								<img alt="{{title}}" class="lazy" loading="lazy" src="{{img_url feature_image}}">
 							</picture>
 						</div>
 					{{/if}}
@@ -32,8 +32,8 @@
 								<a href="{{url}}" class="meta-item author mobile"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
 							{{/unless}}
 							{{#if profile_image}}
-								<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image absolute="true" size="small"}}" alt="{{slug}}'s Author image" class="avi"><span>{{name}}</span></a>
-								<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image absolute="true" size="small"}}" alt="{{slug}}'s Author image" class="avi"><span>{{slug}}</span></a>
+								<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image absolute="true"}}" alt="{{slug}}'s Author image" loading="lazy" class="avi lazy"><span>{{name}}</span></a>
+								<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image absolute="true"}}" alt="{{slug}}'s Author image" loading="lazy" class="avi lazy"><span>{{slug}}</span></a>
 							{{/if}}
 						{{/primary_author}}
 						<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
