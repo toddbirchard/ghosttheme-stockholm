@@ -89,14 +89,15 @@
 				border: 1px solid #dbdbdb;
 				padding: 0;
 				margin: auto 0;
-				min-width: 23%;
+				min-width: 19%;
 				@media(max-width: @tablet-breakpoint) {
 					min-width: none !important;
 					border: 1px solid #eaeaea;
-					height: 30px;
+					height: 36px;
 				}
 				@media(max-width: @mobile-breakpoint) {
 					border: none;
+					min-width: unset;
 				}
 
 				&:before {
@@ -107,8 +108,19 @@
 					text-align: center;
 					display: block;
 					padding: 7px 0 7px 0 !important;
-					width: -webkit-fill-available;
-					width: -moz-fill-available;
+					width: fit-content;
+					margin: 0 auto;
+					padding: 0;
+					display: block;
+					@media(max-width: @tablet-breakpoint) {
+						padding: 3px 0 !important;
+						height: fit-content;
+					}
+					@media(max-width: @mobile-breakpoint) {
+						padding: 0 !important;
+						margin: 0;
+						height: fit-content;
+					}
 				}
 
 				&.facebook {
@@ -151,14 +163,11 @@
 					}
 				}
 
-				a {
-					width: -webkit-fill-available;
-					margin: 0;
-					padding: 0;
-					display: block;
-					@media(max-width:800px) {
-						padding: 0 !important;
-						height: fit-content;
+				&.reddit {
+					&:hover {
+						background-color: lighten(@reddit-color, 15%);
+						box-shadow: lighten(@reddit-color, 35%);
+						cursor: pointer;
 					}
 				}
 
@@ -171,7 +180,7 @@
 				}
 
 				i {
-					margin: auto;
+					margin: 0 auto;
 					color: #a3a7b2;
 					font-size: 19px;
 					display: block;
@@ -184,22 +193,18 @@
 
 			a {
 				border: 0;
-				padding: 5px 11px;
-				color: #fff;
 				line-height: 1.5em;
-				display: inline-block;
 				border-radius: 2px;
 				.transition(all 0.2s ease);
 				font-size: 0.9em;
-				margin: 5px 10px 5px 0;
 
 				&:hover {
 					color: @white;
 					text-decoration: none;
 
 					i {
-						-webkit-transform: scale(1.05);
-						transform: scale(1.05);
+						-webkit-transform: scale(1.1);
+						transform: scale(1.1);
 					}
 
 					span {
@@ -232,6 +237,7 @@ section .widget.newsletter {
 			margin: 5px 0 15px;
 			line-height: 1.5;
 			font-size: 0.8em !important;
+			font-weight: 300;
 			font-family: @body-font;
 		}
 
@@ -343,7 +349,6 @@ section .widget.newsletter {
 	.author-card-small {
 		border-left: unset !important;
 		border-bottom: unset !important;
-
 		@media(max-width: @mobile-breakpoint) {
 			min-height: 360px;
 		}

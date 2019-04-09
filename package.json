@@ -1,8 +1,8 @@
 {
   "name": "stockholm",
   "description": "Fully featured theme with clean presentation.",
-  "homepage": "https://hackersandslackers.com",
-  "demo": "https://hackersandslackers.com",
+  "homepage": "https://ghostthemes.io/",
+  "demo": "https://hackersandslackers.com/",
   "version": "0.0.1",
   "main": "src/js/global.js",
   "scripts": {
