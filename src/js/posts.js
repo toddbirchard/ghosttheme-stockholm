@@ -1,8 +1,14 @@
-require('es6-promise').polyfill();
+// Styles
 import '../less/posts.less';
 
+// Dependency Imports
+require('es6-promise').polyfill();
+import ScrollBooster from 'scrollbooster';
+import baguetteBox from 'baguettebox.js';
+const fetch = require('isomorphic-fetch');
+
 // Import hljs
-import javascript from 'highlight.js/lib/languages/javascript';
+/*import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import shell from 'highlight.js/lib/languages/shell';
 import sql from 'highlight.js/lib/languages/sql';
@@ -14,15 +20,10 @@ import less from 'highlight.js/lib/languages/less';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
 import nginx from 'highlight.js/lib/languages/nginx';
-import hljs from 'highlight.js/lib/highlight';
-
-// Additional imports
-import ScrollBooster from 'scrollbooster';
-import baguetteBox from 'baguettebox.js';
-const fetch = require('isomorphic-fetch');
+import hljs from 'highlight.js/lib/highlight';*/
 
 // Register highlight.js languages
-hljs.registerLanguage('javascript', javascript);
+/*hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('shell', shell);
 hljs.registerLanguage('sql', sql);
@@ -35,7 +36,7 @@ hljs.registerLanguage('handlebars', handlebars);
 hljs.registerLanguage('less', less);
 hljs.registerLanguage('nginx', nginx);
 
-hljs.initHighlightingOnLoad();
+hljs.initHighlightingOnLoad();*/
 
 function code_snippet_full_screen() {
   $('main > pre').each(function() {
@@ -58,13 +59,13 @@ function code_snippet_full_screen() {
   });
 }
 
-function mergedTableCells() {
+/*function mergedTableCells() {
   $('table').find('th').each(function() {
     if ($(this).attr('rowspan')) {
       $(this).css('border-bottom', '2px solid #f6f8fe');
     }
   });
-}
+}*/
 
 function scrollable_tables() {
   let tables = document.getElementsByClassName('tableContainer');
@@ -124,7 +125,7 @@ function current_page() {
 
 function create_nextprev_widget(posts) {
   var numposts = posts.length;
-  var post_slug = postFunctions.current_page();
+  var post_slug = current_page();
   var index = posts.findIndex(function(item, i) {
     return item.slug === post_slug;
   });
@@ -181,10 +182,10 @@ function posts_in_series(series, series_name) {
           'slug': slug,
           'numposts': numposts
         };
-        postFunctions.populate_series_list(post_dict);
+        populate_series_list(post_dict);
       }
-      postFunctions.create_nextprev_widget(posts);
-      const post_slug = postFunctions.current_page();
+      create_nextprev_widget(posts);
+      const post_slug = current_page();
       $('.' + post_slug).addClass('currentPost');
       $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
       posts.length + 1));
@@ -199,13 +200,13 @@ function tag_loop(tags) {
     if (tag['visibility'] == "internal") {
       const series = tag['slug'];
       const series_name = tag['meta_title'];
-      postFunctions.posts_in_series(series, series_name);
+      posts_in_series(series, series_name);
     }
   }
 }
 
 function detect_series() {
-  const post_slug = postFunctions.current_page();
+  const post_slug = current_page();
   const endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + post_slug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
   const headers = {
     "Content-Type": "application/json"
@@ -216,14 +217,14 @@ function detect_series() {
   }).then((res) => {
     return res.json()
   }).then((json) => {
-    postFunctions.tag_loop(json['posts'][0]['tags']);
+    tag_loop(json['posts'][0]['tags']);
   }).catch(err => {
     console.log(err.response.errors); // API response errors
     console.log(err.response.data); // Response data if available
   });
 }
 
-function reduce_indents() {
+/* function reduce_indents() {
   $('.language-python').text(function() {
     return $(this).text().replace("    ", "  ");
   });
@@ -233,7 +234,7 @@ function reduce_indents() {
   $('.language-javascript').text(function() {
     return $(this).text().replace("    ", "  ");
   })
-}
+}*/
 
 $(document).ready(function() {
   code_snippet_full_screen();
