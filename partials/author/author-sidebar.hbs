@@ -1,13 +1,13 @@
 
 <div class="sidebar" class="{{author.slug}}">
-  {{> widgets/widget-authorwebsite}}
-	{{> widgets/widget-authorgithub}}
-	{{> widgets/widget-medium}}
-	{{> widgets/widget-meetup}}
-	{{> widgets/widget-rss}}
+  {{> author/widget-authorwebsite}}
+	{{> author/widget-authorgithub}}
+	{{> author/widget-medium}}
+	{{> author/widget-meetup}}
+	{{> author/widget-rss}}
 	{{#has slug="todd"}}
-		{{> widgets/widget-authortwitter}}
+		{{> author/widget-authortwitter}}
 	{{else}}
-        {{> widgets/widget-authortwitter}}
+        {{> author/widget-authortwitter}}
 	{{/has}}
 </div>
