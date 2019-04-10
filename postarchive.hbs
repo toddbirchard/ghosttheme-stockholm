@@ -6,12 +6,9 @@
 		<!-- start main post area -->
 		<main class="main-content">
 			<div class="postlist">
-				{{#get "posts" include="tags,authors" limit="all" order="published_at desc" as |post|}}
-					{{#foreach post}}
-							{{> loop}}
-					{{/foreach}}
-					{{pagination}}
-				{{/get}}
+				{{#foreach posts}}
+					{{> postpreview}}
+				{{/foreach}}
 			</div>
 		</main>
 		<!-- end main post area -->
