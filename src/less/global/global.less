@@ -50,25 +50,25 @@ h1 {
 	color: @header-color;
 }
 
-h1,
+
 h2,
 h4,
 h5,
 h6 {
-	font-family: 'ProductSans-Medium', 'AvenirNextLTPro-Light', sans-serif;
+	font-family: @body-font-bold;
 	font-weight: 700;
 	color: @header-color;
 }
 
 h3 {
-	font-family: 'AvenirNextLTPro-Medium', serif;
+	font-family: @body-font-bold;
 	color: @header-color;
 }
 
 .h2,
 h2 {
 	font-size: 2.2em;
-	font-family: 'AvenirNextLTPro-Light';
+	font-family: @body-font;
 	@media(max-width: @mobile-breakpoint) {
 		font-size: 2em;
 	}
@@ -88,7 +88,7 @@ h5 {
 	font-size: 1.4em;
 	font-weight: 500;
 	margin: 5px 0 0;
-	font-family: 'AvenirNextLTPro-Light', serif;
+	font-family: @body-font;
 	color: @text-color-heading;
 	line-height: 1;
 	text-align: left;
