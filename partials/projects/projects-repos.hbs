@@ -1,11 +1,7 @@
 <div class="repos">
 </div>
 <script>
-  /*===========================
-     1. function declaretion
-     ==========================*/
-
-  function get_repos(){
+  function get_repos() {
     for (var i = 0; i < docs.length; i++) {
       $('.repos').append('<a href="' + docs[i].url + '"> \n' +
         '<div class="link-preview"> \n' +
@@ -17,9 +13,4 @@
         '</div></div></a>');
     }
   }
-
-
-  /*===========================
-  2. Initialization
-  ==========================*/
 </script>

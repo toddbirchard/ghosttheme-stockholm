@@ -1,20 +1,20 @@
-<!-- start series widget -->
+<!-- Start Series Widget -->
 <div class="widget series">
-    <h4 class="title">Series'</h4>
-    <div>
-        {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
-            {{#foreach tags visibility="internal"}}
-                <div class="seriesitem {{slug}}">
-                    <div class="series-info">
-                        <a href="/series/{{slug}}/" class="post-title"><span style="display:inline-block; line-height:1;">{{meta_title}}</span></a>
-                        {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
-                        {{#if description}}
-                            <p class="description">{{description}}</p>
-                        {{/if}}
-                    </div>
-                </div>
-            {{/foreach}}
-        {{/get}}
-    </div>
+  <h4 class="title">Series'</h4>
+  <div>
+    {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
+      {{#foreach tags visibility="internal"}}
+        <div class="seriesitem {{slug}}">
+          <div class="series-info">
+            <a href="/series/{{slug}}/" class="post-title"><span style="display:inline-block; line-height:1;">{{meta_title}}</span></a>
+            {{!--<span class="count">{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>--}}
+            {{#if description}}
+              <p class="description">{{description}}</p>
+            {{/if}}
+          </div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
 </div>
-<!-- end series widget -->
+<!-- End Series Widget -->
