@@ -130,7 +130,7 @@
 			Line-height: 1.15;
 			margin: 0 0 10px;
 			font-weight: 900;
-			font-family: 'ProductSans-Bold', 'AvenirNextLTPro-Light', sans-serif;
+			font-family:  @h1-font;
 			@media(max-width: 950px) {
 				font-size: 1.8em;
 			}
@@ -144,13 +144,13 @@
 			a {
 				color: @text-color-heading;
 				transition: all 0.2s ease-out;
-				font-family: 'ProductSans-Medium', sans-serif;
+				font-family: @h1-font;
 
 				&:hover {
 					color: @secondary-color;
 				}
 				@media(max-width: @mobile-breakpoint) {
-					font-family: 'ProductSans-Bold', 'AvenirNextLTPro-Light', sans-serif;
+					font-family:  @h1-font;
 					font-weight: 500;
 				}
 			}
@@ -159,11 +159,11 @@
 		.post-excerpt {
 			margin: 10px auto 0;
 			line-height: 1.21;
-			font-weight: 400;
+			font-weight: 600;
 			text-align: left;
 			font-size: 1.2em;
 			color: #153b52;
-			font-family: 'ProductSans-Regular', sans-serif;
+			font-family: @header-light-font;
 			@media(max-width: @mobile-breakpoint) {
 				font-size: 1.05em !important;
 				-webkit-line-clamp: 2;
@@ -305,7 +305,7 @@
 				span {
 					line-height: 1.2;
 					font-size: 13px;
-					font-family: @body-font;
+					font-family: @body-font-bold;
 					transition: all .3s ease-out;
 					@media(max-width: @mobile-breakpoint) {
 						font-size: 13px;
@@ -436,9 +436,8 @@
 			background: @button-color;
 			box-shadow: -1px 1px 0 @button-shadow, -1px 0 0 @button-shadow, 0 1px 0 @button-shadow;
 			color: white;
-			font-family: 'AvenirNextLTPro-Medium', sans-serif;
+			font-family: @body-font-bold;
 			font-size: 18px;
-			font-weight: 600;
 			line-height: 1;
 			text-transform: uppercase;
 			letter-spacing: 1px;

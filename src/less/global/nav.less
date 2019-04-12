@@ -27,7 +27,7 @@ nav {
 			transition: all 0.3s ease-out;
 
 			&:hover {
-				cursor: pointer;
+				cursor: pointer !important;
 				opacity: 0.6;
 			}
 			@media(max-width: @mobile-breakpoint) {
@@ -194,7 +194,7 @@ nav {
 				}
 
 				a {
-					font-family: 'ProductSans-Regular', sans-serif;
+					font-family: @h1-font;
 					font-size: 0.9em;
 					text-transform: uppercase;
 					transform: scale(1);
@@ -273,7 +273,7 @@ nav {
 		}
 
 		a {
-			font-family: 'ProductSans-Regular', sans-serif;
+			font-family: @h1-font;
 			font-size: 0.85em;
 			text-transform: uppercase;
 			color: #515b65;
@@ -743,13 +743,13 @@ nav {
 
 		button {
 			border: none;
-			font-family: 'AvenirNextLTPro-Medium', sans-serif;
+			font-family: @body-font-bold;
     	font-weight: 100;
 			font-size: 0.9em;
 			padding: 0;
-			height: 52px;
+			height: 48px;
 			background: none;
-			color: @text-color !important;
+			color: #454a57 !important;
 		}
 
 		.dropdown-content {
@@ -761,6 +761,7 @@ nav {
 			position: absolute;
 			opacity: 0;
 			padding: 5px;
+			top: 46px;
 
 			a {
 				display: block;
