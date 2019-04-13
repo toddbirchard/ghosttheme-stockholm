@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   function remove_images() {
-    $('img').each(function(index, element) {
+    $('img').each(function() {
       if ($(this).attr('src') == 'null') {
         $(this).parent().remove();
       }
@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
   function postLinkPreviews() {
-    $("main > p > a").each(function(index, element) {
+    $("main > p > a").each(function(element) {
       var link = $(element).attr('href');
       var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + link;
       $(element).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
@@ -38,7 +38,7 @@ $(document).ready(function() {
   }
 
   function authorLinkPreviews() {
-    $(".author-website a").each(function(index, element) {
+    $(".author-website a").each(function(element) {
       var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + $(this).text();
       var headers = {
         "Content-Type": "application/json"
