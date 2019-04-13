@@ -60,6 +60,7 @@
 
       &:hover {
         color: @hover-color;
+        cursor: pointer;
       }
     }
   }
@@ -143,7 +144,6 @@
       display: block;
       width: auto;
       border-width: 1px 0;
-      /* color: #29d4a7; */
       font-size: 1em;
       padding: 15px 0 0;
       height: fit-content;
@@ -165,7 +165,7 @@
 
       &:hover {
         background-color: @theme-color;
-        color: white;
+        color: white !important;
         cursor: pointer;
 
         span {
@@ -186,7 +186,7 @@
       max-width: 280px;
       text-overflow: ellipsis;
       color: @theme-color;
-      font-family: @body-font;
+      font-family: @body-font-bold;
       font-size: 1em;
     }
 
@@ -201,7 +201,7 @@
       font-size: 1.2em;
       right: 1em;
       top: 1.6em;
-      color: #ecb062;
+      color: #e39e45;
       font-weight: 600;
       margin-top: -5px;
 
@@ -209,7 +209,7 @@
         content: '\a0\2605';
         font-size: 1.1em;
         font-weight: bold;
-        color: #ecb062;
+        color: #e39e45;
         opacity: 0.5;
       }
     }
@@ -220,6 +220,11 @@
 
     &:hover {
       color: #4183C4;
+      cursor: pointer;
+
+      .star::after {
+        color: white;
+      }
     }
   }
 
