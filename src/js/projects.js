@@ -66,7 +66,7 @@ function construct_query(project) {
         assignee_name
         assignee_url
       }
-      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: priority_rank_ASC, first: 6) {
+      progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updatedAt_DESC, first: 6) {
         key
         summary
         epic_color
