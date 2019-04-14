@@ -10,15 +10,14 @@ import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
-//import { hljs_init } from './posts/hljsinit.js';
 
-/*function mergedTableCells() {
+function mergedTableCells() {
   $('table').find('th').each(function() {
     if ($(this).attr('rowspan')) {
       $(this).css('border-bottom', '2px solid #f6f8fe');
     }
   });
-}*/
+}
 
 function add_image_alt_tags() {
   $('main img').each(function() {
@@ -136,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function(){
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();
-  // add_image_alt_tags();
+  add_image_alt_tags();
   detect_series();
   post_link_previews();
   //hljs_init();
