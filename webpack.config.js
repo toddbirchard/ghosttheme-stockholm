@@ -2,9 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 const FontConfigWebpackPlugin = require('font-config-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
+
 
 module.exports = {
   mode: 'production',
@@ -38,9 +39,7 @@ module.exports = {
     filename: '[name].js'
   },
   optimization: {
-    minimizer: [new UglifyJsPlugin({
-        cache: true, parallel: true, sourceMap: true // set to true if you want JS source maps
-      })]
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
@@ -64,8 +63,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: "eslint-loader"
       }, */{
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.m?js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -76,7 +75,7 @@ module.exports = {
         test: /\.html$/,
         loaders: ['file-loader?name=[name].html', 'extract-loader', 'html-loader']
       }, {
-        test: /\.(graphql|gql)$/,
+        test: /\.gql$/,
         exclude: /node_modules/,
         loader: 'graphql-tag/loader'
       }
