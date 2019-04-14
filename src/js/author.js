@@ -1,8 +1,7 @@
 import '../less/pages.less';
 import '../less/author.less';
-//import { GitHubCard } from 'github-profile-card';
-import {GraphQLClient} from 'graphql-request';
-import {author_github} from './author/github.js';
+import { GraphQLClient } from 'graphql-request';
+import { author_github } from './author/github.js';
 // import {author_medium} from './author/medium.js';
 // import author_meetup from '../src/js/author/meetup.js';
 

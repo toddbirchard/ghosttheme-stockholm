@@ -1,15 +1,17 @@
 // Styles
 import '../less/posts.less';
-
 // Dependencies
 require('es6-promise').polyfill();
 import { fetch } from 'isomorphic-fetch';
-
+import { GraphQLClient } from 'graphql-request';
 // Imported Functions
 import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
+import { get_author_social } from './posts/authorsocial.js';
+
+
 
 function mergedTableCells() {
   $('table').find('th').each(function() {
@@ -132,6 +134,7 @@ function detect_series() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+  get_author_social();
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();

@@ -9,9 +9,11 @@
 	justify-content: space-between;
 	align-items: center;
 	height: fit-content;
-	margin-top: 70px;
+	margin-top: 60px;
 	width: 100%;
 	max-width: 100%;
+	border-top: 2px dotted #f3f3f3;
+border-style: dotted none none;	
 	@media(max-width: @tablet-breakpoint) {
 		width: 100% !important;
 		display: block;
@@ -25,7 +27,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: flex-start;
-		margin: 30px 0;
+		margin: 30px 0 0;
 
 		a {
 			background: #e7eefa;
@@ -61,7 +63,7 @@
 	.share {
 		margin: 15px 0 10px !important;
 		@media(max-width: 900px) {
-			margin: 15px 0 40px !important;
+			margin: 15px 0 10px !important;
 		}
 		@media(max-width: @mobile-breakpoint) {
 			margin: 15px 0 0 !important;
@@ -92,7 +94,7 @@
 				min-width: 18%;
 				@media(max-width: @tablet-breakpoint) {
 					min-width: unset !important;
-					border: 1px solid #eaeaea;
+					border: 0;
 					height: 36px;
 				}
 				@media(max-width: @mobile-breakpoint) {
@@ -113,6 +115,7 @@
 					@media(max-width: @tablet-breakpoint) {
 						padding: 3px 0 !important;
 						height: fit-content;
+						border: 0;
 					}
 					@media(max-width: @mobile-breakpoint) {
 						padding: 0 !important;

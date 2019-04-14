@@ -4,15 +4,14 @@ import '../less/projects.less';
 import { GraphQLClient } from 'graphql-request';
 import { GetJiraIssuesViaFragments } from './graphql/queries.gql';
 // Project Imports
-import {build_dropdown} from './projects/dropdown.js';
-import {make_kanban_slick} from './projects/kanban.js';
+import { build_dropdown } from './projects/dropdown.js';
+import { make_kanban_slick } from './projects/kanban.js';
 
 
 
 // Initialize GraphQL Client
 const endpoint = process.env.ENDPOINT;
 const token = process.env.AUTH;
-
 const client = new GraphQLClient(endpoint, {
   headers: {
     'Authorization': token

@@ -27,3 +27,14 @@ query GetJiraIssuesViaFragments($project: String) {
         ...JiraFieldsFragment
     }
 }
+
+query GetAuthors($slug: String) {
+  authors(where: {slug: $slug}) {
+    twitter
+    linkedin
+    quora
+    medium
+    github
+    pocket
+  }
+}

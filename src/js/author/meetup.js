@@ -58,4 +58,5 @@ author_meetup: function(docs) {
       }
     }
   });
+  $(".meetup").css('display', 'block');
 }

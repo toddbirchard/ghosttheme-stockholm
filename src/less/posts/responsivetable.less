@@ -93,6 +93,10 @@ table {
         max-width: 150px;
         text-overflow: ellipsis;
         border-bottom: 0;
+        
+        @media(max-width: @mobile-breakpoint) {
+          border: 0;
+        }
       }
 
       td {

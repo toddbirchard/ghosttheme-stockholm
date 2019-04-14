@@ -57,8 +57,12 @@
     }
 
     &:hover {
-      background: #b4d4e6;
+      background: @theme-color;
       cursor: pointer;
+      
+      * {
+        color: white !important;
+      }
     }
   }
 
@@ -114,7 +118,7 @@
     .sort {
       float: right;
       line-height: 1;
-      font-size: 18px;
+      font-size: 17px;
 
       .desc {
         display: none;
@@ -142,6 +146,7 @@
     padding: 20px;
     border-bottom: solid 1px #dadada;
     transition: all 0.2s ease-out;
+    overflow: hidden;
     @media(max-width: @mobile-breakpoint) {
       padding: 15px;
       margin-bottom: 8px;
@@ -242,7 +247,7 @@
             }
 
             &:hover {
-              color: @secondary-color;
+              color: white;
             }
           }
           @media(max-width: @mobile-breakpoint) {
@@ -304,6 +309,11 @@
         .tags {
           padding: 2px 8px;
           border-radius: 2px;
+          
+          span {
+            font-family: @body-font-bold;
+            font-size: .9em !important;
+          }
 
           i {
             margin-right: 8px;
@@ -314,6 +324,7 @@
           img {
             width: 30px;
             margin-right: 8px;
+            height: auto;
           }
 
           span {
