@@ -1,63 +1,19 @@
 // Styles
 import '../less/posts.less';
 
-// Dependency Imports
+// Dependencies
 require('es6-promise').polyfill();
-import ScrollBooster from 'scrollbooster';
-import baguetteBox from 'baguettebox.js';
+
 const fetch = require('isomorphic-fetch');
 
-// Import hljs
-/*import javascript from 'highlight.js/lib/languages/javascript';
-import python from 'highlight.js/lib/languages/python';
-import shell from 'highlight.js/lib/languages/shell';
-import sql from 'highlight.js/lib/languages/sql';
-import json from 'highlight.js/lib/languages/json';
-import ini from 'highlight.js/lib/languages/ini';
-import yaml from 'highlight.js/lib/languages/yaml';
-import handlebars from 'highlight.js/lib/languages/handlebars';
-import less from 'highlight.js/lib/languages/less';
-import xml from 'highlight.js/lib/languages/xml';
-import bash from 'highlight.js/lib/languages/bash';
-import nginx from 'highlight.js/lib/languages/nginx';
-import hljs from 'highlight.js/lib/highlight';*/
+// Imported Functions
+import { postLinkPreviews } from './posts/previews.js';
+import { scrollable_tables } from './posts/scrolltables.js';
+import { enable_baguettebox } from './posts/baguette.js';
+import { code_snippet_full_screen } from './posts/coderesize.js';
+import { hljs_init } from './posts/hljsinit.js';
 
-// Register highlight.js languages
-/*hljs.registerLanguage('javascript', javascript);
-hljs.registerLanguage('python', python);
-hljs.registerLanguage('shell', shell);
-hljs.registerLanguage('sql', sql);
-hljs.registerLanguage('json', json);
-hljs.registerLanguage('ini', ini);
-hljs.registerLanguage('yaml', yaml);
-hljs.registerLanguage('xml', xml);
-hljs.registerLanguage('bash', bash);
-hljs.registerLanguage('handlebars', handlebars);
-hljs.registerLanguage('less', less);
-hljs.registerLanguage('nginx', nginx);
 
-hljs.initHighlightingOnLoad();*/
-
-function code_snippet_full_screen() {
-  $('main > pre').each(function() {
-    if ($(this).height() >= 400) {
-      $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
-      $(this).append('<div class="codeoverflow"></div>');
-    }
-  });
-  $('.fullscreenbtn').on('click', function(event) {
-    var height = $(window).height();
-    var preContainer = $(this).closest('pre');
-    var codeContainer = preContainer.find('code');
-    preContainer.css('max-height', 'none');
-    preContainer.css('padding', '64px 20px !important');
-    preContainer.css('border-radius', '0');
-    preContainer.addClass('fullWidth');
-    preContainer.find('.codeoverflow').remove();
-    $(this).css('opacity', 0);
-    $('html,body').animate({scrollTop: preContainer.position().top});
-  });
-}
 
 /*function mergedTableCells() {
   $('table').find('th').each(function() {
@@ -66,49 +22,6 @@ function code_snippet_full_screen() {
     }
   });
 }*/
-
-function scrollable_tables() {
-  let tables = document.getElementsByClassName('tableContainer');
-  for (let table of tables) {
-    let content = table.querySelector('table');
-    let sb = new ScrollBooster({
-      viewport: table,
-      content: content,
-      handle: content,
-      emulateScroll: false,
-      mode: 'x',
-      bounce: true,
-      bounceForce: .1,
-      onUpdate: (data) => {
-        // your scroll logic goes here
-        content.style.transform = `translateX(${ - data.position.x}px)`
-      }
-    });
-  }
-  $(".tableContainer").each(function(index, element) {
-    const table = $(element).find('table');
-    const tablewidth = table.width();
-    if ($(element).width() < tablewidth) {
-      $(element).find('table').addClass('handscroller');
-      $(element).append('<div class="tablefade"></div>');
-    }
-  });
-}
-
-function enable_baguettebox() {
-  $('main img').each(function(obj, i) {
-    const imagesrc = $(this).attr('src');
-    const caption = $(this).closest('figure').find('figcaption').text();
-    $(this).wrap('<a href="' + imagesrc + '" data-caption="' + caption + '"></a>');
-  });
-  baguetteBox.run('.post-content', {
-    captions: function(element) {
-      return element.getElementsByTagName('img')[0].alt;
-    },
-    animation: 'fadeIn',
-    noScrollbars: true
-  });
-}
 
 function add_image_alt_tags() {
   $('main img').each(function() {
@@ -214,8 +127,6 @@ function detect_series() {
   fetch(endpoint, {
     method: "GET",
     headers: headers
-  }).then((res) => {
-    return res.json()
   }).then((json) => {
     tag_loop(json['posts'][0]['tags']);
   }).catch(err => {
@@ -224,22 +135,12 @@ function detect_series() {
   });
 }
 
-/* function reduce_indents() {
-  $('.language-python').text(function() {
-    return $(this).text().replace("    ", "  ");
-  });
-  $('.language-json').text(function() {
-    return $(this).text().replace("    ", "  ");
-  })
-  $('.language-javascript').text(function() {
-    return $(this).text().replace("    ", "  ");
-  })
-}*/
-
 $(document).ready(function() {
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();
   add_image_alt_tags();
   detect_series();
+  postLinkPreviews();
+  hljs_init();
 });
