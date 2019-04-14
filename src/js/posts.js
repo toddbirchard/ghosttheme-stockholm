@@ -3,10 +3,10 @@ import '../less/posts.less';
 
 // Dependencies
 require('es6-promise').polyfill();
-const fetch = require('isomorphic-fetch');
+import { fetch } from 'isomorphic-fetch';
 
 // Imported Functions
-import { postLinkPreviews } from './posts/previews.js';
+import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
@@ -132,12 +132,12 @@ function detect_series() {
   });
 }
 
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(){
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();
-  add_image_alt_tags();
+  // add_image_alt_tags();
   detect_series();
-  postLinkPreviews();
+  post_link_previews();
   //hljs_init();
 });

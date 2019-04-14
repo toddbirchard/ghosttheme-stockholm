@@ -6,9 +6,7 @@ export function code_snippet_full_screen() {
     }
   });
   $('.fullscreenbtn').on('click', function(event) {
-    var height = $(window).height();
     var preContainer = $(this).closest('pre');
-    var codeContainer = preContainer.find('code');
     preContainer.css('max-height', 'none');
     preContainer.css('padding', '64px 20px !important');
     preContainer.css('border-radius', '0');

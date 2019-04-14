@@ -6,7 +6,7 @@ function remove_images() {
   });
 }
 
-export function postLinkPreviews() {
+export function post_link_previews() {
   var current_page = window.location.href;
   if (current_page.includes("lynx")) {
     $("main a").each(function(index, element) {
@@ -17,7 +17,7 @@ export function postLinkPreviews() {
       var headers = {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
-      }
+      };
       fetch(endpoint_url, {
         method: 'GET',
         mode: 'no-cors',
