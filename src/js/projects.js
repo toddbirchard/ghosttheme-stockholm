@@ -1,9 +1,23 @@
-import {GraphQLClient} from 'graphql-request';
-// import { GetJiraIssuesViaFragments } from './graphql/queries.gql';
-// import gql from 'graphql-tag';
+// Styles
 import '../less/projects.less';
+// Dependencies
+import { GraphQLClient } from 'graphql-request';
+import { GetJiraIssuesViaFragments } from './graphql/queries.gql';
+// Project Imports
 import {build_dropdown} from './projects/dropdown.js';
 import {make_kanban_slick} from './projects/kanban.js';
+
+
+
+// Initialize GraphQL Client
+const endpoint = process.env.ENDPOINT;
+const token = process.env.AUTH;
+
+const client = new GraphQLClient(endpoint, {
+  headers: {
+    'Authorization': token
+  }
+});
 
 function populateCards(data) {
   let statuses = ['backlog', 'progress', 'todo', 'done'];
@@ -17,17 +31,9 @@ function populateCards(data) {
 }
 
 async function execute_query(query, query_vars) {
-  const endpoint = process.env.ENDPOINT;
-  const token = process.env.AUTH;
-
-  // Initialize GraphQL Client
-  const client = new GraphQLClient(endpoint, {
-    headers: {
-      'Authorization': token
-    }
-  });
-  //client.request(query, query_vars).then(data => console.log('data = ' + JSON.stringify(data))).catch(error => console.error(error));
-  client.request(query, query_vars).then(data => populateCards(data)).catch(error => console.error(error));
+  client.request(query, query_vars)
+  .then(data => populateCards(data))
+  .catch(error => console.error(error));
 }
 
 function construct_query(project) {
@@ -111,6 +117,14 @@ function init_dropdown() {
   });
 
   $('.ghostthemesio').on('click', function() {
+    construct_query('ghostthemes.io');
+  });
+
+  $('.tableau-extraction').on('click', function() {
+    construct_query('ghostthemes.io');
+  });
+
+  $('.roblog').on('click', function() {
     construct_query('ghostthemes.io');
   });
 }
