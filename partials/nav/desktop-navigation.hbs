@@ -1,7 +1,7 @@
 <!-- Start Desktop Nav -->
 <div class="desktop-navigation">
   <div class="dropdown">
-    <button class="dropdown">Posts</button>
+    <a href="{{@site.url}}/archive/"><button class="dropdown">Posts</button></a>
     <div class="dropdown-content">
       {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
         {{#foreach tags}}
@@ -13,15 +13,15 @@
   <div class="dropdown">
     <button class="dropdown">Pages</button>
     <div class="dropdown-content">
-      <a href="https://hackersandslackers.com/about/">About Us</a>
-      <a href="https://hackersandslackers.com/series/">Series</a>
-      <a href="https://hackersandslackers.com/projects/">Projects</a>
-      <a href="https://hackersandslackers.com/resources/">Resources</a>
-      <a href="https://hackersandslackers.com/become-a-contributor/">Join The Club</a>
+      <a href="{{@site.url}}/about/">About Us</a>
+      <a href="{{@site.url}}/series/">Series</a>
+      <a href="{{@site.url}}/projects/">Projects</a>
+      <a href="{{@site.url}}/resources/">Resources</a>
+      <a href="{{@site.url}}/become-a-contributor/">Join The Club</a>
     </div>
   </div>
   <div class="dropdown">
-    <button class="dropdown">Authors</button>
+    <a href="{{@site.url}}/about/"><button class="dropdown">Authors</button></a>
     <div class="dropdown-content">
       {{#get "authors" include="count.posts"}}
         {{#foreach authors}}
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="dropdown">
-    <a href="https://hackersandslackers.com/series/"><button class="dropdown">Series'</button></a>
+    <a href="{{@site.url}}/series/"><button class="dropdown">Series'</button></a>
     <div class="dropdown-content">
       {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
         {{#foreach tags visibility="internal"}}

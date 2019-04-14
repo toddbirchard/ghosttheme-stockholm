@@ -19,8 +19,8 @@
 		{{! Regular tag page}}
 		{{else}}
 			<div class="cover">
-				<h3 class="tag-name">
-					<i class="fal fa-tag"></i> {{name}}
+				<h1 class="tag-name">
+					<i class="fal fa-tag"></i> <span>{{name}}</span>
 				</h3>
 				<div class="post-count">
 					{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}

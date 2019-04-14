@@ -17,13 +17,13 @@ import {tags} from './global/tags.js';
       var fallback_src = imagepaths.replace('webp', 'jpg');
       var new_srcset = '<source srcset="' + fallback_src + '">';
       $(this).find('source:last-of-type').after(new_srcset);
-      console.log('new_srcset = ' + new_srcset);
+      // console.log('new_srcset = ' + new_srcset);
     });
     picturefill({
       elements: [document.getElementsByName('picture')]
     });
   }
-  
+
   function retina() {
     // Order matters!!
     $('img').attr('data-rjs', 2);
