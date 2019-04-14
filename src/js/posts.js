@@ -3,7 +3,6 @@ import '../less/posts.less';
 
 // Dependencies
 require('es6-promise').polyfill();
-
 const fetch = require('isomorphic-fetch');
 
 // Imported Functions
@@ -11,9 +10,7 @@ import { postLinkPreviews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
-import { hljs_init } from './posts/hljsinit.js';
-
-
+//import { hljs_init } from './posts/hljsinit.js';
 
 /*function mergedTableCells() {
   $('table').find('th').each(function() {
@@ -142,5 +139,5 @@ $(document).ready(function() {
   add_image_alt_tags();
   detect_series();
   postLinkPreviews();
-  hljs_init();
+  //hljs_init();
 });
