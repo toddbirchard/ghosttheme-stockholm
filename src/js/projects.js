@@ -104,7 +104,7 @@ function construct_query(project) {
 
 function init_dropdown() {
   $('.stockholmproject').on('click', function() {
-    construct_query();
+    construct_query('Hackers and Slackers');
   });
 
   $('.tokyoproject').on('click', function() {
@@ -120,11 +120,11 @@ function init_dropdown() {
   });
 
   $('.tableau-extraction').on('click', function() {
-    construct_query('ghostthemes.io');
+    construct_query('Tableau Extraction');
   });
 
   $('.roblog').on('click', function() {
-    construct_query('ghostthemes.io');
+    construct_query('Roblog');
   });
 }
 

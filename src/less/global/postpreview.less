@@ -44,7 +44,7 @@
 				cursor: pointer !important;
 			}
 
-			.featured-media img {
+			.post-image img {
 				border: 1px solid #278eae;
 			}
 
@@ -95,7 +95,7 @@
 		}
 	}
 
-	.featured-media {
+	.post-image {
 		box-sizing: border-box;
 		height: fit-content;
 		display: block;
@@ -147,11 +147,15 @@
 				font-family: @header-font-bold;
 
 				&:hover {
-					color: white;
+					color: @hover-color;
 				}
 				@media(max-width: @mobile-breakpoint) {
 					font-family:  @header-font-bold;
 					font-weight: 500;
+					
+					&:hover {
+						color: white;
+					}
 				}
 			}
 		}
@@ -426,7 +430,7 @@
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
-		padding: 7px 3px;
+		padding: 15px 3px 0;
 		align-items: center;
 		border-top: 1px solid #e7e7e7;
 		transition: all 0.3s ease-out;
