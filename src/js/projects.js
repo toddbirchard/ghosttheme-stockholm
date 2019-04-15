@@ -4,15 +4,14 @@ import '../less/projects.less';
 import { GraphQLClient } from 'graphql-request';
 import { GetJiraIssuesViaFragments } from './graphql/queries.gql';
 // Project Imports
-import {build_dropdown} from './projects/dropdown.js';
-import {make_kanban_slick} from './projects/kanban.js';
+import { build_dropdown } from './projects/dropdown.js';
+import { make_kanban_slick } from './projects/kanban.js';
 
 
 
 // Initialize GraphQL Client
 const endpoint = process.env.ENDPOINT;
 const token = process.env.AUTH;
-
 const client = new GraphQLClient(endpoint, {
   headers: {
     'Authorization': token
@@ -105,7 +104,7 @@ function construct_query(project) {
 
 function init_dropdown() {
   $('.stockholmproject').on('click', function() {
-    construct_query();
+    construct_query('Hackers and Slackers');
   });
 
   $('.tokyoproject').on('click', function() {
@@ -121,11 +120,11 @@ function init_dropdown() {
   });
 
   $('.tableau-extraction').on('click', function() {
-    construct_query('ghostthemes.io');
+    construct_query('Tableau Extraction');
   });
 
   $('.roblog').on('click', function() {
-    construct_query('ghostthemes.io');
+    construct_query('Roblog');
   });
 }
 

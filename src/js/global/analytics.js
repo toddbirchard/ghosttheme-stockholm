@@ -35,7 +35,7 @@
         "referrer": document.referrer
     });
 
-    mixpanel.track_links(".featured-media a", "Clicked 'featured image'", {
+    mixpanel.track_links(".post-image a", "Clicked 'featured image'", {
         "referrer": document.referrer,
         "module": "postpreview",
 

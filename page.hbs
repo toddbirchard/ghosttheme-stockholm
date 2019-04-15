@@ -3,7 +3,7 @@
 
 <!-- start site's main content area -->
 <section class="content-wrap">
-	<div class="container">
+	<div class="page-container">
 		{{> sidebar}}
 		<!-- start main post area -->
 		<div class="main-content">
@@ -12,7 +12,7 @@
 				<main class="page">
 					<!-- start responsive image -->
 					{{#if feature_image}}
-						<div class="featured-media">
+						<div class="post-image">
 							<picture>
 								<source alt="{{title}}" loading="lazy" class="lazy" media="(min-width: 1200px)" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image}} 2x">
 								<img alt="{{title}}" loading="lazy" class="lazy" src="{{img_url feature_image}}">

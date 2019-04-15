@@ -2,19 +2,17 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap">
-	<div class="container">
+	<div class="page-container">
 		<!-- end main post area -->
 		{{! insert sidebar partial}}
 		{{> sidebar}}
 		<!-- start main post area -->
-		<main class="main-content">
 			{{#is "tag"}}
 				{{> cover-tag}}
 			{{/is}}
-			<div class="postlist">
+			<main class="postlist">
 				{{> loop}} {{pagination}}
-			</div>
-		</main>
+			</main>
 	</div>
 </section>
 <!-- end site's main content area -->

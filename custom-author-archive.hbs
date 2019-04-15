@@ -2,7 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap archive">
-	<div class="container">
+	<div class="page-container about-container">
 		<!-- start main post area -->
 		{{> sidebar}}
 		<div class=" main-content">
@@ -10,7 +10,7 @@
 			{{#post}}
 				<main class="{{post_class}}">
 					{{#if feature_image}}
-						<div class="featured-media" style="background-image: url({{feature_image}});">
+						<div class="post-image" style="background-image: url({{feature_image}});">
 						</div>
 					{{/if}}
 					<h1 class="page-title">{{{title}}}</h1>

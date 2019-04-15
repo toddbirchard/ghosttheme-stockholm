@@ -18,7 +18,7 @@ header {
       padding: 0;
       max-width: none;
       width: auto;
-      margin: 15px 0 20px;
+      margin: 10px 0 20px;
       justify-content: space-between;
     }
 
@@ -29,6 +29,12 @@ header {
     span {
       font-family: @body-font;
       font-weight: 500;
+    }
+    
+    .date {
+      @media(max-width: @mobile-breakpoint) {
+        display: none;
+      }
     }
 
     .tags {

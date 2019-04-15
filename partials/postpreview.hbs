@@ -8,7 +8,7 @@
     {{/if}}
 
     {{#if feature_image}}
-      <picture class="featured-media">
+      <picture class="post-image">
         <source alt="{{title}}" media="(max-width: 600px)" loading="lazy" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
         <source alt="{{title}}" loading="lazy" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image size="large_retina"}} 2x">
         <img alt="{{title}}" loading="lazy" class="lazy" src="{{img_url feature_image}}">

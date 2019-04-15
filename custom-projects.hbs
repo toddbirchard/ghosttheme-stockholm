@@ -3,13 +3,13 @@
 <!-- start site's main content area -->
 <script src="{{asset "js/slick.min.js"}}"></script>
 <section class="content-wrap archive">
-	<div class="container">
+	<div class="projects-container">
 		<!-- start post -->
 		{{#post}}
 			<div class="main-content">
 				<div class="intro">
 					{{#if feature_image}}
-						<div class="featured-media" style="background-image: url({{feature_image}});">
+						<div class="post-image" style="background-image: url({{feature_image}});">
 						</div>
 					{{/if}}
 					<h1>{{{title}}}</h1>
