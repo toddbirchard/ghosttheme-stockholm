@@ -13,7 +13,7 @@
 	width: 100%;
 	max-width: 100%;
 	border-top: 2px dotted #f3f3f3;
-	border-style: dotted none none;	
+	border-style: dotted none none;
 	@media(max-width: @tablet-breakpoint) {
 		width: 100% !important;
 		display: block;
@@ -95,7 +95,7 @@
 				@media(max-width: @tablet-breakpoint) {
 					min-width: unset !important;
 					border: 0;
-					height: 36px;
+					height: 29px;
 				}
 				@media(max-width: @mobile-breakpoint) {
 					border: none;
@@ -278,7 +278,6 @@ section .widget.newsletter {
 				font-size: 14px;
 				color: white;
 				border: 0;
-				text-transform: Uppercase;
 				outline: none;
 				transition: all 0.3s ease-in-out;
 				margin-top: 3px;
@@ -291,7 +290,7 @@ section .widget.newsletter {
 
 				span {
 					font-size: 14px;
-					text-transform: capitalize;
+					text-transform: uppercase;
 				}
 			}
 		}
@@ -341,8 +340,9 @@ section .widget.newsletter {
 
 .after-post {
 	max-width: 830px !important;
-	margin-top: 20px;
+	margin-top: 30px;
 	@media(max-width: 900px) {
+		margin-top: 20px;
 		width: 93%;
 		max-width: unset;
 	}
