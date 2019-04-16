@@ -45,8 +45,8 @@ function PopulateAuthorDetails(users) {
 }
 
 async function get_authors(author_slug) {
-  const endpoint = process.env.ENDPOINT;
-  const token = process.env.AUTH;
+  const endpoint = process.env.GRAPHQL_API_ENDPOINT;
+  const token = process.env.GRAPHQL_API_AUTH;
 
   const vars = {
     slug: author_slug

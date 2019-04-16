@@ -14,8 +14,8 @@ function create_row(data) {
 }
 
 async function execute_query(query) {
-  const endpoint = process.env.ENDPOINT;
-  const token = process.env.AUTH;
+  const endpoint = process.env.GRAPHQL_API_ENDPOINT;
+  const token = process.env.GRAPHQL_API_AUTH;
 
   // Initialize GraphQL Client
   const client = new GraphQLClient(endpoint, {

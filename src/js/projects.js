@@ -10,8 +10,8 @@ import { make_kanban_slick } from './projects/kanban.js';
 
 
 // Initialize GraphQL Client
-const endpoint = process.env.ENDPOINT;
-const token = process.env.AUTH;
+const endpoint = process.env.GRAPHQL_API_ENDPOINT;
+const token = process.env.GRAPHQL_API_AUTH;
 const client = new GraphQLClient(endpoint, {
   headers: {
     'Authorization': token
