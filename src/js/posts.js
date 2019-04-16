@@ -134,7 +134,7 @@ function detect_series() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  get_author_social();
+  // get_author_social();
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();

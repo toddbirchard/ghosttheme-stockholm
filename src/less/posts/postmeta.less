@@ -8,7 +8,7 @@ header {
 
   .post-meta {
     margin: 10px 0 15px;
-    color: #40627b;
+    color: @text-color;
     font-size: 12px;
     display: flex;
     width: auto;
@@ -23,6 +23,7 @@ header {
     }
 
     i {
+      color: @text-color;
       font-weight: 400;
     }
 
@@ -86,7 +87,7 @@ header {
 
     span {
       text-transform: capitalize;
-      color: #467192;
+      color: @text-color;
     }
 
     a {
@@ -109,8 +110,7 @@ header {
     }
 
     * {
-      font-size: 1.1em;
-      color: #40627b;
+      font-size: 1em;
       padding: 0;
       @media(max-width: @mobile-breakpoint) {
         font-size: 0.95em;
@@ -124,9 +124,7 @@ header {
     }
 
     span {
-      @media(max-width: @mobile-breakpoint) {
-        font-family: @body-font;
-      }
+      font-family: @body-font;
     }
 
     &.desktop {
