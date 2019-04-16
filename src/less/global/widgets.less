@@ -50,6 +50,7 @@
 		transition: all 0.3s ease-out;
 		@media(max-width: 950px) {
 			padding: 15px;
+			margin: 0 0 20px;
 		}
 
 		&:first-of-type {
@@ -472,10 +473,6 @@
 			margin-bottom: 15px;
 			letter-spacing: 1px;
 			margin-top: 0;
-			font-family: @body-font;
-			@media(max-width: 1040px) {
-				font-size: 1.3em !important;
-			}
 		}
 
 		p {
@@ -489,6 +486,10 @@
 
 	.widget {
 		margin: 0 0 30px;
+		@media(max-width: 950px) {
+			padding: 15px;
+			margin: 0 0 20px;
+		}
 
 		.post-title {
 			a {
@@ -520,7 +521,7 @@
 			text-transform: uppercase;
 			font-family: @body-font-bold;
 			letter-spacing: 1px;
-			color: #1f5373;
+			color: @header-color;
 			margin-top: 0;
 		}
 

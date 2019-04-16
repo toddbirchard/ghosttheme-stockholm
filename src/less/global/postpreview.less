@@ -4,7 +4,7 @@
 .post-preview {
 	padding: 20px;
 	box-shadow: @shadow-color;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	background: white;
 	transition: all 0.3s ease-out;
 
@@ -130,7 +130,7 @@
 			Line-height: 1.15;
 			margin: 0 0 10px;
 			font-weight: 900;
-			font-family:  @header-font-bold;
+			font-family: @header-font-bold;
 			@media(max-width: 950px) {
 				font-size: 1.8em;
 			}
@@ -150,9 +150,9 @@
 					color: @hover-color;
 				}
 				@media(max-width: @mobile-breakpoint) {
-					font-family:  @header-font-bold;
+					font-family: @header-font-bold;
 					font-weight: 500;
-					
+
 					&:hover {
 						color: white;
 					}
@@ -165,7 +165,7 @@
 			line-height: 1.21;
 			font-weight: 600;
 			text-align: left;
-			font-size: 1.2em;
+			font-size: 1.1em;
 			color: #153b52;
 			font-family: @header-font;
 			@media(max-width: @mobile-breakpoint) {
@@ -311,7 +311,7 @@
 					line-height: 1.2;
 					font-size: 13px;
 					font-family: @body-font-bold;
-					transition: all .3s ease-out;
+					transition: all 0.3s ease-out;
 					@media(max-width: @mobile-breakpoint) {
 						font-size: 13px;
 						font-weight: 100;
@@ -434,19 +434,22 @@
 		align-items: center;
 		border-top: 1px solid #e7e7e7;
 		transition: all 0.3s ease-out;
+		@media(max-width: 950px) {
+			padding: 12px 0 0;
+		}
 		@media(max-width: @mobile-breakpoint) {
 			padding: 10px 3px 0;
 		}
 	}
 
 	.btn {
-		height: 17px;
-		padding: 14px 24px;
+		height: 13px;
+		padding: 14px 22px;
 		background: @button-color;
 		box-shadow: -1px 1px 0 @button-shadow, -1px 0 0 @button-shadow, 0 1px 0 @button-shadow;
 		color: white;
 		font-family: @body-font-bold;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -505,6 +508,9 @@
 
 .content {
 	padding: 0 5px;
+	@media(max-width: 950px) {
+		padding: 0 2px;
+	}
 	@media(max-width: @mobile-breakpoint) {
 		padding: 0 10px;
 	}

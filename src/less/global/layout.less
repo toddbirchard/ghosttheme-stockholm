@@ -4,10 +4,15 @@
 	display: grid;
 	grid-gap: 30px;
 	grid-template-columns: 1fr 3fr;
-	@media(max-width: @tablet-breakpoint) {
-		grid-template-columns: 1fr;
+	@media(max-width: 1200px) {
 		width: 95%;
 		max-width: none;
+	}
+	@media(max-width: 950px) {
+		grid-gap: 20px;
+	}
+	@media(max-width: @tablet-breakpoint) {
+		grid-template-columns: 1fr;
 	}
 }
 

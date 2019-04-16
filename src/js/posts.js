@@ -1,7 +1,7 @@
 // Styles
 import '../less/posts.less';
 // Dependencies
-require('es6-promise').polyfill();
+//require('es6-promise').polyfill();
 import { fetch } from 'isomorphic-fetch';
 import { GraphQLClient } from 'graphql-request';
 // Imported Functions
@@ -9,9 +9,7 @@ import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
-import { get_author_social } from './posts/authorsocial.js';
-
-
+// import {get_author_social} from './posts/authorsocial.js';
 
 function mergedTableCells() {
   $('table').find('th').each(function() {
@@ -72,9 +70,12 @@ function posts_in_series(series, series_name) {
   fetch(series_endpoint, {
     method: 'GET',
     headers: headers
-  }).then((res) => {
+  })
+  .then((res) => {
     return res.json()
-  }).then((json) => {
+  })
+  .then((json) => {
+    console.log('json = ' + json);
     if (json['posts']) {
       const posts = json['posts'];
       var i;
@@ -101,6 +102,9 @@ function posts_in_series(series, series_name) {
       $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
       posts.length + 1));
     }
+  }).catch(err => {
+    console.log(err.response.errors); // API response errors
+    console.log(err.response.data); // Response data if available
   });
 }
 
@@ -125,21 +129,26 @@ function detect_series() {
   fetch(endpoint, {
     method: "GET",
     headers: headers
-  }).then((json) => {
+  })
+  .then((res) => {
+    console.log(res.json())
+  })
+  .then((json) => {
     tag_loop(json['posts'][0]['tags']);
-  }).catch(err => {
+  })
+  .catch(err => {
     console.log(err.response.errors); // API response errors
     console.log(err.response.data); // Response data if available
   });
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
   // get_author_social();
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();
   add_image_alt_tags();
-  detect_series();
   post_link_previews();
-  //hljs_init();
+  // detect_series();
+  // hljs_init();
 });
