@@ -37,7 +37,6 @@
 			line-height: 1;
 			padding: 8px 10px;
 			font-family: @body-font;
-			border-radius: 2px;
 			font-weight: 300;
 			transition: all 0.3s ease-out;
 			@media(max-width: @tablet-breakpoint) {
@@ -345,6 +344,12 @@ section .widget.newsletter {
 		margin-top: 20px;
 		width: 93%;
 		max-width: unset;
+	}
+
+	.related-posts {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
 	}
 
 	.author-card-small {

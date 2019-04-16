@@ -1,7 +1,8 @@
 <!-- Start Related Posts -->
-<div class="prev-next-wrap">
-	{{#get "posts" limit="3" include="tags,authors" filter="slug:-{{slug}}+tag:{{primary_tag.slug}}"}}
-		{{#foreach posts}}
+<div class="related">
+	{{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+slug:-{{slug}}" include="tags,authors" as |related|}}
+		{{#foreach related}}
+				<p>ayyy lmao</p>
 				{{> article-preview}}
 			{{/foreach}}
 		{{/get}}
