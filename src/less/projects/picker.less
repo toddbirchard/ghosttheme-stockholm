@@ -1,20 +1,17 @@
 .page-projects {
   .projectdropdown {
-    margin: -10px auto 1em;
+    margin: 20px auto 1em;
     width: 100%;
     position: relative;
-    background: white;
     height: 44px;
-    border-top: 1px solid #dbdde7;
-    box-shadow: 0 2px 2px #cbccd4;
   }
 
-  .dropdown {
+  .projects-dropdown {
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative;
-    right: 0;
+    float: left;
     z-index: 1000;
     height: fit-content;
     background: rgba(0, 0, 255, 0);
@@ -35,25 +32,32 @@
   .picker {
     margin: 0;
     width: 300px;
-    background: linear-gradient(45deg, #ffffff, #edfaff);
     color: #69738b;
-    padding: 0.5em 20px 0.5em 60px;
+    padding: 0.5em 0;
     position: relative;
     border-left: 4px solid #fff;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transition: all 0.3s ease;
     display: block;
-    text-align: right;
     align-items: center;
     height: 28px;
-    /*border: 1px solid #d8d8d8;*/
-    /*border: 1px solid linear-gradient(45deg, #f8fcfe, #e0ecf1);*/
     border-left: 0;
+    border-bottom: 1px solid #69738b;
+    margin-left: -37px;
+
+    .make-selection {
+      float: left;
+      font-size: 1.2em;
+    }
+
+    .dropdown-arrow {
+      float: right;
+    }
   }
 
   .picker {
-    float: right;
+    float: left;
     @media(max-width: @mobile-breakpoint) {
       display: none !important;
     }
@@ -87,7 +91,7 @@
     display: block;
   }
 
-  .dropdown:hover .dropdown-list {
+  .projects-dropdown:hover .dropdown-list {
     display: block;
     @media(max-width: @mobile-breakpoint) {
       display: block;
@@ -98,12 +102,12 @@
     }
   }
 
-  .dropdown .dropdown-list {
+  .projects-dropdown .dropdown-list {
     display: none;
     position: relative;
     z-index: 999;
     list-style: none;
-    top: 0;
+    top: 35px;
     left: -3px;
     background: #fff;
     padding: 0;
@@ -111,15 +115,16 @@
     width: 100%;
     border-radius: 4px;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
+
+    li {
+      width: 100%;
+    }
 
     .project-icon {
         width: 20px;
         margin-right: 5px;
     }
-  }
-
-  .dropdown .dropdown-list {
-    padding: 8px;
   }
 
   .projectdropdown > ul > li > ul:after {
@@ -180,7 +185,6 @@
     height: 20px;
     width: 20px;
     fill: #72b0e1;
-    margin-right: 12px;
   }
 
   .picker li {

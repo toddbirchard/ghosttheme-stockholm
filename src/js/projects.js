@@ -1,11 +1,12 @@
-// Styles
-import '../less/projects.less';
 // Project Imports
+// --------------------------------------------
+import '../less/projects.less';
 import { build_dropdown } from './projects/dropdown.js';
 import { make_kanban_slick } from './projects/kanban.js';
 
 
-// Inialize MongoDB
+// Initialize MongoDB
+// -------------------------------------------
 const {
     Stitch,
     RemoteMongoClient,
@@ -15,6 +16,7 @@ const mongodb_client = Stitch.initializeDefaultAppClient(process.env.MONGODB_STI
 const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db(process.env.MONGODB_ATLAS_DB);
 
 // Functions
+// -----------------------------------------
 function populate_cards(cards) {
   status = cards[0]['status'];
     for (var i = 0; i < cards.length; i++) {
@@ -43,12 +45,40 @@ function get_mongodb_cards(project) {
       console.error(err)
   });
 
-  //To do
+  // To do
   mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
     db.collection('jira').find(
     { project: project, status: "ToDo", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
     { limit: 6 },
-    { sort: { priority_rank: -1 } }
+    { sort: { updated: -1 } }
+  ).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populate_cards(docs)
+  }).catch(err => {
+      console.error(err)
+  });
+
+  // In Progess
+  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
+    db.collection('jira').find(
+    { project: project, status: "InProgress", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
+    { limit: 6 },
+    { sort: { updated: -1 } }
+  ).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populate_cards(docs)
+  }).catch(err => {
+      console.error(err)
+  });
+
+  // Done
+  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
+    db.collection('jira').find(
+    { project: project, status: "Done", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
+    { limit: 6 },
+    { sort: { updated: -1 } }
   ).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
@@ -68,18 +98,22 @@ function get_mongodb_cards(project) {
 
 function init_dropdown() {
   $('.stockholmproject').on('click', function() {
+    $('.cards').empty();
     get_mongodb_cards('Hackers and Slackers');
   });
 
   $('.tokyoproject').on('click', function() {
+    $('.cards').empty();
     get_mongodb_cards('Toddzilla');
   });
 
   $('.linkbox-api').on('click', function() {
+    $('.cards').empty();
     get_mongodb_cards('Linkbox API');
   });
 
   $('.ghostthemesio').on('click', function() {
+    $('.cards').empty();
     get_mongodb_cards('ghostthemes.io');
   });
 
