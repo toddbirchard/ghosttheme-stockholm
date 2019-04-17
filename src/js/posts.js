@@ -1,16 +1,14 @@
-// Styles
-import '../less/posts.less';
 // Dependencies
-//require('es6-promise').polyfill();
-import { fetch } from 'isomorphic-fetch';
-import { GraphQLClient } from 'graphql-request';
-// Imported Functions
+import '../less/posts.less';
+const fetch = require('node-fetch');
 import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
-// import {get_author_social} from './posts/authorsocial.js';
+// import { get_author_social } from './posts/authorsocial.js';
 
+// Functions
+// -------------------------------------------
 function mergedTableCells() {
   $('table').find('th').each(function() {
     if ($(this).attr('rowspan')) {
@@ -29,6 +27,7 @@ function add_image_alt_tags() {
 function current_page() {
   const sPath = String(document.location.pathname);
   const slug = sPath.split('/')[1];
+  console.log('slug = ' + slug);
   return slug;
 }
 
@@ -63,16 +62,17 @@ function populate_series_list(post) {
 }
 
 function posts_in_series(series, series_name) {
-  const series_endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
+  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
   const headers = {
     "Content-Type": "application/json"
   };
-  fetch(series_endpoint, {
+  fetch({
     method: 'GET',
-    headers: headers
+    headers: headers,
+    url: series_endpoint
   })
   .then((res) => {
-    return res.json()
+     return res.json()
   })
   .then((json) => {
     console.log('json = ' + json);
@@ -81,18 +81,13 @@ function posts_in_series(series, series_name) {
       var i;
       for (i = 0; i < posts.length; i++) {
         const post = posts[i];
-        const title = post['title'];
-        const url = 'https://hackersandslackers.com/' + post['slug'];
-        const slug = post['slug'];
-        const created = post['created_at'];
-        const numposts = posts.length;
         const post_dict = {
           'seriesname': series_name,
-          'title': title,
-          'url': url,
-          'created': created,
-          'slug': slug,
-          'numposts': numposts
+          'title': post['title'],
+          'url': 'https://hackersandslackers.com/' + post['slug'],
+          'created': post['created_at'],
+          'slug': post['slug'],
+          'numposts': posts.length
         };
         populate_series_list(post_dict);
       }
@@ -102,9 +97,6 @@ function posts_in_series(series, series_name) {
       $('#seriesposts ol').attr('style', 'counter-reset:li ' + (
       posts.length + 1));
     }
-  }).catch(err => {
-    console.log(err.response.errors); // API response errors
-    console.log(err.response.data); // Response data if available
   });
 }
 
@@ -122,26 +114,26 @@ function tag_loop(tags) {
 
 function detect_series() {
   const post_slug = current_page();
-  const endpoint = 'https://hackersandslackers.com/ghost/api/v2/content/posts/slug/' + post_slug + '?key=bc6a59fe37ee67d9fbb93ea03b&include=tags';
+  const detect_series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/slug/' + post_slug + '?key=' + process.env.GHOST_CONTENT_API_KEY + '&include=tags';
   const headers = {
     "Content-Type": "application/json"
   };
-  fetch(endpoint, {
-    method: "GET",
-    headers: headers
+  fetch({
+    method: 'GET',
+    headers: headers,
+    url: detect_series_endpoint
   })
   .then((res) => {
-    console.log(res.json())
+     return res.json()
   })
   .then((json) => {
+    console.log(json);
     tag_loop(json['posts'][0]['tags']);
-  })
-  .catch(err => {
-    console.log(err.response.errors); // API response errors
-    console.log(err.response.data); // Response data if available
   });
 }
 
+// Start Script
+// -------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
   // get_author_social();
   code_snippet_full_screen();
@@ -149,6 +141,6 @@ document.addEventListener("DOMContentLoaded", function() {
   enable_baguettebox();
   add_image_alt_tags();
   post_link_previews();
-  // detect_series();
+  detect_series();
   // hljs_init();
 });

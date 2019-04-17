@@ -126,7 +126,9 @@ function init_dropdown() {
   });
 }
 
-$(document).ready(function() {
+// Start Script
+// -------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
   get_mongodb_cards('Hackers and Slackers');
   build_dropdown();
   make_kanban_slick();

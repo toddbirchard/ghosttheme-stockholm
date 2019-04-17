@@ -67,16 +67,15 @@ buddy.yaml
 
 
 # keys
-assets/js/secret.js
-assets/js/includes/secret.js
-/assets/js/includes/secret.js
-/assets/js/main.min.js
-/assets/js/*.map
+./assets/js/secret.js
+./assets/js/includes/secret.js
+./assets/js/includes/secret.js
+./assets/js/main.min.js
+./assets/js/*.map
 sendgrid.env
 
 # compiled
-assets/js/main.min.js
-/assets/js/main.min.js
+./assets/js/main.min.js
 main.min.js
 
 # assets
@@ -92,3 +91,7 @@ assets/vid/*
 # misc
 postcss.config.js
 assets/css
+
+# Yarn
+yarn-error.log
+yarn.lock

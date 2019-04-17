@@ -28,7 +28,7 @@ module.exports = {
     'apply': path.resolve(__dirname, './src/js/apply.js'),
     'author': ["@babel/polyfill", path.resolve(__dirname, './src/js/author.js')],
     'resources': ["@babel/polyfill", path.resolve(__dirname, './src/js/resources.js')],
-    'projects': ["@babel/polyfill", path.resolve(__dirname, './src/js/projects.js')],
+    'projects': path.resolve(__dirname, './src/js/projects.js'),
     'series': path.resolve(__dirname, './src/js/series.js'),
     'postarchive': path.resolve(__dirname, './src/js/postarchive.js'),
     'transactional': path.resolve(__dirname, './src/js/transactional.js'),

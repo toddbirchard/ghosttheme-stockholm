@@ -5,3 +5,5 @@ GRAPHQL_API_ENDPOINT=https://example.com/yourgraphqlendpoint
 GRAPHQL_API_AUTH="Bearer Your.Graphql.Auth.Token"
 MONGODB_STITCH_APP_ID='hackers-api-ltxuq'
 MONGODB_ATLAS_DB='hackers-api'
+GHOST_CONTENT_API_URL='https://example.com/ghost/api/v2/content/'
+GHOST_CONTENT_API_KEY='420e69a1738bhuvby8765urdryujkd'
