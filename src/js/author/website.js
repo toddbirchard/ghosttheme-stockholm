@@ -1,9 +1,10 @@
 require('es6-promise').polyfill();
 const fetch = require('isomorphic-fetch');
 
-function author_website(data) {
+export function author_website(data) {
   var website = data['website'];
   if (website) {
+    $(".website").css('display', 'block');
     var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + website;
     var headers = {
       "Content-Type": "application/json"
@@ -21,7 +22,6 @@ function author_website(data) {
       '<div class="link-preview" style="background:url(' + json.image + ')"> \n' +
       '<a href="' + json.url + '">' + json.title + '</a><i class="fas fa-link"></i> \n' +
       '</div></a></div></div>');
-      $(".website").css('display', 'block');
     });
   }
 }

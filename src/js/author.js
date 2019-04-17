@@ -1,19 +1,39 @@
 import '../less/pages.less';
 import '../less/author.less';
-import { GraphQLClient } from 'graphql-request';
 import { author_github } from './author/github.js';
-// import {author_medium} from './author/medium.js';
+import { post_link_previews } from './global/previews.js';
+import { author_website } from './author/website.js';
+import { author_medium } from './author/medium.js';
 // import author_meetup from '../src/js/author/meetup.js';
 
-function makeAuthorSidebar(data, author_slug) {
-  console.log(JSON.stringify(data));
-  let medium_key = process.env.medium_key;
-  let github = JSON.stringify(data['authors'][0]['github']);
+// Initialize MongoDB
+// -------------------------------------------
+const {
+    Stitch,
+    RemoteMongoClient,
+    AnonymousCredential
+} = require('mongodb-stitch-browser-sdk');
+const mongodb_client = Stitch.initializeDefaultAppClient(process.env.MONGODB_STITCH_APP_ID);
+const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db(process.env.MONGODB_ATLAS_DB);
+
+// Functions
+// -------------------------------------------
+function makeAuthorSidebar(data) {
+  const medium_key = process.env.MEDIUM_API_KEY;
+  let github = JSON.stringify(data['github']);
   github = github.replace('"', '');
   github = github.replace('"', '');
-  let medium = JSON.stringify(data['authors'][0]['medium']);
-  author_github(github, author_slug);
+  let medium = JSON.stringify(data['medium']);
+  medium = medium.replace('"', '');
+  medium = medium.replace('"', '');
+  let website = JSON.stringify(data['website']);
+  website = github.replace('"', '');
+  website = github.replace('"', '');
+  website = 'https://' + website
+  console.log("website = " + website)
+  author_github(github);
   author_medium(medium, medium_key);
+  author_website(website);
 }
 
 function who_is_current_author() {
@@ -23,39 +43,22 @@ function who_is_current_author() {
   return slug;
 }
 
-async function get_authors(author_slug) {
-  const endpoint = process.env.GRAPHQL_API_ENDPOINT;
-  const token = process.env.GRAPHQL_API_AUTH;
-
-  const vars = {
-    slug: author_slug
-  };
-
-  const query = `query AuthorsByName($slug: String!) {
-      authors(where: {slug: $slug}) {
-          name
-          website
-          title
-          linkedin
-          vimeo
-          quora
-          medium
-          github
-          meetup
-          pocket
-      }
-    }`;
-
-  // Initialize GraphQL Client
-  const client = new GraphQLClient(endpoint, {
-    headers: {
-      'Authorization': token
-    }
-  });
-  client.request(query, vars).then(data => makeAuthorSidebar(data, author_slug));
+function get_authors() {
+  const slug = who_is_current_author();
+  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
+    db.collection('authors').find(
+      { slug: slug }
+    ).asArray()
+    ).then(docs => {
+        makeAuthorSidebar(docs[0])
+    }).catch(err => {
+        console.error(err)
+    })
 }
 
-$(document).ready(function() {
-  let author_slug = who_is_current_author();
-  get_authors(author_slug).catch(error => console.error(error));
+// Start Script
+// -------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  get_authors();
+  post_link_previews();
 });

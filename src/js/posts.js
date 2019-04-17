@@ -1,6 +1,7 @@
 // Dependencies
 import '../less/posts.less';
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
+require('es6-promise').polyfill();
 import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';

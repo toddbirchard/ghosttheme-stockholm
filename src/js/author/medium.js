@@ -1,4 +1,4 @@
-import 'https://medium-widget.pixelpoint.io/widget.js';
+// import 'https://medium-widget.pixelpoint.io/widget.js';
 
 export function author_medium(medium, medium_key) {
 

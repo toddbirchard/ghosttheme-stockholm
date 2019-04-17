@@ -4,7 +4,6 @@ import '../less/projects.less';
 import { build_dropdown } from './projects/dropdown.js';
 import { make_kanban_slick } from './projects/kanban.js';
 
-
 // Initialize MongoDB
 // -------------------------------------------
 const {
