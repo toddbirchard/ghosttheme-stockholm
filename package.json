@@ -83,6 +83,7 @@
     "highlight.js": "^9.15.6",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.4.0",
+    "mongodb-stitch-browser-sdk": "^4.3.2",
     "node-fetch": "^2.3.0",
     "paginate": "^0.2.0",
     "scrollbooster": "^1.1.0",
