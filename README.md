@@ -3,9 +3,10 @@
 ![Ghost](https://img.shields.io/badge/Ghost-^v2.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=36363e)
 ![Node](https://img.shields.io/badge/NodeJS-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=339933&colorA=36363e)
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=23a8e2&colorA=36363e)
-![GraphQL](https://img.shields.io/badge/GraphQL-v14.1.1-pink.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=E10098&colorA=36363e)
+![GraphQL](https://img.shields.io/badge/GraphQL-v14.2.1-pink.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=E10098&colorA=36363e)
+![MongoDB](https://img.shields.io/badge/MongoDB--Atlas-v4.0.8-green.svg?longCache=true&style=flat-square&logo=MongoDB&logoColor=white&colorB=47A248&colorA=36363e)
 ![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e&logo=JavaScript&logoColor=white)
-![Ghost-Pagination](https://img.shields.io/badge/ghost--pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&colorB=7aa206&logo=ghost)
+![Ghost-Pagination](https://img.shields.io/badge/Ghost--Pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&colorB=7aa206&logo=ghost)
 ![Vanilla Lazyload](https://img.shields.io/badge/Vanilla--Lazyload-v11.0.6-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=7aa206&colorA=36363e)
 ![Retina.js](https://img.shields.io/badge/Retina.js-v1.3.0-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=7aa206&colorA=36363e)
 ![Highlight.js](https://img.shields.io/badge/Highlight.js-v9.15.6-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=b62e2e&colorA=36363e)
@@ -119,10 +120,16 @@ $ npm run build
 
 As always, remember to restart your Ghost instance when adding new themes.
 
+### Integrations
+
+This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don't forget to include `.env` in `.gitignore`)! 
+
+Replace the values in this configuration file with your own. Additional details to be added here soon.
+
 ### Maintenance
 
-* Documentation
 * User-friendly configuration
+* Installation Documentation
 * Image compression optimization
 * Retina image support
 * Site speed optimizations
