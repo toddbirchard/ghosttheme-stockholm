@@ -11,55 +11,89 @@ const {
     RemoteMongoClient,
     AnonymousCredential
 } = require('mongodb-stitch-browser-sdk');
-const mongodb_client = Stitch.initializeDefaultAppClient('hackers-api-ltxuq');
-const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('hackers-api');
+const mongodb_client = Stitch.initializeDefaultAppClient(process.env.MONGODB_STITCH_APP_ID);
+const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db(process.env.MONGODB_ATLAS_DB);
 
 // Functions
-function populate_cards(data) {
+function populate_cards(cards) {
+  status = cards[0]['status'];
     for (var i = 0; i < cards.length; i++) {
-      $('#backlog' + ' .cards').append('<div class="card"> \n' + '<h5>' + cards[i]['summary'] + '</h5> \n' + '<div class="info"> \n' + '<div class="left"> \n' + '<div class="avatar"><img alt="' + cards[i]['issuetype_name'] + '" src="' + cards[i]['issuetype_icon'] + '"></div> \n' + '<div class="priority"><img alt="' + cards[i]['priority_name'] + '" src="' + cards[i]['priority_url'] + '"></div> \n' + '</div> \n' + '<div class="epic ' + cards[i]['epic'] + '" style=background-color:' + cards[i]['epic_color'] + '50;><span>' + cards[i]['epic_name'] + '</span></div> \n' + '</div></div>');
+      $('#' + status + ' .cards').append('<div class="card"> \n' +
+                                  '<p class="card-title">' + cards[i]['summary'] + '</p> \n' +
+                                  '<div class="info"> \n' + '<div class="left"> \n' +
+                                  '<div class="avatar"><img alt="' + cards[i]['issuetype_name'] + '" src="' + cards[i]['issuetype_icon'] + '"></div> \n' +
+                                  '<div class="priority"><img alt="' + cards[i]['priority_name'] + '" src="' + cards[i]['priority_url'] + '"></div> </div> \n' +
+                                  '<div class="epic ' + cards[i]['epic'] + '" style=background-color:' + cards[i]['epic_color'] + '50;><span class="epic-title">' + cards[i]['epic_name'] + '</span></div> \n'
+                                  + '</div></div>');
     }
 }
 
-async function get_mongodb_cards() {
+function get_mongodb_cards(project) {
+  // Backlog
   mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('jira').find({project: "Hackers and Slackers", status: "Backlog"}).asArray()
+    db.collection('jira').find(
+    { project: project, status: "Backlog", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
+    { limit: 6 },
+    { sort: { priority_rank: -1 } }
+  ).asArray()
   ).then(docs => {
       console.log("Found docs", docs)
       populate_cards(docs)
   }).catch(err => {
       console.error(err)
   });
+
+  //To do
+  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
+    db.collection('jira').find(
+    { project: project, status: "ToDo", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
+    { limit: 6 },
+    { sort: { priority_rank: -1 } }
+  ).asArray()
+  ).then(docs => {
+      console.log("Found docs", docs)
+      populate_cards(docs)
+  }).catch(err => {
+      console.error(err)
+  });
+
+  /*mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
+    console.log('logged in anonymously as ' + user)
+  });
+
+  mongodb_client.callFunction("get_jira_cards", [project]).then(result => {
+    console.log(result)
+  });*/
 }
 
 function init_dropdown() {
   $('.stockholmproject').on('click', function() {
-    construct_query('Hackers and Slackers');
+    get_mongodb_cards('Hackers and Slackers');
   });
 
   $('.tokyoproject').on('click', function() {
-    construct_query('Toddzilla');
+    get_mongodb_cards('Toddzilla');
   });
 
   $('.linkbox-api').on('click', function() {
-    construct_query('Linkbox API');
+    get_mongodb_cards('Linkbox API');
   });
 
   $('.ghostthemesio').on('click', function() {
-    construct_query('ghostthemes.io');
+    get_mongodb_cards('ghostthemes.io');
   });
 
   $('.tableau-extraction').on('click', function() {
-    construct_query('Tableau Extraction');
+    get_mongodb_cards('Tableau Extraction');
   });
 
   $('.roblog').on('click', function() {
-    construct_query('Roblog');
+    get_mongodb_cards('Roblog');
   });
 }
 
 $(document).ready(function() {
-  get_mongodb_cards();
+  get_mongodb_cards('Hackers and Slackers');
   build_dropdown();
   make_kanban_slick();
   init_dropdown();

@@ -1,0 +1,7 @@
+MEETUP_API_KEY=######################
+MEETUP_MEMBER_ID=########
+MEDIUM_API_KEY=your-api-key
+GRAPHQL_API_ENDPOINT=https://example.com/yourgraphqlendpoint
+GRAPHQL_API_AUTH="Bearer Your.Graphql.Auth.Token"
+MONGODB_STITCH_APP_ID='hackers-api-ltxuq'
+MONGODB_ATLAS_DB='hackers-api'
