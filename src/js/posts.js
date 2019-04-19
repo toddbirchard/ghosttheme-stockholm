@@ -17,6 +17,12 @@ function mergedTableCells() {
   });
 }
 
+function add_table_container_class() {
+  $('main > div > table').each(function() {
+    $(this).attr('class', 'tableContainer');
+  });
+}
+
 function add_image_alt_tags() {
   $('main img').each(function() {
     const caption = $(this).closest('figure').find('figcaption').text();
@@ -62,7 +68,12 @@ function populate_series_list(post) {
 }
 
 function posts_in_series(series, series_name) {
-  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=' + process.env.GHOST_CONTENT_API_URL + '&filter=tag:' + series + '&order_by=created_at.asc'
+  const series_endpoint = process.env.GHOST_CONTENT_API_URL +
+                          'posts/?key=' +
+                          process.env.GHOST_CONTENT_API_URL +
+                          '&filter=tag:' +
+                          series +
+                          '&order_by=created_at.asc';
   const headers = {
     "Content-Type": "application/json"
   };
@@ -111,9 +122,14 @@ function tag_loop(tags) {
   }
 }
 
-function detect_series() {
+function create_series_widget() {
   const post_slug = current_page();
-  const detect_series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/slug/' + post_slug + '?key=' + process.env.GHOST_CONTENT_API_KEY + '&include=tags';
+  const detect_series_endpoint = process.env.GHOST_CONTENT_API_URL +
+                                'posts/slug/' +
+                                post_slug +
+                                '?key=' +
+                                process.env.GHOST_CONTENT_API_KEY +
+                                '&include=tags';
   const headers = {
     "Content-Type": "application/json"
   };
@@ -139,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
   enable_baguettebox();
   add_image_alt_tags();
   post_link_previews();
-  detect_series();
+  create_series_widget();
+  add_table_container_class()
   // hljs_init();
 });
