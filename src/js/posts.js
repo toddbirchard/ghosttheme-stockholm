@@ -6,7 +6,6 @@ import { post_link_previews } from './posts/previews.js';
 import { scrollable_tables } from './posts/scrolltables.js';
 import { enable_baguettebox } from './posts/baguette.js';
 import { code_snippet_full_screen } from './posts/coderesize.js';
-// import { get_author_social } from './posts/authorsocial.js';
 
 // Functions
 // -------------------------------------------
@@ -63,7 +62,7 @@ function populate_series_list(post) {
 }
 
 function posts_in_series(series, series_name) {
-  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=bc6a59fe37ee67d9fbb93ea03b&filter=tag:' + series + '&order_by=created_at.asc'
+  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=' + process.env.GHOST_CONTENT_API_URL + '&filter=tag:' + series + '&order_by=created_at.asc'
   const headers = {
     "Content-Type": "application/json"
   };
@@ -102,8 +101,7 @@ function posts_in_series(series, series_name) {
 }
 
 function tag_loop(tags) {
-  var i;
-  for (i = 0; i < tags.length; i++) {
+  for (var i = 0; i < tags.length; i++) {
     const tag = tags[i];
     if (tag['visibility'] == "internal") {
       const series = tag['slug'];
@@ -136,7 +134,6 @@ function detect_series() {
 // Start Script
 // -------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-  // get_author_social();
   code_snippet_full_screen();
   scrollable_tables();
   enable_baguettebox();
