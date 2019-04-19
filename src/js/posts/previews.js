@@ -18,13 +18,22 @@ export function post_link_previews() {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
       };
-      fetch(endpoint_url, {
+      $.ajax({
         method: 'GET',
-        mode: 'no-cors',
-        headers: headers
-      }).then((json) => {
-        $(this).html('<a href="' + json.url + '"><div class="link-preview"> \n ' + '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + json.title + '" src="' + json.image + '"></div> \n' + '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + json.title + '</h4> \n ' + '<p>' + json.description + '</p> \n' + '<h4 class="title-mobile">' + json.title + '</h4> \n ' + '<span class="url-info"><i class="far fa-link"></i>' + json.url.split('://')[1] + '</span> \n ' + '</div></div></a>');
-        remove_images();
+        url: endpoint_url,
+        headers: headers,
+        dataType: 'json',
+        success: function(result) {
+          $(this).html('<a href="' + json.url + '"><div class="link-preview"> \n ' +
+                        '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + json.title + '" src="' + json.image + '"></div> \n' +
+                        '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + json.title + '</h4> \n ' +
+                        '<p>' + json.description + '</p> \n' +
+                        '<h4 class="title-mobile">' + json.title + '</h4> \n ' +
+                        '<span class="url-info"><i class="far fa-link"></i>' + json.url.split('://')[1] + '</span> \n ' +
+                        '</div></div></a>'
+                      );
+          remove_images();
+        }
       });
     });
   }
