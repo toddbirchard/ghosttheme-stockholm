@@ -1,37 +1,8 @@
-// Dependencies
-import '../less/posts.less';
-import { post_link_previews } from './posts/previews.js';
-import { scrollable_tables } from './posts/scrolltables.js';
-import { enable_baguettebox } from './posts/baguette.js';
-import { code_snippet_full_screen } from './posts/coderesize.js';
-
-// Functions
-// -------------------------------------------
-function mergedTableCells() {
-  $('table').find('th').each(function() {
-    if ($(this).attr('rowspan')) {
-      $(this).css('border-bottom', '2px solid #f6f8fe');
-    }
-  });
-}
-
-function add_table_container_class() {
-  $('main > div > table').each(function() {
-    $(this).attr('class', 'tableContainer');
-  });
-}
-
-function add_image_alt_tags() {
-  $('main img').each(function() {
-    const caption = $(this).closest('figure').find('figcaption').text();
-    $(this).attr('alt', caption);
-  });
-}
+import { $ } from 'jquery';
 
 function current_page() {
   const sPath = String(document.location.pathname);
   const slug = sPath.split('/')[1];
-  console.log('slug = ' + slug);
   return slug;
 }
 
@@ -112,7 +83,8 @@ function tag_loop(tags) {
   }
 }
 
-function create_series_widgets() {
+
+export function create_series_widget() {
   const post_slug = current_page();
   const detect_series_endpoint = process.env.GHOST_CONTENT_API_URL +
                                 'posts/slug/' +
@@ -133,16 +105,3 @@ function create_series_widgets() {
         }
     });
 }
-
-// Start Script
-// -------------------------------------------
-document.addEventListener("DOMContentLoaded", function() {
-  code_snippet_full_screen();
-  scrollable_tables();
-  enable_baguettebox();
-  add_image_alt_tags();
-  post_link_previews();
-  create_series_widgets();
-  add_table_container_class()
-  // hljs_init();
-});
