@@ -43,7 +43,7 @@
     align-items: center;
     height: 28px;
     border-left: 0;
-    border-bottom: 1px solid #69738b;
+    border-bottom: 1px solid #c2c6d1;
     margin-left: -37px;
 
     .make-selection {
@@ -63,32 +63,43 @@
     }
   }
 
-  .projectdropdown > ul > li i {
-    margin-right: 0.5em;
-    font-size: 1.5em;
-    vertical-align: middle;
-    float: right;
-    height: 20px;
-  }
+  .projectdropdown {
+    @media(max-width: @mobile-breakpoint) {
+      width: 95%;
+    }
 
-  .projectdropdown > ul > li:before {
-    content: '';
-    display: none;
-    width: 100%;
-    height: 5em;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
+    @media(max-width: 600px) {
+      width: 85%;
+      border-radius: 3px;
+    }
 
-  .projectdropdown > ul > li:hover {
-    background: #41A7FC;
-    color: #fff;
-    cursor: pointer;
-  }
+    & > ul > li i {
+      margin-right: 0.5em;
+      font-size: 1.5em;
+      vertical-align: middle;
+      float: right;
+      height: 20px;
+    }
 
-  .projectdropdown > ul > li:hover:before {
-    display: block;
+    & > ul > li:before {
+      content: '';
+      display: none;
+      width: 100%;
+      height: 5em;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    & > ul > li:hover {
+      background: #41A7FC;
+      color: #fff;
+      cursor: pointer;
+
+      &:before {
+        display: block;
+      }
+    }
   }
 
   .projects-dropdown:hover .dropdown-list {
@@ -116,6 +127,10 @@
     border-radius: 4px;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
     padding: 0 8px;
+
+    @media(max-width: 600px) {
+      top: 35px;
+    }
 
     li {
       width: 100%;
@@ -200,6 +215,7 @@
     display: none !important;
     margin: 0;
     width: -webkit-fill-available;
+    line-height: 1;
 
     &:hover {
       background: @theme-color;
@@ -215,10 +231,11 @@
       flex-direction: column;
       width: 100%;
       text-align: center;
-      padding: 5px 0;
+      padding: 10px 0 0;
       height: 45px;
       background: white;
       border-bottom: 1px solid #d8d8d8;
+      line-height: 1;
     }
   }
 
