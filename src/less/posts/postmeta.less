@@ -46,23 +46,21 @@ header {
         height: 30px !important;
         padding: 10px 8px;
       }
-      @media(max-width: 500px) {
-
-        i {
-          font-weight: 500;
-          font-size: 1.3em!important;
-        }
-      }
 
       i {
         font-size: 1em !important;
+
+        @media(max-width: 500px) {
+            font-weight: 500;
+            font-size: 1.3em!important;
+        }
       }
 
       span {
-        font-size: 1em;
+        font-size: .9em;
         font-family: @body-font-bold;
         @media(max-width: @tablet-breakpoint) {
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
       }
 

@@ -35,10 +35,20 @@
   }
 
   .postlist {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+
+    @media(max-width: @tablet-breakpoint) {
+      width: 100%;
+    }
+
+    @media(max-width: @mobile-breakpoint) {
+      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
+    }
 
     article {
       margin-bottom: 20px;
@@ -70,7 +80,7 @@
     }
 
     article {
-      width: 49%;
+      width: 100%;
       height: auto;
       position: relative;
       display: flex;
@@ -78,6 +88,12 @@
       @media(max-width: @mobile-breakpoint) {
         width: 100%;
         height: auto;
+      }
+
+      .meta .meta-item.tags {
+        @media(max-width: @tablet-breakpoint) {
+          display: none;
+        }
       }
 
       .post-head {
