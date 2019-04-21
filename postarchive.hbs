@@ -4,13 +4,12 @@
 <section class="content-wrap">
 	<div class="container">
 		<!-- start main post area -->
-		<main class="main-content">
-			<div class="postlist">
-				{{#foreach posts}}
-					{{> postpreview}}
-				{{/foreach}}
-			</div>
+		<main class="postlist">
+			{{#foreach posts}}
+				{{> postpreview}}
+			{{/foreach}}
 		</main>
+		{{pagination}}
 		<!-- end main post area -->
 	</div>
 </section>

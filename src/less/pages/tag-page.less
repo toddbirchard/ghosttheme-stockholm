@@ -41,10 +41,6 @@
     display: grid;
     grid-template-columns: 48.5% 48.5%;
 
-    @media(max-width: @tablet-breakpoint) {
-      width: 100%;
-    }
-
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-template-columns: 100%;
@@ -90,7 +86,7 @@
         height: auto;
       }
 
-      .meta .meta-item.tags {
+      .tags {
         @media(max-width: @tablet-breakpoint) {
           display: none;
         }
@@ -200,7 +196,7 @@
     margin: 40px 40px 0;
     padding: 0;
     @media(max-width: @tablet-breakpoint) {
-      margin: 40px 30px 0;
+      margin: 40px 40px 0;
     }
   }
 
@@ -238,7 +234,7 @@
     font-weight: 300;
     @media(max-width: 900px) {
       min-height: 63px;
-      margin: -20px 30px 30px;
+      margin: -20px 40px 30px;
     }
   }
 
@@ -248,17 +244,15 @@
     grid-template-rows: 367px;
     grid-column-gap: 10px;
     margin: 30px 40px 20px;
-    @media(max-width: @tablet-breakpoint) {
-      margin: 30px 30px 20px;
-    }
+
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: [first] 1fr;
-      margin: 20px;
+      margin: 20px 40px 30px;
     }
 
     .tag-wrapper {
       background: #f4fcff;
-      margin: 0 0 15px;
+      margin: 0 0 20px;
       border: 1px solid #dadada;
       transition: all 0.3s ease-out;
       grid-template-rows: 291px;
@@ -282,7 +276,7 @@
         }
       }
       @media(max-width: 900px) {
-        margin: 0 0 15px;
+        margin: 0 0 25px;
 
         &:last-of-type {
           margin-bottom: 0;
@@ -320,6 +314,7 @@
         position: relative;
         display: block;
         transition: all 0.3s ease-out;
+        overflow: hidden;;
         @media(max-width: @tablet-breakpoint) {
           max-height: 206px;
         }
@@ -328,7 +323,8 @@
         }
 
         img {
-          max-width: 100%;
+          width: 100%;
+          height: auto;
         }
       }
 

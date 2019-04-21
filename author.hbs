@@ -8,11 +8,13 @@
 			{{> author/author-sidebar}}
 		{{/author}}
 		<!-- start main post area -->
-		<main>
+		{{#author}}
+			{{> author/cover-author}}
+		{{/author}}
+		<main class="postlist">
 			{{#author}}
-				{{> author/cover-author}}
+				{{> loop}} {{pagination}}
 			{{/author}}
-			{{> loop}} {{pagination}}
 		</main>
 		<!-- end main post area -->
 	</div>

@@ -4,12 +4,17 @@
 .postlist {
   @media(max-width: @tablet-breakpoint) {
     padding: 0;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 92%;
   }
+
   @media(max-width: @mobile-breakpoint) {
     margin: 20px auto;
-    width: 93%;
+    width: 90%;
+  }
+
+  .post-preview {
+    overflow: hidden;
   }
 
   &:last-child {

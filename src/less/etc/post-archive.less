@@ -4,15 +4,15 @@
 
   .postlist {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
 
     .post-preview {
-      max-width: 29%;
+      width: auto;
       padding: 15px;
-
+      margin-bottom: 0;
+      
       .post-head .post-title {
         font-size: 1.5em;
       }
