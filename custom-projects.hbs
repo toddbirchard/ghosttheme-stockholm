@@ -2,10 +2,10 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap archive">
-	<div class="projects-container">
+	<div class="page-container">
 		<!-- start post -->
 		{{#post}}
-			<div class="main-content">
+			<main class="main-content">
 				<div class="intro">
 					{{#if feature_image}}
 						<div class="post-image" style="background-image: url({{feature_image}});">
@@ -137,7 +137,7 @@
 					</a>
 				</div>
 				{{!--{{> repos}}--}}
-			</div>
+			</main>
             {{> projects/projects-dropdown }}
 			{{> projects/projects-kanban}}
 		{{/post}}

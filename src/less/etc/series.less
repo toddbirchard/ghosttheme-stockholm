@@ -59,7 +59,7 @@
     &:hover {
       background: @theme-color;
       cursor: pointer;
-      
+
       * {
         color: white !important;
       }
@@ -197,7 +197,7 @@
       width: 100%;
       padding: 5px 20px 0;
       position: relative;
-      max-height: 115px;
+      height: 115px;
       @media(max-width: @tablet-breakpoint) {
         padding: 0 0 0 15px;
       }
@@ -207,7 +207,7 @@
         justify-content: left;
         align-items: center;
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
 
         i {
           margin-right: 5px;
@@ -309,7 +309,7 @@
         .tags {
           padding: 2px 8px;
           border-radius: 2px;
-          
+
           span {
             font-family: @body-font-bold;
             font-size: .9em !important;
@@ -341,16 +341,16 @@
 
     .imagewrapper {
       display: block;
-      max-width: 326px;
+      width: auto;
+      height: 115px;
       overflow: hidden;
-      height: fit-content;
       @media(max-width: @mobile-breakpoint) {
         max-width: 40%;
       }
 
       img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 115px;
         margin-bottom: -8px;
       }
 

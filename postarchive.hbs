@@ -1,19 +1,18 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<!-- start site's main content area -->
-<section class="content-wrap">
+
+<!-- Start Post Archive -->
+<section class="content-wrap post-archive">
 	<div class="container">
-		<!-- start main post area -->
 		<main class="postlist">
 			{{#foreach posts}}
 				{{> postpreview}}
 			{{/foreach}}
 		</main>
 		{{pagination}}
-		<!-- end main post area -->
 	</div>
 </section>
 {{#contentFor "scripts"}}
 	<script async src="{{asset "js/postarchive.js"}}"></script>
 {{/contentFor}}
-<!-- end site's main content area -->
+<!-- End Post Archive -->

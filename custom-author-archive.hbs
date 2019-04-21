@@ -2,10 +2,10 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap archive">
-	<div class="page-container about-container">
+	<div class="page-container sidebar-layout">
 		<!-- start main post area -->
 		{{> sidebar}}
-		<div class=" main-content">
+		<main class="main-content">
 			<!-- start post -->
 			{{#post}}
 				<main class="{{post_class}}">
@@ -27,7 +27,7 @@
 				</main>
 			{{/post}}
 			<!-- end post -->
-		</div>
+		</main>
 		<!-- end main post area -->
 	</div>
 </section>
