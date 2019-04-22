@@ -33,6 +33,10 @@
     @media(max-width: 1100px) {
       margin: -8px 20px 0;
     }
+
+    @media(max-width: @tablet-breakpoint) {
+      margin: 0 0 20px;
+    }
   }
 
   iframe {
@@ -55,7 +59,7 @@
     & > p {
       margin: 0 40px 20px !important;
       font-weight: 300;
-      @media(max-width: @mobile-breakpoint) {
+      @media(max-width: 1050px) {
         margin: 0 30px 20px !important;
       }
     }
