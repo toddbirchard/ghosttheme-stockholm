@@ -1,0 +1,25 @@
+@import "../global/variables.less";
+@import "../global/mixin.less";
+
+.author-template,
+.home-template,
+.paged,
+.tag-template {
+  .tag-name {
+    font-size: 1.3em;
+    margin-top: 0;
+    font-family: @body-font;
+
+    i {
+      font-size: 0.8em;
+      margin-right: 5px;
+      font-weight: 100;
+    }
+  }
+
+  .main-header {
+    @media(max-width: @tablet-breakpoint) {
+      height: 200px;
+    }
+  }
+}

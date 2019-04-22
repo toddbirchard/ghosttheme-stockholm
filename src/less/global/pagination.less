@@ -1,0 +1,137 @@
+@import "variables.less";
+@import "mixin.less";
+/*====================================================
+	pagination
+====================================================*/
+.pagination {
+	margin: 10px auto 15px;
+	text-align: center;
+	display: block;
+	order: 20;
+	position: relative;
+	background: none;
+	width: 100%;
+
+	.older-posts {
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: #a1afc5;
+		border: none;
+		border-radius: 2px;
+
+		&:hover {
+			background: @hover-color;
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+	}
+
+	.newer-posts {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: #a1afc5;
+		border: none;
+		border-radius: 2px;
+
+		&:hover {
+			background: @hover-color;
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+	}
+
+	a,
+	strong {
+		text-align: center;
+		display: inline-block;
+		color: #828994;
+		background: none;
+		border-radius: 1px;
+		padding: 8px 13px;
+		height: 14px;
+		line-height: 1;
+		font-size: 1em;
+		font-weight: 700;
+
+		&:hover {
+			background: @hover-color;
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+	}
+	@media(max-width: @mobile-breakpoint) {
+		a:nth-of-type(5),
+		a:nth-of-type(6),
+		a:nth-of-type(7),
+		a:nth-of-type(8) {
+			display: none;
+		}
+	}
+
+	strong {
+		color: #6e89b5 !important;
+		background: rgba(199, 210, 240, 0.5);
+    border-radius: 1px;
+		transition: all 0.2s ease-out;
+
+		&:hover {
+			color: white !important;
+			cursor: pointer;
+		}
+	}
+
+	.page-number {
+		background: none;
+		margin: 0 auto;
+		line-height: 1;
+		display: flex;
+		justify-content: center;
+		max-width: 70%;
+		@media(max-width: @mobile-breakpoint) {
+			max-width: 200px;
+    	justify-content: space-between;
+		}
+
+		.page {
+			margin: 0 10px;
+			@media(max-width: @mobile-breakpoint) {
+				margin: 0;
+			}
+		}
+
+	}
+
+	.total-count {
+		color: #bec0d8;
+		margin-top: 10px;
+		font-size: 0.9em;
+	}
+}
+/* Next & Prev buttons on post pages */
+/*
+.prev-next-wrap {
+	margin: 20px auto 0;
+	padding: 0;
+	max-width: 830px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: auto;
+	height: fit-content;
+
+	@media(max-width: @tablet-breakpoint){
+		padding: 0 15px;
+	}
+
+	@media(max-width: @mobile-breakpoint){
+		flex-direction: column;
+		padding: 0;
+		margin: 10px 0;
+	}
+}
+*/

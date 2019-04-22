@@ -1,0 +1,14 @@
+<!-- Start Contributors Widget -->
+<div class="widget contributors">
+	<h4 class="footer-title">Authors</h4>
+	<ul>
+		{{#get "authors" include="count.posts"}}
+			{{#foreach authors}}
+					<li>
+						<a href="{{url}}" class="link">{{name}}</a>
+					</li>
+			{{/foreach}}
+		{{/get}}
+		</ul>
+</div>
+<!-- End Contributors Widget -->

@@ -1,0 +1,135 @@
+.post-content {
+  .hljs.javascript,
+  .hljs.language-javascript {
+    background: #1e3742;
+    color: #daf7fd;
+
+    &::-moz-selection {
+      text-shadow: none;
+      background: #435643;
+    }
+
+    .inserted {
+      border-bottom: 1px dotted #f0fff0;
+      text-decoration: none;
+    }
+
+    .bold,
+    .important {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #b3d6b3;
+    }
+
+    .entity {
+      cursor: help;
+    }
+
+    .highlight {
+      outline: 0.4em solid #5c705c;
+      outline-offset: 0.4em;
+    }
+
+    .cdata,
+    .doctype,
+    .prolog {
+      color: #535f53;
+    }
+
+    .comment {
+      color: #7f8ba7;
+      opacity: 0.6;
+
+      @media(max-width: @mobile-breakpoint) {
+        white-space: pre;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline;
+        overflow: hidden;
+      }
+    }
+
+    .built_in {
+      font-weight: 700;
+      color: #79ddfb;
+    }
+
+    .punctuation {
+      color: #535f53;
+    }
+
+    .namespace {
+      opacity: 0.7;
+    }
+
+    .number,
+    .operator {
+      color: #f7f23f;
+    }
+
+    .tag {
+      color: #daf7fd;
+
+      .name {
+        color: #6dbfec;
+      }
+    }
+
+    .property {
+      color: #687d68;
+    }
+
+    .atrule-id,
+    .selector,
+    .tag-id {
+      color: #f0fff0;
+    }
+
+    .attr-name {
+      color: #b3d6b3;
+    }
+
+    .function > .keyword {
+      color: #78ddfa;
+      font-weight: 700;
+    }
+
+    .function > .title {
+      color: #d08888;
+    }
+
+    .params {
+      color: #fbe979;
+    }
+
+    .keyword {
+      color: #a4a0ff;
+    }
+
+    .string {
+      font-weight: 400;
+      font-family: 'AFParseGroteskMono-Light';
+      color: #a0e4cf;
+
+      @media(max-width: @mobile-breakpoint) {
+        white-space: pre;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline;
+        overflow: hidden;
+      }
+    }
+
+    .attr {
+      color: #a39fff;
+    }
+
+    &::before {
+      content: "Javascript";
+      color: white;
+      background: rgba(50, 70, 94, 0.4);
+    }
+  }
+}

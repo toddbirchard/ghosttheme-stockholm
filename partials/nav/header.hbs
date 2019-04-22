@@ -1,0 +1,21 @@
+<!-- Start Header -->
+<nav>
+  <div class="banner">
+    <div class="search form-group">
+      <i class="far fa-search"></i><input id="my-custom-input" class="icon" placeholder="Search all posts" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search all posts'">
+    </div>
+    <div id="my-custom-results"></div>
+    {{#if @site.logo}}
+      <a class="logo" href="{{@site.url}}/">
+        <img src="{{@site.logo}}" alt="{{@site.title}}" data-rjs="2">
+      </a>
+    {{else}}
+      <a class="branding" href="{{@site.url}}/">{{@site.title}}</a>
+    {{/if}}
+  </div>
+  <div class="navigation">
+    {{> nav/desktop-navigation}}
+    {{> nav/mobile-navigation}}
+  </div>
+</nav>
+<!-- End Header -->

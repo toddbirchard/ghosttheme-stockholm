@@ -1,0 +1,40 @@
+fragment JiraFieldsFragment on JiraIssue {
+  key
+  summary
+  epic_color
+  epic_name
+  status
+  priority_rank
+  priority_url
+  priority_name
+  issuetype_name
+  issuetype_icon
+  assignee_name
+  assignee_url
+}
+
+query GetJiraIssuesViaFragments($project: String) {
+    backlog: jiraIssues(where: {project: $project, status: "Backlog", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: priority_rank_ASC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    todo: jiraIssues(where: {project: $project, status: "To Do", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    progress: jiraIssues(where: {project: $project, status: "In Progress", issuetype_name_not_in: ["Epic", "Idea", "Content"]}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+    done: jiraIssues(where: {project: $project, status: "Done", issuetype_name_not_in: ["Epic", "Idea", "Content"], priority_rank_in: [1, 2, 3]}, orderBy: updated_DESC, first: 6) {
+        ...JiraFieldsFragment
+    }
+}
+
+query GetAuthors($slug: String) {
+  authors(where: {slug: $slug}) {
+    twitter
+    linkedin
+    quora
+    medium
+    github
+    pocket
+  }
+}

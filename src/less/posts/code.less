@@ -1,0 +1,250 @@
+/* Global Styles */
+blockquote pre {
+  width: 96% !important;
+  margin: auto;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+
+  code {
+    &::before {
+      font-size: 15px !important;
+      width: 100%;
+      padding: 5px 15px;
+      margin: 0 auto;
+      left: 0;
+    }
+    background: rgba(41, 61, 76, 0.84) !important;
+  }
+}
+
+.post-content {
+  pre {
+    white-space: pre-wrap;
+    transition: all 0.5s ease-out;
+    position: relative;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 100%;
+    @media(max-width: @mobile-breakpoint) {
+      max-width: none;
+      width: auto;
+      white-space: pre-line;
+      max-height: 400px;
+      overflow-x: visible;
+      color: white;
+    }
+
+    code {
+      overflow-y: hidden;
+      position: relative;
+      transition: all 0.5s ease-out;
+      white-space: pre-wrap;
+      padding: 60px 25px 20px;
+      overflow-x: hidden;
+      font-weight: 100;
+      margin: 0;
+      height: 100%;
+      font-size: 0.8em;
+      @media(max-width: @mobile-breakpoint) {
+        overflow-y: hidden;
+        font-size: 12px;
+        padding: 55px 20px 20px;
+      }
+    }
+
+    span {
+      display: inline;
+    }
+  }
+
+  li > code,
+  p > code {
+    display: inline;
+    overflow-y: visible;
+    width: fit-content;
+    background: rgba(183, 192, 237, 0.18);
+    box-shadow: -1px 1px 2px rgba(29, 72, 120, 0.2), 0 0 1px rgba(29, 72, 120, 0.3);
+    color: #3297b5;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family: 'AFParseGroteskMono-Light', sans-serif;
+    white-space: nowrap;
+  }
+
+  .fullscreenbtn {
+    position: absolute;
+    bottom: 13px;
+    right: 23px;
+    margin: auto;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    color: #9bc3e1;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display: none;
+    z-index: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    i {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 30px;
+      width: 22px;
+      opacity: 0.6;
+    }
+    @media(max-width: @mobile-breakpoint) {
+      display: block;
+    }
+  }
+
+  .fullscreen {
+    height: 100%;
+    width: 110%;
+  }
+
+  .hljs.ini,
+  .language-ini {
+    &::before {
+      content: "ini";
+    }
+  }
+
+  .language-xml {
+    &::before {
+      content: "XML" !important;
+    }
+  }
+
+  .language-css {
+    &::before {
+      content: "CSS" !important;
+    }
+  }
+
+  .language-endpoint {
+    display: block;
+    margin: 0;
+    padding: 0 25px 20px;
+    overflow-x: hidden;
+    background: #262633;
+    color: #d3dce0;
+    font-weight: 200;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+    &::before {
+      content: "Endpoint" !important;
+    }
+  }
+}
+
+.language-output,
+.output {
+  &::before {
+    content: "Output" !important;
+  }
+}
+
+.css,
+.language-css {
+  .built_in {
+    color: #88C0D0;
+  }
+
+  .keyword {
+    color: #D08770;
+  }
+
+  &::before {
+    content: "CSS" !important;
+  }
+}
+
+.groovy,
+.language-groovy {
+  .meta:not(:first-child) {
+    color: #D08770;
+  }
+
+  &::before {
+    content: "Groovy" !important;
+  }
+}
+
+.language-yaml,
+.yaml {
+  .meta {
+    color: #D08770;
+  }
+
+  &::before {
+    content: "Yaml" !important;
+  }
+}
+
+.language-toml,
+.toml {
+  .meta {
+    color: #D08770;
+  }
+
+  &::before {
+    content: "TOML" !important;
+  }
+}
+
+.codeoverflow {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 80px;
+  background: linear-gradient(0, #0d111d, rgba(20, 30, 57, 0) 70.71%);
+  z-index: 0;
+  display: none;
+  opacity: 1;
+  transition: all 0.4s ease-out;
+  mix-blend-mode: hard-light;
+  @media(max-width: @mobile-breakpoint) {
+    display: block;
+  }
+}
+
+.fullWidth {
+  @media(max-width: @mobile-breakpoint) {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+
+    code {
+      font-size: 12px;
+
+      * {
+        font-size: 12px;
+      }
+    }
+  }
+
+  code {
+    font-size: 12px;
+  }
+}
+
+.bottomFade {
+  display: block;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  background: linear-gradient(0deg, #0e2542, rgba(11, 33, 58, 0));
+  mix-blend-mode: hard-light;
+}

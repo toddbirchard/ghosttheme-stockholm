@@ -1,0 +1,205 @@
+@import "variables.less";
+
+.author-card-small {
+  border-radius: 2px !important;
+  background: #fff !important;
+  padding: 0;
+  margin: 10px 0;
+  border-left: 2px solid #dcdcdc!important;
+  border-bottom: 2px solid #dcdcdc !important;
+  position: relative;
+  border: 1px solid #ececec;
+  color: #5f5f5f;
+  @media(max-width: @mobile-breakpoint) {
+    width: 100%!important;
+    margin: 10px auto;
+  }
+
+  .author {
+    font-size: 1.3em;
+    margin-bottom: 0;
+    line-height: 1;
+    color: #326671;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-family: @body-font;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #326671;
+    margin-bottom: 10px !important;
+    margin-top: 2px;
+  }
+
+  .meta-info {
+    color: @text-color;
+    margin-bottom: 10px;
+  }
+  @media(max-width: @mobile-breakpoint) {
+    display: block !important;
+  }
+
+  span {
+    color: #56585f;
+    font-size: 1em;
+  }
+
+  .author-specs {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 1040px) {
+      display: block;
+    }
+  }
+
+  .avatar-link {
+    margin-bottom: 15px;
+    display: inline-block;
+    position: absolute;
+    left: auto;
+    right: 20px;
+    width: 85px;
+    height: 82px;
+    margin: auto;
+    top: 92px;
+    border: 3px solid white;
+    box-shadow: 2px 2px 2px rgba(20, 24, 53, 0.15);
+    @media(max-width: 1040px) {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 100%;
+      margin: 0;
+      height: 100%;
+    }
+  }
+
+  .details {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    display: inline-block;
+    /* margin-left: 6px; */
+    overflow: hidden;
+    padding: 17px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 0;
+    padding-bottom: 8px;
+  }
+
+  .bio {
+    display: block;
+    width: -webkit-fill-available;
+    line-height: 1.5;
+    font-weight: 100;
+    float: left!important;
+    font-size: 0.85em !important;
+    margin: 0 auto !important;
+    max-width: 450px;
+    padding: 0 25px 10px;
+    text-align: center;
+    text-align: left;
+    min-height: 70px;
+  }
+
+  .author {
+    text-align: left;
+
+    a {
+      color: #105a6d;
+      font-family: @body-font-bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .author-social {
+    display: none;
+    .author-icons {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 25px;
+    }
+
+    .social-btns {
+      padding: 0;
+      display: block;
+    }
+
+    .btn {
+      font-size: 15px;
+      height: fit-content;
+      display: none;
+    }
+
+    i {
+      margin: 0 auto;
+      font-size: 1.4em;
+    }
+  }
+
+  .meta-info {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 100;
+    color: @text-color-light;
+
+    a {
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline;
+    }
+    @media (max-width: 1040px) {
+      justify-content: center !important;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 2px;
+      text-align: left;
+      padding: 0 10px;
+      @media (max-width: 1040px) {
+        margin: 0 auto 3px;
+      }
+      @media(max-width: @mobile-breakpoint) {
+        margin: 0 auto 3px;
+      }
+
+      i {
+        margin-right: 7px;
+        display: inline;
+      }
+      @media(max-width: @mobile-breakpoint) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .author-cover {
+    width: 100%;
+    height: 130px;
+    background-size: cover !important;
+    background-position-y: center !important;
+    box-shadow: 0 4px 2px -2px rgba(20, 24, 53, 0.15);
+    background: linear-gradient(-15deg, rgba(255, 255, 255, .1) 100px ,transparent 0), linear-gradient(15deg, rgba(255, 255, 255, .1) 100px ,transparent 0),linear-gradient(-15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(15deg, rgba(255, 255, 255, .1) 300px ,transparent 0),linear-gradient(0deg, #749BE1 150px, #9267C7);
+  }
+}
+
+.post-template {
+  .post-count {
+    display: none !important;
+  }
+
+  .author-card-small {
+    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    border: 0;
+  }
+}

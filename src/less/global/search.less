@@ -1,0 +1,215 @@
+nav {
+  .search {
+    .form-group {
+      &::after {
+        content: '\f002';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        display: inline-block;
+        font-style: normal;
+        -webkit-font-feature-settings: normal;
+        font-feature-settings: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        right: 33px;
+        top: 70px;
+        position: absolute;
+        color: #aeb4cc;
+        font-size: 1.2em;
+      }
+    }
+
+    #my-custom-input {
+      height: 100%;
+      width: 200px;
+      background: none;
+      border: none;
+      color: white;
+      padding-left: 20px;
+      font-size: 1em;
+      font-family: @body-font;
+      font-weight: 300;
+      @media(max-width: @tablet-breakpoint) {
+        width: 150px !important;
+      }
+    }
+    @media(max-width: @tablet-breakpoint) {
+      display: none;
+    }
+  }
+
+  #my-custom-results {
+    font-size: 1em;
+    font-family: @body-font !important;
+    font-weight: 200;
+    transition: 0.3s all;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid #cfd3e0;
+    border-radius: 2px;
+    border-top: 0;
+    z-index: 2000;
+    box-shadow: 0 0 50px #7a84b5;
+    position: relative;
+    max-width: 350px;
+    @media(max-width: @tablet-breakpoint) {
+      visibility: hidden;
+    }
+
+    * {
+      transition: 0.3s all;
+    }
+
+    li {
+      width: 100%;
+      padding: 15px 5%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+
+      &:nth-child(even) {
+        background: #f5f8fb;
+      }
+
+      &:hover {
+        background: lighten(@theme-color, 10%);
+        color: white;
+        border: 0;
+
+        a {
+          color: white;
+        }
+      }
+
+      img {
+        height: 55px;
+        width: 133px;
+        overflow: hidden;
+        margin-right: 15px;
+      }
+
+      div {
+        width: 100%;
+
+        a {
+          display: block;
+          line-height: 1.4;
+          font-size: 0.9em;
+          -webkit-line-clamp: 2;
+          font-weight: 600;
+        }
+
+        .tag {
+          display: block;
+          line-height: 1.5;
+
+          span {
+            font-size: 0.7em;
+            font-weight: 100;
+            line-height: 1.5;
+            padding: 5px 10px;
+            margin-top: 4px;
+            display: block;
+            width: fit-content;
+
+            i {
+              margin-right: 4px;
+              font-size: 0.7em;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #nav-search-results {
+    width: 226px;
+    position: absolute;
+    font-size: 1em;
+    font-family: @body-font!important;
+    font-weight: 200;
+    transition: 0.3s all;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid #cfd3e0;
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+    opacity: 0;
+    z-index: 10;
+
+    * {
+      transition: 0.3s all;
+    }
+
+    li {
+      width: -webkit-fill-available;
+      padding: 10px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+
+      a {
+        font-size: 0.8em;
+        font-family: @body-font;
+      }
+
+      &:nth-child(even) {
+        background: #f5f8fb;
+      }
+
+      &:hover {
+        background: lighten(@theme-color, 10%);
+        color: white;
+        border: 0;
+
+        a {
+          color: white;
+        }
+      }
+
+      img {
+        height: 55px;
+        width: 133px;
+        overflow: hidden;
+        margin-right: 15px;
+      }
+
+      div {
+        width: 100%;
+
+        a {
+          display: block;
+          line-height: 1.4;
+          font-size: 0.9em;
+          -webkit-line-clamp: 2;
+          font-weight: 600;
+        }
+
+        .tag {
+          display: block;
+          line-height: 1.5;
+
+          span {
+            font-size: 0.7em;
+            font-weight: 100;
+            line-height: 1.5;
+            padding: 5px 10px;
+            margin-top: 4px;
+            display: block;
+            width: fit-content;
+
+            i {
+              margin-right: 4px;
+              font-size: 0.7em;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<!-- Start Tag Cover -->
+	{{#tag}}
+		{{#if feature_image}}
+			<div class="cover tag-cover series-cover lazy" style="background-image: url({{img_url feature_image absolute="true"}});">
+				<h3 class="tag-name">
+					<i class="fal fa-tag"></i> {{name}}
+				</h3>
+				<div class="post-count">
+					{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
+				</div>
+				{{#if description}}
+					<div class="tag-description">
+						{{description}}
+					</div>
+			</div>
+		{{/if}}
+		{{! Regular tag page}}
+		{{else}}
+			<div class="cover">
+				<h1 class="tag-name">
+					<i class="fal fa-tag"></i> <span>{{name}}</span>
+				</h3>
+				<div class="post-count">
+					{{plural pagination.total empty=(t "No posts") singular=(t "1 Post") plural=(t "% Posts")}}
+				</div>
+				{{#if description}}
+					<div class="tag-description">
+						{{description}}
+					</div>
+				{{/if}}
+			</div>
+			{{/if}}
+	{{/tag}}
+
+	{{!--<script>
+		function PopulateAuthorDetails(users) {
+			for (var i = 0; i < users.length; i++) {
+				var user = users[i];
+				var author = user.slug;
+
+				if (user.title) {
+					$("." + author).find('.title').html(user['title'].toString());
+				}
+
+				if (user.linkedin) {
+					$("." + author).find('.linkedin').children().attr('href', 'https://linkedin.com/in/' + user['linkedin']);
+					$("." + author).find('.linkedin').css('display', 'block');
+				}
+
+				if (user.twitter) {
+					$("." + author).find('.twitter').children().attr('href', 'https://twitter.com/' + user['twitter']);
+					$("." + author).find('.twitter').css('display', 'block');
+				}
+
+				if (user.quora) {
+					$("." + author).find('.quora').children().attr('href', 'https://quora.com/profile/' + user['quora']);
+					$("." + author).find('.quora').css('display', 'block');
+				}
+
+				if (user.pocket) {
+					$("." + author).find('.pocket').children().attr('href', 'https://getpocket.com/' + user['pocket']);
+					$("." + author).find('.pocket').css('display', 'block');
+				}
+
+				if (user.github) {
+					$("." + author).find('.github').children().attr('href', 'https://github.com/' + user['github']);
+					$("." + author).find('.github').css('display', 'block');
+				}
+
+				if (user.medium) {
+					$("." + author).find('.medium').children().attr('href', 'https://hackingandslacking.com/' + user['medium']);
+					$("." + author).find('.medium').css('display', 'block');
+				}
+			}
+		}
+
+		function AuthorDetails() {
+			$.ajax({
+				method: "GET",
+				url: "https://apisentris.com/api/v1/authors",
+				headers: {
+					client_id: "140000",
+					access_token: "6OMcDqLWFV7DuVnxAxJSmQ"
+				},
+				contentType: 'application/json'
+			}).done(function(results) {
+				PopulateAuthorDetails(results);
+			});
+		}
+		AuthorDetails();
+	</script>--}}
+<!-- End Tag Cover -->

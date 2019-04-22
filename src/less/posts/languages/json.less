@@ -1,0 +1,103 @@
+.post-content {
+  .json,
+  .language-json {
+    line-height: 1.4 !important;
+    background: #182c35;
+    color: #daf7fd;
+
+    .attr {
+      color: #7ac9ff !important;
+      font-weight: 700;
+      font-family: 'AFParseGroteskMono-Regular', sans-serif;
+    }
+
+    .string {
+      font-weight: 400;
+      font-family: 'AFParseGroteskMono-Light';
+      color: #a0e4cf;
+
+      @media(max-width: @mobile-breakpoint) {
+        white-space: pre;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline;
+        overflow: hidden;
+      }
+    }
+
+    .comment,
+    .quote {
+      color: #5c6370;
+    }
+
+    .doctag,
+    .formula,
+    .keyword {
+      color: #c678dd;
+    }
+
+    .deletion,
+    .name,
+    .section,
+    .selector-tag,
+    .subst {
+      color: #e06c75;
+    }
+
+    .literal {
+      color: #56b6c2;
+    }
+
+    .addition,
+    .attribute,
+    .regexp {
+      color: #c39dea !important;
+    }
+
+    .built_in,
+    .class,
+    .title {
+      color: #e6c07b;
+    }
+
+    .attr,
+    .number,
+    .selector-attr,
+    .selector-class,
+    .selector-pseudo,
+    .template-variable,
+    .type,
+    .variable {
+      color: #c79fd2;
+      font-style: normal !important;
+    }
+
+    .bullet,
+    .link,
+    .meta,
+    .selector-id,
+    .symbol,
+    .title {
+      color: #61aeee;
+    }
+
+    .emphasis {
+      font-style: italic;
+    }
+
+    .strong {
+      font-weight: bold;
+      font-family: 'AFParseGroteskMono-Regular', sans-serif;
+    }
+
+    .link {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "JSON";
+      color: white;
+      background: rgba(20, 86, 39, 0.4);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../global/variables.less";
+
+.author-template {
+	.cover {
+		.avatar {
+			margin: 0 !important;
+			width: 85px;
+			height: 85px;
+			float: none;
+		}
+
+		h3 {
+			font-family: @body-font;
+			font-size: 1.5em;
+			margin: 10px 10px 10px 0;
+		}
+
+		a:hover {
+			color: @hover-color;
+		}
+
+		.bio {
+			font-size: 0.9em;
+			line-height: 1.5;
+			max-width: 85%;
+			margin: 15px auto 0;
+			font-weight: 300;
+			@media(max-width: @mobile-breakpoint) {
+				max-width: 80%;
+				margin: 15px auto 0;
+			}
+		}
+
+		.meta-item {
+			line-height: 1.3;
+			margin: 0 auto 4px;
+		}
+	}
+
+	.widget {
+		order: 1;
+
+		.widget-body {
+			background-color: white;
+		}
+
+		&.github,
+		&.medium,
+		&.website {
+			display: none;
+		}
+	}
+
+	.sidebar {
+		width: 316px !important;
+		@media (max-width: 800px) {
+			display: none !important;
+		}
+
+
+		.github {
+			order: 1;
+
+			.widget-body {
+				padding: 15px;
+			}
+		}
+
+		.twitter {
+			order: 20;
+		}
+
+
+	}
+}

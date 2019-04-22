@@ -1,0 +1,15 @@
+<!-- Start Related Widget -->
+<div class="widget related">
+	<h4 class="title">Related</h4>
+	<div class="recent-post">
+		{{#get "posts" limit="4" include="tags" filter="slug:-{{slug}}+tag:{{primary_tag.slug}}"}}
+			{{#foreach posts}}
+				<div class="recent-single-post">
+					<a href="{{url}}" class="post-title">{{title}}</a>
+					<div class="tags">{{tags separator=", "}}</div>
+				</div>
+			{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+<!-- End Related Widget -->

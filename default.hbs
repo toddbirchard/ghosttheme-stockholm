@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}} | Data Science & Engineering</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="theme-color" content="#5eb9d7" />
+	<link rel="shortcut icon" href="{{@site.icon}}" />
+	{{! Scripts }}
+	{{> lazyload}}
+	<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+	{{! Scripts }}
+	{{^is "post"}}
+		<meta property="og:image" content="{{img_url @site.cover_image}}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="{{img_url @site.cover_image}}" />
+	{{/is}}
+	{{! Ghost outputs important style and meta data with this tag }}
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+	{{> nav/header}}
+	{{{body}}}
+	{{> footer/footer}}
+	{{> scripts}}
+	{{{block "scripts"}}}
+	{{ghost_foot}}
+</body>
+
+</html>

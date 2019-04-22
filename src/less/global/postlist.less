@@ -1,0 +1,23 @@
+@import "variables.less";
+@import "mixin.less";
+
+.postlist {
+  @media(max-width: @tablet-breakpoint) {
+    padding: 0;
+    margin: 30px auto;
+    width: 92%;
+  }
+
+  @media(max-width: @mobile-breakpoint) {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .post-preview {
+    overflow: hidden;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

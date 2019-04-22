@@ -1,0 +1,123 @@
+#seriesposts {
+  margin: 0 0 20px;
+    padding: 20px 0 10px;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #dae9ed;
+    border-bottom: 1px solid #dae9ed;
+  @media(max-width: @tablet-breakpoint) {
+    margin: 0 0 30px;
+    padding: 20px 10px 10px;
+  }
+  @media(max-width: @mobile-breakpoint) {
+    margin: 10px 0 30px;
+    padding: 20px 0 10px;
+  }
+
+  h5 {
+    font-size: 1.2em;
+    color: #597d87 !important;
+    font-family: @body-font-bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+    margin-top: 0;
+    line-height: 1;
+    height: fit-content;
+    @media(max-width: @tablet-breakpoint) {
+      width: 96%;
+      margin: 0 auto 2px;
+    }
+    @media(max-width: 500px) {
+      width: 87%;
+    }
+    @media(max-width: 400px) {
+      width: 85%;
+    }
+  }
+
+  ol {
+    list-style-type: upper-roman !important;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 5px;
+    @media(max-width: @mobile-breakpoint) {
+      margin: 15px auto 10px;
+      max-width: 90%;
+    }
+
+    li {
+      margin: 18px 0;
+      opacity: 0.7;
+      counter-increment: li -1;
+      color: #2f4951;
+      font-family: @body-font;
+      font-size: 0.85em;
+      padding-left: 0;
+      line-height: 1;
+      display: flex;
+      justify-content: flex-start;
+
+      * {
+        transition: all 0.2s ease-out;
+      }
+      @media(max-width: @mobile-breakpoint) {
+        line-height: 1.3;
+        margin-bottom: 15px;
+        padding-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        * {
+          color: @hover-color;
+        }
+      }
+
+      &::before {
+        content: "Part " counter(li, upper-roman) "." !important;
+        color: #2f4951;
+        font-family: @body-font !important;
+        margin-right: 8px;
+        font-size: 13px;
+        @media(max-width: @mobile-breakpoint) {
+          min-width: 50px;
+          margin-right: 2px;
+          font-weight: normal;
+          font-size: 0.9em;
+        }
+      }
+
+      a {
+        color: #597d87;
+        @media(max-width: @mobile-breakpoint) {
+          font-family: @body-font;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+
+  .currentPost {
+    opacity: 1 !important;
+    margin-left: 0;
+    font-family: @body-font-bold !important;
+
+    * {
+      font-family: @body-font-bold !important;
+    }
+    font-size: 0.95em !important;
+
+    &::before {
+      margin-left: 0;
+      font-family: @body-font-bold !important;
+    }
+  }
+}

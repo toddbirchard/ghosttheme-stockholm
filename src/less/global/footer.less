@@ -1,0 +1,241 @@
+@import "variables.less";
+@import "mixin.less";
+/*====================================================
+	footer
+====================================================*/
+.main-footer {
+	background: #0d1a2f !important;
+	background-size: cover;
+	padding: 35px 8%;
+	color: #fff;
+	margin-top: 30px;
+
+	.footer-title {
+		color: #fff;
+		font-weight: 800;
+		font-size: 1.1em;
+		text-shadow: -1px 1px 1px #133e6d;
+		font-family: @header-font-bold;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		line-height: 1;
+		margin: 0 0 25px;
+		@media(max-width: @tablet-breakpoint) {
+			margin: 10px 0 10px !important;
+		}
+	}
+	@media(max-width: 1000px) {
+		padding: 30px 40px;
+	}
+	@media(max-width: @tablet-breakpoint) {
+		padding: 20px 40px;
+		margin-top: 0;
+	}
+	@media(max-width: @mobile-breakpoint) {
+		display: block;
+		padding: 40px;
+	}
+
+	.footer-container {
+		max-width: 1000px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		@media(max-width: @mobile-breakpoint) {
+			margin: auto;
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+
+	.widget {
+		padding: 2px 0;
+		width: 15%;
+		margin: 0;
+
+		ul {
+			padding: 0;
+
+			li {
+				width: 100%;
+				display: block;
+				text-align: left;
+				transition: all 0.3s ease-out;
+				font-family: @body-font;
+				font-size: 0.93em;
+				margin-bottom: 2px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+
+				* {
+					&:hover {
+						cursor: pointer !important;
+						color: @hover-color;
+					}
+				}
+
+				a {
+					color: #fff;
+					font-family: @body-font;
+					font-weight: 300;
+				}
+			}
+		}
+		@media(max-width: @tablet-breakpoint) {
+			width: -webkit-fill-available;
+			margin: 10px 0 30px;
+			width: 22%;
+			margin-top: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@media(max-width: @mobile-breakpoint) {
+			max-width: none;
+			padding: 0;
+		}
+	}
+}
+/*====================================================
+		about
+====================================================*/
+.widget.about {
+	min-width: 24%;
+	width: 24%;
+	@media(max-width: @tablet-breakpoint) {
+		width: 35% !important;
+	}
+	@media(max-width: @mobile-breakpoint) {
+		min-width: 100%;
+		border-bottom: 1px solid rgba(76, 108, 157, 0.27);
+		padding-bottom: 20px !important;
+		margin: 0 0 20px;
+	}
+
+	.logo {
+		width: 185px;
+		display: block;
+		height: 41px;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 0.5;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.description {
+		color: white;
+		width: 100%;
+		font-family: @body-font;
+		font-weight: 100;
+		font-size: 0.85em;
+		line-height: 1.6;
+		margin: 15px 0 25px;
+		@media(max-width: @mobile-breakpoint) {
+			margin: 15px 0 20px;
+		}
+	}
+
+	.social-btns {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		i {
+			font-size: 20px;
+			mix-blend-mode: hard-light;
+			@media(max-width: @mobile-breakpoint) {
+				font-size: 25px;
+			}
+		}
+
+		.facebook i {
+			color: lighten(@facebook-color, 30%);
+		}
+
+		.twitter i {
+			color: lighten(@twitter-color, 10%);
+		}
+
+		.google i {
+			color: lighten(@google-color, 10%);
+		}
+
+		.tumblr i {
+			color: lighten(@tumblr-color, 30%);
+		}
+
+		.github i {
+			color: white;
+		}
+
+		.pocket i {
+			color: lighten(#f14861, 10%);
+		}
+
+		.quora i {
+			color: lighten(#b92b27, 10%);
+		}
+
+		.rss i {
+			color: lighten(@rss-color, 30%);
+		}
+
+		a {
+			font-weight: 100;
+			font-size: 1.4em;
+			margin: 0;
+			color: unset;
+			transition: all 0.3s ease-out;
+
+			&:hover {
+				opacity: 1;
+				cursor: pointer;
+
+				* {
+					color: white;
+				}
+			}
+		}
+	}
+}
+/*====================================================
+			contributors
+=====================================================*/
+.widget.contributors {
+	margin-top: 10px;
+	@media(max-width: @tablet-breakpoint) {
+		display: none;
+	}
+}
+
+.widget.links,
+.widget.tags {
+	margin-top: 10px;
+	@media(max-width: @mobile-breakpoint) {
+		margin: 10px 0 0;
+		width: 40%;
+		min-width: unset;
+	}
+}
+
+.copyright {
+	width: 100%;
+	background: #0d1527;
+	text-align: center;
+	color: white;
+	font-size: 0.85em;
+	font-family: @body-font;
+	font-weight: 300;
+	padding: 15px 0;
+	line-height: 1.5;
+}

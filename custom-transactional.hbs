@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}" class="transactional">
+
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	{{! Styles }}
+</head>
+
+<body class="transactional">
+	<!-- start site's main content area -->
+	{{#post}}
+		<section>
+			<div class="page-container">
+				<!-- start post -->
+				<h1 class="post-title">{{{title}}}</h1>
+				{{{body}}}
+			</div>
+			<!-- end main post area -->
+		</section>
+	{{/post}}
+	{{#contentFor "scripts"}}
+		<script async src="{{asset "js/transactional.js"}}"></script>
+	{{/contentFor}}
+</body>
+
+</html>
+<!-- end site's main content area -->

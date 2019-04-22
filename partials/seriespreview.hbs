@@ -1,0 +1,38 @@
+<!-- Start Series Preview -->
+<article class="{{post_class}} series-article-preview">
+  {{#if feature_image}}
+    <a class="imagewrapper" href="{{url}}">
+      <picture>
+        <source loading="lazy" class="lazy" media="(min-width: 1200px)" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+        <img loading="lazy" class="lazy" alt="{{title}}" class="lazy" src="{{img_url feature_image}}">
+      </picture>
+    </a>
+  {{/if}}
+  <div class="details">
+    <div class="post-head">
+      <h3 class="post-count">Post {{@number}}</h3>
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+      <span class="post-excerpt">{{excerpt words="40"}}</span>
+    </div>
+    <div class="meta">
+      {{#primary_tag}}
+        <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+      {{/primary_tag}}
+      {{#primary_author}}
+        {{primary_author.bio}}
+        {{#if profile_image}}
+          <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}} Author image" loading="lazy" class="lazy avi" data-rjs="2"><span>{{slug}}</span></a>
+          <a href="{{url}}" class="author-mobile"><img src="{{img_url profile_image}}" alt="{{name}} Author image" loading="lazy" class="lazy avi" data-rjs="2" /></a>
+          <div class="info"><span class="mobile-name">{{slug}}</span>
+            <!--<span class="mobile-date">{{date format="MMM DD"}}</span>-->
+          </div>
+        {{else}}
+          <a href="{{url}}" class="meta-item author"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+          <a href="{{url}}" class="author-mobile"><i class="fas fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i></a>
+        {{/if}}
+      {{/primary_author}}
+      <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
+    </div>
+  </div>
+</article>
+<!-- End Series Preview -->
