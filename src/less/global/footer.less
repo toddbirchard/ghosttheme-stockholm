@@ -64,7 +64,7 @@
 				text-align: left;
 				transition: all 0.3s ease-out;
 				font-family: @body-font;
-				font-size: 0.93em;
+				font-size: 0.9em;
 				margin-bottom: 2px;
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -117,9 +117,9 @@
 	}
 
 	.logo {
-		width: 185px;
+		width: 100%;
 		display: block;
-		height: 41px;
+		height: 40px;
 		transition: all 0.3s ease-out;
 
 		&:hover {
@@ -153,42 +153,47 @@
 		i {
 			font-size: 20px;
 			mix-blend-mode: hard-light;
+			color:white;
 			@media(max-width: @mobile-breakpoint) {
 				font-size: 25px;
 			}
+
+			.btn:hover {
+				&.facebook i {
+					color: lighten(@facebook-color, 30%);
+				}
+
+				&.twitter i {
+					color: lighten(@twitter-color, 10%);
+				}
+
+				&.google i {
+					color: lighten(@google-color, 10%);
+				}
+
+				&.tumblr i {
+					color: lighten(@tumblr-color, 30%);
+				}
+
+				&.github i {
+					color: white;
+				}
+
+				&.pocket i {
+					color: lighten(#f14861, 10%);
+				}
+
+				&.quora i {
+					color: lighten(#b92b27, 10%);
+				}
+
+				&.rss i {
+					color: lighten(@rss-color, 30%);
+				}
+			}
 		}
 
-		.facebook i {
-			color: lighten(@facebook-color, 30%);
-		}
-
-		.twitter i {
-			color: lighten(@twitter-color, 10%);
-		}
-
-		.google i {
-			color: lighten(@google-color, 10%);
-		}
-
-		.tumblr i {
-			color: lighten(@tumblr-color, 30%);
-		}
-
-		.github i {
-			color: white;
-		}
-
-		.pocket i {
-			color: lighten(#f14861, 10%);
-		}
-
-		.quora i {
-			color: lighten(#b92b27, 10%);
-		}
-
-		.rss i {
-			color: lighten(@rss-color, 30%);
-		}
+		/**/
 
 		a {
 			font-weight: 100;
