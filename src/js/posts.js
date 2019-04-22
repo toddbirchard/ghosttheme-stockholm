@@ -24,14 +24,13 @@ export function post_link_previews() {
       console.log('link = ' + link);
       var endpoint_url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint' + '?url=' + link;
       $(this).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
-      var headers = {
-        "Content-Type": "application/json"
-      };
       $.ajax({
         method: 'GET',
         url: endpoint_url,
-        headers: headers,
+        contentType: "application/json",
         dataType: 'jsonp',
+        data: JSON.stringify({q: $(element).attr('href')}),
+        async: true,
         crossDomain:true,
         success: function(json) {
           $(this).html('<a href="' + json.url + '"><div class="link-preview"> \n ' +
