@@ -86,7 +86,7 @@
 		}
 		@media(max-width: @tablet-breakpoint) {
 			width: -webkit-fill-available;
-			margin: 10px 0 30px;
+			margin: 10px 0 20px;
 			width: 22%;
 			margin-top: 20px;
 
@@ -96,6 +96,7 @@
 		}
 		@media(max-width: @mobile-breakpoint) {
 			max-width: none;
+			width: 100% !important;
 			padding: 0;
 		}
 	}
@@ -121,6 +122,9 @@
 		display: block;
 		height: 40px;
 		transition: all 0.3s ease-out;
+		@media(max-width: @mobile-breakpoint) {
+			margin-bottom: 25px;
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -221,6 +225,9 @@
 	@media(max-width: @tablet-breakpoint) {
 		display: none;
 	}
+	@media(max-width: @mobile-breakpoint) {
+		display: block;
+	}
 }
 
 .widget.links,
@@ -228,8 +235,8 @@
 	margin-top: 10px;
 	@media(max-width: @mobile-breakpoint) {
 		margin: 10px 0 0;
-		width: 40%;
 		min-width: unset;
+		margin-bottom: 20px;
 	}
 }
 
