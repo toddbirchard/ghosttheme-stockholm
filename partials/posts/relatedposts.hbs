@@ -1,10 +1,10 @@
 <!-- Start Related Posts -->
 <div class="related">
-	{{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" include="tags,authors" as |related|}}
+	{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
 		{{#foreach related}}
-				<p>ayyy lmao</p>
-				{{> article-preview}}
-			{{/foreach}}
-		{{/get}}
+		chill
+			{{!{{> posts/article-preview}}
+		{{/foreach}}
+	{{/get}}
 </div>
 <!-- End Related Posts -->

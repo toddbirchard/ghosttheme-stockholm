@@ -58,7 +58,7 @@ function mergedTableCells() {
 
 function add_table_container_class() {
   $('main > div > table').each(function() {
-    $(this).attr('class', 'tableContainer');
+    $(this).closest( 'div' ).attr('class', 'tableContainer');
   });
 }
 

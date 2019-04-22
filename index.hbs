@@ -11,7 +11,10 @@
 				{{> cover-tag}}
 			{{/is}}
 			<main class="postlist">
-				{{> loop}} {{pagination}}
+				{{> loop}}
+				{{#is 'home'}}
+					{{pagination}}
+				{{/is}}
 			</main>
 	</div>
 </section>
