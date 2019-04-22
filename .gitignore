@@ -96,3 +96,6 @@ assets/css
 # Yarn
 yarn-error.log
 yarn.lock
+
+# Font Awesome
+fontawesome

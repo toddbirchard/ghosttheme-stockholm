@@ -235,7 +235,7 @@
 							-webkit-font-smoothing: antialiased;
 							padding-left: 0;
 							font-family: "Font Awesome 5 Pro";
-							content: "\f111";
+							content: '\f04b';
 							font-size: 9px;
 							margin-right: 9px;
 							font-weight: 500;
@@ -252,6 +252,11 @@
 								border-left: 1px solid rgba(77, 177, 212, 0.3);
 								padding: 0 0 20px 20px;
 								margin: 0 0 0 10px;
+
+								&::before {
+									content: '\f04b';
+									font-family: "Font Awesome 5 Pro";
+								}
 
 								&:last-of-type {
 									padding-bottom: 0;

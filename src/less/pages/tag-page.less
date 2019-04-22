@@ -257,11 +257,6 @@
       transition: all 0.3s ease-out;
       grid-template-rows: 291px;
 
-      & > a {
-        display: flex;
-        flex-direction: column;
-      }
-
       .tag-title {
         margin: 0;
         width: auto;
@@ -346,21 +341,25 @@
         width: auto;
         display: block;
         text-align: left;
-        min-height: 125px;
+        height: 139px;
+        margin-top: -10px;
+        @media(max-width: 1200px) {
+          height: 136px;
+        }
         @media(max-width: 1000px) {
-          min-height: 156px;
+          height: 176px;
         }
         @media(max-width: 900px) {
-          min-height: 172px;
+          height: 188px;
         }
         @media(max-width: @tablet-breakpoint) {
-          min-height: 104px;
+          height: 115px;
         }
         @media(max-width: 700px) {
-          min-height: 121px;
+          height: 140px;
         }
         @media(max-width: @mobile-breakpoint) {
-          min-height: 0;
+          height: 134px;
         }
 
         h2 {
