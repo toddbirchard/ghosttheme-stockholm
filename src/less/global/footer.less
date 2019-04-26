@@ -124,6 +124,7 @@
 		transition: all 0.3s ease-out;
 		@media(max-width: @mobile-breakpoint) {
 			margin-bottom: 25px;
+			max-width: 250px;
 		}
 
 		&:hover {
@@ -163,41 +164,35 @@
 			}
 
 			.btn:hover {
-				&.facebook i {
+				&.facebook {
 					color: lighten(@facebook-color, 30%);
 				}
 
-				&.twitter i {
+				&.twitter {
 					color: lighten(@twitter-color, 10%);
 				}
 
-				&.google i {
-					color: lighten(@google-color, 10%);
-				}
-
-				&.tumblr i {
+				&.tumblr {
 					color: lighten(@tumblr-color, 30%);
 				}
 
-				&.github i {
+				&.github {
 					color: white;
 				}
 
-				&.pocket i {
+				&.pocket {
 					color: lighten(#f14861, 10%);
 				}
 
-				&.quora i {
+				&.quora {
 					color: lighten(#b92b27, 10%);
 				}
 
-				&.rss i {
+				&.rss {
 					color: lighten(@rss-color, 30%);
 				}
 			}
 		}
-
-		/**/
 
 		a {
 			font-weight: 100;
