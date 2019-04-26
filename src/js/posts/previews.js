@@ -22,7 +22,7 @@ export function post_link_previews() {
         method: 'GET',
         url: endpoint_url,
         headers: headers,
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(json) {
           $(this).html('<a href="' + json.url + '"><div class="link-preview"> \n ' +
                         '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + json.title + '" src="' + json.image + '"></div> \n' +
