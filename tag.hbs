@@ -3,17 +3,17 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="page-container sidebar-layout">
-			{{! insert sidebar partial}}
-			{{> sidebar}}
-			<!-- start main post area -->
-			<main class=" main-content">
-				{{> cover-tag}}
-				<div class="postlist">
+		{{! insert sidebar partial}}
+		{{> sidebar}}
+		<!-- start main post area -->
+		<main class=" main-content">
+			{{> cover-tag}}
+			<div class="postlist">
 				{{> loop}}
-				{{pagination}}
 			</div>
+			{{pagination}}
 		</main>
-			<!-- end main post area -->
-		</div>
+		<!-- end main post area -->
+	</div>
 </section>
 <!-- end site's main content area -->

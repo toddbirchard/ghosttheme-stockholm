@@ -2,20 +2,19 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
 <section class="content-wrap">
-	<div class="page-container">
+	<div class="page-container sidebar-layout">
 		{{! insert sidebar partial}}
 		{{#author}}
 			{{> author/author-sidebar}}
 		{{/author}}
 		<!-- start main post area -->
-		{{#author}}
-			{{> author/cover-author}}
-		{{/author}}
 		<main class="postlist">
 			{{#author}}
-				{{> loop}} {{pagination}}
+				{{> author/cover-author}}
 			{{/author}}
+			{{> loop}}
 		</main>
+		{{pagination}}
 		<!-- end main post area -->
 	</div>
 </section>
