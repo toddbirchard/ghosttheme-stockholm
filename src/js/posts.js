@@ -16,29 +16,29 @@ function remove_images() {
   });
 }
 
-export function post_link_previews() {
+function post_link_previews() {
   var current_page = window.location.href;
+  const endpoint_base_url = 'https://api.linkpreview.net';
+  const auth_key = '5bda240fc4a1a4a879a1c26685ebe45b167fa445a74c8';
   if (current_page.includes("lynx")) {
     $("main a").each(function(index, element) {
-      var link = $(this).attr('href');
+      var link = $(this).text();
       console.log('link = ' + link);
-      var endpoint_url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint' + '?url=' + link;
+      const endpoint_url = endpoint_base_url + '?key=' + auth_key + '&q=' + link;
       $(this).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
       $.ajax({
         method: 'GET',
         url: endpoint_url,
         contentType: "application/json",
-        dataType: 'jsonp',
-        data: JSON.stringify({q: $(element).attr('href')}),
-        async: true,
-        crossDomain:true,
-        success: function(json) {
-          $(this).html('<a href="' + json.url + '"><div class="link-preview"> \n ' +
-                        '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + json.title + '" src="' + json.image + '"></div> \n' +
-                        '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + json.title + '</h4> \n ' +
-                        '<p>' + json.description + '</p> \n' +
-                        '<h4 class="title-mobile">' + json.title + '</h4> \n ' +
-                        '<span class="url-info"><i class="far fa-link"></i>' + json.url.split('://')[1] + '</span> \n ' +
+        dataType: 'json',
+        success: function(result) {
+          console.log(result);
+          $(element).html('<a href="' + result.url + '"><div class="link-preview"> \n ' +
+                        '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + result.title + '" src="' + result.image + '"></div> \n' +
+                        '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
+                        '<p>' + result.description + '</p> \n' +
+                        '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
+                        '<span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
                         '</div></div></a>'
                       );
           remove_images();
