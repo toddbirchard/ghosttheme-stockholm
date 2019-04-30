@@ -200,7 +200,127 @@ table {
 
 .tableContainer {
   border-spacing: 0;
-  @media screen and (max-width: 600px) {
+  @media (max-width:600px) {
+    table {
+      width: auto;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: table;
+      position: relative;
+      overflow-x: scroll;
+
+      tbody:hover {
+        cursor: grab !important;
+      }
+
+      td:empty:before {
+        content: '\00a0';
+      }
+
+      td,
+      th {
+        margin: 0;
+        vertical-align: top;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        font-size: 0.8em;
+      }
+
+      td {
+        width: -webkit-fill-available;
+        width: -moz-available;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: @body-font;
+      }
+
+      thead {
+        position: absolute;
+        left: 0;
+        width: 120px;
+        height: 100%;
+        box-shadow: 1px 0 4px rgba(62, 69, 86, 0.7);
+        z-index: 2;
+
+        th {
+          display: block;
+          padding: 10px 5px !important;
+          font-family: @body-font;
+          letter-spacing: 0.5px;
+          text-align: left;
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: 0.8em;
+
+          * {
+            font-size: 1em;
+          }
+        }
+
+        tr {
+          display: block;
+          border-spacing: 0;
+          padding: 0;
+          height: 100%;
+        }
+      }
+
+      tbody {
+        margin-left: 120px;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+
+        & > tr > th {
+          border-bottom: 1px solid #e0e0e0;
+          border-radius: 0;
+          border-spacing: 0;
+          border-collapse: collapse;
+        }
+
+        tr {
+          width: 115px;
+          vertical-align: top;
+          display: flex;
+          flex-direction: column;
+          overflow-wrap: normal;
+          line-break: strict;
+          white-space: inherit;
+          padding: 0 15px;
+          border-bottom: none;
+
+          td {
+            display: block;
+            min-height: 1.25em;
+            padding: 10px 0 !important;
+            border-spacing: 0;
+            border-collapse: collapse;
+            overflow: hidden;
+            line-break: normal;
+            white-space: nowrap;
+            width: -webkit-fill-available;
+            text-overflow: ellipsis;
+            width: -moz-available;
+            min-width: -webkit-fill-available;
+          }
+        }
+
+        &:last-child::after {
+          content: " ";
+          display: table-row;
+          max-width: 300px;
+          min-width: 300px;
+          margin-left: -300px;
+        }
+      }
+    }
+  }
+  /*@media screen and (max-width: 600px) {
     box-shadow: unset;
     // Tighten up spacing
     > table {
@@ -309,7 +429,7 @@ table {
         }
       }
     }
-  }
+  }*/
 }
 // CSS/LESS Color variations
 //

@@ -1,5 +1,5 @@
 export function code_snippet_full_screen() {
-  $('main > pre').each(function() {
+  $('main pre').each(function() {
     if ($(this).height() >= 400) {
       $(this).append('<div class="fullscreenbtn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
       $(this).append('<div class="codeoverflow"></div>');
