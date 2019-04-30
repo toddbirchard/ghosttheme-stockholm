@@ -11,6 +11,7 @@ export function series_icons() {
   var google = '<i class="fab fa-google"></i>';
   var sql = '<i class="far fa-database"></i>';
   var mapbox = '<i class="far fa-map"></i>';
+  var spark = '<i class="far fa-star"></i>';
 
   $('.series .seriesitem').each(function(item) {
     if ($(this).hasClass('data-analysis-pandas')) {
@@ -61,5 +62,8 @@ export function series_icons() {
       $(this).find('a').prepend(graphql);
     }
 
+    if ($(this).hasClass('learning-apache-spark')) {
+      $(this).find('a').prepend(spark);
+    }
   });
 }
