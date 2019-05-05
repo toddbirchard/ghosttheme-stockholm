@@ -3,7 +3,7 @@
   {{#get "posts" limit="3" page="1" include="tags" filter="id:-{{id}}" as |recents|}}
     {{#foreach recents}}
       <div class="single-post">
-        <img class="featured-image" src="{{img_url feature_image}}">
+        <div class="featured-image" style="background:url({{img_url feature_image}})"></div>
         <div class="related-post-info">
           <h5 class="related-post-title">{{title}}</h5>
           <div class="meta">

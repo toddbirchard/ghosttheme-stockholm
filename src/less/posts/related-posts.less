@@ -1,6 +1,6 @@
 .recent-posts {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     overflow: hidden;
     @media(max-width: 600px) {
@@ -16,12 +16,16 @@
 
     .featured-image {
       width: 100%;
-      height: auto;
+      height: 147px;
+      background-size: cover !important;
+      margin-bottom: 15px;
       @media(max-width: 600px) {
-        width: 196px;
-        height: auto;
+        width: 112px;
+        height: 112px;
+        background-size: cover !important;
         float: left;
         margin-right: 15px;
+        margin-bottom: 0;
       }
     }
 
@@ -33,7 +37,7 @@
       }
 
       .related-post-title {
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-family: 'TTNormsPro-Medium', sans-serif;
         height: 56px;
         @media(max-width: 600px) {
