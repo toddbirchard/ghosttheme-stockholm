@@ -12,7 +12,16 @@
       background: white;
       overflow: hidden;
       box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-    }
+      transition: all .3s all;
+
+        &:hover {
+          cursor: pointer !important;
+          background: @theme-color;
+
+          * {
+            color: white;
+          }
+        }
 
     .featured-image {
       width: 100%;
@@ -37,9 +46,10 @@
       }
 
       .related-post-title {
-        font-size: 1.4em;
+        font-size: 1.25em;
         font-family: 'TTNormsPro-Medium', sans-serif;
         height: 56px;
+        line-height: 1.4;
         @media(max-width: 600px) {
           font-size: 1.1em;
         }
@@ -57,3 +67,4 @@
       }
     }
   }
+}

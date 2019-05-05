@@ -2,6 +2,7 @@
 <div class="recent-posts">
   {{#get "posts" limit="3" page="1" include="tags" filter="id:-{{id}}" as |recents|}}
     {{#foreach recents}}
+      <a href="{{url}}">
       <div class="single-post">
         <div class="featured-image" style="background:url({{img_url feature_image}})"></div>
         <div class="related-post-info">
@@ -13,6 +14,7 @@
           </div>
         </div>
       </div>
+    </a>
     {{/foreach}}
   {{/get}}
 </div>
