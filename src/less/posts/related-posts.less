@@ -1,0 +1,55 @@
+.recent-posts {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    @media(max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+
+    .single-post {
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    }
+
+    .featured-image {
+      width: 100%;
+      height: auto;
+      @media(max-width: 600px) {
+        width: 196px;
+        height: auto;
+        float: left;
+        margin-right: 15px;
+      }
+    }
+
+    .related-post-info {
+      padding: 0 15px 15px;
+      @media(max-width: 600px) {
+        float: left;
+        padding: 10px;
+      }
+
+      .related-post-title {
+        font-size: 1.3em;
+        font-family: 'TTNormsPro-Medium', sans-serif;
+        height: 56px;
+        @media(max-width: 600px) {
+          font-size: 1.1em;
+        }
+      }
+
+      .tags {
+        padding: 2px 6px;
+        width: fit-content;
+
+        span {
+          font-family: 'AvenirNextLTPro-Medium', sans-serif;
+          margin-left: 5px;
+          font-size: .9em;
+        }
+      }
+    }
+  }

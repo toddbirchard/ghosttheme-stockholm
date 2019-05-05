@@ -1,15 +1,20 @@
 <!-- Start Related Widget -->
-<div class="widget related">
-	<h4 class="title">Related</h4>
-	<div class="recent-post">
-    {{#get "posts" limit="3" page="1" include="tags" filter="id:-{{id}}" as |recents|}}
-			{{#foreach recents}}
-				<div class="recent-single-post">
-					<a href="{{url}}" class="post-title">{{title}}</a>
-					<div class="tags">{{tags separator=", "}}</div>
-				</div>
-			{{/foreach}}
-		{{/get}}
-	</div>
+<div class="recent-posts">
+  {{#get "posts" limit="3" page="1" include="tags" filter="id:-{{id}}" as |recents|}}
+    {{#foreach recents}}
+      <div class="single-post">
+        <img class="featured-image" src="{{img_url feature_image}}">
+        <div class="related-post-info">
+          <h5 class="related-post-title">{{title}}</h5>
+          <div class="meta">
+            {{#primary_tag}}
+              <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+            {{/primary_tag}}
+          </div>
+        </div>
+      </div>
+    {{/foreach}}
+  {{/get}}
+</div>
 </div>
 <!-- End Related Widget -->
