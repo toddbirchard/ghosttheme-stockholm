@@ -201,6 +201,9 @@ table {
 .tableContainer {
   border-spacing: 0;
   @media (max-width:600px) {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+
     table {
       width: auto;
       border-collapse: collapse;
@@ -254,6 +257,9 @@ table {
           font-size: 0.8em;
           min-height: 50px;
           margin: 5px 0;
+          width: 100% !important;
+          margin-right: 0 !important;
+          max-width: unset !important;
 
           * {
             font-size: 1em;
