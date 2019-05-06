@@ -4,7 +4,6 @@
 	sidebar
 ====================================================*/
 .sidebar {
-
 	.tag-cloud {
 		display: flex;
 		justify-content: space-between;
@@ -121,8 +120,9 @@
 
 		&.twitter {
 			overflow: hidden;
+
 			iframe {
-				 max-height: 1000px;
+				max-height: 1000px;
 			}
 		}
 	}
@@ -343,7 +343,7 @@
 				&.graphql-hype {
 					background: @graphql-color;
 				}
-				
+
 				&.learning-apache-spark {
 					background: @learning-apache-spark;
 				}
@@ -492,6 +492,25 @@
 			line-height: 1.7;
 			padding-right: 0;
 			font-family: @body-font;
+		}
+	}
+
+	.recent-posts {
+		.recent-single-post {
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #ebebeb;
+
+			&:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: 0;
+			}
+
+			.date {
+				font-size: 0.8em;
+				line-height: 1;
+			}
 		}
 	}
 
