@@ -11,12 +11,12 @@
     padding: 20px 10px 10px;
   }
   @media(max-width: @mobile-breakpoint) {
-    margin: 10px 0 30px;
-    padding: 20px 0 10px;
+    margin: 10px 0 20px;
+    padding: 0 0 10px;
   }
 
   h5 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #597d87 !important;
     font-family: @body-font-bold;
     letter-spacing: 1px;
@@ -38,8 +38,8 @@
     margin-left: 0;
     padding-left: 5px;
     @media(max-width: @mobile-breakpoint) {
-      margin: 15px auto 10px;
-      max-width: 97%;
+      margin: 0;
+      max-width: unset;
     }
 
     li {
@@ -63,7 +63,7 @@
       }
       @media(max-width: @mobile-breakpoint) {
         line-height: 1.3;
-        margin-bottom: 15px;
+        margin: 12px 0;
         padding-left: 0;
       }
 
@@ -105,10 +105,6 @@
     opacity: 1 !important;
     margin-left: 0;
     font-family: @body-font-bold !important;
-
-    * {
-      font-family: @body-font-bold !important;
-    }
     font-size: 0.95em !important;
 
     &::before {

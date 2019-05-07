@@ -132,8 +132,8 @@
   }
 
   #kanban {
-    margin: 20px 0;
-    width: 100%;
+    margin: 20px;
+    width: auto;
     display: block;
     overflow: hidden;
     height: 750px;
@@ -144,6 +144,9 @@
       &:hover {
         cursor: grab;
       }
+    }
+    @media(max-width: @mobile-breakpoint) {
+      margin: 20px 0 60px;
     }
 
     .slick-dots {

@@ -1,9 +1,16 @@
+@import "../global/variables.less";
+
 .page-projects {
   .projectdropdown {
-    margin: 20px auto 1em;
+    margin: 20px 20px 1em;
     width: 100%;
     position: relative;
     height: 44px;
+
+    @media(max-width: @mobile-breakpoint) {
+      width: 80%;
+      margin: 20px auto 30px;
+    }
   }
 
   .projects-dropdown {
@@ -45,6 +52,13 @@
     border-left: 0;
     border-bottom: 1px solid #c2c6d1;
     margin-left: -37px;
+    @media(max-width: @mobile-breakpoint) {
+      background: none !important;
+    }
+
+    span {
+      margin-right: 5px;
+    }
 
     .make-selection {
       float: left;
@@ -64,14 +78,6 @@
   }
 
   .projectdropdown {
-    @media(max-width: @mobile-breakpoint) {
-      width: 95%;
-    }
-
-    @media(max-width: 600px) {
-      width: 85%;
-      border-radius: 3px;
-    }
 
     & > ul > li i {
       margin-right: 0.5em;
@@ -228,10 +234,9 @@
     }
     @media(max-width: @mobile-breakpoint) {
       display: flex !important;
-      flex-direction: column;
       width: 100%;
       text-align: center;
-      padding: 10px 0 0;
+      padding: 0;
       height: 45px;
       background: white;
       border-bottom: 1px solid #d8d8d8;
