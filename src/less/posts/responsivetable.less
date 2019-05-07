@@ -44,12 +44,14 @@
   box-shadow: 0 0 3px #adb0c6;
   margin: 30px 0;
 
-  &:hover {
-    cursor: grab;
-  }
+  * {
+    &:hover {
+      cursor: ew-resize !important;
+    }
 
-  &:active {
-    cursor: grabbing;
+    &:active {
+      cursor: grabbing;
+    }
   }
 }
 
@@ -60,6 +62,10 @@ table {
   background-color: @table-bg;
   border-spacing: 0;
   border: 0 solid rgba(255, 255, 255, 0);
+
+  &:hover {
+    cursor: ew-resize !important;
+  }
 
   > tbody,
    > tfoot,
@@ -272,6 +278,11 @@ table {
           padding: 0;
           height: 100%;
           background: #3c414d;
+
+          &:hover {
+            background-color: inherit;
+            cursor: ew-resize !important;
+          }
         }
       }
 
