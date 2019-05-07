@@ -3,6 +3,7 @@ import './global/analytics.js';
 import {search} from './global/search.js';
 import {series_icons} from './global/seriesicons.js';
 import {tags} from './global/tags.js';
+import {order_hack} from './global/post_order_hack.js';
 
 /*===========================
  1. Function Declaration
@@ -39,4 +40,5 @@ $(document).ready(function() {
   tags();
   series_icons();
   search();
+  order_hack();
 });
