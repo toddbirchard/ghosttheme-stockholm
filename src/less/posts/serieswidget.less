@@ -1,11 +1,11 @@
 #seriesposts {
-  margin: 0 0 20px;
+    margin: 0 0 30px;
     padding: 20px 0 10px;
     display: none;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid #dae9ed;
-    border-bottom: 1px solid #dae9ed;
+    /*border-top: 1px solid #dae9ed;
+    border-bottom: 1px solid #dae9ed;*/
   @media(max-width: @tablet-breakpoint) {
     margin: 0 0 30px;
     padding: 20px 10px 10px;
@@ -56,6 +56,10 @@
 
       * {
         transition: all 0.2s ease-out;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
       @media(max-width: @mobile-breakpoint) {
         line-height: 1.3;
