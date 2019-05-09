@@ -46,14 +46,17 @@
       }
 
       .related-post-title {
-        font-size: 1.25em;
+        font-size: 1.1em;
         font-family: 'TTNormsPro-Medium', sans-serif;
-        height: 68px;
+        height: 59px;
         overflow: hidden;
         line-height: 1.4;
-        @media(max-width: 600px) {
-          font-size: 1.1em;
-        }
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: -webkit-fill-available;
+        margin: 0 0 5px;
       }
 
       .tags {

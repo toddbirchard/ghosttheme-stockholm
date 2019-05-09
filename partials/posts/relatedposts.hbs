@@ -1,10 +1,22 @@
-<!-- Start Related Posts -->
-<div class="related">
-	{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
-		{{#foreach related}}
-		chill
-			{{!{{> posts/article-preview}}
-		{{/foreach}}
-	{{/get}}
+<!-- Start Related Widget -->
+<div class="recent-posts">
+  {{#get "posts" limit="3" page="1" include="tags" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}"  as |related|}}
+    {{#foreach related}}
+      <a href="{{url}}">
+      <div class="single-post">
+        <div class="featured-image" style="background:url({{img_url feature_image}})"></div>
+        <div class="related-post-info">
+          <h5 class="related-post-title">{{title}}</h5>
+          <div class="meta">
+            {{#primary_tag}}
+              <span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+            {{/primary_tag}}
+          </div>
+        </div>
+      </div>
+    </a>
+    {{/foreach}}
+  {{/get}}
 </div>
-<!-- End Related Posts -->
+</div>
+<!-- End Related Widget -->
