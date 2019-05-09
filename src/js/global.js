@@ -35,7 +35,7 @@ import {order_hack} from './global/post_order_hack.js';
 2. Initialization
 =========================== */
 $(document).ready(function() {
-  fallback_images();
+  //fallback_images();
   retina();
   tags();
   series_icons();

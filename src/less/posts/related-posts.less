@@ -2,7 +2,6 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    overflow: hidden;
     @media(max-width: 600px) {
       grid-template-columns: 1fr;
       grid-gap: 15px;
@@ -48,30 +47,15 @@
       .related-post-title {
         font-size: 1.1em;
         font-family: 'TTNormsPro-Medium', sans-serif;
-        height: 59px;
+        height: 68px;
         overflow: hidden;
         line-height: 1.4;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         width: -webkit-fill-available;
         margin: 0 0 5px;
-      }
-
-      .tags {
-        padding: 2px 6px;
-        width: fit-content;
-
-        i {
-          font-size: .9em;
-        }
-
-        span {
-          font-family: 'AvenirNextLTPro-Medium', sans-serif;
-          margin-left: 5px;
-          font-size: .9em;
-        }
       }
     }
   }
