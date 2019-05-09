@@ -13,6 +13,10 @@
       box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
       transition: all .3s all;
 
+      @media(max-width: @mobile-breakpoint) {
+        display: flex;
+      }
+
         &:hover {
           cursor: pointer !important;
           background: @theme-color;
@@ -30,9 +34,10 @@
       @media(max-width: 600px) {
         width: 112px;
         height: 112px;
+        min-width: 112px;
         background-size: cover !important;
         float: left;
-        margin-right: 15px;
+        margin-right: 5px;
         margin-bottom: 0;
       }
     }
@@ -41,7 +46,7 @@
       padding: 0 15px 15px;
       @media(max-width: 600px) {
         float: left;
-        padding: 10px;
+        padding: 15px;
       }
 
       .related-post-title {
