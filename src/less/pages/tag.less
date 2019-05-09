@@ -383,6 +383,10 @@
           flex-grow: 1;
           flex-shrink: 0;
           flex-basis: auto;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
           @media(max-width: @mobile-breakpoint) {
             margin: 10px 0 25px;
             min-height: 0;
