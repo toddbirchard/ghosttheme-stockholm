@@ -1,11 +1,12 @@
 #seriesposts {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     padding: 0;
     display: none;
     position: relative;
     overflow: hidden;
-    /*border-top: 1px solid #dae9ed;
-    border-bottom: 1px solid #dae9ed;*/
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0ebee;
+    margin-top: -10px;
   @media(max-width: @tablet-breakpoint) {
     margin: 0 0 30px;
     padding: 20px 10px 10px;
@@ -48,12 +49,15 @@
       opacity: 0.7;
       counter-increment: li -1;
       color: #2f4951;
-      font-family: 'AvenirNextLTPro-Medium', sans-serif;
       font-size: 0.85em;
       padding-left: 0;
       line-height: 1;
       display: flex;
       justify-content: flex-start;
+      
+      a {
+        font-family: 'AvenirNextLTPro-Medium', sans-serif;
+      }
 
       * {
         transition: all 0.2s ease-out;
