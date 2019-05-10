@@ -1,8 +1,9 @@
 .post-content {
   .hljs.javascript,
   .hljs.language-javascript {
-    background: #1e3742;
-    color: #daf7fd;
+    background: #eef7f2;
+    color: #444;
+    border: 1px solid #ddeee5;
 
     &::-moz-selection {
       text-shadow: none;
@@ -39,7 +40,7 @@
     }
 
     .comment {
-      color: #7f8ba7;
+      color: #68aeb6;
       opacity: 0.6;
 
       @media(max-width: @mobile-breakpoint) {
@@ -52,8 +53,8 @@
     }
 
     .built_in {
-      font-weight: 700;
-      color: #79ddfb;
+      font-family: 'AFParseGroteskMono-Regular', sans-serif;
+      color: #38bbed;
     }
 
     .punctuation {
@@ -105,13 +106,14 @@
     }
 
     .keyword {
-      color: #a4a0ff;
+      color: #b53bd6;
+      font-family: 'AFParseGroteskMono-Regular', sans-serif;
     }
 
     .string {
       font-weight: 400;
       font-family: 'AFParseGroteskMono-Light';
-      color: #a0e4cf;
+      color: #3a9579;
 
       @media(max-width: @mobile-breakpoint) {
         white-space: pre;
@@ -123,13 +125,7 @@
     }
 
     .attr {
-      color: #a39fff;
-    }
-
-    &::before {
-      content: "Javascript";
-      color: white;
-      background: rgba(50, 70, 94, 0.4);
+      color: #5e79d3;
     }
   }
 }

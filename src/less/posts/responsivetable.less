@@ -41,7 +41,8 @@
 // Baseline styles
 .tableContainer {
   overflow: hidden;
-  box-shadow: 0 0 3px #adb0c6;
+  border-radius: 3px;
+  border: 1px solid #e6edf0;
   margin: 30px 0;
 
   * {
@@ -74,7 +75,7 @@ table {
       .transition(all .3s ease);
 
       &:nth-child(odd) {
-        background: #f6f8f9;
+        background: #fafbfc;
       }
 
       > td,
@@ -90,9 +91,14 @@ table {
         text-overflow: ellipsis;
         border-bottom: 0;
 
+
         @media(max-width: @mobile-breakpoint) {
           border: 0;
         }
+      }
+
+      th {
+        font-family: 'AvenirNextLTPro-Medium', sans-serif;
       }
 
       td {
@@ -183,7 +189,7 @@ table {
   > tbody > tr:nth-child(odd) {
     > th,
     > td {
-      background-color: @table-bg-accent;
+        background: #fafbfc;
     }
   }
 }

@@ -1,8 +1,10 @@
 .post-content {
   .language-sql,
   .sql {
-    background: #262748;
+    background: #eaeaf3;
     color: #eaf5f3;
+    border: 1px solid #dadaed;
+    color: #444;
 
     .hljs span::selection,
     .hljs::selection {
@@ -10,7 +12,7 @@
     }
 
     .string {
-      color: #a0b8ff;
+      color: #7578bc;
     }
 
     .hljs span::-moz-selection,
@@ -47,7 +49,7 @@
     .selector-attr,
     .selector-pseudo,
     .string {
-      color: #b0def0;
+      color: #bf51d5;
       font-weight: 400;
       font-family: 'AFParseGroteskMono-Light';
     }
@@ -62,9 +64,9 @@
     .keyword,
     .selector-tag,
     .tag {
-      color: #79bbf3;
+      color: #5eabec;
       font-weight: 700;
-      font-family: 'AFParseGroteskMono-Light';
+      font-family: 'AFParseGroteskMono-Regular';
     }
     /*color: fg_aqua*/
     .subst,
@@ -80,7 +82,7 @@
     .section,
     .selector-class,
     .type {
-      color: #ffe3a2;
+      color: #d5231d;
     }
 
     .emphasis {
@@ -89,11 +91,6 @@
 
     .strong {
       font-weight: bold;
-    }
-
-    &::before {
-      content: "SQL";
-      background: rgba(49, 88, 101, 0.6);
     }
   }
 }
