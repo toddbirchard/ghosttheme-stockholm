@@ -27,3 +27,31 @@ export function scrollable_tables() {
     }
   });
 }
+
+export function scrollable_code() {
+  let snippets = $('pre');
+  for (let snippet of snippets) {
+    let content = snippet.querySelector('code');
+    let sb = new ScrollBooster({
+      viewport: snippet,
+      content: content,
+      handle: content,
+      emulateScroll: false,
+      mode: 'x',
+      bounce: true,
+      bounceForce: .1,
+      onUpdate: (data) => {
+        // your scroll logic goes here
+        content.style.transform = `translateX(${ - data.position.x}px)`
+      }
+    });
+  }
+  $("pre").each(function(index, element) {
+    const codesnippet = $(element).find('code');
+    const codesnippetwidth = codesnippet.width();
+    if ($(element).width() < codesnippetwidth) {
+      $(element).find('code').addClass('handscroller');
+      //$(element).append('<div class="tablefade"></div>');
+    }
+  });
+}
