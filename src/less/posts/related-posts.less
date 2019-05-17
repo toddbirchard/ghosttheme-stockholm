@@ -11,10 +11,14 @@
       background: white;
       overflow: hidden;
       box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-      transition: all .3s all;
+      transition: all .3s ease-out;
 
       @media(max-width: @mobile-breakpoint) {
         display: flex;
+      }
+      
+      * {
+        transition: all .3s ease-out;
       }
 
         &:hover {
@@ -54,13 +58,14 @@
         font-family: 'TTNormsPro-Medium', sans-serif;
         height: 68px;
         overflow: hidden;
-        line-height: 1.4;
+        line-height: 1.3;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         width: -webkit-fill-available;
         margin: 0 0 5px;
+        color: #55575d;
       }
     }
   }
