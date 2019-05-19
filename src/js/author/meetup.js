@@ -51,8 +51,8 @@ author_meetup: function(docs) {
             //eventimage = "https://hackers.nyc3.digitaloceanspaces.com/meetup.png"
             eventimage = '<time class="date"><span class="day"><span>' + date.getDate() + '</span></span><span class="month"><span>' + date.toLocaleString("en-us", {month: "short"}) + '</span></span></time>';
           }
-          $('.events').append('<a href="' + events[i].event_url + '"> \n' + '<div class="event"> \n' + '<div class="eventheader">' + eventimage + ' \n ' + '<span class="eventname">' + events[i].name + '</span></div> \n ' + '<div class="eventinfo"> \n ' + '<span class="eventhost"><i class="fal fa-users"></i> ' + events[i].group.name + '</span> \n ' + '<span class="venuename"><i class="fal fa-building"></i> ' + events[i].venue.name + '</span> \n ' + '<span class="venueaddress"><i class="fal fa-map-pin"></i> ' + events[i].venue.address_1 + '</span> \n ' +
-          //'<span class="date"><i class="fas fa-calendar"></i> ' + date.toString("MMM dd") + '</span> \n ' +
+          $('.events').append('<a href="' + events[i].event_url + '"> \n' + '<div class="event"> \n' + '<div class="eventheader">' + eventimage + ' \n ' + '<span class="eventname">' + events[i].name + '</span></div> \n ' + '<div class="eventinfo"> \n ' + '<span class="eventhost"><i class="far d fa-users"></i> ' + events[i].group.name + '</span> \n ' + '<span class="venuename"><i class="far d fa-building"></i> ' + events[i].venue.name + '</span> \n ' + '<span class="venueaddress"><i class="far d fa-map-pin"></i> ' + events[i].venue.address_1 + '</span> \n ' +
+          //'<span class="date"><i class="far d fa-calendar"></i> ' + date.toString("MMM dd") + '</span> \n ' +
           '</div></div></a>');
         }
       }

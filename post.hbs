@@ -23,20 +23,20 @@
 					<!-- start post metadata -->
 					<div class="post-meta">
 						{{#primary_tag}}
-							<span class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></span>
+							<span class="tags meta-item {{slug}}"><i class="far d fa-tags"></i> <span>{{name}}</span></span>
 						{{/primary_tag}}
 						{{#primary_author}}
 							{{#unless profile_image}}
-								<a href="{{url}}" class="meta-item author desktop"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-								<a href="{{url}}" class="meta-item author mobile"><i class="fas fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+								<a href="{{url}}" class="meta-item author desktop"><i class="far d fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+								<a href="{{url}}" class="meta-item author mobile"><i class="far d fa-user" style="width:13px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
 							{{/unless}}
 							{{#if profile_image}}
 								<a href="{{url}}" class="meta-item author desktop"><img src="{{img_url profile_image absolute="true"}}" alt="{{slug}}'s Author image" loading="lazy" class="avi lazy"><span>{{name}}</span></a>
 								<a href="{{url}}" class="meta-item author mobile"><img src="{{img_url profile_image absolute="true"}}" alt="{{slug}}'s Author image" loading="lazy" class="avi lazy"><span>{{slug}}</span></a>
 							{{/if}}
 						{{/primary_author}}
-						<span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
-						<span class="readtime meta-item"><i class="fal fa-eye"></i> <span>{{reading_time}}</span></span>
+						<span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
+						<span class="readtime meta-item"><i class="far d fa-eye"></i> <span>{{reading_time}}</span></span>
 					</div>
 				</header>
 				<!-- end post metadata -->

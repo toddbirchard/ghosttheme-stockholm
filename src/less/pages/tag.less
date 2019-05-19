@@ -244,7 +244,7 @@
     grid-template-rows: 367px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    margin: 30px 40px 20px;
+    margin: 30px 40px 40px;
 
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: [first] 1fr;
@@ -342,25 +342,26 @@
         width: auto;
         display: block;
         text-align: left;
-        height: 139px;
+        height: 158px;
         margin-top: -10px;
-        @media(max-width: 1200px) {
-          height: 136px;
-        }
         @media(max-width: 1000px) {
           height: 176px;
         }
         @media(max-width: 900px) {
-          height: 188px;
+          height: 171px;
+
+          p {
+            font-size: 0.8em;
+          }
         }
         @media(max-width: @tablet-breakpoint) {
-          height: 115px;
+          height: 155px;
         }
         @media(max-width: 700px) {
           height: 140px;
         }
         @media(max-width: @mobile-breakpoint) {
-          height: 134px;
+          height: 154px;
         }
 
         h2 {
@@ -371,6 +372,10 @@
           font-size: 1.3em;
           line-height: 1.2;
           font-weight: 600;
+
+          @media(max-width: 900px) {
+            font-size: 1.2em;
+          }
         }
 
         p {

@@ -20,7 +20,7 @@ export function author_website(data) {
       '<div class="content"><h4 class="title">Website</h4>  \n' +
       '<a href="' + json.url + '">  \n' +
       '<div class="link-preview" style="background:url(' + json.image + ')"> \n' +
-      '<a href="' + json.url + '">' + json.title + '</a><i class="fas fa-link"></i> \n' +
+      '<a href="' + json.url + '">' + json.title + '</a><i class="far d fa-link"></i> \n' +
       '</div></a></div></div>');
     });
   }

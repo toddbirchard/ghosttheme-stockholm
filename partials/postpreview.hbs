@@ -24,7 +24,7 @@
       <div class="post-permalink">
         <div class="meta">
           {{#primary_tag}}
-            <a href="{{url}}" class="tags meta-item {{slug}}"><i class="fas fa-tags"></i> <span>{{name}}</span></a>
+            <a href="{{url}}" class="tags meta-item {{slug}}"><i class="far d fa-tags"></i> <span>{{name}}</span></a>
           {{/primary_tag}}
           {{#primary_author}}
             {{primary_author.bio}}
@@ -37,8 +37,8 @@
                 </div>
               </a>
             {{else}}
-              <a href="{{url}}" class="meta-item author"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-              <a href="{{url}}" class="meta-item author-mobile"><i class="fal fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
+              <a href="{{url}}" class="meta-item author"><i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
+              <a href="{{url}}" class="meta-item author-mobile"><i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
                 <div class="info">
                   <span class="mobile-name">{{slug}}</span>
                   <span class="mobile-date">{{date published_at format="MMM DD"}}</span>
@@ -46,7 +46,7 @@
               </a>
             {{/if}}
           {{/primary_author}}
-          <span class="date meta-item"><i class="fal fa-calendar"></i> <span>{{date published_at format="MMM DD"}}</span></span>
+          <span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date published_at format="MMM DD"}}</span></span>
         </div>
         <a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
       </div>

@@ -2,14 +2,14 @@
 <!-- Start Pagination -->
 <section class="pagination">
 	{{#if prev}}
-		<a class="newer-posts" href="{{page_url prev}}"><i class="fas fa-arrow-left"></i></i></a>
+		<a class="newer-posts" href="{{page_url prev}}"><i class="far d fa-arrow-left"></i></i></a>
 	{{/if}}
 	{{!-- Actual place where the numbers will go --}}
 	<div id="pagination-list" class="page-number">
 		{{!-- Placeholder for current page --}}
 		<div id="page-current" style="display:none;">{{page}}</div>
 		{{#if next}}
-			<a class="older-posts" href="{{page_url next}}"><i class="fas fa-arrow-right"></i></a>
+			<a class="older-posts" href="{{page_url next}}"><i class="far d fa-arrow-right"></i></a>
 		{{/if}}
 	</div>
 	{{!-- Placeholder for number of total pages --}}
