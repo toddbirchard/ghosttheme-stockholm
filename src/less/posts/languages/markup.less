@@ -1,54 +1,54 @@
-@import "atomone.less";
-
 .post-content {
   .hljs {
-  &.language-css,
-  &.language-css,
-  &.language-endpoint,
-  &.language-handlebars,
-  &.language-html,
-  &.language-jinja,
-  &.language-http,
-  &.language-xml {
-    color: #ecf3ff;
-    background: #212834;
+    &.language-css,
+    &.language-css,
+    &.language-endpoint,
+    &.language-handlebars,
+    &.language-html,
+    &.language-http,
+    &.language-jinja,
+    &.language-xml {
+      color: #8792a1;
+      background: rgba(169, 190, 247, 0.13);
+      border: 1px solid #e9eef7;
 
-    .name {
-      color: @hue-5;
-    }
-
-    .tag {
-      color: #ecf3ff;
-
-      .attr,
-      .attribute {
-        color: @hue-6;
+      .name {
+        color: rgb(186, 64, 74);
+        font-weight: 900;
       }
 
-      .string {
-        color: @hue-4;
+      .tag {
+        color: #8792a1;
+
+        .attr,
+        .attribute {
+          color: #c57b1c;
+        }
+
+        .string {
+          color: #61b8e7;
+        }
       }
-    }
 
-    .meta {
-      color: @hue-2;
-    }
+      .meta {
+        color: #b4d5f0;
+      }
 
-    .comment {
-      color: @mono-3;
-      font-style: italic;
+      .comment {
+        color: rgb(180, 192, 207);
+        font-style: italic;
 
-      .markup.link {
-        color: @mono-3;
+        .markup.link {
+          color: rgb(180, 192, 207);
+        }
       }
     }
   }
-}
 
-.handlebars,
-.language-handlebars {
-  .template-variable {
-    color: #88c8fb;
+  .handlebars,
+  .language-handlebars {
+    .template-variable {
+      color: #a383e8;
+    }
   }
-}
 }

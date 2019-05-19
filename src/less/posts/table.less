@@ -1,53 +1,12 @@
 @import '../global/variables.less';
-/* -- Box model ------------------------------- */
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-/* -- Material Design Table style -------------- */
 // Variables
-// ---------------------
-@table-header-font-weight: 400;
-@table-header-font-color: #757575;
 @table-cell-padding: 10px;
 @table-bg: #fff;
-@table-bg-accent: #f5f5f5;
+@table-bg-accent: #f6f8fb;
 @table-bg-hover: rgba(0,0,0,.12);
-@table-bg-active: @table-bg-hover;
-@table-border-color: #e0e0e0; // Mixins
-// -----------------
 
-.transition(@transition) {
-  -webkit-transition: @transition;
-  -o-transition: @transition;
-  transition: @transition;
-}
 // Tables
-//
-// -----------------
-// Baseline styles
-
-.tableContainer {
-  overflow: hidden;
-  border-radius: 3px;
-  border: 1px solid #e6edf0;
-  margin: 30px 0;
-
-  * {
-    &:hover {
-      cursor: ew-resize !important;
-    }
-
-    &:active {
-      cursor: grabbing;
-    }
-  }
-}
-
 table {
   width: 100%;
   max-width: 100%;
@@ -61,103 +20,51 @@ table {
   }
 
   tr {
-      .transition(all .3s ease);
+    transition: all .3s ease-out;
 
-      &:nth-child(odd) {
-        background: #f6f8fb;
-      }
+    &:nth-child(odd) {
+      background: @table-bg-accent;
+    }
 
-      > th,
-      > td {
-        text-align: left;
-        padding: @table-cell-padding;
-        vertical-align: top;
-        border-top: 0;
-        .transition(all .3s ease);
-        overflow: hidden;
-        white-space: nowrap;
-        max-width: 150px;
-        text-overflow: ellipsis;
-        border-bottom: 0;
-        @media(max-width: @mobile-breakpoint) {
-          border: 0;
-        }
-      }
-  }
-
-  tbody {
     td,
     th {
-    font-size: 0.78em !important;
-    font-weight: 300;
-  }
-}
-
-
-  thead > tr > th {
-    font-weight: 400;
-    color: #ffffff;
-    background: #3c414d;
-    vertical-align: bottom;
-    font-size: 0.8em;
-    font-family: 'AvenirNextLTPro-Medium', sans-serif;
-  }
-
-  > caption + thead,
-   > thead:first-child,
-  > colgroup + thead {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
+      text-align: left;
+      padding: @table-cell-padding;
+      vertical-align: top;
+      border-top: 0;
+      transition: all .3s ease-out;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 150px;
+      text-overflow: ellipsis;
+      border-bottom: 0;
+      @media(max-width: @mobile-breakpoint) {
+        border: 0;
       }
     }
   }
-
-  // Nesting
-  table {
-    background-color: @table-bg;
-
-    td {
-      font-size: 0.9em;
-    }
-  }
-  // Remove border
-  .no-border {
-    border: 0;
-  }
 }
 
-// Zebra-striping
-.table-striped {
-  > tbody > tr:nth-child(odd) {
-    > td,
-    > th {
-      background: #f6f8fb;
-    }
-  }
-}
-// Hover effect
-
-.table-hover {
-  > tbody > tr:hover {
-    > td,
-    > th {
-      background-color: @table-bg-hover;
-    }
-  }
-}
-// Responsive tables (vertical)
-//
-// Wrap your tables in `.table-responsive-vertical` and we'll make them mobile friendly
-// by vertical table-cell display. Only applies <768px. Everything above that will display normally.
-// For correct display you must add 'data-title' to each 'td'
-
+// Responsive tables
 .tableContainer {
   border-spacing: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid #e6edf0;
+  margin: 30px 0;
   @media (max-width:600px) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
+
+    * {
+      &:hover {
+        cursor: ew-resize !important;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
 
     table {
       width: auto;
@@ -166,14 +73,6 @@ table {
       display: table;
       position: relative;
       overflow-x: scroll;
-
-      tbody:hover {
-        cursor: grab !important;
-      }
-
-      td:empty:before {
-        content: '\00a0';
-      }
 
       td,
       th {
@@ -201,26 +100,6 @@ table {
         z-index: 2;
         background: #3c414d;
 
-        th {
-          display: block;
-          padding: 10px !important;
-          font-family: @body-font;
-          letter-spacing: 0.5px;
-          text-align: left;
-          text-transform: capitalize;
-          font-weight: 500;
-          font-size: 0.8em;
-          min-height: 50px;
-          margin: 5px 0;
-          width: 100% !important;
-          margin-right: 0 !important;
-          max-width: unset !important;
-
-          * {
-            font-size: 1em;
-          }
-        }
-
         tr {
           display: block;
           border-spacing: 0;
@@ -231,6 +110,30 @@ table {
           &:hover {
             background-color: inherit;
             cursor: ew-resize !important;
+          }
+
+          th {
+            display: block;
+            padding: 10px !important;
+            font-family: @body-font;
+            letter-spacing: 0.5px;
+            text-align: left;
+            text-transform: capitalize;
+            font-weight: 500;
+            min-height: 50px;
+            margin: 5px 0;
+            width: 100% !important;
+            margin-right: 0 !important;
+            max-width: unset !important;
+            color: #ffffff;
+            background: #3c414d;
+            vertical-align: bottom;
+            font-size: 0.8em;
+            font-family: 'AvenirNextLTPro-Medium', sans-serif;
+
+            * {
+              font-size: 1em;
+            }
           }
         }
       }
@@ -246,13 +149,6 @@ table {
         flex-direction: row;
         align-items: stretch;
 
-        & > tr > th {
-          border-bottom: 1px solid #e0e0e0;
-          border-radius: 0;
-          border-spacing: 0;
-          border-collapse: collapse;
-        }
-
         tr {
           width: 115px;
           vertical-align: top;
@@ -263,6 +159,10 @@ table {
           white-space: inherit;
           padding: 0 15px;
           border-bottom: none;
+
+          tr:hover {
+             background-color: @table-bg-hover;
+           }
 
           td,
           th {
@@ -280,6 +180,8 @@ table {
             min-width: -webkit-fill-available;
             border-bottom: 1px solid #ced3db;
             margin: 5px 0;
+            font-size: 0.78em !important;
+            font-weight: 300;
 
             &:last-child {
               border-bottom: 0;

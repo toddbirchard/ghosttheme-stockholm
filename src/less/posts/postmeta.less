@@ -30,6 +30,7 @@ header {
     span {
       font-family: @body-font;
       font-weight: 500;
+      margin: 0;
     }
 
     .date {
@@ -40,24 +41,22 @@ header {
 
     .tags {
       height: 30px !important;
-      padding: 10px 8px;
+      padding: 0;
       border-radius: 2px;
       @media(max-width: @mobile-breakpoint) {
         height: 30px !important;
-        padding: 10px 8px;
       }
 
       i {
         font-size: 1em !important;
-
         @media(max-width: 500px) {
-            font-weight: 500;
-            font-size: 1.3em!important;
+          font-weight: 500;
+          font-size: 1.3em!important;
         }
       }
 
       span {
-        font-size: .9em;
+        font-size: 0.9em;
         font-family: @body-font-bold;
         @media(max-width: @tablet-breakpoint) {
           font-size: 0.85em;
