@@ -218,16 +218,16 @@
 	}
 }
 
-section .widget.newsletter {
+.post-template .widget.newsletter {
 	display: none;
 	padding: 20px;
 	box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 	@media(max-width: @mobile-breakpoint) {
 		display: block;
 		background: white;
-		width: -webkit-fill-available;
-		width: -moz-fill-available;
-		margin: 5px 0;
+		width: auto;
+		margin: 0 20px 20px;
+		padding: 20px;
 
 		h4 {
 			margin: 0;
@@ -248,14 +248,14 @@ section .widget.newsletter {
 			width: -moz-fill-available;
 
 			input {
-				width: -webkit-fill-available;
-				width: -moz-fill-available;
+				width: -webkit-fill-available !important;
+				width: -moz-fill-available !important;
 			}
 		}
 
 		.subscribe-input-class {
 			padding: 15px 5%;
-			width: 90%;
+			width: 87% !important;
 			font-size: 14px;
 			border: 1px solid #ebebeb;
 			margin-bottom: 10px;
