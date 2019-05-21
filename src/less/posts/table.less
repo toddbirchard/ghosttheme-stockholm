@@ -19,7 +19,16 @@ table {
     cursor: ew-resize !important;
   }
 
-  tr {
+  thead {
+    tr {
+      background: #363940 !important;
+      color: white;
+      font-family: 'AvenirNextLTPro-Medium', sans-serif;
+      font-size: 1.1em;
+    }
+  }
+
+  tr{
     transition: all .3s ease-out;
 
     &:nth-child(odd) {
@@ -38,6 +47,7 @@ table {
       max-width: 150px;
       text-overflow: ellipsis;
       border-bottom: 0;
+      font-size: .8em;
       @media(max-width: @mobile-breakpoint) {
         border: 0;
       }
