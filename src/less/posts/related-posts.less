@@ -1,10 +1,10 @@
 .recent-posts {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
     @media(max-width: 600px) {
       grid-template-columns: 1fr;
-      grid-gap: 15px;
+      grid-gap: 10px;
     }
 
     .single-post {
@@ -36,12 +36,11 @@
       background-size: cover !important;
       margin-bottom: 15px;
       @media(max-width: 600px) {
-        width: 100px;
-        height: 100px;
-        min-width: 100px;
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
         background-size: cover !important;
         float: left;
-        margin-right: 5px;
         margin-bottom: 0;
         border-right: 1px solid #d5d5d5;
       }
@@ -52,10 +51,11 @@
       @media(max-width: 600px) {
         float: left;
         padding: 15px;
+        max-height: 60px;
       }
 
       .related-post-title {
-        font-size: 1.1em;
+        font-size: 1em;
         font-family: 'TTNormsPro-Medium', sans-serif;
         height: 68px;
         overflow: hidden;

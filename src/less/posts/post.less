@@ -41,14 +41,19 @@
 			line-height: 1;
 			margin: 25px 0 0;
 			border: 1px solid #e2e7ee;
-			height: 447px;
+			height: auto;
 			overflow: hidden;
+			max-height: 394px;
 			@media(max-width: @tablet-breakpoint) {
 				margin: 20px 0 0;
 				height: unset;
 			}
 			@media (max-width: 600px) {
 				margin: 20px 0 0;
+				max-height: 220px;
+			}
+			@media (max-width: 400px) {
+				max-height: 166px;
 			}
 
 			img {
