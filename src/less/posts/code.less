@@ -84,11 +84,12 @@ blockquote pre {
     font-size: 30px;
     width: fit-content;
     height: fit-content;
-    color: #5d7c94;
+    color: #122331;
     cursor: pointer;
     transition: all 0.3s ease-out;
     display: none;
     z-index: 1;
+    mix-blend-mode: color-burn;
 
     &:hover {
       opacity: 0.7;
@@ -210,7 +211,6 @@ blockquote pre {
   width: 100%;
   bottom: 0;
   height: 80px;
-  background: linear-gradient(0, #eceef1, rgba(255, 255, 255, 0) 70.71%);
   z-index: 0;
   display: none;
   opacity: 1;
@@ -225,14 +225,6 @@ blockquote pre {
   @media(max-width: @mobile-breakpoint) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
-
-    code {
-      font-size: 12px;
-
-      * {
-        font-size: 12px;
-      }
-    }
   }
 
   code {

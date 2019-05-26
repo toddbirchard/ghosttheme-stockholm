@@ -4,11 +4,23 @@
 	footer
 ====================================================*/
 .main-footer {
-	background: #162544 !important;
+	background: #111f4a !important;
 	background-size: cover;
 	padding: 35px 8%;
 	color: #fff;
 	margin-top: 30px;
+	@media(max-width: 1000px) {
+		padding: 30px 40px;
+	}
+	@media(max-width: @tablet-breakpoint) {
+		padding: 20px 40px;
+		margin-top: 0;
+	}
+	@media(max-width: @mobile-breakpoint) {
+		display: block;
+		padding: 50px;
+		margin-top: 20px;
+	}
 
 	.footer-title {
 		color: #fff;
@@ -24,17 +36,6 @@
 		@media(max-width: @tablet-breakpoint) {
 			 margin: 0 0 5px !important;
 		}
-	}
-	@media(max-width: 1000px) {
-		padding: 30px 40px;
-	}
-	@media(max-width: @tablet-breakpoint) {
-		padding: 20px 40px;
-		margin-top: 0;
-	}
-	@media(max-width: @mobile-breakpoint) {
-		display: block;
-		padding: 40px;
 	}
 
 	.footer-container {
@@ -196,7 +197,6 @@
 		}
 
 		a {
-			font-weight: 100;
 			font-size: 1.4em;
 			margin: 0;
 			color: unset;
@@ -242,7 +242,7 @@
 
 .copyright {
 	width: 100%;
-	background: #12203c;
+	background: #0e1a3d;
 	text-align: center;
 	padding: 25px 0;
 

@@ -5,7 +5,7 @@
 	{{#post}}
 		<article class="{{post_class}}">
 			<div class="post-wrapper">
-				<header>
+				<div class="post-header">
 					<h1 class="post-title">{{{title}}}</h1>
 					<h4 class="excerpt">{{excerpt}}</h4>
 					<!-- start responsive image -->
@@ -38,7 +38,7 @@
 						<span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
 						<span class="readtime meta-item"><i class="far d fa-eye"></i> <span>{{reading_time}}</span></span>
 					</div>
-				</header>
+				</div>
 				<!-- end post metadata -->
 
 				{{! Lists Table-of-Contents-Like list if post is in a series. }}

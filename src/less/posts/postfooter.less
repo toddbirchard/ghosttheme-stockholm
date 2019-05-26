@@ -27,7 +27,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: flex-start;
-		margin: 20px 0 20px;
+		margin: 20px 0;
 		@media(max-width: @mobile-breakpoint) {
 			margin: 20px 0 0;
 		}
@@ -41,7 +41,6 @@
 			line-height: 1;
 			padding: 8px 10px;
 			font-family: @body-font;
-			font-weight: 300;
 			transition: all 0.3s ease-out;
 			@media(max-width: @tablet-breakpoint) {
 				margin-bottom: 10px;
@@ -185,13 +184,14 @@
 					font-size: 19px;
 					display: block;
 					width: fit-content;
+					font-weight: unset;
 					@media(max-width: @tablet-breakpoint) {
 						font-size: 24px;
 						padding-top: 3px;
 					}
 					@media(max-width: @mobile-breakpoint) {
 						font-size: 22px;
-						padding: 4px 0px 0 4px;
+						padding: 4px 0 0 4px;
 					}
 				}
 			}
@@ -223,87 +223,88 @@
 
 .post-template .widget.newsletter {
 	display: none;
+	background: white;
+	width: auto;
+	margin: 20px 0 0;
 	padding: 20px;
 	box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+	-webkit-appearance: none;
+
+	h4 {
+		margin: 0;
+		font-family: @body-font-bold;
+		font-weight: 100;
+	}
+
+	.news-description {
+		margin: 5px 0 15px;
+		line-height: 1.5;
+		font-size: 0.8em !important;
+		font-weight: 300;
+		font-family: @body-font;
+	}
+
+	.form-group {
+		width: -webkit-fill-available;
+		width: -moz-fill-available;
+
+		input {
+			width: -webkit-fill-available !important;
+			width: -moz-fill-available !important;
+		}
+	}
+
+	.subscribe-input-class {
+		padding: 15px 5%;
+		width: 87% !important;
+		font-size: 14px;
+		border: 1px solid #ebebeb;
+		margin-bottom: 10px;
+	}
+
+	.form-group,
+	.input-group {
+		margin-bottom: 0;
+		display: block;
+
+		.email {
+			width: 100%;
+		}
+
+		button {
+			width: -webkit-fill-available !important;
+			width: -moz-available !important;
+			background: @button-color;
+			box-shadow: -1px 1px 0 #2b84a7, -1px 0 0 #2b84a7;
+			padding: 13px 20px;
+			font-size: 14px;
+			color: white;
+			border: 0;
+			outline: none;
+			transition: all 0.3s ease-in-out;
+			margin-top: 3px;
+
+			&:hover {
+				background-color: @hover-color;
+				cursor: pointer;
+				box-shadow: -1px 1px 0 darken(@hover-color, 15%), -1px 0 0 darken(@hover-color, 15%);
+			}
+
+			span {
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-family: @body-font;
+	}
+
 	@media(max-width: @mobile-breakpoint) {
 		display: block;
-		background: white;
-		width: auto;
-		margin: 0 20px 20px;
-		padding: 20px;
-
-		h4 {
-			margin: 0;
-			font-family: @body-font-bold;
-			font-weight: 100;
-		}
-
-		.news-description {
-			margin: 5px 0 15px;
-			line-height: 1.5;
-			font-size: 0.8em !important;
-			font-weight: 300;
-			font-family: @body-font;
-		}
-
-		.form-group {
-			width: -webkit-fill-available;
-			width: -moz-fill-available;
-
-			input {
-				width: -webkit-fill-available !important;
-				width: -moz-fill-available !important;
-			}
-		}
-
-		.subscribe-input-class {
-			padding: 15px 5%;
-			width: 87% !important;
-			font-size: 14px;
-			border: 1px solid #ebebeb;
-			margin-bottom: 10px;
-		}
-
-		.form-group,
-		.input-group {
-			margin-bottom: 0;
-			display: block;
-
-			.email {
-				width: 100%;
-			}
-
-			button {
-				width: -webkit-fill-available !important;
-				width: -moz-available !important;
-				background: @button-color;
-				box-shadow: -1px 1px 0 #2b84a7, -1px 0 0 #2b84a7;
-				padding: 13px 20px;
-				font-size: 14px;
-				color: white;
-				border: 0;
-				outline: none;
-				transition: all 0.3s ease-in-out;
-				margin-top: 3px;
-
-				&:hover {
-					background-color: @hover-color;
-					cursor: pointer;
-					box-shadow: -1px 1px 0 darken(@hover-color, 15%), -1px 0 0 darken(@hover-color, 15%);
-				}
-
-				span {
-					font-size: 14px;
-					text-transform: uppercase;
-				}
-			}
-		}
-
-		p {
-			margin-bottom: 10px;
-			font-size: 16px;
-			font-family: @body-font;
-		}
 	}
 
 	input[type="text"],
@@ -351,7 +352,7 @@
 		max-width: unset;
 	}
 	@media(max-width: @mobile-breakpoint) {
-		margin: 20px;
+		margin: 30px 20px;
 		width: auto;
 		max-width: unset;
 	}
