@@ -1,17 +1,30 @@
+
+@import "../global/variables.less";
+
 .post-archive {
   .postlist {
     width: 100%;
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width: @tablet-breakpoint) {
+        grid-gap: 20px;
+    }
 
     .post-preview {
       width: auto;
-      padding: 15px;
+      padding: 10px;
       margin-bottom: 0;
+      @media(max-width: @tablet-breakpoint) {
+          padding: 10px;
+      }
 
       .post-head .post-title {
         font-size: 1.5em;
+        
+        @media(max-width: @tablet-breakpoint) {
+            font-size: 1.3em;
+        }
       }
 
       .author,
