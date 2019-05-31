@@ -4,16 +4,6 @@ import '../less/projects.less';
 import { build_dropdown } from './projects/dropdown.js';
 import { make_kanban_slick } from './projects/kanban.js';
 
-// Initialize MongoDB
-// -------------------------------------------
-const {
-    Stitch,
-    RemoteMongoClient,
-    AnonymousCredential
-} = require('mongodb-stitch-browser-sdk');
-const mongodb_client = Stitch.initializeDefaultAppClient(process.env.MONGODB_STITCH_APP_ID);
-const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db(process.env.MONGODB_ATLAS_DB);
-
 // Functions
 // -----------------------------------------
 function populate_cards(cards) {
@@ -29,70 +19,17 @@ function populate_cards(cards) {
     }
 }
 
-function get_mongodb_cards(project) {
-  // Backlog
-  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('jira').find(
-    { project: project, status: "Backlog", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
-    { limit: 6 },
-    { sort: { priority_rank: -1 } }
-  ).asArray()
-  ).then(docs => {
-      console.log("Found docs", docs)
-      populate_cards(docs)
-  }).catch(err => {
-      console.error(err)
+function get_kanban_cards(project) {
+  const endpoint = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/jira-issues-endpoint?project=' + project;
+  $.ajax({
+    url: endpoint,
+    context: document.body
+  }).done(function(data) {
+    populate_cards(data['backlog']);
+    populate_cards(data['todo']);
+    populate_cards(data['inprogress']);
+    populate_cards(data['done']);
   });
-
-  // To do
-  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('jira').find(
-    { project: project, status: "ToDo", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
-    { limit: 6 },
-    { sort: { updated: -1 } }
-  ).asArray()
-  ).then(docs => {
-      console.log("Found docs", docs)
-      populate_cards(docs)
-  }).catch(err => {
-      console.error(err)
-  });
-
-  // In Progess
-  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('jira').find(
-    { project: project, status: "InProgress", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
-    { limit: 6 },
-    { sort: { updated: -1 } }
-  ).asArray()
-  ).then(docs => {
-      console.log("Found docs", docs)
-      populate_cards(docs)
-  }).catch(err => {
-      console.error(err)
-  });
-
-  // Done
-  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('jira').find(
-    { project: project, status: "Done", issuetype_name: { $in: ['Task', 'Bug', 'Integration', 'Major Functionality', 'Story' ] }},
-    { limit: 6 },
-    { sort: { updated: -1 } }
-  ).asArray()
-  ).then(docs => {
-      console.log("Found docs", docs)
-      populate_cards(docs)
-  }).catch(err => {
-      console.error(err)
-  });
-
-  /*mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-    console.log('logged in anonymously as ' + user)
-  });
-
-  mongodb_client.callFunction("get_jira_cards", [project]).then(result => {
-    console.log(result)
-  });*/
 }
 
 function init_dropdown() {
@@ -128,7 +65,7 @@ function init_dropdown() {
 // Start Script
 // -------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-  get_mongodb_cards('Hackers and Slackers');
+  get_kanban_cards('Hackers and Slackers');
   build_dropdown();
   make_kanban_slick();
   init_dropdown();

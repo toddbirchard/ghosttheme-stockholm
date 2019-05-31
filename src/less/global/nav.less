@@ -12,7 +12,7 @@ nav {
 
 	.banner {
 		position: relative;
-		background: linear-gradient(350deg, #00a5f8, #3756d4);
+		background: #067bff;
 		height: 80px;
 
 		.logo {
@@ -24,7 +24,7 @@ nav {
 			bottom: 0;
 			margin: auto;
 			width: 195px;
-			transition: all 0.3s ease-out;
+			transition: @transition;
 
 			&:hover {
 				cursor: pointer !important;
@@ -80,11 +80,11 @@ nav {
 		}
 
 		* {
-			transition: all 0.3s ease-out;
+			transition: @transition;
 		}
 
 		input {
-			transition: all 0.3s ease-out;
+			transition: @transition;
 			-moz-appearance: none;
 			-webkit-appearance: none;
 			outline: none;
@@ -322,7 +322,7 @@ nav {
 		height: fit-content;
 		max-height: 58px;
 		z-index: 9;
-		transition: all 0.3s ease-out;
+		transition: @transition;
 		@media(max-width: @tablet-breakpoint) {
 			width: 228px;
 			height: 49px;
@@ -723,7 +723,7 @@ nav {
 	}
 
 	.dropdown {
-		transition: all 0.3s ease-out;
+		transition: @transition;
 		position: relative;
 		z-index: 200;
 
@@ -771,7 +771,7 @@ nav {
 				text-align: left;
 				line-height: 1.5;
 				color: @text-color;
-				transition: all 0.3s ease-out;
+				transition: @transition;
 				font-family: @body-font;
 				font-weight: 100;
 
@@ -795,7 +795,7 @@ nav {
 	a {
 		color: @text-color;
 		font-family: @body-font-bold;
-		transition: all 0.3s ease-out;
+		transition: @transition;
 
 		&:hover {
 			color: @theme-color;

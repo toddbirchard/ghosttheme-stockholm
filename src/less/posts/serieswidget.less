@@ -6,14 +6,13 @@
   overflow: hidden;
   padding-bottom: 20px;
   border-bottom: 1px solid #e0ebee;
-  margin-top: -10px;
+  margin-top: 10px;
   @media(max-width: @tablet-breakpoint) {
-    margin: 0 0 30px;
-    padding: 20px 10px 20px;
+    margin: 10px 0 20px;
+    padding: 0 0 20px;
   }
   @media(max-width: @mobile-breakpoint) {
-    margin: -10px 0 20px;
-    padding: 0 0 20px;
+    margin: 20px 0 20px;
   }
 
   h5 {
@@ -35,10 +34,8 @@
 
   ol {
     list-style-type: upper-roman !important;
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-left: 0;
-    padding-left: 5px;
+    margin: 0;
+    padding: 0;
     @media(max-width: @mobile-breakpoint) {
       margin: 0;
       max-width: unset;
@@ -61,7 +58,7 @@
       }
 
       a {
-        font-family: 'AvenirNextLTPro-Medium', sans-serif;
+        font-family: 'TTNormsPro-Medium', sans-serif;
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 100%;
@@ -69,17 +66,16 @@
       }
 
       * {
-        transition: all 0.2s ease-out;
+        transition: @transition;
       }
 
       &:last-child {
         margin-bottom: 0;
       }
-
-
-      &:last-child {
-        margin-bottom: 0;
+      &:first-child {
+        margin-top: 0;
       }
+
 
       &:hover {
         * {
@@ -90,7 +86,7 @@
       &::before {
         content: "Part " counter(li, upper-roman) "." !important;
         color: #687f99;
-        font-family: 'AvenirNextLTPro-Medium', sans-serif !important;
+        font-family: 'TTNormsPro-Medium', sans-serif !important;
         margin-right: 8px;
         font-size: 13px;
         @media(max-width: @mobile-breakpoint) {
@@ -104,7 +100,7 @@
       a {
         color: #687f99;
         @media(max-width: @mobile-breakpoint) {
-          font-family: 'AvenirNextLTPro-Medium', sans-serif;
+          font-family: 'TTNormsPro-Medium', sans-serif;
           font-size: 0.9em;
         }
       }

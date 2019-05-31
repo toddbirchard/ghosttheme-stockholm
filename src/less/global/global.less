@@ -45,7 +45,7 @@ a {
 
 .h1,
 h1 {
-	font-family: @header-font-bold;
+	font-family: @header-font;
 	font-size: 2.5em;
 	font-weight: 500;
 	color: @header-color;
@@ -108,7 +108,7 @@ a {
 	color: @theme-color;
 	outline: none;
 	text-decoration: none;
-	.transition(all 0.3s ease-out);
+	.transition(@transition);
 
 	&:hover {
 		color: @hover-color;

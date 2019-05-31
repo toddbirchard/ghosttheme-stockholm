@@ -41,7 +41,7 @@
 			line-height: 1;
 			padding: 8px 10px;
 			font-family: @body-font;
-			transition: all 0.3s ease-out;
+			transition: @transition;
 			@media(max-width: @tablet-breakpoint) {
 				margin-bottom: 10px;
 			}
@@ -319,7 +319,7 @@
 		font-weight: 300;
 		letter-spacing: 1px;
 		border: 1px solid #d5dbe6;
-		transition: all 0.3s ease-out;
+		transition: @transition;
 		margin-bottom: 10px;
 
 		&::placeholder {
@@ -364,8 +364,6 @@
 	}
 
 	.author-card-small {
-		border-left: unset !important;
-		border-bottom: unset !important;
 		@media(max-width: @mobile-breakpoint) {
 			min-height: 320px;
 		}
@@ -379,7 +377,7 @@
 		}
 
 		.bio {
-			font-size: 0.8em !important;
+			font-size: 0.9em !important;
 		}
 	}
 }

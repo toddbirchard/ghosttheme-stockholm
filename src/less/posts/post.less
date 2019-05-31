@@ -14,15 +14,12 @@
 	}
 
 	.post-wrapper {
-		margin: 0 auto 30px;
+		margin: 30px auto 30px;
 		width: 100%;
-		max-width: 790px;
+		max-width: 760px;
 		@media(max-width: @tablet-breakpoint) {
-			width: 90%;
-			margin: 10px auto 20px;
-		}
-		@media(max-width: @mobile-breakpoint) {
-			margin: 5px auto 30px;
+			width: 85%;
+			margin: 25px auto 20px;
 		}
 	}
 
@@ -39,42 +36,42 @@
 
 		.post-image {
 			line-height: 1;
-			margin: 25px 0 0;
-			border: 1px solid #e2e7ee;
+			margin: 0;
 			height: auto;
 			overflow: hidden;
-			max-height: 394px;
+			max-height: 453px;
 			@media(max-width: @tablet-breakpoint) {
 				margin: 20px 0 0;
 				height: unset;
+				max-height: 356px;
 			}
 			@media (max-width: 600px) {
 				margin: 20px 0 0;
-				max-height: 220px;
+				max-height: 286px;
 			}
 			@media (max-width: 400px) {
-				max-height: 166px;
+				max-height: 180px;
 			}
 
 			img {
 				width: 100%;
 				line-height: 1;
 				height: auto;
+				border: 1px solid #e2e7ee;
 			}
 		}
 
 		.post-title {
 			text-align: left;
 			width: -webkit-fill-available;
-			margin: 20px 0 5px;
+			margin: 0 0 5px;
 			display: block;
 			font-family: @header-font-bold !important;
 			font-size: 2.2em;
 			letter-spacing: 0;
 			line-height: 1.1;
-			color: #354362;
+			color: @h1-color;
 			@media(max-width: @tablet-breakpoint) {
-				margin: 10px 0;
 				font-size: 2em;
 			}
 			@media(max-width: @mobile-breakpoint) {
@@ -82,23 +79,22 @@
 				max-width: auto;
 				letter-spacing: 0;
 				line-height: 1.1;
-				color: @h1-color;
 			}
 		}
 
 		.excerpt {
 			font-weight: 600;
 			font-size: 1.2em;
-			margin: 5px 0 30px;
+			margin: 5px 0 20px;
 			line-height: 1.3;
-			color: #354362;
+			color: @h1-color;
 			font-family: @header-font;
 			@media(max-width: @tablet-breakpoint) {
 				margin: 0;
-				font-size: 1.15em;
+				font-size: 1.1em;
 			}
 			@media(max-width: @mobile-breakpoint) {
-				font-size: 1.1em;
+				font-size: 1em;
 			}
 		}
 
@@ -172,7 +168,7 @@
 				p {
 					text-align: left;
 					font-size: 1em;
-					color: #393a40;
+					color: @post-text-color;
 					font-weight: 300;
 					font-family: @body-font;
 					-webkit-font-smoothing: auto;
@@ -183,7 +179,7 @@
 
 				a {
 					color: @theme-color;
-					transition: all 0.2s ease-out;
+					transition: @transition;
 					font-family: @body-font-bold;
 					@media(max-width: @mobile-breakpoint) {
 						white-space: nowrap;

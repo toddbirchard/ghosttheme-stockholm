@@ -72,7 +72,7 @@
   }
 
   .fa-arrow-to-bottom {
-    transition: all 0.3s ease-out;
+    transition: @transition;
   }
 
   .sort-toggle {
@@ -100,7 +100,7 @@
     padding: 12px;
     align-items: center;
     justify-content: flex-end;
-    transition: all 0.3s ease-out;
+    transition: @transition;
     @media(max-width: @tablet-breakpoint) {
       padding: 7px 12px;
     }
@@ -145,7 +145,7 @@
     justify-content: space-between;
     padding: 20px;
     border-bottom: solid 1px #dadada;
-    transition: all 0.2s ease-out;
+    transition: @transition;
     overflow: hidden;
     @media(max-width: @mobile-breakpoint) {
       padding: 15px;
@@ -235,7 +235,7 @@
           a {
             font-family: @header-font;
             font-size: 1em;
-            transition: all 0.2s ease-out;
+            transition: @transition;
             color: #334652;
             @media(max-width: @mobile-breakpoint) {
               font-family: @header-font;

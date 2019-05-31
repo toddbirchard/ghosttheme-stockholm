@@ -6,7 +6,7 @@
 	box-shadow: @shadow-color;
 	margin-bottom: 30px;
 	background: white;
-	transition: all 0.3s ease-out;
+	transition: @transition;
 	order: 2;
 
 	&:hover {
@@ -101,7 +101,7 @@
 		height: fit-content;
 		display: block;
 		margin: 0 auto 10px;
-		transition: all 0.2s ease-out;
+		transition: @transition;
 
 		img {
 			width: 100%;
@@ -144,7 +144,7 @@
 
 			a {
 				color: @text-color-heading;
-				transition: all 0.2s ease-out;
+				transition: @transition;
 				font-family: @header-font-bold;
 
 				&:hover {
@@ -313,7 +313,7 @@
 					line-height: 1.2;
 					font-size: 13px;
 					font-family: @body-font-bold;
-					transition: all 0.3s ease-out;
+					transition: @transition;
 					@media(max-width: @mobile-breakpoint) {
 						font-size: 13px;
 						font-weight: 100;
@@ -366,7 +366,7 @@
 					overflow: hidden;
 					white-space: nowrap;
 					text-overflow: ellipsis;
-					transition: all 0.3s ease-out;
+					transition: @transition;
 
 					&:hover {
 						cursor: pointer;
@@ -435,7 +435,7 @@
 		padding: 15px 3px 0;
 		align-items: center;
 		border-top: 1px solid #e7e7e7;
-		transition: all 0.3s ease-out;
+		transition: @transition;
 		@media(max-width: 950px) {
 			padding: 12px 0 0;
 		}

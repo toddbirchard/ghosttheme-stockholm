@@ -1,6 +1,6 @@
 import '../less/pages/resources.less';
 import '../less/posts/table.less';
-import {GraphQLClient} from 'graphql-request';
+// import {GraphQLClient} from 'graphql-request';
 
 function create_row(data) {
   for (var i = 0; i < data.length; i++) {

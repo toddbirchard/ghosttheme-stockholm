@@ -6,16 +6,6 @@ import { author_website } from './author/website.js';
 import { author_medium } from './author/medium.js';
 // import author_meetup from '../src/js/author/meetup.js';
 
-// Initialize MongoDB
-// -------------------------------------------
-const {
-    Stitch,
-    RemoteMongoClient,
-    AnonymousCredential
-} = require('mongodb-stitch-browser-sdk');
-const mongodb_client = Stitch.initializeDefaultAppClient(process.env.MONGODB_STITCH_APP_ID);
-const db = mongodb_client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db(process.env.MONGODB_ATLAS_DB);
-
 // Functions
 // -------------------------------------------
 function makeAuthorSidebar(data) {

@@ -82,7 +82,7 @@
 
     input,
     textarea {
-      font-family: "AvenirNextLTPro-Light", sans-serif;
+      font-family: "TTNormsPro-Light", sans-serif;
       outline: 0;
       background: #f2f2f2;
       width: 100%;
@@ -91,7 +91,7 @@
       padding: 15px;
       box-sizing: border-box;
       font-size: 14px;
-      transition: all 0.2s ease-out;
+      transition: @transition;
 
       &:focus {
         box-shadow: 0 0 3px #0a87a7;
@@ -244,7 +244,7 @@
     }
 
     button {
-      font-family: "AvenirNextLTPro-Light", sans-serif;
+      font-family: "TTNormsPro-Light", sans-serif;
       text-transform: uppercase;
       outline: 0;
       background: @theme-color !important;
@@ -253,8 +253,8 @@
       padding: 15px;
       color: #FFFFFF;
       font-size: 14px;
-      -webkit-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
+      -webkit-transition: @transition;
+      transition: @transition;
       margin-top: 20px;
 
       &:hover {

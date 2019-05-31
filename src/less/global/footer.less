@@ -63,7 +63,7 @@
 				width: 100%;
 				display: block;
 				text-align: left;
-				transition: all 0.3s ease-out;
+				transition: @transition;
 				font-family: @body-font;
 				font-size: 0.9em;
 				margin-bottom: 2px;
@@ -122,7 +122,7 @@
 		width: 100%;
 		display: block;
 		height: 40px;
-		transition: all 0.3s ease-out;
+		transition: @transition;
 		@media(max-width: @mobile-breakpoint) {
 			margin-bottom: 25px;
 			max-width: 250px;
@@ -200,7 +200,7 @@
 			font-size: 1.4em;
 			margin: 0;
 			color: unset;
-			transition: all 0.3s ease-out;
+			transition: @transition;
 
 			&:hover {
 				opacity: 1;
