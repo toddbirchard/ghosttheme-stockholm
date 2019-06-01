@@ -4,7 +4,6 @@
 ![Node](https://img.shields.io/badge/NodeJS-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=339933&colorA=36363e)
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=23a8e2&colorA=36363e)
 ![GraphQL](https://img.shields.io/badge/GraphQL-v14.2.1-pink.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=E10098&colorA=36363e)
-![MongoDB](https://img.shields.io/badge/MongoDB--Atlas-v4.0.8-green.svg?longCache=true&style=flat-square&logo=MongoDB&logoColor=white&colorB=47A248&colorA=36363e)
 ![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=36363e&logo=JavaScript&logoColor=white)
 ![Ghost-Pagination](https://img.shields.io/badge/Ghost--Pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=36363e&colorB=7aa206&logo=ghost)
 ![Vanilla Lazyload](https://img.shields.io/badge/Vanilla--Lazyload-v11.0.6-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=7aa206&colorA=36363e)
@@ -19,15 +18,14 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=daa000&colorA=36363e&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=FCC624&colorA=36363e&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
 
-Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. This theme has yet to be whitelabeled, but a live implementation of this theme can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
+Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live implementation can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
 ![Stockholm Theme](assets/images/stockholm4.jpg)
 
 # About
+_Stockholm_ is amongst the most feature-rich Ghost themes currently available. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API; this enables a plethora of features and widgets previously unavailable to Ghost.  Example customizations include contextual widgets, additional social account support, JIRA project configuration, and unique page templates.
 
-_Stockholm_ is arguably the most feature-rich Ghost theme currently on the market. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API. This enables a plethora of features and widgets previously unavailable to Ghost.  Users can enable customizations such as contextual widgets, fully integrated user sign ups, and unique page templates.
-
-This project is in *active development*. All are welcome to use this theme, but oddities _will_ exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
+This project is in *active development*. All are welcome to use this theme while it is in process of being white labeled. Oddities will almost certainly exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
 
 ## Features
 
