@@ -21,7 +21,7 @@
 
   .main-content {
     @media (max-width: 800px) {
-      width: 95%;
+      width: 90%;
       margin: auto;
     }
   }
@@ -198,7 +198,7 @@
       padding: 5px 20px 0;
       position: relative;
       @media(max-width: @tablet-breakpoint) {
-        padding: 0 0 0 15px;
+        padding: 0 0 0 10px;
       }
 
       .meta {
@@ -222,6 +222,7 @@
         @media(max-width: @mobile-breakpoint) {
           width: -webkit-fill-available;
           overflow: hidden;
+          padding: 5px 0 0;
         }
 
         .post-title {
@@ -242,7 +243,7 @@
               font-size: 0.9em;
             }
             @media(max-width: 500px) {
-              font-size: 0.8em;
+              font-size: 0.75em;
             }
 
             &:hover {
@@ -352,6 +353,9 @@
         width: auto;
         height: 115px;
         margin-bottom: -8px;
+        @media(max-width: @mobile-breakpoint) {
+          height: 100%;
+        }
       }
 
       .post-card-image {
