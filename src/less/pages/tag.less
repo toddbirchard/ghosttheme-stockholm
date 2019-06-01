@@ -119,11 +119,13 @@
       }
 
       .post-excerpt {
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         display: -webkit-box;
+        text-overflow: ellipsis;
         min-height: 40px;
         margin-bottom: 55px;
-        overflow: hidden;
         font-family: @header-font;
         font-size: 1em !important;
         text-overflow: ellipsis;
@@ -363,7 +365,7 @@
           height: 140px;
         }
         @media(max-width: @mobile-breakpoint) {
-          height: 114px;
+          height: 126px;
         }
 
         h2 {
