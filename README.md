@@ -105,6 +105,14 @@ Beyond predictable built-in blog features, *Stockholm* leverages services atypic
 * Author/tag subscriptions
 * Trending Topics
 
+### Maintenance
+
+* User-friendly configuration
+* Installation Documentation
+* Image compression optimization
+* Retina image support
+* Site speed optimizations
+
 ## Installation
 
 For information on installing the Ghost platform, please reference the [Ghost CLI](https://docs.ghost.org/docs/cli-install).
@@ -123,11 +131,3 @@ As always, remember to restart your Ghost instance when adding new themes.
 This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don't forget to include `.env` in `.gitignore`)! 
 
 Replace the values in this configuration file with your own. Additional details to be added here soon.
-
-### Maintenance
-
-* User-friendly configuration
-* Installation Documentation
-* Image compression optimization
-* Retina image support
-* Site speed optimizations
