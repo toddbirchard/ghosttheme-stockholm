@@ -5,6 +5,7 @@
 @table-bg: #fff;
 @table-bg-accent: #f6f8fb;
 @table-bg-hover: rgba(0,0,0,.12);
+@table-head-bg: #52596a;
 
 // Tables
 table {
@@ -21,7 +22,7 @@ table {
 
   thead {
     tr {
-      background: #2f3440 !important;
+      background: @table-head-bg !important;
       color: white;
       font-size: 1.1em;
     }
@@ -107,7 +108,7 @@ table {
         height: 100%;
         box-shadow: 1px 0 4px rgba(62, 69, 86, 0.7);
         z-index: 2;
-        background: #2f3440;
+        background: @table-head-bg;
         padding-left: 10px;
         overflow: hidden;
 
@@ -116,7 +117,7 @@ table {
           border-spacing: 0;
           padding: 0;
           height: 100%;
-          background: #2f3440;
+          background: #5c6376;
 
           &:hover {
             background-color: inherit;
@@ -139,7 +140,7 @@ table {
             margin-right: 0 !important;
             max-width: unset !important;
             color: #ffffff;
-            background: #2f3440;
+            background: @table-head-bg;
             vertical-align: middle;
             font-size: 0.7em;
 

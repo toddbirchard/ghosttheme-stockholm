@@ -4,7 +4,7 @@
 	post footer
 ====================================================*/
 .post-footer {
-	padding: 0;
+	padding: 20px 0;
 	display: block;
 	justify-content: space-between;
 	align-items: center;
@@ -63,10 +63,7 @@
 	}
 
 	.share {
-		margin: 15px 0 10px !important;
-		@media(max-width: 900px) {
-			margin: 15px 0 10px !important;
-		}
+		margin: 15px 0 0 !important;
 		@media(max-width: @mobile-breakpoint) {
 			margin: 5px 0 0 !important;
 		}
@@ -344,17 +341,12 @@
 }
 
 .after-post {
-	max-width: 830px !important;
-	margin-top: 30px;
-	@media(max-width: @tablet-breakpoint) {
-		margin-top: 20px;
-		width: 93%;
-		max-width: unset;
-	}
+	width: 830px !important;
+	max-width: 90%;
+	margin-top: 40px;
 	@media(max-width: @mobile-breakpoint) {
 		margin: 30px 20px;
-		width: auto;
-		max-width: unset;
+		width: 92%;
 	}
 
 	.related-posts {

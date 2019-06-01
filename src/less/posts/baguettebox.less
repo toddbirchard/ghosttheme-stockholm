@@ -2,8 +2,15 @@
 	display: none !important;
 }
 
-#baguetteBox-overlay .full-image figcaption {
-	padding: 30px 20px;
-	font-family: @body-font;
-	width: 100%;
+#baguetteBox-overlay {
+	&:hover {
+		cursor: pointer;
+	}
+
+	.full-image figcaption {
+		padding: 30px 20px;
+		font-family: @body-font;
+		width: -webkit-fill-available;
+		width: moz-available;
+	}
 }

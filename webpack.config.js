@@ -23,6 +23,7 @@ module.exports = {
   },
   entry: {
     'global': path.resolve(__dirname, './src/js/global.js'),
+    'critical': path.resolve(__dirname, './src/js/critical.js'),
     'posts': path.resolve(__dirname, './src/js/posts.js'),
     'pages': path.resolve(__dirname, './src/js/pages.js'),
     'apply': path.resolve(__dirname, './src/js/apply.js'),

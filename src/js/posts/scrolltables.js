@@ -3,7 +3,7 @@ import ScrollBooster from 'scrollbooster';
 export function scrollable_tables() {
   let tables = document.getElementsByClassName('tableContainer');
   for (let table of tables) {
-    let content = table.querySelector('table');
+    let content = table.querySelector('tbody');
     let sb = new ScrollBooster({
       viewport: table,
       content: content,
