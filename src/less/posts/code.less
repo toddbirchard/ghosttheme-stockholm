@@ -8,13 +8,6 @@ blockquote pre {
   }
 
   code {
-    &::before {
-      font-size: 15px !important;
-      width: 100%;
-      padding: 5px 15px;
-      margin: 0 auto;
-      left: 0;
-    }
     background: rgba(41, 61, 76, 0.84) !important;
   }
 }
@@ -114,25 +107,6 @@ blockquote pre {
     width: 110%;
   }
 
-  .hljs.ini,
-  .language-ini {
-    &::before {
-      content: "ini";
-    }
-  }
-
-  .language-xml {
-    &::before {
-      content: "XML" !important;
-    }
-  }
-
-  .language-css {
-    &::before {
-      content: "CSS" !important;
-    }
-  }
-
   .language-endpoint {
     display: block;
     margin: 0;
@@ -144,17 +118,6 @@ blockquote pre {
     line-height: 1.5;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-
-    &::before {
-      content: "Endpoint" !important;
-    }
-  }
-}
-
-.language-output,
-.output {
-  &::before {
-    content: "Output" !important;
   }
 }
 
@@ -167,20 +130,12 @@ blockquote pre {
   .keyword {
     color: #D08770;
   }
-
-  &::before {
-    content: "CSS" !important;
-  }
 }
 
 .groovy,
 .language-groovy {
   .meta:not(:first-child) {
     color: #D08770;
-  }
-
-  &::before {
-    content: "Groovy" !important;
   }
 }
 
@@ -189,20 +144,12 @@ blockquote pre {
   .meta {
     color: #D08770;
   }
-
-  &::before {
-    content: "Yaml" !important;
-  }
 }
 
 .language-toml,
 .toml {
   .meta {
     color: #D08770;
-  }
-
-  &::before {
-    content: "TOML" !important;
   }
 }
 
