@@ -71,7 +71,7 @@
     "babel-runtime": "^6.26.0",
     "baguettebox.js": "^1.11.0",
     "dotenv-webpack": "^1.7.0",
-    "es6-promise": "^4.2.6",
+    "es6-promise": "^4.2.8",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
     "ghost-pagination": "^0.1.3",
