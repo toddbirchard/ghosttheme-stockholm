@@ -9,7 +9,7 @@ function remove_images() {
 export function post_link_previews() {
   var current_page = window.location.href;
   if (current_page.includes("lynx")) {
-    $("main a").each(function(index, element) {
+    $("main > p > a").each(function(index, element) {
       var link = $(this).attr('href');
       console.log('link = ' + link);
       var endpoint_url = process.env.LINK_PREVIEW_ENDPOINT + '?url=' + link;
