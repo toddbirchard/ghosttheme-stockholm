@@ -1,10 +1,8 @@
 @import "../global/variables.less";
 @import "../global/mixin.less";
 
+
 .post-template {
-	/*====================================================
-		Main post area
-	====================================================*/
 	nav {
 		margin-bottom: 0 !important;
 	}
@@ -14,23 +12,29 @@
 	}
 
 	.post-wrapper {
-		margin: 30px auto 40px;
+		margin: 0 auto 40px;
 		width: 100%;
 		max-width: 760px;
+		padding-top: 30px;
 		@media(max-width: @tablet-breakpoint) {
 			width: 85%;
-			margin: 25px auto 20px;
+			margin: 0 auto 20px;
+			padding-top: 25px;
 		}
 	}
 
-	.container {
+	.post {
 		padding: 0;
 		margin: 0 auto 40px;
+		background: white;
+    margin: 0 auto;
+    padding: 30px 0;
 		@media(max-width: 1200px) {
 			width: 100%;
 		}
 		@media(max-width: @tablet-breakpoint) {
 			width: 100% !important;
+		}
 		}
 
 		.post-image {
@@ -283,7 +287,80 @@
 						}
 					}
 				}
+				
+				figure {
+			    width: 99%;
+			    max-width: 99%;
+			    margin: 30px auto;
+			    overflow: visible;
+			    border: 1px solid rgba(206, 206, 206, 0.42);
+			    border-radius: 3px;
+			    overflow: hidden;
+			    @media(max-width: @mobile-breakpoint) {
+			      margin-left: calc(~"-50vw + 50%") !important;
+			      margin-right: calc(~"-50vw + 50%") !important;
+			      width: auto !important;
+			      max-width: none;
+			      margin-top: 25px;
+			      margin-bottom: 30px;
+			    }
 
+			    &:hover {
+			      cursor: zoom-in;
+			    }
+
+			    img {
+			      margin: 0;
+			      display: block;
+			      width: 100%;
+			      border-left: 0;
+			      border-right: 0;
+			      max-width: 100%;
+			      margin: 0 auto;
+			      display: block;
+			      @media(max-width: @mobile-breakpoint) {
+			        margin-bottom: -5px !important;
+			      }
+
+			      &:hover {
+			        cursor: zoom-in;
+			      }
+			    }
+
+			    iframe {
+			      width: 100%;
+			      height: 430px;
+			    }
+
+			    figcaption {
+			      width: -webkit-fill-available;
+			      width: -moz-available;
+			      margin: 0 auto;
+			      padding: 10px;
+			      background-color: rgba(33,69,138,.04);
+			      color: #5e6167;
+			      font-size: 0.8em;
+			      text-align: center;
+			      white-space: normal;
+			      line-height: 1.5;
+			      border-top: 1px solid #e0e1e4;
+			      @media(max-width: @mobile-breakpoint) {
+			        display: block;
+			        width: auto !important;
+			        height: auto;
+			        margin-top: 5px;
+			        margin-right: calc(-50vw + 50%) !important;
+			        margin-left: calc(-50vw + 50%) !important;
+			        padding: 10px 25px !important;
+			        line-height: 1.4 !important;
+			      }
+			    }
+
+			    &:hover {
+			      cursor: zoom-in;
+			    }
+			  }
+				
 				/*   Start of Protip box */
 				.protip {
 					background: rgba(255, 222, 196, 0.42);
@@ -373,6 +450,7 @@
 						}
 					}
 				}
+				
 				/*  Start of Blockquote  */
 				blockquote {
 					color: #8d969a;
@@ -481,78 +559,7 @@
 				text-align: right;
 			}
 
-			figure {
-				width: 99%;
-				max-width: 99%;
-				margin: 30px auto;
-				overflow: visible;
-				border: 1px solid rgba(206, 206, 206, 0.42);
-				border-radius: 3px;
-				overflow: hidden;
-
-				&:hover {
-					cursor: zoom-in;
-				}
-				@media(max-width: @mobile-breakpoint) {
-					margin-left: calc(~"-50vw + 50%") !important;
-					margin-right: calc(~"-50vw + 50%") !important;
-					width: auto !important;
-					max-width: none;
-					margin-top: 25px;
-					margin-bottom: 30px;
-				}
-
-				img {
-					margin: 0;
-					display: block;
-					/*width: 100%;*/
-					border-left: 0;
-					border-right: 0;
-					max-width: 100%;
-					margin: 0 auto;
-					display: block;
-					@media(max-width: @mobile-breakpoint) {
-						margin-bottom: -5px !important;
-					}
-
-					&:hover {
-						cursor: zoom-in;
-					}
-				}
-
-				iframe {
-					width: 100%;
-					height: 430px;
-				}
-
-				figcaption {
-					width: -webkit-fill-available;
-					width: -moz-available;
-					margin: 0 auto;
-					padding: 10px;
-					background-color: rgba(33,69,138,.04);
-					color: #5e6167;
-					font-size: 0.8em;
-					text-align: center;
-					white-space: normal;
-					line-height: 1.5;
-					border-top: 1px solid #e0e1e4;
-					@media(max-width: @mobile-breakpoint) {
-						display: block;
-						width: auto !important;
-						height: auto;
-						margin-top: 5px;
-						margin-right: calc(-50vw + 50%) !important;
-						margin-left: calc(-50vw + 50%) !important;
-						padding: 10px 25px !important;
-						line-height: 1.4 !important;
-					}
-				}
-
-				&:hover {
-					cursor: zoom-in;
-				}
-			}
+			
 
 			.handscroller {
 				&:hover {
@@ -564,5 +571,4 @@
 				background: white;
 			}
 		}
-	}
 }

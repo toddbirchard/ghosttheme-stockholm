@@ -45,6 +45,8 @@ blockquote pre {
       @media(max-width: @mobile-breakpoint) {
         overflow-y: hidden;
         font-size: 12px;
+        width: fit-content;
+        min-width: 100%;
       }
     }
 
@@ -69,7 +71,7 @@ blockquote pre {
     border: 1px solid #e9f1fb;
   }
 
-  .fullscreenbtn {
+  .fullscreen-btn {
     position: absolute;
     bottom: 13px;
     right: 23px;
@@ -95,7 +97,7 @@ blockquote pre {
       margin: auto;
       height: 30px;
       width: 22px;
-      opacity: 0.6;
+      opacity: 0.4;
     }
     @media(max-width: @mobile-breakpoint) {
       display: block;
@@ -172,6 +174,9 @@ blockquote pre {
   @media(max-width: @mobile-breakpoint) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
+    max-height: unset !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
   }
 
   code {
