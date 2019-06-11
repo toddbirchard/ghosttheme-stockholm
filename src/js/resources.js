@@ -1,8 +1,8 @@
 import '../less/pages/resources.less';
 import '../less/posts/table.less';
-// import {GraphQLClient} from 'graphql-request';
 
-function create_row(data) {
+
+function create_rows(data) {
   for (var i = 0; i < data.length; i++) {
     $('#resources-table tbody').append('<tr> \n ' +
     '<td><img src="' + data[i]['issuetype_icon'] + '" alt="' + data[i]['issuetype_name'] + '"></td> \n ' +
@@ -13,37 +13,15 @@ function create_row(data) {
   }
 }
 
-async function execute_query(query) {
-  const endpoint = process.env.GRAPHQL_API_ENDPOINT;
-  const token = process.env.GRAPHQL_API_AUTH;
-
-  // Initialize GraphQL Client
-  const client = new GraphQLClient(endpoint, {
-    headers: {
-      'Authorization': token
-    }
+function fetch_resource_issues() {
+  const endpoint = process.env.RESOURCES_ENDPOINT;
+  $.ajax({
+    method: "GET",
+    url: endpoint,
+    context: document.body
+  }).done(function(results) {
+    create_rows(JSON.parse(results));
   });
-  client.request(query).then(data => console.log('data = ' + JSON.stringify(data)));
-  client.request(query).then(data => create_row(data['resources']));
 }
 
-function construct_query() {
-
-  // Structured query
-  const query = `{
-    resources(orderBy: issuetype_name_DESC) {
-      summary
-      description
-      project
-      issuetype_icon
-      issuetype_name
-      epic_name
-      epic_color
-      updated
-    }
-  }`;
-
-  execute_query(query).catch(error => console.error(error));
-}
-
-document.onload = construct_query();
+document.onload = fetch_resource_issues();

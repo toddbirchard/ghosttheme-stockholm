@@ -18,6 +18,7 @@
 
   #resources-table {
     width: 100%;
+    border: 1px solid #f5f8fb;
 
     .icon {
       max-width: 5px;
@@ -28,9 +29,17 @@
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: left;
+      line-height: 1;
+      padding: 20px 10px;
+      vertical-align: middle;
 
       &:last-of-type {
-        max-width: 90px;
+        max-width: 40px;
+      }
+
+      img {
+        height: 20px;
+        width: 20px;
       }
     }
 
