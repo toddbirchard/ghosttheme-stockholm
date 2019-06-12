@@ -28,27 +28,14 @@
           {{/primary_tag}}
           {{#primary_author}}
             {{primary_author.bio}}
-            {{#if profile_image}}
-              <a href="{{url}}" class="meta-item author">
+            <a href="{{url}}" class="meta-item author">
+              {{#if profile_image}}
                 <img src="{{img_url profile_image}}" alt="{{name}} avatar" loading="lazy" class="avi lazy">
-                <span>{{name}}</span>
-              </a>
-              <a href="{{url}}" class="author-mobile">
-                <img src="{{img_url profile_image}}" alt="{{name}} avatar" loading="lazy" class="avi lazy">
-                <div class="info">
-                  <span class="mobile-name">{{slug}}</span>
-                  <span class="mobile-date">{{date published_at format="MMM DD"}}</span>
-                </div>
-              </a>
-            {{else}}
-              <a href="{{url}}" class="meta-item author"><i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{name}}</span></a>
-              <a href="{{url}}" class="meta-item author-mobile"><i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
-                <div class="info">
-                  <span class="mobile-name">{{slug}}</span>
-                  <span class="mobile-date">{{date published_at format="MMM DD"}}</span>
-                </div>
-              </a>
-            {{/if}}
+              {{else}}
+                <i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
+              {{/if}}
+              <span>{{name}}</span>
+            </a>
           {{/primary_author}}
           <span class="date meta-item">
             <i class="far d fa-calendar"></i>
