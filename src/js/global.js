@@ -17,7 +17,6 @@ import {order_hack} from './global/post_order_hack.js';
       var fallback_src = imagepaths.replace('webp', 'jpg');
       var new_srcset = '<source srcset="' + fallback_src + '">';
       $(this).find('source:last-of-type').after(new_srcset);
-      // console.log('new_srcset = ' + new_srcset);
     });
     picturefill({
       elements: [document.getElementsByName('picture')]

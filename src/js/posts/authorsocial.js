@@ -34,6 +34,5 @@ async function execute_query() {
 
 export function get_author_social(){
   var author = document.getElementsByClassName("author");
-  console.log('author = ' + author);
   execute_query();
 }

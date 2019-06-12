@@ -17,10 +17,8 @@ function makeAuthorSidebar(data) {
   medium = medium.replace('"', '');
   medium = medium.replace('"', '');
   let website = JSON.stringify(data['website']);
-  console.log('website = ' + website);
   website = website.replace('"', '');
   website = website.replace('"', '');
-  console.log("website = " + website);
   author_github(github);
   author_website(website);
   // author_medium(medium, medium_key);
@@ -42,7 +40,6 @@ function get_authors() {
     dataType: 'json',
     success: function(response) {
       var json = JSON.parse(response);
-      console.log(json);
       makeAuthorSidebar(json);
     }
 });

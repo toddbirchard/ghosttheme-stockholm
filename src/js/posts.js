@@ -32,7 +32,6 @@ function post_link_previews() {
         contentType: "application/json",
         dataType: 'json',
         success: function(result) {
-          console.log(result);
           $(element).html('<a href="' + result.url + '"><div class="link-preview"> \n ' +
                         '<div class="link-info"> \n ' + '<div class="link-preview-image"><img alt="' + result.title + '" src="' + result.image + '"></div> \n' +
                         '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
@@ -72,7 +71,6 @@ function add_image_alt_tags() {
 function current_page() {
   const sPath = String(document.location.pathname);
   const slug = sPath.split('/')[1];
-  console.log('slug = ' + slug);
   return slug;
 }
 
