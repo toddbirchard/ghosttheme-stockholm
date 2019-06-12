@@ -24,7 +24,6 @@ function post_link_previews() {
   if (current_page.includes("lynx")) {
     $("main > p > a").each(function(index, element) {
       var link = $(this).text();
-      console.log('link = ' + link);
       const endpoint_url = endpoint_base_url + '?key=' + auth_key + '&q=' + link;
       $(this).html('<div class="ui placeholder"> <div class="image header"> <div class="line"></div> <div class="line"></div> </div> <div class="paragraph"> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> </div><div class="gap">  </div><div class="column left"></div> <div class="column right"></div></div></div>');
       $.ajax({

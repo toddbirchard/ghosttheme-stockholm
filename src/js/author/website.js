@@ -1,27 +1,17 @@
-require('es6-promise').polyfill();
-const fetch = require('isomorphic-fetch');
-
-export function author_website(data) {
-  var website = data['website'];
+export function author_website(website) {
   if (website) {
     $(".website").css('display', 'block');
-    var url = 'https://us-east1-hackersandslackers-204807.cloudfunctions.net/linkpreview-endpoint?url=' + website;
-    var headers = {
-      "Content-Type": "application/json"
-    };
-    fetch(url, {
+    var endpoint_url = process.env.LINK_PREVIEW_ENDPOINT + '?url=' + website;
+
+    $.ajax({
       method: 'GET',
-      headers: headers
-    }).then((res) => {
-      return res.json()
-    }).then((json) => {
-      console.log(json);
-      $('.sidebar').append('<div class="widget website" style="order: 0;"> \n' +
-      '<div class="content"><h4 class="title">Website</h4>  \n' +
-      '<a href="' + json.url + '">  \n' +
-      '<div class="link-preview" style="background:url(' + json.image + ')"> \n' +
-      '<a href="' + json.url + '">' + json.title + '</a><i class="far d fa-link"></i> \n' +
-      '</div></a></div></div>');
+      url: endpoint_url,
+      dataType: 'json',
+      success: function(json) {
+        $('.previewimage').remove();
+        $('.widget.website').css('display', 'block');
+        $('.widget.website').append('<a href="' + json.url + '">  \n' + '<div class="link-preview" style="background:url(' + json.image + ')"> \n' + '<a href="' + json.url + '" class="link-name">' + json.title + '</a><i class="far d fa-link"></i> \n' + '</div></a>');
+      }
     });
   }
 }

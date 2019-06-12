@@ -10,15 +10,19 @@
 	}
 
 	&.home {
-		max-width: 100% !important;
+		max-width: unset;
+    width: 100%;
+		@media(max-width: 1000px) {
+			 max-width: 95%;
+		}
 	}
 
 	&.sidebar-layout {
 		display: grid;
 		grid-gap: 40px;
 		grid-template-columns: 316px 1fr;
-		@media(max-width: 950px) {
-			grid-gap: 20px;
+		@media(max-width: 1000px) {
+			grid-gap: 30px;
 		}
 		@media(max-width: @tablet-breakpoint) {
 			width: 100%;

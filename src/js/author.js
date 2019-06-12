@@ -17,13 +17,14 @@ function makeAuthorSidebar(data) {
   medium = medium.replace('"', '');
   medium = medium.replace('"', '');
   let website = JSON.stringify(data['website']);
-  website = github.replace('"', '');
-  website = github.replace('"', '');
-  website = 'https://' + website
-  console.log("website = " + website)
+  console.log('website = ' + website);
+  website = website.replace('"', '');
+  website = website.replace('"', '');
+  console.log("website = " + website);
   author_github(github);
-  author_medium(medium, medium_key);
   author_website(website);
+  // author_medium(medium, medium_key);
+
 }
 
 function who_is_current_author() {
@@ -35,15 +36,16 @@ function who_is_current_author() {
 
 function get_authors() {
   const slug = who_is_current_author();
-  mongodb_client.auth.loginWithCredential(new AnonymousCredential()).then(() =>
-    db.collection('authors').find(
-      { slug: slug }
-    ).asArray()
-    ).then(docs => {
-        makeAuthorSidebar(docs[0])
-    }).catch(err => {
-        console.error(err)
-    })
+  $.ajax({
+    method: 'GET',
+    url: process.env.AUTHORS_ENDPOINT + '?author=' + slug,
+    dataType: 'json',
+    success: function(response) {
+      var json = JSON.parse(response);
+      console.log(json);
+      makeAuthorSidebar(json);
+    }
+});
 }
 
 // Start Script

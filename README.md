@@ -20,7 +20,7 @@
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live implementation can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
-![Stockholm Theme](assets/images/stockholm4.jpg)
+![Stockholm Theme](assets/images/stockholm5.jpg)
 
 # About
 _Stockholm_ is amongst the most feature-rich Ghost themes currently available. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API; this enables a plethora of features and widgets previously unavailable to Ghost.  Example customizations include contextual widgets, additional social account support, JIRA project configuration, and unique page templates.
@@ -128,6 +128,6 @@ As always, remember to restart your Ghost instance when adding new themes.
 
 ### Integrations
 
-This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don't forget to include `.env` in `.gitignore`)! 
+This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don't forget to include `.env` in `.gitignore`)!
 
 Replace the values in this configuration file with your own. Additional details to be added here soon.
