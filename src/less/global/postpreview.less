@@ -2,17 +2,16 @@
 @import "mixin.less";
 
 .post-preview {
-	padding: 20px;
+	padding: 15px;
 	box-shadow: @shadow-color;
 	margin-bottom: 30px;
 	background: white;
-	transition: @transition;
 	order: 2;
 
 	&:hover {
-		margin-top: -5px;
+		/*margin-top: -5px;
 		margin-bottom: 45px;
-		box-shadow: 0 20px 20px rgba(65, 67, 144, 0.3) !important;
+		box-shadow: 0 20px 20px rgba(65, 67, 144, 0.3) !important;*/
 		cursor: pointer;
 	}
 	@media(max-width: 950px) {
@@ -127,14 +126,11 @@
 		margin: 0 0 15px;
 
 		.post-title {
-			font-size: 2em;
+			font-size: 1.9em;
 			Line-height: 1.15;
-			margin: 0 0 10px;
+			margin: 0 0 5px;
 			font-weight: 900;
 			font-family: @header-font-bold;
-			@media(max-width: 950px) {
-				font-size: 1.8em;
-			}
 			@media(max-width: @mobile-breakpoint) {
 				font-size: 1.5em;
 				margin: 5px 0;
@@ -162,11 +158,9 @@
 		}
 
 		.post-excerpt {
-			margin: 10px auto 0;
-			line-height: 1.21;
-			font-weight: 600;
-			text-align: left;
-			font-size: 1.1em;
+			margin: 5px auto 0;
+			line-height: 1.2;
+			font-size: 1.15em;
 			color: #153b52;
 			font-family: @header-font;
 			@media(max-width: @mobile-breakpoint) {
@@ -216,11 +210,8 @@
 	.meta {
 		display: flex;
 		align-items: center;
-		flex-direction: row;
 		font-family: @body-font;
-		width: 100%;
-		justify-content: space-between;
-		max-width: 420px;
+		justify-content: left;
 		@media(max-width:1000px) {
 			justify-content: left;
 		}
@@ -281,8 +272,9 @@
 			display: flex;
 			font-family: @body-font;
 			align-items: center;
-			font-size: 16px;
+			font-size: .8em;
 			padding: 0;
+			margin-right: 40px;
 			@media(max-width: 1000px) {
 				margin: auto 40px auto 0 !important;
 			}
@@ -297,7 +289,6 @@
 			}
 
 			&.tags {
-				padding: 10px;
 				font-weight: 600;
 				background: none !important;
 				display: flex;
@@ -311,11 +302,9 @@
 
 				span {
 					line-height: 1.2;
-					font-size: 13px;
 					font-family: @body-font-bold;
 					transition: @transition;
 					@media(max-width: @mobile-breakpoint) {
-						font-size: 13px;
 						font-weight: 100;
 					}
 
@@ -381,7 +370,6 @@
 			}
 
 			&.author {
-				font-size: 0.9em;
 
 				&:hover {
 					cursor: pointer;
@@ -432,9 +420,8 @@
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
-		padding: 15px 3px 0;
+		padding: 15px 0 0;
 		align-items: center;
-		border-top: 1px solid #e7e7e7;
 		transition: @transition;
 		@media(max-width: 950px) {
 			padding: 12px 0 0;

@@ -1,5 +1,5 @@
 .page-container {
-	max-width: 1050px;
+	max-width: 1000px;
 	margin: auto;
 	max-width: 95%;
 	@media(max-width: 1200px) {
@@ -9,10 +9,13 @@
 		max-width: none;
 	}
 
+	&.home {
+		max-width: 100% !important;
+	}
 
 	&.sidebar-layout {
 		display: grid;
-		grid-gap: 30px;
+		grid-gap: 40px;
 		grid-template-columns: 316px 1fr;
 		@media(max-width: 950px) {
 			grid-gap: 20px;

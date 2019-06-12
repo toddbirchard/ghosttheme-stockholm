@@ -7,10 +7,6 @@
   @media(max-width: @mobile-breakpoint) {
     margin: 0 !important;
   }
-
-  &:last-of-type .link-preview {
-    border-bottom: none;
-  }
 }
 
 /* Start Lynx Blurb */
@@ -26,7 +22,7 @@
   min-height: 35px;
   border-bottom: 0;
   border-left: 5px solid #c8dec8;
-  background: #e2f0e2;
+  background: #e9f3e9;
   border-radius: 5px;
   @media(max-width: @tablet-breakpoint) {
     margin: 30px 0 60px;
@@ -34,7 +30,7 @@
   }
   @media(max-width: @mobile-breakpoint) {
     padding: 15px 20px;
-    margin: 25px 0 30px;
+    margin: 25px 0;
     width: auto;
   }
 
@@ -78,33 +74,30 @@
 
 
 .link-preview {
-  padding: 30px 15px 15px;
+  padding: 20px;
   transition: @transition;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   display: block;
   overflow: hidden;
   width: -webkit-fill-available;
-  border-bottom: 1px solid #c6ced8;
+  background: #fbfbfb;
+  border: 1px solid #e7ebf0;
+  border-radius: 2px;
 
   @media(max-width: @tablet-breakpoint) {
-    width: 99%;
-    display: block;
+      display: block;
   }
   @media(max-width: @mobile-breakpoint) {
-    width: 100%;
-    padding: 0;
+    padding: 10px;
   }
 
   &:hover{
     cursor: pointer !important;
-  }
 
-  * {
-    &:hover {
-      cursor: pointer !important;
+    * {
+      color: white !important;
     }
   }
-
 
 
   .detail-stack {
@@ -112,6 +105,11 @@
     width: -webkit-fill-available;
     max-width: -webkit-fill-available;
     overflow: hidden;
+
+    .description {
+      margin: 10px 0 !important;
+      line-height: 1.5em !important;
+    }
   }
 
   .link-preview-image {
@@ -200,7 +198,7 @@
     position: relative;
 
     @media(max-width: @mobile-breakpoint) {
-      padding: 20px 10px;
+      padding: 0;
       display: block;
       margin-bottom: 0;
     }
@@ -244,7 +242,7 @@
     p {
       color: #505050;
       font-weight: 400;
-      line-height: 1.55!important;
+      line-height: 1.5 !important;
       margin-bottom: 10px;
       font-size: .9em;
       text-overflow: ellipsis;
@@ -263,12 +261,14 @@
         white-space: normal;
         height: fit-content;
         max-height: none;
+        line-height: 1.5;
       }
     }
   }
 
   &:hover {
-    background-color: #e3e9f3;
+    background-color: @hover-color;
+    border-color: @hover-color;
     cursor: pointer;
     text-decoration: none;
   }
