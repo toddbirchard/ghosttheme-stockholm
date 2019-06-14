@@ -23,7 +23,8 @@
         {{#if profile_image}}
           <a href="{{url}}" class="meta-item author"><img src="{{img_url profile_image}}" alt="{{name}} Author image" loading="lazy" class="lazy avi" data-rjs="2"><span>{{slug}}</span></a>
         {{else}}
-          <a href="{{url}}" class="meta-item author"><i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i><span>{{slug}}</span></a>
+          <i class="far fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
+          <span>{{slug}}</span></a>
         {{/if}}
       {{/primary_author}}
       <span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
