@@ -29,11 +29,7 @@
           {{#primary_author}}
             {{primary_author.bio}}
             <a href="{{url}}" class="meta-item author">
-              {{#if profile_image}}
-                <img src="{{img_url profile_image}}" alt="{{name}} avatar" loading="lazy" class="avi lazy">
-              {{else}}
-                <i class="far d fa-user" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
-              {{/if}}
+              <i class="far fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
               <span>{{name}}</span>
             </a>
           {{/primary_author}}

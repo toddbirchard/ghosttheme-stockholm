@@ -50,7 +50,7 @@
         font-size: 1em !important;
         @media(max-width: 500px) {
           font-weight: 500;
-          font-size: 1.3em!important;
+          font-size: 1.3em !important;
         }
       }
 
@@ -78,6 +78,9 @@
       height: 22px;
       display: inline-block;
       margin-right: 10px;
+      @media(max-width: @mobile-breakpoint) {
+        display: none;
+      }
     }
 
     span {
@@ -124,9 +127,6 @@
 
     &.desktop {
       display: flex;
-      @media(max-width: @mobile-breakpoint) {
-        display: none;
-      }
     }
 
     &.mobile {
