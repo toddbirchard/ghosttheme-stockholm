@@ -9,13 +9,9 @@
 
   .postlist {
     @media (max-width: 800px) {
-      width: 98%;
-      margin: 0 auto 20px;
-      padding: 0;
-    }
-    @media (max-width: 600px) {
       width: 100%;
       margin: 20px auto;
+      padding: 0;
     }
   }
 
@@ -155,6 +151,10 @@
     &:hover {
       cursor: pointer;
 
+      .imagewrapper {
+        box-shadow: 0 0 2px #1e5a6e;
+      }
+
       * {
         cursor: pointer;
       }
@@ -198,7 +198,7 @@
       padding: 5px 20px 0;
       position: relative;
       @media(max-width: @tablet-breakpoint) {
-        padding: 0 0 0 10px;
+        padding: 0 0 0 15px;
       }
 
       .meta {
@@ -286,7 +286,7 @@
         .meta-item {
           margin: auto 40px auto 0;
 
-          &:last-of-type {
+          &:last-child {
             margin: auto 0;
           }
 
@@ -346,9 +346,12 @@
       }
 
       img {
-        width: auto;
+        width: 250px;
         height: 115px;
         margin-bottom: -8px;
+        @media(max-width: @tablet-breakpoint) {
+          width: auto;
+        }
         @media(max-width: @mobile-breakpoint) {
           height: 100%;
         }

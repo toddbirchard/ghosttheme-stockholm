@@ -10,19 +10,19 @@
 			<div class="author">
 				<a href="{{url}}" class="name">{{name}}</a>
 			</div>
-			<div class="authormeta">
+			<div class="meta">
 				<span class="post-count"><i class="far d fa-pencil"></i><a href="{{url}}">{{#get "posts" include="count.posts"}}{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}{{/get}}</a></span>
 				{{#if location}}
-					<span class="location"><i class="far d fa-home"></i><span class="copy">{{location}}</span></span>
+					<span class="meta-item location"><i class="far d fa-home"></i><span class="copy">{{location}}</span></span>
 				{{/if}}
 				{{#if website}}
-					<span class="website"><a href="{{website}}" targer="_BLANK"><i class="far d fa-globe"></i><span class="copy">{{t "Website"}}</a></span></span>
+					<span class="meta-item website"><a href="{{website}}" targer="_BLANK"><i class="far d fa-globe"></i><span class="copy">{{t "Website"}}</a></span></span>
 				{{/if}}
 				{{#if twitter}}
-					<span class="twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i><span class="copy">{{twitter}}</a></span></span>
+					<span class="meta-item twitter"><a href="{{twitter_url}}"><i class="fab fa-twitter"></i><span class="copy">{{twitter}}</a></span></span>
 				{{/if}}
 				{{#if facebook}}
-					<span class="facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i>{{facebook}}</a></span>
+					<span class="meta-item facebook"><a href="{{facebook_url}}"><i class="fab fa-facebook"></i>{{facebook}}</a></span>
 				{{/if}}
 			</div>
 			{{#if bio}}
