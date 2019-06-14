@@ -45,6 +45,7 @@ blockquote pre {
       @media(max-width: @mobile-breakpoint) {
         overflow-y: hidden;
         line-height: 1.5;
+        white-space: pre-line;
       }
     }
 
@@ -185,10 +186,13 @@ blockquote pre {
     font-size: 10px !important;
     width: fit-content;
     min-width: 100%;
+    white-space: pre !important;
+    -webkit-text-size-adjust: none;
   }
 
   * {
     font-size: 10px !important;
+    -webkit-text-size-adjust: none;
   }
 }
 
