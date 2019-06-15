@@ -15,7 +15,7 @@
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c&logo=GitHub)
 [![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=88c0d0&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
+[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
 
 Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live implementation can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
