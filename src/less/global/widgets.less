@@ -43,7 +43,7 @@
 	.widget {
 		background: white;
 		padding: 20px;
-		box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+		box-shadow: @shadow-color;
 		transition: all 0.3s ease-out;
 
 		&:first-of-type {
@@ -136,7 +136,6 @@
 				width: -webkit-fill-available;
 				width: -moz-fill-available;
 				padding: 14px 15px;
-				border-radius: 3px;
 				background: #fff;
 				font-size: 13px;
 				letter-spacing: 1px;
@@ -693,7 +692,6 @@
 			border: 1px solid @border-color;
 			padding: 4px 9px 2px;
 			transition: 0.2s all ease-out;
-			border-radius: 2px;
 			margin-left: 10px;
 
 			&:hover {
