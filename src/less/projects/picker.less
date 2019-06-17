@@ -2,7 +2,7 @@
 
 .page-projects {
   .projectdropdown {
-    margin: 20px 20px 1em;
+    margin: 20px 0 1em;
     width: 100%;
     position: relative;
     height: 44px;
@@ -110,18 +110,11 @@
 
   .projects-dropdown:hover .dropdown-list {
     display: block;
-    @media(max-width: @mobile-breakpoint) {
-      display: block;
-      width: 90%;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
   }
 
   .projects-dropdown .dropdown-list {
     display: none;
-    position: relative;
+    position: absolute;
     z-index: 999;
     list-style: none;
     top: 35px;
@@ -136,6 +129,10 @@
 
     @media(max-width: 600px) {
       top: 35px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
 
     li {

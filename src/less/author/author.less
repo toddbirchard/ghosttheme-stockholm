@@ -2,6 +2,13 @@
 
 .author-template {
 	.cover {
+		@media(max-width: @mobile-breakpoint){
+			margin-left: calc(~"-50vw + 50%") !important;
+			margin-right: calc(~"-50vw + 50%") !important;
+			width: 110%;
+			margin-top: -21px;
+    	margin-bottom: 30px;
+		}
 		.avatar {
 			margin: 0 !important;
 			width: 85px;

@@ -10,7 +10,7 @@
   color: #5f5f5f;
   @media(max-width: @mobile-breakpoint) {
     width: auto !important;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
   }
 
   .author {
@@ -23,8 +23,11 @@
   .author-name {
     font-family: @body-font;
     font-size: 1.2em;
-    color: #326671;
+    color: @grey-header;
     margin-top: 2px;
+    @media(max-width: @mobile-breakpoint) {
+      font-size: 1.4em;
+    }
   }
 
   .meta-info {
@@ -104,7 +107,6 @@
     text-align: left;
 
     a {
-      color: #105a6d;
       font-family: @body-font;
 
       &:hover {
