@@ -85,14 +85,12 @@ function create_nextprev_widget(posts) {
     var prev = posts[index + 1];
     $('.prev-article').css('visibility', 'visible');
     $('.prev-article').find('h6').html(prev['title']);
-    $('.prev-article').find('p').html(prev['custom_excerpt']);
     $('.prev-article').attr('href', prev['url']);
   }
   if (index > 0) {
     var next = posts[index - 1];
     $('.next-article').css('visibility', 'visible');
     $('.next-article').find('h6').html(next['title']);
-    $('.next-article').find('p').html(next['custom_excerpt']);
     $('.next-article').attr('href', next['url']);
   }
 }
