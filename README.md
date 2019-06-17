@@ -17,14 +17,15 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/network)
 
-Stockholm is a (currently) free theme for the [Ghost](https://github.com/TryGhost) blogging platform. A live implementation can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
-
 ![Stockholm Theme](assets/images/stockholm5.jpg)
 
 # About
+
 _Stockholm_ is amongst the most feature-rich Ghost themes currently available. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API; this enables a plethora of features and widgets previously unavailable to Ghost.  Example customizations include contextual widgets, additional social account support, JIRA project configuration, and unique page templates.
 
 This project is in *active development*. All are welcome to use this theme while it is in process of being white labeled. Oddities will almost certainly exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
+
+A live implementation of this theme can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
 
 ## Features
 
