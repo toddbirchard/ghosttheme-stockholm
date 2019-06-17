@@ -19,8 +19,6 @@
 
 ![Stockholm Theme](assets/images/stockholm5.jpg)
 
-# About
-
 _Stockholm_ is amongst the most feature-rich Ghost themes currently available. With some configuration, users can extend the functionality of their theme by accessing data which would be otherwise inaccessible via the standard Ghost API; this enables a plethora of features and widgets previously unavailable to Ghost.  Example customizations include contextual widgets, additional social account support, JIRA project configuration, and unique page templates.
 
 This project is in *active development*. All are welcome to use this theme while it is in process of being white labeled. Oddities will almost certainly exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
@@ -124,7 +122,7 @@ $ npm install
 $ npm run build
 ```
 
-As always, remember to restart your Ghost instance when adding new themes.
+Remember to restart your Ghost instance when adding new themes.
 
 ### Integrations
 
