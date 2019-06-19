@@ -4,6 +4,13 @@
   margin-bottom: 0;
   font-weight: 500;
 
+  .page {
+    padding: 40px;
+    @media(max-width: @mobile-breakpoint) {
+      padding: 0 30px 30px;
+    }
+  }
+
   .about-content {
     margin-bottom: 40px !important;
   }
@@ -14,28 +21,21 @@
     flex-wrap: wrap;
     align-content: flex-start;
     flex-flow: row wrap;
-    margin: 0 40px 40px;
-    @media(max-width: 1040px) {
-      margin: 0 15px 10px;
-    }
-    @media(max-width: 900px) {
-      margin: 0 30px 30px;
-    }
 
     .author-card-small {
       width: 48.5%;
       margin: 0 0 15px;
+      @media(max-width: @mobile-breakpoint) {
+        width: 100%;
+      }
     }
   }
 
   figure {
-    margin: 0 40px 30px;
-    @media(max-width: 1100px) {
-      margin: -8px 20px 0;
-    }
-
-    @media(max-width: @tablet-breakpoint) {
-      margin: 0 0 20px;
+    margin: 0 0 30px;
+    overflow: hidden;
+    @media(max-width: @mobile-breakpoint) {
+      max-height: 312px;
     }
   }
 
@@ -45,26 +45,17 @@
   }
 
   .page-title {
-    margin: 40px 40px 10px !important;
-    font-weight: 500;
+    margin: 0 0 20px;
     @media(max-width: 1100px) {
-      font-size: 3em;
       display: none;
     }
   }
 
   .about-content {
-    & > p {
-      margin: 0 40px 20px !important;
-      font-weight: 300;
-      @media(max-width: 1050px) {
-        margin: 0 30px 20px !important;
-      }
-    }
     @media(max-width: @tablet-breakpoint) {
       display: flex;
       flex-direction: column;
-      margin: -14px 0 0 !important;
+      margin: -14px 0 20px !important;
     }
   }
 
@@ -74,11 +65,8 @@
 
   .welcomevideo,
   iframe {
-  height: 300px;
-  display: block;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    display: block;
+    position: relative;
     @media(max-width: @tablet-breakpoint) {
       height: 451px;
     }

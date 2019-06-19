@@ -5,10 +5,10 @@
   .postlist {
     width: 100%;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 90%;
-    margin: 30px auto;
+    margin: 0 auto 30px;
     @media(max-width: @tablet-breakpoint) {
         grid-template-columns: 1fr 1fr;
     }
@@ -19,11 +19,8 @@
 
     .post-preview {
       width: auto;
-      padding: 10px;
+      padding: 0;
       margin-bottom: 0;
-      @media(max-width: @tablet-breakpoint) {
-          padding: 10px;
-      }
 
       .post-title {
         font-size: 1.4em;
@@ -40,6 +37,10 @@
 
       .post-head .post-title {
         font-size: 1.3em;
+      }
+
+      .content {
+         padding: 0 15px 15px;
       }
 
       .btn {

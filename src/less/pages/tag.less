@@ -63,7 +63,7 @@
 
       .post-head {
         margin: 0;
-        min-height: 105px;
+        min-height: 100px;
         padding: 0 5px;
         @media(max-width: @mobile-breakpoint) {
           margin: 0 0 80px;
@@ -102,11 +102,19 @@
 
         .meta {
           justify-content: left;
+          padding: 0 5px;
+
+          .tags {
+            display: none;
+          }
+
+          .author {
+            display: none;
+          }
         }
 
         .btn {
-          padding: 12px 20px;
-          font-size: 16px;
+          padding: 12px 16px;
 
           a {
             line-height: 1;
@@ -121,12 +129,6 @@
             display: block !important;
           }
         }
-      }
-
-      .author,
-      .date,
-      p {
-        display: none !important;
       }
     }
   }
