@@ -35,7 +35,6 @@ blockquote pre {
       overflow-y: hidden;
       position: relative;
       transition: all 0.5s ease-out;
-      white-space: pre !important;
       padding: 20px;
       overflow-x: hidden;
       font-weight: 100;
@@ -43,6 +42,7 @@ blockquote pre {
       height: 100%;
       font-size: 0.85em;
       @media(max-width: @mobile-breakpoint) {
+        white-space: pre;
         overflow-y: hidden;
         line-height: 1.5;
         white-space: pre-line;
