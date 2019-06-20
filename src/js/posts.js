@@ -81,6 +81,9 @@ function create_nextprev_widget(posts) {
     return item.slug === post_slug;
   });
   index = index++;
+  if (numposts) {
+      $('.nextprev-container').css('display', 'block');
+  }
   if (index + 1 < numposts) {
     var prev = posts[index + 1];
     $('.prev-article').css('visibility', 'visible');
@@ -99,7 +102,7 @@ function populate_series_list(post) {
   $('#seriesposts h5').html(post['seriesname'].replace('#', ''));
   $('#seriesposts ol').append('<li class="' + post['slug'] + '"><a href="' + post['url'] + '">' + post['title'] + '</a></li>');
   $('#seriesposts').css('display', 'block');
-  $('.nextprev-container').css('display', 'block');
+  // $('.nextprev-container').css('display', 'block');
 }
 
 function posts_in_series(series, series_name) {
@@ -108,9 +111,7 @@ function posts_in_series(series, series_name) {
                           '&filter=tag:' +
                           series +
                           '&order_by=created_at.asc';
-  const headers = {
-    "Content-Type": "application/json"
-  };
+  const headers = { "Content-Type": "application/json" };
   $.ajax({
         method: 'GET',
         url: series_endpoint,
