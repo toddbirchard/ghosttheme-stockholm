@@ -10,11 +10,7 @@
 				<!-- start responsive image -->
 				{{#if feature_image}}
 					<div class="post-image">
-						<picture>
-							<source media="(min-width: 600px)" loading="lazy" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
-							<source media="(min-width: 1200px)" loading="lazy" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image}} 2x">
-							<img alt="{{title}}" class="lazy" loading="lazy" src="{{img_url feature_image}}">
-						</picture>
+						<img alt="{{title}}" class="featured-image lazyload" loading="lazy" src="{{img_url feature_image}}">
 					</div>
 				{{/if}}
 				<!-- end responsive image -->
