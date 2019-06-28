@@ -346,7 +346,7 @@
 			letter-spacing: 0;
 			font-size: 15px;
 			margin: 0;
-			font-family: @body-font-bold;
+			font-family: @bold-font;
 			display: flex;
 			align-items: center;
 			@media(max-width: 950px) {
@@ -458,11 +458,11 @@
 
 	.recent-single-post {
 		.post-title {
-			color: #455f6f;
+			color: lighten(@grey-header, 15%);
 			line-height: 1.2;
 			font-size: 15px;
 			margin: 0;
-			font-family: @body-font-bold;
+			font-family: @bold-font;
 			display: inline-block;
 
 			&:hover {
@@ -520,7 +520,7 @@
 		.post-title {
 			a {
 				color: #208cad;
-				font-family: @body-font-bold;
+				font-family: @bold-font;
 				transition: all 0.2s ease;
 
 				&:hover {
@@ -534,7 +534,7 @@
 			margin-bottom: 10px;
 			text-transform: uppercase;
 			font-size: 1.2em;
-			font-family: @body-font-bold;
+			font-family: @bold-font;
 			color: @grey-header;
 			font-weight: 500;
 		}
@@ -545,7 +545,7 @@
 			font-weight: 500;
 			margin-bottom: 8px;
 			text-transform: uppercase;
-			font-family: @body-font-bold;
+			font-family: @bold-font;
 			letter-spacing: 1px;
 			color: @grey-header;
 			margin-top: 0;
@@ -603,7 +603,7 @@
 
 				.post-title,
 				.single-author-name {
-					font-family: @body-font-bold;
+					font-family: @bold-font;
 					transition: all 0.2s ease;
 					line-height: 1.2;
 					.transition(all 0.2s ease);

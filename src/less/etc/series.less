@@ -48,7 +48,6 @@
     margin-bottom: 10px;
     max-width: -webkit-fill-available;
     @media(max-width:800px) {
-      height: fit-content;
       width: 100%;
     }
 
@@ -62,10 +61,20 @@
     }
   }
 
-  i {
-    height: 15px !important;
-    font-size: 15px !important;
+  .meta-item {
+    i {
+      height: 15px !important;
+      font-size: 15px !important;
+      color: @text-color;
+      margin-right: 10px;
+    }
+
+    span {
+      color: @text-color;
+    }
   }
+
+
 
   .fa-arrow-to-bottom {
     transition: @transition;
@@ -89,7 +98,7 @@
     display: flex;
     width: -webkit-fill-available;
     width: -moz-available;
-    height: 29px;
+    height: 26px;
     margin-bottom: 20px;
     background: #ffffff;
     box-shadow: @shadow-color;
@@ -140,7 +149,6 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    border-bottom: solid 1px #dadada;
     transition: @transition;
     overflow: hidden;
     @media(max-width: @mobile-breakpoint) {
@@ -164,10 +172,6 @@
       border-bottom: none;
     }
 
-    .imagewrapper {
-      box-shadow: 0 0 2px #c3cde8;
-    }
-
     .post-image {
       margin: 0;
       height: auto;
@@ -181,9 +185,9 @@
 
     .post-count {
       margin: 0 0 5px;
-      font-family: @body-font-bold;
+      font-family: @bold-font;
       font-weight: 100;
-      color: #407393;
+      color: lighten(@grey-header, 15%);
       font-size: 0.9em;
       line-height: 1;
     }
@@ -207,10 +211,6 @@
         align-items: center;
         position: absolute;
         bottom: 4px;
-
-        i {
-          margin-right: 5px;
-        }
 
         .info {
           display: none;
@@ -237,7 +237,7 @@
             font-family: @header-font;
             font-size: 1em;
             transition: @transition;
-            color: #334652;
+            color: @grey-header;
             @media(max-width: @mobile-breakpoint) {
               font-family: @header-font;
               font-size: 0.9em;
@@ -311,7 +311,7 @@
           border-radius: 2px;
 
           span {
-            font-family: @body-font-bold;
+            font-family: @bold-font;
             font-size: .9em !important;
           }
 

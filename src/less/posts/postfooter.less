@@ -51,10 +51,6 @@
 				background: @hover-color;
 				border: 1px solid @hover-color;
 				color: white !important;
-
-				* {
-					color: white !important;
-				}
 			}
 		}
 		@media(max-width: @tablet-breakpoint) {
@@ -96,6 +92,9 @@
 				}
 				@media(max-width: @mobile-breakpoint) {
 					border: none;
+					min-width: unset;
+					background: unset;
+					overflow: visible;
 				}
 
 				&:before {
@@ -122,57 +121,83 @@
 				&.facebook {
 					&:hover {
 						background-color: lighten(@facebook-color, 15%);
-						box-shadow: lighten(@facebook-color, 35%) !important;
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: lighten(@facebook-color, 15%);
+							}
+						}
 					}
 				}
 
 				&.twitter {
 					&:hover {
 						background-color: lighten(@twitter-color, 5%);
-						box-shadow: lighten(@twitter-color, 35%);
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: lighten(@twitter-color, 5%);
+							}
+						}
 					}
 				}
 
 				&.linkedin {
 					&:hover {
 						background-color: lighten(@linkedin-color, 5%);
-						box-shadow: lighten(@linkedin-color, 35%);
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: lighten(@linkedin-color, 5%);
+							}
+						}
 					}
 				}
 
 				&.devto {
 					&:hover {
 						background-color: black;
-						box-shadow: lighten(@linkedin-color, 35%);
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: black;
+							}
+						}
 					}
 				}
 
 				&.ycombinator {
 					&:hover {
 						background-color: lighten(@rss-color, 15%);
-						box-shadow: lighten(@rss-color, 35%);
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: lighten(@rss-color, 15%);
+							}
+						}
 					}
 				}
 
 				&.reddit {
 					&:hover {
 						background-color: lighten(@reddit-color, 15%);
-						box-shadow: lighten(@reddit-color, 35%);
 						cursor: pointer;
+						@media(max-width: @mobile-breakpoint) {
+							background-color: unset;
+							i {
+								color: lighten(@reddit-color, 15%);
+							}
+						}
 					}
 				}
 
 				&:hover {
 					border: none;
-
-					i {
-						color: white;
-					}
 				}
 
 				i {
@@ -187,8 +212,8 @@
 						padding-top: 3px;
 					}
 					@media(max-width: @mobile-breakpoint) {
-						font-size: 22px;
-						padding: 4px 0 0 4px;
+						font-size: 2em;
+						padding: 0;
 					}
 				}
 			}
@@ -197,8 +222,9 @@
 				border: 0;
 				line-height: 1.5em;
 				border-radius: 2px;
-				.transition(all 0.2s ease);
+				transition: @transition;
 				font-size: 0.9em;
+				overflow: visible;
 
 				&:hover {
 					color: white;
@@ -228,7 +254,7 @@
 
 	h4 {
 		margin: 0;
-		font-family: @body-font-bold;
+		font-family: @bold-font;
 		font-weight: 100;
 	}
 
@@ -296,7 +322,6 @@
 		font-size: 16px;
 		font-family: @body-font;
 	}
-
 	@media(max-width: @mobile-breakpoint) {
 		display: block;
 	}

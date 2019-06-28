@@ -1,6 +1,6 @@
-export function search() {
+export function initialize_search(ghostContentAPIKey) {
   let ghostSearch = new GhostSearch({
-    key: process.env.GHOST_CONTENT_API_KEY,
+    key: ghostContentAPIKey,
     host: 'https://hackersandslackers.com',
     input: '#my-custom-input',
     results: '#my-custom-results',

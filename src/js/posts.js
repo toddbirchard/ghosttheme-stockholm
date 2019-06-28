@@ -175,9 +175,9 @@ function create_series_widgets() {
 // Start Script
 // -------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-  code_snippet_full_screen();
+  // code_snippet_full_screen();
   scrollable_tables();
-  //scrollable_code();
+  // scrollable_code();
   enable_baguettebox();
   add_image_alt_tags();
   post_link_previews();

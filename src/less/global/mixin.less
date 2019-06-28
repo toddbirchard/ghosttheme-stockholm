@@ -37,6 +37,13 @@
 	filter: ~"alpha(opacity=(@{value-percentage}))";
 }
 
+.mobile-full-width() {
+	margin-left: calc(~"-50vw + 50%") !important;
+	margin-right: calc(~"-50vw + 50%") !important;
+	border-right: 0;
+	border-left: 0;
+}
+
 // retina.less
 // A helper mixin for applying high-resolution background images (http://www.retinajs.com)
 

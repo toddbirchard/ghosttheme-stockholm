@@ -1,5 +1,5 @@
-MEETUP_API_KEY=######################
-MEETUP_MEMBER_ID=########
+MEETUP_API_KEY=
+MEETUP_MEMBER_ID=
 MEDIUM_API_KEY=your-api-key
 GRAPHQL_API_ENDPOINT=https://example.com/yourgraphqlendpoint
 GRAPHQL_API_AUTH="Bearer Your.Graphql.Auth.Token"
@@ -7,3 +7,21 @@ MONGODB_STITCH_APP_ID='hackers-api-ltxuq'
 MONGODB_ATLAS_DB='hackers-api'
 GHOST_CONTENT_API_URL='https://example.com/ghost/api/v2/content/'
 GHOST_CONTENT_API_KEY='420e69a1738bhuvby8765urdryujkd'
+
+
+MEETUP_API_KEY = ######################
+MEETUP_MEMBER_ID = ########
+MEDIUM_API_KEY = ##################################################################
+
+RESOURCES_ENDPOINT = 'https://example.com'
+LINK_PREVIEW_ENDPOINT = 'https://example.com'
+AUTHORS_ENDPOINT = 'https://example.com'
+LINK_PREVIEW_ENDPOINT = 'https://example.com'
+
+LINKPREVIEW_URL = 'https://example.com'
+LINKPREVIEW_KEY = '############################################'
+
+GHOST_CONTENT_API_URL = 'https://yourdomain.example.com/ghost/api/v2/content/'
+GHOST_CONTENT_API_KEY = '######################'
+
+

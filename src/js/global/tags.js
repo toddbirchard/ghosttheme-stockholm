@@ -1,4 +1,4 @@
-export function tags() {
+export function load_tag_icons() {
   var tags = {
     nodejs: '<i class="fab fa-node-js"></i>',
     aws: '<i class="fab fa-aws"></i>',

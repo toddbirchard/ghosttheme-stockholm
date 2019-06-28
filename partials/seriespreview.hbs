@@ -10,7 +10,7 @@
   {{/if}}
   <div class="details">
     <div class="post-head">
-      <h3 class="post-count">Post {{@number}}</h3>
+      <span class="post-count">Post {{@number}}</span>
       <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
       <span class="post-excerpt">{{excerpt words="40"}}</span>
     </div>
@@ -20,10 +20,15 @@
       {{/primary_tag}}
       {{#primary_author}}
         {{primary_author.bio}}
-        <i class="far fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
-        <span>{{slug}}</span></a>
+        <a href="{{url}}" class="author meta-item">
+          <i class="far fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
+          <span>{{slug}}</span>
+        </a>
       {{/primary_author}}
-      <span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM DD"}}</span></span>
+      <span class="date meta-item">
+        <i class="far d fa-calendar"></i>
+        <span>{{date format="MMM DD"}}</span>
+      </span>
     </div>
   </div>
 </article>

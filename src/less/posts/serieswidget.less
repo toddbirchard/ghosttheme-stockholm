@@ -19,7 +19,7 @@
     display: none;
     font-size: 1.1em;
     color: #687f99 !important;
-    font-family: @body-font-bold;
+    font-family: @bold-font;
     letter-spacing: 1px;
     margin-bottom: 20px;
     padding: 0;
@@ -58,7 +58,7 @@
       }
 
       a {
-        font-family: 'TTNormsPro-Medium', sans-serif;
+        font-family: @bold-font;
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 100%;
@@ -86,7 +86,7 @@
       &::before {
         content: "Part " counter(li, upper-roman) "." !important;
         color: #687f99;
-        font-family: 'TTNormsPro-Medium', sans-serif !important;
+        font-family: @bold-font !important;
         margin-right: 8px;
         font-size: 13px;
         white-space: nowrap;
@@ -101,7 +101,7 @@
       a {
         color: #687f99;
         @media(max-width: @mobile-breakpoint) {
-          font-family: 'TTNormsPro-Medium', sans-serif;
+          font-family: @bold-font;
           font-size: 0.9em;
         }
       }
@@ -111,12 +111,12 @@
   .currentPost {
     opacity: 1 !important;
     margin-left: 0;
-    font-family: @body-font-bold !important;
+    font-family: @bold-font !important;
     font-size: 0.95em !important;
 
     &::before {
       margin-left: 0;
-      font-family: @body-font-bold !important;
+      font-family: @bold-font !important;
     }
   }
 }

@@ -1,12 +1,15 @@
 import '../less/global.less';
-import {search} from './global/search.js';
-import {series_icons} from './global/seriesicons.js';
-import {tags} from './global/tags.js';
+import {initialize_search} from './global/search.js';
+import {load_series_icons} from './global/seriesicons.js';
+import {load_tag_icons} from './global/tags.js';
 import {order_hack} from './global/post_order_hack.js';
 
 /*===========================
  1. Function Declaration
  ==========================*/
+
+
+ let ghostContentAPIKey = process.env.GHOST_CONTENT_API_KEY;
 
   function fallback_images() {
     var images = $('picture');
@@ -23,8 +26,7 @@ import {order_hack} from './global/post_order_hack.js';
     });
   }
 
-  function retina() {
-    // Order matters!!
+  function retina_images() {
     $('img').attr('data-rjs', 2);
     Retina();
   }
@@ -34,9 +36,9 @@ import {order_hack} from './global/post_order_hack.js';
 =========================== */
 $(document).ready(function() {
   //fallback_images();
-  retina();
-  tags();
-  series_icons();
-  search();
+  retina_images();
+  load_tag_icons();
+  load_series_icons();
+  initialize_search(ghostContentAPIKey);
   order_hack();
 });

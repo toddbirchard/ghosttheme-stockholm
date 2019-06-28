@@ -149,7 +149,7 @@
 					line-height: 1.2;
 					color: @grey-header;
 					margin: 40px 0 5px;
-					font-family: @body-font-bold;
+					font-family: @bold-font;
 					font-weight: 300;
 					@media(max-width: @tablet-breakpoint) {
 						font-size: 1.3em;
@@ -182,10 +182,10 @@
 				a {
 					color: @theme-color;
 					transition: @transition;
-					font-family: @body-font-bold;
+					font-family: @bold-font;
 					@media(max-width: @mobile-breakpoint) {
 						white-space: nowrap;
-						font-family: @body-font-bold;
+						font-family: @bold-font;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						max-width: 90%;
@@ -295,8 +295,7 @@
 			    border-radius: 3px;
 			    overflow: hidden;
 			    @media(max-width: @mobile-breakpoint) {
-			      margin-left: calc(~"-50vw + 50%") !important;
-			      margin-right: calc(~"-50vw + 50%") !important;
+			      .mobile-full-width();
 			      width: auto !important;
 			      max-width: none;
 			      margin-top: 25px;
@@ -343,12 +342,11 @@
 			      line-height: 1.5;
 			      border-top: 1px solid #e0e1e4;
 			      @media(max-width: @mobile-breakpoint) {
+							.mobile-full-width();
 			        display: block;
 			        width: auto !important;
 			        height: auto;
 			        margin-top: 5px;
-			        margin-right: calc(-50vw + 50%) !important;
-			        margin-left: calc(-50vw + 50%) !important;
 			        padding: 10px 25px !important;
 			        line-height: 1.4 !important;
 			      }
@@ -415,8 +413,6 @@
 						}
 					}
 
-
-
 					code {
 						border-radius: 3px;
 						white-space: normal;
@@ -480,7 +476,7 @@
 					}
 
 					* {
-						font-family: @body-font-bold;
+						font-family: @bold-font;
 						font-style: italic;
 						font-weight: 100;
 						line-height: 1.6;
@@ -562,8 +558,6 @@
 				line-height: 1.4;
 				text-align: right;
 			}
-
-
 
 			.handscroller {
 				&:hover {
