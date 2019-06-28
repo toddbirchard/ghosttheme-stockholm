@@ -1,1 +1,1 @@
-import '../less/transactional.less';
+import '../less/transactional.less'

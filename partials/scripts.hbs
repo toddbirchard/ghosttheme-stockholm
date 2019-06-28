@@ -1,27 +1,9 @@
 <!-- Start Scripts -->
 <script src="{{asset "js/critical.js"}}"></script>
 <script src="{{asset "js/includes/retina.min.js"}}"></script>
-<!--<script src="{{asset "js/includes/picturefill.min.js"}}"></script>-->
-<script async src="{{asset "js/includes/ghost-search.min.js"}}"></script>
+<script src="{{asset "js/includes/ghost-search.min.js"}}"></script>
 <script async src="{{asset "js/global.js"}}"></script>
-<noscript id="deferred-styles">
-  <script src="https://kit.fontawesome.com/dfcb2a8218.js"></script>
-</noscript>
-<script>
-  const loadDeferredStyles = function() {
-    const addStylesNode = document.getElementById("deferred-styles");
-    const replacement = document.createElement("div");
-    replacement.innerHTML = addStylesNode.textContent;
-    document.body.appendChild(replacement);
-    addStylesNode.parentElement.removeChild(addStylesNode);
-  };
-  const raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-  if (raf) raf(function() {
-    window.setTimeout(loadDeferredStyles, 0);
-  });
-  else window.addEventListener('load', loadDeferredStyles);
-</script>
+<script src="https://kit.fontawesome.com/dfcb2a8218.js"></script>
 {{^is "post,home"}}
   <script async src="{{asset "js/pages.js"}}"></script>
   {{/is}}
