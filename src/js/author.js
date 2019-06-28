@@ -4,12 +4,12 @@ import { author_github } from './author/github.js';
 import { post_link_previews } from './global/previews.js';
 import { author_website } from './author/website.js';
 import { author_medium } from './author/medium.js';
+import { author_twitter } from './author/twitter.js';
 // import author_meetup from '../src/js/author/meetup.js';
 
 // Functions
 // -------------------------------------------
 function makeAuthorSidebar(data) {
-  const medium_key = process.env.MEDIUM_API_KEY;
   let github = JSON.stringify(data['github']);
   github = github.replace('"', '');
   github = github.replace('"', '');
@@ -19,9 +19,16 @@ function makeAuthorSidebar(data) {
   let website = JSON.stringify(data['website']);
   website = website.replace('"', '');
   website = website.replace('"', '');
+  let twitter = JSON.stringify(data['twitter']);
+  twitter = twitter.replace('"', '');
+  twitter = twitter.replace('"', '');
+  console.log('MEDIUM = ' + medium);
+  console.log('twitter = ' + twitter);
+  console.log('website = ' + website);
   author_github(github);
   author_website(website);
-  // author_medium(medium, medium_key);
+  author_twitter(twitter);
+  author_medium(medium);
 
 }
 
