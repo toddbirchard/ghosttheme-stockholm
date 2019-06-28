@@ -1,4 +1,5 @@
 import '../less/global.less';
+import 'lazysizes';
 import {initialize_search} from './global/search.js';
 import {load_series_icons} from './global/seriesicons.js';
 import {load_tag_icons} from './global/tags.js';

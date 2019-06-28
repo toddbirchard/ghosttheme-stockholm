@@ -14,4 +14,30 @@
   section {
     height: 600px;
   }
+
+  .main-content {
+    padding: 20px 30px;
+
+    button {
+      background: @button-color;
+      padding: 13px 20px;
+      font-size: 16px;
+      color: white;
+      border: 0;
+      text-transform: Uppercase;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      margin-top: 3px;
+
+      span {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background: @hover-color;
+        cursor: pointer;
+      }
+    }
+  }
 }
