@@ -1,0 +1,82 @@
+.sidebar {
+  .social-btns {
+    padding: 0;
+    display: flex;
+    margin: 0 !important;
+    justify-content: space-between;
+
+    .btn {
+      align-items: center;
+      justify-content: space-around;
+      display: inline-flex;
+      background-color: #fff;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0 3px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #efefef;
+      opacity: 0.99;
+      padding: 0;
+      @media(max-width: 950px) {
+        box-shadow: none;
+      }
+    }
+
+    .fab,
+    i {
+      margin: 0 !important;
+    }
+    @media (max-width: 1000px) {
+      a {
+        font-size: 12px !important;
+      }
+
+      li {
+        border: 0 !important;
+        padding: 0 !important;
+      }
+
+      .fab,
+      i {
+        font-size: 16px;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .share {
+    .share-icons {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        border: 1px solid @border-color;
+        padding: 4px 9px 2px;
+        transition: 0.2s all ease-out;
+        margin-left: 10px;
+
+        &:hover {
+          color: white;
+          background: @theme-color;
+
+          a {
+            color: white;
+          }
+        }
+
+        a {
+          color: #c4c4c4;
+          text-align: center;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

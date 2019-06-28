@@ -1,0 +1,142 @@
+#newsletter-sidebar {
+  .newsletter {
+    width: 100%;
+    padding-top: 0 !important;
+  }
+
+  .newsletter-form {
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+
+    input[type="text"],
+    input[type="email"] {
+      border: 1px solid #d5dbe6 !important;
+      width: -webkit-fill-available;
+      width: -moz-fill-available;
+      padding: 14px 15px;
+      background: #fff;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      border: 1px solid #d5dbe6;
+      transition: all 0.3s all;
+      margin-bottom: 10px;
+
+      &::placeholder {
+        opacity: 1;
+        color: #828294;
+      }
+
+      &:hover {
+        background: rgba(64, 206, 199, 0.16) !important;
+        border-color: #82d3d0 !important;
+        cursor: text !important;
+
+        &::placeholder {
+          color: #72859d !important;
+        }
+      }
+
+      &:focus {
+        background: white !important;
+      }
+    }
+
+    input[type=email] {
+      &:after {
+        content: '\f0e0';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 100;
+        display: inline-block;
+        font-style: normal;
+        -webkit-font-feature-settings: normal;
+        font-feature-settings: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        right: 17px;
+        top: 23px;
+        position: absolute;
+        color: #9aa1bd;
+        font-size: 1.1em;
+      }
+    }
+
+    input[name=name] {
+      &::placeholder {
+        opacity: 0.8;
+        color: #828294;
+      }
+
+      &:hover {
+        background: rgba(64, 206, 199, 0.16) !important;
+        border-color: #82d3d0 !important;
+        cursor: text !important;
+
+        &::placeholder {
+          color: #72859d !important;
+        }
+
+        &::after {
+          color: #8aafb8 !important;
+        }
+      }
+
+      &:after {
+        content: '\f0e0';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 100;
+        display: inline-block;
+        font-style: normal;
+        -webkit-font-feature-settings: normal;
+        font-feature-settings: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        right: 17px;
+        top: 11px;
+        position: absolute;
+        color: #9aa1bd;
+        font-size: 1.1em;
+      }
+    }
+
+    button {
+      width: -webkit-fill-available !important;
+      width: -moz-available !important;
+      background: @button-color;
+      padding: 13px 20px;
+      font-size: 16px;
+      color: white;
+      border: 0;
+      text-transform: Uppercase;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      margin-top: 3px;
+
+      span {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background: @hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .newsletter-description {
+    margin: 15px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    font-family: @body-font;
+    font-weight: 300;
+  }
+
+  .country {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}

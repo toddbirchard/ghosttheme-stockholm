@@ -1,0 +1,35 @@
+.tag-cloud {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  a {
+    color: #7591a9;
+    line-height: 1.5em;
+    display: inline-block;
+    font-size: 0.8em !important;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-family: @body-font;
+    font-weight: 300;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 2px 4px;
+    padding: 7px 12px;
+    border: 1px solid rgba(220, 228, 238, 0.79);
+    @media(max-width: 1000px) {
+      font-size: 0.77em !important;
+      margin: 0 2px 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: @hover-color;
+      border: 1px solid @hover-color;
+      color: white;
+    }
+  }
+}
