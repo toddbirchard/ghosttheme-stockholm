@@ -38,7 +38,7 @@ import {order_hack} from './global/post_order_hack.js';
 $(document).ready(function() {
   //fallback_images();
   retina_images();
-  load_tag_icons();
+  // load_tag_icons();
   load_series_icons();
   initialize_search(ghostContentAPIKey);
   order_hack();

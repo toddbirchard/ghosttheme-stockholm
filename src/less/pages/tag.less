@@ -35,10 +35,12 @@
         }
       }
 
-      .post-content {
-        @media(max-width: @mobile-breakpoint) {
+      .preview-content {
           display: none;
-        }
+      }
+      
+      .read-link {
+        display: none;
       }
     }
 
@@ -63,10 +65,7 @@
 
       .post-head {
         margin: 0;
-        min-height: 100px;
-        padding: 0 5px;
         @media(max-width: @mobile-breakpoint) {
-          margin: 0 0 50px;
           min-height: unset;
         }
       }
@@ -88,10 +87,6 @@
         margin: 0 auto;
         background-size: cover;
         width: 100%;
-      }
-
-      .post-excerpt {
-        display: none;
       }
 
       .post-permalink {

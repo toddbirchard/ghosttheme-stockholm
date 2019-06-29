@@ -1,13 +1,7 @@
-.post-header {
-  padding: 0 0 20px;
-  margin: 0;
-  box-shadow: unset !important;
-  @media(max-width: @mobile-breakpoint) {
-    padding: 0;
-  }
+
 
   .post-meta {
-    margin: 5px 0 0;
+    margin: 5px 0 10px;
     color: lighten(@text-color, 10%);
     font-size: 12px;
     display: flex;
@@ -39,24 +33,10 @@
     }
 
     .tags {
-      height: 30px !important;
-      padding: 0;
-
-      i {
-        font-size: 1em !important;
-        @media(max-width: 500px) {
-          font-weight: 500;
-          font-size: 1.3em !important;
-        }
-      }
-
-      span {
-        font-size: 0.9em;
-        font-family: @bold-font;
-        @media(max-width: @tablet-breakpoint) {
-          font-size: 0.85em;
-        }
-      }
+      padding: 5px 10px;
+      border-radius: 3px;
+      color: white;
+      font-size: .95em;
 
       &.codesnippetcorner {
         i {
@@ -69,15 +49,6 @@
   }
 
   .author {
-    .avi {
-      width: 22px;
-      height: 22px;
-      display: inline-block;
-      margin-right: 10px;
-      @media(max-width: @mobile-breakpoint) {
-        display: none;
-      }
-    }
 
     span {
       text-transform: capitalize;
@@ -158,4 +129,3 @@
       margin: 0;
     }
   }
-}
