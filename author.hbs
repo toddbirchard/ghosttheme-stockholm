@@ -3,10 +3,7 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="page-container sidebar-layout">
-		{{! insert sidebar partial}}
-		{{#author}}
-			{{> author/author-sidebar}}
-		{{/author}}
+
 		<!-- start main post area -->
 		<main class="postlist">
 			{{#author}}
@@ -16,6 +13,10 @@
 			{{pagination}}
 		</main>
 		<!-- end main post area -->
+		{{! insert sidebar partial}}
+		{{#author}}
+			{{> author/author-sidebar}}
+		{{/author}}
 	</div>
 </section>
 {{#contentFor "scripts"}}

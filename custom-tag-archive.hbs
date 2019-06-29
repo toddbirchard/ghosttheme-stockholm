@@ -3,7 +3,6 @@
 <!-- start site's main content area -->
 <section class="content-wrap archive">
 	<div class="page-container sidebar-layout">
-		{{> sidebar}}
 		<div class="main-content">
 			<!-- start post -->
 			{{#post}}
@@ -33,11 +32,13 @@
 									</a>
 								</div>
 							{{/foreach}}
-							
+
 						{{/get}}
 					</main>
 				</section>
 		</div>
+		{{> sidebar}}
+
 	</div>
 </section>
 {{/post}}

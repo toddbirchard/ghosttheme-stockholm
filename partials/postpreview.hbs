@@ -1,42 +1,32 @@
 <!-- Start Post Preview -->
 <article class="post-preview {{#primary_author}}{{slug}}{{/primary_author}}">
-  <a href="{{url}}" class="post-image">
-    {{#if featured}}
-      <div class="featured">
-        <i class="far fa-star"></i>
-      </div>
-    {{/if}}
+
+  <div class="post-preview-side">
+    {{#primary_tag}}
+    <span class="primary-tag {{slug}}">
+        {{name}}
+    </span>
+    {{/primary_tag}}
+  </div>
+
+
+  <div class="post-preview-body">
+    <div class="post-head">
+      <span class="date">{{date published_at format="DD MMM YYYY"}}</span>
+      <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
+      <span class="post-excerpt">{{excerpt words="60"}}</span>
+    </div>
 
     {{#if feature_image}}
-      <img class="featured-image lazyload" alt="{{title}}" loading="lazy" src="{{img_url feature_image}}" data-rjs="2">
+      {{^has tag="roundup"}}
+        <a href="{{url}}" class="post-image">
+          <img class="featured-image lazyload" alt="{{title}}" loading="lazy" src="{{img_url feature_image}}" data-rjs="2">
+        </a>
+        {{/has}}
     {{/if}}
+    <div class="preview-content">{{content words=100}}</div>
+    <a href="{{url}}" class="read-link">{{t "Continue Reading"}}</a>
+  </div>
 
-    <div class="content">
-      <div class="post-head">
-        <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
-        <h3 class="post-excerpt">{{excerpt words="60"}}</h3>
-      </div>
-
-      <div class="post-permalink">
-        <div class="meta">
-          {{#primary_tag}}
-            <a href="{{url}}" class="tags meta-item {{slug}}"><i class="far d fa-tags"></i> <span>{{name}}</span></a>
-          {{/primary_tag}}
-          {{#primary_author}}
-            {{primary_author.bio}}
-            <a href="{{url}}" class="meta-item author">
-              <i class="far fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
-              <span>{{name}}</span>
-            </a>
-          {{/primary_author}}
-          <span class="date meta-item">
-            <i class="far d fa-calendar"></i>
-            <span>{{date published_at format="MMM DD"}}</span>
-          </span>
-        </div>
-        <a href="{{url}}" class="btn btn-default">{{t "Continue Reading"}}</a>
-      </div>
-    </div>
-  </a>
 </article>
 <!-- End Post Preview -->

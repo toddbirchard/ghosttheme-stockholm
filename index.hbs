@@ -4,8 +4,7 @@
 <section class="content-wrap">
 	<div class="page-container home sidebar-layout">
 		<!-- end main post area -->
-		{{! insert sidebar partial}}
-		{{> sidebar}}
+
 		<!-- start main post area -->
 			{{#is "tag"}}
 				{{> cover-tag}}
@@ -16,6 +15,8 @@
 					{{pagination}}
 				{{/is}}
 			</main>
+			{{! insert sidebar partial}}
+			{{> sidebar}}
 	</div>
 </section>
 <!-- end site's main content area -->

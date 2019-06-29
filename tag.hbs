@@ -3,8 +3,6 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="page-container sidebar-layout">
-		{{! insert sidebar partial}}
-		{{> sidebar}}
 		<!-- start main post area -->
 		<main class="main-content">
 			{{> cover-tag}}
@@ -14,6 +12,8 @@
 			{{pagination}}
 		</main>
 		<!-- end main post area -->
+		{{! insert sidebar partial}}
+		{{> sidebar}}
 	</div>
 </section>
 <!-- end site's main content area -->

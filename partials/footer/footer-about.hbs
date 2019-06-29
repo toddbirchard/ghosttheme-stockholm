@@ -2,7 +2,7 @@
 <div class="widget about">
   {{#if @site.logo}}
     <a class="logo"href="{{@site.url}}/">
-      <img src="https://hackers.nyc3.cdn.digitaloceanspaces.com/img/footerlogo.png" alt="{{@site.title}}" data-rjs="2">
+      <img src="{{@site.logo}}" alt="{{@site.title}}" data-rjs="2">
     </a>
   {{/if}}
   <p class="description">{{@site.description}}</p>
@@ -14,5 +14,6 @@
     <a class="btn github" href="https://github.com/hackersandslackers/"><i class="fab fa-github"></i></a>
     <a class="btn rss" href="{{@site.url}}/rss/"><i class="far d fa-rss"></i></a>
   </div>
+  	<p class="copyright">{{t "Copyright"}}</p>
 </div>
 <!-- End About Widget -->

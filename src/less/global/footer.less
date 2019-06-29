@@ -4,10 +4,10 @@
 	footer
 ====================================================*/
 .main-footer {
-	background: #191a1d !important;
+	background: #fff !important;
 	background-size: cover;
 	padding: 35px 8%;
-	color: #fff;
+	color: @text-color;
 	@media(max-width: 1000px) {
 		padding: 30px 40px;
 	}
@@ -19,12 +19,9 @@
 		display: block;
 		padding: 50px;
 	}
-	@media(max-width: 500px) {
-		padding: 40px;
-	}
 
 	.footer-title {
-		color: #fff;
+		color: @text-color;
 		font-weight: 800;
 		font-size: 1.1em;
 		font-family: @header-font-bold;
@@ -34,7 +31,7 @@
 		line-height: 1;
 		margin: 0 0 20px;
 		@media(max-width: @tablet-breakpoint) {
-			 margin: 0 0 5px !important;
+			margin: 0 0 5px !important;
 		}
 	}
 
@@ -79,7 +76,7 @@
 				}
 
 				a {
-					color: #fff;
+					color: #738a94;
 					font-family: @body-font;
 					font-weight: 300;
 				}
@@ -139,7 +136,7 @@
 	}
 
 	.description {
-		color: white;
+		color: @text-color;
 		width: 100%;
 		font-family: @body-font;
 		font-weight: 100;
@@ -148,7 +145,7 @@
 		margin: 15px 0 25px;
 		@media(max-width: @mobile-breakpoint) {
 			margin: 15px 0 20px;
-			font-size: .95em;
+			font-size: 0.95em;
 		}
 	}
 
@@ -156,11 +153,12 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 20px;
 
 		i {
 			font-size: 20px;
 			mix-blend-mode: hard-light;
-			color:white;
+			color: @text-color;
 			@media(max-width: @mobile-breakpoint) {
 				font-size: 25px;
 			}
@@ -207,7 +205,7 @@
 				cursor: pointer;
 
 				* {
-					color: white;
+					color: @hover-color;
 				}
 			}
 		}
@@ -241,16 +239,10 @@
 }
 
 .copyright {
-	width: 100%;
-	background: #141516;
-	text-align: center;
-	padding: 25px 0;
-
-	p {
-		line-height: 1.5;
-		font-size: 0.85em;
-		font-family: @body-font;
-		color: white !important;
-		margin: 0 !important;
-	}
+	margin-top: 20px;
+	display: block;
+	font-size: 0.85em;
+	font-family: @body-font;
+	color: #738a94 !important;
+	margin: 0 !important;
 }

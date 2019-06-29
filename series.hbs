@@ -3,9 +3,6 @@
 <!-- start site's main content area -->
 <section class="content-wrap series-template {{body_class}}">
 	<div class="page-container sidebar-layout">
-		<!-- end main post area -->
-		{{! insert sidebar partial}}
-		{{> sidebar}}
 		<!-- start main post area -->
 		<div class="main-content">
 			<div class="postlist">
@@ -24,6 +21,8 @@
 				</main>
 			</div>
 		</div>
+		{{! insert sidebar partial}}
+		{{> sidebar}}
 	</div>
 </section>
 {{#contentFor "scripts"}}

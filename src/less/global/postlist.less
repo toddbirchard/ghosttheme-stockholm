@@ -2,15 +2,18 @@
 @import "mixin.less";
 
 .postlist {
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #e5eff5;
   @media(max-width: @tablet-breakpoint) {
-    padding: 0;
-    margin: 30px auto;
-    width: 92%;
+    margin: 0 auto 20px;
+    width: -webkit-fill-available;
+    width: moz-available;
+    max-width: 84%;
   }
-
   @media(max-width: @mobile-breakpoint) {
-    margin: 20px auto;
-    width: 90%;
+    max-width: 80%;
   }
 
   .post-preview {
@@ -24,11 +27,9 @@
 
 .home-template .postlist {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 40px;
   grid-template-columns: 1fr;
-  @media(max-width: 950px) {
-    grid-gap: 20px;
-  }
+
 
   .post-preview {
     margin: 0;
