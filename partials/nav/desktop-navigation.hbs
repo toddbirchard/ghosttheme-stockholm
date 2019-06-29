@@ -1,6 +1,7 @@
 <!-- Start Desktop Nav -->
 <div class="desktop-navigation">
-  <div class="dropdown">
+
+  <div class="dropdown posts">
     <a href="{{@site.url}}/archive/"><button class="dropdown">Posts</button></a>
     <div class="dropdown-content">
       {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
@@ -10,7 +11,8 @@
       {{/get}}
     </div>
   </div>
-  <div class="dropdown">
+
+  <div class="dropdown pages">
     <button class="dropdown">Pages</button>
     <div class="dropdown-content">
       <a href="{{@site.url}}/about/">About Us</a>
@@ -20,7 +22,8 @@
       <a href="{{@site.url}}/become-a-contributor/">Join The Club</a>
     </div>
   </div>
-  <div class="dropdown">
+
+  <div class="dropdown authors">
     <a href="{{@site.url}}/about/"><button class="dropdown">Authors</button></a>
     <div class="dropdown-content">
       {{#get "authors" include="count.posts"}}
@@ -30,7 +33,8 @@
       {{/get}}
     </div>
   </div>
-  <div class="dropdown">
+
+  <div class="dropdown publications">
     <a href="{{@site.url}}/series/"><button class="dropdown">Series'</button></a>
     <div class="dropdown-content">
       {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
