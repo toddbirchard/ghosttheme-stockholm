@@ -1,0 +1,63 @@
+.featured-post-preview {
+  overflow: hidden;
+  padding: 0 !important;
+
+  .post-image {
+    width: 100%;
+    transition: @transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .featured-image {
+      width: 100%;
+    }
+  }
+
+  .post-preview-content {
+    padding: 5px 25px 25px;
+
+    .label {
+      color: #738a94;
+      font-family: 'TTNormsPro-Regular', sans-serif;
+      margin: 5px 0;
+    }
+
+    .post-title {
+      font-size: 1.35em;
+      Line-height: 1.15;
+      font-family: 'TTNormsPro-Regular', sans-serif;
+      margin: 10px 0;
+      color: #2f394f;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        color: @hover-color;
+      }
+    }
+
+    .post-excerpt {
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: none;
+      }
+
+      .read-time {
+        color: #738a94;
+      }
+    }
+  }
+}

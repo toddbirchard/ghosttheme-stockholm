@@ -64,12 +64,12 @@
     i {
       height: 15px !important;
       font-size: 15px !important;
-      color: @text-color;
+      color: #738a94;
       margin-right: 10px;
     }
 
     span {
-      color: @text-color;
+      color: #738a94;
     }
   }
 
@@ -115,7 +115,7 @@
       background: @hover-color;
 
       * {
-        color: white;
+        color: white !important;
         cursor: pointer;
       }
     }
@@ -137,9 +137,14 @@
 
       span {
         font-family: @body-font;
+        color: #738a94;
         @media(max-width: @tablet-breakpoint) {
           font-size: 16px;
         }
+      }
+
+      i {
+        color: #738a94;
       }
     }
   }
@@ -301,13 +306,13 @@
 
         .date{
           * {
-            color: #565771;
+            color: #738a94;
           }
         }
 
         .tags {
           padding: 2px 8px;
-          border-radius: 2px;
+          border-radius: 12px;
           font-family: @bold-font;
           font-size: .9em !important;
           color: white !important;
@@ -322,7 +327,7 @@
 
           span {
             text-transform: capitalize;
-            color: #565771;
+            color: #738a94;
           }
         }
       }

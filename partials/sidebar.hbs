@@ -3,25 +3,19 @@
 	{{#is "home,paged"}}
 		{{> widgets/widget-text}}
 	{{/is}}
-	{{#is "author"}}
-		{{> widgets/widget-authorwebsite}}
-		{{> widgets/widget-upcoming}}
-		{{> widgets/widget-authortwitter}}
-	{{/is}}
 	{{#is "post"}}
 		{{> widgets/widget-author}}
 	{{/is}}
-	{{^is "author"}}
-		{{> widgets/widget-social}}
-		{{> widgets/widget-sidebartag}}
-		{{> widgets/widget-newsletter}}
-	{{/is}}
+	{{> widgets/widget-social}}
+	{{> widgets/widget-sidebartag}}
+	{{> widgets/widget-featured}}
+	{{> widgets/widget-newsletter}}
 	{{#is "home"}}
 		{{> widgets/widget-series}}
 	{{else}}
 		{{> widgets/widget-recentpost}}
 	{{/is}}
-	{{#is "home,author"}}
+	{{#is "home"}}
 		{{> widgets/widget-twitter}}
 	{{/is}}
 </aside>

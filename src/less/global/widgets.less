@@ -1,41 +1,42 @@
 @import "variables.less";
 @import "mixin.less";
-
-
-
 /*====================================================
 	sidebar
 ====================================================*/
 .sidebar {
-
 	.widget {
 		padding: 25px;
 		background: #fff 50%;
 		background-size: cover;
 		border-radius: 5px;
 		box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-		transition: all .5s ease;
+		transition: all 0.5s ease;
 
 		&:first-of-type {
 			margin-right: 0;
 		}
 
 		&.text {
-
 			a {
 				transition: @transition;
+
 				&:hover {
-					opacity: 7;
+					opacity: 0.7;
 				}
 			}
 
 			.logo {
+				transition: @transition;
 				width: 80%;
-		    margin: 0 auto 20px;
-		    display: block;
+				margin: 0 auto 10px;
+				display: block;
 
 				&:hover {
-					opacity: 7;
+					opacity: 0.5;
+				}
+
+				img {
+					width: 100%;
 				}
 			}
 
@@ -47,8 +48,6 @@
 				text-align: justify;
 			}
 		}
-
-
 
 		.fb {
 			height: 220px;
@@ -62,10 +61,6 @@
 			}
 		}
 	}
-
-
-
-
 
 	.recent-single-post {
 		.post-title {
@@ -116,7 +111,7 @@
 				font-size: 0.8em;
 				line-height: 1;
 				color: #9698a0;
-			  margin-top: 5px;
+				margin-top: 5px;
 			}
 		}
 	}
@@ -162,10 +157,6 @@
 			margin-top: 0;
 		}
 
-		.google-plus {
-			overflow: hidden;
-		}
-
 		li {
 			display: inline-block;
 			text-align: center;
@@ -191,8 +182,6 @@
 				}
 			}
 		}
-
-
 
 		.subscribe-input-class {
 			padding: 15px 5%;
@@ -233,8 +222,6 @@
 		}
 	}
 }
-
-
 /* Hack for aligning magnifying glass on other pages */
 .page-template .search::after {
 	top: 14px;
