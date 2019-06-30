@@ -7,10 +7,10 @@
     display: grid;
     grid-gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 90%;
-    margin: 0 auto 30px;
+    margin: 20px auto 30px;
     @media(max-width: @tablet-breakpoint) {
         grid-template-columns: 1fr 1fr;
+          max-width: 90%;
     }
     @media(max-width: @mobile-breakpoint) {
         grid-template-columns: 1fr;
@@ -22,6 +22,10 @@
       padding: 0;
       margin-bottom: 0;
 
+      .post-preview-side {
+        display: none;
+      }
+
       .post-title {
         font-size: 1.4em;
         -webkit-line-clamp: 2;
@@ -30,7 +34,7 @@
         display: -webkit-box;
         text-overflow: ellipsis;
       }
-      
+
       .preview-content {
         display: none;
       }
@@ -50,6 +54,9 @@
       .author,
       .date {
         display: none !important;
+      }
+      .read-link {
+        display: none;
       }
     }
   }

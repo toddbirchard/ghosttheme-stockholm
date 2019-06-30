@@ -7,7 +7,6 @@
     margin: auto;
     display: grid;
     grid-template-columns: 48.5% 48.5%;
-
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-template-columns: 100%;
@@ -15,6 +14,8 @@
 
     article {
       margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
 
       &:hover {
         .post-image,
@@ -36,15 +37,13 @@
       }
 
       .preview-content {
-          display: none;
+        display: none;
       }
-      
+
       .read-link {
         display: none;
       }
     }
-
-
 
     article {
       width: 100%;
@@ -52,9 +51,15 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      padding-bottom: 20px !important;
       @media(max-width: @mobile-breakpoint) {
         width: 100%;
         height: auto;
+      }
+      .post-preview-body {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px !important;
       }
 
       .tags {
@@ -65,67 +70,60 @@
 
       .post-head {
         margin: 0;
+        order: 1;
         @media(max-width: @mobile-breakpoint) {
           min-height: unset;
         }
       }
 
       .post-title {
-        font-size: 1.3em;
+        font-size: 1.2em;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+      }
 
-        a {
-          font-family: @header-font-bold;
-        }
+      .post-excerpt {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: .95em;
+        line-height: 1.25;
       }
 
       .post-image {
         display: block;
         margin: 0 auto;
         background-size: cover;
-        width: 100%;
+        width: 105px;
+        min-width: 106px;
+        height: 101px;
+        order: 0;
+        margin-right: 15px;
+        overflow: hidden;
+
+        .featured-image {
+          width: 160px;
+          margin: 0;
+        }
       }
 
-      .post-permalink {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 10px 0 0;
 
-        .meta {
-          justify-content: left;
-          padding: 0 5px;
 
-          .tags {
-            display: none;
-          }
+      .post-preview-side {
+        display: none;
+      }
 
-          .author {
-            display: none;
-          }
-        }
-
-        .btn {
-          padding: 12px 16px;
-
-          a {
-            line-height: 1;
-            height: fit-content;
-          }
-
-          &:hover {
-            background: @secondary-color;
-            color: white;
-          }
-          @media(max-width: @mobile-breakpoint) {
-            display: block !important;
-          }
-        }
+      .date {
+        display: none;
       }
     }
+  }
+
+  .pagination {
+        margin: 40px auto;
   }
 }
 
@@ -202,7 +200,6 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin: 30px 0 0;
-
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: [first] 1fr;
       grid-template-rows: 342px;
@@ -268,7 +265,7 @@
         position: relative;
         display: block;
         transition: all 0.3s ease-out;
-        overflow: hidden;;
+        overflow: hidden;
         @media(max-width: @tablet-breakpoint) {
           max-height: 206px;
         }
@@ -280,14 +277,6 @@
           width: 100%;
           height: auto;
         }
-      }
-
-      .meta-info {
-        font-weight: 900;
-        color: white;
-        font-size: 12px;
-        padding: 0;
-        text-align: left;
       }
 
       .description {
@@ -330,7 +319,6 @@
           font-size: 1.2em;
           line-height: 1.2;
           font-weight: 600;
-
           @media(max-width: 900px) {
             font-size: 1.2em;
           }
