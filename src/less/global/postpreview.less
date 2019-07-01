@@ -8,7 +8,7 @@
 	justify-content: space-between;
 	height: 100%;
 	@media(max-width:600px) {
-		padding: 0;
+		 padding: 10px 0;
 	}
 
 	&:last-child {
@@ -40,10 +40,17 @@
 	.post-preview-body {
 		border-bottom: 1px solid #e9e9e9;
 		width: 100%;
+		@media(max-width: @mobile-breakpoint) {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	.post-head {
 		margin: 0;
+		@media(max-width: @mobile-breakpoint) {
+			    order: 1;
+		}
 
 		.date {
 			color: #738a94;
@@ -57,10 +64,9 @@
 			font-family: @body-font;
 			margin: 2px 0;
 			@media(max-width: @mobile-breakpoint) {
-				font-size: 1.5em;
-				margin: 5px 0;
-				font-weight: 500;
+				font-size: 1.2em;
 				line-height: 1.2em;
+				font-family: @bold-font;
 			}
 
 			a {
@@ -69,13 +75,6 @@
 
 				&:hover {
 					color: @hover-color;
-				}
-				@media(max-width: @mobile-breakpoint) {
-					font-family: @header-font-bold;
-
-					&:hover {
-						color: white;
-					}
 				}
 			}
 		}
@@ -90,7 +89,6 @@
 			font-size: 1em;
 			@media(max-width: @mobile-breakpoint) {
 				margin: 5px auto 0;
-				font-size: 1.05em !important;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
@@ -103,12 +101,23 @@
 	.post-image {
 		display: block;
 		margin: 15px 0;
+		@media(max-width: @mobile-breakpoint) {
+			margin: 0 20px 0 0;
+			order: 0;
+			min-width: 110px;
+			width: 110px;
+			display: block;
+			overflow: hidden;
+		}
 
 		.featured-image {
 			width: 100%;
 			height: auto;
 			transition: @transition;
 			border-radius: 2px;
+			@media(max-width: @mobile-breakpoint) {
+				    width: 150%;
+			}
 
 			&:hover {
 				opacity: 0.7;
@@ -166,7 +175,7 @@
 		display: block;
 		font-size: 1.1em;
 		@media(max-width:600px) {
-			margin: 20px 0 0;
+			display: none;
 		}
 
 		i {

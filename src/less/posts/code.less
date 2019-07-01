@@ -25,18 +25,23 @@ blockquote pre {
     @media(max-width: @mobile-breakpoint) {
       max-width: none;
       width: auto;
-      white-space: pre-line;
+      white-space: pre;
       max-height: 400px;
       overflow-x: visible;
       color: white;
+      font-size: unset;
     }
 
     @media(max-width: @mobile-breakpoint) {
       .mobile-full-width();
+      font-size: 13px !important;
+      width: fit-content;
+      min-width: 100%;
+      -webkit-text-size-adjust: none;
       max-height: unset !important;
       padding: 0 !important;
       border-radius: 0 !important;
-      white-space: pre !important;
+      -webkit-text-size-adjust: none;
     }
 
     code {
@@ -50,12 +55,12 @@ blockquote pre {
       height: 100%;
       font-size: 0.85em;
       @media(max-width: @mobile-breakpoint) {
-        white-space: pre;
         overflow-y: hidden;
         line-height: 1.5;
-        white-space: pre-line;
         border-right: 0;
         border-left: 0;
+        white-space: pre !important;
+        -webkit-text-size-adjust: none;
       }
 
 
@@ -192,22 +197,7 @@ blockquote pre {
   }
   */
 
-  pre {
-    font-size: unset;
-  }
 
-  code {
-    font-size: 13px !important;
-    width: fit-content;
-    min-width: 100%;
-    white-space: pre !important;
-    -webkit-text-size-adjust: none;
-  }
-
-  * {
-    font-size: 13px !important;
-    -webkit-text-size-adjust: none;
-  }
 }
 
 .bottomFade {
