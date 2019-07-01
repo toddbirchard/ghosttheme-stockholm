@@ -2,13 +2,13 @@
 @import "mixin.less";
 
 .post-preview {
-	margin-bottom: 30px;
 	order: 2;
 	display: flex;
 	justify-content: space-between;
 	height: 100%;
 	@media(max-width:600px) {
-		 padding: 10px 0;
+		 padding: 0;
+		 border-bottom: 1px solid #e9e9e9;
 	}
 
 	&:last-child {
@@ -38,11 +38,11 @@
 	}
 
 	.post-preview-body {
-		border-bottom: 1px solid #e9e9e9;
 		width: 100%;
 		@media(max-width: @mobile-breakpoint) {
 			display: flex;
 			justify-content: space-between;
+			    margin-bottom: 15px;
 		}
 	}
 
