@@ -3,17 +3,17 @@
 <!-- start site's main content area -->
 <section class="content-wrap">
 	<div class="page-container sidebar-layout">
-
-		<!-- start main post area -->
-		<main class="postlist">
+		<div>
 			{{#author}}
 				{{> author/cover-author}}
 			{{/author}}
-			{{> loop}}
-			{{pagination}}
-		</main>
+			<!-- start main post area -->
+			<main class="postlist">
+				{{> loop}}
+				{{pagination}}
+			</main>
+		</div>
 		<!-- end main post area -->
-		{{! insert sidebar partial}}
 		{{#author}}
 			{{> author/author-sidebar}}
 		{{/author}}

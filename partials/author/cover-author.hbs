@@ -3,9 +3,9 @@
 	{{#if profile_image}}
 		<img src="{{profile_image}}" alt="{{name}}'s' avatar" class="avatar">
 	{{/if}}
-	<h3 class="author-name">
+	<h1 class="author-name">
 		{{name}}
-	</h3>
+	</h1>
 	<div class="meta-info">
 		<span class="meta-item post-count"><i class="far d fa-pencil"></i>{{#get "posts" limit="all" filter="authors:{{slug}}"}}{{plural posts.length empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}{{/get}}</span>
 		{{#if location}}
