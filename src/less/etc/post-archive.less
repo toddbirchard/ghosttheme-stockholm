@@ -1,4 +1,3 @@
-
 @import "../global/variables.less";
 
 .post-archive {
@@ -9,18 +8,20 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px auto 30px;
     @media(max-width: @tablet-breakpoint) {
-        grid-template-columns: 1fr 1fr;
-          max-width: 90%;
+      grid-template-columns: 1fr 1fr;
+      max-width: 90%;
     }
     @media(max-width: @mobile-breakpoint) {
-        grid-template-columns: 1fr;
-        margin: 20px auto;
+      grid-template-columns: 1fr;
+      margin: 20px auto;
     }
 
     .post-preview {
       width: auto;
       padding: 0;
       margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
 
       .post-preview-side {
         display: none;
@@ -39,12 +40,21 @@
         display: none;
       }
 
-      .post-head .post-title {
-        font-size: 1.3em;
+      .post-head {
+        order: 1;
+        margin: 10px 0 15px;
+
+        .post-title {
+          font-size: 1.3em;
+        }
+      }
+
+      .post-image {
+        margin: 0;
       }
 
       .content {
-         padding: 0 15px 15px;
+        padding: 0 15px 15px;
       }
 
       .btn {
@@ -55,6 +65,7 @@
       .date {
         display: none !important;
       }
+
       .read-link {
         display: none;
       }
