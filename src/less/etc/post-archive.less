@@ -14,6 +14,7 @@
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: 1fr;
       margin: 20px auto;
+      max-width: 85%;
     }
 
     .post-preview {
@@ -43,6 +44,9 @@
       .post-head {
         order: 1;
         margin: 10px 0 15px;
+        @media(max-width: @mobile-breakpoint) {
+          margin: 0;
+        }
 
         .post-title {
           font-size: 1.3em;
@@ -51,6 +55,9 @@
 
       .post-image {
         margin: 0;
+        @media(max-width: @mobile-breakpoint) {
+          margin: 0 15px 0 0;
+        }
       }
 
       .content {
