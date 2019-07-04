@@ -84,72 +84,14 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
+    transition: @transition;
     @media(max-width: 950px) {
       font-size: 14px;
     }
 
-    i,
-    svg {
-      width: 24px;
-      margin-right: 15px;
-      @media(max-width: 950px) {
-        width: 18px;
-        margin-right: 12px;
-      }
+    &:hover {
+      padding: 0 20px;
     }
-  }
-
-  .building-flask-apps svg {
-    fill: #4d5056;
-  }
-
-  .data-analysis-pandas i {
-    color: @pandas-color;
-  }
-
-  .code-snippet-corner svg {
-    fill: @code-color;
-  }
-
-  .create-an-aws-api svg {
-    fill: @aws-color;
-  }
-
-  .working-with-mysql svg {
-    fill: @mysql-color;
-  }
-
-  .mongodb-cloud svg {
-    fill: @mongdb-color;
-  }
-
-  .hacking-tableau-server i {
-    color: @tableau-color;
-  }
-
-  .adventures-in-excel svg {
-    color: @excel-color;
-  }
-
-  .graphql-hype svg {
-    color: @graphql-color;
-    fill: @graphql-color;
-  }
-
-  .the-rise-of-google-cloud i {
-    color: @google-color;
-  }
-
-  .welcome-to-sql i {
-    color: @sql-color;
-  }
-
-  .mapping-data-with-mapbox i {
-    color: @mapbox-color;
-  }
-
-  .learning-apache-spark i {
-    color: @learning-apache-spark;
   }
 
   .series-info {

@@ -39,7 +39,7 @@ $(document).ready(function() {
   //fallback_images();
   retina_images();
   // load_tag_icons();
-  load_series_icons();
+  // load_series_icons();
   initialize_search(ghostContentAPIKey);
   order_hack();
 });
