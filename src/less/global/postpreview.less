@@ -42,21 +42,24 @@
 		width: 100%;
 		@media(max-width: @mobile-breakpoint) {
 			display: flex;
-			justify-content: space-between;
-			    margin-bottom: 15px;
+			margin-bottom: 15px;
+			flex-direction: column;
 		}
 	}
 
 	.post-head {
 		margin: 0;
 		@media(max-width: @mobile-breakpoint) {
-			    order: 1;
+			order: 1;
 		}
 
 		.date {
 			color: #738a94;
 			font-size: 12px;
 			line-height: 1;
+			@media(max-width: @mobile-breakpoint) {
+				display: none;
+			}
 		}
 
 		.post-title {
@@ -103,12 +106,12 @@
 		display: block;
 		margin: 15px 0;
 		@media(max-width: @mobile-breakpoint) {
-			margin: 0 10px 0 0;
-			order: 0;
-			min-width: 80px;
-			width: 80px;
-			display: block;
-			overflow: hidden;
+			margin: 0 0 10px 0;
+	    order: 0;
+	    width: 100%;
+	    height: auto;
+	    display: block;
+	    overflow: hidden;
 		}
 
 		.featured-image {
@@ -117,7 +120,7 @@
 			transition: @transition;
 			border-radius: 2px;
 			@media(max-width: @mobile-breakpoint) {
-				    width: 150%;
+				 margin-top: -22px;
 			}
 
 			&:hover {
