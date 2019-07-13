@@ -12,7 +12,7 @@ nav {
 	.nav-wrapper {
 		display: flex;
 		justify-content: space-between;
-		max-width: 1100px;
+		max-width: 1050px;
 		margin: auto;
 		align-items: center;
 		height: 100%;
@@ -68,6 +68,12 @@ nav {
 				}
 
 				&.pages {
+					@media(max-width: @mobile-breakpoint) {
+						display: none;
+					}
+				}
+
+				&.posts {
 					@media(max-width: @mobile-breakpoint) {
 						display: none;
 					}
