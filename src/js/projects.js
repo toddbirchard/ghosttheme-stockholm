@@ -8,7 +8,6 @@ import { make_kanban_slick } from './projects/kanban.js';
 // -----------------------------------------
 function populate_cards(cards) {
   status = cards[0]['status'].replace(' ', '');
-  console.log('status = ' + status)
     for (var i = 0; i < cards.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' +
                                   '<p class="card-title">' + cards[i]['summary'] + '</p> \n' +
