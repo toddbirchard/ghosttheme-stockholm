@@ -7,7 +7,8 @@ import { make_kanban_slick } from './projects/kanban.js';
 // Functions
 // -----------------------------------------
 function populate_cards(cards) {
-  status = cards[0]['status'];
+  status = cards[0]['status'].replace(' ', '');
+  console.log('status = ' + status)
     for (var i = 0; i < cards.length; i++) {
       $('#' + status + ' .cards').append('<div class="card"> \n' +
                                   '<p class="card-title">' + cards[i]['summary'] + '</p> \n' +
@@ -25,11 +26,10 @@ function get_kanban_cards(project) {
     url: endpoint,
     context: document.body
   }).done(function(data) {
-    var cardsJSON = JSON.parse(data);
-    populate_cards(cardsJSON['backlog']);
-    populate_cards(cardsJSON['todo']);
-    populate_cards(cardsJSON['inprogress']);
-    populate_cards(cardsJSON['done']);
+    populate_cards(data['backlog']);
+    populate_cards(data['todo']);
+    populate_cards(data['inprogress']);
+    populate_cards(data['done']);
   });
 }
 
