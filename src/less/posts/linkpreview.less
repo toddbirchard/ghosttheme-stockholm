@@ -3,9 +3,12 @@
 
 .tag-roundup main > p {
   margin: 0 !important;
-
   @media(max-width: @mobile-breakpoint) {
     margin: 0 !important;
+  }
+
+  &:last-of-type .link-preview {
+    border-bottom: 0;
   }
 }
 
@@ -23,7 +26,6 @@
   border-bottom: 0;
   border-left: 5px solid #c8dec8;
   background: #e9f3e9;
-  border-radius: 5px;
   @media(max-width: @tablet-breakpoint) {
     margin: 30px 0 60px;
     justify-content: space-between;
@@ -36,11 +38,10 @@
 
   p {
     margin: 0 !important;
-    color: #627f64;
+    color: #5f8b62;
     line-height: 1.4 !important;
     text-align: left;
     font-size: .95em !important;
-
     @media(max-width: @mobile-breakpoint){
       font-size: .9em !important;
     }
@@ -74,16 +75,13 @@
 
 
 .link-preview {
-  padding: 20px;
+  padding: 20px 0;
   transition: @transition;
   margin: 0 auto 20px;
   display: block;
   overflow: hidden;
   width: -webkit-fill-available;
-  background: #fbfbfb;
-  border: 1px solid #e7ebf0;
-  border-radius: 2px;
-
+  border-bottom: 1px solid #e7ebf0;
   @media(max-width: @tablet-breakpoint) {
       display: block;
   }
@@ -95,7 +93,7 @@
     cursor: pointer !important;
 
     * {
-      color: white !important;
+      color: @hover-color !important;
     }
   }
 
@@ -109,12 +107,18 @@
     .description {
       margin: 10px 0 !important;
       line-height: 1.5em !important;
+      transition: @transition;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: -webkit-fill-available;
     }
   }
 
   .link-preview-image {
-    min-width: 230px;
-    max-width: 230px;
+    min-width: 190px;
+    max-width: 190px;
     margin-right: 20px;
 
     @media(max-width: @mobile-breakpoint) {
@@ -129,8 +133,6 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: 200px;
-      max-width: 250px;
       margin: 0;
       background: white;
       border-radius: 2px;
@@ -184,6 +186,7 @@
     font-weight: 100;
     position: relative;
     bottom: 0;
+    transition: @transition;
     @media(max-width: @mobile-breakpoint) {
       font-size: 12px;
     }
@@ -209,6 +212,7 @@
       font-size: 1.3em;
       line-height: 1.3;
       text-align: left;
+      transition: @transition;
       @media(max-width: @mobile-breakpoint) {
         display: block;
         margin: 10px 0 0 !important;
@@ -267,8 +271,6 @@
   }
 
   &:hover {
-    background-color: @hover-color;
-    border-color: @hover-color;
     cursor: pointer;
     text-decoration: none;
   }

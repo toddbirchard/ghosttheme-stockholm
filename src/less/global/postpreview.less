@@ -90,6 +90,11 @@
 			transition: @transition;
 			color: @h1-color;
 			font-size: 1em;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			width: -webkit-fill-available;
 			@media(max-width: @mobile-breakpoint) {
 				margin: 5px auto 0;
 				-webkit-line-clamp: 2;
