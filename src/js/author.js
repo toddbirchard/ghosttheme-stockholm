@@ -13,7 +13,7 @@ import { author_rss } from './author/rss.js';
 // -------------------------------------------
 function makeAuthorSidebar(data) {
   let github = JSON.stringify(data['github']);
-  let medium = JSON.stringify(data['medium']);
+  // let medium = JSON.stringify(data['medium']);
   let website = JSON.stringify(data['website']);
   let twitter = JSON.stringify(data['twitter']);
   let rss = JSON.stringify(data['rss']);
