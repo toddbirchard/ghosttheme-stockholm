@@ -3,9 +3,9 @@
 
   <div class="post-preview-side">
     {{#primary_tag}}
-    <span class="primary-tag {{slug}}">
+      <span class="primary-tag {{slug}}">
         {{name}}
-    </span>
+      </span>
     {{/primary_tag}}
   </div>
 
@@ -18,11 +18,9 @@
     </div>
 
     {{#if feature_image}}
-      {{^has tag="roundup"}}
-        <a href="{{url}}" class="post-image">
-          <img class="featured-image lazyload" alt="{{title}}" loading="lazy" src="{{img_url feature_image}}" data-rjs="2">
-        </a>
-        {{/has}}
+      <a href="{{url}}" class="post-image">
+        <img class="featured-image lazyload" alt="{{title}}" loading="lazy" src="{{img_url feature_image}}" data-rjs="2">
+      </a>
     {{/if}}
     <div class="preview-content">{{content words=100}}</div>
     <a href="{{url}}" class="read-link">{{t "Continue Reading"}} <i class="far fa-arrow-right"></i></a>
