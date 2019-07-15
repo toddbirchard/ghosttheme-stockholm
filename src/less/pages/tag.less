@@ -59,7 +59,11 @@
       .post-preview-body {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px !important;
+        padding-bottom: 20px;
+        @media(max-width: @mobile-breakpoint) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
       }
 
       .tags {
@@ -95,7 +99,7 @@
 
       .post-image {
         display: block;
-        margin: 0 auto;
+        margin: 0 15px 0 0;
         background-size: cover;
         width: 105px;
         min-width: 106px;
@@ -103,10 +107,22 @@
         order: 0;
         margin-right: 15px;
         overflow: hidden;
+        @media(max-width: 600px) {
+          margin: 0 0 20px;
+          background-size: cover;
+          order: 0;
+          overflow: hidden;
+          width: 100%;
+          min-width: unset;
+          height: 170px;
+        }
 
         .featured-image {
           width: 160px;
           margin: 0;
+          @media(max-width: 600px) {
+            width: 100%;
+          }
         }
       }
 
