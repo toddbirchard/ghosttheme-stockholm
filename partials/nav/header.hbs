@@ -32,17 +32,6 @@
         </div>
       </div>
 
-      <div class="dropdown authors">
-        <a href="{{@site.url}}/about/"><button class="dropdown">Authors</button></a>
-        <div class="dropdown-content">
-          {{#get "authors" include="count.posts"}}
-            {{#foreach authors}}
-              <a href="{{url}}" class="link">{{name}}</a>
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-
       <div class="dropdown publications">
         <a href="{{@site.url}}/series/"><button class="dropdown">Series'</button></a>
         <div class="dropdown-content">
