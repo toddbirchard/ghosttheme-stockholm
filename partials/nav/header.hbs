@@ -1,13 +1,14 @@
 <!-- Start Header -->
 <nav>
-    <div class="nav-wrapper">
-      <div class="left-nav">
-    {{#if @site.icon}}
-      <a class="logo" href="{{@site.url}}/">
-        <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
-      </a>
+  <div class="nav-wrapper">
+    <div class="left-desktop-nav">
+      {{#if @site.icon}}
+        <a class="logo" href="{{@site.url}}/">
+          <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
+        </a>
+      {{/if}}
       <div class="dropdown posts">
-        <a href="{{@site.url}}/archive/"><button class="dropdown">Posts</button></a>
+        <a href="{{@site.url}}/archive/"><button>Posts</button></a>
         <div class="dropdown-content">
           {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
             {{#foreach tags}}
@@ -18,11 +19,11 @@
       </div>
 
       <div class="dropdown about">
-        <a href="{{@site.url}}/about/"><button class="dropdown">About</button></a>
+        <a href="{{@site.url}}/about/"><button>About</button></a>
       </div>
 
       <div class="dropdown pages">
-        <button class="dropdown">Pages</button>
+        <button>Pages</button>
         <div class="dropdown-content">
           <a href="{{@site.url}}/about/">About Us</a>
           <a href="{{@site.url}}/series/">Series</a>
@@ -33,7 +34,7 @@
       </div>
 
       <div class="dropdown publications">
-        <a href="{{@site.url}}/series/"><button class="dropdown">Series'</button></a>
+        <a href="{{@site.url}}/series/"><button>Series'</button></a>
         <div class="dropdown-content">
           {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
             {{#foreach tags visibility="internal"}}
@@ -42,8 +43,34 @@
           {{/get}}
         </div>
       </div>
-    {{/if}}
+
+    </div>
+
+    <div class="right-desktop-nav">
+      <a href="https://www.patreon.com/hackersandslackers">
+        <button class="donate-btn">Donate</button>
+      </a>
+    </div>
+
+    <div class="left-mobile-nav">
+      {{#if @site.icon}}
+        <a class="logo" href="{{@site.url}}/">
+          <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
+        </a>
+      {{/if}}
+    </div>
+
+    <div class="right-mobile-nav">
+      <div class="dropdown">
+        <a href="{{@site.url}}/about/"><button>About</button></a>
+      </div>
+      <div class="dropdown">
+        <a href="{{@site.url}}/posts/"><button>Posts</button></a>
+      </div>
+      <div class="dropdown">
+        <a href="{{@site.url}}/series/"><button>Series</button></a>
+      </div>
+    </div>
   </div>
-</div>
 </nav>
 <!-- End Header -->

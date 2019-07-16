@@ -1,9 +1,17 @@
 @import "../global/variables.less";
 
 .tag-template {
+
+  .page-container {
+    @media(max-width: @tablet-breakpoint){
+      margin-top: 0;
+    }
+  }
+
   .postlist {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 3%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     margin: auto;
     display: grid;
     grid-template-columns: 48.5% 48.5%;
@@ -59,7 +67,6 @@
       .post-preview-body {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px;
         @media(max-width: @mobile-breakpoint) {
             padding-bottom: 0;
             margin-bottom: 0;

@@ -23,48 +23,91 @@ nav {
 			max-width: 86%;
 		}
 
-		.left-nav {
-			display: flex;
-			justify-content: left;
-			width: 500px;
-			align-items: center;
-			@media(max-width: @mobile-breakpoint) {
-				    justify-content: inherit;
+		.logo {
+			height: 30px;
+			transition: all 0.2s ease-out;
+			margin-right: 40px;
+
+			img {
+				height: 30px;
 			}
 
-			.logo {
-				height: 30px;
-				transition: all 0.2s ease-out;
-				margin-right: 40px;
+			&:hover {
+				opacity: 0.7;
+				cursor: pointer;
+			}
+		}
 
-				img {
-					height: 30px;
-				}
+		.left-desktop-nav,
+		.right-desktop-nav {
+			@media(max-width: @mobile-breakpoint) {
+				display: none !important;
+			}
+		}
+
+		.left-desktop-nav,
+		.right-desktop-nav,
+		.right-mobile-nav {
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			@media(max-width: @mobile-breakpoint) {
+				justify-content: inherit;
+			}
+
+			.donate-btn {
+				font-family: 'TTNormsPro-Regular', sans-serif !important;
+				font-weight: 100;
+				font-size: 1em;
+				-webkit-appearance: none !important;
+				color: #626573;
+				border: 1px solid #d3d6e1;
+				border-radius: 3px;
+				padding: 7px 12px;
+				line-height: 1;
+				outline: none;
+				transition: @transition;
 
 				&:hover {
-					opacity: 0.7;
-					cursor: pointer;
+					background: @theme-color;
+					border: 1px solid @theme-color;
+					color: white;
 				}
 			}
 
 			.dropdown {
 				color: #626573;
 				border: none;
-				font-family: 'TTNormsPro-Regular', sans-serif !important;
-				font-weight: 100;
-				font-size: 1em;
 				padding: 0;
 				background: none;
 				height: 60px;
 				margin-right: 30px;
 				outline: none;
 				transition: @transition;
-				@media(max-width: @mobile-breakpoint) {
-					margin-right: 0px;
+				display: flex;
+				justify-content: center;
+
+				&>a {
+					display: block;
+					height: fit-content;
+					margin-top: 20px;
+
+
 				}
 
-				&:hover {
-					color: @theme-color;
+				button {
+					font-family: 'TTNormsPro-Regular', sans-serif !important;
+					font-weight: 100;
+					font-size: 1em;
+					-webkit-appearance: none !important;
+					border: none;
+					color: #626573;
+					border: none;
+					outline: none;
+
+					&:hover {
+						color: @theme-color;
+					}
 				}
 
 				&.pages {
@@ -72,6 +115,8 @@ nav {
 						display: none;
 					}
 				}
+
+
 
 				.dropdown-content {
 					display: none;
@@ -84,7 +129,6 @@ nav {
 					padding: 5px;
 					top: 57px;
 					transition: all 0.2s ease-out;
-					margin-left: -70px;
 					transition: @transition;
 
 					a {
@@ -117,5 +161,25 @@ nav {
 				}
 			}
 		}
+	}
+
+	.right-mobile-nav,
+	.left-mobile-nav {
+		display: none !important;
+		@media(max-width: @mobile-breakpoint) {
+			display: flex !important;
+			justify-content: right;
+			align-items: center;
+		}
+
+		.dropdown {
+			margin: 0 20px 0 0;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+
 	}
 }
