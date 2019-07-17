@@ -3,42 +3,43 @@
 <!-- Start Post -->
 {{#post}}
 	<article class="{{post_class}}">
+		<!-- start responsive image -->
+		{{#if feature_image}}
+			<div class="post-image">
+				<img alt="{{title}}" class="featured-image lazyload" src="{{img_url feature_image}}" data-rjs="2">
+			</div>
+		{{/if}}
+		<!-- end responsive image -->
+
 		<div class="post-head">
 			<div class="post-header">
 				<h1 class="post-title">{{{title}}}</h1>
 				<h4 class="excerpt">{{excerpt}}</h4>
-			</div>
-			<!-- start responsive image -->
-			{{#if feature_image}}
-				<div class="post-image">
-					<img alt="{{title}}" class="featured-image lazyload" src="{{img_url feature_image}}" data-rjs="2">
+				<div class="post-meta">
+					{{#primary_tag}}
+						<span class="tags meta-item {{slug}}">{{name}}</span>
+					{{/primary_tag}}
+					{{#primary_author}}
+						<a href="{{url}}" class="meta-item author desktop"><i class="far fa-user-edit" style="width:13px; display:inline-block; margin-right:10px;"></i>
+							<span>{{name}}</span></a>
+					{{/primary_author}}
+					<span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
+					<span class="readtime meta-item"><i class="far d fa-eye"></i> <span>{{reading_time}}</span></span>
 				</div>
-			{{/if}}
-			<!-- end responsive image -->
-
-			<!-- start post metadata -->
-			<div class="post-meta">
-				{{#primary_tag}}
-					<span class="tags meta-item {{slug}}">{{name}}</span>
-				{{/primary_tag}}
-				{{#primary_author}}
-					<a href="{{url}}" class="meta-item author desktop"><i class="far fa-user-edit" style="width:13px; display:inline-block; margin-right:10px;"></i>
-						<span>{{name}}</span></a>
-				{{/primary_author}}
-				<span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
-				<span class="readtime meta-item"><i class="far d fa-eye"></i> <span>{{reading_time}}</span></span>
+				{{! Lists Table-of-Contents-Like list if post is in a series. }}
+				{{> posts/postseries}}
 			</div>
+
 		</div>
-		<!-- end post metadata -->
 
-		{{! Lists Table-of-Contents-Like list if post is in a series. }}
-		{{> posts/postseries}}
-
-		{{! Displays Roundup blurb if post has tag "roundup." }}
-		{{> posts/roundup-blurb}}
 
 		<!-- start content -->
 		<main class="post-content">
+
+
+
+			{{! Displays Roundup blurb if post has tag "roundup." }}
+			{{> posts/roundup-blurb}}
 			{{content}}
 			<section class="post-footer">
 				<div class="tag-list">

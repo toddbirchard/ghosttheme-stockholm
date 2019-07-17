@@ -1,25 +1,18 @@
 
 
   .post-meta {
-    margin: 5px 0 20px;
+    margin: 20px 0 0;
     color: lighten(@text-color, 10%);
     font-size: 12px;
     display: flex;
     width: auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     @media(max-width: @mobile-breakpoint) {
       padding: 0;
       max-width: none;
       width: auto;
-      margin: 0 0 20px;
-      justify-content: space-between;
       order: 2;
-      justify-content: left;
-    }
-
-    i {
-      color: lighten(@text-color, 10%);
     }
 
     span {
@@ -54,7 +47,6 @@
 
     span {
       text-transform: capitalize;
-      color: @text-color;
     }
 
     a {
@@ -72,13 +64,12 @@
     align-items: center;
     text-transform: capitalize;
     line-height: 1;
-    @media(max-width: @mobile-breakpoint) {
-      margin: 0 20px 0 0 !important;
-    }
+    margin: 0 20px 0 0 !important;
 
     * {
       font-size: .9em;
       padding: 0;
+      color: @text-color-light;
       @media(max-width: @tablet-breakpoint) {
         font-size: 0.9em;
       }
