@@ -131,8 +131,6 @@
         }
       }
 
-
-
       .post-footer {
         display: none;
       }
@@ -140,7 +138,11 @@
   }
 
   .pagination {
-        margin: 40px auto;
+     margin: 40px auto 0;
+     @media(max-width: @tablet-breakpoint) {
+       margin: 30px auto;
+       width: 80%;
+     }
   }
 }
 
