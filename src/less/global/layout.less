@@ -1,5 +1,6 @@
 .page-container {
-	margin: 30px auto;
+	max-width: 1100px;
+	margin: 40px auto 0;
 	@media(max-width: 1200px) {
 		width: 100%;
 	}
@@ -9,14 +10,6 @@
 	@media(max-width: @tablet-breakpoint) {
 		max-width: none;
 		margin: 20px auto;
-	}
-
-	&.home {
-		max-width: unset;
-    width: 100%;
-		@media(max-width: 1000px) {
-			 max-width: 95%;
-		}
 	}
 
 	&.sidebar-layout {
@@ -31,7 +24,7 @@
 	}
 }
 
-section > .container {
+.container {
 	max-width: 1200px;
 	margin: auto;
 	@media(max-width: 1200px) {

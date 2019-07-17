@@ -1,19 +1,17 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- start site's main content area -->
-<section class="content-wrap">
-	<div class="page-container sidebar-layout">
-		<!-- start main post area -->
-		<main class="main-content">
-			{{> cover-tag}}
-			<div class="postlist">
-				{{> loop}}
-			</div>
-			{{pagination}}
-		</main>
-		<!-- end main post area -->
-		{{! insert sidebar partial}}
-		{{> sidebar}}
-	</div>
-</section>
+<div class="page-container sidebar-layout">
+	<!-- start main post area -->
+	<main class="main-content">
+		{{> cover-tag}}
+		<div class="postlist">
+			{{> loop}}
+		</div>
+		{{pagination}}
+	</main>
+	<!-- end main post area -->
+	{{! insert sidebar partial}}
+	{{> sidebar}}
+</div>
 <!-- end site's main content area -->

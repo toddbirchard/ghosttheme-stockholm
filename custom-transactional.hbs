@@ -1,20 +1,18 @@
 {{!< default}}
-	<!-- start site's main content area -->
-	{{#post}}
-		<section>
-			<div class="page-container">
-				<main class="main-content">
-					<h1 class="post-title">{{{title}}}</h1>
-					<p>{{content}}</p>
-					<a href="{{@site.url}}">
-						<button type="submit" label="submit" class="btn btn-primary">Back home</button>
-					</a>
-					<div id="rss-feeds"></div>
-				</main>
-			</div>
-		</section>
-	{{/post}}
-	{{#contentFor "scripts"}}
-		<script async src="{{asset "js/transactional.js"}}"></script>
-	{{/contentFor}}
+<!-- start site's main content area -->
+{{#post}}
+	<div class="page-container">
+		<main class="main-content">
+			<h1 class="post-title">{{{title}}}</h1>
+			<p>{{content}}</p>
+			<a href="{{@site.url}}">
+				<button type="submit" label="submit" class="btn btn-primary">Back home</button>
+			</a>
+			<div id="rss-feeds"></div>
+		</main>
+	</div>
+{{/post}}
+{{#contentFor "scripts"}}
+	<script async src="{{asset "js/transactional.js"}}"></script>
+{{/contentFor}}
 <!-- end site's main content area -->

@@ -2,16 +2,14 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 <!-- Start Post Archive -->
-<section class="content-wrap post-archive">
-	<div class="container">
-		<main class="postlist">
-			{{#foreach posts}}
-				{{> postpreview}}
-			{{/foreach}}
-		</main>
-		{{pagination}}
-	</div>
-</section>
+<div class="container post-archive">
+	<main class="postlist">
+		{{#foreach posts}}
+			{{> postpreview}}
+		{{/foreach}}
+	</main>
+	{{pagination}}
+</div>
 {{#contentFor "scripts"}}
 	<script async src="{{asset "js/postarchive.js"}}"></script>
 {{/contentFor}}
