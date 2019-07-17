@@ -3,39 +3,14 @@
 
 .post-preview {
 	order: 2;
-	display: flex;
-	justify-content: space-between;
 	height: 100%;
 	border-bottom: 1px solid #e9e9e9;
-	@media(max-width:600px) {
+	@media(max-width: @mobile-breakpoint) {
 		 padding: 0;
-
 	}
 
 	&:last-child {
 		border-bottom: none;
-	}
-
-	.post-preview-side {
-		width: 90px;
-		margin-right: 20px;
-		@media(max-width: @tablet-breakpoint) {
-			display: none;
-		}
-
-		.primary-tag {
-			padding: 5px 10px;
-			border-radius: 10px;
-			color: white;
-			text-transform: uppercase;
-			font-size: 0.7em;
-			margin-top: 24px;
-			display: block;
-			line-height: 1.2;
-			text-align: center;
-			width: fit-content;
-			float: right;
-		}
 	}
 
 	.post-preview-body {
@@ -48,25 +23,17 @@
 	}
 
 	.post-head {
-		margin: 0;
+		margin: 20px 0;
 		@media(max-width: @mobile-breakpoint) {
 			order: 1;
-		}
-
-		.date {
-			color: #738a94;
-			font-size: 12px;
-			line-height: 1;
-			@media(max-width: @mobile-breakpoint) {
-				display: none;
-			}
+			margin: 10px 0;
 		}
 
 		.post-title {
-			font-size: 1.5em;
-			Line-height: 1.15;
+			font-size: 1.6em;
+			Line-height: 1.2;
 			font-family: @body-font;
-			margin: 2px 0;
+			margin: 0;
 			@media(max-width: @mobile-breakpoint) {
 				font-size: 1.3em;
 				line-height: 1.2em;
@@ -109,9 +76,8 @@
 
 	.post-image {
 		display: block;
-		margin: 15px 0;
+		margin: 0;
 		@media(max-width: @mobile-breakpoint) {
-			margin: 0 0 10px 0;
 	    order: 0;
 	    width: 100%;
 	    height: auto;
@@ -188,6 +154,65 @@
 
 		i {
 			margin-left: 5px;
+		}
+	}
+
+	.post-footer {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		margin: 20px 0 30px;
+		@media(max-width: @mobile-breakpoint) {
+			display: none;
+		}
+
+
+		.meta-item {
+			margin-right: 30px;
+			color: @text-color-light;
+			font-size: .9em;
+
+			i {
+				margin-right: 5px;
+			}
+
+			a {
+				color: @text-color-light;
+				transition: @transition;
+
+				&:hover {
+					color: @hover-color;
+					cursor: pointer;
+				}
+			}
+
+			.primary-tag {
+				padding: 6px 12px;
+				border-radius: 10px;
+				color: white;
+				text-transform: uppercase;
+				font-size: 0.7em;
+				display: block;
+				line-height: 1.2;
+				text-align: center;
+				width: fit-content;
+				float: right;
+				transition: @transition;
+
+				&:hover {
+					background: white !important;
+					cursor: pointer;
+
+					a {
+						color: @theme-color;
+					}
+
+				}
+
+				a {
+					color: white;
+				}
+			}
 		}
 	}
 }

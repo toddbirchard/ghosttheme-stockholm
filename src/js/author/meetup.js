@@ -1,39 +1,59 @@
-author_meetup: function(docs) {
-  var meetup_key = process.env.meetup_key;
-  var meetup = docs[0]['meetup'];
-  console.log('meetup = ', meetup);
+export function author_meetup(meetup) {
+  const meetup_key = process.env.MEETUP_API_KEY;
 
-  function buildMeetupWidget(json) {
+  /* function buildMeetupWidget(json) {
     // Fires after first Meetup call is completed
     $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' + '<div class="userprofile"> \n ' + '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="2" > \n' + '<div class="info">' + '<span class="name">' + ajaxResult['data']['name'] + '</span> \n ' + '<span class="location">' + ajaxResult['data']['city'] + ', ' + ajaxResult['data']['state'] + '</span></a> \n ' + '<a href="https://www.meetup.com/members/' + ajaxResult['data']['id'] + '/"><span class="country">View profile</span></a></div></div> \n ' + '<div class="events"></div></div>');
-  }
+  }*/
 
   if (meetup) {
-    var url = 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key;
+    var memberURL = 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key;
+    let eventsURL = 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup + '&rsvp=yes,maybe&desc=false&status=upcoming';
     var headers = {
       "Content-Type": "application/json"
     };
-    fetch(url, {
+
+    $.ajax({
       method: 'GET',
-      headers: headers
-    }).then((res) => {
-      console.log(res)
-      return res.json()
-    }).then((json) => {
-      console.log(json);
-      buildMeetupWidget(json);
+      url: eventsURL,
+      dataType: 'jsonp',
+      success: function(response) {
+        let results = response['results'];
+        console.log(results)
+        for (var i = 0; i < results.length; i++) {
+          let name = results[i]['name'];
+          let photo = results[i]['photo_url'];
+          let time = new Date(results[i]['time']).toDateString();
+          let url = results[i]['event_url'];
+          let group = results[i]['group']['name'];
+          let city = 'N/A';
+
+          if (results[i]['venue']) {
+            city = results[i]['venue']['city'];
+          }
+
+          let event = '<div class="event"> \
+          <a href="' + url + '"> \
+            <div class="event-name">' + name + '</div> \
+            <span class="event-time"><i class="fal fa-calendar"></i>  ' + time + '</span> \
+            <span class="event-group"><i class="far fa-user-friends"></i>  ' + group + '</span> \
+            <span class="event-city"><i class="far fa-map-pin"></i>  ' + city + '</span> \
+          </a></div>';
+          $('.meetup .events').append(event);
+        }
+      }
     });
-  }
-  $.ajax({
+
+  /* $.ajax({
     url: 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key,
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(json) {
       buildMeetupWidget(json);
     }
-  });
+  });*/
 
-  $.ajax({
+  /*$.ajax({
     url: 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup + '&offset=0&format=json&limited_events=False&rsvp=yes,maybe&photo-host=public&page=500&fields=&order=time&desc=false&status=upcoming',
     contentType: "application/json",
     dataType: 'jsonp',
@@ -57,6 +77,7 @@ author_meetup: function(docs) {
         }
       }
     }
-  });
+  });*/
   $(".meetup").css('display', 'block');
+}
 }

@@ -7,6 +7,12 @@
           <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
         </a>
       {{/if}}
+
+      <div class="dropdown about">
+        <a href="{{@site.url}}/about/"><button>About</button></a>
+      </div>
+
+
       <div class="dropdown posts">
         <a href="{{@site.url}}/archive/"><button>Posts</button></a>
         <div class="dropdown-content">
@@ -16,10 +22,6 @@
             {{/foreach}}
           {{/get}}
         </div>
-      </div>
-
-      <div class="dropdown about">
-        <a href="{{@site.url}}/about/"><button>About</button></a>
       </div>
 
       <div class="dropdown pages">

@@ -1,26 +1,27 @@
 import '../less/pages.less';
 import '../less/author.less';
-import { author_github } from './author/github.js';
-import { post_link_previews } from './global/previews.js';
-import { author_website } from './author/website.js';
+import {author_github} from './author/github.js';
+import {post_link_previews} from './global/previews.js';
+import {author_website} from './author/website.js';
 // import { author_medium } from './author/medium.js';
-import { author_twitter } from './author/twitter.js';
-import { author_rss } from './author/rss.js';
-// import author_meetup from '../src/js/author/meetup.js';
-
+import {author_twitter} from './author/twitter.js';
+import {author_rss} from './author/rss.js';
+import {author_meetup} from './author/meetup.js';
 
 // Functions
 // -------------------------------------------
 function makeAuthorSidebar(data) {
-  let github = JSON.stringify(data['github']);
-  // let medium = JSON.stringify(data['medium']);
-  let website = JSON.stringify(data['website']);
-  let twitter = JSON.stringify(data['twitter']);
-  let rss = JSON.stringify(data['rss']);
+  let github = data['github'];
+  let medium = data['medium'];
+  let website = data['website'];
+  let twitter = data['twitter'];
+  let rss = data['rss'];
+  let meetup = data['meetup'];
   author_github(github);
   author_website(website);
   author_twitter(twitter);
   author_rss(rss);
+  author_meetup(meetup);
   //author_medium(medium);
 
 }
@@ -39,16 +40,15 @@ function get_authors() {
     url: process.env.AUTHORS_ENDPOINT + '?author=' + slug,
     dataType: 'json',
     success: function(response) {
-      var json = JSON.parse(response);
+      var json = response;
       makeAuthorSidebar(json);
     }
-});
+  });
 }
 
 // Start Script
 // -------------------------------------------
-document.addEventListener("DOMContentLoaded", function() {
-  console.log('test');
+$(document).ready(function() {
   get_authors();
   post_link_previews();
 });

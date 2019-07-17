@@ -1,7 +1,5 @@
 .author-template {
   .meetup {
-    order: 2;
-    padding: 0 12px;
 
     .widget-body {
       padding: 15px 10px;
@@ -17,142 +15,43 @@
       margin-bottom: 30px;
     }
 
-    .userprofile {
-      padding: 0 10px 10px;
-      margin-bottom: 10px;
-      
-      .avatar {
-        display: inline-block;
-        margin-right: 15px;
-        height: 70px;
-      }
+    .events {
+      .event {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 20px 0;
 
-      .info {
-        display: inline-block;
-
-        .name {
-          font-size: 1.2em;
-          font-family: @body-font;
+        &:last-child {
+          border-bottom: 0;
         }
 
-        .country,
-        .location {
+        &:first-child {
+          padding-top: 0;
+        }
+
+        span {
           display: block;
-          font-size: 0.9em;
-          line-height: 1.5;
-        }
-      }
+          font-family: 'TTNormsPro-Regular', sans-serif;
+          color: lighten(@text-color, 20%);
+          font-size: .8em;
+          white-space: nowrap;
+          overflow: hidden;
+          line-height: 1.6;
 
-      .events {
-        .event {
-          background: #fafafa;
-          padding: 15px;
+          i {
+            margin-right: 5px;
+            font-size: .9em;
+          }
+        }
+
+        .event-name {
+          color: @theme-color;
+          font-family: 'TTNormsPro-Medium', sans-serif;
           margin-bottom: 10px;
+          line-height: 1.25;
           transition: @transition;
 
           &:hover {
-            background: #d5f0f3;
-
-            span {
-              color: white;
-            }
-          }
-
-          .eventheader {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-
-            .eventimg {
-              display: inline-block;
-              margin-right: 15px;
-              width: 60px;
-              height: 60px;
-              min-width: 60px;
-              background-size: cover;
-              background-position: center;
-              border-radius: 2px;
-            }
-
-            time {
-              display: flex;
-              -webkit-box-orient: vertical;
-              flex-direction: column;
-              text-align: center;
-              background: #f6f7f8;
-              border: 1px solid rgba(46,62,72,.12);
-              border-radius: 8px;
-              padding: 8px;
-              min-width: 36px;
-              min-height: 36px;
-              height: 38px;
-              margin-right: 15px;
-              transition: @transition;
-
-              &:hover {
-                background: #797979;
-
-                .day,
-                .month {
-                  color: white;
-                }
-              }
-
-              .day {
-                color: #f13a59;
-                font-size: 20px;
-                line-height: 1.1;
-                font-weight: 600;
-                display: block;
-                width: 100%;
-                height: 15px;
-                margin-bottom: 5px;
-                text-transform: uppercase;
-              }
-
-              .month {
-                color: rgba(46,62,72,.6);
-                font-weight: 500;
-                text-transform: uppercase;
-                display: block;
-                text-align: center;
-                line-height: 1.1;
-                width: 100%;
-                height: 14px;
-                font-family: @body-font;
-                margin-top: 3px;
-              }
-            }
-
-            .eventname {
-              font-size: 16px;
-              color: #505050;
-              display: inline-block!important;
-              line-height: 1.4;
-              padding-top: 5px;
-              font-family: @body-font;
-            }
-          }
-
-          .eventinfo {
-            display: inline-block;
-            overflow: hidden;
-            width: 100%;
-
-            i {
-              margin-right: 5px;
-            }
-
-            span {
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              width: 257px;
-              display: block;
-              color: #505050;
-              margin: 0 0 5px 10px;
-              line-height: 1.5;
-            }
+            color: @hover-color
           }
         }
       }
