@@ -47,8 +47,8 @@ export function scrollable_code() {
     });
   }
   $("pre").each(function(index, element) {
-    const codesnippet = $(element).find('code');
-    const codesnippetwidth = codesnippet.width();
+    let codesnippet = $(element).find('code');
+    let codesnippetwidth = codesnippet.width();
     if ($(element).width() < codesnippetwidth) {
       $(element).find('code').addClass('handscroller');
       //$(element).append('<div class="tablefade"></div>');

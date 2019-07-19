@@ -30,6 +30,14 @@ blockquote pre {
       overflow-x: visible;
       color: white;
       font-size: unset;
+
+      &:hover {
+        cursor: ew-resize !important;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
     }
 
     @media(max-width: @mobile-breakpoint) {
