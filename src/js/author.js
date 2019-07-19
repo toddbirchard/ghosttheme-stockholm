@@ -28,8 +28,8 @@ function makeAuthorSidebar(data) {
 
 function who_is_current_author() {
   const sPath = String(document.location.pathname);
-  let slug = sPath.substring(sPath.lastIndexOf("/") - 4);
-  slug = slug.replace('/', '');
+  let slug = sPath.split("/");
+  slug = slug[slug.length -2];
   return slug;
 }
 
