@@ -10,7 +10,12 @@ export function author_website(website) {
       dataType: 'json',
       success: function(json) {
         $('.website-link').remove();
-        $('.widget.website').append('<a href="' + json.url + '">  \n' + '<div class="link-preview" style="background:url(' + json.image + ')"> \n' + '<a href="' + json.url + '" class="link-name">' + json.title + '</a><i class="far d fa-link"></i> \n' + '</div></a>');
+        $('.widget.website').append('<div class="website-preview" ><a href="' + json.url + '">  \n'
+        + '<div class="website-image" style="background:url(' + json.image + ')"></div> \n'
+        + '<div class="website-details"> \n '
+          + '<a href="' + json.url + '" class="website-title">' + json.title + '</a> \n '
+          + '<p class="website-description">' + json.description + '</p>'
+        + '</div></div></a>');
       }
     });
   }
