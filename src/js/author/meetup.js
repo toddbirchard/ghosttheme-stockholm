@@ -32,14 +32,14 @@ export function author_meetup(meetup) {
             city = results[i]['venue']['city'];
           }
 
-          let event = '<div class="event"> \
+          let event = '<div class="meetup-event"> \
           <a href="' + url + '"> \
-            <div class="event-name">' + name + '</div> \
-            <span class="event-time"><i class="fal fa-calendar"></i>  ' + time + '</span> \
-            <span class="event-group"><i class="far fa-user-friends"></i>  ' + group + '</span> \
-            <span class="event-city"><i class="far fa-map-pin"></i>  ' + city + '</span> \
+            <div class="meetup-event-name">' + name + '</div> \
+            <span class="meetup-event-time"><i class="fal fa-calendar"></i>  ' + time + '</span> \
+            <span class="meetup-event-group"><i class="far fa-user-friends"></i>  ' + group + '</span> \
+            <span class="meetup-event-city"><i class="far fa-map-pin"></i>  ' + city + '</span> \
           </a></div>';
-          $('.meetup .events').append(event);
+          $('.meetup .meetup-events').append(event);
         }
       }
     });

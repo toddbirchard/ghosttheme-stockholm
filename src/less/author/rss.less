@@ -1,7 +1,49 @@
-.author-template {
-  .rss {
-    iframe {
-      height: 480px;
+.author-template .sidebar{
+  .widget.rss {
+    display: none;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: left;
+
+      li {
+        padding: 0 0 15px 0;
+        margin: 0 0 15px 0;
+        border-bottom: 1px solid #f3f3f3;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        .rss-image {
+          width: 80px;
+          min-width: 80px;
+          margin-right: 15px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .rss-title {
+          line-height: 1.3;
+          font-family: @bold-font;
+          transition: @transition;
+
+          &:hover {
+            color: @hover-color;
+          }
+        }
+
+        .rss-description {
+           font-size: .9em;
+           line-height: 1.3;
+        }
+      }
     }
   }
 }
