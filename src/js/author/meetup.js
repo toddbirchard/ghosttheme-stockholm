@@ -7,9 +7,9 @@ export function author_meetup(meetup) {
   }*/
 
   if (meetup) {
-    var memberURL = 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key;
+    let memberURL = 'https://api.meetup.com/members/' + meetup + '?key=' + meetup_key;
     let eventsURL = 'https://api.meetup.com/2/events?key=' + meetup_key + '&member_id=' + meetup + '&rsvp=yes,maybe&desc=false&status=upcoming';
-    var headers = {
+    let headers = {
       "Content-Type": "application/json"
     };
 
