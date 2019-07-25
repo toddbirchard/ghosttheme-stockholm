@@ -54,10 +54,12 @@ function init_dropdown() {
   });
 
   $('.tableau-extraction').on('click', function() {
+    $('.cards').empty();
     get_kanban_cards('Tableau Extraction');
   });
 
   $('.roblog').on('click', function() {
+    $('.cards').empty();
     get_kanban_cards('Roblog');
   });
 }
