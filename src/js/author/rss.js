@@ -3,7 +3,7 @@ export function author_rss(rss) {
     $(".widget.rss").css('display', 'block');
 
     jQuery(function($) {
-      $(".widget.rss").rss("http://toddbirchard.com/rss", {
+      $(".widget.rss").rss("https://toddbirchard.com/rss", {
         entryTemplate:'<li><div class="rss-image">{teaserImage}</div> \n'
         + '<div class="rss-details"> \n'
           + '<a class="rss-title" href="{url}">{title}</a> \n'
