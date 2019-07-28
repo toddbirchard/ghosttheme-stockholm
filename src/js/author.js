@@ -7,6 +7,7 @@ import {author_website} from './author/website.js';
 import {author_twitter} from './author/twitter.js';
 import {author_rss} from './author/rss.js';
 import {author_meetup} from './author/meetup.js';
+import {author_pocket} from './author/pocket.js';
 
 // Functions
 // -------------------------------------------
@@ -17,11 +18,13 @@ function makeAuthorSidebar(data) {
   let twitter = data['twitter'];
   let rss = data['rss'];
   let meetup = data['meetup'];
+  let pocket = data['pocket'];
   author_github(github);
   author_website(website);
   author_twitter(twitter);
   author_rss(rss);
   author_meetup(meetup);
+  author_pocket(pocket);
   //author_medium(medium);
 
 }

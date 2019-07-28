@@ -2,7 +2,6 @@ export function author_website(website) {
   if (website) {
     $(".website").css('display', 'block');
     var endpoint_url = process.env.LINK_PREVIEW_ENDPOINT + '?url=' + website;
-    console.log('endpoint_url = ' + endpoint_url);
 
     $.ajax({
       method: 'GET',
