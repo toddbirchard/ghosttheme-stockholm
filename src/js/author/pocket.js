@@ -11,7 +11,7 @@ export function author_pocket(pocket) {
       url: pocketURL,
       dataType: 'jsonp',
       success: function(response) {
-        // $(".widget.pocket .pocket-articles").append('ayy lol');
+        $(".widget.pocket .pocket-articles").append('ayy lol');
         console.log(response);
       }
     });
