@@ -1,10 +1,14 @@
 @import "../global/variables.less";
 
 .author-template {
+	.page-container {
+		@media(max-width: @tablet-breakpoint){
+			margin-top: 0;
+		}
+	}
 	.cover {
 		border-bottom: 1px solid #eaedf1;
 		@media(max-width: @mobile-breakpoint){
-			margin-top: -41px;
     	margin-bottom: 30px;
 		}
 
