@@ -1,17 +1,13 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<!-- start site's main content area -->
+
 <div class="page-container series-template sidebar-layout">
-	<!-- start main post area -->
 	<div class="main-content">
 		<div class="postlist">
-			<!-- start sorting widget -->
 			<div class="sort-container">
 				<div class="sort">
 					<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="far d fa-arrow-to-bottom"></i>
 				</div>
 			</div>
-			<!-- end sorting widget -->
 			<main class="sorted-series">
 				{{> cover-tag}}
 				{{#foreach posts}}
@@ -20,10 +16,8 @@
 			</main>
 		</div>
 	</div>
-	{{! insert sidebar partial}}
 	{{> sidebar}}
 </div>
 {{#contentFor "scripts"}}
 	<script async src="{{asset "js/series.js"}}"></script>
 {{/contentFor}}
-<!-- end site's main content area -->

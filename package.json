@@ -81,7 +81,8 @@
     "jquery": "^3.4.1",
     "lazysizes": "^5.1.0",
     "scrollbooster": "^1.1.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vanilla-lazyload": "^12.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
