@@ -14,30 +14,28 @@
       <span class="post-excerpt">{{excerpt words="60"}}</span>
     </div>
     {{^has tag="Roundup"}}
-    <div class="preview-content">{{content words=100}}</div>
-    {{/has}}
-    <div class="post-footer">
-      {{#primary_tag}}
-      <div class="meta-item">
-        <span class="primary-tag {{slug}}">
-          <a href="{{url}}">{{name}}</a>
-        </span>
-      </div>
-      {{/primary_tag}}
+      <div class="preview-content">{{content words=100}}</div>
+      {{/has}}
+      <div class="post-footer">
+        {{#primary_tag}}
+          <div class="meta-item primary-tag {{slug}}">
+            <a href="{{url}}">{{name}}</a>
+          </div>
+        {{/primary_tag}}
 
-      <div class="meta-item date">
-        <i class="fal fa-calendar"></i> <span>{{date published_at format="DD MMMM"}}</span>
-      </div>
-      {{#primary_author}}
-        <div class="meta-item author">
-          <a href="{{url}}"><i class="far fa-user"></i> <span>{{name}}</span></a>
+        <div class="meta-item date">
+          <i class="fal fa-calendar"></i> <span>{{date published_at format="DD MMMM"}}</span>
         </div>
-      {{/primary_author}}
-      <div class="meta-item readtime">
-        <i class="far fa-eye"></i> <span>{{reading_time}}</span>
-      </div>
+        {{#primary_author}}
+          <div class="meta-item author">
+            <a href="{{url}}"><i class="far fa-user"></i> <span>{{name}}</span></a>
+          </div>
+        {{/primary_author}}
+        <div class="meta-item readtime">
+          <i class="far fa-eye"></i> <span>{{reading_time}}</span>
+        </div>
 
-    </div>
+      </div>
   </div>
 
 </article>

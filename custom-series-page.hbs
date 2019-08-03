@@ -1,12 +1,9 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{#contentFor "series_page"}}gh-head-transparent{{/contentFor}}
-<!-- start site's main content area -->
 <div class="page-container sidebar-layout">
 
 	<div class="main-content">
-		<!-- start post -->
 		{{#post}}
 			<section class="{{post_class}} post-preview">
 				<div class="page-head">
@@ -39,9 +36,9 @@
 				</main>
 	</div>
 	{{/post}}
-	<!-- end post -->
-	<!-- start main post area -->
 	{{> sidebar}}
 </div>
 </div>
-<!-- end site's main content area -->
+{{#contentFor "scripts"}}
+	<script async src="{{asset "js/series.js"}}"></script>
+{{/contentFor}}

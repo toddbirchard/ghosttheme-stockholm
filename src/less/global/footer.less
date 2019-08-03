@@ -111,7 +111,7 @@
 	}
 	@media(max-width: @mobile-breakpoint) {
 		min-width: 100%;
-		border-bottom: 1px solid rgba(76, 108, 157, 0.27);
+		border-bottom: 1px solid rgba(76, 108, 157, 0.2);
 		padding-bottom: 20px !important;
 		margin: 0 0 20px;
 	}
@@ -165,36 +165,6 @@
 				font-size: 20px;
 				margin-right: 24px;
 			}
-
-			.btn:hover {
-				&.facebook {
-					color: lighten(@facebook-color, 30%);
-				}
-
-				&.twitter {
-					color: lighten(@twitter-color, 10%);
-				}
-
-				&.tumblr {
-					color: lighten(@tumblr-color, 30%);
-				}
-
-				&.github {
-					color: white;
-				}
-
-				&.pocket {
-					color: lighten(#f14861, 10%);
-				}
-
-				&.quora {
-					color: lighten(#b92b27, 10%);
-				}
-
-				&.rss {
-					color: lighten(@rss-color, 30%);
-				}
-			}
 		}
 
 		a {
@@ -208,7 +178,7 @@
 				cursor: pointer;
 
 				* {
-					color: @hover-color;
+					color: @theme-color;
 				}
 			}
 		}

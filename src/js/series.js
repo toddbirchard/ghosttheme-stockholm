@@ -1,5 +1,6 @@
 import '../less/series.less';
 
+
 function series_sorter() {
   $('.sort-container').on('click', function() {
     $('.sorted-series').toggleClass('descending');

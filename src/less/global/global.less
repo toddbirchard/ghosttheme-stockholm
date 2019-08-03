@@ -1,7 +1,5 @@
 @import "variables.less";
 @import "mixin.less";
-
-
 /*====================================================
 	common styles
 ====================================================*/
@@ -56,7 +54,6 @@ h1 {
 	font-weight: 500;
 	color: @grey-header;
 }
-
 
 h2,
 h4,
@@ -120,8 +117,12 @@ a {
 	}
 }
 
-button:hover {
-	cursor: pointer !important;
+button {
+	-webkit-appearance: none !important;
+
+	&:hover {
+		cursor: pointer !important;
+	}
 }
 
 input:hover {

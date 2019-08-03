@@ -6,28 +6,20 @@
   padding: 40px;
   border-radius: 5px;
   border: 1px solid #e5eff5;
-  @media(max-width: @tablet-breakpoint) {
-    margin: 0 auto 20px;
-    width: -webkit-fill-available;
-    width: moz-available;
-    max-width: 80%;
-  }
-  @media(max-width: @mobile-breakpoint) {
-    max-width: 80%;
-    padding: 20px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.postlist {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr;
+  @media(max-width: @tablet-breakpoint) {
+    margin: 0 auto;
+    width: -webkit-fill-available;
+    width: moz-available;
+    border-radius: 0;
+    padding: 50px;
+    grid-gap: 50px;
+  }
   @media(max-width: @mobile-breakpoint) {
-    grid-gap: 20px;
+    padding: 30px;
+    grid-gap: 30px;
   }
 
   .post-preview {

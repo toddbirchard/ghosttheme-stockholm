@@ -1,0 +1,21 @@
+{{!< default}}
+{{#post}}
+	<div class="page-container sidebar-layout">
+		<main class="page-content">
+			<h1 class="page-title">{{{title}}}</h1>
+			{{content}}
+			<div class="serieslist">
+				{{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" limit="all"}}
+					{{#foreach tags visibility="internal"}}
+						{{> series/seriespreview}}
+					{{/foreach}}
+				{{/get}}
+			</div>
+		</main>
+		{{> sidebar}}
+	</div>
+{{/post}}
+
+{{#contentFor "scripts"}}
+	<script async src="{{asset "js/tag.js"}}"></script>
+{{/contentFor}}

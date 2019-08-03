@@ -1,17 +1,14 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 <!-- Start Post -->
 {{#post}}
-	<article class="{{post_class}}">
-		<!-- start responsive image -->
-		{{#if feature_image}}
-			<div class="post-image">
-				<img alt="{{title}}" class="featured-image lazyload" src="{{img_url feature_image}}" data-rjs="2">
-			</div>
-		{{/if}}
-		<!-- end responsive image -->
+	<div class="post-wrapper">
+		<article class="{{post_class}}">
+			{{#if feature_image}}
+				<div class="post-image">
+					<img alt="{{title}}" class="featured-image lazyload" src="{{img_url feature_image}}" data-rjs="2">
+				</div>
+			{{/if}}
 
-		<div class="post-head">
 			<div class="post-header">
 				<h1 class="post-title">{{{title}}}</h1>
 				<h4 class="excerpt">{{excerpt}}</h4>
@@ -30,30 +27,28 @@
 				{{> posts/postseries}}
 			</div>
 
-		</div>
 
 
-		<!-- start content -->
-		<main class="post-content">
+			<!-- start content -->
+			<main class="post-content">
 
-
-
-			{{! Displays Roundup blurb if post has tag "roundup." }}
-			{{> posts/roundup-blurb}}
-			{{content}}
-			<section class="post-footer">
-				<div class="tag-list">
-					{{#if tags}}
-						{{tags separator=""}}
-					{{/if}}
-				</div>
-				<div class="share">
-					{{> posts/share-links}}
-				</div>
-			</section>
-		</main>
-		<!-- end content -->
-	</article>
+				{{! Displays Roundup blurb if post has tag "roundup." }}
+				{{> posts/roundup-blurb}}
+				{{content}}
+				<section class="post-footer">
+					<div class="tag-list">
+						{{#if tags}}
+							{{tags separator=""}}
+						{{/if}}
+					</div>
+					<div class="share">
+						{{> posts/share-links}}
+					</div>
+				</section>
+			</main>
+			<!-- end content -->
+		</article>
+	</div>
 	<!-- end main post area -->
 	{{> posts/afterpost}}
 	{{#contentFor "scripts"}}

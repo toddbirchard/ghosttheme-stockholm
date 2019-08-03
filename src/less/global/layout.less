@@ -9,7 +9,7 @@
 	}
 	@media(max-width: @tablet-breakpoint) {
 		max-width: none;
-		margin: 20px auto;
+		margin: 0 auto;
 	}
 
 	&.sidebar-layout {
@@ -21,6 +21,13 @@
 			display: block;
 			max-width: unset;
 		}
+	}
+
+	.main-content {
+		border-radius: 5px;
+    @media(max-width: @tablet-breakpoint) {
+      border-radius: 0;
+    }
 	}
 }
 
