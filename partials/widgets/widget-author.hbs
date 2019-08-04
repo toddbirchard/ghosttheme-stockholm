@@ -3,9 +3,9 @@
   <div class="about-author clearfix widget">
     <h4 class="title">Author</h4>
     {{#if profile_image}}
-      <a href="{{url}}"><img src="{{img_url profile_image}}" alt="{{name}}'s avatar" class="avatar pull-left" data-rjs="2"></a>
+      <a href="{{url}}"><img data-src="{{img_url profile_image}}" alt="{{name}}'s avatar" class="avatar pull-left" data-rjs="2"></a>
     {{else}}
-      <a href="{{url}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="{{name}}'s avatar" class="avatar pull-left" data-rjs="2"></a>
+      <a href="{{url}}"><img data-src="{{asset "images/default-user-image.jpg"}}" alt="{{name}}'s avatar" class="avatar pull-left" data-rjs="2"></a>
     {{/if}}
     <div class="details">
       <div class="author">

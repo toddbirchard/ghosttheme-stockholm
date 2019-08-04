@@ -8,7 +8,7 @@ function createMeetupCard(meetup) {
     success: function(ajaxResult) {
       $('.sidebar').append('<div class="widget meetup"><h3 class="title">Meetup</h3><div class="widget-body"> \n ' +
         '<div class="userprofile"> \n ' +
-        '<img class="avatar" src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="2" > \n' +
+        '<img class="avatar" data-src="' + ajaxResult['data']['photo']['thumb_link'] + '" data-rjs="2" > \n' +
         '<div class="info">' +
         '<span class="name">' + ajaxResult['data']['name'] + '</span> \n ' +
         '<span class="location">' + ajaxResult['data']['city'] + ', ' + ajaxResult['data']['state'] + '</span></a> \n ' +

@@ -5,7 +5,7 @@
 
       {{#if feature_image}}
         <a href="{{url}}" class="post-image">
-          <img class="featured-image lazyload" alt="{{title}}" loading="lazy" src="{{img_url feature_image}}" data-rjs="2">
+          <img class="featured-image lazyload" alt="{{title}}" loading="lazy" data-src="{{img_url feature_image}}" data-rjs="2">
         </a>
       {{/if}}
       <div class="post-preview-content">
@@ -18,7 +18,7 @@
       <div class="post-excerpt">{{excerpt words="60"}}</div>
       <div class="post-footer">
         {{#primary_author}}
-          <img src="{{img_url profile_image}}" class="avatar">
+          <img data-src="{{img_url profile_image}}" class="avatar">
         {{/primary_author}}
         <div class="read-time">
           {{reading_time}}

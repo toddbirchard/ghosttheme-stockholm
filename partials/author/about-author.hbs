@@ -2,9 +2,9 @@
 {{#foreach authors include="count.posts"}}
 	<div class="about-author author-card-large clearfix">
 		{{#if profile_image}}
-			<a href="{{url}}" class="avatar"><img src="{{profile_image}}" alt="{{name}}'s' avatar" loading="lazy" class="lazy"></a>
+			<a href="{{url}}" class="avatar"><img data-src="{{profile_image}}" alt="{{name}}'s' avatar" loading="lazy" class="lazy"></a>
 		{{else}}
-			<a href="{{url}}" class="avatar"><img src="{{asset "images/default-user-image.jpg"}}" alt="Default avatar image" loading="lazy" class="lazy"></a>
+			<a href="{{url}}" class="avatar"><img data-sdata-src="{{asset "images/default-user-image.jpg"}}" alt="Default avatar image" loading="lazy" class="lazy"></a>
 		{{/if}}
 		<div class="details">
 			<div class="author">
