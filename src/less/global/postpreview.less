@@ -57,19 +57,17 @@
 			transition: @transition;
 			color: @h1-color;
 			font-size: 1.2em;
-			display: -webkit-box;
 			-webkit-line-clamp: 3;
 			-webkit-box-orient: vertical;
+			overflow: hidden;
+			display: -webkit-box;
+			text-overflow: ellipsis;
 			overflow: hidden;
 			width: -webkit-fill-available;
 			@media(max-width: @mobile-breakpoint) {
 				margin: 5px auto 0;
 				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-				display: -webkit-box;
-				text-overflow: ellipsis;
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 		}
 	}
@@ -166,7 +164,7 @@
 		align-items: center;
 		margin: 20px 0 30px;
 		@media(max-width: @mobile-breakpoint) {
-			margin: 20px 0 0;
+			margin: 10px 0 0;
 		}
 
 		.meta-item {

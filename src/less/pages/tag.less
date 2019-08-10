@@ -37,16 +37,9 @@
     }
 
     article {
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
 
-      &:hover {
-        .post-image,
-        img {
-          border: unset !important;
-        }
-      }
+
+
 
       .content {
         position: relative;
@@ -70,6 +63,9 @@
     }
 
     article {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
       width: 100%;
       height: auto;
       position: relative;
@@ -79,6 +75,13 @@
       @media(max-width: @mobile-breakpoint) {
         width: 100%;
         height: auto;
+      }
+
+      &:hover {
+        .post-image,
+        img {
+          border: unset !important;
+        }
       }
 
       .post-preview-body {
