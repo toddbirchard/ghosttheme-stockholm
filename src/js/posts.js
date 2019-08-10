@@ -106,12 +106,11 @@ function populate_series_list(post) {
 }
 
 function posts_in_series(series, series_name) {
-  const series_endpoint = process.env.GHOST_CONTENT_API_URL +
-                          'posts/?key=4a458b5025e15385f23f0f789f' +
-                          '&filter=tag:' +
+  const series_endpoint = process.env.GHOST_BLOG_URL +
+                          'ghost/api/v2/content/posts/?key=' +
+                          process.env.GHOST_CONTENT_API_KEY + '&filter=tag:' +
                           series +
                           '&order_by=created_at.asc';
-  const headers = { "Content-Type": "application/json" };
   $.ajax({
         method: 'GET',
         url: series_endpoint,
@@ -152,10 +151,10 @@ function tag_loop(tags) {
 
 function create_series_widgets() {
   const post_slug = current_page();
-  const detect_series_endpoint = process.env.GHOST_CONTENT_API_URL +
-                                'posts/slug/' +
+  const detect_series_endpoint = process.env.GHOST_BLOG_URL +
+                                'ghost/api/v2/content/posts/slug/' +
                                 post_slug +
-                                '?key=4a458b5025e15385f23f0f789f' +
+                                '?key=' + process.env.GHOST_CONTENT_API_KEY +
                                 '&include=tags';
   const headers = {
     "Content-Type": "application/json"
