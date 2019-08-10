@@ -1,5 +1,3 @@
-import {$} from 'jquery';
-
 function current_page() {
   const sPath = String(document.location.pathname);
   const slug = sPath.split('/')[1];
@@ -37,7 +35,7 @@ function populate_series_list(post) {
 }
 
 function posts_in_series(series, series_name) {
-  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=4a458b5025e15385f23f0f789f' + '&filter=tag:' + series + '&order_by=created_at.asc';
+  const series_endpoint = process.env.GHOST_CONTENT_API_URL + 'posts/?key=' + process.env.GHOST_CONTENT_API_KEY + '&filter=tag:' + series + '&order_by=created_at.asc';
 
   $.ajax({
     method: 'GET',
