@@ -67,7 +67,6 @@
     "@babel/runtime": "^7.5.5",
     "@sendgrid/mail": "^6.4.0",
     "babel-register": "^6.26.0",
-    "babel-runtime": "^6.26.0",
     "baguettebox.js": "^1.11.0",
     "dotenv-webpack": "^1.7.0",
     "es6-promise": "^4.2.8",
