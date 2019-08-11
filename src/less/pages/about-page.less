@@ -6,6 +6,7 @@
 
   .page {
     padding: 40px;
+    background: white;
     @media(max-width: @mobile-breakpoint) {
       padding: 0 30px 30px;
     }
@@ -41,11 +42,6 @@
     }
   }
 
-  iframe {
-    margin: 0;
-    width: 100%;
-  }
-
   .page-title {
     margin: 0 0 20px;
     @media(max-width: 1100px) {
@@ -69,30 +65,12 @@
   iframe {
     display: block;
     position: relative;
-    @media(max-width: @tablet-breakpoint) {
-      height: 451px;
-    }
+    width: 684px;
+    height: 381px;
+    margin: 0;
     @media(max-width: @mobile-breakpoint) {
       width: 100%;
-      height: 360px;
+      height: 300px;
     }
-    @media(max-width: 470px) {
-      height: 250px !important;
-      min-height: auto !important;
-    }
-  }
-
-  .fluid-width-video-wrapper {
-    height: 50px;
-    @media(max-width: @mobile-breakpoint) {
-      margin: 0 40px 30px;
-    }
-  }
-
-  .fluid-width-video-wrapper {
-    width: 90%;
-    margin: auto;
-    position: relative;
-    padding: 0;
   }
 }

@@ -1,11 +1,9 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
 <!-- start site's main content area -->
-<script src="{{asset "js/apply.js"}}"></script>
 <section class="content-wrap page-apply">
-  <div class="page-container">
+  <div class="page-container sidebar-layout">
     {{#post}}
-      <!-- start main area -->
       <main class="{{page-class}} main-content page">
         <h1>{{{title}}}</h1>
         {{#if feature_image}}
@@ -83,9 +81,13 @@
           </div>
         </div>
       </main>
+      {{> sidebar}}
   </div>
-  <!-- end main post area -->
 </section>
 {{/post}}
-<!-- end post -->
 <!-- end site's main content area -->
+
+{{#contentFor "scripts"}}
+  <script src="{{asset "js/pages.js"}}"></script>
+  <script src="{{asset "js/apply.js"}}"></script>
+{{/contentFor}}

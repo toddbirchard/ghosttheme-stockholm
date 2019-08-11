@@ -3,16 +3,13 @@
 <script src="{{asset "/js/includes/jquery.min.js"}}"></script>
 <script src="{{asset "js/global.js"}}"></script>
 <script src="https://kit.fontawesome.com/39f63d8e3d.js"></script>
-{{^is "post,home"}}
-  <script asyncsrc="{{asset "js/pages.js"}}"></script>
-  {{/is}}
-  {{#is "tag"}}
-    <script async src="{{asset "js/tag.js"}}"></script>
-  {{/is}}
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
-  <script>
-    var lazyLoadInstance = new LazyLoad({
-      elements_selector: ".lazy"
-    });
-  </script>
-  <!-- End Scripts -->
+{{#is "tag"}}
+  <script async src="{{asset "js/tag.js"}}"></script>
+{{/is}}
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+<script>
+  var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
+</script>
+<!-- End Scripts -->

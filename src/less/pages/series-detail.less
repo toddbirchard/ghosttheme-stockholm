@@ -9,8 +9,7 @@
 
   .postlist {
     @media (max-width: 800px) {
-      width: 100%;
-      margin: 20px auto;
+      margin: 0 auto;
       grid-gap: 20px;
     }
   }
@@ -66,78 +65,47 @@
     }
   }
 
-
-
   .fa-arrow-to-bottom {
     transition: @transition;
   }
 
-  .sort-toggle {
+  .sort {
+    float: right;
+    line-height: 1;
+    font-size: 17px;
+    text-align: right;
+    padding: 15px;
+    transition: @transition;
+
+    &:hover {
+      background: @hover-color;
+      cursor: pointer;
+
+      * {
+        color: white;
+      }
+    }
+
     .desc {
-      display: inline !important;
+      display: none;
+      margin-right: 7px;
     }
 
     .asc {
-      display: none !important;
+      display: inline;
+      margin-right: 7px;
+    }
+
+    span {
+      font-family: @body-font;
+      color: #738a94;
+      @media(max-width: @tablet-breakpoint) {
+        font-size: 16px;
+      }
     }
 
     i {
-      transform: rotate(180deg) !important;
-    }
-  }
-  /* Bar which sorts articles */
-  .sort-container {
-    display: flex;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    height: 26px;
-    background: #ffffff;
-    padding: 12px;
-    align-items: center;
-    justify-content: flex-end;
-    transition: @transition;
-    border-bottom: 1px solid #eaedf1;
-    border-top: 1px solid #eaedf1;
-    @media(max-width: @tablet-breakpoint) {
-      padding: 7px 12px;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background: @hover-color;
-
-      * {
-        color: white !important;
-        cursor: pointer;
-      }
-    }
-
-    .sort {
-      float: right;
-      line-height: 1;
-      font-size: 17px;
-
-      .desc {
-        display: none;
-        margin-right: 7px;
-      }
-
-      .asc {
-        display: inline;
-        margin-right: 7px;
-      }
-
-      span {
-        font-family: @body-font;
-        color: #738a94;
-        @media(max-width: @tablet-breakpoint) {
-          font-size: 16px;
-        }
-      }
-
-      i {
-        color: #738a94;
-      }
+      color: #738a94;
     }
   }
 
@@ -149,7 +117,7 @@
     transition: @transition;
     overflow: hidden;
     @media(max-width: @mobile-breakpoint) {
-      padding: 15px;
+      padding: 15px 0;
       margin-bottom: 8px;
     }
 
@@ -293,7 +261,7 @@
           }
         }
 
-        .date{
+        .date {
           * {
             color: #738a94;
           }
@@ -303,7 +271,7 @@
           padding: 2px 8px;
           border-radius: 12px;
           font-family: @bold-font;
-          font-size: .9em !important;
+          font-size: 0.9em !important;
           color: white !important;
         }
 

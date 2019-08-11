@@ -1,9 +1,7 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<!-- start site's main content area -->
+
 <section class="content-wrap archive">
 	<div class="page-container">
-		<!-- start post -->
 		{{#post}}
 			<main class="main-content">
 				<div class="intro">
@@ -136,17 +134,14 @@
 						</span>
 					</a>
 				</div>
-				{{!--{{> repos}}--}}
 			</main>
 			{{> projects/projects-dropdown }}
-			{{> projects/projects-kanban}}
+			{{> projects/projects-kanban }}
 		{{/post}}
 	</div>
-	<!-- end main post area -->
 </section>
 <div class="overlay"></div>
+
 {{#contentFor "scripts"}}
 	<script src="{{asset "js/projects.js"}}"></script>
 {{/contentFor}}
-
-<!-- end site's main content area -->
