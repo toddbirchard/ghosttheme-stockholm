@@ -30,13 +30,12 @@
 		background: white;
 		max-width: 760px;
 		margin: 0 auto 40px;
-		border-radius: 5px;
 		position: relative;
 		overflow: hidden;
 		padding: 60px;
 		@media(max-width: @tablet-breakpoint) {
 			margin: 0;
-			padding: 40px;
+			padding: 0 40px 40px;
 			width: auto;
 		}
 		@media(max-width: @mobile-breakpoint) {
@@ -53,7 +52,7 @@
 			@media(max-width: @tablet-breakpoint) {
 				height: unset;
 			}
-			@media (max-width: 600px) {
+			@media (max-width: @tablet-breakpoint) {
 				margin-left: calc(-50vw + 50%) !important;
 				margin-right: calc(-50vw + 50%) !important;
 				order: 0;
