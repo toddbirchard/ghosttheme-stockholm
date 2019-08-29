@@ -1,11 +1,13 @@
 #seriesposts {
-  margin: 20px 0 0;
   padding: 0;
-  display: none;
-  position: relative;
-  overflow-x: hidden;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e0ebee;
+    display: none;
+    position: relative;
+    overflow-x: hidden;
+    /* padding-bottom: 20px; */
+    /* border-bottom: 1px solid #e0ebee; */
+    width: fit-content;
+    margin: 40px auto;
+    display: none;
   @media(max-width: @tablet-breakpoint) {
     padding: 0 0 20px;
   }
@@ -41,7 +43,7 @@
       opacity: 0.7;
       counter-increment: li -1;
       color: #687f99;
-      font-size: 0.85em;
+      font-size: 1.5em;
       padding-left: 0;
       line-height: 1;
       display: flex;
@@ -53,7 +55,7 @@
       }
 
       a {
-        font-family: @bold-font;
+        font-family: @body-font;
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 100%;
@@ -83,7 +85,7 @@
         color: #687f99;
         font-family: @bold-font !important;
         margin-right: 8px;
-        font-size: 13px;
+        font-size: 1em;
         white-space: nowrap;
         @media(max-width: @mobile-breakpoint) {
           min-width: 54px;
@@ -106,8 +108,6 @@
   .currentPost {
     opacity: 1 !important;
     margin-left: 0;
-    font-family: @bold-font !important;
-    font-size: 0.95em !important;
 
     &::before {
       margin-left: 0;

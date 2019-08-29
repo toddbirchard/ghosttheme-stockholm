@@ -1,17 +1,15 @@
 {{!< default}}
 
 {{#post}}
-	{{#if feature_image}}
-		<div class="post-image">
-			<img alt="{{title}}" class="featured-image lazy" data-src="{{img_url feature_image}}" data-rjs="2">
-		</div>
-	{{/if}}
+{{#if feature_image}}
+	<div class="post-image lazy" style="background: url({{feature_image}})">
+		<!--<img alt="{{title}}" class="featured-image lazy" data-src="{{img_url feature_image}}" data-rjs="2">-->
+	</div>
+{{/if}}
 	<div class="post-wrapper">
 		<article class="{{post_class}}">
 
 			<div class="post-header">
-				<h1 class="post-title">{{{title}}}</h1>
-				<h4 class="excerpt">{{excerpt}}</h4>
 				<div class="post-meta">
 					{{#primary_tag}}
 						<span class="tags meta-item {{slug}}">{{name}}</span>
@@ -23,6 +21,8 @@
 					<span class="date meta-item"><i class="far d fa-calendar"></i> <span>{{date format="MMM Do"}}</span></span>
 					<span class="readtime meta-item"><i class="far d fa-eye"></i> <span>{{reading_time}}</span></span>
 				</div>
+				<h1 class="post-title">{{{title}}}</h1>
+
 				{{! Lists Table-of-Contents-Like list if post is in a series. }}
 				{{> posts/postseries}}
 			</div>

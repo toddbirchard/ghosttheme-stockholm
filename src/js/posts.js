@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
   enable_baguettebox();
   add_image_alt_tags();
   post_link_previews();
-  create_series_widgets();
+  // create_series_widgets();
   add_table_container_class()
   // hljs_init();
 });
