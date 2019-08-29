@@ -94,53 +94,6 @@
 		}
 	}
 
-	.preview-content {
-		text-align: left;
-		line-height: 1.3;
-		margin: 0;
-
-		& > * {
-			display: none;
-		}
-
-		p:first-child {
-			display: -webkit-box;
-			overflow: hidden;
-			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
-			text-overflow: ellipsis;
-			font-family: @body-font !important;
-			line-height: 1.55;
-			font-size: 1em;
-			font-weight: 500;
-			color: #2d2f35;
-			margin: 0;
-			@media(max-width: @mobile-breakpoint) {
-				display: none;
-			}
-
-			a {
-				font-family: @body-font !important;
-				display: inline !important;
-			}
-		}
-
-		code {
-			display: inline;
-			overflow-y: visible;
-			width: fit-content;
-			background: rgba(183, 214, 247, 0.18);
-			color: #3297b5;
-			padding: 2px 4px;
-			border-radius: 2px;
-			font-size: 0.85em;
-			font-weight: 400;
-			font-family: 'dm', sans-serif;
-			white-space: nowrap;
-			border: 1px solid #e9f1fb;
-		}
-	}
-
 	a {
 		text-decoration: none;
 

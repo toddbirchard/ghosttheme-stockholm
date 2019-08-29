@@ -4,7 +4,7 @@
   .postlist {
     width: -webkit-fill-available;
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px auto 30px;
     @media(max-width: @tablet-breakpoint) {
@@ -30,7 +30,7 @@
       }
 
       .post-title {
-        font-size: 1.4em;
+        font-size: 1.5em;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -38,8 +38,8 @@
         text-overflow: ellipsis;
       }
 
-      .preview-content {
-        display: none;
+      .post-excerpt {
+        font-size: 1.1em;
       }
 
       .post-head {
@@ -47,10 +47,6 @@
         margin: 10px 0 15px;
         @media(max-width: @mobile-breakpoint) {
           margin: 0;
-        }
-
-        .post-title {
-          font-size: 1.3em;
         }
       }
 

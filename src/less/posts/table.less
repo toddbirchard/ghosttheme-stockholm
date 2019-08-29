@@ -14,7 +14,6 @@ table {
   margin-bottom: 0;
   background-color: @table-bg;
   border-spacing: 0;
-  border: 0 solid rgba(255, 255, 255, 0);
 
   &:hover {
     cursor: ew-resize !important;
@@ -22,35 +21,39 @@ table {
 
   thead {
     tr {
-      background: @table-head-bg !important;
-      color: white;
-      font-size: 1.1em;
+      background: white !important;
+
+      th {
+        padding: 15px 10px;
+        vertical-align: top;
+        font-size: 1em;
+      }
     }
   }
 
-  tr{
+  tbody tr {
     transition: all .3s ease-out;
 
     &:nth-child(odd) {
       background: @table-bg-accent;
     }
+  }
 
-    td,
-    th {
-      text-align: left;
-      padding: @table-cell-padding;
-      vertical-align: top;
-      border-top: 0;
-      transition: all .3s ease-out;
-      overflow: hidden;
-      white-space: nowrap;
-      max-width: 150px;
-      text-overflow: ellipsis;
-      border-bottom: 0;
-      font-size: .8em;
-      @media(max-width: @mobile-breakpoint) {
-        border: 0;
-      }
+  td,
+  th {
+    text-align: left;
+    padding: @table-cell-padding;
+    vertical-align: top;
+    border-top: 0;
+    transition: all .3s ease-out;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    border-bottom: 0;
+    font-size: .8em;
+    @media(max-width: @mobile-breakpoint) {
+      border: 0;
     }
   }
 }
@@ -60,10 +63,10 @@ table {
   border-spacing: 0;
   overflow: hidden;
   border-radius: 3px;
-  border: 1px solid #e6edf0;
+  border: 1px solid #d3dadd;
   margin: 30px 0;
   max-height: 539px;
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
     max-height: 600px;
