@@ -18,6 +18,18 @@
 		}
 	}
 
+	.post-image {
+		width: 100%;
+		max-height: 42vw;
+		@media(max-width: @tablet-breakpoint) {
+			max-height: unset;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
 	.sidebar {
 		display: none;
 	}
@@ -34,13 +46,13 @@
 		overflow: hidden;
 		padding: 60px;
 		@media(max-width: @tablet-breakpoint) {
-			margin: 0;
-			padding: 0 40px 40px;
+			margin: -10px 0 0 0;
+			padding: 40px;
 			width: auto;
 		}
 		@media(max-width: @mobile-breakpoint) {
-			padding: 0 30px 30px;
-			margin: 0 0 40px;
+			padding: 0 20px 20px;
+			margin: -10px 0 40px;
 			border-radius: 0;
 		}
 
@@ -49,6 +61,7 @@
 			height: auto;
 			overflow: hidden;
 			margin: 0;
+
 			@media(max-width: @tablet-breakpoint) {
 				height: unset;
 			}
@@ -70,7 +83,7 @@
 		}
 		/* Post header styles */
 		.post-header {
-			margin: 40px 0;
+			margin: 0 0 40px;
 			text-align: left;
 			@media(max-width: @mobile-breakpoint) {
 				padding: 0;
@@ -177,7 +190,6 @@
 				transition: @transition;
 				font-family: @bold-font;
 				@media(max-width: @mobile-breakpoint) {
-					white-space: nowrap;
 					font-family: @bold-font;
 					overflow: hidden;
 					text-overflow: ellipsis;
@@ -357,7 +369,8 @@
 			    top: 10px;
 			    right: 15px;
 			    z-index: 10;
-			    mix-blend-mode: color-burn;
+					mix-blend-mode: screen;
+	    		color: #596271;
 				}
 			}
 			/*   Start of Protip box */

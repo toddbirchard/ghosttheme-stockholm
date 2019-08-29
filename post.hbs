@@ -1,13 +1,13 @@
 {{!< default}}
 
 {{#post}}
+	{{#if feature_image}}
+		<div class="post-image">
+			<img alt="{{title}}" class="featured-image lazy" data-src="{{img_url feature_image}}" data-rjs="2">
+		</div>
+	{{/if}}
 	<div class="post-wrapper">
 		<article class="{{post_class}}">
-			{{#if feature_image}}
-				<div class="post-image">
-					<img alt="{{title}}" class="featured-image lazy" data-src="{{img_url feature_image}}" data-rjs="2">
-				</div>
-			{{/if}}
 
 			<div class="post-header">
 				<h1 class="post-title">{{{title}}}</h1>
