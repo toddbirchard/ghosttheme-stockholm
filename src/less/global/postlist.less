@@ -2,23 +2,16 @@
 @import "mixin.less";
 
 .postlist {
-  background: white;
-  padding: 40px;
-  border-radius: 5px;
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 30px;
   grid-template-columns: 1fr;
   @media(max-width: @tablet-breakpoint) {
-    margin: 0 auto;
+    margin: 4vw auto;
     width: -webkit-fill-available;
     width: moz-available;
-    border-radius: 0;
-    padding: 50px;
-    grid-gap: 50px;
+    max-width: 92%;
   }
   @media(max-width: @mobile-breakpoint) {
-    padding: 30px;
-    grid-gap: 30px;
   }
 
   .post-preview {

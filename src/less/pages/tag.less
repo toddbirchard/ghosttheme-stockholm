@@ -31,12 +31,26 @@
     margin: auto;
     display: grid;
     grid-template-columns: 48.5% 48.5%;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
     @media(max-width: @mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-template-columns: 100%;
     }
 
     article {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #e7e1e1;
+
+      .post-preview-details {
+          padding: 5px;
+      }
+
       .content {
         position: relative;
         margin: 5px 15px 15px;
