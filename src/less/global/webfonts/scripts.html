@@ -1,0 +1,15 @@
+
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+
+<script src="{{ url_for('static', filename='dist/js/includes/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='dist/js/includes/jquery-ui.min.js') }}"></script>
+<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+<script src="{{ url_for('static', filename='dist/js/dragdrop.js') }}"></script>
+<script src="{{ url_for('static', filename='dist/js/sidebar.js') }}"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
