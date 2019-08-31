@@ -28,6 +28,9 @@
 
 	.post-preview-details {
 		padding: 30px;
+		@media(max-width: @mobile-breakpoint) {
+			padding: 20px;
+		}
 	}
 
 	.post-head {
@@ -82,7 +85,6 @@
 		@media(max-width: @mobile-breakpoint) {
 			order: 0;
 			width: 100%;
-			max-height: 45vw;
 			height: auto;
 		}
 

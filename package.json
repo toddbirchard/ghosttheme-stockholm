@@ -40,7 +40,7 @@
     "url": "https://github.com/toddbirchard/ghosttheme-stockholm"
   },
   "config": {
-    "posts_per_page": 14,
+    "posts_per_page": 9,
     "image_sizes": {
       "small": {
         "width": 370

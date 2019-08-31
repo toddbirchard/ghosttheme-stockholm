@@ -8,7 +8,9 @@ nav {
 	background: #ffffff;
 	height: 80px;
 	border-bottom: 1px solid #dbe0e5;
-
+	@media(max-width: 800px) {
+		height: 60px;
+	}
 
 	.nav-wrapper {
 		max-width: 1000px;
@@ -31,6 +33,10 @@ nav {
 			img {
 				height: 40px;
 				width: 40px;
+				@media(max-width: 600px) {
+					height: 35px;
+					width: 35px;
+				}
 			}
 
 			&:hover {
