@@ -1,86 +1,87 @@
 <!-- Start Header -->
 <nav>
   <div class="nav-wrapper">
-    <div class="left-desktop-nav">
-      {{#if @site.icon}}
-        <a class="logo" href="{{@site.url}}/">
-          <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
-        </a>
-      {{/if}}
-
-      <div class="dropdown authors">
-        <a href="{{@site.url}}/about/"><button>Authors</button></a>
-        <div class="dropdown-content">
-          {{#get "authors" limit="all" order="count.posts desc" }}
-            {{#foreach authors}}
-              <a href="{{url}}">{{name}}</a>
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-
-      <div class="dropdown posts">
-        <a href="{{@site.url}}/archive/"><button>Posts</button></a>
-        <div class="dropdown-content">
-          {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
-            {{#foreach tags}}
-              <a href="{{url}}">{{name}}</a>
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-
-      <div class="dropdown pages">
-        <button>Pages</button>
-        <div class="dropdown-content">
-          <a href="{{@site.url}}/about/">About Us</a>
-          <a href="{{@site.url}}/series/">Series</a>
-          <a href="{{@site.url}}/projects/">Projects</a>
-          <a href="{{@site.url}}/resources/">Resources</a>
-          <a href="{{@site.url}}/become-a-contributor/">Join The Club</a>
-        </div>
-      </div>
-
-      <div class="dropdown publications">
-        <a href="{{@site.url}}/series/"><button>Series'</button></a>
-        <div class="dropdown-content">
-          {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
-            {{#foreach tags visibility="internal"}}
-              <a href="/series/{{slug}}/">{{meta_title}}</a>
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-
-    </div>
-
-    <div class="right-desktop-nav">
-      <div class="dropdown about">
-        <a href="{{@site.url}}/about/"><button>About</button></a>
-      </div>
-
-      <a href="https://www.patreon.com/hackersandslackers">
-        <button class="donate-btn">Donate</button>
+    {{#if @site.icon}}
+      <a class="logo" href="{{@site.url}}/">
+        <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
       </a>
-    </div>
+    {{/if}}
+    <div class="nav-links">
+      <div class="left-desktop-nav">
+        <div class="dropdown authors">
+          <a href="{{@site.url}}/about/"><button>Authors</button></a>
+          <div class="dropdown-content">
+            {{#get "authors" limit="all" order="count.posts desc" }}
+              {{#foreach authors}}
+                <a href="{{url}}">{{name}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
 
-    <div class="left-mobile-nav">
-      {{#if @site.icon}}
-        <a class="logo" href="{{@site.url}}/">
-          <img data-src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
+        <div class="dropdown posts">
+          <a href="{{@site.url}}/archive/"><button>Posts</button></a>
+          <div class="dropdown-content">
+            {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
+              {{#foreach tags}}
+                <a href="{{url}}">{{name}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
+
+        <div class="dropdown pages">
+          <button>Pages</button>
+          <div class="dropdown-content">
+            <a href="{{@site.url}}/about/">About Us</a>
+            <a href="{{@site.url}}/series/">Series</a>
+            <a href="{{@site.url}}/projects/">Projects</a>
+            <a href="{{@site.url}}/resources/">Resources</a>
+            <a href="{{@site.url}}/become-a-contributor/">Join The Club</a>
+          </div>
+        </div>
+
+        <div class="dropdown publications">
+          <a href="{{@site.url}}/series/"><button>Series'</button></a>
+          <div class="dropdown-content">
+            {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
+              {{#foreach tags visibility="internal"}}
+                <a href="/series/{{slug}}/">{{meta_title}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-desktop-nav">
+        <div class="dropdown about">
+          <a href="{{@site.url}}/about/"><button>About</button></a>
+        </div>
+
+        <a href="https://www.patreon.com/hackersandslackers">
+          <button class="donate-btn">Donate</button>
         </a>
-      {{/if}}
-    </div>
+      </div>
 
-    <div class="right-mobile-nav">
-      <div class="dropdown">
-        <a href="{{@site.url}}/about/"><button>About</button></a>
+      <div class="left-mobile-nav">
+        {{#if @site.icon}}
+          <a class="logo" href="{{@site.url}}/">
+            <img data-src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
+          </a>
+        {{/if}}
       </div>
-      <div class="dropdown">
-        <a href="{{@site.url}}/posts/"><button>Posts</button></a>
-      </div>
-      <div class="dropdown">
-        <a href="{{@site.url}}/series/"><button>Series</button></a>
+
+      <div class="right-mobile-nav">
+        <div class="dropdown">
+          <a href="{{@site.url}}/about/"><button>About</button></a>
+        </div>
+        <div class="dropdown">
+          <a href="{{@site.url}}/posts/"><button>Posts</button></a>
+        </div>
+        <div class="dropdown">
+          <a href="{{@site.url}}/series/"><button>Series</button></a>
+        </div>
       </div>
     </div>
   </div>

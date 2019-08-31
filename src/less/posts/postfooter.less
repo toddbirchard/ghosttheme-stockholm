@@ -35,7 +35,8 @@
 			color: #99a2b3 !important;
 			border: 1px solid #e3e8f0;
 			border-radius: 2px;
-			font-size: 0.8em;
+			font-size: 0.9em;
+			font-weight: unset;
 			margin-right: 10px;
 			line-height: 1;
 			padding: 8px 10px;
@@ -56,195 +57,6 @@
 			width: 100%;
 		}
 	}
-
-	.share {
-		margin: 15px 0 0 !important;
-		@media(max-width: @mobile-breakpoint) {
-			margin: 10px 0 0 !important;
-		}
-
-		.share-icons {
-			display: flex;
-			justify-content: space-between;
-			margin: 0 !important;
-			padding: 0;
-			width: 100%;
-			height: fit-content;
-			@media(max-width:800px) {
-				margin: auto;
-				width: 100%;
-			}
-
-			.btn {
-				list-style: none;
-				display: block !important;
-				border-radius: 2px;
-				background: #f4f6f9;
-				transition: 0.2s all ease-out;
-				border: 0;
-				padding: 0;
-				margin: auto 0;
-				min-width: 18%;
-				@media(max-width: @tablet-breakpoint) {
-					border: 0;
-					height: 29px;
-				}
-				@media(max-width: @mobile-breakpoint) {
-					border: none;
-					min-width: unset;
-					background: unset;
-					overflow: visible;
-				}
-
-				&:before {
-					display: none;
-				}
-
-				a {
-					text-align: center;
-					display: block;
-					padding: 7px 0 7px 0 !important;
-					width: 100%;
-					margin: 0 auto;
-					@media(max-width: @tablet-breakpoint) {
-						padding: 0 !important;
-						height: fit-content;
-					}
-					@media(max-width: @mobile-breakpoint) {
-						padding: 0 !important;
-						margin: 0;
-						height: fit-content;
-					}
-				}
-
-				&:hover i {
-					color: white;
-				}
-
-				&.facebook {
-					&:hover {
-						background-color: lighten(@facebook-color, 15%);
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: lighten(@facebook-color, 15%);
-							}
-						}
-					}
-				}
-
-				&.twitter {
-					&:hover {
-						background-color: lighten(@twitter-color, 5%);
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: lighten(@twitter-color, 5%);
-							}
-						}
-					}
-				}
-
-				&.linkedin {
-					&:hover {
-						background-color: lighten(@linkedin-color, 5%);
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: lighten(@linkedin-color, 5%);
-							}
-						}
-					}
-				}
-
-				&.devto {
-					&:hover {
-						background-color: black;
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: black;
-							}
-						}
-					}
-				}
-
-				&.ycombinator {
-					&:hover {
-						background-color: lighten(@rss-color, 15%);
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: lighten(@rss-color, 15%);
-							}
-						}
-					}
-				}
-
-				&.reddit {
-					&:hover {
-						background-color: lighten(@reddit-color, 15%);
-						cursor: pointer;
-						@media(max-width: @mobile-breakpoint) {
-							background-color: unset;
-							i {
-								color: lighten(@reddit-color, 15%);
-							}
-						}
-					}
-				}
-
-				&:hover {
-					border: none;
-				}
-
-				i {
-					margin: 0 auto;
-					color: #b3b8c7;
-					font-size: 19px;
-					display: block;
-					width: fit-content;
-					font-weight: unset;
-					@media(max-width: @tablet-breakpoint) {
-						font-size: 24px;
-						padding-top: 3px;
-					}
-					@media(max-width: @mobile-breakpoint) {
-						font-size: 2em;
-						padding: 0;
-					}
-				}
-			}
-
-			a {
-				border: 0;
-				line-height: 1.5em;
-				border-radius: 2px;
-				transition: @transition;
-				font-size: 0.9em;
-				overflow: visible;
-
-				&:hover {
-					color: white;
-					text-decoration: none;
-
-					i {
-						-webkit-transform: scale(1.1);
-						transform: scale(1.1);
-					}
-
-					span {
-						color: #fff;
-					}
-				}
-			}
-		}
-	}
 }
 
 .post-template .widget.newsletter {
@@ -257,7 +69,7 @@
 
 	h4 {
 		margin: 0;
-		font-family: @bold-font;
+		font-weight: 600;
 		font-weight: 100;
 	}
 

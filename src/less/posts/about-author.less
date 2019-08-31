@@ -41,7 +41,7 @@
       display: block;
       line-height: 1em;
       margin-bottom: 8px;
-      font-size: 0.9em;
+      font-size: 1em;
 
       i {
         margin-right: 5px;
@@ -55,16 +55,16 @@
     margin-top: 10px;
     width: 100%;
     clear: both;
-    font-size: 0.9em;
     color: #464a56;
-    font-weight: 500;
   }
 
-  .author {
+  .author-name {
     font-size: 1.5em;
     margin-bottom: 0;
     line-height: 1;
-    font-family: @bold-font;
+    font-family: @body-font;
+    color: #5D6178;
+    font: @sub-header-font;
     @media(max-width: @mobile-breakpoint) {
       font-size: 1.3em;
     }
@@ -103,10 +103,7 @@
   justify-content: left !important;
 
   .name {
-    font-family: @body-font;
-    color: #5D6178;
-    font-size: 0.9em;
-    font-weight: 600;
+
   }
 
   .meta {
@@ -128,7 +125,6 @@
       }
 
       .copy {
-        opacity: 0.8;
         display: inline-block;
         margin-bottom: 0;
       }

@@ -16,7 +16,7 @@
     display: none;
     font-size: 1.1em;
     color: #687f99 !important;
-    font-family: @bold-font;
+    font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 20px;
     padding: 0;
@@ -83,7 +83,7 @@
       &::before {
         content: "Part " counter(li, upper-roman) "." !important;
         color: #687f99;
-        font-family: @bold-font !important;
+        font-weight: 600;
         margin-right: 8px;
         font-size: 1em;
         white-space: nowrap;
@@ -98,7 +98,7 @@
       a {
         color: #687f99;
         @media(max-width: @mobile-breakpoint) {
-          font-family: @bold-font;
+          font-weight: 600;
           font-size: 0.9em;
         }
       }
@@ -111,7 +111,7 @@
 
     &::before {
       margin-left: 0;
-      font-family: @bold-font !important;
+      font-weight: 600;
     }
   }
 }

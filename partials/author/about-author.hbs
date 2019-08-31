@@ -7,9 +7,7 @@
 			<a href="{{url}}" class="avatar"><img data-sdata-src="{{asset "images/default-user-image.jpg"}}" alt="Default avatar image" loading="lazy" class="lazy"></a>
 		{{/if}}
 		<div class="details">
-			<div class="author">
-				<a href="{{url}}" class="name">{{name}}</a>
-			</div>
+			<a href="{{url}}" class="author-name">{{name}}</a>
 			<div class="meta">
 				<span class="post-count"><i class="far d fa-pencil"></i><a href="{{url}}">{{#get "posts" include="count.posts"}}{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}{{/get}}</a></span>
 				{{#if location}}

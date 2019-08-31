@@ -25,7 +25,7 @@
 		color: @text-color;
 		font-weight: 800;
 		font-size: 1.1em;
-		font-family: @header-font-bold;
+		font-family: @sub-header-font;
 		text-align: left;
 		text-transform: uppercase;
 		letter-spacing: 2px;
@@ -104,11 +104,7 @@
 		about
 ====================================================*/
 .widget.about {
-	min-width: 27%;
-	width: 27%;
-	@media(max-width: @tablet-breakpoint) {
-		width: 35% !important;
-	}
+	width: 260px;
 	@media(max-width: @mobile-breakpoint) {
 		min-width: 100%;
 		border-bottom: 1px solid rgba(76, 108, 157, 0.2);
@@ -133,6 +129,8 @@
 
 		img {
 			width: 100%;
+			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  		filter: grayscale(100%);
 		}
 	}
 
@@ -153,21 +151,17 @@
 	.social-btns {
 		width: 100%;
 		margin-bottom: 18px;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 		.btn {
 			color: #738a94;
 			border: 0;
-			margin-right: 20px;
-			@media(max-width: @mobile-breakpoint) {
-				margin-right: 24px;
-			}
 		}
 
 		i {
-			font-size: 16px;
-			@media(max-width: @mobile-breakpoint) {
-				font-size: 20px;
-			}
+			margin: 0;
 		}
 
 		a {

@@ -2,8 +2,10 @@
 <div class="widget about">
   {{#if @site.logo}}
     <a class="logo"href="{{@site.url}}/">
-      <img data-src="https://hackers.nyc3.cdn.digitaloceanspaces.com/img/redesign-assets/logodark.png" class="lazy" alt="{{@site.title}}" data-rjs="2">
+      <img data-src="{{@site.logo}}" class="footer-logo lazy" alt="{{@site.title}}" data-rjs="2">
     </a>
+  {{else}}
+    <h4 class="footer-title">{{@site.title}}</h4>
   {{/if}}
   <p class="description">{{@site.description}}</p>
   <div class="social-btns">
