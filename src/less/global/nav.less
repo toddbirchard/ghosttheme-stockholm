@@ -45,15 +45,19 @@ nav {
 			align-items: center;
 			width: 100%;
 			@media(max-width: @mobile-breakpoint) {
-				display: flex;
-    		justify-content: space-between;
-    		align-items: center;
+				display: block;
+			}
+		}
+
+		.right-desktop-nav {
+			@media(max-width: @mobile-breakpoint) {
+				display: none !important;
 			}
 		}
 
 		.left-desktop-nav {
 			@media(max-width: @mobile-breakpoint) {
-				display: none !important;
+				float: right;
 			}
 		}
 
@@ -68,7 +72,6 @@ nav {
 
 			.donate-btn {
 				font-family: 'proxima-nova', sans-serif !important;
-				font-weight: 100;
 				font-size: 1em;
 				-webkit-appearance: none !important;
 				color: #626573;
@@ -97,7 +100,7 @@ nav {
 				display: flex;
 				justify-content: center;
 				@media(max-width: @tablet-breakpoint) {
-					  margin-right: 20px;
+					  margin: 0 0 0 20px;
 				}
 
 				&>a {
@@ -107,7 +110,6 @@ nav {
 
 				button {
 					font-family: 'proxima-nova', sans-serif !important;
-					font-weight: 100;
 					font-size: 1em;
 					-webkit-appearance: none !important;
 					border: none;
@@ -128,8 +130,6 @@ nav {
 					}
 				}
 
-
-
 				.dropdown-content {
 					display: none;
 					background: white;
@@ -145,7 +145,7 @@ nav {
 
 					a {
 						display: block;
-						font-size: 0.8em;
+						font-size: 0.9em;
 						padding: 10px;
 						text-align: left;
 						line-height: 1.5;
@@ -184,13 +184,11 @@ nav {
 		}
 
 		.dropdown {
-			margin: 0 20px 0 0;
+			    margin: 0 20px 0 0;
 
 			&:last-of-type {
 				margin-right: 0;
 			}
 		}
-
-
 	}
 }
