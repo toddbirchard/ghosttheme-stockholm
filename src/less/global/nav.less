@@ -44,18 +44,21 @@ nav {
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
+			@media(max-width: @mobile-breakpoint) {
+				display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+			}
 		}
 
-		.left-desktop-nav,
-		.right-desktop-nav {
+		.left-desktop-nav {
 			@media(max-width: @mobile-breakpoint) {
 				display: none !important;
 			}
 		}
 
 		.left-desktop-nav,
-		.right-desktop-nav,
-		.right-mobile-nav {
+		.right-desktop-nav {
 			display: flex;
 			justify-content: left;
 			align-items: center;
@@ -172,7 +175,6 @@ nav {
 		}
 	}
 
-	.right-mobile-nav,
 	.left-mobile-nav {
 		display: none !important;
 		@media(max-width: @mobile-breakpoint) {

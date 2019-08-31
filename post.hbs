@@ -1,11 +1,9 @@
 {{!< default}}
 
 {{#post}}
-{{#if feature_image}}
-	<div class="post-image lazy" style="background: url({{feature_image}})">
-		<!--<img alt="{{title}}" class="featured-image lazy" data-src="{{img_url feature_image}}" data-rjs="2">-->
-	</div>
-{{/if}}
+	{{#if feature_image}}
+		<div class="post-image lazy" style="background: url({{feature_image}})"> </div>
+	{{/if}}
 	<div class="post-wrapper">
 		<article class="{{post_class}}">
 
@@ -31,14 +29,7 @@
 				{{> posts/roundup-blurb}}
 				{{content}}
 				<section class="post-footer">
-					<div class="tag-list">
-						{{#if tags}}
-							{{tags separator=""}}
-						{{/if}}
-					</div>
-					<div class="share">
-						{{> posts/share-links}}
-					</div>
+					<div class="tag-list"> {{#if tags}} {{tags separator=""}} {{/if}} </div>
 				</section>
 			</main>
 			<!-- end content -->

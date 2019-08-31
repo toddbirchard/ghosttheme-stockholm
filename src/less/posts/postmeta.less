@@ -1,35 +1,28 @@
-  .post-meta {
-    margin: 20px 0;
-    color: #787c87;
-    font-size: 12px;
-    display: flex;
+.post-meta {
+  margin: 15px 0;
+  color: #787c87;
+  font-size: 12px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  @media(max-width: @mobile-breakpoint) {
+    padding: 0;
+    max-width: none;
     width: auto;
-    align-items: center;
-    justify-content: center;
-    @media(max-width: @mobile-breakpoint) {
-      padding: 0;
-      max-width: none;
-      width: auto;
-      order: 2;
-    }
+    order: 2;
+  }
 
-    .date {
-      @media(max-width: @mobile-breakpoint) {
-        display: none;
-      }
-    }
+  .tags {
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.95em;
 
-    .tags {
-      padding: 5px 10px;
-      border-radius: 3px;
-      color: white;
-      font-size: .95em;
-
-      &.codesnippetcorner {
-        i {
-          @media(max-width: @mobile-breakpoint) {
-            display: none;
-          }
+    &.codesnippetcorner {
+      i {
+        @media(max-width: @mobile-breakpoint) {
+          display: none;
         }
       }
     }
@@ -43,10 +36,10 @@
     align-items: center;
     text-transform: capitalize;
     line-height: 1;
-    margin: 0 25px 0 0 !important;
+    margin: 0 15px 0 15px !important;
 
     * {
-      font-size: .9em;
+      font-size: 0.9em;
       padding: 0;
       color: @text-color-light;
       @media(max-width: @tablet-breakpoint) {
@@ -55,28 +48,15 @@
     }
 
     a:hover {
-          color: @hover-color;
+      color: @hover-color;
     }
 
     &.desktop {
       display: flex;
     }
 
-    &.mobile {
-      display: none;
-      @media(max-width: @mobile-breakpoint) {
-        display: flex;
-      }
-    }
-
     i {
       margin-right: 8px;
-    }
-
-    &.readtime {
-      @media(max-width: @mobile-breakpoint) {
-        display: none;
-      }
     }
 
     a {
@@ -95,3 +75,4 @@
       margin: 0;
     }
   }
+}
