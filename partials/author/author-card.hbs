@@ -14,9 +14,7 @@
       <a href="{{url}}" class="avatar-link"><img data-src="{{asset "default-user-image.jpg"}}" alt="{{name}}'s' avatar" class="avatar"></a>
     {{/if}}
     <div class="details">
-      <div class="author">
-        <a class="author-name" href="{{url}}">{{name}}</a>
-      </div>
+      <a class="author-name" href="{{url}}">{{name}}</a>
       <div class="meta-info">
         <span class="title"></span>
         <span class="post-count"><i class="far d fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
@@ -27,20 +25,19 @@
           <span class="website"><i class="far d fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
         {{/if}}
         {{#if twitter}}
-					<span class="website"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
-				{{/if}}
+          <span class="website"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
+        {{/if}}
         {{#if facebook}}
-					<span class="website"><i class="fab fa-facebook"></i><a href="{{facebook_url}}">Facebook</a></span>
-				{{/if}}
+          <span class="website"><i class="fab fa-facebook"></i><a href="{{facebook_url}}">Facebook</a></span>
+        {{/if}}
       </div>
+      {{#if bio}}
+        <p class="bio"> {{bio}} </p>
+      {{/if}}
     </div>
   </div>
 
-  {{#if bio}}
-    <p class="bio">
-      {{bio}}
-    </p>
-  {{/if}}
+
   <div class="author-social">
     <ul class="author-icons">
       <!-- Twitter -->
