@@ -3,3 +3,4 @@ Sitemap: https://hackersandslackers.com/sitemap.xml
 Disallow: /ghost/
 Disallow: /p/
 Disallow: /roundup/
+Disallow: /roundup/*
