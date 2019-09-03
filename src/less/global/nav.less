@@ -103,15 +103,17 @@ nav {
 				margin-right: 20px;
 				outline: none;
 				transition: @transition;
-				display: flex;
-				justify-content: center;
+				position: relative;
+				height: 100%;
+
 				@media(max-width: @tablet-breakpoint) {
 					  margin: 0 0 0 20px;
 				}
 
-				&>a {
-					display: block;
-					height: fit-content;
+				 & > button {
+					height: 80px;
+			    display: flex;
+			    align-items: center;
 				}
 
 				button {
@@ -124,6 +126,8 @@ nav {
 					outline: none;
 					transition: @transition;
 					background: none;
+					display: flex;
+					justify-content: center;
 
 					&:hover {
 						color: @theme-color;
@@ -145,7 +149,7 @@ nav {
 					position: absolute;
 					opacity: 0;
 					padding: 5px;
-					top: 57px;
+					top: 50px;
 					transition: all 0.2s ease-out;
 					transition: @transition;
 
