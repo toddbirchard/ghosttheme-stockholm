@@ -8,8 +8,9 @@
     {{/if}}
     <div class="nav-links">
       <div class="left-desktop-nav">
-        <div class="dropdown">
-          <button class="authors">Authors</button>
+        <div class="dropdown authors">
+          <button class="authors-button">Authors</button>
+          <a class="mobile-link" href="/about">About</a>
           <div class="dropdown-content">
             {{#get "authors" limit="all" order="count.posts desc" }}
               {{#foreach authors}}
@@ -19,8 +20,8 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <button class="posts">Posts</button>
+        <div class="dropdown posts">
+          <button class="posts-button">Posts</button>
           <div class="dropdown-content">
             {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
               {{#foreach tags}}
@@ -30,8 +31,8 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <button class="pages">Pages</button>
+        <div class="dropdown pages">
+          <button class="pages-button">Pages</button>
           <div class="dropdown-content">
             <a href="{{@site.url}}/about/">About Us</a>
             <a href="{{@site.url}}/series/">Series</a>
@@ -41,8 +42,9 @@
           </div>
         </div>
 
-        <div class="dropdown">
-          <button class="publications">Series'</button>
+        <div class="dropdown publications">
+          <button class="publications-button">Series'</button>
+          <a class="mobile-link" href="/series">Series'</a>
           <div class="dropdown-content">
             {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
               {{#foreach tags visibility="internal"}}
