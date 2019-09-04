@@ -57,10 +57,11 @@
       height: 15px !important;
       font-size: 15px !important;
       color: #738a94;
-      margin-right: 10px;
+      margin-right: 5px;
     }
 
-    span {
+    span,
+    a {
       color: #738a94;
     }
   }
@@ -74,7 +75,7 @@
     line-height: 1;
     font-size: 17px;
     text-align: right;
-    padding: 15px;
+    padding: 20px;
     transition: @transition;
     background: white;
 
@@ -114,13 +115,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
     transition: @transition;
+    margin-bottom: 15px;
+    border-radius: 5px;
     overflow: hidden;
-    @media(max-width: @mobile-breakpoint) {
-      padding: 15px 0;
-      margin-bottom: 8px;
-    }
 
     &:hover {
       cursor: pointer;
@@ -165,18 +163,13 @@
 
     .details {
       width: 100%;
-      padding: 5px 20px 0;
+      padding: 20px;
       position: relative;
-      @media(max-width: @tablet-breakpoint) {
-        padding: 0 0 0 15px;
-      }
 
       .meta {
         display: flex;
         justify-content: left;
         align-items: center;
-        position: absolute;
-        bottom: 4px;
 
         .info {
           display: none;
@@ -194,13 +187,12 @@
         .post-title {
           font-weight: 900;
           width: 100%;
-          margin: 0 0 5px;
+          margin: 10px 0;
           font-size: 1.25em;
-          min-height: 56px;
           line-height: 1.25;
 
           a {
-            font-family: @header-font;
+            font-family: @sub-header-font;
             font-size: 1em;
             transition: @transition;
             color: @grey-header;
@@ -253,6 +245,10 @@
             margin: auto 0;
           }
 
+          * {
+            color: #738a94;
+          }
+
           span {
             font-family: @body-font;
             white-space: nowrap;
@@ -262,18 +258,11 @@
           }
         }
 
-        .date {
-          * {
-            color: #738a94;
-          }
-        }
-
         .tags {
           padding: 2px 8px;
           border-radius: 12px;
-          font-weight: 600;
           font-size: 0.9em !important;
-          color: white !important;
+          color: #738a94;
         }
 
         .author {
@@ -294,7 +283,8 @@
     .imagewrapper {
       display: block;
       width: auto;
-      height: 115px;
+      height: 150px;
+      max-width: 252px;
       overflow: hidden;
       @media(max-width: @mobile-breakpoint) {
         max-width: 40%;
@@ -302,14 +292,7 @@
       }
 
       img {
-        height: 115px;
-        margin-bottom: -8px;
-        @media(max-width: @tablet-breakpoint) {
-          width: auto;
-        }
-        @media(max-width: @mobile-breakpoint) {
-          height: 100%;
-        }
+        height: 100%;
       }
 
       .post-card-image {
