@@ -100,18 +100,27 @@ nav {
 				margin-right: 20px;
 				outline: none;
 				transition: @transition;
-				display: flex;
-				justify-content: center;
+				position: relative;
+				height: -webkit-fill-available;
+
 				@media(max-width: @tablet-breakpoint) {
-					  margin: 0 0 0 20px;
+					  margin: 0 0 0 30px;
 				}
 
-				&>a {
-					display: block;
-					height: fit-content;
+				.mobile-link {
+					display: none !important;
+
+					@media(max-width: @mobile-breakpoint) {
+						  display: flex !important;
+					}
 				}
 
-				button {
+				button,
+				.mobile-link {
+					height: -webkit-fill-available;
+			    display: flex;
+			    align-items: center;
+					padding: 0;
 					font-family: 'proxima-nova', sans-serif !important;
 					font-size: 1em;
 					-webkit-appearance: none !important;
@@ -121,13 +130,27 @@ nav {
 					outline: none;
 					transition: @transition;
 					background: none;
+					display: flex;
+					justify-content: center;
 
 					&:hover {
 						color: @theme-color;
 					}
 				}
 
+				button {
+					@media(max-width: @mobile-breakpoint) {
+						display: none !important;
+					}
+				}
+
 				&.pages {
+					@media(max-width: @mobile-breakpoint) {
+						display: none;
+					}
+				}
+
+				&.posts {
 					@media(max-width: @mobile-breakpoint) {
 						display: none;
 					}
@@ -142,7 +165,7 @@ nav {
 					position: absolute;
 					opacity: 0;
 					padding: 5px;
-					top: 57px;
+					top: 50px;
 					transition: all 0.2s ease-out;
 					transition: @transition;
 
