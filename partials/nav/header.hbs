@@ -23,7 +23,7 @@
         <div class="dropdown posts">
           <button class="posts-button">Posts</button>
           <div class="dropdown-content">
-            {{#get "tags" filter="slug:-[roundup,excel,machine-learning,graph-databases,science-news,cybersecurity,blockchain,aws-api,kanban,codesnippetcorner,statistics,tableau-hacks]" limit="10" include="count.posts" order="count.posts DESC" }}
+            {{#get "tags" limit="10" visibility="all" include="count.posts" order="count.posts DESC" }}
               {{#foreach tags}}
                 <a href="{{url}}">{{name}}</a>
               {{/foreach}}
@@ -34,11 +34,11 @@
         <div class="dropdown pages">
           <button class="pages-button">Pages</button>
           <div class="dropdown-content">
-            <a href="{{@site.url}}/about/">About Us</a>
-            <a href="{{@site.url}}/series/">Series</a>
-            <a href="{{@site.url}}/projects/">Projects</a>
-            <a href="{{@site.url}}/resources/">Resources</a>
-            <a href="{{@site.url}}/become-a-contributor/">Join The Club</a>
+            {{#foreach navigation}}
+              <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+                <a href="{{url absolute="true"}}">{{label}}</a>
+              </li>
+            {{/foreach}}
           </div>
         </div>
 
@@ -46,7 +46,7 @@
           <button class="publications-button">Series'</button>
           <a class="mobile-link" href="/series">Series'</a>
           <div class="dropdown-content">
-            {{#get "tags" filter="feature_image:-null+slug:-[starting-django,plotly-dash]" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
+            {{#get "tags" filter="feature_image:-null" visibility="all" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
               {{#foreach tags visibility="internal"}}
                 <a href="/series/{{slug}}/">{{meta_title}}</a>
               {{/foreach}}
