@@ -1,6 +1,6 @@
 export function code_snippet_full_screen() {
   $('main pre').each(function() {
-    $(this).append('<div class="fullscreen-btn"><i style="transform: rotate(45deg);" class="far fa-arrows-alt-v"></i></div>');
+    $(this).append('<div class="fullscreen-btn"><i style="transform: rotate(45deg);" class="fas fa-arrows-alt-v"></i></div>');
     $(this).append('<div class="codeoverflow"></div>');
   });
   $('.fullscreen-btn').on('click', function(event) {

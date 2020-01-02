@@ -1406,7 +1406,7 @@ $(document).ready(function () {
     django: '<i class="fab fa-python"></i>',
     nosql: '<i class="fab fa-envira"></i>',
     apis: '<i class="fab fa-hubspot"></i>',
-    frontend: '<i class="far fa-code"></i>',
+    frontend: '<i class="fas fa-code"></i>',
     data: '<i class="far d fa-chart-pie"></i>',
     mysql: '<i class="far d fa-database"></i>',
     javascript: '<i class="fab fa-js-square"></i>',
@@ -1415,10 +1415,10 @@ $(document).ready(function () {
     devops: '<i class="far d fa-server"></i>',
     pandas: '<i class="far d fa-database"></i>',
     datascience: '<i class="far d fa-flask"></i>',
-    tableau: '<i class="far fa-asterisk"></i>',
+    tableau: '<i class="fas fa-asterisk"></i>',
     googlecloud: '<i class="fab fa-google"></i>',
     sql: '<i class="far d fa-database"></i>',
-    statistics: '<i class="far fa-chart-bar"></i>',
+    statistics: '<i class="fas fa-chart-bar"></i>',
     flask: '<i class="fab fa-affiliatetheme"></i>',
 		atlassian: '<i class="fab fa-trello"></i>'
   };

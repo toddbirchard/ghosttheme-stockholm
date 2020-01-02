@@ -37,7 +37,7 @@ function post_link_previews() {
                         '<div class="detail-stack"> \n ' + '<h4 class="title-desktop">' + result.title + '</h4> \n ' +
                         '<p class="description">' + result.description + '</p> \n' +
                         '<h4 class="title-mobile">' + result.title + '</h4> \n ' +
-                        '<span class="url-info"><i class="far fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
+                        '<span class="url-info"><i class="fas fa-link"></i>' + result.url.split('://')[1] + '</span> \n ' +
                         '</div></div></a>'
                       );
           remove_images();

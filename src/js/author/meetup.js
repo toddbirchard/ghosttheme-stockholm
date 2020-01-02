@@ -27,8 +27,8 @@ export function author_meetup(meetup) {
             <a href="' + url + '"> \
               <div class="meetup-event-name">' + name + '</div> \
               <span class="meetup-event-time"><i class="fal fa-calendar"></i>  ' + time + '</span> \
-              <span class="meetup-event-group"><i class="far fa-user-friends"></i>  ' + group + '</span> \
-              <span class="meetup-event-city"><i class="far fa-map-pin"></i>  ' + city + '</span> \
+              <span class="meetup-event-group"><i class="fas fa-user-friends"></i>  ' + group + '</span> \
+              <span class="meetup-event-city"><i class="fas fa-map-pin"></i>  ' + city + '</span> \
             </a></div>';
             $('.meetup .meetup-events').append(event);
           }
