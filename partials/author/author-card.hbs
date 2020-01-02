@@ -17,12 +17,12 @@
       <a class="author-name" href="{{url}}">{{name}}</a>
       <div class="meta-info">
         <span class="title"></span>
-        <span class="post-count"><i class="far d fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
+        <span class="post-count"><i class="fas fa-pencil"></i><a href="{{url}}">{{plural count.posts empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}</a></span>
         {{#if location}}
-          <span class="location"><i class="far d fa-home"></i>{{location}}</span>
+          <span class="location"><i class="fas fa-home"></i>{{location}}</span>
         {{/if}}
         {{#if website}}
-          <span class="website"><i class="far d fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
+          <span class="website"><i class="fas fa-globe"></i><a href="{{website}}" targer="_BLANK">{{website}}</a></span>
         {{/if}}
         {{#if twitter}}
           <span class="website"><i class="fab fa-twitter"></i><a href="{{twitter_url}}">{{twitter}}</a></span>
