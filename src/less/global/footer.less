@@ -23,8 +23,8 @@
 
 	.footer-title {
 		color: @text-color;
-		font-weight: 800;
-		font-size: 1.1em;
+		font-weight: 400;
+		font-size: 1.3em;
 		font-family: @sub-header-font;
 		text-align: left;
 		text-transform: uppercase;
@@ -63,7 +63,6 @@
 				text-align: left;
 				transition: @transition;
 				font-family: @body-font;
-				font-size: 0.9em;
 				margin-bottom: 2px;
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -79,7 +78,7 @@
 				a {
 					color: #576979;
 					font-family: @body-font;
-					
+
 				}
 			}
 		}
@@ -104,7 +103,7 @@
 		about
 ====================================================*/
 .widget.about {
-	width: 260px;
+	width: 240px;
 	@media(max-width: @mobile-breakpoint) {
 		min-width: 100%;
 		border-bottom: 1px solid rgba(76, 108, 157, 0.2);
@@ -112,10 +111,9 @@
 		margin: 0 0 20px;
 	}
 
-	.logo {
-		width: 70%;
+	.footer-logo {
+		width: 100%;
 		display: block;
-		height: 40px;
 		transition: @transition;
 		@media(max-width: @mobile-breakpoint) {
 			margin-bottom: 25px;
@@ -151,6 +149,7 @@
 	.social-btns {
 		width: 100%;
 		margin-bottom: 18px;
+		width: 240px;
 		display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +164,7 @@
 		}
 
 		a {
-			font-size: 1.4em;
+			font-size: 1.7em;
 			margin: 0;
 			color: unset;
 			transition: @transition;

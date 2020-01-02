@@ -7,7 +7,7 @@
 	margin: 0;
 	background: white;
 	overflow: hidden;
-	box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
+	box-shadow: @box-shadow;
 	@media(max-width: @mobile-breakpoint) {
 		padding: 0;
 	}
@@ -60,7 +60,7 @@
 			font-family: @body-font;
 			transition: @transition;
 			color: @h1-color;
-			font-size: 1.3em;
+			font-size: 1.2em;
 			-webkit-line-clamp: 3;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
