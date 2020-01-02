@@ -7,12 +7,12 @@
 		{{name}}
 	</h1>
 	<div class="meta-info">
-		<span class="meta-item post-count"><i class="far d fa-pencil"></i>{{#get "posts" limit="all" filter="authors:{{slug}}"}}{{plural posts.length empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}{{/get}}</span>
+		<span class="meta-item post-count"><i class="fas fa-pencil"></i>{{#get "posts" limit="all" filter="authors:{{slug}}"}}{{plural posts.length empty=(t "0 Posts") singular=(t "% Post") plural=(t "% Posts")}}{{/get}}</span>
 		{{#if location}}
-			<span class="meta-item location"><i class="far d fa-map-marker-alt"></i>{{location}}</span>
+			<span class="meta-item location"><i class="fas fa-map-marker-alt"></i>{{location}}</span>
 		{{/if}}
 		{{#if website}}
-			<span class="meta-item website"><a href="{{website}}" target="_BLANK"><i class="far d fa-globe"></i> {{t "Website"}}</a></span>
+			<span class="meta-item website"><a href="{{website}}" target="_BLANK"><i class="fas fa-globe"></i> {{t "Website"}}</a></span>
 		{{/if}}
 		{{#if twitter}}
 			<span class="meta-item twitter"><a href="{{twitter_url}}" target="_BLANK"><i class="fab fa-twitter"></i>{{twitter}}</a></span>
