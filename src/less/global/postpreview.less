@@ -6,7 +6,6 @@
 	height: 100%;
 	margin: 0;
 	background: white;
-	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
 	@media(max-width: @mobile-breakpoint) {
@@ -58,7 +57,7 @@
 		.post-excerpt {
 			margin: 5px auto 0;
 			line-height: 1.2;
-			font-family: @sub-header-font;
+			font-family: @body-font;
 			transition: @transition;
 			color: @h1-color;
 			font-size: 1.3em;
@@ -92,7 +91,6 @@
 			width: 100%;
 			height: auto;
 			transition: @transition;
-			border-radius: 2px;
 
 			&:hover {
 				opacity: 0.7;
@@ -141,7 +139,6 @@
 
 			&.primary-tag {
 				padding: 6px 12px;
-				border-radius: 10px;
 				color: white;
 				text-transform: uppercase;
 				font-size: 0.7em;
