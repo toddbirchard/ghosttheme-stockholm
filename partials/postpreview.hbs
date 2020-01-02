@@ -8,15 +8,21 @@
       </a>
     {{/if}}
     <div class="post-preview-details">
-      <div class="post-head">
-        <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
-        <span class="post-excerpt">{{excerpt words="60"}}</span>
-      </div>
+      <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
+      <div class="post-excerpt">{{excerpt words="60"}}</div>
       <div class="post-footer">
-        {{#primary_tag}} <div class="meta-item"><i class="fas fa-tag"></i> <a href="{{url}}">{{name}}</a> </div> {{/primary_tag}}
-        {{#if reading_time}}<div class="meta-item date"> <i class="fas fa-calendar"></i> <span>{{date published_at format="DD MMMM"}}</span> </div>{{/if}}
-        {{#primary_author}} <div class="meta-item author"> <a href="{{url}}"><i class="fas fa-user"></i> <span>{{name}}</span></a> </div> {{/primary_author}}
-        {{#if reading_time}}<div class="meta-item readtime"> <i class="fas fa-eye"></i> <span>{{reading_time}}</span> </div>{{/if}}
+        {{#primary_tag}}
+          <div class="meta-item"><i class="fas fa-tag"></i> <a href="{{url}}">{{name}}</a> </div>
+        {{/primary_tag}}
+        {{#if reading_time}}
+          <div class="meta-item date"> <i class="fas fa-calendar"></i> <span>{{date published_at format="DD MMMM"}}</span> </div>
+        {{/if}}
+        {{#primary_author}}
+          <div class="meta-item author"> <a href="{{url}}"><i class="fas fa-user"></i> <span>{{name}}</span></a> </div>
+        {{/primary_author}}
+        {{#if reading_time}}
+          <div class="meta-item readtime"> <i class="fas fa-eye"></i> <span>{{reading_time}}</span> </div>
+        {{/if}}
       </div>
     </div>
   </div>
