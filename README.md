@@ -23,7 +23,7 @@ _Stockholm_ is amongst the most feature-rich Ghost themes currently available. W
 
 This project is in *active development*. All are welcome to use this theme while it is in process of being white labeled. Oddities will almost certainly exist until more user-friendly configuration is completed. For example, certain services are specifically whitelisted to the working domain and will break when cloned. This is being fixed.
 
-A live implementation of this theme can be previewed here: [https://hackersandslackers.com/](https://hackersandslackers.com/)
+A live implementation of this theme can be previewed here: [https://stockholm.ghostthemes.io](https://stockholm.ghostthemes.io)
 
 ## Features
 
