@@ -129,3 +129,8 @@ Remember to restart your Ghost instance when adding new themes.
 This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don't forget to include `.env` in `.gitignore`)!
 
 Replace the values in this configuration file with your own. Additional details to be added here soon.
+
+-----
+
+This theme and all publically-visible repositories are free of charge. If you find this project to be helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards improving these projects.
+
