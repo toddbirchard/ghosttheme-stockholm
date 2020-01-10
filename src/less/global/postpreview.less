@@ -5,8 +5,8 @@
 	order: 2;
 	height: 100%;
 	margin: 0;
-	background: white;
 	overflow: hidden;
+	background: white;
 	box-shadow: @box-shadow;
 	@media(max-width: @mobile-breakpoint) {
 		padding: 0;
@@ -33,10 +33,10 @@
 	}
 
 	.post-title {
-		font-size: 2em;
 		Line-height: 1.1;
-		font-family: @body-font;
 		margin: 0;
+		font-family: @body-font;
+		font-size: 2em;
 		@media(max-width: @mobile-breakpoint) {
 			font-size: 1.7em;
 		}
@@ -52,30 +52,30 @@
 	}
 
 	.post-excerpt {
-		margin: 5px auto 15px;
-		line-height: 1.2;
-		font-family: @body-font;
-		transition: @transition;
-		color: @h1-color;
-		font-size: 1.2em;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
-		overflow: hidden;
 		display: -webkit-box;
-		text-overflow: ellipsis;
-		overflow: hidden;
 		width: -webkit-fill-available;
+		margin: 5px auto 15px;
+		overflow: hidden;
+		overflow: hidden;
+		color: @h1-color;
+		font-family: @body-font;
+		font-size: 1.2em;
+		line-height: 1.2;
+		text-overflow: ellipsis;
+		transition: @transition;
 		@media(max-width: @mobile-breakpoint) {
-			margin: 5px auto 0;
 			-webkit-line-clamp: 2;
+			margin: 5px auto 0;
 			font-size: 1.1em;
 		}
 	}
 
 	.post-image {
 		display: block;
-		margin: 0;
 		max-height: 350px;
+		margin: 0;
 		overflow: hidden;
 		@media(max-width: @mobile-breakpoint) {
 			order: 0;
@@ -89,8 +89,8 @@
 			transition: @transition;
 
 			&:hover {
-				opacity: 0.7;
 				cursor: pointer;
+				opacity: 0.7;
 			}
 		}
 	}
@@ -109,15 +109,19 @@
 
 	.post-footer {
 		display: flex;
-		justify-content: left;
 		align-items: center;
+		justify-content: left;
 		margin: 0;
 
 		.meta-item {
 			margin-right: 30px;
-			color: #5b6374;
-			font-size: 0.9em;
+			color: #778298;
+			font-size: 0.95em;
 			transition: @transition;
+
+			* {
+				color: #778298;
+			}
 
 			i {
 				margin-right: 5px;
@@ -134,15 +138,15 @@
 			}
 
 			&.primary-tag {
-				padding: 6px 12px;
-				color: white;
-				text-transform: uppercase;
-				font-size: 0.7em;
 				display: block;
+				width: fit-content;
+				padding: 6px 12px;
+				float: right;
+				color: white;
+				font-size: 0.7em;
 				line-height: 1.2;
 				text-align: center;
-				width: fit-content;
-				float: right;
+				text-transform: uppercase;
 				transition: @transition;
 
 				&:hover {

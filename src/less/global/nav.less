@@ -5,19 +5,19 @@
 ====================================================*/
 nav {
 	position: relative;
-	background: #ffffff;
 	height: 80px;
 	border-bottom: 1px solid #dbe0e5;
+	background: #ffffff;
 	@media(max-width: 800px) {
 		height: 60px;
 	}
 
 	.nav-wrapper {
-		max-width: 1000px;
-		margin: auto;
-		height: 100%;
 		display: flex;
 		align-items: center;
+		max-width: 1000px;
+		height: 100%;
+		margin: auto;
 		@media(max-width: 1100px) {
 			max-width: 93%;
 		}
@@ -26,13 +26,13 @@ nav {
 		}
 
 		.logo {
-			transition: all 0.2s ease-out;
-			margin-right: 30px;
-			height: 40px;
 			width: 40px;
+			height: 40px;
+			margin-right: 30px;
+			transition: all 0.2s ease-out;
 			@media(max-width: 600px) {
-				height: 35px;
 				width: 35px;
+				height: 35px;
 			}
 
 			img {
@@ -41,24 +41,18 @@ nav {
 			}
 
 			&:hover {
-				opacity: 0.7;
 				cursor: pointer;
+				opacity: 0.7;
 			}
 		}
 
 		.nav-links {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
+			justify-content: space-between;
 			width: 100%;
 			@media(max-width: @mobile-breakpoint) {
 				display: block;
-			}
-		}
-
-		.right-desktop-nav {
-			@media(max-width: @mobile-breakpoint) {
-				display: none !important;
 			}
 		}
 
@@ -71,41 +65,41 @@ nav {
 		.left-desktop-nav,
 		.right-desktop-nav {
 			display: flex;
-			justify-content: left;
 			align-items: center;
+			justify-content: left;
 			@media(max-width: @mobile-breakpoint) {
 				justify-content: inherit;
 			}
 
 			.donate-btn {
+				-webkit-appearance: none !important;
+				padding: 7px 12px;
+				border: 1px solid #d3d6e1;
+				border-radius: 3px;
+				outline: none;
+				background: none;
+				color: #626573;
 				font-family: 'proxima-nova', sans-serif !important;
 				font-size: 1em;
-				-webkit-appearance: none !important;
-				color: #626573;
-				border: 1px solid #d3d6e1;
-				background: none;
-				border-radius: 3px;
-				padding: 7px 12px;
 				line-height: 1;
-				outline: none;
 				transition: @transition;
 
 				&:hover {
-					background: @theme-color;
 					border: 1px solid @theme-color;
+					background: @theme-color;
 					color: white;
 				}
 			}
 
 			.dropdown {
-				color: #626573;
-				border: none;
-				padding: 0;
-				margin-right: 25px;
-				outline: none;
-				transition: @transition;
 				position: relative;
 				height: -webkit-fill-available;
+				margin-right: 30px;
+				padding: 0;
+				border: none;
+				outline: none;
+				color: #626573;
+				transition: @transition;
 				@media(max-width: @tablet-breakpoint) {
 					margin: 0 0 0 30px;
 				}
@@ -119,21 +113,21 @@ nav {
 
 				.mobile-link,
 				button {
-					height: -webkit-fill-available;
+					-webkit-appearance: none !important;
+					display: flex;
 					display: flex;
 					align-items: center;
+					justify-content: center;
+					height: -webkit-fill-available;
 					padding: 0;
-					font-family: 'proxima-nova', sans-serif !important;
-					font-size: 1.1em;
-					-webkit-appearance: none !important;
 					border: none;
-					color: #626573;
 					border: none;
 					outline: none;
-					transition: @transition;
 					background: none;
-					display: flex;
-					justify-content: center;
+					color: #626573;
+					font-family: 'proxima-nova', sans-serif !important;
+					font-size: 1.1em;
+					transition: @transition;
 
 					&:hover {
 						color: @theme-color;
@@ -160,27 +154,27 @@ nav {
 
 				.dropdown-content {
 					display: none;
+					z-index: 10;
+					position: absolute;
+					top: 50px;
+					width: 200px;
+					padding: 5px;
 					background: white;
 					box-shadow: 0 3px 3px rgba(65, 67, 144, 0.15);
-					z-index: 10;
-					width: 200px;
-					position: absolute;
 					opacity: 0;
-					padding: 5px;
-					top: 50px;
 					transition: all 0.2s ease-out;
 					transition: @transition;
 
 					a {
 						display: block;
-						font-size: 0.9em;
 						padding: 10px;
-						text-align: left;
-						line-height: 1.5;
 						color: #373940;
-						transition: all 0.2s ease-out;
 						font-family: 'proxima-nova', sans-serif;
+						font-size: 0.9em;
 						font-weight: 100;
+						line-height: 1.5;
+						text-align: left;
+						transition: all 0.2s ease-out;
 						transition: @transition;
 
 						&:hover {
@@ -207,8 +201,8 @@ nav {
 		display: none !important;
 		@media(max-width: @mobile-breakpoint) {
 			display: flex !important;
-			justify-content: right;
 			align-items: center;
+			justify-content: right;
 		}
 
 		.dropdown {
