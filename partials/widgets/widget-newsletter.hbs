@@ -1,21 +1,19 @@
-<!-- Start Newsletter Widget -->
-{{#if @labs.subscribers}}
   <div id="newsletter-sidebar" class="widget newsletter">
     <div class="gh-subscribe">
       <h4 class="sidebar-title">{{t "Newsletter"}}</h4>
-      <div class="newsletter input-group">
-        <p class="newsletter-description">Are you into data to the point where it's almost embarrasing? Toss us your email and we'll promise to only give you the good stuff.</p>
-        {{subscribe_form
-          placeholder="Your email address"
-          input_class="subscribe-input-class"
-          button_class="btn"
-          form_class="newsletter-form"
-          form_id="sidebar-newsletter-form"
-          input_id="sidebar-newsletter-input"
-          button_id="sidebar-newsletter-button"
-        }}
-      </div>
+      <form data-members-form="subscribe">
+        <div class="form-group">
+          <input class="subscribe-email" data-members-email placeholder="youremail@example.com" autocomplete="false" />
+          <button class="button primary" type="submit">
+            <span class="button-content">Subscribe</span>
+          </button>
+        </div>
+        <div class="message-success">
+          <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+        </div>
+        <div class="message-error">
+          Please enter a valid email address!
+        </div>
+      </form>
     </div>
   </div>
-{{/if}}
-<!-- End Newsletter Widget -->

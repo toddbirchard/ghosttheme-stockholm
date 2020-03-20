@@ -1,0 +1,98 @@
+routes:
+  /series/code-snippet-corner/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[code-snippet-corner]
+  /series/hacking-tableau-server/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[hacking-tableau-server]
+  /series/create-an-aws-api/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[create-an-aws-api]
+  /series/working-with-mysql/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[working-with-mysql]
+  /series/data-analysis-pandas/:
+    controller: channel
+    template: series
+    filter: tag:[data-analysis-pandas]
+    order: published_at asc
+  /series/building-flask-apps/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[building-flask-apps]
+  /series/adventures-in-excel/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[adventures-in-excel]
+  /series/the-rise-of-google-cloud/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[the-rise-of-google-cloud]
+  /series/mongodb-cloud/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[mongodb-cloud]
+  /series/starting-django/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[starting-django]
+  /series/mapping-data-with-mapbox/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[mapping-data-with-mapbox]
+  /series/welcome-to-sql/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[welcome-to-sql]
+  /series/graphql-hype/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[graphql-hype]
+  /series/learning-apache-spark/:
+    controller: channel
+    template: series
+    order: published_at asc
+    filter: tag:[learning-apache-spark]
+  /archive/:
+    controller: channel
+    template: postarchive
+    order: published_at desc
+    filter: tag:-roundup
+  /signup/: members/signup
+  /signin/: members/signin
+  /account/: members/account
+
+
+collections:
+  /:
+    permalink: /{slug}/
+    filter: tag:-[roundup]
+    template:
+      - index
+  /roundup/:
+      permalink: /roundup/{slug}/
+      filter: tag:[roundup]
+      template:
+        - index
+  /callbacks/medium/: # index URL
+    permalink: /medium/
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
