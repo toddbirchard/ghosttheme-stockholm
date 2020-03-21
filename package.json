@@ -1,7 +1,7 @@
 {
   "name": "stockholm",
   "description": "Fully featured theme with clean presentation.",
-  "homepage": "https://ghostthemes.io/",
+  "homepage": "https://stockholm.ghostthemes.io/",
   "demo": "https://hackersandslackers.com/",
   "version": "0.0.1",
   "main": "src/js/global.js",
@@ -22,18 +22,18 @@
   "keywords": [
     "ghost-theme",
     "blog-theme",
-    "nodejs",
-    "data-science",
-    "data-engineering"
+    "ghost",
+    "theme",
+    "handlebars"
   ],
   "engines": {
-    "node": "v10.15.0",
-    "ghost": ">=2.19.0",
+    "node": ">=v12",
+    "ghost": ">=3.11.0",
     "ghost-api": "v2"
   },
   "screenshots": {
-    "desktop": "https://hackers.nyc3.cdn.digitaloceanspaces.com/img/desktop-screenshot.jpg",
-    "mobile": "https://hackers.nyc3.cdn.digitaloceanspaces.com/img/mobile-screenshot.png"
+    "desktop": "https://hackers-content.nyc3.digitaloceanspaces.com/images/social/share.jpg",
+    "mobile": "https://hackers-content.nyc3.digitaloceanspaces.com/images/social/share.jpg"
   },
   "repository": {
     "type": "git",
@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "@babel/runtime": "^7.8.7",
+    "@babel/runtime": "^7.9.2",
     "@sendgrid/mail": "^6.5.5",
     "babel-register": "^6.26.0",
     "baguettebox.js": "^1.11.0",
@@ -84,11 +84,11 @@
     "vanilla-lazyload": "^13.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
+    "@babel/core": "^7.9.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.8.7",
-    "babel-loader": "^8.0.6",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
     "css-declaration-sorter": "5.1.2",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",

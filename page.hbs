@@ -1,11 +1,9 @@
 {{!< default}}
 
-<!-- start site's main content area -->
 <div class="page-container sidebar-layout">
 	<div class="main-content">
 		{{#post}}
 			<main class="page">
-				<!-- start responsive image -->
 				{{#if feature_image}}
 					<div class="post-image">
 						<picture>
@@ -14,7 +12,6 @@
 						</picture>
 					</div>
 				{{/if}}
-				<!-- end responsive image -->
 				<div class="page-head">
 					<h1 class="page-title">{{{title}}}</h1>
 					<h4>{{excerpt}}</h4>
@@ -27,4 +24,3 @@
 	</div>
 	{{> sidebar}}
 </div>
-<!-- end site's main content area -->
