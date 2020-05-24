@@ -1,7 +1,7 @@
 # Stockholm Ghost Theme
 
-![Ghost](https://img.shields.io/badge/Ghost-^v2.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
-![Node](https://img.shields.io/badge/NodeJS-v10.15.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=a3be8c&colorA=4c566a)
+![Ghost](https://img.shields.io/badge/Ghost-^v3.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
+![Node](https://img.shields.io/badge/NodeJS-v12.14.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=a3be8c&colorA=4c566a)
 ![Ghost-Pagination](https://img.shields.io/badge/Ghost--Pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=4c566a&colorB=a3be8c&logo=ghost)
 ![Retina.js](https://img.shields.io/badge/Retina.js-v1.3.0-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=a3be8c&colorA=4c566a)
 ![Babel](https://img.shields.io/badge/@babel/core-v7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=ebcb8b&colorA=4c566a)
@@ -11,7 +11,6 @@
 ![Webpack](https://img.shields.io/badge/Webpack-v4.29.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Baguettebox](https://img.shields.io/badge/baguettebox.js-v1.11.0-blue.svg?longCache=true&style=flat-square&colorA=4c566a&colorB=5e81ac&logo=JavaScript&logoColor=white)
 ![Sendgrid](https://img.shields.io/badge/Sendgrid-v6.3.0-blue.svg?longCache=true&logo=delicious&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Slick Carousel](https://img.shields.io/badge/Slick--Carousel-v1.8.1-blue.svg?longCache=true&logo=JavaScript&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c&logo=GitHub)
 [![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghosttheme-stockholm.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/ghosttheme-stockholm/stargazers)
