@@ -1,117 +1,118 @@
 #seriesposts {
-  padding: 0;
-    display: none;
-    position: relative;
-    overflow-x: hidden;
-    /* padding-bottom: 20px; */
-    /* border-bottom: 1px solid #e0ebee; */
-    width: fit-content;
-    margin: 40px auto;
-    display: none;
-  @media(max-width: @tablet-breakpoint) {
-    padding: 0 0 20px;
-  }
+	padding: 0;
+	display: none;
+	position: relative;
+	overflow-x: hidden;
+	/* padding-bottom: 20px; */
+	/* border-bottom: 1px solid #e0ebee; */
+	width: fit-content;
+	margin: 40px auto;
+	display: none;
+	@media (max-width: @tablet-breakpoint) {
+		padding: 0 0 20px;
+	}
 
-  h5 {
-    display: none;
-    font-size: 1.1em;
-    color: #687f99 !important;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    padding: 0;
-    width: 100%;
-    margin-top: 0;
-    line-height: 1;
-    height: fit-content;
-    @media(max-width: @tablet-breakpoint) {
-      margin: 0 auto 2px;
-    }
-  }
+	h5 {
+		display: none;
+		font-size: 1.1em;
+		color: #687f99 !important;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 20px;
+		padding: 0;
+		width: 100%;
+		margin-top: 0;
+		line-height: 1;
+		height: fit-content;
+		@media (max-width: @tablet-breakpoint) {
+			margin: 0 auto 2px;
+		}
+	}
 
-  ol {
-    list-style-type: upper-roman !important;
-    margin: 0;
-    padding: 0;
-    @media(max-width: @mobile-breakpoint) {
-      margin: 0;
-      max-width: unset;
-    }
+	ol {
+		list-style-type: upper-roman !important;
+		margin: 0;
+		padding: 0;
+		@media (max-width: @mobile-breakpoint) {
+			margin: 0;
+			max-width: unset;
+		}
 
-    li {
-      margin: 12px 0;
-      opacity: 0.7;
-      counter-increment: li -1;
-      color: #687f99;
-      font-size: 1.5em;
-      padding-left: 0;
-      line-height: 1;
-      display: flex;
-      justify-content: flex-start;
-      @media(max-width: @mobile-breakpoint) {
-        line-height: 1.4;
-        margin: 10px 0;
-        padding-left: 0;
-      }
+		li {
+			margin: 12px 0;
+			opacity: 0.7;
+			counter-increment: li -1;
+			color: #687f99;
+			font-size: 1.5em;
+			padding-left: 0;
+			line-height: 1;
+			display: flex;
+			justify-content: flex-start;
+			@media (max-width: @mobile-breakpoint) {
+				line-height: 1.4;
+				margin: 10px 0;
+				padding-left: 0;
+			}
 
-      a {
-        font-family: @body-font;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 100%;
-        overflow-x: hidden;
-      }
+			a {
+				font-family: @body-font;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: 100%;
+				overflow-x: hidden;
+			}
 
-      * {
-        transition: @transition;
-      }
+			* {
+				transition: @transition;
+			}
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:first-child {
-        margin-top: 0;
-      }
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
 
 
-      &:hover {
-        * {
-          color: @hover-color;
-        }
-      }
+			&:hover {
+				* {
+					color: @hover-color;
+				}
+			}
 
-      &::before {
-        content: "Part " counter(li, upper-roman) "." !important;
-        color: #687f99;
-        font-weight: 600;
-        margin-right: 8px;
-        font-size: 1em;
-        white-space: nowrap;
-        @media(max-width: @mobile-breakpoint) {
-          min-width: 54px;
-          margin-right: 2px;
-          font-weight: normal;
-          font-size: 0.9em;
-        }
-      }
+			&::before {
+				content: "Part " counter(li, upper-roman) "." !important;
+				color: #687f99;
+				font-weight: 600;
+				margin-right: 8px;
+				font-size: 1em;
+				white-space: nowrap;
+				@media (max-width: @mobile-breakpoint) {
+					min-width: 54px;
+					margin-right: 2px;
+					font-weight: normal;
+					font-size: 0.9em;
+				}
+			}
 
-      a {
-        color: #687f99;
-        @media(max-width: @mobile-breakpoint) {
-          font-weight: 600;
-          font-size: 0.9em;
-        }
-      }
-    }
-  }
+			a {
+				color: #687f99;
+				@media (max-width: @mobile-breakpoint) {
+					font-weight: 600;
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
 
-  .currentPost {
-    opacity: 1 !important;
-    margin-left: 0;
+	.currentPost {
+		opacity: 1 !important;
+		margin-left: 0;
 
-    &::before {
-      margin-left: 0;
-      font-weight: 600;
-    }
-  }
+		&::before {
+			margin-left: 0;
+			font-weight: 600;
+		}
+	}
 }

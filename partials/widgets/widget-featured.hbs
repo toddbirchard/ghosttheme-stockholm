@@ -1,14 +1,14 @@
 <!-- Start Post Preview -->
 {{#get "posts" filter="featured:true" include="tags,authors" limit="1" as |featured|}}
   {{#foreach featured}}
-    <article class="widget featured-post-preview">
+    <article class="widget featured-post-card">
 
       {{#if feature_image}}
         <a href="{{url}}" class="post-image">
           <img class="featured-image lazyload" alt="{{title}}" loading="lazy" data-src="{{img_url feature_image}}" data-rjs="2">
         </a>
       {{/if}}
-      <div class="post-preview-content">
+      <div class="post-card-content">
         <div class="label">
           Featured
         </div>

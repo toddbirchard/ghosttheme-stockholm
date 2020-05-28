@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixin.less";
+
 /*====================================================
 	footer
 ====================================================*/
@@ -9,14 +10,14 @@
 	padding: 35px 8%;
 	color: @text-color;
 	border-top: 1px solid #dbe0e5;
-	@media(max-width: 1000px) {
+	@media (max-width: 1000px) {
 		padding: 30px 40px;
 	}
-	@media(max-width: @tablet-breakpoint) {
+	@media (max-width: @tablet-breakpoint) {
 		padding: 20px 40px;
 		margin-top: 0;
 	}
-	@media(max-width: @mobile-breakpoint) {
+	@media (max-width: @mobile-breakpoint) {
 		display: block;
 		padding: 50px;
 	}
@@ -24,14 +25,14 @@
 	.footer-title {
 		color: @text-color;
 		font-weight: 400;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		font-family: @sub-header-font;
 		text-align: left;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		line-height: 1;
 		margin: 0 0 20px;
-		@media(max-width: @tablet-breakpoint) {
+		@media (max-width: @tablet-breakpoint) {
 			margin: 0 0 10px !important;
 		}
 	}
@@ -41,7 +42,7 @@
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
-		@media(max-width: @mobile-breakpoint) {
+		@media (max-width: @mobile-breakpoint) {
 			margin: auto;
 			justify-content: space-between;
 			flex-direction: row;
@@ -67,6 +68,7 @@
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				overflow: hidden;
+				font-size: 1.05em;
 
 				* {
 					&:hover {
@@ -82,7 +84,8 @@
 				}
 			}
 		}
-		@media(max-width: @tablet-breakpoint) {
+
+		@media (max-width: @tablet-breakpoint) {
 			width: -webkit-fill-available;
 			margin: 10px 0 20px;
 			width: 22%;
@@ -92,19 +95,20 @@
 				margin-bottom: 0;
 			}
 		}
-		@media(max-width: @mobile-breakpoint) {
+		@media (max-width: @mobile-breakpoint) {
 			max-width: none;
 			width: 100% !important;
 			padding: 0;
 		}
 	}
 }
+
 /*====================================================
 		about
 ====================================================*/
 .widget.about {
 	width: 240px;
-	@media(max-width: @mobile-breakpoint) {
+	@media (max-width: @mobile-breakpoint) {
 		min-width: 100%;
 		border-bottom: 1px solid rgba(76, 108, 157, 0.2);
 		padding-bottom: 20px !important;
@@ -115,7 +119,7 @@
 		width: 100%;
 		display: block;
 		transition: @transition;
-		@media(max-width: @mobile-breakpoint) {
+		@media (max-width: @mobile-breakpoint) {
 			margin-bottom: 25px;
 			max-width: 200px;
 		}
@@ -128,7 +132,7 @@
 		img {
 			width: 100%;
 			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  		filter: grayscale(100%);
+			filter: grayscale(100%);
 		}
 	}
 
@@ -140,7 +144,7 @@
 		font-size: 1.05em;
 		line-height: 1.4;
 		margin: 15px 0 25px;
-		@media(max-width: @mobile-breakpoint) {
+		@media (max-width: @mobile-breakpoint) {
 			margin: 15px 0 20px;
 			font-size: 0.95em;
 		}
@@ -151,8 +155,8 @@
 		margin-bottom: 18px;
 		width: 240px;
 		display: flex;
-    justify-content: space-between;
-    align-items: center;
+		justify-content: space-between;
+		align-items: center;
 
 		.btn {
 			color: #738a94;
@@ -180,15 +184,16 @@
 		}
 	}
 }
+
 /*====================================================
 			contributors
 =====================================================*/
 .widget.contributors {
 	margin-top: 10px;
-	@media(max-width: @tablet-breakpoint) {
+	@media (max-width: @tablet-breakpoint) {
 		display: none;
 	}
-	@media(max-width: @mobile-breakpoint) {
+	@media (max-width: @mobile-breakpoint) {
 		display: block;
 	}
 }
@@ -196,7 +201,7 @@
 .widget.links,
 .widget.tags {
 	margin-top: 10px;
-	@media(max-width: @mobile-breakpoint) {
+	@media (max-width: @mobile-breakpoint) {
 		margin: 10px 0 0;
 		min-width: unset;
 		margin-bottom: 20px;
@@ -215,7 +220,7 @@
 	color: #738a94 !important;
 	margin: 0 !important;
 
-	@media(max-width: @mobile-breakpoint) {
-		    font-size: .89em;
+	@media (max-width: @mobile-breakpoint) {
+		font-size: .89em;
 	}
 }

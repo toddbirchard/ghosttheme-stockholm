@@ -1,12 +1,12 @@
 {{!< default}}
 
 {{#post}}
-	{{#if feature_image}}
-		<div class="post-image lazy" style="background: url({{feature_image}})"> </div>
-	{{/if}}
+	
 	<div class="post-wrapper">
 		<article class="{{post_class}}">
-
+			{{#if feature_image}}
+				<img src="{{feature_image}}" alt="{{{title}}}" class="post-image" />
+			{{/if}}
 			<div class="post-header">
 				<div class="post-meta">
 					{{#primary_tag}} <span class="primary-tag meta-item"><i class="fas fa-tag"></i> {{name}}</span> {{/primary_tag}}

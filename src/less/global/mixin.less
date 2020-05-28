@@ -5,28 +5,32 @@
 ====================================================*/
 .box-shadow (@string) {
 	-webkit-box-shadow: @string;
-	-moz-box-shadow:    @string;
-	box-shadow:         @string;
+	-moz-box-shadow: @string;
+	box-shadow: @string;
 }
+
 .border-radius (@string: 3px) {
 	-webkit-border-radius: @string;
-	-moz-border-radius:    @string;
-	border-radius:         @string;
+	-moz-border-radius: @string;
+	border-radius: @string;
 }
+
 .transition (@transition) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;
 	-ms-transition: @transition;
-	-o-transition:  @transition;
+	-o-transition: @transition;
 	transition: @transition;
 }
-.transform(@string){
+
+.transform(@string) {
 	-webkit-transform: @string;
 	-moz-transform: @string;
 	-ms-transform: @string;
 	-o-transform: @string;
 	transform: @string;
 }
+
 .opacity (@value: 1) {
 	-webkit-opacity: @value;
 	-moz-opacity: @value;
@@ -43,7 +47,6 @@
 	border-right: 0;
 	border-left: 0;
 }
-
 
 
 // retina.less
@@ -66,39 +69,39 @@
  * @param  {Value}  $extras: null       Any other `background` values to be added.
  */
 .retina(@path, @cap: 2, @size: auto auto, @extras: ~'') {
-  @lowretina: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
-  @2xpath: ~`@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
+	@lowretina: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
+	@2xpath: ~`@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
 
-  /*
-   * Set a base background for 1x environments.
-   */
-  background: url(@path) @extras;
-  background-size: @size;
+	/*
+	 * Set a base background for 1x environments.
+	 */
+	background: url(@path) @extras;
+	background-size: @size;
 
-  /*
-   * Create an @2x-ish media query.
-   */
-  @media @lowretina {
-    background      : url(@2xpath) @extras;
-    background-size : @size;
-  }
+	/*
+	 * Create an @2x-ish media query.
+	 */
+	@media @lowretina {
+		background: url(@2xpath) @extras;
+		background-size: @size;
+	}
 
-  /*
-   * Create media queries for all environments that the user has
-   * provided images for.
-   */
-  .create-queries() when (@cap >= 2) {
-    .loop(@env) when (@env <= @cap) {
-      @retinapath: ~`@{path}.replace(/\.\w+$/, function(match) { return "@@{env}x" + match; })`;
-      @media (-webkit-min-device-pixel-ratio: @env),
-             (min-resolution: @env * 96dpi) {
-               background      : url(@retinapath) @extras;
-               background-size : @size;
-      }
-      .loop((@env + 1));    // next iteration
-    }
-    .loop(2);
-  }
-  .create-queries();
+	/*
+	 * Create media queries for all environments that the user has
+	 * provided images for.
+	 */
+	.create-queries() when (@cap >= 2) {
+		.loop(@env) when (@env <= @cap) {
+			@retinapath: ~`@{path}.replace(/\.\w+$/, function(match) { return "@@{env}x" + match; })`;
+			@media (-webkit-min-device-pixel-ratio: @env),
+			(min-resolution: @env * 96dpi) {
+				background: url(@retinapath) @extras;
+				background-size: @size;
+			}
+			.loop((@env + 1)); // next iteration
+		}
+		.loop(2);
+	}
+	.create-queries();
 
 }

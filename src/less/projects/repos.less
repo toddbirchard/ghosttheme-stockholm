@@ -4,92 +4,92 @@
 @spacing: 20px;
 
 .github-cards {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  width: 100%;
-  color: white;
-  justify-content: space-between;
-  @media(max-width: @mobile-breakpoint) {
-    margin-top: 10px;
-  }
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	width: 100%;
+	color: white;
+	justify-content: space-between;
+	@media (max-width: @mobile-breakpoint) {
+		margin-top: 10px;
+	}
 }
 
 .repo-title {
-  font-family: @body-font;
-  font-size: 18px !important;
+	font-family: @body-font;
+	font-size: 18px !important;
 
-  &:hover {
-    color: white;
+	&:hover {
+		color: white;
 
-    .github-card__meta,
-    .repo-title {
-      color: white;
-    }
-  }
+		.github-card__meta,
+		.repo-title {
+			color: white;
+		}
+	}
 }
 
 .github-card {
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid @gray;
-  margin: 5px 0;
-  padding: 15px;
-  color: @text;
-  text-decoration: none;
-  font-size: 13px;
-  flex: 1;
-  max-width: 32.5%;
-  min-width: 32%;
-  border-radius: 2px;
-  @media(max-width: @tablet-breakpoint) {
-    min-width: 49%;
-  }
-  @media(max-width: @mobile-breakpoint) {
-    min-width: 100%;
-    margin: 0 0 12px;
-  }
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid @gray;
+	margin: 5px 0;
+	padding: 15px;
+	color: @text;
+	text-decoration: none;
+	font-size: 13px;
+	flex: 1;
+	max-width: 32.5%;
+	min-width: 32%;
+	border-radius: 2px;
+	@media (max-width: @tablet-breakpoint) {
+		min-width: 49%;
+	}
+	@media (max-width: @mobile-breakpoint) {
+		min-width: 100%;
+		margin: 0 0 12px;
+	}
 
-  h3 {
-    margin: 0 0 5px;
-    color: @color-github !important;
-    font-size: 18px !important;
-    line-height: 1.3;
-    font-weight: 400;
+	h3 {
+		margin: 0 0 5px;
+		color: @color-github !important;
+		font-size: 18px !important;
+		line-height: 1.3;
+		font-weight: 400;
 
-    &:hover {
-      color: white;
-    }
-  }
+		&:hover {
+			color: white;
+		}
+	}
 
-  &:hover {
-    background: #1fc1c1;
-    border: 1px solid #1fc1c1;
+	&:hover {
+		background: #1fc1c1;
+		border: 1px solid #1fc1c1;
 
-    * {
-      color: white !important;
-    }
-  }
+		* {
+			color: white !important;
+		}
+	}
 }
 
 .github-card__language-icon {
-  font-size: 18px;
+	font-size: 18px;
 }
 
 .github-card__meta {
-  margin-right: @spacing;
+	margin-right: @spacing;
 
-  i {
-    font-size: 14px;
-    margin-right: 3px !important;
-  }
+	i {
+		font-size: 14px;
+		margin-right: 3px !important;
+	}
 
-  .fa-star {
-    color: #efc143;
-  }
+	.fa-star {
+		color: #efc143;
+	}
 }
 
 .repo-description {
-  margin: 10px 0 !important;
-  line-height: 1.5 !important;
+	margin: 10px 0 !important;
+	line-height: 1.5 !important;
 }

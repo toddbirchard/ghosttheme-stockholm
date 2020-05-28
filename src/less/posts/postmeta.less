@@ -1,84 +1,85 @@
 .post-meta {
-  margin: 15px 0;
-  color: #787c87;
-  font-size: 12px;
-  display: flex;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  @media(max-width: @mobile-breakpoint) {
-    padding: 0;
-    max-width: none;
-    width: auto;
-    order: 2;
+	margin: 15px 0;
+	color: #787c87;
+	font-size: 12px;
+	display: flex;
+	width: auto;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: @mobile-breakpoint) {
+		padding: 0;
+		max-width: none;
+		width: auto;
+		order: 2;
 
-    .date {
-      display: none !important;
-    }
-  }
+		.date {
+			display: none !important;
+		}
+	}
 
-  .tags {
-    padding: 5px 10px;
-    border-radius: 3px;
-    color: white;
-    font-size: 0.95em;
+	.tags {
+		padding: 5px 10px;
+		border-radius: 3px;
+		color: white;
+		font-size: 0.95em;
 
-    &.codesnippetcorner {
-      i {
-        @media(max-width: @mobile-breakpoint) {
-          display: none;
-        }
-      }
-    }
-  }
+		&.codesnippetcorner {
+			i {
+				@media (max-width: @mobile-breakpoint) {
+					display: none;
+				}
+			}
+		}
+	}
 
+	.meta-item {
+		font-size: 1.2em;
+		font-family: @sub-header-font;
+		color: @h1-color;
+		display: flex;
+		align-items: center;
+		text-transform: capitalize;
+		line-height: 1;
+		margin: 0 15px 0 15px !important;
 
+		* {
+			font-size: 0.9em;
+			padding: 0;
+			color: @h1-color;
+			@media (max-width: @tablet-breakpoint) {
+				font-size: 0.9em;
+			}
+		}
 
-  .meta-item {
-    font-size: 1.2em;
-    font-family: @sub-header-font;
-    color: @text-color-light;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    line-height: 1;
-    margin: 0 15px 0 15px !important;
+		a {
+			transition: @transition;
+			&:hover {
+				color: @hover-color !important;
+			}
+		}
 
-    * {
-      font-size: 0.9em;
-      padding: 0;
-      color: @text-color-light;
-      @media(max-width: @tablet-breakpoint) {
-        font-size: 0.9em;
-      }
-    }
+		&.desktop {
+			display: flex;
+		}
 
-    a:hover {
-      color: @hover-color;
-    }
+		i {
+			margin-right: 8px;
+		}
 
-    &.desktop {
-      display: flex;
-    }
+		a {
+			text-decoration: none;
 
-    i {
-      margin-right: 8px;
-    }
+			&:hover {
+				color: @hover-color;
 
-    a {
-      text-decoration: none;
+				& > span {
+					color: @hover-color !important;
+				}
+			}
+		}
 
-      &:hover {
-        color: @hover-color;
-
-        & > span {
-          color: @hover-color !important;
-        }
-      }
-    }
-
-    &:last-child {
-      margin: 0;
-    }
-  }
+		&:last-child {
+			margin: 0;
+		}
+	}
 }

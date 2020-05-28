@@ -2,19 +2,17 @@
 @import "mixin.less";
 
 .postlist {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 1fr;
-  @media(max-width: @tablet-breakpoint) {
-    margin: 4vw auto;
-    width: -webkit-fill-available;
-    width: moz-available;
-    max-width: 92%;
-  }
-  @media(max-width: @mobile-breakpoint) {
-  }
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr;
+	@media (max-width: @tablet-breakpoint) {
+		margin: 4vw auto;
+		width: -webkit-fill-available;
+		width: moz-available;
+		max-width: 92%;
+	}
 
-  .post-preview {
-    margin: 0;
-  }
+	.post-card {
+		margin: 0;
+	}
 }

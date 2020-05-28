@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixin.less";
+
 /*====================================================
 	pagination
 ====================================================*/
@@ -11,8 +12,8 @@
 	position: relative;
 	background: none;
 	width: 100%;
-	@media(max-width: @mobile-breakpoint) {
-		 margin: 0;
+	@media (max-width: @mobile-breakpoint) {
+		margin: 0;
 	}
 
 	.older-posts {
@@ -72,7 +73,8 @@
 			cursor: pointer;
 		}
 	}
-	@media(max-width: @mobile-breakpoint) {
+
+	@media (max-width: @mobile-breakpoint) {
 		a:nth-of-type(5),
 		a:nth-of-type(6),
 		a:nth-of-type(7),
@@ -84,7 +86,7 @@
 	strong {
 		color: #6e89b5 !important;
 		background: rgba(199, 210, 240, 0.5);
-    border-radius: 1px;
+		border-radius: 1px;
 		transition: @transition;
 
 		&:hover {
@@ -100,14 +102,14 @@
 		display: flex;
 		justify-content: center;
 		max-width: 70%;
-		@media(max-width: @mobile-breakpoint) {
+		@media (max-width: @mobile-breakpoint) {
 			max-width: 200px;
-    	justify-content: space-between;
+			justify-content: space-between;
 		}
 
 		.page {
 			margin: 0 10px;
-			@media(max-width: @mobile-breakpoint) {
+			@media (max-width: @mobile-breakpoint) {
 				margin: 0;
 			}
 		}

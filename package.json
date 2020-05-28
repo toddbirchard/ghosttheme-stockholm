@@ -40,7 +40,7 @@
     "url": "https://github.com/toddbirchard/ghosttheme-stockholm"
   },
   "config": {
-    "posts_per_page": 15,
+    "posts_per_page": 10,
     "image_sizes": {
       "small": {
         "width": 370
@@ -63,8 +63,8 @@
     }
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.7",
-    "@babel/runtime": "^7.9.6",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/runtime": "^7.10.1",
     "@sendgrid/mail": "^7.1.1",
     "babel-register": "^6.26.0",
     "baguettebox.js": "^1.11.1",
@@ -78,16 +78,16 @@
     "highlight.js": "^10.0.3",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.5.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.2",
     "scrollbooster": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "vanilla-lazyload": "^16.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.10.1",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
     "babel-loader": "^8.1.0",
     "css-declaration-sorter": "5.1.2",
     "css-loader": "^3.5.3",
@@ -98,12 +98,13 @@
     "html-minifier-webpack-plugin": "^2.2.3",
     "less": "^3.11.1",
     "less-loader": "^6.1.0",
+    "lodash": ">=4.17.15",
     "mini-css-extract-plugin": "^0.9.0",
     "style-loader": "^1.2.1",
-    "terser-webpack-plugin": "^3.0.1",
+    "stylelint": "^13.5.0",
+    "terser-webpack-plugin": "^3.0.2",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "lodash": ">=4.17.15"
+    "webpack-cli": "^3.3.11"
   },
   "babel": {
     "presets": [

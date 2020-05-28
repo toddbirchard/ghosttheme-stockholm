@@ -1,276 +1,374 @@
 .kg-width-wide {
-    position: relative;
-    width: 85vw;
-    min-width: 100%;
-    margin: auto calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
+	position: relative;
+	width: 85vw;
+	min-width: 100%;
+	margin: auto calc(50% - 50vw);
+	transform: translateX(calc(50vw - 50%));
 
-    img {
-        max-width: 85vw;
-    }
+	img {
+		max-width: 85vw;
+	}
 }
 
 .kg-width-full {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
 
-    img {
-        max-width: 100vw;
-    }
+	img {
+		max-width: 100vw;
+	}
 }
 
 .kg-embed-card {
-  max-width: unset !important;
-  width: 100% !important;
-  transition: @transition;
-  box-shadow: 0 1px 4px rgba(39, 44, 49, 0.07);
-  text-decoration: none;
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 0 auto 30px;
+	max-width: unset !important;
+	width: 100% !important;
+	transition: @transition;
+	box-shadow: 0 1px 4px rgba(39, 44, 49, 0.07);
+	text-decoration: none;
+	border: 1px solid #ececec;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 auto 30px;
 
-  .wp-embedded-content {
-    padding: 30px;
-    margin: 0;
-  }
+	.wp-embedded-content {
+		padding: 30px;
+		margin: 0;
+	}
 
-  &:hover {
-      background-color: @theme-color;
-      border-color: @theme-color;
+	&:hover {
+		background-color: @theme-color;
+		border-color: @theme-color;
 
-      * {
-          color: white !important;
-      }
-  }
+		* {
+			color: white !important;
+		}
+	}
 
-  .EmbeddedTweet {
-    max-width: unset !important;
-    width: 100%;
-  }
+	.EmbeddedTweet {
+		max-width: unset !important;
+		width: 100%;
+	}
 
-  .twitter-tweet {
-    width: 100% !important;
-    margin: 0 !important;
-  }
+	.twitter-tweet {
+		width: 100% !important;
+		margin: 0 !important;
+	}
 
-  iframe {
-    padding: 0;
-  }
+	iframe {
+		padding: 0;
+	}
 
-  a {
-    text-decoration: none;
-    line-height: 1.2;
-    font-size: 1.2em;
-    color: #4e576a !important;
-    font-weight: normal;
-    font-family: @body-font;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
+	a {
+		text-decoration: none;
+		line-height: 1.2;
+		font-size: 1.2em;
+		color: #4e576a !important;
+		font-weight: normal;
+		font-family: @body-font;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }
 
-  .embedly-card-hug {
-    max-width: unset !important;
-  }
+.embedly-card-hug {
+	max-width: unset !important;
+}
 
 .kg-bookmark-card {
-    margin: 0 0 30px 0;
-    transition: @transition;
-    box-shadow: 0 1px 4px rgba(39, 44, 49, 0.07);
+	margin: 0 0 30px;
+	transition: @transition;
+	box-shadow: 0 1px 4px rgba(39, 44, 49, 0.07);
 
-    .kg-bookmark-container {
-        display: flex;
-        flex-wrap: wrap;
-        text-decoration: none;
-        border: 1px solid #ececec;
-        border-radius: 5px;
-        overflow: hidden;
-        color: @body-color !important;
-        transition: @transition;
-        @media(max-width: @mobile-breakpoint) {
-            flex-direction: column-reverse;
-        }
+	.kg-bookmark-container {
+		display: flex;
+		flex-wrap: wrap;
+		text-decoration: none;
+		border: 1px solid #ececec;
+		border-radius: 5px;
+		overflow: hidden;
+		color: @body-color !important;
+		transition: @transition;
+		@media (max-width: @mobile-breakpoint) {
+			flex-direction: column-reverse;
+		}
 
-        &:hover {
-            background-color: @theme-color;
-            border-color: @theme-color;
+		&:hover {
+			background-color: @theme-color;
+			border-color: @theme-color;
 
-            * {
-                color: white !important;
-            }
-        }
+			* {
+				color: white !important;
+			}
+		}
 
-        .kg-bookmark-content {
-            flex-basis: 0;
-            flex-grow: 999;
-            min-width: 50%;
-            padding: 20px;
+		.kg-bookmark-content {
+			flex-basis: 0;
+			flex-grow: 999;
+			min-width: 50%;
+			padding: 20px;
 
-            .kg-bookmark-title {
-                text-decoration: none;
-                line-height: 1.2;
-                font-size: 1.1em;
-                color: @header-color;
-                font-family: @sub-header-font;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                display: -webkit-box;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
+			.kg-bookmark-title {
+				text-decoration: none;
+				line-height: 1.2;
+				font-size: 1.1em;
+				color: @header-color;
+				font-family: @sub-header-font;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				display: -webkit-box;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
 
-            .kg-bookmark-description {
-                margin: 15px 0;
-                font-size: 0.9em;
-                line-height: 1.4;
-                max-width: 475px;
-                font-family: @body-font;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                display: -webkit-box;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                @media(max-width: @tablet-breakpoint) {
-                  margin: 10px 0;
-                  width: -webkit-fill-available;
-                }
-            }
+			.kg-bookmark-description {
+				margin: 15px 0;
+				font-size: 0.9em;
+				line-height: 1.4;
+				max-width: 475px;
+				font-family: @body-font;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				display: -webkit-box;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				@media (max-width: @tablet-breakpoint) {
+					margin: 10px 0;
+					width: -webkit-fill-available;
+				}
+			}
 
-            .kg-bookmark-metadata {
-                display: flex;
-                align-items: center;
-                font-size: .8em;
+			.kg-bookmark-metadata {
+				display: flex;
+				align-items: center;
+				font-size: 0.8em;
 
-                .kg-bookmark-icon {
-                    width: 18px;
-                    height: 18px;
-                    margin-right: 8px;
-                    vertical-align: bottom;
-                }
+				.kg-bookmark-icon {
+					width: 18px;
+					height: 18px;
+					margin-right: 8px;
+					vertical-align: bottom;
+				}
 
-                .kg-bookmark-author:after {
-                    content: "•";
-                    margin: 0 6px;
-                }
+				.kg-bookmark-author:after {
+					content: "•";
+					margin: 0 6px;
+				}
 
-                .kg-bookmark-publisher,
-                .kg-bookmark-author {
-                  opacity: .8;
-                  font-family: @body-font;
-                }
-            }
-        }
+				.kg-bookmark-author,
+				.kg-bookmark-publisher {
+					opacity: 0.8;
+					font-family: @body-font;
+				}
+			}
+		}
 
-        .kg-bookmark-thumbnail {
-            flex-basis: 15rem;
-            flex-grow: 1;
-            position: relative;
-            min-width: 200px;
-            @media(max-width: @mobile-breakpoint) {
-                max-height: 400px;
-                overflow: hidden;
-            }
+		.kg-bookmark-thumbnail {
+			flex-basis: 15rem;
+			flex-grow: 1;
+			position: relative;
+			min-width: 200px;
+			@media (max-width: @mobile-breakpoint) {
+				max-height: 400px;
+				overflow: hidden;
+			}
 
-            img {
-                vertical-align: bottom;
-                object-fit: cover;
-                width: 100%;
-                margin-bottom: 0 !important;
-                min-height: 100%;
-                @media(max-width: @mobile-breakpoint) {
-                    width: unset;
-                    min-width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto;
-                }
-            }
-        }
-    }
+			img {
+				vertical-align: bottom;
+				object-fit: cover;
+				width: 100%;
+				margin-bottom: 0 !important;
+				min-height: 100%;
+				@media (max-width: @mobile-breakpoint) {
+					width: unset;
+					min-width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+			}
+		}
+	}
 }
 
 .kg-image-card {
-    margin: 30px auto;
-    overflow: visible;
-    border-radius: 3px;
-    @media(max-width: @mobile-breakpoint) {
-        width: auto !important;
-        max-width: none;
-        margin-top: 25px;
-        margin-bottom: 30px;
-    }
+	margin: 30px auto;
+	overflow: visible;
+	border-radius: 3px;
+	@media (max-width: @mobile-breakpoint) {
+		width: auto !important;
+		max-width: none;
+		margin-top: 25px;
+		margin-bottom: 30px;
+	}
 
-    &:hover {
-        cursor: zoom-in;
-    }
+	&:hover {
+		cursor: zoom-in;
+	}
 
-    img {
-        margin: 0;
-        display: block;
-        width: 100%;
-        border-left: 0;
-        border-right: 0;
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
-        border: 1px solid rgba(206, 206, 206, 0.42);
-    }
+	img {
+		margin: 0;
+		display: block;
+		width: 100%;
+		border-left: 0;
+		border-right: 0;
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+		border: 1px solid rgba(206, 206, 206, 0.42);
+	}
 
-    &:hover {
-        cursor: zoom-in;
-    }
+	&:hover {
+		cursor: zoom-in;
+	}
 }
 
 .kg-code-card,
 .kg-image-card {
-    pre {
-      margin: 0;
-    }
+	pre {
+		margin: 0;
+	}
 
-    figcaption {
-        width: fit-content;
-        margin: 0 auto;
-        padding: 8px;
-        color: #8c939f;
-        font-size: 0.8em;
-        text-align: center;
-        white-space: normal;
-        line-height: 1.2;
-        
-        @media(max-width: @mobile-breakpoint) {
-            display: block;
-            width: auto !important;
-            height: auto;
-        }
-    }
+	figcaption {
+		width: fit-content;
+		margin: 0 auto;
+		color: #8c939f;
+		font-size: 0.8em;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.2;
+		@media (max-width: @mobile-breakpoint) {
+			display: block;
+			width: auto !important;
+			height: auto;
+		}
+	}
 }
 
 .kg-code-card {
-    width: 100%;
-    margin: 30px 0;
-    position: relative;
-    @media(max-width: @mobile-breakpoint) {
-        width: unset;
-    }
+	width: 100%;
+	margin: 30px 0;
+	position: relative;
+	@media (max-width: @mobile-breakpoint) {
+		width: unset;
+	}
 
-    pre {
-        margin: 0;
-    }
+	pre {
+		margin: 0;
+	}
 }
 
 .kg-embed-card {
-  .twitter-tweet,
-    div {
-    width: 100% !important;
-  }
+	.twitter-tweet,
+	div {
+		width: 100% !important;
+	}
+}
+
+.kg-image-card {
+	width: 99%;
+	max-width: 99%;
+	margin: 30px auto;
+	overflow: visible;
+	border: 1px solid rgba(206, 206, 206, 0.42);
+	border-radius: 3px;
+	overflow: hidden;
+	@media (max-width: @mobile-breakpoint) {
+		.mobile-full-width();
+		width: auto !important;
+		max-width: none;
+		margin-top: 25px;
+		margin-bottom: 30px;
+	}
+
+	&:hover {
+		cursor: zoom-in;
+	}
+
+	img {
+		margin: 0;
+		display: block;
+		width: 100%;
+		border-left: 0;
+		border-right: 0;
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+		@media (max-width: @mobile-breakpoint) {
+			margin-bottom: -5px !important;
+		}
+
+		&:hover {
+			cursor: zoom-in;
+		}
+	}
+
+	iframe {
+		width: 100%;
+		height: 430px;
+	}
+
+	figcaption {
+		width: -webkit-fill-available;
+		width: -moz-available;
+		margin: 0 auto;
+		padding: 10px;
+		background-color: rgba(33, 69, 138, .04);
+		color: #5e6167;
+		font-size: 0.9em;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.5;
+		border-top: 1px solid #e0e1e4;
+		@media (max-width: @mobile-breakpoint) {
+			.mobile-full-width();
+			display: block;
+			width: auto !important;
+			height: auto;
+			margin-top: 5px;
+			padding: 10px 25px !important;
+			line-height: 1.4 !important;
+		}
+	}
+
+	&:hover {
+		cursor: zoom-in;
+	}
+}
+
+.kg-code-card {
+	width: 100%;
+	margin: 30px 0;
+	position: relative;
+	@media (max-width: @mobile-breakpoint) {
+		.mobile-full-width();
+		width: unset;
+	}
+
+	pre {
+		margin: 0;
+	}
+
+	figcaption {
+		font-size: 0.9em;
+		text-align: center;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		z-index: 10;
+		mix-blend-mode: screen;
+		color: #7a8495;
+
+		strong {
+			color: #7a8495;
+		}
+	}
 }

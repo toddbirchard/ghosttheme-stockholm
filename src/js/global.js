@@ -10,15 +10,15 @@ import {order_hack} from './global/post_order_hack.js';
 
 
 function retina_images() {
-  $('img').attr('data-rjs', 2);
-  Retina();
+    $('img').attr('data-rjs', 2);
+    Retina();
 }
 
 /* ===========================
 2. Initialization
 =========================== */
-$(document).ready(function() {
-  retina_images();
-  // initialize_search(ghostContentAPIKey);
-  order_hack();
+$(document).ready(function () {
+    retina_images();
+    // initialize_search(ghostContentAPIKey);
+    order_hack();
 });

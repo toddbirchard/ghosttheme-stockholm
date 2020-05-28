@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": ["stylelint-commands", "after-comment"]
+      }
+    ],
+    "max-empty-lines": 2,
+    "indentation": [2, { "except": ["value"], "severity": "warning" }],
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "no-extra-semicolons": true,
+    "property-case": "lower"
+  }
+}

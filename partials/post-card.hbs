@@ -1,27 +1,27 @@
 <!-- Start Post Preview -->
-<article class="post-preview {{#primary_author}}{{slug}}{{/primary_author}}">
+<article class="post-card {{#primary_author}}{{slug}}{{/primary_author}}">
 
-  <div class="post-preview-body">
+  <div class="post-card-body">
     {{#if feature_image}}
       <a href="{{url}}" class="post-image">
         <img class="featured-image lazy" alt="{{title}}" loading="lazy" data-src="{{img_url feature_image}}" data-rjs="2">
       </a>
     {{/if}}
-    <div class="post-preview-details">
+    <div class="post-card-details">
       <h2 class="post-title"><a href="{{url}}" class="title-link">{{{title}}}</a></h2>
       <div class="post-excerpt">{{excerpt words="60"}}</div>
       <div class="post-footer">
         {{#primary_tag}}
-          <div class="meta-item"><i class="fas fa-tag"></i> <a href="{{url}}">{{name}}</a> </div>
+          <div class="meta-item"><i class="fas fa-tag"></i> <a href="{{url}}" class="meta-text">{{name}}</a> </div>
         {{/primary_tag}}
         {{#if reading_time}}
-          <div class="meta-item date"> <i class="fas fa-calendar"></i> <span>{{date published_at format="DD MMMM"}}</span> </div>
+          <div class="meta-item date"> <i class="fas fa-calendar"></i> <span class="meta-text">{{date published_at format="DD MMMM"}}</span> </div>
         {{/if}}
         {{#primary_author}}
-          <div class="meta-item author"> <a href="{{url}}"><i class="fas fa-user"></i> <span>{{name}}</span></a> </div>
+          <div class="meta-item author"> <a href="{{url}}" class="meta-text"><i class="fas fa-user"></i> <span>{{name}}</span></a> </div>
         {{/primary_author}}
         {{#if reading_time}}
-          <div class="meta-item readtime"> <i class="fas fa-eye"></i> <span>{{reading_time}}</span> </div>
+          <div class="meta-item readtime"> <i class="fas fa-eye"></i> <span class="meta-text">{{reading_time}}</span> </div>
         {{/if}}
       </div>
     </div>

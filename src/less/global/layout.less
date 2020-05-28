@@ -1,13 +1,13 @@
 .page-container {
 	max-width: 1000px;
 	margin: 40px auto;
-	@media(max-width: 1200px) {
+	@media (max-width: 1200px) {
 		width: 100%;
 	}
-	@media(max-width: 1150px) {
-		 max-width: 95%;
+	@media (max-width: 1150px) {
+		max-width: 95%;
 	}
-	@media(max-width: @tablet-breakpoint) {
+	@media (max-width: @tablet-breakpoint) {
 		max-width: none;
 		margin: 0 auto;
 	}
@@ -16,7 +16,7 @@
 		display: grid;
 		grid-gap: 20px;
 		grid-template-columns: 2.3fr 1fr;
-		@media(max-width: @tablet-breakpoint) {
+		@media (max-width: @tablet-breakpoint) {
 			width: 100%;
 			display: block;
 			max-width: unset;
@@ -25,27 +25,27 @@
 
 	.main-content {
 		border-radius: 5px;
-    @media(max-width: @tablet-breakpoint) {
-      border-radius: 0;
-    }
+		@media (max-width: @tablet-breakpoint) {
+			border-radius: 0;
+		}
 	}
 }
 
 .container {
 	max-width: 1200px;
 	margin: auto;
-	@media(max-width: 1200px) {
+	@media (max-width: 1200px) {
 		width: 95%;
 		max-width: none;
 	}
-	@media(max-width: @tablet-breakpoint) {
+	@media (max-width: @tablet-breakpoint) {
 		width: 100%;
 	}
 }
 
 .sidebar {
 	width: 100%;
-	@media (max-width:800px) {
+	@media (max-width: 800px) {
 		display: none;
 	}
 }

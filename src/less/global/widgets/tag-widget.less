@@ -1,35 +1,35 @@
 .tag-cloud {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-  a {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    display: inline-block;
+	a {
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		display: inline-block;
 
-    flex-grow: 1;
-    margin: 0 2px 4px;
-    padding: 7px 12px;
-    border: 1px solid rgba(220, 228, 238, 0.79);
-    color: #7591a9;
-    font-family: @body-font;
-    font-size: 0.9em !important;
-    line-height: 1.5em;
-    text-align: center;
-    transition: all 0.2s ease;
-    @media(max-width: 1000px) {
-      margin: 0 2px 5px;
-      font-size: 0.85em !important;
-    }
+		flex-grow: 1;
+		margin: 0 2px 4px;
+		padding: 6px 12px;
+		border: 1px solid rgba(220, 228, 238, 0.79);
+		color: #7591a9;
+		font-family: @body-font;
+		font-size: 0.95em !important;
+		line-height: 1.5em;
+		text-align: center;
+		transition: all 0.2s ease;
+		@media (max-width: 1000px) {
+			margin: 0 2px 5px;
+			font-size: 0.85em !important;
+		}
 
-    &:hover {
-      border: 1px solid @hover-color;
-      background: @hover-color;
-      color: white;
-      cursor: pointer;
-    }
-  }
+		&:hover {
+			border: 1px solid @hover-color;
+			background: @hover-color;
+			color: white;
+			cursor: pointer;
+		}
+	}
 }
