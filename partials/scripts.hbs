@@ -1,5 +1,5 @@
 <!-- Start Scripts -->
-<script src="{{asset "/js/includes/jquery.min.js"}}"></script>
+<script src="{{asset "js/includes/jquery.min.js"}}"></script>
 <script src="{{asset "js/includes/retina.min.js"}}"></script>
 <script src="{{asset "js/global.js"}}"></script>
 <script src="https://kit.fontawesome.com/7963b2a79e.js" crossorigin="anonymous"></script>
@@ -8,7 +8,7 @@
 {{/is}}
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 <script>
-  var lazyLoadInstance = new LazyLoad({
+  let lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
   });
 </script>

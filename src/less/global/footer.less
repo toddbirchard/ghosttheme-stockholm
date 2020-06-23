@@ -24,7 +24,7 @@
 
 	.footer-title {
 		color: @text-color;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 1.4em;
 		font-family: @sub-header-font;
 		text-align: left;
@@ -87,9 +87,8 @@
 
 		@media (max-width: @tablet-breakpoint) {
 			width: -webkit-fill-available;
-			margin: 10px 0 20px;
+			margin: 20px 0;
 			width: 22%;
-			margin-top: 20px;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -140,8 +139,7 @@
 		color: @text-color;
 		width: 100%;
 		font-family: @body-font;
-		font-weight: 100;
-		font-size: 1.05em;
+		font-size: 1.1em;
 		line-height: 1.4;
 		margin: 15px 0 25px;
 		@media (max-width: @mobile-breakpoint) {
@@ -151,7 +149,6 @@
 	}
 
 	.social-btns {
-		width: 100%;
 		margin-bottom: 18px;
 		width: 240px;
 		display: flex;
@@ -200,11 +197,9 @@
 
 .widget.links,
 .widget.tags {
-	margin-top: 10px;
 	@media (max-width: @mobile-breakpoint) {
-		margin: 10px 0 0;
+		margin: 10px 0 20px;
 		min-width: unset;
-		margin-bottom: 20px;
 	}
 
 	ul {
@@ -213,12 +208,11 @@
 }
 
 .copyright {
-	margin-top: 20px;
 	display: block;
 	font-size: 0.85em;
 	font-family: @body-font;
 	color: #738a94 !important;
-	margin: 0 !important;
+	margin: 0;
 
 	@media (max-width: @mobile-breakpoint) {
 		font-size: .89em;
