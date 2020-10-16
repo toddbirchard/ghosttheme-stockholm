@@ -68,7 +68,7 @@
     "@sendgrid/mail": "^7.2.0",
     "babel-register": "^6.26.0",
     "baguettebox.js": "^1.11.1",
-    "dotenv-webpack": "^3.0.0",
+    "dotenv-webpack": "^4.0.0",
     "es6-promise": "^4.2.8",
     "fuzzysort": "^1.1.4",
     "ghost-email-service": "^1.2.0",
