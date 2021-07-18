@@ -1,8 +1,7 @@
 # Stockholm Ghost Theme
 
-![Ghost](https://img.shields.io/badge/Ghost-^v3.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
-![Node](https://img.shields.io/badge/NodeJS-v12.14.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=a3be8c&colorA=4c566a)
-![Ghost-Pagination](https://img.shields.io/badge/Ghost--Pagination-v0.1.3-green.svg?longCache=true&style=flat-square&logoColor=white&colorA=4c566a&colorB=a3be8c&logo=ghost)
+![Ghost](https://img.shields.io/badge/Ghost-^v4.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
+![Node](https://img.shields.io/badge/NodeJS-v^14.0.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=a3be8c&colorA=4c566a)
 ![Retina.js](https://img.shields.io/badge/Retina.js-v1.3.0-red.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=a3be8c&colorA=4c566a)
 ![Babel](https://img.shields.io/badge/@babel/core-v7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=ebcb8b&colorA=4c566a)
 ![GraphQL](https://img.shields.io/badge/GraphQL-v14.2.1-pink.svg?longCache=true&style=flat-square&logo=graphql&logoColor=white&colorB=b48ead&colorA=4c566a)
