@@ -89,7 +89,7 @@ assets/vid/*
 # cache
 .cache
 
-# misc
+# Misc
 postcss.config.js
 assets/css
 
@@ -99,3 +99,7 @@ yarn.lock
 
 # Font Awesome
 fontawesome
+
+# Misc
+.idea
+.DS_Store
