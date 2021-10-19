@@ -91,7 +91,7 @@
     "babel-loader": "^8.2.2",
     "css-declaration-sorter": "6.0.3",
     "css-loader": "^6.1.0",
-    "eslint": "^7.31.0",
+    "eslint": "8.0.1",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-standard": "^4.1.0",
     "file-loader": "^6.2.0",
